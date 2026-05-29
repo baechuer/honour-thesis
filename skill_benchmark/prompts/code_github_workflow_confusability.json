@@ -1,0 +1,68 @@
+[
+  {
+    "id": "code_p1_local_code_review",
+    "family": "code_github_workflow",
+    "gold_skill": "code-reviewer",
+    "closest_alternatives": [
+      "pr-reviewer",
+      "review-comment-resolver",
+      "ci-failure-debugger"
+    ],
+    "prompt": "Review this local change before I commit it. The patch updates the cache key from `user.id` to `user.email`, adds a fallback for missing names, and changes the unit test fixture. I want to know if this could introduce bugs or missing-test risk, not have you rewrite it yet."
+  },
+  {
+    "id": "code_p2_pr_review",
+    "family": "code_github_workflow",
+    "gold_skill": "pr-reviewer",
+    "closest_alternatives": [
+      "code-reviewer",
+      "review-comment-resolver",
+      "ci-failure-debugger"
+    ],
+    "prompt": "Can you review this pull request as if you were leaving PR feedback? It changes the auth middleware, adds a migration, updates two API tests, and the PR discussion says the branch is meant to preserve backward compatibility."
+  },
+  {
+    "id": "code_p3_review_comment_resolution",
+    "family": "code_github_workflow",
+    "gold_skill": "review-comment-resolver",
+    "closest_alternatives": [
+      "pr-reviewer",
+      "code-reviewer",
+      "ci-failure-debugger"
+    ],
+    "prompt": "I already got review comments on this branch. Please address this specific reviewer request by planning and making the requested code/test change: `The retry loop can spin forever if the response is 429 and Retry-After is missing. Please add a cap and a test.` I need the existing comment resolved with an implementation response, not a fresh PR review or CI debugging."
+  },
+  {
+    "id": "code_p4_ci_failure_debugging",
+    "family": "code_github_workflow",
+    "gold_skill": "ci-failure-debugger",
+    "closest_alternatives": [
+      "code-reviewer",
+      "pr-reviewer",
+      "review-comment-resolver"
+    ],
+    "prompt": "The CI run failed after my last commit. The failing job is `unit-tests`, and the first useful error says `Expected status 200, received 401` in `auth.middleware.test.ts` after the token refresh change. Help me find the cause and the smallest fix."
+  },
+  {
+    "id": "code_p5_changelog_entry",
+    "family": "code_github_workflow",
+    "gold_skill": "changelog-writer",
+    "closest_alternatives": [
+      "release-note-writer",
+      "pr-reviewer",
+      "code-reviewer"
+    ],
+    "prompt": "Turn these completed changes into a concise internal changelog entry for the repository changelog, grouped by change type if useful: fixed retry timeout handling, added token-refresh tests, improved cache invalidation for renamed users, and removed an unused feature flag. Do not write user-facing release notes."
+  },
+  {
+    "id": "code_p6_release_notes",
+    "family": "code_github_workflow",
+    "gold_skill": "release-note-writer",
+    "closest_alternatives": [
+      "changelog-writer",
+      "pr-reviewer",
+      "code-reviewer"
+    ],
+    "prompt": "Write user-facing release notes for this update. We improved sign-in reliability when sessions expire, made profile changes appear faster across devices, and fixed a retry issue that could delay requests during temporary service pressure."
+  }
+]

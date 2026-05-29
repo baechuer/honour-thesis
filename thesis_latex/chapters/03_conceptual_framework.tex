@@ -1,0 +1,62 @@
+\chapter{Conceptual Framework}
+
+\section{Skill Artifacts}
+
+A skill artifact is the stored capability unit. In this thesis, the canonical artifact is a skill directory containing a \texttt{SKILL.md} file and optional supporting files such as scripts, examples, reference documents, or templates. The artifact is the complete procedural object available to the system.
+
+The artifact is not necessarily what the retriever sees. A complete skill may be too long to expose in every retrieval decision, especially when the library contains hundreds or thousands of skills. This motivates a distinction between the stored artifact and the selection representation.
+
+\section{Selection Representations}
+
+A selection representation is the version of a skill used for retrieval or routing. It may be a short card containing name and description, a full \texttt{SKILL.md} document, a structured schema, a hierarchy node, or a graph node with typed edges.
+
+The key question is what information this representation preserves. For the thesis problem, the most important candidate fields are:
+
+\begin{itemize}
+  \item skill name and family;
+  \item description and use cases;
+  \item required inputs and source type;
+  \item expected outputs and artifact shape;
+  \item preconditions and assumptions;
+  \item workflow steps and ordering constraints;
+  \item dependencies, resources, scripts, and external services;
+  \item negative usage boundaries, such as \texttt{not\_for} conditions;
+  \item meta-level task role, such as editing a skill versus using a skill.
+\end{itemize}
+
+\section{Retrieval Policies}
+
+A retrieval policy is the mechanism that selects candidate skills from the representation. The policy may be:
+
+\begin{itemize}
+  \item direct main-agent selection from visible skill cards;
+  \item lexical retrieval using BM25 or TF-IDF;
+  \item dense embedding retrieval;
+  \item structured field scoring;
+  \item neural reranking;
+  \item deterministic schema reranking;
+  \item hierarchical or tree routing;
+  \item graph traversal or graph-based expansion;
+  \item a hybrid pipeline combining candidate generation and reranking.
+\end{itemize}
+
+This separation is essential. A method can fail because the representation lacks the needed information, or because the retrieval policy cannot use information that is present. Conversely, a strong retriever may still fail if the representation compresses away procedural boundaries.
+
+\section{Semantic Confusability and Procedural Distinctness}
+
+This thesis defines semantic confusability as a condition where multiple skills appear close at the level of name, description, domain, or trigger phrases. It defines procedural distinctness as a condition where those same skills require materially different execution procedures, inputs, outputs, constraints, or verification criteria.
+
+The target failure mode occurs when a retrieved skill is semantically plausible but procedurally inappropriate. This is why the benchmark does not simply evaluate whether the correct broad domain is retrieved. The system must identify the correct procedure within a set of plausible neighbours.
+
+\section{Working Hypotheses}
+
+The experiments are guided by four working hypotheses:
+
+\begin{enumerate}
+  \item Flat metadata will degrade under scale because it under-specifies procedural distinctions.
+  \item Full skill artifacts will improve over short descriptions because they expose more procedural information, but may increase context and computation cost.
+  \item Structured procedural fields will improve disambiguation when the user request contains enough evidence to match those fields.
+  \item Hybrid retrieval-reranking methods will perform best when dense retrieval provides broad candidate coverage and procedural reranking resolves near-neighbour confusion.
+\end{enumerate}
+
+\placeholder{Add a diagram showing the three-layer framework: artifact -> selection representation -> retrieval policy -> candidate skills -> main agent.}

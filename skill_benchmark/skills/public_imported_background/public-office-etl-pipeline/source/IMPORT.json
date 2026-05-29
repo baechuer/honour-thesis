@@ -1,0 +1,25 @@
+{
+  "slug": "public-office-etl-pipeline",
+  "source_name": "etl-pipeline",
+  "origin": "claude-office-skills/skills",
+  "source_url": "https://github.com/claude-office-skills/skills/tree/main/etl-pipeline",
+  "raw_url": "https://raw.githubusercontent.com/claude-office-skills/skills/main/etl-pipeline/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for etl pipeline; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "dataset or export",
+    "schema",
+    "processing rules"
+  ],
+  "resource_signals": [
+    "etl pipeline",
+    "public SKILL.md metadata",
+    "data",
+    "schema",
+    "pipeline",
+    "quality"
+  ]
+}

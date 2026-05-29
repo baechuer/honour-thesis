@@ -1,0 +1,79 @@
+[
+  {
+    "id": "doc_p1_document_summary",
+    "family": "documents_files",
+    "gold_skill": "document-summariser",
+    "closest_alternatives": [
+      "document-normaliser",
+      "document-field-extractor",
+      "document-converter"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/internal_travel_policy_update.txt` and help me make sense of it quickly. I want the main point, the most important details, and anything I should pay attention to."
+  },
+  {
+    "id": "doc_p2_document_rewriter",
+    "family": "documents_files",
+    "gold_skill": "document-rewriter",
+    "closest_alternatives": [
+      "document-normaliser",
+      "document-summariser",
+      "document-converter"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/travel_request_note_raw.txt` and produce a revised full prose version for a human reader. Keep it as continuous paragraphs in the same document form, improve wording, flow, and polish, and preserve the same meaning and commitments."
+  },
+  {
+    "id": "doc_p3_document_normaliser",
+    "family": "documents_files",
+    "gold_skill": "document-normaliser",
+    "closest_alternatives": [
+      "document-rewriter",
+      "document-converter",
+      "document-summariser"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/travel_request_note_raw.txt` and normalise the document structure: keep the original wording and order as much as possible, but fix inconsistent headings, spacing, list style, and layout noise. Do not substantially rewrite the prose."
+  },
+  {
+    "id": "doc_p4_field_extraction",
+    "family": "documents_files",
+    "gold_skill": "document-field-extractor",
+    "closest_alternatives": [
+      "document-summariser",
+      "multi-document-comparison-preparer",
+      "layout-preserving-converter"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/invoice_northbridge_supplies.txt` and extract the reusable fields into a structured table, including supplier, invoice number, dates, line items, totals, and payment details. Do not write a narrative summary."
+  },
+  {
+    "id": "doc_p5_comparison_preparation",
+    "family": "documents_files",
+    "gold_skill": "multi-document-comparison-preparer",
+    "closest_alternatives": [
+      "document-field-extractor",
+      "document-normaliser",
+      "document-converter"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/policy_draft_a.txt` and `/workspace/fixtures/documents_files/policy_draft_b.txt`, then prepare a side-by-side comparison matrix so I can quickly see matching sections, changed wording, additions, removals, and unresolved differences."
+  },
+  {
+    "id": "doc_p6_conversion",
+    "family": "documents_files",
+    "gold_skill": "document-converter",
+    "closest_alternatives": [
+      "document-normaliser",
+      "layout-preserving-converter",
+      "document-summariser"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/request_form.txt` and convert the whole form into clean markdown notes I can drop into my repo. Preserve the content and labels, but simplify the source formatting rather than keeping the exact visual layout."
+  },
+  {
+    "id": "doc_p7_layout_preserving_conversion",
+    "family": "documents_files",
+    "gold_skill": "layout-preserving-converter",
+    "closest_alternatives": [
+      "document-converter",
+      "document-field-extractor",
+      "document-normaliser"
+    ],
+    "prompt": "Please read `/workspace/fixtures/documents_files/request_form.txt` and turn it into markdown while preserving the layout cues: headings, labels, rows, and grouped fields should remain recognizable. The priority is layout fidelity, not just simplified notes."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "slug": "public-anthropic-internal-comms",
+  "source_name": "internal-comms",
+  "origin": "anthropics/skills",
+  "source_url": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
+  "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/internal-comms/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for internal comms; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request"
+  ],
+  "resource_signals": [
+    "internal comms",
+    "public SKILL.md metadata"
+  ]
+}

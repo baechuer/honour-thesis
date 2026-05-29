@@ -1,0 +1,109 @@
+{
+  "low_doc_understand_file": {
+    "acceptable": [
+      "general-source-summariser"
+    ],
+    "borderline": [
+      "document-extractor"
+    ],
+    "notes": "The request asks to understand the file. A general source summariser is acceptable, but extraction-only behavior is borderline."
+  },
+  "low_doc_get_details": {
+    "acceptable": [
+      "receipt-extractor",
+      "invoice-payment-checker"
+    ],
+    "borderline": [
+      "document-extractor"
+    ],
+    "notes": "The invoice context makes domain-specific extraction acceptable even though the controlled gold is the generic document field extractor."
+  },
+  "low_doc_clean_up": {
+    "acceptable": [
+      "layout-preserving-converter"
+    ],
+    "borderline": [
+      "document-rewriter"
+    ],
+    "notes": "The instruction says not to change content, so rewriting is only borderline."
+  },
+  "low_data_check_sheet": {
+    "acceptable": [
+      "data-analysis-for-reporting"
+    ],
+    "borderline": [
+      "data-analysis-with-anomaly-focus"
+    ],
+    "notes": "The request is a broad overview. Reporting is acceptable, anomaly focus is only borderline without a specific anomaly cue."
+  },
+  "low_data_something_off": {
+    "acceptable": [
+      "latency-anomaly-detector"
+    ],
+    "borderline": [
+      "data-analysis-overview"
+    ],
+    "notes": "Something looks off cues anomaly detection. Overview is plausible but weaker."
+  },
+  "low_code_check_change": {
+    "acceptable": [
+      "code-reviewer"
+    ],
+    "borderline": [
+      "security-code-reviewer"
+    ],
+    "notes": "Before merge implies PR review. Generic code review is acceptable."
+  },
+  "low_code_red_build": {
+    "acceptable": [
+      "debugging-root-cause-helper"
+    ],
+    "borderline": [
+      "frontend-debugger"
+    ],
+    "notes": "A red build cues CI failure debugging, but generic root-cause debugging is acceptable."
+  },
+  "low_news_catch_up": {
+    "acceptable": [
+      "news-summariser"
+    ],
+    "borderline": [
+      "news-theme-extractor"
+    ],
+    "notes": "Catch me up for an update is briefing-oriented; simple summarisation is acceptable."
+  },
+  "low_meeting_next_steps": {
+    "acceptable": [
+      "task-extractor"
+    ],
+    "borderline": [
+      "meeting-summary-writer"
+    ],
+    "notes": "Next things we need to do cues follow-up/action extraction. Summary is plausible but not the best fit."
+  },
+  "low_reply_make_better": {
+    "acceptable": [
+      "email-polisher"
+    ],
+    "borderline": [
+      "document-rewriter"
+    ],
+    "notes": "Make this reply sound better cues polishing an existing reply."
+  },
+  "low_security_login_risk": {
+    "acceptable": [
+      "security-threat-modeler"
+    ],
+    "borderline": [
+      "privacy-risk-reviewer"
+    ],
+    "notes": "Login setup risks cues auth-flow review; broader threat modeling is acceptable."
+  },
+  "low_skill_existing_help": {
+    "acceptable": [],
+    "borderline": [
+      "skill-evaluator"
+    ],
+    "notes": "Find whether a skill already exists cues skill finding. Evaluation is only borderline."
+  }
+}

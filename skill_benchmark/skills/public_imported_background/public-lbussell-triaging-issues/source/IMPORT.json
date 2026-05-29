@@ -1,0 +1,18 @@
+{
+  "slug": "public-lbussell-triaging-issues",
+  "source_name": "triaging-issues",
+  "origin": "lbussell/agent-skills",
+  "source_url": "https://github.com/lbussell/agent-skills/tree/main/skills/triaging-issues",
+  "raw_url": "https://raw.githubusercontent.com/lbussell/agent-skills/main/skills/triaging-issues/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for triaging issues; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request"
+  ],
+  "resource_signals": [
+    "triaging issues",
+    "public SKILL.md metadata"
+  ]
+}

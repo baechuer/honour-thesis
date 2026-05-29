@@ -1,0 +1,570 @@
+{
+  "embedding_provider": "qwen",
+  "embedding_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "embedding_model": "text-embedding-v4",
+  "embedding_representation": "full",
+  "scale": "core",
+  "reranker_provider": "qwen",
+  "reranker_model": "qwen3-rerank",
+  "rerank_candidates": 20,
+  "elapsed_ms": 16853.81,
+  "metrics": {
+    "total_prompts": 5,
+    "scale_skill_count": 67,
+    "selector_visible_tokens_approx": 84804,
+    "top1_accuracy": 1.0,
+    "top1_hits": 5,
+    "acceptable_top1_accuracy": 1.0,
+    "acceptable_top1_hits": 5,
+    "borderline_top1": 0,
+    "borderline_top1_rate": 0.0,
+    "top3_recall": 1.0,
+    "top3_hits": 5,
+    "acceptable_top3_recall": 1.0,
+    "acceptable_top3_hits": 5,
+    "top5_recall": 1.0,
+    "top5_hits": 5,
+    "acceptable_top5_recall": 1.0,
+    "acceptable_top5_hits": 5,
+    "mrr": 1.0,
+    "acceptable_mrr": 1.0,
+    "mean_gold_rank": 1.0,
+    "mean_acceptable_rank": 1.0,
+    "wrong_top1": 0,
+    "unacceptable_top1": 0,
+    "unacceptable_top1_rate": 0.0,
+    "listed_alternative_top1": 0,
+    "listed_alternative_top1_rate": 0.0,
+    "non_main_top1": 0,
+    "non_main_top1_rate": 0.0,
+    "background_top1": 0,
+    "background_top1_rate": 0.0,
+    "public_import_top1": 0,
+    "public_import_top1_rate": 0.0,
+    "by_family": {
+      "browser_web_automation": {
+        "total": 5,
+        "top1_accuracy": 1.0,
+        "acceptable_top1_accuracy": 1.0,
+        "top3_recall": 1.0,
+        "acceptable_top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "acceptable_top5_recall": 1.0
+      }
+    },
+    "top_confusions": [],
+    "top_unacceptable_confusions": []
+  },
+  "api_usage": {
+    "embedding_api_calls": 12,
+    "embedding_cache_hits": 0,
+    "embedding_tokens_approx": 31948,
+    "rerank_api_calls": 5,
+    "rerank_cache_hits": 0,
+    "rerank_tokens_approx": 53156
+  },
+  "acceptable_alternatives": {
+    "doc_p2_document_rewriter": {
+      "acceptable": [
+        "travel-ops-rewrite-editor"
+      ],
+      "borderline": [
+        "travel-ops-summary-writer"
+      ]
+    },
+    "doc_p5_comparison_preparation": {
+      "acceptable": [
+        "legal-ops-comparison-builder"
+      ],
+      "borderline": [
+        "docs-ops-comparison-builder",
+        "writing-ops-comparison-builder"
+      ]
+    },
+    "doc_p6_conversion": {
+      "acceptable": [
+        "public-markitdown"
+      ],
+      "borderline": []
+    },
+    "obs_p6_incident_summary": {
+      "acceptable": [
+        "incident-ops-summary-writer"
+      ],
+      "borderline": []
+    },
+    "skill_p2_install_existing": {
+      "acceptable": [
+        "public-skill-installer"
+      ],
+      "borderline": []
+    }
+  },
+  "results": [
+    {
+      "prompt_id": "web_p1_page_snapshot",
+      "family": "browser_web_automation",
+      "gold_skill": "web-page-snapshotter",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-data-extractor",
+        "frontend-debugger"
+      ],
+      "instruction_text": "Open the staging dashboard and capture a page snapshot of what the user sees on the account settings page right now. I need the visible state, screenshot-style observations, and any obvious rendering issue; do not click through a full interaction test.",
+      "ranking": [
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.909191
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.687008
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.575961
+        },
+        {
+          "skill": "web-data-extractor",
+          "score": 0.494649
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.459857
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.416719
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.352606
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.34193
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.270484
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.263142
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.240298
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.23553
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.232597
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.215359
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.209591
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.205441
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.189677
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.182074
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.157314
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.148981
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p2_form_filling",
+      "family": "browser_web_automation",
+      "gold_skill": "web-form-filler",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-page-snapshotter",
+        "frontend-debugger"
+      ],
+      "instruction_text": "Go through the demo signup flow and complete the form fields with the sample details I provided. Report which fields were entered and pause before final submission if it would create a real account. This is delegated form completion, not expected-versus-actual UI validation.",
+      "ranking": [
+        {
+          "skill": "web-form-filler",
+          "score": 0.841274
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.496756
+        },
+        {
+          "skill": "skill-evaluator",
+          "score": 0.376908
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.374662
+        },
+        {
+          "skill": "web-data-extractor",
+          "score": 0.362986
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.362539
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.327088
+        },
+        {
+          "skill": "skill-creator",
+          "score": 0.320551
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.318147
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.317019
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.276781
+        },
+        {
+          "skill": "document-converter",
+          "score": 0.268706
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.256068
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.242852
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.241591
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.239325
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.222742
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.208697
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.188431
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.172449
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p3_ui_test",
+      "family": "browser_web_automation",
+      "gold_skill": "web-ui-tester",
+      "closest_alternatives": [
+        "web-form-filler",
+        "frontend-debugger",
+        "web-page-snapshotter"
+      ],
+      "instruction_text": "Test whether the checkout page correctly shows a validation message when the postcode field is empty, and report the expected versus actual behavior.",
+      "ranking": [
+        {
+          "skill": "web-ui-tester",
+          "score": 0.74225
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.556477
+        },
+        {
+          "skill": "skill-evaluator",
+          "score": 0.532066
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.474804
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.439218
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "score": 0.433896
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.408356
+        },
+        {
+          "skill": "web-data-extractor",
+          "score": 0.387447
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.382792
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.367642
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.357693
+        },
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.340798
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.330778
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.316551
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.307223
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.2788
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.268387
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.264969
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.256194
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.20923
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p4_data_extraction",
+      "family": "browser_web_automation",
+      "gold_skill": "web-data-extractor",
+      "closest_alternatives": [
+        "web-page-snapshotter",
+        "web-ui-tester",
+        "frontend-debugger"
+      ],
+      "instruction_text": "From this product listing page, extract the product names, prices, availability labels, and detail-page links into a structured table. I do not need a screenshot.",
+      "ranking": [
+        {
+          "skill": "web-data-extractor",
+          "score": 0.767956
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.519024
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.446289
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.401405
+        },
+        {
+          "skill": "data-analysis-for-ranking-selection",
+          "score": 0.383176
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.377061
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.356607
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.305124
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.302182
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.296949
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.280866
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.277767
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.270588
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.261967
+        },
+        {
+          "skill": "news-briefing-writer",
+          "score": 0.261058
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.251612
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.241373
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.235879
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.230871
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.221975
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p5_frontend_debugging",
+      "family": "browser_web_automation",
+      "gold_skill": "frontend-debugger",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-page-snapshotter",
+        "code-reviewer"
+      ],
+      "instruction_text": "The settings page opens but clicking Save does nothing, and the console shows `Cannot read properties of undefined (reading 'id')` after the profile API call. Use the UI symptom as evidence, then inspect the frontend event handler, state update path, and API response contract. The deliverable is the likely source-level cause plus the smallest code patch.",
+      "ranking": [
+        {
+          "skill": "frontend-debugger",
+          "score": 0.829276
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.532272
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.415197
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.393156
+        },
+        {
+          "skill": "skill-editor",
+          "score": 0.315973
+        },
+        {
+          "skill": "skill-packager",
+          "score": 0.273849
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.255268
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.211946
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.201427
+        },
+        {
+          "skill": "document-normaliser",
+          "score": 0.19024
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.189486
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.18873
+        },
+        {
+          "skill": "changelog-writer",
+          "score": 0.183977
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.174939
+        },
+        {
+          "skill": "professor-email-reply",
+          "score": 0.167829
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.161043
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.159421
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.158749
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.155876
+        },
+        {
+          "skill": "document-converter",
+          "score": 0.14038
+        }
+      ]
+    }
+  ]
+}

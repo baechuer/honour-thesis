@@ -1,0 +1,113 @@
+{
+  "method": "qwen_full_local_schema_top100",
+  "source_result": "skill_benchmark/outputs/provider_selector_qwen_full_local_schema_top100_trace.json",
+  "date": "2026-05-27",
+  "summary": {
+    "total_prompts": 67,
+    "strict_top1_failures": 10,
+    "first_stage_exclusions_gold_rank_gt_100": 4,
+    "reranker_or_gold_boundary_failures_gold_in_top100": 6
+  },
+  "failures": {
+    "web_p5_frontend_debugging": {
+      "gold_skill": "frontend-debugger",
+      "top1_skill": "api-ops-handoff-brief-writer",
+      "gold_first_stage_rank": 223,
+      "gold_final_rank": null,
+      "failure_mode": "first_stage_exclusion",
+      "subtype": "embedding attracted to API terms instead of frontend-debug workflow",
+      "human_read": "The request contains API response contract and source-level patch language. Qwen retrieves API operations skills before the frontend debugger, so the schema reranker never sees the gold skill.",
+      "likely_action": "Improve first-stage representation/query extraction for frontend debugging signals, or allow broader top-k only if cost is acceptable."
+    },
+    "code_p1_local_code_review": {
+      "gold_skill": "code-reviewer",
+      "top1_skill": "email-drafter",
+      "gold_first_stage_rank": 426,
+      "gold_final_rank": null,
+      "failure_mode": "first_stage_exclusion",
+      "subtype": "embedding misreads object tokens as email task",
+      "human_read": "The prompt mentions user.email and fallback names. Qwen over-associates email-related tokens with email drafting and excludes the local code-review skill from top-100.",
+      "likely_action": "Use query requirement extraction to identify review-before-commit intent, or improve code-review lexical anchors in first-stage retrieval."
+    },
+    "doc_p4_field_extraction": {
+      "gold_skill": "document-field-extractor",
+      "top1_skill": "receipt-extractor",
+      "gold_first_stage_rank": 32,
+      "gold_final_rank": 7,
+      "failure_mode": "acceptable_or_near_acceptable_domain_specific_competitor",
+      "subtype": "domain-specific extractor outranks generic extractor",
+      "human_read": "The prompt is invoice field extraction. A receipt/invoice-style extractor is procedurally close, although the controlled gold is the generic document field extractor.",
+      "likely_action": "Manually adjudicate whether receipt-extractor or invoice-payment-checker should become acceptable/borderline for this prompt."
+    },
+    "doc_p7_layout_preserving_conversion": {
+      "gold_skill": "layout-preserving-converter",
+      "top1_skill": "medical-admin-ops-field-extractor",
+      "gold_first_stage_rank": 618,
+      "gold_final_rank": null,
+      "failure_mode": "first_stage_exclusion",
+      "subtype": "field-extraction distractors dominate layout-preserving conversion",
+      "human_read": "The request mentions headings, labels, rows, and grouped fields. Qwen retrieves field-extraction skills and misses the layout-preserving conversion skill entirely.",
+      "likely_action": "Strengthen layout/conversion cues in first-stage representation or add query extraction for desired output operation."
+    },
+    "plan_p5_weekly_planner": {
+      "gold_skill": "weekly-planner",
+      "top1_skill": "meeting-ops-acceptance-test-builder",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 3,
+      "failure_mode": "schema_reranker_overweights_secondary_terms",
+      "subtype": "test-case and meeting terms overpower weekly planning intent",
+      "human_read": "The gold skill is retrieved well, but the schema reranker overreacts to benchmark testing, meeting, and multi-agent test-case terms in the task list.",
+      "likely_action": "Improve schema reranker treatment of task-list contents versus primary user intent."
+    },
+    "read_p1_paper_summary": {
+      "gold_skill": "paper-summariser",
+      "top1_skill": "method-note-builder",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 2,
+      "failure_mode": "near_neighbor_schema_misweighting",
+      "subtype": "method/evaluation cues overpower summary intent",
+      "human_read": "The request asks for an academic paper summary, but also names method and evaluation. The schema reranker slightly prefers the method-note skill.",
+      "likely_action": "Increase weight for summary intent or add richer distinction between summary output and method notes."
+    },
+    "read_p4_document_extraction": {
+      "gold_skill": "document-extractor",
+      "top1_skill": "web-data-extractor",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 20,
+      "failure_mode": "prompt_under_specified_cross_family_extraction",
+      "subtype": "generic source extraction lacks source-type cue",
+      "human_read": "The request says source and structured fields but does not specify research/document context. Web-data extraction is plausible from surface wording.",
+      "likely_action": "Treat as prompt weakness or require source-type information/query understanding before retrieval."
+    },
+    "reply_p5_generic_fresh_draft": {
+      "gold_skill": "reply-drafter",
+      "top1_skill": "reply-polisher",
+      "gold_first_stage_rank": 5,
+      "gold_final_rank": 3,
+      "failure_mode": "negation_and_boundary_failure",
+      "subtype": "not-for penalty insufficient for no-existing-draft cue",
+      "human_read": "The prompt explicitly says there is no existing draft to polish, but the schema reranker still prefers reply-polisher.",
+      "likely_action": "Strengthen negation/avoid-condition handling beyond lexical overlap."
+    },
+    "skill_p4_edit_existing": {
+      "gold_skill": "skill-editor",
+      "top1_skill": "docs-ops-field-extractor",
+      "gold_first_stage_rank": 309,
+      "gold_final_rank": null,
+      "failure_mode": "first_stage_exclusion",
+      "subtype": "object skill confused with target skill content",
+      "human_read": "The user wants to edit a skill whose subject is field extraction. Qwen retrieves field-extraction skills instead of the meta-level skill editor.",
+      "likely_action": "Represent meta-skill operations more explicitly or add query extraction for edit/evaluate/install/create intent."
+    },
+    "skill_p5_evaluate_existing": {
+      "gold_skill": "skill-evaluator",
+      "top1_skill": "reply-polisher",
+      "gold_first_stage_rank": 28,
+      "gold_final_rank": 2,
+      "failure_mode": "object_skill_vs_meta_skill_confusion",
+      "subtype": "target skill name overpowers evaluation intent",
+      "human_read": "The request asks to evaluate reply-polisher, not use reply-polisher. The schema reranker ranks the object skill above the meta-level evaluator.",
+      "likely_action": "Add explicit meta-operation features or query parsing for evaluate/edit/find/install/create operations."
+    }
+  }
+}

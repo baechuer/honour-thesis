@@ -1,0 +1,71 @@
+[
+  {
+    "id": "api_p1_openapi_contract_review",
+    "family": "api_backend_design",
+    "gold_skill": "openapi-contract-reviewer",
+    "closest_alternatives": [
+      "external-api-integration-planner",
+      "webhook-contract-planner",
+      "architecture-boundary-reviewer"
+    ],
+    "prompt": "Please review `/workspace/fixtures/api_backend_design/billing_openapi.yaml` as an API contract. I need endpoint-level issues around schemas, examples, status codes, auth behavior, pagination, and client compatibility."
+  },
+  {
+    "id": "api_p2_external_api_integration",
+    "family": "api_backend_design",
+    "gold_skill": "external-api-integration-planner",
+    "closest_alternatives": [
+      "openapi-contract-reviewer",
+      "webhook-contract-planner",
+      "service-dependency-mapper"
+    ],
+    "prompt": "Please plan how our app should connect to the Acme Billing API. Cover authentication, endpoint choices, request/response mapping, provider throttling, recovery behavior, page-through results, secrets, and verification tests."
+  },
+  {
+    "id": "api_p3_webhook_contract",
+    "family": "api_backend_design",
+    "gold_skill": "webhook-contract-planner",
+    "closest_alternatives": [
+      "external-api-integration-planner",
+      "openapi-contract-reviewer",
+      "public-office-webhook-automation",
+      "public-api-design-principles"
+    ],
+    "prompt": "A payment provider will send event callbacks into our app. Please design the receiver behavior: which events to accept, how to validate the body, how to check signatures, how to handle duplicate deliveries, retry timing, ordering assumptions, and failed-message storage."
+  },
+  {
+    "id": "api_p4_architecture_boundary",
+    "family": "api_backend_design",
+    "gold_skill": "architecture-boundary-reviewer",
+    "closest_alternatives": [
+      "service-dependency-mapper",
+      "openapi-contract-reviewer",
+      "database-migration-risk-assessor"
+    ],
+    "prompt": "Please review `/workspace/fixtures/api_backend_design/service_modules.md` for backend architecture boundaries. I care about module ownership, dependency direction, coupling, misplaced responsibilities, and a safe refactoring sequence."
+  },
+  {
+    "id": "api_p5_database_migration_risk",
+    "family": "api_backend_design",
+    "gold_skill": "database-migration-risk-assessor",
+    "closest_alternatives": [
+      "architecture-boundary-reviewer",
+      "service-dependency-mapper",
+      "public-office-database-sync",
+      "public-architecture-patterns"
+    ],
+    "prompt": "Please assess `/workspace/fixtures/api_backend_design/add_subscription_status_migration.sql` before production rollout. I need locking risk, backfill plan, compatibility with old app versions, rollback path, and verification queries."
+  },
+  {
+    "id": "api_p6_service_dependency_map",
+    "family": "api_backend_design",
+    "gold_skill": "service-dependency-mapper",
+    "closest_alternatives": [
+      "architecture-boundary-reviewer",
+      "external-api-integration-planner",
+      "public-architecture-patterns",
+      "public-api-design-principles"
+    ],
+    "prompt": "Please trace how the billing, notification, account, and analytics services rely on each other using `/workspace/fixtures/api_backend_design/service_trace_notes.md`. Include call direction, responsible teams, shared data promises, ways failures propagate, and evidence gaps."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "slug": "public-openai-render-deploy",
+  "source_name": "render-deploy",
+  "origin": "openai/skills",
+  "source_url": "https://github.com/openai/skills/tree/main/skills/.curated/render-deploy",
+  "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/render-deploy/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for render deploy; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "deployment target",
+    "build command",
+    "environment variables",
+    "deployment logs"
+  ],
+  "resource_signals": [
+    "render deploy",
+    "public SKILL.md metadata",
+    "deployment",
+    "build logs",
+    "environment config",
+    "verification URL"
+  ]
+}

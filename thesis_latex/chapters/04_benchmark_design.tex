@@ -1,0 +1,67 @@
+\chapter{Benchmark Design}
+
+\section{Design Goals}
+
+The benchmark is designed to test skill retrieval under the failure mode that motivates the thesis: semantic confusability between procedurally distinct skills. It is not enough for the benchmark to contain many unrelated skills. The benchmark must contain clusters where several skills sound relevant to the same request, but only one skill is procedurally correct.
+
+The benchmark therefore has three goals:
+
+\begin{enumerate}
+  \item create controlled near-neighbour skill clusters;
+  \item scale the library with background skills so retrieval is not performed in a toy setting;
+  \item validate that gold labels remain defensible even when non-core background skills are considered.
+\end{enumerate}
+
+\section{Skill Library}
+
+The current benchmark contains 1006 skills:
+
+\begin{itemize}
+  \item 67 controlled core skills;
+  \item 920 generated background-scale skills;
+  \item 15 public imported background skills;
+  \item 4 support or email skills.
+\end{itemize}
+
+The controlled core skills are the main evaluation targets. They are organized into task families such as document processing, code and GitHub workflows, planning and meetings, reading and research, security and privacy, metrics and observability, browser or web automation, reply and messaging, data and spreadsheets, and skill lifecycle operations.
+
+\placeholder{Add a table listing all controlled clusters, each cluster's skills, and the procedural distinction being tested.}
+
+\section{Confusable Clusters}
+
+A valid confusable cluster must satisfy three conditions. First, the skills must overlap in surface meaning, name, description, or trigger phrases. Second, the skills must differ in operationally important procedure. Third, choosing the wrong skill must matter for the resulting workflow or artifact.
+
+For example, a document cluster may include document summarisation, field extraction, citation grounding, document normalisation, and layout-preserving conversion. These skills all involve documents, but they differ in input requirements, output shape, workflow steps, and verification criteria.
+
+\placeholder{Insert 3-5 detailed cluster examples. For each example, include the prompt, gold skill, near-neighbour distractors, and the exact procedural distinction.}
+
+\section{Background Scale Skills}
+
+Background skills are included to make the library scale more realistic. They are not the main research target, but they test whether retrieval methods remain robust when many plausible but non-gold candidates are present. Background skills also help reveal whether a supposedly controlled prompt accidentally matches a non-core skill better than the intended gold skill.
+
+The benchmark includes generated background skills and a small number of public imported skills. Generated skills are useful for controlled scale, while public skills improve ecological validity by introducing less curated wording and real-world skill variation.
+
+\section{Gold Labels and Acceptable Alternatives}
+
+Each evaluated prompt has a gold-label intended skill. A gold label is valid when a careful human reading shows that the prompt's procedural requirements align more strongly with the gold skill than with its near neighbours.
+
+Some cases may require acceptable alternatives. This is especially true when a background skill is domain-specific and could reasonably satisfy the prompt even if it was not the original target. Acceptable alternatives should be recorded explicitly rather than silently counted as failures or successes.
+
+\placeholder{Add the final acceptable-alternatives policy and include examples from the document field extraction and reply drafting cases.}
+
+\section{Validation Rubric}
+
+The benchmark is validated through a multi-step rubric:
+
+\begin{enumerate}
+  \item Integrity: all prompts and gold skills resolve.
+  \item Procedural alignment: each prompt contains requirements that justify the gold skill.
+  \item Semantic confusability: each prompt has plausible near-neighbour skills.
+  \item Prompt leakage: prompts should not reveal exact skill names in a way that makes retrieval trivial.
+  \item Scale regime: the library should be large enough to test scalable retrieval pressure.
+  \item Selector pressure: baseline methods should show meaningful performance differences.
+  \item Progressive-disclosure baseline: the normal main-agent selection pattern should be evaluated where feasible.
+  \item Downstream validation: retrieval differences should be tested for downstream task impact.
+\end{enumerate}
+
+\placeholder{Move the detailed pass/fail thresholds from the benchmark methodology rubric into an appendix table.}

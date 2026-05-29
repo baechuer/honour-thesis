@@ -1,0 +1,40 @@
+\chapter{Discussion}
+
+\section{What the Results Suggest about Representation}
+
+The current results suggest that the central issue is not simply choosing a stronger retriever. Stronger embeddings and neural reranking improve some conditions, but they do not eliminate semantic confusion. The strongest current result comes from combining broad semantic candidate generation with a reranker that uses explicit procedural fields.
+
+This supports the claim that retrieval strategies and representation quality are coupled. A dense retriever can find plausible candidates quickly, but it may not reliably distinguish skills whose descriptions overlap. A procedural schema can help distinguish candidates, but only when the correct skill appears in the candidate pool and the user request contains enough procedural evidence.
+
+\section{Information that Appears Important}
+
+The benchmark and failure analysis indicate that the following information types are especially important:
+
+\begin{itemize}
+  \item input source type;
+  \item expected output shape;
+  \item workflow steps and ordering;
+  \item preconditions and assumptions;
+  \item resource or dependency requirements;
+  \item negative boundaries;
+  \item whether the task is about using a skill or modifying a skill;
+  \item primary user intent versus secondary content terms.
+\end{itemize}
+
+\placeholder{After final ablations, rank these information types by evidence strength.}
+
+\section{Why Architecture Alone Is Not the Thesis}
+
+The experiments compare architectures, but the thesis contribution is not simply that one architecture wins. The more important finding is which representational information each architecture preserves or loses. A flat metadata system loses many procedural distinctions. Full-skill embedding exposes more information but may still score based on broad semantic similarity. Structured procedural fields make the relevant distinctions explicit, but depend on authoring quality and request specificity. Hybrid methods work because they combine complementary strengths.
+
+\section{Failure Modes and Limits}
+
+The low-information stress test shows a key limitation: retrieval cannot always solve underspecification. If a request lacks procedural evidence, the correct response may be to ask a clarification question rather than force a skill selection. This means future systems may need a query-understanding stage before retrieval, especially for vague user requests.
+
+Another limitation is that deterministic schema reranking may overfit to the benchmark's structured fields if not carefully validated. The use of background skills, non-core procedural review, low-information prompts, and provider-based retrieval helps reduce this risk, but further external validation would strengthen the thesis.
+
+\section{Implications for Agent Skill Systems}
+
+The practical implication is that large skill libraries should not rely only on skill names and short descriptions. They should preserve procedural fields that support disambiguation, and retrieval pipelines should separate candidate generation from final procedural selection. The results also suggest that full skill artifacts and structured summaries may both be useful, but for different stages of retrieval.
+
+\placeholder{Add final design recommendations for future agent skill systems, based on final experiments.}

@@ -1,0 +1,25 @@
+{
+  "slug": "public-huggingface-datasets",
+  "source_name": "huggingface-datasets",
+  "origin": "huggingface/skills",
+  "source_url": "https://github.com/huggingface/skills/tree/main/skills/huggingface-datasets",
+  "raw_url": "https://raw.githubusercontent.com/huggingface/skills/main/skills/huggingface-datasets/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "dataset discovery and extraction workflow; depends on Hugging Face Dataset Viewer API, dataset subset/split metadata, pagination, filtering, and download URLs",
+  "external_dependencies": [
+    "Hugging Face Dataset Viewer API",
+    "dataset repository",
+    "subset/split names",
+    "pagination",
+    "parquet or JSONL URLs"
+  ],
+  "resource_signals": [
+    "dataset rows",
+    "subsets",
+    "splits",
+    "filters",
+    "download links",
+    "API calls"
+  ]
+}

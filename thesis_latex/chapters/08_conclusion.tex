@@ -1,0 +1,9 @@
+\chapter{Conclusion}
+
+This thesis investigates skill representation for scalable agent skill retrieval. The motivating problem is semantic confusion: as skill libraries grow, many skills can sound similar while requiring different procedures. In such cases, the correct skill may exist, but the retrieval system may surface a plausible yet procedurally inappropriate alternative.
+
+The thesis reframes skill selection as a layered problem involving skill artifacts, selection representations, and retrieval policies. It argues that the key research issue is not only which retriever performs best, but what information must be preserved so that retrieval can distinguish semantically similar but procedurally distinct skills.
+
+Current results support the value of explicit procedural information. Flat metadata and description-only embedding retrieval are fragile under scale. Full skill artifacts help, and structured procedural representations help further when the request contains enough evidence. The strongest current result combines dense retrieval over full skill artifacts with structure-aware schema reranking, suggesting that semantic retrieval and procedural reranking are complementary.
+
+\placeholder{Rewrite this conclusion after final experiments. Include final answers to RQ1 and RQ2, final limitations, and future work.}

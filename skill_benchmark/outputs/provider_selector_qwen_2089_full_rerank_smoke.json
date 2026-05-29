@@ -1,0 +1,611 @@
+{
+  "embedding_provider": "qwen",
+  "embedding_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "embedding_model": "text-embedding-v4",
+  "embedding_representation": "full",
+  "scale": "current_full",
+  "reranker_provider": "qwen",
+  "reranker_model": "qwen3-rerank",
+  "rerank_candidates": 20,
+  "local_schema_base_weight": null,
+  "local_schema_weight": null,
+  "elapsed_ms": 356238.24,
+  "metrics": {
+    "total_prompts": 5,
+    "scale_skill_count": 2089,
+    "selector_visible_tokens_approx": 1119733,
+    "top1_accuracy": 0.8,
+    "top1_hits": 4,
+    "acceptable_top1_accuracy": 1.0,
+    "acceptable_top1_hits": 5,
+    "borderline_top1": 0,
+    "borderline_top1_rate": 0.0,
+    "top3_recall": 1.0,
+    "top3_hits": 5,
+    "acceptable_top3_recall": 1.0,
+    "acceptable_top3_hits": 5,
+    "top5_recall": 1.0,
+    "top5_hits": 5,
+    "acceptable_top5_recall": 1.0,
+    "acceptable_top5_hits": 5,
+    "mrr": 0.9,
+    "acceptable_mrr": 1.0,
+    "mean_gold_rank": 1.2,
+    "mean_acceptable_rank": 1.0,
+    "wrong_top1": 1,
+    "unacceptable_top1": 0,
+    "unacceptable_top1_rate": 0.0,
+    "listed_alternative_top1": 0,
+    "listed_alternative_top1_rate": 0.0,
+    "non_main_top1": 1,
+    "non_main_top1_rate": 0.2,
+    "background_top1": 1,
+    "background_top1_rate": 0.2,
+    "public_import_top1": 0,
+    "public_import_top1_rate": 0.0,
+    "by_family": {
+      "api_backend_design": {
+        "total": 5,
+        "top1_accuracy": 0.8,
+        "acceptable_top1_accuracy": 1.0,
+        "top3_recall": 1.0,
+        "acceptable_top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "acceptable_top5_recall": 1.0
+      }
+    },
+    "top_confusions": [
+      {
+        "pair": "external-api-integration-planner -> api-integration-planner",
+        "count": 1
+      }
+    ],
+    "top_unacceptable_confusions": []
+  },
+  "api_usage": {
+    "embedding_api_calls": 114,
+    "embedding_cache_hits": 1005,
+    "embedding_tokens_approx": 569418,
+    "rerank_api_calls": 5,
+    "rerank_cache_hits": 0,
+    "rerank_tokens_approx": 54161
+  },
+  "acceptable_alternatives": {
+    "api_p2_external_api_integration": {
+      "acceptable": [
+        "api-integration-planner"
+      ],
+      "borderline": []
+    },
+    "code_p5_changelog_entry": {
+      "acceptable": [
+        "public-office-changelog-generator"
+      ],
+      "borderline": []
+    },
+    "doc_p2_document_rewriter": {
+      "acceptable": [
+        "travel-ops-rewrite-editor"
+      ],
+      "borderline": [
+        "travel-ops-summary-writer"
+      ]
+    },
+    "doc_p5_comparison_preparation": {
+      "acceptable": [
+        "legal-ops-comparison-builder"
+      ],
+      "borderline": [
+        "docs-ops-comparison-builder",
+        "writing-ops-comparison-builder"
+      ]
+    },
+    "doc_p6_conversion": {
+      "acceptable": [
+        "public-markitdown"
+      ],
+      "borderline": []
+    },
+    "obs_p6_incident_summary": {
+      "acceptable": [
+        "incident-ops-summary-writer"
+      ],
+      "borderline": []
+    },
+    "skill_p2_install_existing": {
+      "acceptable": [
+        "public-skill-installer"
+      ],
+      "borderline": []
+    }
+  },
+  "results": [
+    {
+      "prompt_id": "api_p1_openapi_contract_review",
+      "family": "api_backend_design",
+      "gold_skill": "openapi-contract-reviewer",
+      "closest_alternatives": [
+        "external-api-integration-planner",
+        "webhook-contract-planner",
+        "architecture-boundary-reviewer"
+      ],
+      "instruction_text": "Please review billing_openapi.yaml as an API contract. I need endpoint-level issues around schemas, examples, status codes, auth behavior, pagination, and client compatibility.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "openapi-contract-reviewer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "openapi-contract-reviewer",
+          "score": 0.955782
+        },
+        {
+          "skill": "openapi-contract-tester",
+          "score": 0.866268
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.55315
+        },
+        {
+          "skill": "api-ops-acceptance-test-builder",
+          "score": 0.547041
+        },
+        {
+          "skill": "public-api-design-principles",
+          "score": 0.530306
+        },
+        {
+          "skill": "api-ops-compliance-checker",
+          "score": 0.511042
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.504545
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.486813
+        },
+        {
+          "skill": "api-ops-failure-diagnoser",
+          "score": 0.479151
+        },
+        {
+          "skill": "api-ops-dependency-mapper",
+          "score": 0.472519
+        },
+        {
+          "skill": "api-ops-field-extractor",
+          "score": 0.461863
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.457475
+        },
+        {
+          "skill": "public-office-stripe-payments",
+          "score": 0.437344
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.428169
+        },
+        {
+          "skill": "api-ops-artifact-packager",
+          "score": 0.42557
+        },
+        {
+          "skill": "api-ops-scenario-planner",
+          "score": 0.422849
+        },
+        {
+          "skill": "api-ops-timeline-builder",
+          "score": 0.41592
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.405317
+        },
+        {
+          "skill": "invoice-payment-checker",
+          "score": 0.403658
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.402283
+        }
+      ]
+    },
+    {
+      "prompt_id": "api_p2_external_api_integration",
+      "family": "api_backend_design",
+      "gold_skill": "external-api-integration-planner",
+      "closest_alternatives": [
+        "openapi-contract-reviewer",
+        "webhook-contract-planner",
+        "service-dependency-mapper"
+      ],
+      "instruction_text": "Please plan how our app should connect to the Acme Billing API. Cover authentication, endpoint choices, request/response mapping, provider throttling, recovery behavior, page-through results, secrets, and verification tests.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 2,
+      "first_stage_top1": "external-api-integration-planner",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "api-integration-planner",
+          "score": 0.825893
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.811499
+        },
+        {
+          "skill": "api-ops-acceptance-test-builder",
+          "score": 0.60407
+        },
+        {
+          "skill": "api-ops-scenario-planner",
+          "score": 0.585973
+        },
+        {
+          "skill": "api-ops-timeline-builder",
+          "score": 0.551402
+        },
+        {
+          "skill": "api-design-reviewer",
+          "score": 0.520349
+        },
+        {
+          "skill": "api-ops-dependency-mapper",
+          "score": 0.517559
+        },
+        {
+          "skill": "customer-success-ops-acceptance-test-builder",
+          "score": 0.51631
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.505468
+        },
+        {
+          "skill": "api-ops-resource-linker",
+          "score": 0.476633
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.476314
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.473849
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.471273
+        },
+        {
+          "skill": "api-ops-compliance-checker",
+          "score": 0.456238
+        },
+        {
+          "skill": "api-ops-artifact-packager",
+          "score": 0.456063
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.455377
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.442151
+        },
+        {
+          "skill": "customer-success-ops-dependency-mapper",
+          "score": 0.415655
+        },
+        {
+          "skill": "invoice-payment-checker",
+          "score": 0.395001
+        },
+        {
+          "skill": "receipt-extractor",
+          "score": 0.352333
+        }
+      ]
+    },
+    {
+      "prompt_id": "api_p3_webhook_contract",
+      "family": "api_backend_design",
+      "gold_skill": "webhook-contract-planner",
+      "closest_alternatives": [
+        "external-api-integration-planner",
+        "openapi-contract-reviewer",
+        "public-office-webhook-automation",
+        "public-api-design-principles"
+      ],
+      "instruction_text": "A payment provider will send event callbacks into our app. Please design the receiver behavior: which events to accept, how to validate the body, how to check signatures, how to handle duplicate deliveries, retry timing, ordering assumptions, and failed-message storage.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "webhook-contract-planner",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "webhook-contract-planner",
+          "score": 0.864127
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.775276
+        },
+        {
+          "skill": "events-ops-acceptance-test-builder",
+          "score": 0.487454
+        },
+        {
+          "skill": "invoice-payment-checker",
+          "score": 0.450579
+        },
+        {
+          "skill": "receipt-extractor",
+          "score": 0.439152
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.435021
+        },
+        {
+          "skill": "ecommerce-ops-acceptance-test-builder",
+          "score": 0.416689
+        },
+        {
+          "skill": "events-ops-compliance-checker",
+          "score": 0.410279
+        },
+        {
+          "skill": "events-ops-artifact-packager",
+          "score": 0.400882
+        },
+        {
+          "skill": "ecommerce-ops-timeline-builder",
+          "score": 0.39494
+        },
+        {
+          "skill": "mobile-ops-timeline-builder",
+          "score": 0.378257
+        },
+        {
+          "skill": "ecommerce-ops-normalizer",
+          "score": 0.376352
+        },
+        {
+          "skill": "events-ops-monitoring-plan-builder",
+          "score": 0.372883
+        },
+        {
+          "skill": "customer-success-ops-monitoring-plan-builder",
+          "score": 0.354346
+        },
+        {
+          "skill": "logistics-ops-monitoring-plan-builder",
+          "score": 0.351219
+        },
+        {
+          "skill": "email-ops-monitoring-plan-builder",
+          "score": 0.348548
+        },
+        {
+          "skill": "ecommerce-ops-monitoring-plan-builder",
+          "score": 0.347391
+        },
+        {
+          "skill": "insurance-ops-monitoring-plan-builder",
+          "score": 0.34507
+        },
+        {
+          "skill": "fundraising-ops-monitoring-plan-builder",
+          "score": 0.323606
+        },
+        {
+          "skill": "mobile-ops-monitoring-plan-builder",
+          "score": 0.322869
+        }
+      ]
+    },
+    {
+      "prompt_id": "api_p4_architecture_boundary",
+      "family": "api_backend_design",
+      "gold_skill": "architecture-boundary-reviewer",
+      "closest_alternatives": [
+        "service-dependency-mapper",
+        "openapi-contract-reviewer",
+        "database-migration-risk-assessor"
+      ],
+      "instruction_text": "Please review service_modules.md for backend architecture boundaries. I care about module ownership, dependency direction, coupling, misplaced responsibilities, and a safe refactoring sequence.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "architecture-boundary-reviewer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "architecture-boundary-reviewer",
+          "score": 0.940539
+        },
+        {
+          "skill": "public-architecture-patterns",
+          "score": 0.734715
+        },
+        {
+          "skill": "sre-ops-dependency-mapper",
+          "score": 0.600494
+        },
+        {
+          "skill": "platform-ops-dependency-mapper",
+          "score": 0.584424
+        },
+        {
+          "skill": "cloud-ops-dependency-mapper",
+          "score": 0.574325
+        },
+        {
+          "skill": "operations-ops-dependency-mapper",
+          "score": 0.570799
+        },
+        {
+          "skill": "ecommerce-ops-dependency-mapper",
+          "score": 0.559858
+        },
+        {
+          "skill": "facilities-ops-dependency-mapper",
+          "score": 0.552642
+        },
+        {
+          "skill": "api-ops-dependency-mapper",
+          "score": 0.552073
+        },
+        {
+          "skill": "finance-ops-dependency-mapper",
+          "score": 0.54716
+        },
+        {
+          "skill": "service-dependency-mapper",
+          "score": 0.537548
+        },
+        {
+          "skill": "code-documentation-writer",
+          "score": 0.533944
+        },
+        {
+          "skill": "real-estate-ops-dependency-mapper",
+          "score": 0.532175
+        },
+        {
+          "skill": "property-ops-dependency-mapper",
+          "score": 0.528195
+        },
+        {
+          "skill": "mobile-ops-dependency-mapper",
+          "score": 0.509552
+        },
+        {
+          "skill": "api-design-reviewer",
+          "score": 0.493053
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.468785
+        },
+        {
+          "skill": "public-api-design-principles",
+          "score": 0.452658
+        },
+        {
+          "skill": "webhook-contract-planner",
+          "score": 0.378457
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.342762
+        }
+      ]
+    },
+    {
+      "prompt_id": "api_p5_database_migration_risk",
+      "family": "api_backend_design",
+      "gold_skill": "database-migration-risk-assessor",
+      "closest_alternatives": [
+        "architecture-boundary-reviewer",
+        "service-dependency-mapper",
+        "public-office-database-sync",
+        "public-architecture-patterns"
+      ],
+      "instruction_text": "Please assess add_subscription_status_migration.sql before production rollout. I need locking risk, backfill plan, compatibility with old app versions, rollback path, and verification queries.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "database-migration-risk-assessor",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "database-migration-risk-assessor",
+          "score": 0.892813
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.882355
+        },
+        {
+          "skill": "public-office-subscription-management",
+          "score": 0.472054
+        },
+        {
+          "skill": "database-ops-monitoring-plan-builder",
+          "score": 0.427182
+        },
+        {
+          "skill": "customer-success-ops-normalizer",
+          "score": 0.412335
+        },
+        {
+          "skill": "medical-admin-ops-monitoring-plan-builder",
+          "score": 0.38947
+        },
+        {
+          "skill": "property-ops-monitoring-plan-builder",
+          "score": 0.38869
+        },
+        {
+          "skill": "mobile-ops-dependency-mapper",
+          "score": 0.379975
+        },
+        {
+          "skill": "grant-ops-monitoring-plan-builder",
+          "score": 0.377335
+        },
+        {
+          "skill": "mobile-ops-scenario-planner",
+          "score": 0.375303
+        },
+        {
+          "skill": "customer-success-ops-monitoring-plan-builder",
+          "score": 0.373839
+        },
+        {
+          "skill": "partnerships-ops-monitoring-plan-builder",
+          "score": 0.368166
+        },
+        {
+          "skill": "real-estate-ops-monitoring-plan-builder",
+          "score": 0.364321
+        },
+        {
+          "skill": "social-ops-monitoring-plan-builder",
+          "score": 0.360448
+        },
+        {
+          "skill": "mobile-ops-normalizer",
+          "score": 0.356824
+        },
+        {
+          "skill": "mobile-ops-monitoring-plan-builder",
+          "score": 0.356792
+        },
+        {
+          "skill": "fundraising-ops-monitoring-plan-builder",
+          "score": 0.354232
+        },
+        {
+          "skill": "community-ops-monitoring-plan-builder",
+          "score": 0.352891
+        },
+        {
+          "skill": "ecommerce-ops-monitoring-plan-builder",
+          "score": 0.348797
+        },
+        {
+          "skill": "webhook-contract-planner",
+          "score": 0.270466
+        }
+      ]
+    }
+  ]
+}

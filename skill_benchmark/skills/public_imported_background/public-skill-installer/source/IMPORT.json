@@ -1,0 +1,22 @@
+{
+  "slug": "public-skill-installer",
+  "source_name": "skill-installer",
+  "origin": "openai/skills",
+  "source_url": "https://github.com/openai/skills/tree/main/skills/.system/skill-installer",
+  "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.system/skill-installer/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "skill installation workflow; depends on GitHub or catalog source, local skill path, and install command behavior",
+  "external_dependencies": [
+    "GitHub repository or catalog",
+    "local skill directory",
+    "network access",
+    "installer command"
+  ],
+  "resource_signals": [
+    "registry lookup",
+    "download path",
+    "local install path",
+    "restart requirement"
+  ]
+}

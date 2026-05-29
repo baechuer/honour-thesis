@@ -1,0 +1,25 @@
+{
+  "slug": "public-openai-linear",
+  "source_name": "linear",
+  "origin": "openai/skills",
+  "source_url": "https://github.com/openai/skills/tree/main/skills/.curated/linear",
+  "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/linear/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "external-service workflow; depends on account permissions, workspace records, API behavior, and side-effect constraints",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "external SaaS workspace",
+    "account permissions",
+    "records or API access"
+  ],
+  "resource_signals": [
+    "linear",
+    "public SKILL.md metadata",
+    "external service",
+    "workspace",
+    "automation",
+    "permissions"
+  ]
+}

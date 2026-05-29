@@ -1,0 +1,146 @@
+[
+  {
+    "id": "low_doc_understand_file",
+    "family": "low_information_documents",
+    "gold_skill": "document-summariser",
+    "closest_alternatives": [
+      "document-field-extractor",
+      "document-normaliser",
+      "document-rewriter"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you look at `/workspace/fixtures/documents_files/internal_travel_policy_update.txt` and tell me what I need to know?"
+  },
+  {
+    "id": "low_doc_get_details",
+    "family": "low_information_documents",
+    "gold_skill": "document-field-extractor",
+    "closest_alternatives": [
+      "document-summariser",
+      "receipt-extractor",
+      "invoice-payment-checker"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you pull the useful details from `/workspace/fixtures/documents_files/invoice_northbridge_supplies.txt` so I can reuse them later?"
+  },
+  {
+    "id": "low_doc_clean_up",
+    "family": "low_information_documents",
+    "gold_skill": "document-normaliser",
+    "closest_alternatives": [
+      "document-rewriter",
+      "document-converter",
+      "layout-preserving-converter"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you clean up `/workspace/fixtures/documents_files/request_form.txt` so it is easier to read, but do not change what it says?"
+  },
+  {
+    "id": "low_data_check_sheet",
+    "family": "low_information_data",
+    "gold_skill": "data-analysis-overview",
+    "closest_alternatives": [
+      "data-analysis-with-anomaly-focus",
+      "data-analysis-for-reporting",
+      "data-analysis-for-root-cause-diagnosis"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you look over `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv` and tell me what is going on?"
+  },
+  {
+    "id": "low_data_something_off",
+    "family": "low_information_data",
+    "gold_skill": "data-analysis-with-anomaly-focus",
+    "closest_alternatives": [
+      "data-analysis-overview",
+      "data-analysis-for-root-cause-diagnosis",
+      "latency-anomaly-detector"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Something looks off in `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Can you check it?"
+  },
+  {
+    "id": "low_code_check_change",
+    "family": "low_information_code",
+    "gold_skill": "pr-reviewer",
+    "closest_alternatives": [
+      "code-reviewer",
+      "review-comment-resolver",
+      "security-code-reviewer"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you check this branch before it gets merged?"
+  },
+  {
+    "id": "low_code_red_build",
+    "family": "low_information_code",
+    "gold_skill": "ci-failure-debugger",
+    "closest_alternatives": [
+      "code-reviewer",
+      "frontend-debugger",
+      "debugging-root-cause-helper"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "The build is red after my changes. Can you help me figure out why?"
+  },
+  {
+    "id": "low_news_catch_up",
+    "family": "low_information_news",
+    "gold_skill": "news-briefing-writer",
+    "closest_alternatives": [
+      "news-summariser",
+      "news-theme-extractor",
+      "tech-news-trend-extractor"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you catch me up on these tech news items for a quick update?"
+  },
+  {
+    "id": "low_meeting_next_steps",
+    "family": "low_information_planning",
+    "gold_skill": "meeting-followup-extractor",
+    "closest_alternatives": [
+      "meeting-summary-writer",
+      "meeting-agenda-builder",
+      "task-extractor"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you turn this meeting note into the next things we need to do?"
+  },
+  {
+    "id": "low_reply_make_better",
+    "family": "low_information_reply",
+    "gold_skill": "reply-polisher",
+    "closest_alternatives": [
+      "reply-drafter",
+      "email-polisher",
+      "followup-reply-writer"
+    ],
+    "ambiguity_level": "low",
+    "prompt": "Can you make this reply sound better before I send it?"
+  },
+  {
+    "id": "low_security_login_risk",
+    "family": "low_information_security",
+    "gold_skill": "auth-flow-reviewer",
+    "closest_alternatives": [
+      "security-threat-modeler",
+      "security-code-reviewer",
+      "privacy-risk-reviewer"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you review this login setup and tell me if there are risks?"
+  },
+  {
+    "id": "low_skill_existing_help",
+    "family": "low_information_skill_lifecycle",
+    "gold_skill": "skill-finder",
+    "closest_alternatives": [
+      "skill-installer",
+      "skill-creator",
+      "skill-evaluator"
+    ],
+    "ambiguity_level": "medium",
+    "prompt": "Can you help me find whether we already have a skill for this?"
+  }
+]

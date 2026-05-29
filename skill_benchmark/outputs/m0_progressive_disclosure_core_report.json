@@ -1,0 +1,976 @@
+{
+  "acceptable_any_hit": 0.6418,
+  "acceptable_top1_accuracy": 0.6119,
+  "borderline_top1_rate": 0.0,
+  "exit_codes": {
+    "0": 67
+  },
+  "family_metrics": {
+    "browser_web_automation": {
+      "acceptable_any_hit": 0.5,
+      "acceptable_top1": 0.5,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.5,
+      "strict_any_hit": 0.5,
+      "strict_top1": 0.5,
+      "total": 6
+    },
+    "code_github_workflow": {
+      "acceptable_any_hit": 0.1667,
+      "acceptable_top1": 0.1667,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.8333,
+      "strict_any_hit": 0.1667,
+      "strict_top1": 0.1667,
+      "total": 6
+    },
+    "data_spreadsheet": {
+      "acceptable_any_hit": 0.2857,
+      "acceptable_top1": 0.2857,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.7143,
+      "strict_any_hit": 0.2857,
+      "strict_top1": 0.2857,
+      "total": 7
+    },
+    "documents_files": {
+      "acceptable_any_hit": 0.7143,
+      "acceptable_top1": 0.7143,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.2857,
+      "strict_any_hit": 0.7143,
+      "strict_top1": 0.7143,
+      "total": 7
+    },
+    "metrics_observability": {
+      "acceptable_any_hit": 1.0,
+      "acceptable_top1": 1.0,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.0,
+      "strict_any_hit": 1.0,
+      "strict_top1": 1.0,
+      "total": 6
+    },
+    "news_monitoring": {
+      "acceptable_any_hit": 0.8,
+      "acceptable_top1": 0.8,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.0,
+      "strict_any_hit": 0.8,
+      "strict_top1": 0.8,
+      "total": 5
+    },
+    "planning_meetings": {
+      "acceptable_any_hit": 1.0,
+      "acceptable_top1": 1.0,
+      "multi_skill": 0.2,
+      "no_explicit_skill": 0.0,
+      "strict_any_hit": 1.0,
+      "strict_top1": 1.0,
+      "total": 5
+    },
+    "reading_research": {
+      "acceptable_any_hit": 0.625,
+      "acceptable_top1": 0.5,
+      "multi_skill": 0.125,
+      "no_explicit_skill": 0.25,
+      "strict_any_hit": 0.625,
+      "strict_top1": 0.5,
+      "total": 8
+    },
+    "reply_messaging": {
+      "acceptable_any_hit": 1.0,
+      "acceptable_top1": 1.0,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.0,
+      "strict_any_hit": 1.0,
+      "strict_top1": 1.0,
+      "total": 5
+    },
+    "security_appsec": {
+      "acceptable_any_hit": 0.6667,
+      "acceptable_top1": 0.6667,
+      "multi_skill": 0.0,
+      "no_explicit_skill": 0.3333,
+      "strict_any_hit": 0.6667,
+      "strict_top1": 0.6667,
+      "total": 6
+    },
+    "skill_lifecycle": {
+      "acceptable_any_hit": 0.5,
+      "acceptable_top1": 0.3333,
+      "multi_skill": 0.5,
+      "no_explicit_skill": 0.3333,
+      "strict_any_hit": 0.5,
+      "strict_top1": 0.3333,
+      "total": 6
+    }
+  },
+  "mean_full_docs_loaded": 0.78,
+  "multi_skill_rate": 0.0746,
+  "no_explicit_skill_rate": 0.3134,
+  "prompt_results": [
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reply_messaging",
+      "gold": "professor-email-reply",
+      "prompt_id": "reply_p1_professor_reply",
+      "selected": [
+        "professor-email-reply"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "professor-email-reply"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reply_messaging",
+      "gold": "reply-polisher",
+      "prompt_id": "reply_p2_polish_supervisor",
+      "selected": [
+        "reply-polisher"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "reply-polisher"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reply_messaging",
+      "gold": "groupwork-reply",
+      "prompt_id": "reply_p3_groupwork_coordination",
+      "selected": [
+        "groupwork-reply"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "groupwork-reply"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reply_messaging",
+      "gold": "followup-reply-writer",
+      "prompt_id": "reply_p4_followup_commitment",
+      "selected": [
+        "followup-reply-writer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "followup-reply-writer"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reply_messaging",
+      "gold": "reply-drafter",
+      "prompt_id": "reply_p5_generic_fresh_draft",
+      "selected": [
+        "reply-drafter"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "reply-drafter"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "browser_web_automation",
+      "gold": "web-page-snapshotter",
+      "prompt_id": "web_p1_page_snapshot",
+      "selected": [
+        "web-page-snapshotter"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "web-page-snapshotter"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "browser_web_automation",
+      "gold": "web-form-filler",
+      "prompt_id": "web_p2_form_filling",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "browser_web_automation",
+      "gold": "web-ui-tester",
+      "prompt_id": "web_p3_ui_test",
+      "selected": [
+        "web-ui-tester"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "web-ui-tester"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "browser_web_automation",
+      "gold": "web-data-extractor",
+      "prompt_id": "web_p4_data_extraction",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "browser_web_automation",
+      "gold": "frontend-debugger",
+      "prompt_id": "web_p5_frontend_debugging",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "browser_web_automation",
+      "gold": "accessibility-checker",
+      "prompt_id": "web_p6_accessibility_check",
+      "selected": [
+        "accessibility-checker"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "accessibility-checker"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "code_github_workflow",
+      "gold": "code-reviewer",
+      "prompt_id": "code_p1_local_code_review",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "code_github_workflow",
+      "gold": "pr-reviewer",
+      "prompt_id": "code_p2_pr_review",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "code_github_workflow",
+      "gold": "review-comment-resolver",
+      "prompt_id": "code_p3_review_comment_resolution",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "code_github_workflow",
+      "gold": "ci-failure-debugger",
+      "prompt_id": "code_p4_ci_failure_debugging",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "code_github_workflow",
+      "gold": "changelog-writer",
+      "prompt_id": "code_p5_changelog_entry",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "code_github_workflow",
+      "gold": "release-note-writer",
+      "prompt_id": "code_p6_release_notes",
+      "selected": [
+        "release-note-writer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "release-note-writer"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-overview",
+      "prompt_id": "data_p1_overview",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-with-anomaly-focus",
+      "prompt_id": "data_p2_anomaly_focus",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-with-validation",
+      "prompt_id": "data_p3_validation",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-for-root-cause-diagnosis",
+      "prompt_id": "data_p4_root_cause",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-for-reporting",
+      "prompt_id": "data_p5_reporting",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-for-forecasting",
+      "prompt_id": "data_p6_forecasting",
+      "selected": [
+        "data-analysis-for-forecasting"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "data-analysis-for-forecasting"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "data_spreadsheet",
+      "gold": "data-analysis-for-ranking-selection",
+      "prompt_id": "data_p7_ranking_selection",
+      "selected": [
+        "data-analysis-for-ranking-selection"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "data-analysis-for-ranking-selection"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "document-summariser",
+      "prompt_id": "doc_p1_document_summary",
+      "selected": [
+        "document-summariser"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "document-summariser"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "document-rewriter",
+      "prompt_id": "doc_p2_document_rewriter",
+      "selected": [
+        "document-rewriter"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "document-rewriter"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "document-normaliser",
+      "prompt_id": "doc_p3_document_normaliser",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "document-field-extractor",
+      "prompt_id": "doc_p4_field_extraction",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "multi-document-comparison-preparer",
+      "prompt_id": "doc_p5_comparison_preparation",
+      "selected": [
+        "multi-document-comparison-preparer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "multi-document-comparison-preparer"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "document-converter",
+      "prompt_id": "doc_p6_conversion",
+      "selected": [
+        "document-converter"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "document-converter"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "documents_files",
+      "gold": "layout-preserving-converter",
+      "prompt_id": "doc_p7_layout_preserving_conversion",
+      "selected": [
+        "layout-preserving-converter"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "layout-preserving-converter"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "metrics_observability",
+      "gold": "metrics-overview",
+      "prompt_id": "obs_p1_metrics_overview",
+      "selected": [
+        "metrics-overview"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "metrics-overview"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "metrics_observability",
+      "gold": "latency-anomaly-detector",
+      "prompt_id": "obs_p2_latency_anomaly",
+      "selected": [
+        "latency-anomaly-detector"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "latency-anomaly-detector"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "metrics_observability",
+      "gold": "slo-breach-checker",
+      "prompt_id": "obs_p3_slo_breach",
+      "selected": [
+        "slo-breach-checker"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "slo-breach-checker"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "metrics_observability",
+      "gold": "capacity-risk-forecaster",
+      "prompt_id": "obs_p4_capacity_risk",
+      "selected": [
+        "capacity-risk-forecaster"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "capacity-risk-forecaster"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "metrics_observability",
+      "gold": "metrics-root-cause-diagnoser",
+      "prompt_id": "obs_p5_root_cause",
+      "selected": [
+        "metrics-root-cause-diagnoser"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "metrics-root-cause-diagnoser"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "metrics_observability",
+      "gold": "incident-summary-writer",
+      "prompt_id": "obs_p6_incident_summary",
+      "selected": [
+        "incident-summary-writer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "incident-summary-writer"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "news_monitoring",
+      "gold": "news-summariser",
+      "prompt_id": "news_p1_plain_summary",
+      "selected": [
+        "news-summariser"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "news-summariser"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "news_monitoring",
+      "gold": "news-briefing-writer",
+      "prompt_id": "news_p2_briefing",
+      "selected": [
+        "document-converter"
+      ],
+      "status": "wrong",
+      "strict_any_hit": false,
+      "top1": "document-converter"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "news_monitoring",
+      "gold": "source-grounding-extractor",
+      "prompt_id": "news_p3_grounded_claims",
+      "selected": [
+        "source-grounding-extractor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "source-grounding-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "news_monitoring",
+      "gold": "news-theme-extractor",
+      "prompt_id": "news_p4_theme_extraction",
+      "selected": [
+        "news-theme-extractor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "news-theme-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "news_monitoring",
+      "gold": "tech-news-trend-extractor",
+      "prompt_id": "news_p5_trend_signal",
+      "selected": [
+        "tech-news-trend-extractor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "tech-news-trend-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "planning_meetings",
+      "gold": "meeting-agenda-builder",
+      "prompt_id": "plan_p1_meeting_agenda",
+      "selected": [
+        "meeting-agenda-builder",
+        "weekly-planner"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "meeting-agenda-builder"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "planning_meetings",
+      "gold": "meeting-summary-writer",
+      "prompt_id": "plan_p2_meeting_summary",
+      "selected": [
+        "meeting-summary-writer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "meeting-summary-writer"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "planning_meetings",
+      "gold": "meeting-followup-extractor",
+      "prompt_id": "plan_p3_meeting_followup",
+      "selected": [
+        "meeting-followup-extractor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "meeting-followup-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "planning_meetings",
+      "gold": "task-extractor",
+      "prompt_id": "plan_p4_task_extractor",
+      "selected": [
+        "task-extractor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "task-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "planning_meetings",
+      "gold": "weekly-planner",
+      "prompt_id": "plan_p5_weekly_planner",
+      "selected": [
+        "weekly-planner"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "weekly-planner"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "paper-summariser",
+      "prompt_id": "read_p1_paper_summary",
+      "selected": [
+        "paper-summariser"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "paper-summariser"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "general-source-summariser",
+      "prompt_id": "read_p2_general_source_summary",
+      "selected": [
+        "document-summariser",
+        "general-source-summariser"
+      ],
+      "status": "wrong",
+      "strict_any_hit": true,
+      "top1": "document-summariser"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "citation-note-extractor",
+      "prompt_id": "read_p3_citation_notes",
+      "selected": [
+        "citation-note-extractor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "citation-note-extractor"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "document-extractor",
+      "prompt_id": "read_p4_document_extraction",
+      "selected": [
+        "document-field-extractor"
+      ],
+      "status": "wrong",
+      "strict_any_hit": false,
+      "top1": "document-field-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "method-note-builder",
+      "prompt_id": "read_p5_method_notes",
+      "selected": [
+        "method-note-builder"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "method-note-builder"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "citation-grounding-helper",
+      "prompt_id": "read_p6_grounding_check",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "multi-source-comparison-builder",
+      "prompt_id": "read_p7_multi_source_comparison",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "reading_research",
+      "gold": "related-work-synthesiser",
+      "prompt_id": "read_p8_related_work_synthesis",
+      "selected": [
+        "related-work-synthesiser"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "related-work-synthesiser"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "security_appsec",
+      "gold": "security-threat-modeler",
+      "prompt_id": "sec_p1_threat_model",
+      "selected": [
+        "security-threat-modeler"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "security-threat-modeler"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "security_appsec",
+      "gold": "security-code-reviewer",
+      "prompt_id": "sec_p2_security_code_review",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "security_appsec",
+      "gold": "dependency-risk-auditor",
+      "prompt_id": "sec_p3_dependency_risk",
+      "selected": [
+        "dependency-risk-auditor"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "dependency-risk-auditor"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "security_appsec",
+      "gold": "secret-leak-scanner",
+      "prompt_id": "sec_p4_secret_leak",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "security_appsec",
+      "gold": "auth-flow-reviewer",
+      "prompt_id": "sec_p5_auth_flow",
+      "selected": [
+        "auth-flow-reviewer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "auth-flow-reviewer"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "security_appsec",
+      "gold": "privacy-risk-reviewer",
+      "prompt_id": "sec_p6_privacy_review",
+      "selected": [
+        "privacy-risk-reviewer"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "privacy-risk-reviewer"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "skill_lifecycle",
+      "gold": "skill-finder",
+      "prompt_id": "skill_p1_find_existing",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "skill_lifecycle",
+      "gold": "skill-installer",
+      "prompt_id": "skill_p2_install_existing",
+      "selected": [],
+      "status": "no_explicit_skill",
+      "strict_any_hit": false,
+      "top1": "<none>"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "skill_lifecycle",
+      "gold": "skill-creator",
+      "prompt_id": "skill_p3_create_new",
+      "selected": [
+        "skill-creator"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "skill-creator"
+    },
+    {
+      "acceptable_any_hit": false,
+      "exit_code": "0",
+      "family": "skill_lifecycle",
+      "gold": "skill-editor",
+      "prompt_id": "skill_p4_edit_existing",
+      "selected": [
+        "document-extractor",
+        "skill-finder",
+        "document-summariser"
+      ],
+      "status": "wrong",
+      "strict_any_hit": false,
+      "top1": "document-extractor"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "skill_lifecycle",
+      "gold": "skill-evaluator",
+      "prompt_id": "skill_p5_evaluate_existing",
+      "selected": [
+        "skill-evaluator",
+        "reply-polisher"
+      ],
+      "status": "gold",
+      "strict_any_hit": true,
+      "top1": "skill-evaluator"
+    },
+    {
+      "acceptable_any_hit": true,
+      "exit_code": "0",
+      "family": "skill_lifecycle",
+      "gold": "skill-packager",
+      "prompt_id": "skill_p6_package_existing",
+      "selected": [
+        "paper-summariser",
+        "skill-packager"
+      ],
+      "status": "wrong",
+      "strict_any_hit": true,
+      "top1": "paper-summariser"
+    }
+  ],
+  "strict_any_hit": 0.6418,
+  "strict_top1_accuracy": 0.6119,
+  "top1_confusions": [
+    {
+      "count": 1,
+      "pair": "news-briefing-writer -> document-converter"
+    },
+    {
+      "count": 1,
+      "pair": "general-source-summariser -> document-summariser"
+    },
+    {
+      "count": 1,
+      "pair": "document-extractor -> document-field-extractor"
+    },
+    {
+      "count": 1,
+      "pair": "skill-editor -> document-extractor"
+    },
+    {
+      "count": 1,
+      "pair": "skill-packager -> paper-summariser"
+    }
+  ],
+  "total_runs": 67,
+  "unique_prompts": 67,
+  "wrong_top1_rate": 0.0746
+}

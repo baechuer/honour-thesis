@@ -1,0 +1,52 @@
+[
+  {
+    "id": "news_p1_plain_summary",
+    "family": "news_monitoring",
+    "gold_skill": "news-summariser",
+    "closest_alternatives": [
+      "news-briefing-writer",
+      "source-grounding-extractor"
+    ],
+    "prompt": "Summarise this news article in a straightforward neutral recap: main announcement, most important supporting details, and caveats. Do not turn it into an action briefing or extract only grounded fact bullets: Meta’s most important launch in years may not be its latest Ray-Ban glasses or its AI app. Instead, it could be the new AI model it introduced on Wednesday, hinting at how its billions in AI investments could one day transform its products. Muse Spark, the first AI model from Meta’s superintelligence lab, powers Meta’s AI app and will be integrated into Instagram, WhatsApp, Facebook and its AI Ray-Bans in the coming weeks, the company said. Meta calls the model “purpose-built” for its products and says it is designed to streamline tasks like shopping and trip planning. Shares rose sharply after the announcement. The article also describes Meta’s earlier AI spending, its hiring of Alexandr Wang, and growing competition from OpenAI, Google and Apple. It says the launch is Meta’s clearest answer yet to questions about how its AI investments will pay off, but notes that the jury is still out on whether the strategy will succeed."
+  },
+  {
+    "id": "news_p2_briefing",
+    "family": "news_monitoring",
+    "gold_skill": "news-briefing-writer",
+    "closest_alternatives": [
+      "news-summariser",
+      "tech-news-trend-extractor"
+    ],
+    "prompt": "Turn this article into a short decision memo with clear sections for the key event, current state of play, significance now, affected parties, and follow-up signals. The output should support quick situation awareness, not just summarize the article chronologically: Meta’s most important launch in years may not be its latest Ray-Ban glasses or its AI app. Instead, it could be the new AI model it introduced on Wednesday, hinting at how its billions in AI investments could one day transform its products. Muse Spark, the first AI model from Meta’s superintelligence lab, powers Meta’s AI app and will be integrated into Instagram, WhatsApp, Facebook and its AI Ray-Bans in the coming weeks, the company said. Meta calls the model “purpose-built” for its products and says it is designed to streamline tasks like shopping and trip planning. Shares rose sharply after the announcement. The article also describes Meta’s earlier AI spending, its hiring of Alexandr Wang, and growing competition from OpenAI, Google and Apple. It says the launch is Meta’s clearest answer yet to questions about how its AI investments will pay off, but notes that the jury is still out on whether the strategy will succeed."
+  },
+  {
+    "id": "news_p3_grounded_claims",
+    "family": "news_monitoring",
+    "gold_skill": "source-grounding-extractor",
+    "closest_alternatives": [
+      "news-summariser",
+      "news-briefing-writer"
+    ],
+    "prompt": "From this article, identify the source-backed claims and facts, including important product details, named companies or people, and any figures or stated plans: Meta’s most important launch in years may not be its latest Ray-Ban glasses or its AI app. Instead, it could be the new AI model it introduced on Wednesday, hinting at how its billions in AI investments could one day transform its products. Muse Spark, the first AI model from Meta’s superintelligence lab, powers Meta’s AI app and will be integrated into Instagram, WhatsApp, Facebook and its AI Ray-Bans in the coming weeks, the company said. Meta calls the model “purpose-built” for its products and says it is designed to streamline tasks like shopping and trip planning. Shares rose sharply after the announcement. The article also describes Meta’s earlier AI spending, its hiring of Alexandr Wang, and growing competition from OpenAI, Google and Apple. It says the launch is Meta’s clearest answer yet to questions about how its AI investments will pay off, but notes that the jury is still out on whether the strategy will succeed."
+  },
+  {
+    "id": "news_p4_theme_extraction",
+    "family": "news_monitoring",
+    "gold_skill": "news-theme-extractor",
+    "closest_alternatives": [
+      "tech-news-trend-extractor",
+      "news-briefing-writer"
+    ],
+    "prompt": "Extract the recurring themes across these three tech news snippets, grouping repeated ideas without forecasting market direction. Snippet 1: Meta introduced Muse Spark, a new model that will be integrated into Instagram, WhatsApp, Facebook and its AI Ray-Bans, and says it is designed to support tasks like shopping and trip planning. Snippet 2: Google is expected to release Android-powered spectacles this year and may expand its AI assistant strategy at its next developer conference. Snippet 3: A cloud vendor launched new orchestration features for enterprise AI agents, aimed at helping companies coordinate multi-step tasks across internal tools."
+  },
+  {
+    "id": "news_p5_trend_signal",
+    "family": "news_monitoring",
+    "gold_skill": "tech-news-trend-extractor",
+    "closest_alternatives": [
+      "news-theme-extractor",
+      "news-briefing-writer"
+    ],
+    "prompt": "Identify which patterns across these three tech news snippets look like actionable tech trend signals right now, why they matter strategically, and what evidence would confirm or weaken the trend. Snippet 1: Meta introduced Muse Spark, a new model that will be integrated into Instagram, WhatsApp, Facebook and its AI Ray-Bans, and says it is designed to support tasks like shopping and trip planning. Snippet 2: Google is expected to release Android-powered spectacles this year and may expand its AI assistant strategy at its next developer conference. Snippet 3: A cloud vendor launched new orchestration features for enterprise AI agents, aimed at helping companies coordinate multi-step tasks across internal tools."
+  }
+]

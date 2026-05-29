@@ -1,0 +1,68 @@
+[
+  {
+    "id": "web_p1_page_snapshot",
+    "family": "browser_web_automation",
+    "gold_skill": "web-page-snapshotter",
+    "closest_alternatives": [
+      "web-ui-tester",
+      "web-data-extractor",
+      "frontend-debugger"
+    ],
+    "prompt": "Open the staging dashboard and capture a page snapshot of what the user sees on the account settings page right now. I need the visible state, screenshot-style observations, and any obvious rendering issue; do not click through a full interaction test."
+  },
+  {
+    "id": "web_p2_form_filling",
+    "family": "browser_web_automation",
+    "gold_skill": "web-form-filler",
+    "closest_alternatives": [
+      "web-ui-tester",
+      "web-page-snapshotter",
+      "frontend-debugger"
+    ],
+    "prompt": "Go through the demo signup flow and fill in the form fields with the sample details I provided. Report which fields were entered and pause before final submission if it would create a real account. This is delegated browser form completion, not expected-versus-actual UI validation or a general test report."
+  },
+  {
+    "id": "web_p3_ui_test",
+    "family": "browser_web_automation",
+    "gold_skill": "web-ui-tester",
+    "closest_alternatives": [
+      "web-form-filler",
+      "frontend-debugger",
+      "web-page-snapshotter"
+    ],
+    "prompt": "Test whether the checkout page correctly shows a validation message when the postcode field is empty, and report the expected versus actual behavior."
+  },
+  {
+    "id": "web_p4_data_extraction",
+    "family": "browser_web_automation",
+    "gold_skill": "web-data-extractor",
+    "closest_alternatives": [
+      "web-page-snapshotter",
+      "web-ui-tester",
+      "frontend-debugger"
+    ],
+    "prompt": "From this product listing page, extract the product names, prices, availability labels, and detail-page links into a structured table. I do not need a screenshot."
+  },
+  {
+    "id": "web_p5_frontend_debugging",
+    "family": "browser_web_automation",
+    "gold_skill": "frontend-debugger",
+    "closest_alternatives": [
+      "web-ui-tester",
+      "web-page-snapshotter",
+      "code-reviewer"
+    ],
+    "prompt": "The settings page opens but clicking Save does nothing, and the console shows `Cannot read properties of undefined (reading 'id')` after the profile API call. Use the UI symptom as evidence, then inspect the frontend event handler, state update path, and API response contract. The deliverable is the likely source-level cause plus the smallest code patch."
+  },
+  {
+    "id": "web_p6_accessibility_check",
+    "family": "browser_web_automation",
+    "gold_skill": "accessibility-checker",
+    "closest_alternatives": [
+      "web-ui-tester",
+      "frontend-debugger",
+      "web-page-snapshotter"
+    ],
+    "prompt": "Evaluate the signup form for keyboard navigation, input labels, focus order, and whether screen-reader users can understand the error messages."
+  }
+]

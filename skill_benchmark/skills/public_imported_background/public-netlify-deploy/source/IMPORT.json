@@ -1,0 +1,24 @@
+{
+  "slug": "public-netlify-deploy",
+  "source_name": "netlify-deploy",
+  "origin": "openai/skills",
+  "source_url": "https://github.com/openai/skills/tree/main/skills/.curated/netlify-deploy",
+  "raw_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/netlify-deploy/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "deployment workflow; depends on Netlify project context, CLI/API configuration, build output, and deploy verification",
+  "external_dependencies": [
+    "Netlify account or project",
+    "Netlify CLI/API",
+    "build command",
+    "environment variables",
+    "deployment URL"
+  ],
+  "resource_signals": [
+    "deployment target",
+    "build logs",
+    "project config",
+    "environment config",
+    "verification URL"
+  ]
+}

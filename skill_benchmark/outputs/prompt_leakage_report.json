@@ -1,0 +1,5607 @@
+{
+  "summary": {
+    "pass_prompt_leakage": true,
+    "total_prompts": 85,
+    "risk_counts": {
+      "low": 79,
+      "medium": 6
+    },
+    "critical_count": 0,
+    "high_count": 0,
+    "family_counts": {
+      "api_backend_design": {
+        "low": 6
+      },
+      "browser_web_automation": {
+        "low": 6
+      },
+      "code_github_workflow": {
+        "low": 4,
+        "medium": 2
+      },
+      "data_spreadsheet": {
+        "low": 7
+      },
+      "deployment_browser_qa": {
+        "low": 6
+      },
+      "documents_files": {
+        "low": 7
+      },
+      "metrics_observability": {
+        "low": 5,
+        "medium": 1
+      },
+      "news_monitoring": {
+        "low": 3,
+        "medium": 2
+      },
+      "office_artifact_workflows": {
+        "low": 6
+      },
+      "planning_meetings": {
+        "low": 5
+      },
+      "reading_research": {
+        "low": 8
+      },
+      "reply_messaging": {
+        "medium": 1,
+        "low": 4
+      },
+      "security_appsec": {
+        "low": 6
+      },
+      "skill_lifecycle": {
+        "low": 6
+      }
+    }
+  },
+  "prompts": [
+    {
+      "id": "api_p1_openapi_contract_review",
+      "family": "api_backend_design",
+      "gold_skill": "openapi-contract-reviewer",
+      "closest_alternatives": [
+        "external-api-integration-planner",
+        "webhook-contract-planner",
+        "architecture-boundary-reviewer"
+      ],
+      "instruction_text": "Please review billing_openapi.yaml as an API contract. I need endpoint-level issues around schemas, examples, status codes, auth behavior, pagination, and client compatibility.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "openapi",
+        "contract",
+        "review"
+      ],
+      "gold_title_hits": [
+        "contract",
+        "review"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "schema example statu code auth",
+      "gold_shared_phrase_length": 5,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "external-api-integration-planner",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "api"
+          ],
+          "title_tokens": [
+            "external",
+            "api",
+            "integration",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "webhook-contract-planner",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "contract"
+          ],
+          "title_tokens": [
+            "webhook",
+            "contract",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "architecture-boundary-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "architecture",
+            "boundary",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/api_backend_design_confusability.json"
+    },
+    {
+      "id": "api_p2_external_api_integration",
+      "family": "api_backend_design",
+      "gold_skill": "external-api-integration-planner",
+      "closest_alternatives": [
+        "openapi-contract-reviewer",
+        "webhook-contract-planner",
+        "service-dependency-mapper"
+      ],
+      "instruction_text": "Please plan how our app should connect to the Acme Billing API. Cover authentication, endpoint choices, request/response mapping, provider throttling, recovery behavior, page-through results, secrets, and verification tests.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.25,
+      "gold_title_tokens": [
+        "external",
+        "api",
+        "integration",
+        "plann"
+      ],
+      "gold_title_hits": [
+        "api"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": -0.0833,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "openapi-contract-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "openapi",
+            "contract",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "webhook-contract-planner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "webhook",
+            "contract",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "service-dependency-mapper",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "mapp"
+          ],
+          "title_tokens": [
+            "service",
+            "dependency",
+            "mapp"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/api_backend_design_confusability.json"
+    },
+    {
+      "id": "api_p3_webhook_contract",
+      "family": "api_backend_design",
+      "gold_skill": "webhook-contract-planner",
+      "closest_alternatives": [
+        "external-api-integration-planner",
+        "openapi-contract-reviewer",
+        "public-office-webhook-automation",
+        "public-api-design-principles"
+      ],
+      "instruction_text": "A payment provider will send event callbacks into our app. Please design the receiver behavior: which events to accept, how to validate the body, how to check signatures, how to handle duplicate deliveries, retry timing, ordering assumptions, and failed-message storage.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "webhook",
+        "contract",
+        "plann"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.25,
+      "title_recall_advantage": -0.25,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "external-api-integration-planner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "external",
+            "api",
+            "integration",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "openapi-contract-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "openapi",
+            "contract",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-office-webhook-automation",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "office",
+            "webhook",
+            "automation"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-api-design-principles",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "design"
+          ],
+          "title_tokens": [
+            "public",
+            "api",
+            "design",
+            "principle"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/api_backend_design_confusability.json"
+    },
+    {
+      "id": "api_p4_architecture_boundary",
+      "family": "api_backend_design",
+      "gold_skill": "architecture-boundary-reviewer",
+      "closest_alternatives": [
+        "service-dependency-mapper",
+        "openapi-contract-reviewer",
+        "database-migration-risk-assessor"
+      ],
+      "instruction_text": "Please review service_modules.md for backend architecture boundaries. I care about module ownership, dependency direction, coupling, misplaced responsibilities, and a safe refactoring sequence.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "architecture",
+        "boundary",
+        "review"
+      ],
+      "gold_title_hits": [
+        "architecture",
+        "review"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "service-dependency-mapper",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "dependency"
+          ],
+          "title_tokens": [
+            "service",
+            "dependency",
+            "mapp"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "openapi-contract-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "openapi",
+            "contract",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "database-migration-risk-assessor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "database",
+            "migration",
+            "risk",
+            "assess"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/api_backend_design_confusability.json"
+    },
+    {
+      "id": "api_p5_database_migration_risk",
+      "family": "api_backend_design",
+      "gold_skill": "database-migration-risk-assessor",
+      "closest_alternatives": [
+        "architecture-boundary-reviewer",
+        "service-dependency-mapper",
+        "public-office-database-sync",
+        "public-architecture-patterns"
+      ],
+      "instruction_text": "Please assess add_subscription_status_migration.sql before production rollout. I need locking risk, backfill plan, compatibility with old app versions, rollback path, and verification queries.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.25,
+      "gold_title_tokens": [
+        "database",
+        "migration",
+        "risk",
+        "assess"
+      ],
+      "gold_title_hits": [
+        "risk"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.25,
+      "gold_shared_phrase": "app version rollback path",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "architecture-boundary-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "architecture",
+            "boundary",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "service-dependency-mapper",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "service",
+            "dependency",
+            "mapp"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-office-database-sync",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "office",
+            "database",
+            "sync"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-architecture-patterns",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "architecture",
+            "pattern"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/api_backend_design_confusability.json"
+    },
+    {
+      "id": "api_p6_service_dependency_map",
+      "family": "api_backend_design",
+      "gold_skill": "service-dependency-mapper",
+      "closest_alternatives": [
+        "architecture-boundary-reviewer",
+        "external-api-integration-planner",
+        "public-architecture-patterns",
+        "public-api-design-principles"
+      ],
+      "instruction_text": "Please trace how the billing, notification, account, and analytics services rely on each other using service_trace_notes.md. Include call direction, responsible teams, shared data promises, ways failures propagate, and evidence gaps.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "service",
+        "dependency",
+        "mapp"
+      ],
+      "gold_title_hits": [
+        "service"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "architecture-boundary-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "architecture",
+            "boundary",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "external",
+            "api",
+            "integration",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-architecture-patterns",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "architecture",
+            "pattern"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-api-design-principles",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "api",
+            "design",
+            "principle"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/api_backend_design_confusability.json"
+    },
+    {
+      "id": "web_p1_page_snapshot",
+      "family": "browser_web_automation",
+      "gold_skill": "web-page-snapshotter",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-data-extractor",
+        "frontend-debugger"
+      ],
+      "instruction_text": "Open the staging dashboard and capture a page snapshot of what the user sees on the account settings page right now. I need the visible state, screenshot-style observations, and any obvious rendering issue; do not click through a full interaction test.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "web",
+        "page",
+        "snapshott"
+      ],
+      "gold_title_hits": [
+        "page"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": -0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "web-ui-tester",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "test"
+          ],
+          "title_tokens": [
+            "web",
+            "test"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-data-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "data",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "frontend-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "frontend",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/browser_web_automation_confusability.json"
+    },
+    {
+      "id": "web_p2_form_filling",
+      "family": "browser_web_automation",
+      "gold_skill": "web-form-filler",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-page-snapshotter",
+        "frontend-debugger"
+      ],
+      "instruction_text": "Go through the demo signup flow and fill in the form fields with the sample details I provided. Report which fields were entered and pause before final submission if it would create a real account. This is delegated browser form completion, not expected-versus-actual UI validation or a general test report.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "web",
+        "form",
+        "fill"
+      ],
+      "gold_title_hits": [
+        "form",
+        "fill"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "web-ui-tester",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "test"
+          ],
+          "title_tokens": [
+            "web",
+            "test"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "page",
+            "snapshott"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "frontend-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "frontend",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/browser_web_automation_confusability.json"
+    },
+    {
+      "id": "web_p3_ui_test",
+      "family": "browser_web_automation",
+      "gold_skill": "web-ui-tester",
+      "closest_alternatives": [
+        "web-form-filler",
+        "frontend-debugger",
+        "web-page-snapshotter"
+      ],
+      "instruction_text": "Test whether the checkout page correctly shows a validation message when the postcode field is empty, and report the expected versus actual behavior.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "web",
+        "test"
+      ],
+      "gold_title_hits": [
+        "test"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "web-form-filler",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "form",
+            "fill"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "frontend-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "frontend",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "page"
+          ],
+          "title_tokens": [
+            "web",
+            "page",
+            "snapshott"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/browser_web_automation_confusability.json"
+    },
+    {
+      "id": "web_p4_data_extraction",
+      "family": "browser_web_automation",
+      "gold_skill": "web-data-extractor",
+      "closest_alternatives": [
+        "web-page-snapshotter",
+        "web-ui-tester",
+        "frontend-debugger"
+      ],
+      "instruction_text": "From this product listing page, extract the product names, prices, availability labels, and detail-page links into a structured table. I do not need a screenshot.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "web",
+        "data",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "extract"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "web-page-snapshotter",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "page"
+          ],
+          "title_tokens": [
+            "web",
+            "page",
+            "snapshott"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-ui-tester",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "test"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "frontend-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "frontend",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/browser_web_automation_confusability.json"
+    },
+    {
+      "id": "web_p5_frontend_debugging",
+      "family": "browser_web_automation",
+      "gold_skill": "frontend-debugger",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-page-snapshotter",
+        "code-reviewer"
+      ],
+      "instruction_text": "The settings page opens but clicking Save does nothing, and the console shows `Cannot read properties of undefined (reading 'id')` after the profile API call. Use the UI symptom as evidence, then inspect the frontend event handler, state update path, and API response contract. The deliverable is the likely source-level cause plus the smallest code patch.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "frontend",
+        "debugg"
+      ],
+      "gold_title_hits": [
+        "frontend"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "web-ui-tester",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "test"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "page"
+          ],
+          "title_tokens": [
+            "web",
+            "page",
+            "snapshott"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "code-reviewer",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "code"
+          ],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/browser_web_automation_confusability.json"
+    },
+    {
+      "id": "web_p6_accessibility_check",
+      "family": "browser_web_automation",
+      "gold_skill": "accessibility-checker",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "frontend-debugger",
+        "web-page-snapshotter"
+      ],
+      "instruction_text": "Evaluate the signup form for keyboard navigation, input labels, focus order, and whether screen-reader users can understand the error messages.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "accessibility",
+        "check"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "web-ui-tester",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "test"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "frontend-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "frontend",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "page",
+            "snapshott"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/browser_web_automation_confusability.json"
+    },
+    {
+      "id": "code_p1_local_code_review",
+      "family": "code_github_workflow",
+      "gold_skill": "code-reviewer",
+      "closest_alternatives": [
+        "pr-reviewer",
+        "review-comment-resolver",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "Review this local change before I commit it. The patch updates the cache key from `user.id` to `user.email`, adds a fallback for missing names, and changes the unit test fixture. I want to know if this could introduce bugs or missing-test risk, not have you rewrite it yet.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "code",
+        "review"
+      ],
+      "gold_title_hits": [
+        "review"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "pr-reviewer",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "review-comment-resolver",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "review",
+            "comment",
+            "resolv"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "failure",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/code_github_workflow_confusability.json"
+    },
+    {
+      "id": "code_p2_pr_review",
+      "family": "code_github_workflow",
+      "gold_skill": "pr-reviewer",
+      "closest_alternatives": [
+        "code-reviewer",
+        "review-comment-resolver",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "Can you review this pull request as if you were leaving PR feedback? It changes the auth middleware, adds a migration, updates two API tests, and the PR discussion says the branch is meant to preserve backward compatibility.",
+      "risk_level": "medium",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 1.0,
+      "gold_title_tokens": [
+        "review"
+      ],
+      "gold_title_hits": [
+        "review"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "code-reviewer",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "review-comment-resolver",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "review",
+            "comment",
+            "resolv"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "failure",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/code_github_workflow_confusability.json"
+    },
+    {
+      "id": "code_p3_review_comment_resolution",
+      "family": "code_github_workflow",
+      "gold_skill": "review-comment-resolver",
+      "closest_alternatives": [
+        "pr-reviewer",
+        "code-reviewer",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "I already got review comments on this branch. Please address this specific reviewer request by planning and making the requested code/test change: `The retry loop can spin forever if the response is 429 and Retry-After is missing. Please add a cap and a test.` I need the existing comment resolved with an implementation response, not a fresh PR review or CI debugging.",
+      "risk_level": "medium",
+      "risk_flags": [
+        "complete_gold_title_overlap"
+      ],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 1.0,
+      "gold_title_tokens": [
+        "review",
+        "comment",
+        "resolv"
+      ],
+      "gold_title_hits": [
+        "review",
+        "comment",
+        "resolv"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "pr-reviewer",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "code-reviewer",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "code",
+            "review"
+          ],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "failure",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/code_github_workflow_confusability.json"
+    },
+    {
+      "id": "code_p4_ci_failure_debugging",
+      "family": "code_github_workflow",
+      "gold_skill": "ci-failure-debugger",
+      "closest_alternatives": [
+        "code-reviewer",
+        "pr-reviewer",
+        "review-comment-resolver"
+      ],
+      "instruction_text": "The CI run failed after my last commit. The failing job is `unit-tests`, and the first useful error says `Expected status 200, received 401` in `auth.middleware.test.ts` after the token refresh change. Help me find the cause and the smallest fix.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "failure",
+        "debugg"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "code-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "pr-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "review-comment-resolver",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "review",
+            "comment",
+            "resolv"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/code_github_workflow_confusability.json"
+    },
+    {
+      "id": "code_p5_changelog_entry",
+      "family": "code_github_workflow",
+      "gold_skill": "changelog-writer",
+      "closest_alternatives": [
+        "release-note-writer",
+        "pr-reviewer",
+        "code-reviewer"
+      ],
+      "instruction_text": "Turn these completed changes into a concise internal changelog entry for the repository changelog, grouped by change type if useful: fixed retry timeout handling, added token-refresh tests, improved cache invalidation for renamed users, and removed an unused feature flag. Do not write user-facing release notes.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "changelog",
+        "writ"
+      ],
+      "gold_title_hits": [
+        "changelog"
+      ],
+      "max_alternative_title_recall": 0.6667,
+      "title_recall_advantage": -0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "release-note-writer",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "release",
+            "note"
+          ],
+          "title_tokens": [
+            "release",
+            "note",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "pr-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "code-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/code_github_workflow_confusability.json"
+    },
+    {
+      "id": "code_p6_release_notes",
+      "family": "code_github_workflow",
+      "gold_skill": "release-note-writer",
+      "closest_alternatives": [
+        "changelog-writer",
+        "pr-reviewer",
+        "code-reviewer"
+      ],
+      "instruction_text": "Write user-facing release notes for this update. We improved sign-in reliability when sessions expire, made profile changes appear faster across devices, and fixed a retry issue that could delay requests during temporary service pressure.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "release",
+        "note",
+        "writ"
+      ],
+      "gold_title_hits": [
+        "release",
+        "note"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.6667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "changelog-writer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "changelog",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "pr-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "code-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/code_github_workflow_confusability.json"
+    },
+    {
+      "id": "data_p1_overview",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-overview",
+      "closest_alternatives": [
+        "data-analysis-for-reporting",
+        "data-analysis-with-anomaly-focus",
+        "data-analysis-with-validation"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. I need a broad exploratory orientation: what the sheet contains, the overall picture, the main patterns, the most useful caveats, and a few sensible next questions. Do not turn it into an executive report, forecast, ranking recommendation, or diagnosis of one specific problem yet.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "overview"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-for-reporting",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "report"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "report"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "anomaly",
+            "focu"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "validation"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "data_p2_anomaly_focus",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-with-anomaly-focus",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-root-cause-diagnosis",
+        "data-analysis-with-validation"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Build an anomaly watchlist: which spikes, dips, outliers, or concentrated deviations look most worth worrying about, and how confident should I be that each one is real? Do not explain root cause yet.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.25,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "anomaly",
+        "focu"
+      ],
+      "gold_title_hits": [
+        "anomaly"
+      ],
+      "max_alternative_title_recall": 0.4,
+      "title_recall_advantage": -0.15,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-overview",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "title_recall": 0.4,
+          "matched_title_tokens": [
+            "root",
+            "cause"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "root",
+            "cause",
+            "diagnose"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "validation"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "data_p3_validation",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-with-validation",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-with-anomaly-focus",
+        "data-analysis-for-root-cause-diagnosis"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "validation"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-overview",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "anomaly",
+            "focu"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "root",
+            "cause",
+            "diagnose"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "data_p4_root_cause",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-root-cause-diagnosis",
+      "closest_alternatives": [
+        "data-analysis-with-anomaly-focus",
+        "data-analysis-overview",
+        "data-analysis-with-validation"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. This seems to be getting worse. Assume the data is usable enough for analysis and trace the most likely driver: which channel, metric, or segment appears to explain the degradation, and what evidence supports that diagnosis?",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "root",
+        "cause",
+        "diagnose"
+      ],
+      "gold_title_hits": [
+        "data",
+        "analysi",
+        "diagnose"
+      ],
+      "max_alternative_title_recall": 0.6667,
+      "title_recall_advantage": -0.0667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "data",
+            "analysi"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "anomaly",
+            "focu"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-overview",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "data",
+            "analysi"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "data",
+            "analysi"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "validation"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "data_p5_reporting",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-reporting",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-root-cause-diagnosis",
+        "data-analysis-with-anomaly-focus"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Turn this into an upward-facing reporting brief: a headline, two or three executive takeaways, the clearest supporting numbers, and one caveat. Do not give me a broad exploratory analysis.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "report"
+      ],
+      "gold_title_hits": [
+        "analysi",
+        "report"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-overview",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "analysi"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "title_recall": 0.2,
+          "matched_title_tokens": [
+            "analysi"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "root",
+            "cause",
+            "diagnose"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "analysi"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "anomaly",
+            "focu"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "data_p6_forecasting",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-forecasting",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-root-cause-diagnosis",
+        "data-analysis-with-anomaly-focus"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Forecast the likely next direction if the current pattern keeps going: what seems likely to happen next, what evidence supports that continuation, and how much should I trust the forecast?",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "forecast"
+      ],
+      "gold_title_hits": [
+        "forecast"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-overview",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "root",
+            "cause",
+            "diagnose"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "anomaly",
+            "focu"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "data_p7_ranking_selection",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-ranking-selection",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-reporting",
+        "data-analysis-for-forecasting"
+      ],
+      "instruction_text": "Please read pilot_priority_options.csv. Compare the options, rank them for action now, recommend the first choice, explain the decision criteria and trade-offs behind that ordering, and say what follow-up check would reduce decision risk. This is a selection task, not a forecast of one metric or a broad overview.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "data",
+        "analysi",
+        "rank",
+        "selection"
+      ],
+      "gold_title_hits": [
+        "rank",
+        "selection"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "data-analysis-overview",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "overview"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "report"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "forecast"
+          ],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "forecast"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/data_spreadsheet_confusability.json"
+    },
+    {
+      "id": "deploy_p1_playwright_flow_debug",
+      "family": "deployment_browser_qa",
+      "gold_skill": "playwright-flow-debugger",
+      "closest_alternatives": [
+        "visual-regression-checker",
+        "accessibility-interaction-auditor",
+        "public-playwright-interactive",
+        "public-openai-playwright"
+      ],
+      "instruction_text": "The checkout flow at `http://localhost:4173/checkout` fails after I click Apply coupon. Please reproduce the interaction with browser evidence, capture console or network clues, and identify why the flow breaks.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "playwright",
+        "flow",
+        "debugg"
+      ],
+      "gold_title_hits": [
+        "flow"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "visual-regression-checker",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "visual",
+            "regression",
+            "check"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "accessibility-interaction-auditor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "interaction"
+          ],
+          "title_tokens": [
+            "accessibility",
+            "interaction",
+            "audit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-playwright-interactive",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "playwright",
+            "interactive"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-openai-playwright",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "openai",
+            "playwright"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/deployment_browser_qa_confusability.json"
+    },
+    {
+      "id": "deploy_p2_visual_regression",
+      "family": "deployment_browser_qa",
+      "gold_skill": "visual-regression-checker",
+      "closest_alternatives": [
+        "playwright-flow-debugger",
+        "accessibility-interaction-auditor",
+        "public-openai-screenshot",
+        "public-anthropic-webapp-testing"
+      ],
+      "instruction_text": "Please compare the baseline and current screenshots for pricing_page_desktop.png and pricing_page_mobile.png. I need visual regressions like clipping, spacing shifts, text overflow, and contrast changes.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "visual",
+        "regression",
+        "check"
+      ],
+      "gold_title_hits": [
+        "visual",
+        "regression"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "compare baseline current screenshot",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "playwright-flow-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "playwright",
+            "flow",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "accessibility-interaction-auditor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "accessibility",
+            "interaction",
+            "audit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-openai-screenshot",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "screenshot"
+          ],
+          "title_tokens": [
+            "public",
+            "openai",
+            "screenshot"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-anthropic-webapp-testing",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "anthropic",
+            "webapp",
+            "test"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/deployment_browser_qa_confusability.json"
+    },
+    {
+      "id": "deploy_p3_accessibility_interaction",
+      "family": "deployment_browser_qa",
+      "gold_skill": "accessibility-interaction-auditor",
+      "closest_alternatives": [
+        "visual-regression-checker",
+        "playwright-flow-debugger",
+        "web-ui-tester",
+        "public-anthropic-webapp-testing"
+      ],
+      "instruction_text": "Please audit the account-settings modal for keyboard and screen-reader interaction. Focus on tab order, focus trapping, accessible names, ARIA state, and whether form errors are announced.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "accessibility",
+        "interaction",
+        "audit"
+      ],
+      "gold_title_hits": [
+        "interaction",
+        "audit"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.6667,
+      "gold_shared_phrase": "accessible name aria state",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "visual-regression-checker",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "visual",
+            "regression",
+            "check"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "playwright-flow-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "playwright",
+            "flow",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-ui-tester",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "test"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-anthropic-webapp-testing",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "public",
+            "anthropic",
+            "webapp",
+            "test"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/deployment_browser_qa_confusability.json"
+    },
+    {
+      "id": "deploy_p4_build_log_triage",
+      "family": "deployment_browser_qa",
+      "gold_skill": "deployment-build-triager",
+      "closest_alternatives": [
+        "deployment-release-verifier",
+        "playwright-flow-debugger",
+        "web-performance-budget-checker"
+      ],
+      "instruction_text": "The Netlify deploy for build_log.txt failed. Please inspect the build log and identify the likely root cause, missing env/config assumptions, and the smallest rerun sequence.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "deployment",
+        "build",
+        "triag"
+      ],
+      "gold_title_hits": [
+        "build"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "deployment-release-verifier",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "deployment",
+            "release",
+            "verifi"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "playwright-flow-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "playwright",
+            "flow",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "web-performance-budget-checker",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "web",
+            "performance",
+            "budget",
+            "check"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/deployment_browser_qa_confusability.json"
+    },
+    {
+      "id": "deploy_p5_release_verification",
+      "family": "deployment_browser_qa",
+      "gold_skill": "deployment-release-verifier",
+      "closest_alternatives": [
+        "deployment-build-triager",
+        "visual-regression-checker",
+        "public-netlify-deploy",
+        "public-openai-vercel-deploy"
+      ],
+      "instruction_text": "The production deploy is live at `https://example-release.netlify.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, and rollback notes.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "deployment",
+        "release",
+        "verifi"
+      ],
+      "gold_title_hits": [
+        "release"
+      ],
+      "max_alternative_title_recall": 0.6667,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "deployment-build-triager",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "deployment",
+            "build",
+            "triag"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "visual-regression-checker",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "check"
+          ],
+          "title_tokens": [
+            "visual",
+            "regression",
+            "check"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-netlify-deploy",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "netlify",
+            "deploy"
+          ],
+          "title_tokens": [
+            "public",
+            "netlify",
+            "deploy"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-openai-vercel-deploy",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "deploy"
+          ],
+          "title_tokens": [
+            "public",
+            "openai",
+            "vercel",
+            "deploy"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/deployment_browser_qa_confusability.json"
+    },
+    {
+      "id": "deploy_p6_performance_budget",
+      "family": "deployment_browser_qa",
+      "gold_skill": "web-performance-budget-checker",
+      "closest_alternatives": [
+        "visual-regression-checker",
+        "deployment-release-verifier",
+        "accessibility-interaction-auditor"
+      ],
+      "instruction_text": "Please review lighthouse_trace_summary.txt against a mobile performance budget. I care about LCP, blocking scripts, network weight, image size, and which fixes matter most.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "web",
+        "performance",
+        "budget",
+        "check"
+      ],
+      "gold_title_hits": [
+        "performance",
+        "budget"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "visual-regression-checker",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "visual",
+            "regression",
+            "check"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "deployment-release-verifier",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "deployment",
+            "release",
+            "verifi"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "accessibility-interaction-auditor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "accessibility",
+            "interaction",
+            "audit"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/deployment_browser_qa_confusability.json"
+    },
+    {
+      "id": "doc_p1_document_summary",
+      "family": "documents_files",
+      "gold_skill": "document-summariser",
+      "closest_alternatives": [
+        "document-normaliser",
+        "document-field-extractor",
+        "document-converter"
+      ],
+      "instruction_text": "Please read internal_travel_policy_update.txt and help me make sense of it quickly. I want the main point, the most important details, and anything I should pay attention to.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "document",
+        "summaris"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-normaliser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "normalis"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-field-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "field",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "doc_p2_document_rewriter",
+      "family": "documents_files",
+      "gold_skill": "document-rewriter",
+      "closest_alternatives": [
+        "document-normaliser",
+        "document-summariser",
+        "document-converter"
+      ],
+      "instruction_text": "Please read travel_request_note_raw.txt and produce a revised full prose version for a human reader. Keep it as continuous paragraphs in the same document form, improve wording, flow, and polish, and preserve the same meaning and commitments.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "document",
+        "rewrit"
+      ],
+      "gold_title_hits": [
+        "document"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-normaliser",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "normalis"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-summariser",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-converter",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "doc_p3_document_normaliser",
+      "family": "documents_files",
+      "gold_skill": "document-normaliser",
+      "closest_alternatives": [
+        "document-rewriter",
+        "document-converter",
+        "document-summariser"
+      ],
+      "instruction_text": "Please read travel_request_note_raw.txt and normalise the document structure: keep the original wording and order as much as possible, but fix inconsistent headings, spacing, list style, and layout noise. Do not substantially rewrite the prose.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "document",
+        "normalis"
+      ],
+      "gold_title_hits": [
+        "document"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-rewriter",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "rewrit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-converter",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-summariser",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "doc_p4_field_extraction",
+      "family": "documents_files",
+      "gold_skill": "document-field-extractor",
+      "closest_alternatives": [
+        "document-summariser",
+        "multi-document-comparison-preparer",
+        "layout-preserving-converter"
+      ],
+      "instruction_text": "Please read invoice_northbridge_supplies.txt and extract the reusable fields into a structured table, including supplier, invoice number, dates, line items, totals, and payment details. Do not write a narrative summary.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "document",
+        "field",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "field",
+        "extract"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.6667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "multi-document-comparison-preparer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "multi",
+            "document",
+            "comparison",
+            "prepar"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "layout",
+            "preserv",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "doc_p5_comparison_preparation",
+      "family": "documents_files",
+      "gold_skill": "multi-document-comparison-preparer",
+      "closest_alternatives": [
+        "document-field-extractor",
+        "document-normaliser",
+        "document-converter"
+      ],
+      "instruction_text": "Please read policy_draft_a.txt and policy_draft_b.txt, then prepare a side-by-side comparison matrix so I can quickly see matching sections, changed wording, additions, removals, and unresolved differences.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.25,
+      "gold_title_tokens": [
+        "multi",
+        "document",
+        "comparison",
+        "prepar"
+      ],
+      "gold_title_hits": [
+        "comparison"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.25,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-field-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "field",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-normaliser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "normalis"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "doc_p6_conversion",
+      "family": "documents_files",
+      "gold_skill": "document-converter",
+      "closest_alternatives": [
+        "document-normaliser",
+        "layout-preserving-converter",
+        "document-summariser"
+      ],
+      "instruction_text": "Please read request_form.txt and convert the whole form into clean markdown notes I can drop into my repo. Preserve the content and labels, but simplify the source formatting rather than keeping the exact visual layout.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "document",
+        "convert"
+      ],
+      "gold_title_hits": [
+        "convert"
+      ],
+      "max_alternative_title_recall": 0.6667,
+      "title_recall_advantage": -0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-normaliser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "normalis"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "layout",
+            "convert"
+          ],
+          "title_tokens": [
+            "layout",
+            "preserv",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "doc_p7_layout_preserving_conversion",
+      "family": "documents_files",
+      "gold_skill": "layout-preserving-converter",
+      "closest_alternatives": [
+        "document-converter",
+        "document-field-extractor",
+        "document-normaliser"
+      ],
+      "instruction_text": "Please read request_form.txt and turn it into markdown while preserving the layout cues: headings, labels, rows, and grouped fields should remain recognizable. The priority is layout fidelity, not just simplified notes.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "layout",
+        "preserv",
+        "convert"
+      ],
+      "gold_title_hits": [
+        "layout",
+        "preserv"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "label rows group field",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-field-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "field"
+          ],
+          "title_tokens": [
+            "document",
+            "field",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-normaliser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "normalis"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/documents_files_confusability.json"
+    },
+    {
+      "id": "obs_p1_metrics_overview",
+      "family": "metrics_observability",
+      "gold_skill": "metrics-overview",
+      "closest_alternatives": [
+        "incident-summary-writer",
+        "metrics-root-cause-diagnoser",
+        "latency-anomaly-detector"
+      ],
+      "instruction_text": "Give me a triage overview of this service snapshot",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "metric",
+        "overview"
+      ],
+      "gold_title_hits": [
+        "overview"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "incident-summary-writer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "incident",
+            "summary",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "metric",
+            "root",
+            "cause",
+            "diagnos"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "latency",
+            "anomaly",
+            "detect"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/metrics_observability_confusability.json"
+    },
+    {
+      "id": "obs_p2_latency_anomaly",
+      "family": "metrics_observability",
+      "gold_skill": "latency-anomaly-detector",
+      "closest_alternatives": [
+        "metrics-root-cause-diagnoser",
+        "metrics-overview",
+        "slo-breach-checker"
+      ],
+      "instruction_text": "Run an anomaly-focused readout on this service snapshot. Identify unusual performance behavior, especially tail-latency spikes, outliers, and whether the deviation is broad or concentrated in a smaller slice of requests. Do not give only a general metrics overview",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "latency",
+        "anomaly",
+        "detect"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -1.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "metric"
+          ],
+          "title_tokens": [
+            "metric",
+            "root",
+            "cause",
+            "diagnos"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-overview",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "metric",
+            "overview"
+          ],
+          "title_tokens": [
+            "metric",
+            "overview"
+          ],
+          "exact_name_leaks": [
+            "metrics overview",
+            "metricsoverview"
+          ]
+        },
+        {
+          "skill": "slo-breach-checker",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "slo",
+            "breach",
+            "check"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/metrics_observability_confusability.json"
+    },
+    {
+      "id": "obs_p3_slo_breach",
+      "family": "metrics_observability",
+      "gold_skill": "slo-breach-checker",
+      "closest_alternatives": [
+        "capacity-risk-forecaster",
+        "metrics-overview",
+        "metrics-root-cause-diagnoser"
+      ],
+      "instruction_text": "Check this service snapshot against a reliability-objective risk frame",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "slo",
+        "breach",
+        "check"
+      ],
+      "gold_title_hits": [
+        "check"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "capacity-risk-forecaster",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "risk"
+          ],
+          "title_tokens": [
+            "capacity",
+            "risk",
+            "forecast"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-overview",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "metric",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "metric",
+            "root",
+            "cause",
+            "diagnos"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/metrics_observability_confusability.json"
+    },
+    {
+      "id": "obs_p4_capacity_risk",
+      "family": "metrics_observability",
+      "gold_skill": "capacity-risk-forecaster",
+      "closest_alternatives": [
+        "slo-breach-checker",
+        "metrics-root-cause-diagnoser",
+        "metrics-overview"
+      ],
+      "instruction_text": "Forecast capacity risk from this service snapshot if the pattern keeps going. Focus on future pressure, saturation risk, queue growth, headroom, and likely bottlenecks that could turn into a bigger operational problem. Do not decide current SLO breach or root cause",
+      "risk_level": "medium",
+      "risk_flags": [
+        "complete_gold_title_overlap"
+      ],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 1.0,
+      "gold_title_tokens": [
+        "capacity",
+        "risk",
+        "forecast"
+      ],
+      "gold_title_hits": [
+        "capacity",
+        "risk",
+        "forecast"
+      ],
+      "max_alternative_title_recall": 0.6667,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "slo-breach-checker",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "slo",
+            "breach"
+          ],
+          "title_tokens": [
+            "slo",
+            "breach",
+            "check"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "root",
+            "cause"
+          ],
+          "title_tokens": [
+            "metric",
+            "root",
+            "cause",
+            "diagnos"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-overview",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "metric",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/metrics_observability_confusability.json"
+    },
+    {
+      "id": "obs_p5_root_cause",
+      "family": "metrics_observability",
+      "gold_skill": "metrics-root-cause-diagnoser",
+      "closest_alternatives": [
+        "latency-anomaly-detector",
+        "capacity-risk-forecaster",
+        "incident-summary-writer"
+      ],
+      "instruction_text": "Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. Snapshot data",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "metric",
+        "root",
+        "cause",
+        "diagnos"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "latency-anomaly-detector",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "latency"
+          ],
+          "title_tokens": [
+            "latency",
+            "anomaly",
+            "detect"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "capacity",
+            "risk",
+            "forecast"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "incident-summary-writer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "incident",
+            "summary",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/metrics_observability_confusability.json"
+    },
+    {
+      "id": "obs_p6_incident_summary",
+      "family": "metrics_observability",
+      "gold_skill": "incident-summary-writer",
+      "closest_alternatives": [
+        "metrics-overview",
+        "metrics-root-cause-diagnoser",
+        "slo-breach-checker"
+      ],
+      "instruction_text": "Turn this service snapshot into an incident update I could quickly share with the team",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "incident",
+        "summary",
+        "writ"
+      ],
+      "gold_title_hits": [
+        "incident"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "metrics-overview",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "metric",
+            "overview"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "metric",
+            "root",
+            "cause",
+            "diagnos"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "slo-breach-checker",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "slo",
+            "breach",
+            "check"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/metrics_observability_confusability.json"
+    },
+    {
+      "id": "news_p1_plain_summary",
+      "family": "news_monitoring",
+      "gold_skill": "news-summariser",
+      "closest_alternatives": [
+        "news-briefing-writer",
+        "source-grounding-extractor"
+      ],
+      "instruction_text": "Summarise this news article in a straightforward neutral recap",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "news",
+        "summaris"
+      ],
+      "gold_title_hits": [
+        "news"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "news-briefing-writer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "news"
+          ],
+          "title_tokens": [
+            "news",
+            "brief",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "source-grounding-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "ground",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/news_monitoring_confusability.json"
+    },
+    {
+      "id": "news_p2_briefing",
+      "family": "news_monitoring",
+      "gold_skill": "news-briefing-writer",
+      "closest_alternatives": [
+        "news-summariser",
+        "tech-news-trend-extractor"
+      ],
+      "instruction_text": "Turn this article into a short decision memo with clear sections for the key event, current state of play, significance now, affected parties, and follow-up signals. The output should support quick situation awareness, not just summarize the article chronologically",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "news",
+        "brief",
+        "writ"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "news-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "news",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "tech-news-trend-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "tech",
+            "news",
+            "trend",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/news_monitoring_confusability.json"
+    },
+    {
+      "id": "news_p3_grounded_claims",
+      "family": "news_monitoring",
+      "gold_skill": "source-grounding-extractor",
+      "closest_alternatives": [
+        "news-summariser",
+        "news-briefing-writer"
+      ],
+      "instruction_text": "From this article, identify the source-backed claims and facts, including important product details, named companies or people, and any figures or stated plans",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "ground",
+        "extract"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "news-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "news",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "news-briefing-writer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "news",
+            "brief",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/news_monitoring_confusability.json"
+    },
+    {
+      "id": "news_p4_theme_extraction",
+      "family": "news_monitoring",
+      "gold_skill": "news-theme-extractor",
+      "closest_alternatives": [
+        "tech-news-trend-extractor",
+        "news-briefing-writer"
+      ],
+      "instruction_text": "Extract the recurring themes across these three tech news snippets, grouping repeated ideas without forecasting market direction. Snippet 1",
+      "risk_level": "medium",
+      "risk_flags": [
+        "complete_gold_title_overlap"
+      ],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 1.0,
+      "gold_title_tokens": [
+        "news",
+        "theme",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "news",
+        "theme",
+        "extract"
+      ],
+      "max_alternative_title_recall": 0.75,
+      "title_recall_advantage": 0.25,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "tech-news-trend-extractor",
+          "title_recall": 0.75,
+          "matched_title_tokens": [
+            "tech",
+            "news",
+            "extract"
+          ],
+          "title_tokens": [
+            "tech",
+            "news",
+            "trend",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "news-briefing-writer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "news"
+          ],
+          "title_tokens": [
+            "news",
+            "brief",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/news_monitoring_confusability.json"
+    },
+    {
+      "id": "news_p5_trend_signal",
+      "family": "news_monitoring",
+      "gold_skill": "tech-news-trend-extractor",
+      "closest_alternatives": [
+        "news-theme-extractor",
+        "news-briefing-writer"
+      ],
+      "instruction_text": "Identify which patterns across these three tech news snippets look like actionable tech trend signals right now, why they matter strategically, and what evidence would confirm or weaken the trend. Snippet 1",
+      "risk_level": "medium",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.75,
+      "gold_title_tokens": [
+        "tech",
+        "news",
+        "trend",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "tech",
+        "news",
+        "trend"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.4167,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "news-theme-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "news"
+          ],
+          "title_tokens": [
+            "news",
+            "theme",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "news-briefing-writer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "news"
+          ],
+          "title_tokens": [
+            "news",
+            "brief",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/news_monitoring_confusability.json"
+    },
+    {
+      "id": "office_p1_pdf_layout_review",
+      "family": "office_artifact_workflows",
+      "gold_skill": "pdf-layout-reviewer",
+      "closest_alternatives": [
+        "pdf-ocr-extractor",
+        "office-to-markdown-converter",
+        "public-office-pdf-extraction",
+        "public-pdf"
+      ],
+      "instruction_text": "Please inspect grant_application_packet.pdf as a rendered PDF. I need page-by-page layout issues: cropped tables, broken headers, missing signature areas, and anything that would make the form hard to read. Do not just extract the fields.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "pdf",
+        "layout",
+        "review"
+      ],
+      "gold_title_hits": [
+        "pdf",
+        "layout"
+      ],
+      "max_alternative_title_recall": 0.6667,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "pdf-ocr-extractor",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "pdf",
+            "extract"
+          ],
+          "title_tokens": [
+            "pdf",
+            "ocr",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "office-to-markdown-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "office",
+            "markdown",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-office-pdf-extraction",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "pdf",
+            "extract"
+          ],
+          "title_tokens": [
+            "public",
+            "office",
+            "pdf",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-pdf",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "pdf"
+          ],
+          "title_tokens": [
+            "public",
+            "pdf"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/office_artifact_workflows_confusability.json"
+    },
+    {
+      "id": "office_p2_scanned_pdf_ocr",
+      "family": "office_artifact_workflows",
+      "gold_skill": "pdf-ocr-extractor",
+      "closest_alternatives": [
+        "pdf-layout-reviewer",
+        "office-to-markdown-converter",
+        "document-field-extractor"
+      ],
+      "instruction_text": "Please recover the text from scanned_receipts_packet.pdf. It looks like image scans, so keep page numbers and mark uncertain OCR text instead of pretending every amount is reliable.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "pdf",
+        "ocr",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "pdf",
+        "ocr"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "pdf-layout-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "pdf"
+          ],
+          "title_tokens": [
+            "pdf",
+            "layout",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "office-to-markdown-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "office",
+            "markdown",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-field-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "field",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/office_artifact_workflows_confusability.json"
+    },
+    {
+      "id": "office_p3_docx_redline",
+      "family": "office_artifact_workflows",
+      "gold_skill": "docx-redline-editor",
+      "closest_alternatives": [
+        "office-to-markdown-converter",
+        "document-rewriter",
+        "public-docx",
+        "public-office-docx-manipulation"
+      ],
+      "instruction_text": "Please review vendor_agreement_draft.docx as a Word document and prepare redline-style edits with short reviewer comments. Preserve sections and explain any substantive change.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "docx",
+        "redline",
+        "edit"
+      ],
+      "gold_title_hits": [
+        "docx",
+        "edit"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "office-to-markdown-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "office",
+            "markdown",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-rewriter",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "document"
+          ],
+          "title_tokens": [
+            "document",
+            "rewrit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-docx",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "docx"
+          ],
+          "title_tokens": [
+            "public",
+            "docx"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-office-docx-manipulation",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "docx"
+          ],
+          "title_tokens": [
+            "public",
+            "office",
+            "docx",
+            "manipulation"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/office_artifact_workflows_confusability.json"
+    },
+    {
+      "id": "office_p4_formula_audit",
+      "family": "office_artifact_workflows",
+      "gold_skill": "spreadsheet-formula-auditor",
+      "closest_alternatives": [
+        "office-to-markdown-converter",
+        "data-analysis-with-validation",
+        "public-xlsx",
+        "public-office-xlsx-manipulation"
+      ],
+      "instruction_text": "Please check pricing_model.xlsx for calculation and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "spreadsheet",
+        "formula",
+        "audit"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": -0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "office-to-markdown-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "office",
+            "markdown",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "data",
+            "analysi",
+            "validation"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-xlsx",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "xlsx"
+          ],
+          "title_tokens": [
+            "public",
+            "xlsx"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-office-xlsx-manipulation",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "xlsx"
+          ],
+          "title_tokens": [
+            "public",
+            "office",
+            "xlsx",
+            "manipulation"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/office_artifact_workflows_confusability.json"
+    },
+    {
+      "id": "office_p5_slide_visual_audit",
+      "family": "office_artifact_workflows",
+      "gold_skill": "slide-deck-visual-auditor",
+      "closest_alternatives": [
+        "office-to-markdown-converter",
+        "pdf-layout-reviewer",
+        "public-pptx",
+        "public-office-ppt-visual"
+      ],
+      "instruction_text": "Please review thesis_proposal_deck.pptx for presentation readiness. I need slide-level feedback on visual hierarchy, text overflow, alignment, theme consistency, and speaker-note fit.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.25,
+      "gold_title_tokens": [
+        "slide",
+        "deck",
+        "visual",
+        "audit"
+      ],
+      "gold_title_hits": [
+        "visual"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": -0.25,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "office-to-markdown-converter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "office",
+            "markdown",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "pdf-layout-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "pdf",
+            "layout",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-pptx",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "pptx"
+          ],
+          "title_tokens": [
+            "public",
+            "pptx"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "public-office-ppt-visual",
+          "title_recall": 0.25,
+          "matched_title_tokens": [
+            "visual"
+          ],
+          "title_tokens": [
+            "public",
+            "office",
+            "ppt",
+            "visual"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/office_artifact_workflows_confusability.json"
+    },
+    {
+      "id": "office_p6_office_to_markdown",
+      "family": "office_artifact_workflows",
+      "gold_skill": "office-to-markdown-converter",
+      "closest_alternatives": [
+        "pdf-layout-reviewer",
+        "docx-redline-editor",
+        "document-converter"
+      ],
+      "instruction_text": "Please convert project_brief.docx into clean Markdown for a repository. Preserve headings, tables, labels, and source traceability, but do not create tracked changes or a layout audit.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "office",
+        "markdown",
+        "convert"
+      ],
+      "gold_title_hits": [
+        "markdown",
+        "convert"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "pdf-layout-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "layout"
+          ],
+          "title_tokens": [
+            "pdf",
+            "layout",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "docx-redline-editor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "docx"
+          ],
+          "title_tokens": [
+            "docx",
+            "redline",
+            "edit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-converter",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "convert"
+          ],
+          "title_tokens": [
+            "document",
+            "convert"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/office_artifact_workflows_confusability.json"
+    },
+    {
+      "id": "plan_p1_meeting_agenda",
+      "family": "planning_meetings",
+      "gold_skill": "meeting-agenda-builder",
+      "closest_alternatives": [
+        "weekly-planner",
+        "task-extractor"
+      ],
+      "instruction_text": "I have a short group project meeting tomorrow for a class presentation on AI study assistants. Please turn these topics into an agenda for that upcoming meeting: who will cover the demo, who will finish the slides, what risks could delay us before Friday, and what we need to prepare before the next check-in. The output should guide the meeting discussion, not schedule my whole week or only extract tasks.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "meet",
+        "agenda",
+        "build"
+      ],
+      "gold_title_hits": [
+        "meet",
+        "agenda"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "weekly-planner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "weekly",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "task-extractor",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "task",
+            "extract"
+          ],
+          "title_tokens": [
+            "task",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/planning_meetings_confusability.json"
+    },
+    {
+      "id": "plan_p2_meeting_summary",
+      "family": "planning_meetings",
+      "gold_skill": "meeting-summary-writer",
+      "closest_alternatives": [
+        "meeting-followup-extractor",
+        "task-extractor"
+      ],
+      "instruction_text": "Summarise these meeting notes into a clean meeting recap",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "meet",
+        "summary",
+        "writ"
+      ],
+      "gold_title_hits": [
+        "meet",
+        "summary"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "meeting-followup-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "meet"
+          ],
+          "title_tokens": [
+            "meet",
+            "followup",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "task-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "task",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/planning_meetings_confusability.json"
+    },
+    {
+      "id": "plan_p3_meeting_followup",
+      "family": "planning_meetings",
+      "gold_skill": "meeting-followup-extractor",
+      "closest_alternatives": [
+        "meeting-summary-writer",
+        "task-extractor"
+      ],
+      "instruction_text": "I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "meet",
+        "followup",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "meet"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "meeting-summary-writer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "meet"
+          ],
+          "title_tokens": [
+            "meet",
+            "summary",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "task-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "task",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/planning_meetings_confusability.json"
+    },
+    {
+      "id": "plan_p4_task_extractor",
+      "family": "planning_meetings",
+      "gold_skill": "task-extractor",
+      "closest_alternatives": [
+        "weekly-planner",
+        "meeting-followup-extractor"
+      ],
+      "instruction_text": "Turn these rough notes into a plain action-item list without scheduling the week and without treating them as completed meeting notes",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "task",
+        "extract"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "weekly-planner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "weekly",
+            "plann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "meet"
+          ],
+          "title_tokens": [
+            "meet",
+            "followup",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/planning_meetings_confusability.json"
+    },
+    {
+      "id": "plan_p5_weekly_planner",
+      "family": "planning_meetings",
+      "gold_skill": "weekly-planner",
+      "closest_alternatives": [
+        "task-extractor",
+        "meeting-agenda-builder"
+      ],
+      "instruction_text": "Help me make a realistic week-level plan with sequencing and time buffers. I need to finish the planning skill family, revise prompts for the reply cluster, prepare for a Tuesday project meeting about collaborating on a prototype and brainstorming test cases for a multi-agent system, review two papers, send my supervisor a grounded summary by Thursday, and leave time for benchmark testing. I also have classes on Tuesday and Thursday afternoon. Do not just extract a raw task list or prepare a single meeting agenda.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "weekly",
+        "plann"
+      ],
+      "gold_title_hits": [
+        "plann"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "task-extractor",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "task",
+            "extract"
+          ],
+          "title_tokens": [
+            "task",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "meet",
+            "agenda"
+          ],
+          "title_tokens": [
+            "meet",
+            "agenda",
+            "build"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/planning_meetings_confusability.json"
+    },
+    {
+      "id": "read_p1_paper_summary",
+      "family": "reading_research",
+      "gold_skill": "paper-summariser",
+      "closest_alternatives": [
+        "general-source-summariser",
+        "method-note-builder",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Give me a balanced research-oriented recap of this academic paper. I want the research problem, overall approach, main findings, and limitations in one readable summary, not citation-ready notes and not a method-only audit",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "pap",
+        "summaris"
+      ],
+      "gold_title_hits": [
+        "pap"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "general-source-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "general",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "method-note-builder",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "note"
+          ],
+          "title_tokens": [
+            "method",
+            "note",
+            "build"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "note"
+          ],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p2_general_source_summary",
+      "family": "reading_research",
+      "gold_skill": "general-source-summariser",
+      "closest_alternatives": [
+        "paper-summariser",
+        "document-extractor",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Summarise this as a general source report rather than an academic paper. I need the context, main observations, practical recommendations, and evidence limits in plain language",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "general",
+        "summaris"
+      ],
+      "gold_title_hits": [
+        "general"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "paper-summariser",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "pap"
+          ],
+          "title_tokens": [
+            "pap",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p3_citation_notes",
+      "family": "reading_research",
+      "gold_skill": "citation-note-extractor",
+      "closest_alternatives": [
+        "document-extractor",
+        "paper-summariser",
+        "citation-grounding-helper"
+      ],
+      "instruction_text": "Make this source usable for me later when I'm writing by producing citation-ready notes",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "citation",
+        "note",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "note"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "document-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "paper-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "pap",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "citation",
+            "ground"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p4_document_extraction",
+      "family": "reading_research",
+      "gold_skill": "document-extractor",
+      "closest_alternatives": [
+        "citation-note-extractor",
+        "method-note-builder",
+        "paper-summariser"
+      ],
+      "instruction_text": "Extract the specific details from this source into a structured table of fields and values",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "document",
+        "extract"
+      ],
+      "gold_title_hits": [
+        "extract"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "extract"
+          ],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "method-note-builder",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "method",
+            "note",
+            "build"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "paper-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "pap",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p5_method_notes",
+      "family": "reading_research",
+      "gold_skill": "method-note-builder",
+      "closest_alternatives": [
+        "paper-summariser",
+        "document-extractor",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Help me make sense of this source by focusing on how the work was actually carried out, how it was evaluated, and what assumptions or constraints shaped the result",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "method",
+        "note",
+        "build"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "paper-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "pap",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p6_grounding_check",
+      "family": "reading_research",
+      "gold_skill": "citation-grounding-helper",
+      "closest_alternatives": [
+        "citation-note-extractor",
+        "paper-summariser",
+        "document-extractor"
+      ],
+      "instruction_text": "I wrote this exact sentence from the source: 'Explicit task decomposition reliably improves agent performance in realistic environments.' Perform a citation-grounding support audit: mark which parts of the sentence are supported, overstated, or unsupported, explain the overreach, and give a safer revised sentence if needed.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "citation",
+        "ground"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "paper-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "pap",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "document-extractor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "document",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p7_multi_source_comparison",
+      "family": "reading_research",
+      "gold_skill": "multi-source-comparison-builder",
+      "closest_alternatives": [
+        "related-work-synthesiser",
+        "method-note-builder",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Compare these two sources in a side-by-side table with separate columns for Source A and Source B so I can clearly see how they line up, where they differ, and what each one contributes. Use rows such as approach, evaluation, strengths, limitations, and contribution; do not turn it into a synthesized related-work paragraph, method-only note, or citation-note list.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "multi",
+        "comparison",
+        "build"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "related-work-synthesiser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "relat",
+            "work",
+            "synthesis"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "method-note-builder",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "note"
+          ],
+          "title_tokens": [
+            "method",
+            "note",
+            "build"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "note"
+          ],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "read_p8_related_work_synthesis",
+      "family": "reading_research",
+      "gold_skill": "related-work-synthesiser",
+      "closest_alternatives": [
+        "multi-source-comparison-builder",
+        "citation-note-extractor",
+        "paper-summariser"
+      ],
+      "instruction_text": "Synthesize these two sources into related-work style notes: explain the main approaches, how they relate, the shared research direction, and what remains unresolved across them. I want an integrated synthesis, not a side-by-side comparison table.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "relat",
+        "work",
+        "synthesis"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": -0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "multi-source-comparison-builder",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "comparison"
+          ],
+          "title_tokens": [
+            "multi",
+            "comparison",
+            "build"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "citation-note-extractor",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "note"
+          ],
+          "title_tokens": [
+            "citation",
+            "note",
+            "extract"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "paper-summariser",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "pap",
+            "summaris"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reading_research_confusability.json"
+    },
+    {
+      "id": "reply_p1_professor_reply",
+      "family": "reply_messaging",
+      "gold_skill": "professor-email-reply",
+      "closest_alternatives": [
+        "reply-drafter",
+        "reply-polisher"
+      ],
+      "instruction_text": "Draft a respectful academic email reply to this message from my professor, including availability and a polite tone suitable for a supervisor relationship: 'Hi Jacky, thanks for your update. Would you be available to meet next Tuesday afternoon to discuss the revised thesis scope? Please let me know what time suits you best.'",
+      "risk_level": "medium",
+      "risk_flags": [
+        "complete_gold_title_overlap"
+      ],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 1.0,
+      "gold_title_tokens": [
+        "profess",
+        "email",
+        "reply"
+      ],
+      "gold_title_hits": [
+        "profess",
+        "email",
+        "reply"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "respectful academic email reply",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "reply-drafter",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "reply",
+            "draft"
+          ],
+          "title_tokens": [
+            "reply",
+            "draft"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "reply-polisher",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "reply"
+          ],
+          "title_tokens": [
+            "reply",
+            "polish"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reply_messaging_confusability.json"
+    },
+    {
+      "id": "reply_p2_polish_supervisor",
+      "family": "reply_messaging",
+      "gold_skill": "reply-polisher",
+      "closest_alternatives": [
+        "professor-email-reply",
+        "reply-drafter"
+      ],
+      "instruction_text": "Edit this already-written message only. Keep the same meaning, availability, and commitments, but improve flow, phrasing, tone, and readability. Return the refined version of this message.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "reply",
+        "polish"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "improve flow phras tone readability",
+      "gold_shared_phrase_length": 5,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "professor-email-reply",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "profess",
+            "email",
+            "reply"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "reply-drafter",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "reply",
+            "draft"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reply_messaging_confusability.json"
+    },
+    {
+      "id": "reply_p3_groupwork_coordination",
+      "family": "reply_messaging",
+      "gold_skill": "groupwork-reply",
+      "closest_alternatives": [
+        "reply-drafter",
+        "followup-reply-writer"
+      ],
+      "instruction_text": "Draft a reply to these teammates about shared project coordination. The reply should clarify what I can take ownership of, confirm the deadline situation, and help the group move the work forward: 'Hey everyone, we need to lock in who is doing the slides, who is writing the report section, and whether we can still meet the Friday deadline. Can each of you confirm what you can finish by tomorrow?'",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "groupwork",
+        "reply"
+      ],
+      "gold_title_hits": [
+        "reply"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "reply-drafter",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "reply",
+            "draft"
+          ],
+          "title_tokens": [
+            "reply",
+            "draft"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "followup-reply-writer",
+          "title_recall": 0.6667,
+          "matched_title_tokens": [
+            "reply",
+            "writ"
+          ],
+          "title_tokens": [
+            "followup",
+            "reply",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reply_messaging_confusability.json"
+    },
+    {
+      "id": "reply_p4_followup_commitment",
+      "family": "reply_messaging",
+      "gold_skill": "followup-reply-writer",
+      "closest_alternatives": [
+        "reply-drafter",
+        "groupwork-reply"
+      ],
+      "instruction_text": "Write a response whose main purpose is to state my next actions clearly",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "followup",
+        "reply",
+        "writ"
+      ],
+      "gold_title_hits": [
+        "reply"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": -0.1667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "reply-drafter",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "reply"
+          ],
+          "title_tokens": [
+            "reply",
+            "draft"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "groupwork-reply",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "reply"
+          ],
+          "title_tokens": [
+            "groupwork",
+            "reply"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reply_messaging_confusability.json"
+    },
+    {
+      "id": "reply_p5_generic_fresh_draft",
+      "family": "reply_messaging",
+      "gold_skill": "reply-drafter",
+      "closest_alternatives": [
+        "reply-polisher",
+        "followup-reply-writer"
+      ],
+      "instruction_text": "Compose a concise new response from the source message only, confirming that I can send the requested file tomorrow. There is no existing reply text to polish, and I do not need a detailed action plan: 'Thanks for the update. Could you send me the file by tomorrow if possible?'",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "reply",
+        "draft"
+      ],
+      "gold_title_hits": [
+        "reply"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "reply-polisher",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "reply",
+            "polish"
+          ],
+          "title_tokens": [
+            "reply",
+            "polish"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "followup-reply-writer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "reply"
+          ],
+          "title_tokens": [
+            "followup",
+            "reply",
+            "writ"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/reply_messaging_confusability.json"
+    },
+    {
+      "id": "sec_p1_threat_model",
+      "family": "security_appsec",
+      "gold_skill": "security-threat-modeler",
+      "closest_alternatives": [
+        "security-code-reviewer",
+        "auth-flow-reviewer",
+        "privacy-risk-reviewer"
+      ],
+      "instruction_text": "We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "security",
+        "threat",
+        "model"
+      ],
+      "gold_title_hits": [
+        "security"
+      ],
+      "max_alternative_title_recall": 0.3333,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "security-code-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "security"
+          ],
+          "title_tokens": [
+            "security",
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "auth",
+            "flow",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "risk"
+          ],
+          "title_tokens": [
+            "privacy",
+            "risk",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/security_appsec_confusability.json"
+    },
+    {
+      "id": "sec_p2_security_code_review",
+      "family": "security_appsec",
+      "gold_skill": "security-code-reviewer",
+      "closest_alternatives": [
+        "code-reviewer",
+        "auth-flow-reviewer",
+        "security-threat-modeler"
+      ],
+      "instruction_text": "Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "security",
+        "code",
+        "review"
+      ],
+      "gold_title_hits": [
+        "security",
+        "review"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.1667,
+      "gold_shared_phrase": "vulnerabilitie fixe tied implementation",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "code-reviewer",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "review"
+          ],
+          "title_tokens": [
+            "auth",
+            "flow",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "security-threat-modeler",
+          "title_recall": 0.3333,
+          "matched_title_tokens": [
+            "security"
+          ],
+          "title_tokens": [
+            "security",
+            "threat",
+            "model"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/security_appsec_confusability.json"
+    },
+    {
+      "id": "sec_p3_dependency_risk",
+      "family": "security_appsec",
+      "gold_skill": "dependency-risk-auditor",
+      "closest_alternatives": [
+        "security-code-reviewer",
+        "secret-leak-scanner",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "Check the risk of adding this new npm package. It has a broad dependency tree, a postinstall script, and the lockfile pulls in several old transitive packages. I need a dependency and supply-chain risk assessment.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.6667,
+      "gold_title_tokens": [
+        "dependency",
+        "risk",
+        "audit"
+      ],
+      "gold_title_hits": [
+        "dependency",
+        "risk"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.6667,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "security-code-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "security",
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "secret",
+            "leak",
+            "scann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "failure",
+            "debugg"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/security_appsec_confusability.json"
+    },
+    {
+      "id": "sec_p4_secret_leak",
+      "family": "security_appsec",
+      "gold_skill": "secret-leak-scanner",
+      "closest_alternatives": [
+        "dependency-risk-auditor",
+        "security-code-reviewer",
+        "privacy-risk-reviewer"
+      ],
+      "instruction_text": "Look at this diff and tell me if I accidentally exposed anything sensitive: it adds `.env.example`, updates a deployment log, and includes strings that look like `sk_live_...`, a database URL, and a webhook signing secret.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.3333,
+      "gold_title_tokens": [
+        "secret",
+        "leak",
+        "scann"
+      ],
+      "gold_title_hits": [
+        "secret"
+      ],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.3333,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "dependency-risk-auditor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "dependency",
+            "risk",
+            "audit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "security-code-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "security",
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "privacy",
+            "risk",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/security_appsec_confusability.json"
+    },
+    {
+      "id": "sec_p5_auth_flow",
+      "family": "security_appsec",
+      "gold_skill": "auth-flow-reviewer",
+      "closest_alternatives": [
+        "security-code-reviewer",
+        "security-threat-modeler",
+        "privacy-risk-reviewer"
+      ],
+      "instruction_text": "Check whether this account-access change is safe. Users can refresh expired sessions, reset passwords by email link, and switch between workspace roles. I care about bypasses, stale permissions, and privilege escalation.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "auth",
+        "flow",
+        "review"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "security-code-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "security",
+            "code",
+            "review"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "security-threat-modeler",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "security",
+            "threat",
+            "model"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "privacy",
+            "risk",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/security_appsec_confusability.json"
+    },
+    {
+      "id": "sec_p6_privacy_review",
+      "family": "security_appsec",
+      "gold_skill": "privacy-risk-reviewer",
+      "closest_alternatives": [
+        "security-threat-modeler",
+        "secret-leak-scanner",
+        "auth-flow-reviewer"
+      ],
+      "instruction_text": "Assess the data-protection concerns in this analytics change. We want to log search queries, account region, user role, clicked filters, and partial email domains for 18 months so the product team can study usage patterns.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "privacy",
+        "risk",
+        "review"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "security-threat-modeler",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "security",
+            "threat",
+            "model"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "secret",
+            "leak",
+            "scann"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "auth",
+            "flow",
+            "review"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/security_appsec_confusability.json"
+    },
+    {
+      "id": "skill_p1_find_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-finder",
+      "closest_alternatives": [
+        "skill-creator",
+        "skill-installer",
+        "skill-editor"
+      ],
+      "instruction_text": "Before I make anything new, search my existing capability library, shortlist available entries, assess fit and confidence, and decide whether one of them covers a workflow for turning messy meeting notes into action items and follow-up messages. I only want a reuse recommendation, not creation.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "skill",
+        "find"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "skill-creator",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "skill",
+            "creat"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-installer",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "skill",
+            "install"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-editor",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "skill",
+            "edit"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/skill_lifecycle_confusability.json"
+    },
+    {
+      "id": "skill_p2_install_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-installer",
+      "closest_alternatives": [
+        "skill-finder",
+        "skill-creator",
+        "skill-packager"
+      ],
+      "instruction_text": "I found an existing spreadsheet-analysis capability in a public catalog and want it added to my active local library. Please fetch or prepare the package, verify the expected files, and report the source, local path, setup result, and any activation caveats.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.0,
+      "gold_title_tokens": [
+        "skill",
+        "install"
+      ],
+      "gold_title_hits": [],
+      "max_alternative_title_recall": 0.0,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "skill-finder",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "skill",
+            "find"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-creator",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "skill",
+            "creat"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-packager",
+          "title_recall": 0.0,
+          "matched_title_tokens": [],
+          "title_tokens": [
+            "skill",
+            "packag"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/skill_lifecycle_confusability.json"
+    },
+    {
+      "id": "skill_p3_create_new",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-creator",
+      "closest_alternatives": [
+        "skill-editor",
+        "skill-finder",
+        "skill-packager"
+      ],
+      "instruction_text": "Create a new atomic skill for a repeated workflow: I often need to turn supervisor meeting notes into a thesis action list with owners, deadlines, and open questions. There is no existing skill for this exact workflow.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "skill",
+        "creat"
+      ],
+      "gold_title_hits": [
+        "skill"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "create new atomic skill",
+      "gold_shared_phrase_length": 4,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "skill-editor",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "edit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-finder",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "find"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-packager",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "packag"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/skill_lifecycle_confusability.json"
+    },
+    {
+      "id": "skill_p4_edit_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-editor",
+      "closest_alternatives": [
+        "skill-creator",
+        "skill-evaluator",
+        "skill-packager"
+      ],
+      "instruction_text": "This existing skill's description is too broad and it keeps triggering for document summaries when it should only handle structured field extraction. Please revise the skill so its selection boundary is clearer.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "skill",
+        "edit"
+      ],
+      "gold_title_hits": [
+        "skill"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "skill-creator",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "creat"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-evaluator",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "evaluat"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-packager",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "packag"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/skill_lifecycle_confusability.json"
+    },
+    {
+      "id": "skill_p5_evaluate_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-evaluator",
+      "closest_alternatives": [
+        "skill-editor",
+        "skill-finder",
+        "skill-creator"
+      ],
+      "instruction_text": "Test whether my `reply-polisher` skill actually triggers only when there is already a draft reply. I want an evaluation with realistic near-boundary prompts before deciding whether to edit it.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "skill",
+        "evaluat"
+      ],
+      "gold_title_hits": [
+        "skill"
+      ],
+      "max_alternative_title_recall": 1.0,
+      "title_recall_advantage": -0.5,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "skill-editor",
+          "title_recall": 1.0,
+          "matched_title_tokens": [
+            "skill",
+            "edit"
+          ],
+          "title_tokens": [
+            "skill",
+            "edit"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-finder",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "find"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-creator",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "creat"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/skill_lifecycle_confusability.json"
+    },
+    {
+      "id": "skill_p6_package_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-packager",
+      "closest_alternatives": [
+        "skill-creator",
+        "skill-installer",
+        "skill-editor"
+      ],
+      "instruction_text": "I finished an existing `paper-summariser` skill and want to share it with someone else. Check the folder shape, metadata, resource links, and unnecessary files so it is package-ready.",
+      "risk_level": "low",
+      "risk_flags": [],
+      "gold_exact_name_leaks": [],
+      "gold_title_recall": 0.5,
+      "gold_title_tokens": [
+        "skill",
+        "packag"
+      ],
+      "gold_title_hits": [
+        "skill"
+      ],
+      "max_alternative_title_recall": 0.5,
+      "title_recall_advantage": 0.0,
+      "gold_shared_phrase": "",
+      "gold_shared_phrase_length": 0,
+      "max_alternative_shared_phrase_length": 0,
+      "alternatives": [
+        {
+          "skill": "skill-creator",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "creat"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-installer",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "install"
+          ],
+          "exact_name_leaks": []
+        },
+        {
+          "skill": "skill-editor",
+          "title_recall": 0.5,
+          "matched_title_tokens": [
+            "skill"
+          ],
+          "title_tokens": [
+            "skill",
+            "edit"
+          ],
+          "exact_name_leaks": []
+        }
+      ],
+      "source_file": "skill_benchmark/prompts/skill_lifecycle_confusability.json"
+    }
+  ]
+}

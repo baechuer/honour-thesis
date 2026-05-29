@@ -1,0 +1,25 @@
+{
+  "slug": "public-oh-my-presentation-builder",
+  "source_name": "presentation-builder",
+  "origin": "akillness/oh-my-skills",
+  "source_url": "https://github.com/akillness/oh-my-skills/tree/main/.agent-skills/presentation-builder",
+  "raw_url": "https://raw.githubusercontent.com/akillness/oh-my-skills/main/.agent-skills/presentation-builder/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for presentation builder; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "slide deck",
+    "layout/theme",
+    "speaker notes or visual assets"
+  ],
+  "resource_signals": [
+    "presentation builder",
+    "public SKILL.md metadata",
+    "slides",
+    "deck",
+    "layout",
+    "visual QA"
+  ]
+}

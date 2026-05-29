@@ -1,0 +1,25 @@
+{
+  "slug": "public-xlsx",
+  "source_name": "xlsx",
+  "origin": "anthropics/skills",
+  "source_url": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+  "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "spreadsheet artifact workflow; depends on spreadsheet files, formulas, workbook structure, and possible script/tool support",
+  "external_dependencies": [
+    ".xlsx/.xls/.csv files",
+    "spreadsheet formulas",
+    "workbook sheets",
+    "formatting/layout",
+    "possible Python tooling"
+  ],
+  "resource_signals": [
+    "file type",
+    "formula recalculation",
+    "sheets",
+    "charts",
+    "formatting",
+    "data analysis"
+  ]
+}

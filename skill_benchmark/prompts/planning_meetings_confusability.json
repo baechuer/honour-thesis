@@ -1,0 +1,52 @@
+[
+  {
+    "id": "plan_p1_meeting_agenda",
+    "family": "planning_meetings",
+    "gold_skill": "meeting-agenda-builder",
+    "closest_alternatives": [
+      "weekly-planner",
+      "task-extractor"
+    ],
+    "prompt": "I have a short group project meeting tomorrow for a class presentation on AI study assistants. Please turn these topics into an agenda for that upcoming meeting: who will cover the demo, who will finish the slides, what risks could delay us before Friday, and what we need to prepare before the next check-in. The output should guide the meeting discussion, not schedule my whole week or only extract tasks."
+  },
+  {
+    "id": "plan_p2_meeting_summary",
+    "family": "planning_meetings",
+    "gold_skill": "meeting-summary-writer",
+    "closest_alternatives": [
+      "meeting-followup-extractor",
+      "task-extractor"
+    ],
+    "prompt": "Summarise these meeting notes into a clean meeting recap: decisions made, discussion outcomes, unresolved points, and what still needs attention. Do not extract only action items: we agreed to keep the thesis evaluation-focused, reduce the first benchmark to a smaller confusable core, and send an updated scope note by Friday. We still need to decide whether to include a lightweight method extension."
+  },
+  {
+    "id": "plan_p3_meeting_followup",
+    "family": "planning_meetings",
+    "gold_skill": "meeting-followup-extractor",
+    "closest_alternatives": [
+      "meeting-summary-writer",
+      "task-extractor"
+    ],
+    "prompt": "I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention: we agreed to keep the thesis evaluation-focused, reduce the first benchmark to a smaller confusable core, and send an updated scope note by Friday. I need to draft the note, update the benchmark README, and check the prompt set again before the end of the week. Someone also needs to review the updated note after I send it."
+  },
+  {
+    "id": "plan_p4_task_extractor",
+    "family": "planning_meetings",
+    "gold_skill": "task-extractor",
+    "closest_alternatives": [
+      "weekly-planner",
+      "meeting-followup-extractor"
+    ],
+    "prompt": "Turn these rough notes into a plain action-item list without scheduling the week and without treating them as completed meeting notes: fix the reply-skill prompts, rewrite the email skill descriptions, send a grounded thesis summary, think more about hierarchical routing, clean the benchmark repo, prepare for Tuesday's meeting, and review two papers before Thursday. I want concrete actions and missing details, not a calendar plan."
+  },
+  {
+    "id": "plan_p5_weekly_planner",
+    "family": "planning_meetings",
+    "gold_skill": "weekly-planner",
+    "closest_alternatives": [
+      "task-extractor",
+      "meeting-agenda-builder"
+    ],
+    "prompt": "Help me make a realistic week-level plan with sequencing and time buffers. I need to finish the planning skill family, revise prompts for the reply cluster, prepare for a Tuesday project meeting about collaborating on a prototype and brainstorming test cases for a multi-agent system, review two papers, send my supervisor a grounded summary by Thursday, and leave time for benchmark testing. I also have classes on Tuesday and Thursday afternoon. Do not just extract a raw task list or prepare a single meeting agenda."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "slug": "public-office-microsoft-teams",
+  "source_name": "microsoft-teams",
+  "origin": "claude-office-skills/skills",
+  "source_url": "https://github.com/claude-office-skills/skills/tree/main/microsoft-teams",
+  "raw_url": "https://raw.githubusercontent.com/claude-office-skills/skills/main/microsoft-teams/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "external-service workflow; depends on account permissions, workspace records, API behavior, and side-effect constraints",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "external SaaS workspace",
+    "account permissions",
+    "records or API access"
+  ],
+  "resource_signals": [
+    "microsoft teams",
+    "public SKILL.md metadata",
+    "external service",
+    "workspace",
+    "automation",
+    "permissions"
+  ]
+}

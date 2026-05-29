@@ -1,0 +1,18 @@
+{
+  "slug": "public-office-table-extractor",
+  "source_name": "table-extractor",
+  "origin": "claude-office-skills/skills",
+  "source_url": "https://github.com/claude-office-skills/skills/tree/main/table-extractor",
+  "raw_url": "https://raw.githubusercontent.com/claude-office-skills/skills/main/table-extractor/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for table extractor; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request"
+  ],
+  "resource_signals": [
+    "table extractor",
+    "public SKILL.md metadata"
+  ]
+}

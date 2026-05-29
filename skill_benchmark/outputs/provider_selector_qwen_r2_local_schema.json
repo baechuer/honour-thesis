@@ -1,0 +1,6575 @@
+{
+  "embedding_provider": "qwen",
+  "embedding_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "embedding_model": "text-embedding-v4",
+  "embedding_representation": "r2",
+  "scale": "current_full",
+  "reranker_provider": "local-schema",
+  "reranker_model": null,
+  "rerank_candidates": 20,
+  "local_schema_base_weight": 0.4,
+  "local_schema_weight": 0.6,
+  "elapsed_ms": 7057.53,
+  "metrics": {
+    "total_prompts": 67,
+    "scale_skill_count": 1006,
+    "selector_visible_tokens_approx": 303223,
+    "top1_accuracy": 0.6418,
+    "top1_hits": 43,
+    "acceptable_top1_accuracy": 0.6567,
+    "acceptable_top1_hits": 44,
+    "borderline_top1": 0,
+    "borderline_top1_rate": 0.0,
+    "top3_recall": 0.7313,
+    "top3_hits": 49,
+    "acceptable_top3_recall": 0.7463,
+    "acceptable_top3_hits": 50,
+    "top5_recall": 0.7313,
+    "top5_hits": 49,
+    "acceptable_top5_recall": 0.7463,
+    "acceptable_top5_hits": 50,
+    "mrr": 0.6866,
+    "acceptable_mrr": 0.7015,
+    "mean_gold_rank": 1.24,
+    "mean_acceptable_rank": 1.24,
+    "wrong_top1": 24,
+    "unacceptable_top1": 23,
+    "unacceptable_top1_rate": 0.3433,
+    "listed_alternative_top1": 5,
+    "listed_alternative_top1_rate": 0.0746,
+    "non_main_top1": 15,
+    "non_main_top1_rate": 0.2239,
+    "background_top1": 13,
+    "background_top1_rate": 0.194,
+    "public_import_top1": 1,
+    "public_import_top1_rate": 0.0149,
+    "by_family": {
+      "browser_web_automation": {
+        "total": 6,
+        "top1_accuracy": 0.5,
+        "acceptable_top1_accuracy": 0.5,
+        "top3_recall": 0.6667,
+        "acceptable_top3_recall": 0.6667,
+        "top5_recall": 0.6667,
+        "acceptable_top5_recall": 0.6667
+      },
+      "code_github_workflow": {
+        "total": 6,
+        "top1_accuracy": 0.5,
+        "acceptable_top1_accuracy": 0.5,
+        "top3_recall": 0.5,
+        "acceptable_top3_recall": 0.5,
+        "top5_recall": 0.5,
+        "acceptable_top5_recall": 0.5
+      },
+      "data_spreadsheet": {
+        "total": 7,
+        "top1_accuracy": 0.7143,
+        "acceptable_top1_accuracy": 0.7143,
+        "top3_recall": 0.8571,
+        "acceptable_top3_recall": 0.8571,
+        "top5_recall": 0.8571,
+        "acceptable_top5_recall": 0.8571
+      },
+      "documents_files": {
+        "total": 7,
+        "top1_accuracy": 0.2857,
+        "acceptable_top1_accuracy": 0.4286,
+        "top3_recall": 0.2857,
+        "acceptable_top3_recall": 0.4286,
+        "top5_recall": 0.2857,
+        "acceptable_top5_recall": 0.4286
+      },
+      "metrics_observability": {
+        "total": 6,
+        "top1_accuracy": 1.0,
+        "acceptable_top1_accuracy": 1.0,
+        "top3_recall": 1.0,
+        "acceptable_top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "acceptable_top5_recall": 1.0
+      },
+      "news_monitoring": {
+        "total": 5,
+        "top1_accuracy": 1.0,
+        "acceptable_top1_accuracy": 1.0,
+        "top3_recall": 1.0,
+        "acceptable_top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "acceptable_top5_recall": 1.0
+      },
+      "planning_meetings": {
+        "total": 5,
+        "top1_accuracy": 0.6,
+        "acceptable_top1_accuracy": 0.6,
+        "top3_recall": 1.0,
+        "acceptable_top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "acceptable_top5_recall": 1.0
+      },
+      "reading_research": {
+        "total": 8,
+        "top1_accuracy": 0.75,
+        "acceptable_top1_accuracy": 0.75,
+        "top3_recall": 0.875,
+        "acceptable_top3_recall": 0.875,
+        "top5_recall": 0.875,
+        "acceptable_top5_recall": 0.875
+      },
+      "reply_messaging": {
+        "total": 5,
+        "top1_accuracy": 0.8,
+        "acceptable_top1_accuracy": 0.8,
+        "top3_recall": 1.0,
+        "acceptable_top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "acceptable_top5_recall": 1.0
+      },
+      "security_appsec": {
+        "total": 6,
+        "top1_accuracy": 0.8333,
+        "acceptable_top1_accuracy": 0.8333,
+        "top3_recall": 0.8333,
+        "acceptable_top3_recall": 0.8333,
+        "top5_recall": 0.8333,
+        "acceptable_top5_recall": 0.8333
+      },
+      "skill_lifecycle": {
+        "total": 6,
+        "top1_accuracy": 0.1667,
+        "acceptable_top1_accuracy": 0.1667,
+        "top3_recall": 0.1667,
+        "acceptable_top3_recall": 0.1667,
+        "top5_recall": 0.1667,
+        "acceptable_top5_recall": 0.1667
+      }
+    },
+    "top_confusions": [
+      {
+        "pair": "web-ui-tester -> email-ops-acceptance-test-builder",
+        "count": 1
+      },
+      {
+        "pair": "frontend-debugger -> api-ops-handoff-brief-writer",
+        "count": 1
+      },
+      {
+        "pair": "accessibility-checker -> web-form-filler",
+        "count": 1
+      },
+      {
+        "pair": "code-reviewer -> email-drafter",
+        "count": 1
+      },
+      {
+        "pair": "pr-reviewer -> auth-flow-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "ci-failure-debugger -> auth-flow-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "data-analysis-overview -> data-analysis-for-reporting",
+        "count": 1
+      },
+      {
+        "pair": "data-analysis-for-ranking-selection -> dashboard-ops-priority-ranker",
+        "count": 1
+      },
+      {
+        "pair": "document-summariser -> travel-ops-summary-writer",
+        "count": 1
+      },
+      {
+        "pair": "document-rewriter -> travel-ops-rewrite-editor",
+        "count": 1
+      },
+      {
+        "pair": "document-normaliser -> travel-ops-normalizer",
+        "count": 1
+      },
+      {
+        "pair": "document-field-extractor -> invoice-payment-checker",
+        "count": 1
+      },
+      {
+        "pair": "layout-preserving-converter -> medical-admin-ops-field-extractor",
+        "count": 1
+      },
+      {
+        "pair": "task-extractor -> weekly-planner",
+        "count": 1
+      },
+      {
+        "pair": "weekly-planner -> meeting-agenda-builder",
+        "count": 1
+      },
+      {
+        "pair": "paper-summariser -> method-note-builder",
+        "count": 1
+      },
+      {
+        "pair": "document-extractor -> lab-ops-field-extractor",
+        "count": 1
+      },
+      {
+        "pair": "reply-drafter -> reply-polisher",
+        "count": 1
+      },
+      {
+        "pair": "security-code-reviewer -> api-ops-risk-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "skill-installer -> public-xlsx",
+        "count": 1
+      }
+    ],
+    "top_unacceptable_confusions": [
+      {
+        "pair": "web-ui-tester -> email-ops-acceptance-test-builder",
+        "count": 1
+      },
+      {
+        "pair": "frontend-debugger -> api-ops-handoff-brief-writer",
+        "count": 1
+      },
+      {
+        "pair": "accessibility-checker -> web-form-filler",
+        "count": 1
+      },
+      {
+        "pair": "code-reviewer -> email-drafter",
+        "count": 1
+      },
+      {
+        "pair": "pr-reviewer -> auth-flow-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "ci-failure-debugger -> auth-flow-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "data-analysis-overview -> data-analysis-for-reporting",
+        "count": 1
+      },
+      {
+        "pair": "data-analysis-for-ranking-selection -> dashboard-ops-priority-ranker",
+        "count": 1
+      },
+      {
+        "pair": "document-summariser -> travel-ops-summary-writer",
+        "count": 1
+      },
+      {
+        "pair": "document-normaliser -> travel-ops-normalizer",
+        "count": 1
+      },
+      {
+        "pair": "document-field-extractor -> invoice-payment-checker",
+        "count": 1
+      },
+      {
+        "pair": "layout-preserving-converter -> medical-admin-ops-field-extractor",
+        "count": 1
+      },
+      {
+        "pair": "task-extractor -> weekly-planner",
+        "count": 1
+      },
+      {
+        "pair": "weekly-planner -> meeting-agenda-builder",
+        "count": 1
+      },
+      {
+        "pair": "paper-summariser -> method-note-builder",
+        "count": 1
+      },
+      {
+        "pair": "document-extractor -> lab-ops-field-extractor",
+        "count": 1
+      },
+      {
+        "pair": "reply-drafter -> reply-polisher",
+        "count": 1
+      },
+      {
+        "pair": "security-code-reviewer -> api-ops-risk-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "skill-installer -> public-xlsx",
+        "count": 1
+      },
+      {
+        "pair": "skill-creator -> thesis-ops-handoff-brief-writer",
+        "count": 1
+      }
+    ]
+  },
+  "api_usage": {
+    "embedding_api_calls": 0,
+    "embedding_cache_hits": 1073,
+    "embedding_tokens_approx": 0,
+    "rerank_api_calls": 0,
+    "rerank_cache_hits": 0,
+    "rerank_tokens_approx": 0
+  },
+  "acceptable_alternatives": {
+    "doc_p2_document_rewriter": {
+      "acceptable": [
+        "travel-ops-rewrite-editor"
+      ],
+      "borderline": [
+        "travel-ops-summary-writer"
+      ]
+    },
+    "doc_p5_comparison_preparation": {
+      "acceptable": [
+        "legal-ops-comparison-builder"
+      ],
+      "borderline": [
+        "docs-ops-comparison-builder",
+        "writing-ops-comparison-builder"
+      ]
+    },
+    "doc_p6_conversion": {
+      "acceptable": [
+        "public-markitdown"
+      ],
+      "borderline": []
+    },
+    "obs_p6_incident_summary": {
+      "acceptable": [
+        "incident-ops-summary-writer"
+      ],
+      "borderline": []
+    },
+    "skill_p2_install_existing": {
+      "acceptable": [
+        "public-skill-installer"
+      ],
+      "borderline": []
+    }
+  },
+  "results": [
+    {
+      "prompt_id": "web_p1_page_snapshot",
+      "family": "browser_web_automation",
+      "gold_skill": "web-page-snapshotter",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-data-extractor",
+        "frontend-debugger"
+      ],
+      "instruction_text": "Open the staging dashboard and capture a page snapshot of what the user sees on the account settings page right now. I need the visible state, screenshot-style observations, and any obvious rendering issue; do not click through a full interaction test.",
+      "ranking": [
+        {
+          "skill": "web-page-snapshotter",
+          "score": 1.0
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.37613
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.295382
+        },
+        {
+          "skill": "dashboard-ops-acceptance-test-builder",
+          "score": 0.280552
+        },
+        {
+          "skill": "terms-of-service-drafter",
+          "score": 0.219812
+        },
+        {
+          "skill": "dashboard-ops-handoff-brief-writer",
+          "score": 0.213462
+        },
+        {
+          "skill": "finance-ops-acceptance-test-builder",
+          "score": 0.209131
+        },
+        {
+          "skill": "finance-ops-handoff-brief-writer",
+          "score": 0.199803
+        },
+        {
+          "skill": "dashboard-ops-quality-auditor",
+          "score": 0.152779
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.14756
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.137425
+        },
+        {
+          "skill": "finance-ops-priority-ranker",
+          "score": 0.100708
+        },
+        {
+          "skill": "dashboard-ops-evidence-grounder",
+          "score": 0.090405
+        },
+        {
+          "skill": "finance-ops-monitoring-plan-builder",
+          "score": 0.086947
+        },
+        {
+          "skill": "dashboard-ops-summary-writer",
+          "score": 0.057423
+        },
+        {
+          "skill": "support-ops-acceptance-test-builder",
+          "score": 0.051942
+        },
+        {
+          "skill": "meeting-ops-acceptance-test-builder",
+          "score": 0.051689
+        },
+        {
+          "skill": "dashboard-ops-priority-ranker",
+          "score": 0.044702
+        },
+        {
+          "skill": "dashboard-ops-monitoring-plan-builder",
+          "score": 0.030896
+        },
+        {
+          "skill": "dashboard-ops-compliance-checker",
+          "score": 0.005468
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p2_form_filling",
+      "family": "browser_web_automation",
+      "gold_skill": "web-form-filler",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-page-snapshotter",
+        "frontend-debugger"
+      ],
+      "instruction_text": "Go through the demo signup flow and complete the form fields with the sample details I provided. Report which fields were entered and pause before final submission if it would create a real account. This is delegated form completion, not expected-versus-actual UI validation.",
+      "ranking": [
+        {
+          "skill": "web-form-filler",
+          "score": 1.0
+        },
+        {
+          "skill": "web-ops-field-extractor",
+          "score": 0.493581
+        },
+        {
+          "skill": "ux-ops-field-extractor",
+          "score": 0.41304
+        },
+        {
+          "skill": "crm-ops-quality-auditor",
+          "score": 0.277019
+        },
+        {
+          "skill": "medical-admin-ops-quality-auditor",
+          "score": 0.272346
+        },
+        {
+          "skill": "crm-data-enricher",
+          "score": 0.219999
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.218312
+        },
+        {
+          "skill": "web-ops-quality-auditor",
+          "score": 0.198814
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.156213
+        },
+        {
+          "skill": "ux-ops-quality-auditor",
+          "score": 0.14281
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.112911
+        },
+        {
+          "skill": "web-ops-normalizer",
+          "score": 0.104113
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.096985
+        },
+        {
+          "skill": "web-ops-compliance-checker",
+          "score": 0.027634
+        },
+        {
+          "skill": "web-ops-handoff-brief-writer",
+          "score": 0.025117
+        },
+        {
+          "skill": "personal-ops-acceptance-test-builder",
+          "score": 0.022707
+        },
+        {
+          "skill": "ux-ops-compliance-checker",
+          "score": 0.022409
+        },
+        {
+          "skill": "meeting-ops-acceptance-test-builder",
+          "score": 0.019184
+        },
+        {
+          "skill": "hr-ops-acceptance-test-builder",
+          "score": 0.012636
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p3_ui_test",
+      "family": "browser_web_automation",
+      "gold_skill": "web-ui-tester",
+      "closest_alternatives": [
+        "web-form-filler",
+        "frontend-debugger",
+        "web-page-snapshotter"
+      ],
+      "instruction_text": "Test whether the checkout page correctly shows a validation message when the postcode field is empty, and report the expected versus actual behavior.",
+      "ranking": [
+        {
+          "skill": "email-ops-acceptance-test-builder",
+          "score": 0.740923
+        },
+        {
+          "skill": "vendor-ops-acceptance-test-builder",
+          "score": 0.680574
+        },
+        {
+          "skill": "travel-ops-acceptance-test-builder",
+          "score": 0.635762
+        },
+        {
+          "skill": "events-ops-acceptance-test-builder",
+          "score": 0.626044
+        },
+        {
+          "skill": "support-ops-acceptance-test-builder",
+          "score": 0.602378
+        },
+        {
+          "skill": "localization-ops-acceptance-test-builder",
+          "score": 0.600529
+        },
+        {
+          "skill": "community-ops-acceptance-test-builder",
+          "score": 0.588323
+        },
+        {
+          "skill": "invoice-payment-checker",
+          "score": 0.479517
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.324652
+        },
+        {
+          "skill": "vendor-ops-compliance-checker",
+          "score": 0.225452
+        },
+        {
+          "skill": "email-ops-compliance-checker",
+          "score": 0.183014
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.147951
+        },
+        {
+          "skill": "ux-ops-compliance-checker",
+          "score": 0.146613
+        },
+        {
+          "skill": "localization-ops-compliance-checker",
+          "score": 0.118098
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.070298
+        },
+        {
+          "skill": "travel-ops-compliance-checker",
+          "score": 0.060955
+        },
+        {
+          "skill": "product-ops-compliance-checker",
+          "score": 0.042774
+        },
+        {
+          "skill": "compliance-checklist-builder",
+          "score": 0.020374
+        },
+        {
+          "skill": "events-ops-compliance-checker",
+          "score": 0.006621
+        },
+        {
+          "skill": "operations-ops-compliance-checker",
+          "score": 0.001297
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p4_data_extraction",
+      "family": "browser_web_automation",
+      "gold_skill": "web-data-extractor",
+      "closest_alternatives": [
+        "web-page-snapshotter",
+        "web-ui-tester",
+        "frontend-debugger"
+      ],
+      "instruction_text": "From this product listing page, extract the product names, prices, availability labels, and detail-page links into a structured table. I do not need a screenshot.",
+      "ranking": [
+        {
+          "skill": "web-data-extractor",
+          "score": 0.739718
+        },
+        {
+          "skill": "product-ops-comparison-builder",
+          "score": 0.623398
+        },
+        {
+          "skill": "product-ops-scenario-planner",
+          "score": 0.406204
+        },
+        {
+          "skill": "product-ops-priority-ranker",
+          "score": 0.367093
+        },
+        {
+          "skill": "product-ops-handoff-brief-writer",
+          "score": 0.265668
+        },
+        {
+          "skill": "public-playwright-interactive",
+          "score": 0.22507
+        },
+        {
+          "skill": "competitive-battlecard-builder",
+          "score": 0.212161
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.193768
+        },
+        {
+          "skill": "product-ops-evidence-grounder",
+          "score": 0.185958
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.181068
+        },
+        {
+          "skill": "product-ops-artifact-packager",
+          "score": 0.167052
+        },
+        {
+          "skill": "vendor-ops-comparison-builder",
+          "score": 0.133475
+        },
+        {
+          "skill": "decision-matrix-builder",
+          "score": 0.131945
+        },
+        {
+          "skill": "seo-metadata-checker",
+          "score": 0.123076
+        },
+        {
+          "skill": "public-markitdown",
+          "score": 0.113226
+        },
+        {
+          "skill": "lab-ops-comparison-builder",
+          "score": 0.107564
+        },
+        {
+          "skill": "data-analysis-for-ranking-selection",
+          "score": 0.098326
+        },
+        {
+          "skill": "vendor-ops-priority-ranker",
+          "score": 0.050603
+        },
+        {
+          "skill": "proposal-drafter",
+          "score": 0.017938
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.004059
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p5_frontend_debugging",
+      "family": "browser_web_automation",
+      "gold_skill": "frontend-debugger",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "web-page-snapshotter",
+        "code-reviewer"
+      ],
+      "instruction_text": "The settings page opens but clicking Save does nothing, and the console shows `Cannot read properties of undefined (reading 'id')` after the profile API call. Use the UI symptom as evidence, then inspect the frontend event handler, state update path, and API response contract. The deliverable is the likely source-level cause plus the smallest code patch.",
+      "ranking": [
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.693187
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.653768
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.565382
+        },
+        {
+          "skill": "personal-ops-handoff-brief-writer",
+          "score": 0.470432
+        },
+        {
+          "skill": "personal-ops-rewrite-editor",
+          "score": 0.457828
+        },
+        {
+          "skill": "personal-ops-normalizer",
+          "score": 0.407037
+        },
+        {
+          "skill": "events-ops-normalizer",
+          "score": 0.391342
+        },
+        {
+          "skill": "community-ops-normalizer",
+          "score": 0.300767
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.294982
+        },
+        {
+          "skill": "personal-ops-compliance-checker",
+          "score": 0.245833
+        },
+        {
+          "skill": "community-ops-handoff-brief-writer",
+          "score": 0.210888
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.207456
+        },
+        {
+          "skill": "personal-ops-quality-auditor",
+          "score": 0.19494
+        },
+        {
+          "skill": "ux-ops-handoff-brief-writer",
+          "score": 0.190066
+        },
+        {
+          "skill": "personal-ops-resource-linker",
+          "score": 0.132715
+        },
+        {
+          "skill": "product-ops-rewrite-editor",
+          "score": 0.105467
+        },
+        {
+          "skill": "product-ops-normalizer",
+          "score": 0.076647
+        },
+        {
+          "skill": "personal-ops-monitoring-plan-builder",
+          "score": 0.069648
+        },
+        {
+          "skill": "terms-of-service-drafter",
+          "score": 0.069093
+        },
+        {
+          "skill": "personal-ops-comparison-builder",
+          "score": 0.038973
+        }
+      ]
+    },
+    {
+      "prompt_id": "web_p6_accessibility_check",
+      "family": "browser_web_automation",
+      "gold_skill": "accessibility-checker",
+      "closest_alternatives": [
+        "web-ui-tester",
+        "frontend-debugger",
+        "web-page-snapshotter"
+      ],
+      "instruction_text": "Evaluate the signup form for keyboard navigation, input labels, focus order, and whether screen-reader users can understand the error messages.",
+      "ranking": [
+        {
+          "skill": "web-form-filler",
+          "score": 0.75574
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.660983
+        },
+        {
+          "skill": "support-ticket-triager",
+          "score": 0.363381
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.273196
+        },
+        {
+          "skill": "terms-of-service-drafter",
+          "score": 0.261666
+        },
+        {
+          "skill": "medical-admin-ops-quality-auditor",
+          "score": 0.176085
+        },
+        {
+          "skill": "email-drafter",
+          "score": 0.174295
+        },
+        {
+          "skill": "knowledge-base-article-writer",
+          "score": 0.16285
+        },
+        {
+          "skill": "medical-admin-ops-normalizer",
+          "score": 0.14652
+        },
+        {
+          "skill": "seo-metadata-checker",
+          "score": 0.141778
+        },
+        {
+          "skill": "events-ops-quality-auditor",
+          "score": 0.103777
+        },
+        {
+          "skill": "events-ops-normalizer",
+          "score": 0.08819
+        },
+        {
+          "skill": "travel-ops-normalizer",
+          "score": 0.066531
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.036907
+        },
+        {
+          "skill": "ux-ops-compliance-checker",
+          "score": 0.033673
+        },
+        {
+          "skill": "recruiting-ops-handoff-brief-writer",
+          "score": 0.033363
+        },
+        {
+          "skill": "email-ops-handoff-brief-writer",
+          "score": 0.028743
+        },
+        {
+          "skill": "email-ops-compliance-checker",
+          "score": 0.02361
+        },
+        {
+          "skill": "travel-ops-field-extractor",
+          "score": 0.017566
+        },
+        {
+          "skill": "ux-ops-handoff-brief-writer",
+          "score": 0.016393
+        }
+      ]
+    },
+    {
+      "prompt_id": "code_p1_local_code_review",
+      "family": "code_github_workflow",
+      "gold_skill": "code-reviewer",
+      "closest_alternatives": [
+        "pr-reviewer",
+        "review-comment-resolver",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "Review this local change before I commit it. The patch updates the cache key from `user.id` to `user.email`, adds a fallback for missing names, and changes the unit test fixture. I want to know if this could introduce bugs or missing-test risk, not have you rewrite it yet.",
+      "ranking": [
+        {
+          "skill": "email-drafter",
+          "score": 0.889424
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.884361
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.678815
+        },
+        {
+          "skill": "professor-email-reply",
+          "score": 0.650814
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.632137
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.63007
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.548019
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.458875
+        },
+        {
+          "skill": "email-ops-normalizer",
+          "score": 0.453877
+        },
+        {
+          "skill": "email-ops-quality-auditor",
+          "score": 0.411477
+        },
+        {
+          "skill": "community-ops-normalizer",
+          "score": 0.390437
+        },
+        {
+          "skill": "email-ops-dependency-mapper",
+          "score": 0.360179
+        },
+        {
+          "skill": "email-ops-evidence-grounder",
+          "score": 0.297732
+        },
+        {
+          "skill": "product-ops-normalizer",
+          "score": 0.280765
+        },
+        {
+          "skill": "personal-ops-normalizer",
+          "score": 0.251291
+        },
+        {
+          "skill": "ux-ops-normalizer",
+          "score": 0.204078
+        },
+        {
+          "skill": "personal-ops-quality-auditor",
+          "score": 0.186279
+        },
+        {
+          "skill": "crm-ops-normalizer",
+          "score": 0.152586
+        },
+        {
+          "skill": "personal-ops-evidence-grounder",
+          "score": 0.053912
+        },
+        {
+          "skill": "repo-ops-normalizer",
+          "score": 0.037754
+        }
+      ]
+    },
+    {
+      "prompt_id": "code_p2_pr_review",
+      "family": "code_github_workflow",
+      "gold_skill": "pr-reviewer",
+      "closest_alternatives": [
+        "code-reviewer",
+        "review-comment-resolver",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "Can you review this pull request as if you were leaving PR feedback? It changes the auth middleware, adds a migration, updates two API tests, and the PR discussion says the branch is meant to preserve backward compatibility.",
+      "ranking": [
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.762152
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.634491
+        },
+        {
+          "skill": "api-ops-acceptance-test-builder",
+          "score": 0.630167
+        },
+        {
+          "skill": "openapi-contract-tester",
+          "score": 0.594852
+        },
+        {
+          "skill": "api-integration-planner",
+          "score": 0.507469
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.479856
+        },
+        {
+          "skill": "api-ops-risk-reviewer",
+          "score": 0.468281
+        },
+        {
+          "skill": "api-ops-comparison-builder",
+          "score": 0.46449
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.401153
+        },
+        {
+          "skill": "api-ops-evidence-grounder",
+          "score": 0.386638
+        },
+        {
+          "skill": "api-ops-intake-classifier",
+          "score": 0.360663
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.356635
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.330819
+        },
+        {
+          "skill": "api-ops-compliance-checker",
+          "score": 0.320796
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.291662
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.263197
+        },
+        {
+          "skill": "api-ops-timeline-builder",
+          "score": 0.255046
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.245568
+        },
+        {
+          "skill": "database-ops-quality-auditor",
+          "score": 0.064826
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.019866
+        }
+      ]
+    },
+    {
+      "prompt_id": "code_p3_review_comment_resolution",
+      "family": "code_github_workflow",
+      "gold_skill": "review-comment-resolver",
+      "closest_alternatives": [
+        "pr-reviewer",
+        "code-reviewer",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "I already got review comments on this branch. Please resolve this specific reviewer request by planning and making the requested code/test change: `The retry loop can spin forever if the response is 429 and Retry-After is missing. Please add a cap and a test.` I need the comment addressed, not a fresh PR review or CI debugging.",
+      "ranking": [
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.722583
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.601137
+        },
+        {
+          "skill": "openapi-contract-tester",
+          "score": 0.486276
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.443869
+        },
+        {
+          "skill": "api-integration-planner",
+          "score": 0.386831
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.322753
+        },
+        {
+          "skill": "api-ops-risk-reviewer",
+          "score": 0.317929
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.317774
+        },
+        {
+          "skill": "api-design-reviewer",
+          "score": 0.286976
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.265717
+        },
+        {
+          "skill": "email-ops-acceptance-test-builder",
+          "score": 0.225042
+        },
+        {
+          "skill": "email-ops-quality-auditor",
+          "score": 0.220178
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.218296
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.171317
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.148762
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.146024
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.129732
+        },
+        {
+          "skill": "api-ops-evidence-grounder",
+          "score": 0.105204
+        },
+        {
+          "skill": "web-ops-monitoring-plan-builder",
+          "score": 0.104753
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.001143
+        }
+      ]
+    },
+    {
+      "prompt_id": "code_p4_ci_failure_debugging",
+      "family": "code_github_workflow",
+      "gold_skill": "ci-failure-debugger",
+      "closest_alternatives": [
+        "code-reviewer",
+        "pr-reviewer",
+        "review-comment-resolver"
+      ],
+      "instruction_text": "The CI run failed after my last commit. The failing job is `unit-tests`, and the first useful error says `Expected status 200, received 401` in `auth.middleware.test.ts` after the token refresh change. Help me find the cause and the smallest fix.",
+      "ranking": [
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 1.0
+        },
+        {
+          "skill": "openapi-contract-tester",
+          "score": 0.6886
+        },
+        {
+          "skill": "refactor-planner",
+          "score": 0.30464
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.269045
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.267539
+        },
+        {
+          "skill": "api-integration-planner",
+          "score": 0.257138
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.256955
+        },
+        {
+          "skill": "deployment-rollback-planner",
+          "score": 0.242451
+        },
+        {
+          "skill": "api-ops-evidence-grounder",
+          "score": 0.221742
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.191789
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.176069
+        },
+        {
+          "skill": "contract-ops-quality-auditor",
+          "score": 0.152944
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.143336
+        },
+        {
+          "skill": "travel-ops-evidence-grounder",
+          "score": 0.100776
+        },
+        {
+          "skill": "environment-config-auditor",
+          "score": 0.086327
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.064217
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.047483
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.035465
+        },
+        {
+          "skill": "public-playwright-interactive",
+          "score": 0.032219
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.0115
+        }
+      ]
+    },
+    {
+      "prompt_id": "code_p5_changelog_entry",
+      "family": "code_github_workflow",
+      "gold_skill": "changelog-writer",
+      "closest_alternatives": [
+        "release-note-writer",
+        "pr-reviewer",
+        "code-reviewer"
+      ],
+      "instruction_text": "Turn these completed changes into a concise internal changelog entry for the repository changelog, grouped by change type if useful: fixed retry timeout handling, added token-refresh tests, improved cache invalidation for renamed users, and removed an unused feature flag. Do not write user-facing release notes.",
+      "ranking": [
+        {
+          "skill": "changelog-writer",
+          "score": 0.717248
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.483662
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.455487
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.434398
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.357471
+        },
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.186637
+        },
+        {
+          "skill": "file-renamer",
+          "score": 0.142154
+        },
+        {
+          "skill": "api-integration-planner",
+          "score": 0.125981
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.121048
+        },
+        {
+          "skill": "deployment-rollback-planner",
+          "score": 0.11157
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.108732
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.101742
+        },
+        {
+          "skill": "product-ops-normalizer",
+          "score": 0.089343
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.076211
+        },
+        {
+          "skill": "community-ops-normalizer",
+          "score": 0.074443
+        },
+        {
+          "skill": "refactor-planner",
+          "score": 0.073816
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.053524
+        },
+        {
+          "skill": "api-design-reviewer",
+          "score": 0.053206
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.020083
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.018848
+        }
+      ]
+    },
+    {
+      "prompt_id": "code_p6_release_notes",
+      "family": "code_github_workflow",
+      "gold_skill": "release-note-writer",
+      "closest_alternatives": [
+        "changelog-writer",
+        "pr-reviewer",
+        "code-reviewer"
+      ],
+      "instruction_text": "Write user-facing release notes for this update. We improved sign-in reliability when sessions expire, made profile changes appear faster across devices, and fixed a retry issue that could delay requests during temporary service pressure.",
+      "ranking": [
+        {
+          "skill": "release-note-writer",
+          "score": 0.608689
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.414268
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.266027
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.245975
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.2094
+        },
+        {
+          "skill": "api-ops-timeline-builder",
+          "score": 0.192457
+        },
+        {
+          "skill": "support-ops-timeline-builder",
+          "score": 0.165645
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.164524
+        },
+        {
+          "skill": "analytics-ops-timeline-builder",
+          "score": 0.143079
+        },
+        {
+          "skill": "analytics-ops-quality-auditor",
+          "score": 0.101653
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.088269
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.070124
+        },
+        {
+          "skill": "travel-ops-timeline-builder",
+          "score": 0.069711
+        },
+        {
+          "skill": "support-ops-quality-auditor",
+          "score": 0.068379
+        },
+        {
+          "skill": "medical-admin-ops-timeline-builder",
+          "score": 0.055153
+        },
+        {
+          "skill": "support-ops-rewrite-editor",
+          "score": 0.046383
+        },
+        {
+          "skill": "meeting-ops-quality-auditor",
+          "score": 0.04104
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.026725
+        },
+        {
+          "skill": "web-ops-timeline-builder",
+          "score": 0.024469
+        },
+        {
+          "skill": "community-ops-timeline-builder",
+          "score": 0.010927
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p1_overview",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-overview",
+      "closest_alternatives": [
+        "data-analysis-for-reporting",
+        "data-analysis-with-anomaly-focus",
+        "data-analysis-with-validation"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. I need an exploratory orientation: what the sheet contains, the broad patterns, the most useful caveats, and a few sensible next questions. Do not turn it into an executive report or diagnose one specific problem yet.",
+      "ranking": [
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.840458
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.793001
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.645549
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.569939
+        },
+        {
+          "skill": "dataset-ops-summary-writer",
+          "score": 0.528747
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.403134
+        },
+        {
+          "skill": "analytics-ops-summary-writer",
+          "score": 0.387532
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.334979
+        },
+        {
+          "skill": "analytics-ops-handoff-brief-writer",
+          "score": 0.281704
+        },
+        {
+          "skill": "dataset-ops-timeline-builder",
+          "score": 0.234111
+        },
+        {
+          "skill": "analytics-ops-comparison-builder",
+          "score": 0.208973
+        },
+        {
+          "skill": "variance-analysis-helper",
+          "score": 0.163395
+        },
+        {
+          "skill": "dataset-ops-comparison-builder",
+          "score": 0.154516
+        },
+        {
+          "skill": "email-ops-comparison-builder",
+          "score": 0.144742
+        },
+        {
+          "skill": "public-xlsx",
+          "score": 0.110988
+        },
+        {
+          "skill": "data-analysis-for-ranking-selection",
+          "score": 0.101159
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.099332
+        },
+        {
+          "skill": "analytics-ops-timeline-builder",
+          "score": 0.09673
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.058962
+        },
+        {
+          "skill": "analytics-ops-field-extractor",
+          "score": 0.011833
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p2_anomaly_focus",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-with-anomaly-focus",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-root-cause-diagnosis",
+        "data-analysis-with-validation"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Build an anomaly watchlist: which spikes, dips, outliers, or concentrated deviations look most worth worrying about, and how confident should I be that each one is real? Do not explain root cause yet.",
+      "ranking": [
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 1.0
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.501361
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.438087
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.43027
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.282915
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.24855
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.188466
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.176925
+        },
+        {
+          "skill": "analytics-ops-monitoring-plan-builder",
+          "score": 0.13102
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.098592
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.087265
+        },
+        {
+          "skill": "variance-analysis-helper",
+          "score": 0.079997
+        },
+        {
+          "skill": "dataset-ops-monitoring-plan-builder",
+          "score": 0.076314
+        },
+        {
+          "skill": "incident-ops-monitoring-plan-builder",
+          "score": 0.07579
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.072878
+        },
+        {
+          "skill": "web-ops-monitoring-plan-builder",
+          "score": 0.067201
+        },
+        {
+          "skill": "support-ops-monitoring-plan-builder",
+          "score": 0.064196
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.058276
+        },
+        {
+          "skill": "research-ops-monitoring-plan-builder",
+          "score": 0.057222
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.013237
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p3_validation",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-with-validation",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-with-anomaly-focus",
+        "data-analysis-for-root-cause-diagnosis"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is.",
+      "ranking": [
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.869674
+        },
+        {
+          "skill": "support-ops-quality-auditor",
+          "score": 0.655072
+        },
+        {
+          "skill": "analytics-ops-quality-auditor",
+          "score": 0.6296
+        },
+        {
+          "skill": "community-ops-quality-auditor",
+          "score": 0.592598
+        },
+        {
+          "skill": "media-ops-quality-auditor",
+          "score": 0.579273
+        },
+        {
+          "skill": "dataset-ops-quality-auditor",
+          "score": 0.565647
+        },
+        {
+          "skill": "email-ops-quality-auditor",
+          "score": 0.550562
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.50798
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.442266
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.351079
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.235416
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.201134
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.175999
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.150944
+        },
+        {
+          "skill": "support-ops-risk-reviewer",
+          "score": 0.142323
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.130464
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.08203
+        },
+        {
+          "skill": "analytics-ops-summary-writer",
+          "score": 0.080247
+        },
+        {
+          "skill": "community-ops-summary-writer",
+          "score": 0.076307
+        },
+        {
+          "skill": "community-ops-risk-reviewer",
+          "score": 0.052273
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p4_root_cause",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-root-cause-diagnosis",
+      "closest_alternatives": [
+        "data-analysis-with-anomaly-focus",
+        "data-analysis-overview",
+        "data-analysis-with-validation"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. This seems to be getting worse. Assume the data is usable enough for analysis and trace the most likely driver: which channel, metric, or segment appears to explain the degradation, and what evidence supports that diagnosis?",
+      "ranking": [
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 1.0
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.620652
+        },
+        {
+          "skill": "variance-analysis-helper",
+          "score": 0.375295
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.369057
+        },
+        {
+          "skill": "analytics-ops-summary-writer",
+          "score": 0.238078
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.215634
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.182944
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.169259
+        },
+        {
+          "skill": "support-ops-summary-writer",
+          "score": 0.169104
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.160566
+        },
+        {
+          "skill": "analytics-ops-quality-auditor",
+          "score": 0.159043
+        },
+        {
+          "skill": "email-ops-failure-diagnoser",
+          "score": 0.158953
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.138459
+        },
+        {
+          "skill": "support-ops-monitoring-plan-builder",
+          "score": 0.104023
+        },
+        {
+          "skill": "analytics-ops-monitoring-plan-builder",
+          "score": 0.093462
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.082802
+        },
+        {
+          "skill": "analytics-ops-comparison-builder",
+          "score": 0.071263
+        },
+        {
+          "skill": "analytics-ops-priority-ranker",
+          "score": 0.049837
+        },
+        {
+          "skill": "analytics-ops-rewrite-editor",
+          "score": 0.036315
+        },
+        {
+          "skill": "analytics-ops-handoff-brief-writer",
+          "score": 0.007665
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p5_reporting",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-reporting",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-root-cause-diagnosis",
+        "data-analysis-with-anomaly-focus"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Turn this into an upward-facing reporting brief: a headline, two or three executive takeaways, the clearest supporting numbers, and one caveat. Do not give me a broad exploratory analysis.",
+      "ranking": [
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 1.0
+        },
+        {
+          "skill": "support-ops-summary-writer",
+          "score": 0.319672
+        },
+        {
+          "skill": "analytics-ops-summary-writer",
+          "score": 0.318334
+        },
+        {
+          "skill": "news-briefing-writer",
+          "score": 0.299149
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.273753
+        },
+        {
+          "skill": "product-ops-summary-writer",
+          "score": 0.234899
+        },
+        {
+          "skill": "analytics-ops-handoff-brief-writer",
+          "score": 0.228414
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.223146
+        },
+        {
+          "skill": "dashboard-ops-handoff-brief-writer",
+          "score": 0.197129
+        },
+        {
+          "skill": "media-ops-summary-writer",
+          "score": 0.195929
+        },
+        {
+          "skill": "email-ops-summary-writer",
+          "score": 0.190494
+        },
+        {
+          "skill": "events-ops-summary-writer",
+          "score": 0.183003
+        },
+        {
+          "skill": "dashboard-ops-summary-writer",
+          "score": 0.182854
+        },
+        {
+          "skill": "community-ops-summary-writer",
+          "score": 0.164864
+        },
+        {
+          "skill": "dataset-ops-summary-writer",
+          "score": 0.163981
+        },
+        {
+          "skill": "operations-ops-summary-writer",
+          "score": 0.152208
+        },
+        {
+          "skill": "meeting-ops-summary-writer",
+          "score": 0.146825
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.126275
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.037758
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.031573
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p6_forecasting",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-forecasting",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-root-cause-diagnosis",
+        "data-analysis-with-anomaly-focus"
+      ],
+      "instruction_text": "Please read channel_performance_weekly.csv. Forecast the likely next direction if the current pattern keeps going: what seems likely to happen next, what evidence supports that continuation, and how much should I trust the forecast?",
+      "ranking": [
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 1.0
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.358197
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.28265
+        },
+        {
+          "skill": "news-briefing-writer",
+          "score": 0.165191
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.162548
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.156627
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.132931
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.118972
+        },
+        {
+          "skill": "analytics-ops-handoff-brief-writer",
+          "score": 0.118711
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.111526
+        },
+        {
+          "skill": "email-ops-evidence-grounder",
+          "score": 0.109692
+        },
+        {
+          "skill": "community-ops-evidence-grounder",
+          "score": 0.108094
+        },
+        {
+          "skill": "tech-news-trend-extractor",
+          "score": 0.103288
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.075673
+        },
+        {
+          "skill": "market-opportunity-assessor",
+          "score": 0.069321
+        },
+        {
+          "skill": "support-ops-timeline-builder",
+          "score": 0.067493
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.049344
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.047597
+        },
+        {
+          "skill": "decision-matrix-builder",
+          "score": 0.034631
+        },
+        {
+          "skill": "contract-ops-scenario-planner",
+          "score": 0.023271
+        }
+      ]
+    },
+    {
+      "prompt_id": "data_p7_ranking_selection",
+      "family": "data_spreadsheet",
+      "gold_skill": "data-analysis-for-ranking-selection",
+      "closest_alternatives": [
+        "data-analysis-overview",
+        "data-analysis-for-reporting",
+        "data-analysis-for-forecasting"
+      ],
+      "instruction_text": "Please read pilot_priority_options.csv. Rank the options for action now, recommend the first choice, explain the trade-offs behind that ordering, and say what follow-up check would reduce decision risk. This is a selection task, not a forecast of one metric.",
+      "ranking": [
+        {
+          "skill": "dashboard-ops-priority-ranker",
+          "score": 0.804307
+        },
+        {
+          "skill": "travel-ops-priority-ranker",
+          "score": 0.524821
+        },
+        {
+          "skill": "meeting-ops-priority-ranker",
+          "score": 0.408566
+        },
+        {
+          "skill": "analytics-ops-priority-ranker",
+          "score": 0.30873
+        },
+        {
+          "skill": "incident-ops-priority-ranker",
+          "score": 0.29957
+        },
+        {
+          "skill": "events-ops-priority-ranker",
+          "score": 0.297764
+        },
+        {
+          "skill": "support-ops-priority-ranker",
+          "score": 0.267857
+        },
+        {
+          "skill": "agent-ops-priority-ranker",
+          "score": 0.266687
+        },
+        {
+          "skill": "contract-ops-priority-ranker",
+          "score": 0.246636
+        },
+        {
+          "skill": "personal-ops-priority-ranker",
+          "score": 0.234303
+        },
+        {
+          "skill": "api-ops-priority-ranker",
+          "score": 0.218995
+        },
+        {
+          "skill": "community-ops-priority-ranker",
+          "score": 0.208105
+        },
+        {
+          "skill": "operations-ops-priority-ranker",
+          "score": 0.179478
+        },
+        {
+          "skill": "search-ops-priority-ranker",
+          "score": 0.162644
+        },
+        {
+          "skill": "database-ops-priority-ranker",
+          "score": 0.162291
+        },
+        {
+          "skill": "email-ops-priority-ranker",
+          "score": 0.152856
+        },
+        {
+          "skill": "product-ops-priority-ranker",
+          "score": 0.152202
+        },
+        {
+          "skill": "lab-ops-priority-ranker",
+          "score": 0.151069
+        },
+        {
+          "skill": "research-ops-priority-ranker",
+          "score": 0.121715
+        },
+        {
+          "skill": "priority-sorter",
+          "score": 0.100665
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p1_document_summary",
+      "family": "documents_files",
+      "gold_skill": "document-summariser",
+      "closest_alternatives": [
+        "document-normaliser",
+        "document-field-extractor",
+        "document-converter"
+      ],
+      "instruction_text": "Please read internal_travel_policy_update.txt and help me make sense of it quickly. I want the main point, the most important details, and anything I should pay attention to.",
+      "ranking": [
+        {
+          "skill": "travel-ops-summary-writer",
+          "score": 0.968627
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.464803
+        },
+        {
+          "skill": "travel-ops-compliance-checker",
+          "score": 0.418369
+        },
+        {
+          "skill": "travel-ops-normalizer",
+          "score": 0.39899
+        },
+        {
+          "skill": "travel-ops-handoff-brief-writer",
+          "score": 0.318732
+        },
+        {
+          "skill": "travel-ops-intake-classifier",
+          "score": 0.301651
+        },
+        {
+          "skill": "travel-ops-risk-reviewer",
+          "score": 0.281935
+        },
+        {
+          "skill": "travel-ops-monitoring-plan-builder",
+          "score": 0.27958
+        },
+        {
+          "skill": "travel-ops-priority-ranker",
+          "score": 0.220175
+        },
+        {
+          "skill": "travel-ops-rewrite-editor",
+          "score": 0.205975
+        },
+        {
+          "skill": "travel-ops-evidence-grounder",
+          "score": 0.173856
+        },
+        {
+          "skill": "travel-ops-comparison-builder",
+          "score": 0.117135
+        },
+        {
+          "skill": "calendar-conflict-checker",
+          "score": 0.108869
+        },
+        {
+          "skill": "travel-ops-resource-linker",
+          "score": 0.070607
+        },
+        {
+          "skill": "travel-ops-field-extractor",
+          "score": 0.070194
+        },
+        {
+          "skill": "travel-ops-dependency-mapper",
+          "score": 0.049322
+        },
+        {
+          "skill": "travel-ops-scenario-planner",
+          "score": 0.044464
+        },
+        {
+          "skill": "meeting-ops-compliance-checker",
+          "score": 0.043662
+        },
+        {
+          "skill": "travel-ops-timeline-builder",
+          "score": 0.041119
+        },
+        {
+          "skill": "travel-ops-acceptance-test-builder",
+          "score": 0.018213
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p2_document_rewriter",
+      "family": "documents_files",
+      "gold_skill": "document-rewriter",
+      "closest_alternatives": [
+        "document-normaliser",
+        "document-summariser",
+        "document-converter"
+      ],
+      "instruction_text": "Please read travel_request_note_raw.txt and produce a revised full prose version for a human reader. Keep it as continuous paragraphs in the same document form, improve wording, flow, and polish, and preserve the same meaning and commitments.",
+      "ranking": [
+        {
+          "skill": "travel-ops-rewrite-editor",
+          "score": 0.86731
+        },
+        {
+          "skill": "travel-ops-summary-writer",
+          "score": 0.4
+        },
+        {
+          "skill": "travel-ops-normalizer",
+          "score": 0.398118
+        },
+        {
+          "skill": "travel-ops-risk-reviewer",
+          "score": 0.396109
+        },
+        {
+          "skill": "travel-ops-handoff-brief-writer",
+          "score": 0.350638
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.2705
+        },
+        {
+          "skill": "travel-ops-compliance-checker",
+          "score": 0.262512
+        },
+        {
+          "skill": "travel-ops-evidence-grounder",
+          "score": 0.257126
+        },
+        {
+          "skill": "travel-ops-intake-classifier",
+          "score": 0.204924
+        },
+        {
+          "skill": "travel-ops-field-extractor",
+          "score": 0.191713
+        },
+        {
+          "skill": "travel-ops-dependency-mapper",
+          "score": 0.143581
+        },
+        {
+          "skill": "travel-ops-priority-ranker",
+          "score": 0.140717
+        },
+        {
+          "skill": "travel-ops-resource-linker",
+          "score": 0.137566
+        },
+        {
+          "skill": "travel-ops-timeline-builder",
+          "score": 0.110113
+        },
+        {
+          "skill": "travel-ops-scenario-planner",
+          "score": 0.066075
+        },
+        {
+          "skill": "travel-ops-artifact-packager",
+          "score": 0.064896
+        },
+        {
+          "skill": "travel-ops-comparison-builder",
+          "score": 0.055616
+        },
+        {
+          "skill": "travel-ops-monitoring-plan-builder",
+          "score": 0.037343
+        },
+        {
+          "skill": "travel-ops-acceptance-test-builder",
+          "score": 0.014521
+        },
+        {
+          "skill": "localization-ops-handoff-brief-writer",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p3_document_normaliser",
+      "family": "documents_files",
+      "gold_skill": "document-normaliser",
+      "closest_alternatives": [
+        "document-rewriter",
+        "document-converter",
+        "document-summariser"
+      ],
+      "instruction_text": "Please read travel_request_note_raw.txt and normalise the document structure: keep the original wording and order as much as possible, but fix inconsistent headings, spacing, list style, and layout noise. Do not substantially rewrite the prose.",
+      "ranking": [
+        {
+          "skill": "travel-ops-normalizer",
+          "score": 0.720724
+        },
+        {
+          "skill": "travel-ops-rewrite-editor",
+          "score": 0.639594
+        },
+        {
+          "skill": "events-ops-normalizer",
+          "score": 0.381645
+        },
+        {
+          "skill": "meeting-ops-normalizer",
+          "score": 0.354898
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.328671
+        },
+        {
+          "skill": "travel-ops-summary-writer",
+          "score": 0.311617
+        },
+        {
+          "skill": "travel-ops-risk-reviewer",
+          "score": 0.310875
+        },
+        {
+          "skill": "travel-ops-evidence-grounder",
+          "score": 0.27352
+        },
+        {
+          "skill": "travel-ops-timeline-builder",
+          "score": 0.263484
+        },
+        {
+          "skill": "operations-ops-normalizer",
+          "score": 0.260658
+        },
+        {
+          "skill": "medical-admin-ops-normalizer",
+          "score": 0.250576
+        },
+        {
+          "skill": "travel-ops-intake-classifier",
+          "score": 0.228475
+        },
+        {
+          "skill": "travel-ops-priority-ranker",
+          "score": 0.218783
+        },
+        {
+          "skill": "travel-ops-handoff-brief-writer",
+          "score": 0.200075
+        },
+        {
+          "skill": "travel-ops-field-extractor",
+          "score": 0.190626
+        },
+        {
+          "skill": "travel-ops-compliance-checker",
+          "score": 0.15191
+        },
+        {
+          "skill": "travel-ops-dependency-mapper",
+          "score": 0.129271
+        },
+        {
+          "skill": "travel-ops-resource-linker",
+          "score": 0.047961
+        },
+        {
+          "skill": "travel-ops-scenario-planner",
+          "score": 0.000845
+        },
+        {
+          "skill": "travel-ops-comparison-builder",
+          "score": 7.5e-05
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p4_field_extraction",
+      "family": "documents_files",
+      "gold_skill": "document-field-extractor",
+      "closest_alternatives": [
+        "document-summariser",
+        "multi-document-comparison-preparer",
+        "layout-preserving-converter"
+      ],
+      "instruction_text": "Please read invoice_northbridge_supplies.txt and extract the reusable fields into a structured table, including supplier, invoice number, dates, line items, totals, and payment details. Do not write a narrative summary.",
+      "ranking": [
+        {
+          "skill": "invoice-payment-checker",
+          "score": 0.866394
+        },
+        {
+          "skill": "receipt-extractor",
+          "score": 0.837159
+        },
+        {
+          "skill": "vendor-ops-field-extractor",
+          "score": 0.693873
+        },
+        {
+          "skill": "finance-ops-field-extractor",
+          "score": 0.597229
+        },
+        {
+          "skill": "contract-ops-field-extractor",
+          "score": 0.542844
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.53269
+        },
+        {
+          "skill": "vendor-ops-summary-writer",
+          "score": 0.387045
+        },
+        {
+          "skill": "vendor-ops-timeline-builder",
+          "score": 0.235228
+        },
+        {
+          "skill": "vendor-ops-comparison-builder",
+          "score": 0.23404
+        },
+        {
+          "skill": "vendor-ops-handoff-brief-writer",
+          "score": 0.217352
+        },
+        {
+          "skill": "vendor-ops-normalizer",
+          "score": 0.210889
+        },
+        {
+          "skill": "procurement-risk-summariser",
+          "score": 0.192716
+        },
+        {
+          "skill": "vendor-ops-evidence-grounder",
+          "score": 0.183165
+        },
+        {
+          "skill": "finance-ops-timeline-builder",
+          "score": 0.169605
+        },
+        {
+          "skill": "vendor-ops-quality-auditor",
+          "score": 0.147164
+        },
+        {
+          "skill": "finance-ops-normalizer",
+          "score": 0.141403
+        },
+        {
+          "skill": "vendor-ops-artifact-packager",
+          "score": 0.128835
+        },
+        {
+          "skill": "vendor-ops-dependency-mapper",
+          "score": 0.105095
+        },
+        {
+          "skill": "vendor-ops-resource-linker",
+          "score": 0.033396
+        },
+        {
+          "skill": "vendor-ops-compliance-checker",
+          "score": 0.013963
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p5_comparison_preparation",
+      "family": "documents_files",
+      "gold_skill": "multi-document-comparison-preparer",
+      "closest_alternatives": [
+        "document-field-extractor",
+        "document-normaliser",
+        "document-converter"
+      ],
+      "instruction_text": "Please read policy_draft_a.txt and policy_draft_b.txt, then prepare a side-by-side comparison matrix so I can quickly see matching sections, changed wording, additions, removals, and unresolved differences.",
+      "ranking": [
+        {
+          "skill": "multi-document-comparison-preparer",
+          "score": 0.602019
+        },
+        {
+          "skill": "legal-ops-comparison-builder",
+          "score": 0.511689
+        },
+        {
+          "skill": "privacy-policy-drafter",
+          "score": 0.480545
+        },
+        {
+          "skill": "legal-ops-rewrite-editor",
+          "score": 0.258587
+        },
+        {
+          "skill": "terms-of-service-drafter",
+          "score": 0.221923
+        },
+        {
+          "skill": "legal-ops-handoff-brief-writer",
+          "score": 0.150801
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.147579
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.110813
+        },
+        {
+          "skill": "policy-compliance-checker",
+          "score": 0.106011
+        },
+        {
+          "skill": "legal-ops-summary-writer",
+          "score": 0.094757
+        },
+        {
+          "skill": "legal-ops-evidence-grounder",
+          "score": 0.08578
+        },
+        {
+          "skill": "legal-ops-normalizer",
+          "score": 0.078054
+        },
+        {
+          "skill": "legal-ops-quality-auditor",
+          "score": 0.077605
+        },
+        {
+          "skill": "community-ops-compliance-checker",
+          "score": 0.070909
+        },
+        {
+          "skill": "meeting-ops-compliance-checker",
+          "score": 0.069724
+        },
+        {
+          "skill": "thesis-ops-compliance-checker",
+          "score": 0.067599
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.067318
+        },
+        {
+          "skill": "legal-ops-compliance-checker",
+          "score": 0.027481
+        },
+        {
+          "skill": "travel-ops-compliance-checker",
+          "score": 0.022279
+        },
+        {
+          "skill": "support-ops-compliance-checker",
+          "score": 0.013318
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p6_conversion",
+      "family": "documents_files",
+      "gold_skill": "document-converter",
+      "closest_alternatives": [
+        "document-normaliser",
+        "layout-preserving-converter",
+        "document-summariser"
+      ],
+      "instruction_text": "Please read request_form.txt and convert the whole form into clean markdown notes I can drop into my repo. Preserve the content and labels, but simplify the source formatting rather than keeping the exact visual layout.",
+      "ranking": [
+        {
+          "skill": "document-converter",
+          "score": 1.0
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.438837
+        },
+        {
+          "skill": "research-ops-risk-reviewer",
+          "score": 0.406557
+        },
+        {
+          "skill": "research-ops-intake-classifier",
+          "score": 0.392641
+        },
+        {
+          "skill": "research-ops-compliance-checker",
+          "score": 0.351883
+        },
+        {
+          "skill": "research-ops-dependency-mapper",
+          "score": 0.312268
+        },
+        {
+          "skill": "research-ops-field-extractor",
+          "score": 0.287572
+        },
+        {
+          "skill": "research-ops-resource-linker",
+          "score": 0.283203
+        },
+        {
+          "skill": "lab-ops-risk-reviewer",
+          "score": 0.264597
+        },
+        {
+          "skill": "research-ops-priority-ranker",
+          "score": 0.262321
+        },
+        {
+          "skill": "research-ops-normalizer",
+          "score": 0.261946
+        },
+        {
+          "skill": "method-note-builder",
+          "score": 0.259221
+        },
+        {
+          "skill": "medical-admin-ops-risk-reviewer",
+          "score": 0.215281
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.215171
+        },
+        {
+          "skill": "research-ops-scenario-planner",
+          "score": 0.191304
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.183938
+        },
+        {
+          "skill": "medical-admin-ops-normalizer",
+          "score": 0.170381
+        },
+        {
+          "skill": "research-ops-quality-auditor",
+          "score": 0.116592
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.083909
+        },
+        {
+          "skill": "public-writing-plans",
+          "score": 0.027891
+        }
+      ]
+    },
+    {
+      "prompt_id": "doc_p7_layout_preserving_conversion",
+      "family": "documents_files",
+      "gold_skill": "layout-preserving-converter",
+      "closest_alternatives": [
+        "document-converter",
+        "document-field-extractor",
+        "document-normaliser"
+      ],
+      "instruction_text": "Please read request_form.txt and turn it into markdown while preserving the layout cues: headings, labels, rows, and grouped fields should remain recognizable. The priority is layout fidelity, not just simplified notes.",
+      "ranking": [
+        {
+          "skill": "medical-admin-ops-field-extractor",
+          "score": 0.804153
+        },
+        {
+          "skill": "operations-ops-field-extractor",
+          "score": 0.675567
+        },
+        {
+          "skill": "ux-ops-field-extractor",
+          "score": 0.650517
+        },
+        {
+          "skill": "travel-ops-field-extractor",
+          "score": 0.648841
+        },
+        {
+          "skill": "personal-ops-field-extractor",
+          "score": 0.632046
+        },
+        {
+          "skill": "events-ops-field-extractor",
+          "score": 0.625629
+        },
+        {
+          "skill": "crm-ops-field-extractor",
+          "score": 0.6
+        },
+        {
+          "skill": "support-ops-field-extractor",
+          "score": 0.592677
+        },
+        {
+          "skill": "research-ops-field-extractor",
+          "score": 0.582146
+        },
+        {
+          "skill": "incident-ops-field-extractor",
+          "score": 0.55786
+        },
+        {
+          "skill": "lab-ops-field-extractor",
+          "score": 0.549691
+        },
+        {
+          "skill": "product-ops-field-extractor",
+          "score": 0.514427
+        },
+        {
+          "skill": "medical-admin-ops-normalizer",
+          "score": 0.485035
+        },
+        {
+          "skill": "medical-admin-ops-quality-auditor",
+          "score": 0.31637
+        },
+        {
+          "skill": "crm-data-enricher",
+          "score": 0.279247
+        },
+        {
+          "skill": "medical-admin-ops-summary-writer",
+          "score": 0.262414
+        },
+        {
+          "skill": "medical-admin-ops-risk-reviewer",
+          "score": 0.223222
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.210424
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.057945
+        },
+        {
+          "skill": "research-ops-compliance-checker",
+          "score": 0.042869
+        }
+      ]
+    },
+    {
+      "prompt_id": "obs_p1_metrics_overview",
+      "family": "metrics_observability",
+      "gold_skill": "metrics-overview",
+      "closest_alternatives": [
+        "incident-summary-writer",
+        "metrics-root-cause-diagnoser",
+        "latency-anomaly-detector"
+      ],
+      "instruction_text": "Give me a triage overview of this service snapshot",
+      "ranking": [
+        {
+          "skill": "metrics-overview",
+          "score": 1.0
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.539723
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.334208
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.293518
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.288051
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.207612
+        },
+        {
+          "skill": "support-ticket-triager",
+          "score": 0.18983
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.131353
+        },
+        {
+          "skill": "medical-admin-ops-risk-reviewer",
+          "score": 0.061771
+        },
+        {
+          "skill": "cloud-ops-priority-ranker",
+          "score": 0.057661
+        },
+        {
+          "skill": "support-ops-priority-ranker",
+          "score": 0.035552
+        },
+        {
+          "skill": "incident-ops-comparison-builder",
+          "score": 0.034982
+        },
+        {
+          "skill": "incident-ops-intake-classifier",
+          "score": 0.026654
+        },
+        {
+          "skill": "incident-ops-priority-ranker",
+          "score": 0.025976
+        },
+        {
+          "skill": "medical-admin-ops-dependency-mapper",
+          "score": 0.025393
+        },
+        {
+          "skill": "medical-admin-ops-intake-classifier",
+          "score": 0.018621
+        },
+        {
+          "skill": "cloud-ops-comparison-builder",
+          "score": 0.015531
+        },
+        {
+          "skill": "medical-admin-ops-monitoring-plan-builder",
+          "score": 0.01021
+        },
+        {
+          "skill": "support-ops-dependency-mapper",
+          "score": 0.005064
+        },
+        {
+          "skill": "dashboard-ops-intake-classifier",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "obs_p2_latency_anomaly",
+      "family": "metrics_observability",
+      "gold_skill": "latency-anomaly-detector",
+      "closest_alternatives": [
+        "metrics-root-cause-diagnoser",
+        "metrics-overview",
+        "slo-breach-checker"
+      ],
+      "instruction_text": "Run an anomaly-focused readout on this service snapshot. Identify unusual performance behavior, especially tail-latency spikes, outliers, and whether the deviation is broad or concentrated in a smaller slice of requests. Do not give only a general metrics overview",
+      "ranking": [
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 1.0
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.880795
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.651933
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.64352
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.489945
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.407793
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.406798
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.36448
+        },
+        {
+          "skill": "analytics-ops-risk-reviewer",
+          "score": 0.261637
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.235237
+        },
+        {
+          "skill": "analytics-ops-summary-writer",
+          "score": 0.160654
+        },
+        {
+          "skill": "analytics-ops-normalizer",
+          "score": 0.156001
+        },
+        {
+          "skill": "analytics-ops-quality-auditor",
+          "score": 0.147659
+        },
+        {
+          "skill": "dashboard-ops-normalizer",
+          "score": 0.112384
+        },
+        {
+          "skill": "dashboard-ops-summary-writer",
+          "score": 0.107675
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.097931
+        },
+        {
+          "skill": "dataset-ops-risk-reviewer",
+          "score": 0.091716
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.024743
+        },
+        {
+          "skill": "analytics-ops-monitoring-plan-builder",
+          "score": 0.0049
+        },
+        {
+          "skill": "analytics-ops-priority-ranker",
+          "score": 0.004585
+        }
+      ]
+    },
+    {
+      "prompt_id": "obs_p3_slo_breach",
+      "family": "metrics_observability",
+      "gold_skill": "slo-breach-checker",
+      "closest_alternatives": [
+        "capacity-risk-forecaster",
+        "metrics-overview",
+        "metrics-root-cause-diagnoser"
+      ],
+      "instruction_text": "Check this service snapshot against an SLO/SLA risk frame",
+      "ranking": [
+        {
+          "skill": "slo-breach-checker",
+          "score": 1.0
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.453273
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.333047
+        },
+        {
+          "skill": "dashboard-ops-risk-reviewer",
+          "score": 0.326765
+        },
+        {
+          "skill": "analytics-ops-risk-reviewer",
+          "score": 0.317067
+        },
+        {
+          "skill": "dataset-ops-risk-reviewer",
+          "score": 0.273368
+        },
+        {
+          "skill": "incident-ops-risk-reviewer",
+          "score": 0.263092
+        },
+        {
+          "skill": "web-ops-risk-reviewer",
+          "score": 0.242783
+        },
+        {
+          "skill": "contract-ops-risk-reviewer",
+          "score": 0.237477
+        },
+        {
+          "skill": "cloud-ops-risk-reviewer",
+          "score": 0.235316
+        },
+        {
+          "skill": "database-ops-risk-reviewer",
+          "score": 0.233773
+        },
+        {
+          "skill": "operations-ops-risk-reviewer",
+          "score": 0.232872
+        },
+        {
+          "skill": "agent-ops-risk-reviewer",
+          "score": 0.229939
+        },
+        {
+          "skill": "repo-ops-risk-reviewer",
+          "score": 0.228431
+        },
+        {
+          "skill": "lab-ops-risk-reviewer",
+          "score": 0.224959
+        },
+        {
+          "skill": "dashboard-ops-compliance-checker",
+          "score": 0.170297
+        },
+        {
+          "skill": "analytics-ops-compliance-checker",
+          "score": 0.142673
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.112312
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.098992
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.049963
+        }
+      ]
+    },
+    {
+      "prompt_id": "obs_p4_capacity_risk",
+      "family": "metrics_observability",
+      "gold_skill": "capacity-risk-forecaster",
+      "closest_alternatives": [
+        "slo-breach-checker",
+        "metrics-root-cause-diagnoser",
+        "metrics-overview"
+      ],
+      "instruction_text": "Forecast capacity risk from this service snapshot if the pattern keeps going. Focus on future pressure, saturation risk, queue growth, headroom, and likely bottlenecks that could turn into a bigger operational problem. Do not decide current SLO breach or root cause",
+      "ranking": [
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 1.0
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.489309
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.283508
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.280851
+        },
+        {
+          "skill": "analytics-ops-risk-reviewer",
+          "score": 0.222024
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.194971
+        },
+        {
+          "skill": "dashboard-ops-risk-reviewer",
+          "score": 0.192845
+        },
+        {
+          "skill": "dataset-ops-risk-reviewer",
+          "score": 0.190617
+        },
+        {
+          "skill": "support-ops-risk-reviewer",
+          "score": 0.187555
+        },
+        {
+          "skill": "cloud-ops-risk-reviewer",
+          "score": 0.186399
+        },
+        {
+          "skill": "agent-ops-risk-reviewer",
+          "score": 0.172909
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.144654
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.131695
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.070389
+        },
+        {
+          "skill": "cloud-ops-priority-ranker",
+          "score": 0.034176
+        },
+        {
+          "skill": "support-ops-priority-ranker",
+          "score": 0.015486
+        },
+        {
+          "skill": "cloud-ops-monitoring-plan-builder",
+          "score": 0.00761
+        },
+        {
+          "skill": "analytics-ops-priority-ranker",
+          "score": 0.005092
+        },
+        {
+          "skill": "dashboard-ops-priority-ranker",
+          "score": 0.002826
+        },
+        {
+          "skill": "analytics-ops-quality-auditor",
+          "score": 0.00243
+        }
+      ]
+    },
+    {
+      "prompt_id": "obs_p5_root_cause",
+      "family": "metrics_observability",
+      "gold_skill": "metrics-root-cause-diagnoser",
+      "closest_alternatives": [
+        "latency-anomaly-detector",
+        "capacity-risk-forecaster",
+        "incident-summary-writer"
+      ],
+      "instruction_text": "Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. Snapshot data",
+      "ranking": [
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 1.0
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.629106
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.426993
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.355441
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.329025
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.311577
+        },
+        {
+          "skill": "debugging-root-cause-helper",
+          "score": 0.251114
+        },
+        {
+          "skill": "analytics-ops-failure-diagnoser",
+          "score": 0.209017
+        },
+        {
+          "skill": "database-ops-failure-diagnoser",
+          "score": 0.199053
+        },
+        {
+          "skill": "k8s-ops-failure-diagnoser",
+          "score": 0.194887
+        },
+        {
+          "skill": "dashboard-ops-failure-diagnoser",
+          "score": 0.185879
+        },
+        {
+          "skill": "cloud-ops-failure-diagnoser",
+          "score": 0.184368
+        },
+        {
+          "skill": "operations-ops-failure-diagnoser",
+          "score": 0.180701
+        },
+        {
+          "skill": "lab-ops-failure-diagnoser",
+          "score": 0.168033
+        },
+        {
+          "skill": "support-ops-failure-diagnoser",
+          "score": 0.166973
+        },
+        {
+          "skill": "dataset-ops-failure-diagnoser",
+          "score": 0.163112
+        },
+        {
+          "skill": "web-ops-failure-diagnoser",
+          "score": 0.161797
+        },
+        {
+          "skill": "incident-ops-failure-diagnoser",
+          "score": 0.152124
+        },
+        {
+          "skill": "course-ops-failure-diagnoser",
+          "score": 0.149694
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.015566
+        }
+      ]
+    },
+    {
+      "prompt_id": "obs_p6_incident_summary",
+      "family": "metrics_observability",
+      "gold_skill": "incident-summary-writer",
+      "closest_alternatives": [
+        "metrics-overview",
+        "metrics-root-cause-diagnoser",
+        "slo-breach-checker"
+      ],
+      "instruction_text": "Turn this service snapshot into an incident update I could quickly share with the team",
+      "ranking": [
+        {
+          "skill": "incident-summary-writer",
+          "score": 1.0
+        },
+        {
+          "skill": "incident-ops-normalizer",
+          "score": 0.501279
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.411819
+        },
+        {
+          "skill": "incident-ops-handoff-brief-writer",
+          "score": 0.408902
+        },
+        {
+          "skill": "incident-ops-summary-writer",
+          "score": 0.387232
+        },
+        {
+          "skill": "incident-ops-field-extractor",
+          "score": 0.337238
+        },
+        {
+          "skill": "incident-ops-monitoring-plan-builder",
+          "score": 0.321342
+        },
+        {
+          "skill": "incident-ops-timeline-builder",
+          "score": 0.313735
+        },
+        {
+          "skill": "incident-ops-risk-reviewer",
+          "score": 0.309493
+        },
+        {
+          "skill": "incident-ops-quality-auditor",
+          "score": 0.299598
+        },
+        {
+          "skill": "incident-ops-intake-classifier",
+          "score": 0.28962
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.276984
+        },
+        {
+          "skill": "incident-ops-comparison-builder",
+          "score": 0.265723
+        },
+        {
+          "skill": "incident-ops-dependency-mapper",
+          "score": 0.262882
+        },
+        {
+          "skill": "incident-ops-evidence-grounder",
+          "score": 0.253066
+        },
+        {
+          "skill": "incident-ops-priority-ranker",
+          "score": 0.221007
+        },
+        {
+          "skill": "incident-ops-scenario-planner",
+          "score": 0.218183
+        },
+        {
+          "skill": "incident-ops-resource-linker",
+          "score": 0.202665
+        },
+        {
+          "skill": "incident-ops-artifact-packager",
+          "score": 0.187537
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.004037
+        }
+      ]
+    },
+    {
+      "prompt_id": "news_p1_plain_summary",
+      "family": "news_monitoring",
+      "gold_skill": "news-summariser",
+      "closest_alternatives": [
+        "news-briefing-writer",
+        "source-grounding-extractor"
+      ],
+      "instruction_text": "Summarise this news article in a straightforward neutral recap",
+      "ranking": [
+        {
+          "skill": "news-summariser",
+          "score": 1.0
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.508644
+        },
+        {
+          "skill": "news-briefing-writer",
+          "score": 0.362809
+        },
+        {
+          "skill": "tech-news-trend-extractor",
+          "score": 0.285943
+        },
+        {
+          "skill": "news-theme-extractor",
+          "score": 0.264005
+        },
+        {
+          "skill": "source-grounding-extractor",
+          "score": 0.260827
+        },
+        {
+          "skill": "paper-summariser",
+          "score": 0.239891
+        },
+        {
+          "skill": "vendor-ops-summary-writer",
+          "score": 0.162054
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.157667
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.157156
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.154335
+        },
+        {
+          "skill": "media-ops-summary-writer",
+          "score": 0.144738
+        },
+        {
+          "skill": "travel-ops-summary-writer",
+          "score": 0.137667
+        },
+        {
+          "skill": "contract-ops-summary-writer",
+          "score": 0.137327
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.132595
+        },
+        {
+          "skill": "legal-ops-summary-writer",
+          "score": 0.132595
+        },
+        {
+          "skill": "recruiting-ops-summary-writer",
+          "score": 0.122809
+        },
+        {
+          "skill": "events-ops-summary-writer",
+          "score": 0.121496
+        },
+        {
+          "skill": "operations-ops-summary-writer",
+          "score": 0.116455
+        },
+        {
+          "skill": "community-ops-summary-writer",
+          "score": 0.1157
+        }
+      ]
+    },
+    {
+      "prompt_id": "news_p2_briefing",
+      "family": "news_monitoring",
+      "gold_skill": "news-briefing-writer",
+      "closest_alternatives": [
+        "news-summariser",
+        "tech-news-trend-extractor"
+      ],
+      "instruction_text": "Turn this article into a short decision memo with clear sections for the key event, current state of play, significance now, affected parties, and follow-up signals. The output should support quick situation awareness, not just summarize the article chronologically",
+      "ranking": [
+        {
+          "skill": "news-briefing-writer",
+          "score": 1.0
+        },
+        {
+          "skill": "events-ops-summary-writer",
+          "score": 0.627558
+        },
+        {
+          "skill": "events-ops-monitoring-plan-builder",
+          "score": 0.590552
+        },
+        {
+          "skill": "events-ops-handoff-brief-writer",
+          "score": 0.461842
+        },
+        {
+          "skill": "events-ops-scenario-planner",
+          "score": 0.352881
+        },
+        {
+          "skill": "events-ops-risk-reviewer",
+          "score": 0.310141
+        },
+        {
+          "skill": "meeting-ops-monitoring-plan-builder",
+          "score": 0.281082
+        },
+        {
+          "skill": "events-ops-evidence-grounder",
+          "score": 0.266274
+        },
+        {
+          "skill": "incident-summary-writer",
+          "score": 0.233652
+        },
+        {
+          "skill": "medical-admin-ops-monitoring-plan-builder",
+          "score": 0.218249
+        },
+        {
+          "skill": "contract-ops-monitoring-plan-builder",
+          "score": 0.216422
+        },
+        {
+          "skill": "incident-ops-handoff-brief-writer",
+          "score": 0.215294
+        },
+        {
+          "skill": "community-ops-monitoring-plan-builder",
+          "score": 0.210524
+        },
+        {
+          "skill": "news-summariser",
+          "score": 0.20231
+        },
+        {
+          "skill": "medical-admin-ops-handoff-brief-writer",
+          "score": 0.157086
+        },
+        {
+          "skill": "events-ops-normalizer",
+          "score": 0.156192
+        },
+        {
+          "skill": "events-ops-priority-ranker",
+          "score": 0.105636
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.084672
+        },
+        {
+          "skill": "events-ops-quality-auditor",
+          "score": 0.02957
+        },
+        {
+          "skill": "events-ops-dependency-mapper",
+          "score": 0.011253
+        }
+      ]
+    },
+    {
+      "prompt_id": "news_p3_grounded_claims",
+      "family": "news_monitoring",
+      "gold_skill": "source-grounding-extractor",
+      "closest_alternatives": [
+        "news-summariser",
+        "news-briefing-writer"
+      ],
+      "instruction_text": "From this article, identify the source-backed claims and facts, including important product details, named companies or people, and any figures or stated plans",
+      "ranking": [
+        {
+          "skill": "source-grounding-extractor",
+          "score": 1.0
+        },
+        {
+          "skill": "product-ops-evidence-grounder",
+          "score": 0.632006
+        },
+        {
+          "skill": "vendor-ops-evidence-grounder",
+          "score": 0.365661
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.356887
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.34149
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.310759
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.222591
+        },
+        {
+          "skill": "meeting-ops-evidence-grounder",
+          "score": 0.21308
+        },
+        {
+          "skill": "support-ops-evidence-grounder",
+          "score": 0.209732
+        },
+        {
+          "skill": "knowledge-ops-evidence-grounder",
+          "score": 0.200742
+        },
+        {
+          "skill": "incident-ops-evidence-grounder",
+          "score": 0.191589
+        },
+        {
+          "skill": "tech-news-trend-extractor",
+          "score": 0.187703
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.177262
+        },
+        {
+          "skill": "personal-ops-evidence-grounder",
+          "score": 0.171792
+        },
+        {
+          "skill": "thesis-ops-evidence-grounder",
+          "score": 0.160867
+        },
+        {
+          "skill": "events-ops-evidence-grounder",
+          "score": 0.156598
+        },
+        {
+          "skill": "travel-ops-evidence-grounder",
+          "score": 0.146864
+        },
+        {
+          "skill": "crm-ops-evidence-grounder",
+          "score": 0.145963
+        },
+        {
+          "skill": "contract-ops-evidence-grounder",
+          "score": 0.142996
+        },
+        {
+          "skill": "legal-ops-evidence-grounder",
+          "score": 0.126351
+        }
+      ]
+    },
+    {
+      "prompt_id": "news_p4_theme_extraction",
+      "family": "news_monitoring",
+      "gold_skill": "news-theme-extractor",
+      "closest_alternatives": [
+        "tech-news-trend-extractor",
+        "news-briefing-writer"
+      ],
+      "instruction_text": "Extract the recurring themes across these three tech news snippets, grouping repeated ideas without forecasting market direction. Snippet 1",
+      "ranking": [
+        {
+          "skill": "news-theme-extractor",
+          "score": 0.866605
+        },
+        {
+          "skill": "tech-news-trend-extractor",
+          "score": 0.596942
+        },
+        {
+          "skill": "news-summariser",
+          "score": 0.391754
+        },
+        {
+          "skill": "news-briefing-writer",
+          "score": 0.339857
+        },
+        {
+          "skill": "source-grounding-extractor",
+          "score": 0.24955
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.126531
+        },
+        {
+          "skill": "related-work-synthesiser",
+          "score": 0.107262
+        },
+        {
+          "skill": "security-ops-evidence-grounder",
+          "score": 0.094962
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.08948
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.087071
+        },
+        {
+          "skill": "community-ops-evidence-grounder",
+          "score": 0.08496
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.084454
+        },
+        {
+          "skill": "email-ops-evidence-grounder",
+          "score": 0.081907
+        },
+        {
+          "skill": "community-ops-summary-writer",
+          "score": 0.045468
+        },
+        {
+          "skill": "security-ops-summary-writer",
+          "score": 0.043491
+        },
+        {
+          "skill": "paper-summariser",
+          "score": 0.020318
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.017767
+        },
+        {
+          "skill": "public-playwright-interactive",
+          "score": 0.016578
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.011707
+        },
+        {
+          "skill": "public-security-threat-model",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "news_p5_trend_signal",
+      "family": "news_monitoring",
+      "gold_skill": "tech-news-trend-extractor",
+      "closest_alternatives": [
+        "news-theme-extractor",
+        "news-briefing-writer"
+      ],
+      "instruction_text": "Identify which patterns across these three tech news snippets look like actionable tech trend signals right now, why they matter strategically, and what evidence would confirm or weaken the trend. Snippet 1",
+      "ranking": [
+        {
+          "skill": "tech-news-trend-extractor",
+          "score": 1.0
+        },
+        {
+          "skill": "news-theme-extractor",
+          "score": 0.594971
+        },
+        {
+          "skill": "news-briefing-writer",
+          "score": 0.551138
+        },
+        {
+          "skill": "news-summariser",
+          "score": 0.28719
+        },
+        {
+          "skill": "web-ops-evidence-grounder",
+          "score": 0.219842
+        },
+        {
+          "skill": "security-ops-evidence-grounder",
+          "score": 0.191632
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.187918
+        },
+        {
+          "skill": "source-grounding-extractor",
+          "score": 0.182545
+        },
+        {
+          "skill": "dashboard-ops-evidence-grounder",
+          "score": 0.174959
+        },
+        {
+          "skill": "vendor-ops-evidence-grounder",
+          "score": 0.174417
+        },
+        {
+          "skill": "email-ops-evidence-grounder",
+          "score": 0.174271
+        },
+        {
+          "skill": "incident-ops-evidence-grounder",
+          "score": 0.166788
+        },
+        {
+          "skill": "cloud-ops-evidence-grounder",
+          "score": 0.158273
+        },
+        {
+          "skill": "media-ops-evidence-grounder",
+          "score": 0.152015
+        },
+        {
+          "skill": "community-ops-evidence-grounder",
+          "score": 0.148369
+        },
+        {
+          "skill": "support-ops-evidence-grounder",
+          "score": 0.147029
+        },
+        {
+          "skill": "product-ops-evidence-grounder",
+          "score": 0.145928
+        },
+        {
+          "skill": "agent-ops-evidence-grounder",
+          "score": 0.144525
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.118858
+        },
+        {
+          "skill": "public-playwright-interactive",
+          "score": 0.002283
+        }
+      ]
+    },
+    {
+      "prompt_id": "plan_p1_meeting_agenda",
+      "family": "planning_meetings",
+      "gold_skill": "meeting-agenda-builder",
+      "closest_alternatives": [
+        "weekly-planner",
+        "task-extractor"
+      ],
+      "instruction_text": "I have a short group project meeting tomorrow for a class presentation on AI study assistants. We still need to decide who will cover the demo, who will finish the slides, what risks could delay us before Friday, and what we need to prepare before the next check-in. I also need to stay on top of this week's project work, so put this into something structured that we can use during the meeting.",
+      "ranking": [
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.975268
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.794113
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.607582
+        },
+        {
+          "skill": "meeting-ops-risk-reviewer",
+          "score": 0.604161
+        },
+        {
+          "skill": "weekly-planner",
+          "score": 0.573934
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.535856
+        },
+        {
+          "skill": "meeting-ops-scenario-planner",
+          "score": 0.492637
+        },
+        {
+          "skill": "meeting-ops-intake-classifier",
+          "score": 0.478091
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.454142
+        },
+        {
+          "skill": "meeting-ops-timeline-builder",
+          "score": 0.390335
+        },
+        {
+          "skill": "meeting-ops-dependency-mapper",
+          "score": 0.382817
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.351047
+        },
+        {
+          "skill": "meeting-ops-artifact-packager",
+          "score": 0.334226
+        },
+        {
+          "skill": "meeting-ops-resource-linker",
+          "score": 0.319866
+        },
+        {
+          "skill": "meeting-ops-priority-ranker",
+          "score": 0.315226
+        },
+        {
+          "skill": "meeting-ops-summary-writer",
+          "score": 0.300111
+        },
+        {
+          "skill": "meeting-ops-quality-auditor",
+          "score": 0.273197
+        },
+        {
+          "skill": "deadline-reminder-planner",
+          "score": 0.167795
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.120249
+        },
+        {
+          "skill": "course-ops-timeline-builder",
+          "score": 0.09497
+        }
+      ]
+    },
+    {
+      "prompt_id": "plan_p2_meeting_summary",
+      "family": "planning_meetings",
+      "gold_skill": "meeting-summary-writer",
+      "closest_alternatives": [
+        "meeting-followup-extractor",
+        "task-extractor"
+      ],
+      "instruction_text": "Summarise these meeting notes into a clean meeting recap",
+      "ranking": [
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.984715
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.859817
+        },
+        {
+          "skill": "meeting-ops-summary-writer",
+          "score": 0.705703
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.590187
+        },
+        {
+          "skill": "meeting-ops-evidence-grounder",
+          "score": 0.492547
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.477989
+        },
+        {
+          "skill": "meeting-ops-normalizer",
+          "score": 0.463258
+        },
+        {
+          "skill": "meeting-ops-field-extractor",
+          "score": 0.435151
+        },
+        {
+          "skill": "meeting-ops-risk-reviewer",
+          "score": 0.422529
+        },
+        {
+          "skill": "meeting-ops-quality-auditor",
+          "score": 0.390197
+        },
+        {
+          "skill": "meeting-ops-timeline-builder",
+          "score": 0.377635
+        },
+        {
+          "skill": "meeting-ops-priority-ranker",
+          "score": 0.351891
+        },
+        {
+          "skill": "meeting-ops-resource-linker",
+          "score": 0.309851
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.302119
+        },
+        {
+          "skill": "meeting-ops-dependency-mapper",
+          "score": 0.277815
+        },
+        {
+          "skill": "meeting-ops-comparison-builder",
+          "score": 0.269554
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.242852
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.182525
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.152426
+        },
+        {
+          "skill": "weekly-planner",
+          "score": 0.101022
+        }
+      ]
+    },
+    {
+      "prompt_id": "plan_p3_meeting_followup",
+      "family": "planning_meetings",
+      "gold_skill": "meeting-followup-extractor",
+      "closest_alternatives": [
+        "meeting-summary-writer",
+        "task-extractor"
+      ],
+      "instruction_text": "I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention",
+      "ranking": [
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.973551
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.912944
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.805504
+        },
+        {
+          "skill": "meeting-ops-summary-writer",
+          "score": 0.392223
+        },
+        {
+          "skill": "meeting-ops-normalizer",
+          "score": 0.388839
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.381116
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.378448
+        },
+        {
+          "skill": "meeting-ops-field-extractor",
+          "score": 0.37461
+        },
+        {
+          "skill": "meeting-ops-evidence-grounder",
+          "score": 0.370209
+        },
+        {
+          "skill": "meeting-ops-timeline-builder",
+          "score": 0.352628
+        },
+        {
+          "skill": "meeting-ops-priority-ranker",
+          "score": 0.333995
+        },
+        {
+          "skill": "meeting-ops-quality-auditor",
+          "score": 0.333756
+        },
+        {
+          "skill": "meeting-ops-risk-reviewer",
+          "score": 0.330532
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.289664
+        },
+        {
+          "skill": "meeting-ops-resource-linker",
+          "score": 0.263976
+        },
+        {
+          "skill": "meeting-ops-dependency-mapper",
+          "score": 0.237873
+        },
+        {
+          "skill": "meeting-ops-intake-classifier",
+          "score": 0.2275
+        },
+        {
+          "skill": "weekly-planner",
+          "score": 0.196776
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.024386
+        },
+        {
+          "skill": "deadline-reminder-planner",
+          "score": 0.004854
+        }
+      ]
+    },
+    {
+      "prompt_id": "plan_p4_task_extractor",
+      "family": "planning_meetings",
+      "gold_skill": "task-extractor",
+      "closest_alternatives": [
+        "weekly-planner",
+        "meeting-followup-extractor"
+      ],
+      "instruction_text": "Turn these notes into a plain action-item list without scheduling the week",
+      "ranking": [
+        {
+          "skill": "weekly-planner",
+          "score": 0.896132
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.867822
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.449836
+        },
+        {
+          "skill": "deadline-reminder-planner",
+          "score": 0.328159
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.305367
+        },
+        {
+          "skill": "personal-ops-normalizer",
+          "score": 0.288548
+        },
+        {
+          "skill": "meeting-ops-timeline-builder",
+          "score": 0.274365
+        },
+        {
+          "skill": "personal-ops-timeline-builder",
+          "score": 0.270641
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.260945
+        },
+        {
+          "skill": "personal-ops-summary-writer",
+          "score": 0.227758
+        },
+        {
+          "skill": "events-ops-timeline-builder",
+          "score": 0.227566
+        },
+        {
+          "skill": "calendar-conflict-checker",
+          "score": 0.218714
+        },
+        {
+          "skill": "thesis-ops-timeline-builder",
+          "score": 0.144898
+        },
+        {
+          "skill": "email-action-extractor",
+          "score": 0.135059
+        },
+        {
+          "skill": "operations-ops-timeline-builder",
+          "score": 0.120883
+        },
+        {
+          "skill": "contract-ops-timeline-builder",
+          "score": 0.117134
+        },
+        {
+          "skill": "course-ops-timeline-builder",
+          "score": 0.103916
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.065221
+        },
+        {
+          "skill": "community-ops-timeline-builder",
+          "score": 0.03363
+        },
+        {
+          "skill": "product-ops-timeline-builder",
+          "score": 0.002372
+        }
+      ]
+    },
+    {
+      "prompt_id": "plan_p5_weekly_planner",
+      "family": "planning_meetings",
+      "gold_skill": "weekly-planner",
+      "closest_alternatives": [
+        "task-extractor",
+        "meeting-agenda-builder"
+      ],
+      "instruction_text": "Help me make a realistic plan for this week. I need to finish the planning skill family, revise prompts for the reply cluster, prepare for a Tuesday project meeting about collaborating on a prototype and brainstorming test cases for a multi-agent system, review two papers, send my supervisor a grounded summary by Thursday, and leave time for benchmark testing. I also have classes on Tuesday and Thursday afternoon. Turn this into something manageable.",
+      "ranking": [
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.733098
+        },
+        {
+          "skill": "weekly-planner",
+          "score": 0.701768
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.611799
+        },
+        {
+          "skill": "refactor-planner",
+          "score": 0.535179
+        },
+        {
+          "skill": "meeting-ops-timeline-builder",
+          "score": 0.380024
+        },
+        {
+          "skill": "agent-handoff-orchestrator",
+          "score": 0.373189
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.367039
+        },
+        {
+          "skill": "agent-ops-timeline-builder",
+          "score": 0.332616
+        },
+        {
+          "skill": "research-ops-timeline-builder",
+          "score": 0.325466
+        },
+        {
+          "skill": "agent-ops-scenario-planner",
+          "score": 0.280423
+        },
+        {
+          "skill": "deadline-reminder-planner",
+          "score": 0.280023
+        },
+        {
+          "skill": "thesis-ops-timeline-builder",
+          "score": 0.276561
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.212877
+        },
+        {
+          "skill": "agent-ops-handoff-brief-writer",
+          "score": 0.145284
+        },
+        {
+          "skill": "lab-ops-timeline-builder",
+          "score": 0.139882
+        },
+        {
+          "skill": "ux-ops-timeline-builder",
+          "score": 0.128988
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.118533
+        },
+        {
+          "skill": "course-ops-timeline-builder",
+          "score": 0.054846
+        },
+        {
+          "skill": "thesis-ops-handoff-brief-writer",
+          "score": 0.044448
+        },
+        {
+          "skill": "product-ops-timeline-builder",
+          "score": 0.03721
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p1_paper_summary",
+      "family": "reading_research",
+      "gold_skill": "paper-summariser",
+      "closest_alternatives": [
+        "general-source-summariser",
+        "method-note-builder",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Summarise this as an academic paper. I want the research problem, proposed method, evaluation setup, main findings, and limitations, not citation-ready notes or only method details",
+      "ranking": [
+        {
+          "skill": "method-note-builder",
+          "score": 1.0
+        },
+        {
+          "skill": "paper-summariser",
+          "score": 0.782437
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.414761
+        },
+        {
+          "skill": "thesis-ops-summary-writer",
+          "score": 0.343409
+        },
+        {
+          "skill": "ux-ops-summary-writer",
+          "score": 0.336559
+        },
+        {
+          "skill": "multi-source-comparison-builder",
+          "score": 0.312314
+        },
+        {
+          "skill": "ml-ops-summary-writer",
+          "score": 0.246135
+        },
+        {
+          "skill": "lab-ops-summary-writer",
+          "score": 0.214405
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.205743
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.18831
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.173577
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.152816
+        },
+        {
+          "skill": "ux-ops-evidence-grounder",
+          "score": 0.142025
+        },
+        {
+          "skill": "related-work-synthesiser",
+          "score": 0.140722
+        },
+        {
+          "skill": "research-ops-failure-diagnoser",
+          "score": 0.127209
+        },
+        {
+          "skill": "thesis-ops-comparison-builder",
+          "score": 0.123837
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.097749
+        },
+        {
+          "skill": "thesis-ops-failure-diagnoser",
+          "score": 0.087386
+        },
+        {
+          "skill": "ux-ops-failure-diagnoser",
+          "score": 0.07207
+        },
+        {
+          "skill": "lab-ops-comparison-builder",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p2_general_source_summary",
+      "family": "reading_research",
+      "gold_skill": "general-source-summariser",
+      "closest_alternatives": [
+        "paper-summariser",
+        "document-extractor",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Summarise this as a general source report rather than an academic paper. I need the context, main observations, practical recommendations, and evidence limits in plain language",
+      "ranking": [
+        {
+          "skill": "general-source-summariser",
+          "score": 1.0
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.875333
+        },
+        {
+          "skill": "operations-ops-summary-writer",
+          "score": 0.519018
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.480382
+        },
+        {
+          "skill": "research-ops-risk-reviewer",
+          "score": 0.463993
+        },
+        {
+          "skill": "localization-ops-summary-writer",
+          "score": 0.448091
+        },
+        {
+          "skill": "database-ops-summary-writer",
+          "score": 0.445169
+        },
+        {
+          "skill": "ux-ops-summary-writer",
+          "score": 0.421698
+        },
+        {
+          "skill": "thesis-ops-summary-writer",
+          "score": 0.409363
+        },
+        {
+          "skill": "research-ops-priority-ranker",
+          "score": 0.352978
+        },
+        {
+          "skill": "research-ops-scenario-planner",
+          "score": 0.326852
+        },
+        {
+          "skill": "research-ops-failure-diagnoser",
+          "score": 0.308141
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.306551
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.256516
+        },
+        {
+          "skill": "research-ops-compliance-checker",
+          "score": 0.247505
+        },
+        {
+          "skill": "research-ops-intake-classifier",
+          "score": 0.241197
+        },
+        {
+          "skill": "research-ops-quality-auditor",
+          "score": 0.190176
+        },
+        {
+          "skill": "multi-source-comparison-builder",
+          "score": 0.101681
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.096057
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.071495
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p3_citation_notes",
+      "family": "reading_research",
+      "gold_skill": "citation-note-extractor",
+      "closest_alternatives": [
+        "document-extractor",
+        "paper-summariser",
+        "citation-grounding-helper"
+      ],
+      "instruction_text": "Make this source usable for me later when I'm writing by producing citation-ready notes",
+      "ranking": [
+        {
+          "skill": "citation-note-extractor",
+          "score": 1.0
+        },
+        {
+          "skill": "note-linker",
+          "score": 0.402274
+        },
+        {
+          "skill": "speaker-notes-writer",
+          "score": 0.339087
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.231652
+        },
+        {
+          "skill": "method-note-builder",
+          "score": 0.218038
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.214297
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.207865
+        },
+        {
+          "skill": "research-ops-field-extractor",
+          "score": 0.206755
+        },
+        {
+          "skill": "research-ops-normalizer",
+          "score": 0.20222
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.189628
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.127325
+        },
+        {
+          "skill": "research-ops-resource-linker",
+          "score": 0.113034
+        },
+        {
+          "skill": "research-ops-quality-auditor",
+          "score": 0.10146
+        },
+        {
+          "skill": "research-ops-timeline-builder",
+          "score": 0.084045
+        },
+        {
+          "skill": "source-grounding-extractor",
+          "score": 0.073981
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.065264
+        },
+        {
+          "skill": "related-work-synthesiser",
+          "score": 0.062271
+        },
+        {
+          "skill": "public-markitdown",
+          "score": 0.049278
+        },
+        {
+          "skill": "multi-source-comparison-builder",
+          "score": 0.02528
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.007166
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p4_document_extraction",
+      "family": "reading_research",
+      "gold_skill": "document-extractor",
+      "closest_alternatives": [
+        "citation-note-extractor",
+        "method-note-builder",
+        "paper-summariser"
+      ],
+      "instruction_text": "Extract the specific details from this source into a structured table of fields and values",
+      "ranking": [
+        {
+          "skill": "lab-ops-field-extractor",
+          "score": 0.742864
+        },
+        {
+          "skill": "research-ops-field-extractor",
+          "score": 0.666375
+        },
+        {
+          "skill": "ml-ops-field-extractor",
+          "score": 0.66352
+        },
+        {
+          "skill": "analytics-ops-field-extractor",
+          "score": 0.546849
+        },
+        {
+          "skill": "dashboard-ops-field-extractor",
+          "score": 0.546392
+        },
+        {
+          "skill": "incident-ops-field-extractor",
+          "score": 0.500313
+        },
+        {
+          "skill": "course-ops-field-extractor",
+          "score": 0.421487
+        },
+        {
+          "skill": "dataset-ops-field-extractor",
+          "score": 0.275669
+        },
+        {
+          "skill": "k8s-ops-field-extractor",
+          "score": 0.259845
+        },
+        {
+          "skill": "events-ops-field-extractor",
+          "score": 0.223141
+        },
+        {
+          "skill": "contract-ops-field-extractor",
+          "score": 0.168011
+        },
+        {
+          "skill": "web-ops-field-extractor",
+          "score": 0.162355
+        },
+        {
+          "skill": "media-ops-field-extractor",
+          "score": 0.157449
+        },
+        {
+          "skill": "thesis-ops-field-extractor",
+          "score": 0.154212
+        },
+        {
+          "skill": "support-ops-field-extractor",
+          "score": 0.141059
+        },
+        {
+          "skill": "api-ops-field-extractor",
+          "score": 0.124346
+        },
+        {
+          "skill": "security-ops-field-extractor",
+          "score": 0.098631
+        },
+        {
+          "skill": "product-ops-field-extractor",
+          "score": 0.097391
+        },
+        {
+          "skill": "search-ops-field-extractor",
+          "score": 0.086178
+        },
+        {
+          "skill": "vendor-ops-field-extractor",
+          "score": 0.033126
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p5_method_notes",
+      "family": "reading_research",
+      "gold_skill": "method-note-builder",
+      "closest_alternatives": [
+        "paper-summariser",
+        "document-extractor",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Help me make sense of this source by focusing on how the work was actually carried out, how it was evaluated, and what assumptions or constraints shaped the result",
+      "ranking": [
+        {
+          "skill": "method-note-builder",
+          "score": 1.0
+        },
+        {
+          "skill": "research-ops-scenario-planner",
+          "score": 0.408365
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.369761
+        },
+        {
+          "skill": "research-ops-rewrite-editor",
+          "score": 0.31206
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.218619
+        },
+        {
+          "skill": "multi-source-comparison-builder",
+          "score": 0.163868
+        },
+        {
+          "skill": "research-ops-acceptance-test-builder",
+          "score": 0.160207
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.140784
+        },
+        {
+          "skill": "research-ops-priority-ranker",
+          "score": 0.136174
+        },
+        {
+          "skill": "research-ops-resource-linker",
+          "score": 0.121739
+        },
+        {
+          "skill": "lab-ops-evidence-grounder",
+          "score": 0.094898
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.085713
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.069923
+        },
+        {
+          "skill": "research-ops-compliance-checker",
+          "score": 0.056
+        },
+        {
+          "skill": "research-ops-failure-diagnoser",
+          "score": 0.054655
+        },
+        {
+          "skill": "thesis-ops-comparison-builder",
+          "score": 0.052866
+        },
+        {
+          "skill": "thesis-ops-evidence-grounder",
+          "score": 0.048895
+        },
+        {
+          "skill": "thesis-ops-summary-writer",
+          "score": 0.04047
+        },
+        {
+          "skill": "lab-ops-comparison-builder",
+          "score": 0.031897
+        },
+        {
+          "skill": "research-ops-risk-reviewer",
+          "score": 0.006911
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p6_grounding_check",
+      "family": "reading_research",
+      "gold_skill": "citation-grounding-helper",
+      "closest_alternatives": [
+        "citation-note-extractor",
+        "paper-summariser",
+        "document-extractor"
+      ],
+      "instruction_text": "I wrote this exact sentence from the source: 'Explicit task decomposition reliably improves agent performance in realistic environments.' Perform a citation-grounding support audit: mark which parts of the sentence are supported, overstated, or unsupported, explain the overreach, and give a safer revised sentence if needed.",
+      "ranking": [
+        {
+          "skill": "citation-grounding-helper",
+          "score": 1.0
+        },
+        {
+          "skill": "agent-ops-evidence-grounder",
+          "score": 0.449354
+        },
+        {
+          "skill": "support-ops-evidence-grounder",
+          "score": 0.321334
+        },
+        {
+          "skill": "agent-eval-coverage-auditor",
+          "score": 0.295738
+        },
+        {
+          "skill": "thesis-ops-evidence-grounder",
+          "score": 0.197851
+        },
+        {
+          "skill": "agent-ops-rewrite-editor",
+          "score": 0.197392
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.192215
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.179012
+        },
+        {
+          "skill": "writing-ops-evidence-grounder",
+          "score": 0.166516
+        },
+        {
+          "skill": "support-ops-rewrite-editor",
+          "score": 0.163569
+        },
+        {
+          "skill": "lab-ops-evidence-grounder",
+          "score": 0.146812
+        },
+        {
+          "skill": "course-ops-evidence-grounder",
+          "score": 0.127984
+        },
+        {
+          "skill": "docs-ops-evidence-grounder",
+          "score": 0.126472
+        },
+        {
+          "skill": "source-grounding-extractor",
+          "score": 0.118118
+        },
+        {
+          "skill": "ml-ops-evidence-grounder",
+          "score": 0.111978
+        },
+        {
+          "skill": "meeting-ops-evidence-grounder",
+          "score": 0.109896
+        },
+        {
+          "skill": "agent-ops-summary-writer",
+          "score": 0.106808
+        },
+        {
+          "skill": "research-ops-rewrite-editor",
+          "score": 0.055939
+        },
+        {
+          "skill": "thesis-ops-rewrite-editor",
+          "score": 0.02683
+        },
+        {
+          "skill": "incident-ops-rewrite-editor",
+          "score": 0.006128
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p7_multi_source_comparison",
+      "family": "reading_research",
+      "gold_skill": "multi-source-comparison-builder",
+      "closest_alternatives": [
+        "related-work-synthesiser",
+        "method-note-builder",
+        "citation-note-extractor"
+      ],
+      "instruction_text": "Compare these two sources in a side-by-side table so I can clearly see how they line up, where they differ, and what each one contributes. Use rows such as approach, evaluation, strengths, limitations, and contribution; do not turn it into a synthesized related-work paragraph.",
+      "ranking": [
+        {
+          "skill": "multi-source-comparison-builder",
+          "score": 0.981758
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.935419
+        },
+        {
+          "skill": "thesis-ops-comparison-builder",
+          "score": 0.84238
+        },
+        {
+          "skill": "database-ops-comparison-builder",
+          "score": 0.724024
+        },
+        {
+          "skill": "lab-ops-comparison-builder",
+          "score": 0.614713
+        },
+        {
+          "skill": "related-work-synthesiser",
+          "score": 0.587759
+        },
+        {
+          "skill": "method-note-builder",
+          "score": 0.586194
+        },
+        {
+          "skill": "ml-ops-comparison-builder",
+          "score": 0.58256
+        },
+        {
+          "skill": "contract-ops-comparison-builder",
+          "score": 0.579127
+        },
+        {
+          "skill": "api-ops-comparison-builder",
+          "score": 0.577211
+        },
+        {
+          "skill": "search-ops-comparison-builder",
+          "score": 0.573525
+        },
+        {
+          "skill": "knowledge-ops-comparison-builder",
+          "score": 0.57102
+        },
+        {
+          "skill": "security-ops-comparison-builder",
+          "score": 0.562037
+        },
+        {
+          "skill": "course-ops-comparison-builder",
+          "score": 0.540244
+        },
+        {
+          "skill": "vendor-ops-comparison-builder",
+          "score": 0.539881
+        },
+        {
+          "skill": "meeting-ops-comparison-builder",
+          "score": 0.537483
+        },
+        {
+          "skill": "ux-ops-comparison-builder",
+          "score": 0.53597
+        },
+        {
+          "skill": "operations-ops-comparison-builder",
+          "score": 0.524603
+        },
+        {
+          "skill": "paper-summariser",
+          "score": 0.40124
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.289973
+        }
+      ]
+    },
+    {
+      "prompt_id": "read_p8_related_work_synthesis",
+      "family": "reading_research",
+      "gold_skill": "related-work-synthesiser",
+      "closest_alternatives": [
+        "multi-source-comparison-builder",
+        "citation-note-extractor",
+        "paper-summariser"
+      ],
+      "instruction_text": "Synthesize these two sources into related-work style notes: explain the main approaches, how they relate, the shared research direction, and what remains unresolved across them. I want an integrated synthesis, not a side-by-side comparison table.",
+      "ranking": [
+        {
+          "skill": "related-work-synthesiser",
+          "score": 0.932442
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.676902
+        },
+        {
+          "skill": "thesis-ops-comparison-builder",
+          "score": 0.667964
+        },
+        {
+          "skill": "multi-source-comparison-builder",
+          "score": 0.524139
+        },
+        {
+          "skill": "ml-ops-comparison-builder",
+          "score": 0.444697
+        },
+        {
+          "skill": "api-ops-comparison-builder",
+          "score": 0.42576
+        },
+        {
+          "skill": "method-note-builder",
+          "score": 0.371556
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.259731
+        },
+        {
+          "skill": "note-linker",
+          "score": 0.258104
+        },
+        {
+          "skill": "citation-grounding-helper",
+          "score": 0.240974
+        },
+        {
+          "skill": "research-ops-resource-linker",
+          "score": 0.239923
+        },
+        {
+          "skill": "research-ops-evidence-grounder",
+          "score": 0.238746
+        },
+        {
+          "skill": "paper-summariser",
+          "score": 0.234812
+        },
+        {
+          "skill": "research-ops-normalizer",
+          "score": 0.202962
+        },
+        {
+          "skill": "thesis-ops-evidence-grounder",
+          "score": 0.190537
+        },
+        {
+          "skill": "thesis-ops-resource-linker",
+          "score": 0.178365
+        },
+        {
+          "skill": "research-ops-dependency-mapper",
+          "score": 0.173149
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.137521
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.076353
+        },
+        {
+          "skill": "api-ops-evidence-grounder",
+          "score": 0.015795
+        }
+      ]
+    },
+    {
+      "prompt_id": "reply_p1_professor_reply",
+      "family": "reply_messaging",
+      "gold_skill": "professor-email-reply",
+      "closest_alternatives": [
+        "reply-drafter",
+        "reply-polisher"
+      ],
+      "instruction_text": "Draft a respectful academic email reply to this message from my professor, including availability and a polite tone suitable for a supervisor relationship: 'Hi Jacky, thanks for your update. Would you be available to meet next Tuesday afternoon to discuss the revised thesis scope? Please let me know what time suits you best.'",
+      "ranking": [
+        {
+          "skill": "professor-email-reply",
+          "score": 1.0
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.424032
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.380522
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.358496
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.321542
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.268818
+        },
+        {
+          "skill": "email-drafter",
+          "score": 0.192751
+        },
+        {
+          "skill": "thesis-ops-rewrite-editor",
+          "score": 0.135723
+        },
+        {
+          "skill": "thesis-ops-handoff-brief-writer",
+          "score": 0.127367
+        },
+        {
+          "skill": "thesis-ops-quality-auditor",
+          "score": 0.102853
+        },
+        {
+          "skill": "thesis-ops-timeline-builder",
+          "score": 0.081513
+        },
+        {
+          "skill": "thesis-ops-evidence-grounder",
+          "score": 0.070018
+        },
+        {
+          "skill": "thesis-ops-normalizer",
+          "score": 0.06549
+        },
+        {
+          "skill": "thesis-ops-intake-classifier",
+          "score": 0.059483
+        },
+        {
+          "skill": "thesis-ops-summary-writer",
+          "score": 0.055603
+        },
+        {
+          "skill": "thesis-ops-risk-reviewer",
+          "score": 0.053394
+        },
+        {
+          "skill": "thesis-ops-monitoring-plan-builder",
+          "score": 0.046679
+        },
+        {
+          "skill": "thesis-ops-compliance-checker",
+          "score": 0.040631
+        },
+        {
+          "skill": "thesis-ops-scenario-planner",
+          "score": 0.03111
+        },
+        {
+          "skill": "thesis-ops-resource-linker",
+          "score": 0.020462
+        }
+      ]
+    },
+    {
+      "prompt_id": "reply_p2_polish_supervisor",
+      "family": "reply_messaging",
+      "gold_skill": "reply-polisher",
+      "closest_alternatives": [
+        "professor-email-reply",
+        "reply-drafter"
+      ],
+      "instruction_text": "Edit this already-written message only. Keep the same meaning, availability, and commitments, but improve flow, phrasing, tone, and readability. Return the refined version of this message.",
+      "ranking": [
+        {
+          "skill": "reply-polisher",
+          "score": 1.0
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.483795
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.462628
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.36599
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.354913
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.321573
+        },
+        {
+          "skill": "git-commit-writer",
+          "score": 0.221167
+        },
+        {
+          "skill": "meeting-ops-rewrite-editor",
+          "score": 0.204815
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.196615
+        },
+        {
+          "skill": "medical-admin-ops-rewrite-editor",
+          "score": 0.13316
+        },
+        {
+          "skill": "email-drafter",
+          "score": 0.126946
+        },
+        {
+          "skill": "contract-ops-rewrite-editor",
+          "score": 0.118077
+        },
+        {
+          "skill": "email-ops-rewrite-editor",
+          "score": 0.109593
+        },
+        {
+          "skill": "community-ops-rewrite-editor",
+          "score": 0.10381
+        },
+        {
+          "skill": "incident-ops-rewrite-editor",
+          "score": 0.101386
+        },
+        {
+          "skill": "support-ops-rewrite-editor",
+          "score": 0.099914
+        },
+        {
+          "skill": "email-ops-handoff-brief-writer",
+          "score": 0.064977
+        },
+        {
+          "skill": "recruiting-ops-rewrite-editor",
+          "score": 0.052375
+        },
+        {
+          "skill": "community-ops-handoff-brief-writer",
+          "score": 0.051503
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.033463
+        }
+      ]
+    },
+    {
+      "prompt_id": "reply_p3_groupwork_coordination",
+      "family": "reply_messaging",
+      "gold_skill": "groupwork-reply",
+      "closest_alternatives": [
+        "reply-drafter",
+        "followup-reply-writer"
+      ],
+      "instruction_text": "Draft a reply to this group message: 'Hey everyone, we need to lock in who is doing the slides, who is writing the report section, and whether we can still meet the Friday deadline. Can each of you confirm what you can finish by tomorrow?'",
+      "ranking": [
+        {
+          "skill": "groupwork-reply",
+          "score": 0.969281
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.737714
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.685333
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.435922
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.404131
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.394975
+        },
+        {
+          "skill": "meeting-summary-writer",
+          "score": 0.330474
+        },
+        {
+          "skill": "meeting-scheduler",
+          "score": 0.308373
+        },
+        {
+          "skill": "meeting-ops-artifact-packager",
+          "score": 0.270657
+        },
+        {
+          "skill": "speaker-notes-writer",
+          "score": 0.218364
+        },
+        {
+          "skill": "slide-outline-builder",
+          "score": 0.207293
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.173694
+        },
+        {
+          "skill": "meeting-ops-summary-writer",
+          "score": 0.14443
+        },
+        {
+          "skill": "deadline-reminder-planner",
+          "score": 0.127908
+        },
+        {
+          "skill": "meeting-ops-evidence-grounder",
+          "score": 0.115173
+        },
+        {
+          "skill": "meeting-ops-risk-reviewer",
+          "score": 0.107976
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.092479
+        },
+        {
+          "skill": "community-ops-timeline-builder",
+          "score": 0.088123
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.024255
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.004374
+        }
+      ]
+    },
+    {
+      "prompt_id": "reply_p4_followup_commitment",
+      "family": "reply_messaging",
+      "gold_skill": "followup-reply-writer",
+      "closest_alternatives": [
+        "reply-drafter",
+        "groupwork-reply"
+      ],
+      "instruction_text": "Write a follow-up reply that explicitly commits to what I will do next, which parts I will revise, and when I will send the update: 'Thanks for sending this through. Could you confirm which parts you will revise, and when you expect to have the updated draft ready?'",
+      "ranking": [
+        {
+          "skill": "followup-reply-writer",
+          "score": 1.0
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.600108
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.54425
+        },
+        {
+          "skill": "professor-email-reply",
+          "score": 0.456266
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.419497
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.400745
+        },
+        {
+          "skill": "proposal-drafter",
+          "score": 0.265399
+        },
+        {
+          "skill": "email-drafter",
+          "score": 0.242966
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.165379
+        },
+        {
+          "skill": "localization-ops-handoff-brief-writer",
+          "score": 0.163617
+        },
+        {
+          "skill": "vendor-ops-handoff-brief-writer",
+          "score": 0.15434
+        },
+        {
+          "skill": "thesis-ops-handoff-brief-writer",
+          "score": 0.150367
+        },
+        {
+          "skill": "incident-ops-rewrite-editor",
+          "score": 0.114069
+        },
+        {
+          "skill": "vendor-ops-rewrite-editor",
+          "score": 0.104071
+        },
+        {
+          "skill": "thesis-ops-rewrite-editor",
+          "score": 0.08734
+        },
+        {
+          "skill": "medical-admin-ops-rewrite-editor",
+          "score": 0.080568
+        },
+        {
+          "skill": "docs-ops-rewrite-editor",
+          "score": 0.07693
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.06611
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.045173
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.031816
+        }
+      ]
+    },
+    {
+      "prompt_id": "reply_p5_generic_fresh_draft",
+      "family": "reply_messaging",
+      "gold_skill": "reply-drafter",
+      "closest_alternatives": [
+        "reply-polisher",
+        "followup-reply-writer"
+      ],
+      "instruction_text": "Draft a concise new reply from scratch to this message, confirming that I will send the revised version tomorrow. There is no existing draft to polish, and I do not need a detailed follow-up plan: 'Thanks for the update. Could you send me the revised version by tomorrow if possible?'",
+      "ranking": [
+        {
+          "skill": "reply-polisher",
+          "score": 0.999581
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.824205
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.763284
+        },
+        {
+          "skill": "professor-email-reply",
+          "score": 0.64084
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.563182
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.510544
+        },
+        {
+          "skill": "email-drafter",
+          "score": 0.380268
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.292003
+        },
+        {
+          "skill": "proposal-drafter",
+          "score": 0.278152
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.171415
+        },
+        {
+          "skill": "email-ops-rewrite-editor",
+          "score": 0.128018
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.122597
+        },
+        {
+          "skill": "incident-ops-rewrite-editor",
+          "score": 0.112779
+        },
+        {
+          "skill": "email-action-extractor",
+          "score": 0.095257
+        },
+        {
+          "skill": "email-ops-handoff-brief-writer",
+          "score": 0.064955
+        },
+        {
+          "skill": "vendor-ops-handoff-brief-writer",
+          "score": 0.030921
+        },
+        {
+          "skill": "incident-ops-handoff-brief-writer",
+          "score": 0.015533
+        },
+        {
+          "skill": "thesis-ops-handoff-brief-writer",
+          "score": 0.011635
+        },
+        {
+          "skill": "localization-ops-handoff-brief-writer",
+          "score": 0.007969
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "sec_p1_threat_model",
+      "family": "security_appsec",
+      "gold_skill": "security-threat-modeler",
+      "closest_alternatives": [
+        "security-code-reviewer",
+        "auth-flow-reviewer",
+        "privacy-risk-reviewer"
+      ],
+      "instruction_text": "We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk.",
+      "ranking": [
+        {
+          "skill": "security-threat-modeler",
+          "score": 0.991725
+        },
+        {
+          "skill": "public-security-threat-model",
+          "score": 0.511807
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.444409
+        },
+        {
+          "skill": "email-ops-risk-reviewer",
+          "score": 0.396332
+        },
+        {
+          "skill": "public-brainstorming",
+          "score": 0.388692
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.33881
+        },
+        {
+          "skill": "travel-ops-risk-reviewer",
+          "score": 0.281596
+        },
+        {
+          "skill": "security-ops-risk-reviewer",
+          "score": 0.253401
+        },
+        {
+          "skill": "email-ops-resource-linker",
+          "score": 0.209053
+        },
+        {
+          "skill": "security-ops-resource-linker",
+          "score": 0.186991
+        },
+        {
+          "skill": "research-ops-risk-reviewer",
+          "score": 0.185924
+        },
+        {
+          "skill": "security-ops-evidence-grounder",
+          "score": 0.182071
+        },
+        {
+          "skill": "api-ops-risk-reviewer",
+          "score": 0.182031
+        },
+        {
+          "skill": "thesis-ops-risk-reviewer",
+          "score": 0.174508
+        },
+        {
+          "skill": "email-ops-dependency-mapper",
+          "score": 0.168533
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.13734
+        },
+        {
+          "skill": "public-markitdown",
+          "score": 0.105465
+        },
+        {
+          "skill": "duplicate-file-finder",
+          "score": 0.086849
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.062595
+        },
+        {
+          "skill": "incident-ops-resource-linker",
+          "score": 0.060169
+        }
+      ]
+    },
+    {
+      "prompt_id": "sec_p2_security_code_review",
+      "family": "security_appsec",
+      "gold_skill": "security-code-reviewer",
+      "closest_alternatives": [
+        "code-reviewer",
+        "auth-flow-reviewer",
+        "security-threat-modeler"
+      ],
+      "instruction_text": "Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function.",
+      "ranking": [
+        {
+          "skill": "api-ops-risk-reviewer",
+          "score": 0.672748
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.667527
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.643291
+        },
+        {
+          "skill": "api-ops-compliance-checker",
+          "score": 0.634771
+        },
+        {
+          "skill": "security-ops-handoff-brief-writer",
+          "score": 0.559621
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.554671
+        },
+        {
+          "skill": "personal-ops-compliance-checker",
+          "score": 0.52427
+        },
+        {
+          "skill": "ux-ops-compliance-checker",
+          "score": 0.517683
+        },
+        {
+          "skill": "api-ops-evidence-grounder",
+          "score": 0.502212
+        },
+        {
+          "skill": "support-ops-compliance-checker",
+          "score": 0.46229
+        },
+        {
+          "skill": "api-integration-planner",
+          "score": 0.384121
+        },
+        {
+          "skill": "api-ops-quality-auditor",
+          "score": 0.381978
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.381386
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.371456
+        },
+        {
+          "skill": "ux-ops-risk-reviewer",
+          "score": 0.36741
+        },
+        {
+          "skill": "incident-ops-handoff-brief-writer",
+          "score": 0.362275
+        },
+        {
+          "skill": "travel-ops-risk-reviewer",
+          "score": 0.311414
+        },
+        {
+          "skill": "events-ops-risk-reviewer",
+          "score": 0.279562
+        },
+        {
+          "skill": "personal-ops-risk-reviewer",
+          "score": 0.250906
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.002622
+        }
+      ]
+    },
+    {
+      "prompt_id": "sec_p3_dependency_risk",
+      "family": "security_appsec",
+      "gold_skill": "dependency-risk-auditor",
+      "closest_alternatives": [
+        "security-code-reviewer",
+        "secret-leak-scanner",
+        "ci-failure-debugger"
+      ],
+      "instruction_text": "Check the risk of adding this new npm package. It has a broad dependency tree, a postinstall script, and the lockfile pulls in several old transitive packages. I need a dependency and supply-chain risk assessment.",
+      "ranking": [
+        {
+          "skill": "dependency-risk-auditor",
+          "score": 1.0
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.306418
+        },
+        {
+          "skill": "media-ops-risk-reviewer",
+          "score": 0.288937
+        },
+        {
+          "skill": "capacity-risk-forecaster",
+          "score": 0.236026
+        },
+        {
+          "skill": "contract-ops-dependency-mapper",
+          "score": 0.23492
+        },
+        {
+          "skill": "database-ops-risk-reviewer",
+          "score": 0.219167
+        },
+        {
+          "skill": "repo-ops-risk-reviewer",
+          "score": 0.195175
+        },
+        {
+          "skill": "research-ops-risk-reviewer",
+          "score": 0.194783
+        },
+        {
+          "skill": "contract-ops-risk-reviewer",
+          "score": 0.183832
+        },
+        {
+          "skill": "meeting-ops-risk-reviewer",
+          "score": 0.175859
+        },
+        {
+          "skill": "web-ops-risk-reviewer",
+          "score": 0.173186
+        },
+        {
+          "skill": "ux-ops-risk-reviewer",
+          "score": 0.166949
+        },
+        {
+          "skill": "community-ops-risk-reviewer",
+          "score": 0.165983
+        },
+        {
+          "skill": "agent-ops-risk-reviewer",
+          "score": 0.15988
+        },
+        {
+          "skill": "contract-risk-reviewer",
+          "score": 0.159111
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.110679
+        },
+        {
+          "skill": "public-skill-installer",
+          "score": 0.103149
+        },
+        {
+          "skill": "media-ops-normalizer",
+          "score": 0.05953
+        },
+        {
+          "skill": "public-netlify-deploy",
+          "score": 0.022085
+        },
+        {
+          "skill": "repo-ops-normalizer",
+          "score": 0.021086
+        }
+      ]
+    },
+    {
+      "prompt_id": "sec_p4_secret_leak",
+      "family": "security_appsec",
+      "gold_skill": "secret-leak-scanner",
+      "closest_alternatives": [
+        "dependency-risk-auditor",
+        "security-code-reviewer",
+        "privacy-risk-reviewer"
+      ],
+      "instruction_text": "Look at this diff and tell me if I accidentally exposed anything sensitive: it adds `.env.example`, updates a deployment log, and includes strings that look like `sk_live_...`, a database URL, and a webhook signing secret.",
+      "ranking": [
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.739511
+        },
+        {
+          "skill": "webhook-setup-planner",
+          "score": 0.64456
+        },
+        {
+          "skill": "environment-config-auditor",
+          "score": 0.371132
+        },
+        {
+          "skill": "database-ops-monitoring-plan-builder",
+          "score": 0.26449
+        },
+        {
+          "skill": "database-ops-handoff-brief-writer",
+          "score": 0.163778
+        },
+        {
+          "skill": "deployment-rollback-planner",
+          "score": 0.161692
+        },
+        {
+          "skill": "public-netlify-deploy",
+          "score": 0.141654
+        },
+        {
+          "skill": "database-ops-timeline-builder",
+          "score": 0.136487
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.116106
+        },
+        {
+          "skill": "web-ops-monitoring-plan-builder",
+          "score": 0.107561
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.07727
+        },
+        {
+          "skill": "support-ops-monitoring-plan-builder",
+          "score": 0.069044
+        },
+        {
+          "skill": "events-ops-monitoring-plan-builder",
+          "score": 0.063862
+        },
+        {
+          "skill": "contract-ops-monitoring-plan-builder",
+          "score": 0.061126
+        },
+        {
+          "skill": "crm-ops-monitoring-plan-builder",
+          "score": 0.055737
+        },
+        {
+          "skill": "repo-ops-monitoring-plan-builder",
+          "score": 0.026129
+        },
+        {
+          "skill": "travel-ops-monitoring-plan-builder",
+          "score": 0.021213
+        },
+        {
+          "skill": "email-ops-monitoring-plan-builder",
+          "score": 0.020641
+        },
+        {
+          "skill": "meeting-ops-monitoring-plan-builder",
+          "score": 0.00155
+        },
+        {
+          "skill": "research-ops-monitoring-plan-builder",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "prompt_id": "sec_p5_auth_flow",
+      "family": "security_appsec",
+      "gold_skill": "auth-flow-reviewer",
+      "closest_alternatives": [
+        "security-code-reviewer",
+        "security-threat-modeler",
+        "privacy-risk-reviewer"
+      ],
+      "instruction_text": "Check whether this account-access change is safe. Users can refresh expired sessions, reset passwords by email link, and switch between workspace roles. I care about bypasses, stale permissions, and privilege escalation.",
+      "ranking": [
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 1.0
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.214018
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.202396
+        },
+        {
+          "skill": "email-ops-compliance-checker",
+          "score": 0.187746
+        },
+        {
+          "skill": "policy-compliance-checker",
+          "score": 0.183087
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.172559
+        },
+        {
+          "skill": "database-ops-compliance-checker",
+          "score": 0.142874
+        },
+        {
+          "skill": "analytics-ops-compliance-checker",
+          "score": 0.131258
+        },
+        {
+          "skill": "security-ops-compliance-checker",
+          "score": 0.123945
+        },
+        {
+          "skill": "personal-ops-compliance-checker",
+          "score": 0.104083
+        },
+        {
+          "skill": "support-ops-compliance-checker",
+          "score": 0.095792
+        },
+        {
+          "skill": "meeting-ops-compliance-checker",
+          "score": 0.09262
+        },
+        {
+          "skill": "web-ops-compliance-checker",
+          "score": 0.09138
+        },
+        {
+          "skill": "ux-ops-compliance-checker",
+          "score": 0.090152
+        },
+        {
+          "skill": "crm-ops-compliance-checker",
+          "score": 0.08222
+        },
+        {
+          "skill": "events-ops-compliance-checker",
+          "score": 0.079213
+        },
+        {
+          "skill": "api-ops-compliance-checker",
+          "score": 0.079151
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.049759
+        },
+        {
+          "skill": "environment-config-auditor",
+          "score": 0.032786
+        },
+        {
+          "skill": "security-threat-modeler",
+          "score": 0.005125
+        }
+      ]
+    },
+    {
+      "prompt_id": "sec_p6_privacy_review",
+      "family": "security_appsec",
+      "gold_skill": "privacy-risk-reviewer",
+      "closest_alternatives": [
+        "security-threat-modeler",
+        "secret-leak-scanner",
+        "auth-flow-reviewer"
+      ],
+      "instruction_text": "Assess the data-protection concerns in this analytics change. We want to log search queries, account region, user role, clicked filters, and partial email domains for 18 months so the product team can study usage patterns.",
+      "ranking": [
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.819545
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.736763
+        },
+        {
+          "skill": "search-ops-quality-auditor",
+          "score": 0.575531
+        },
+        {
+          "skill": "analytics-ops-summary-writer",
+          "score": 0.568033
+        },
+        {
+          "skill": "analytics-ops-evidence-grounder",
+          "score": 0.564243
+        },
+        {
+          "skill": "analytics-ops-quality-auditor",
+          "score": 0.546836
+        },
+        {
+          "skill": "search-ops-summary-writer",
+          "score": 0.543824
+        },
+        {
+          "skill": "search-ops-normalizer",
+          "score": 0.539999
+        },
+        {
+          "skill": "analytics-ops-normalizer",
+          "score": 0.525942
+        },
+        {
+          "skill": "analytics-ops-monitoring-plan-builder",
+          "score": 0.521523
+        },
+        {
+          "skill": "churn-risk-analyser",
+          "score": 0.49633
+        },
+        {
+          "skill": "analytics-ops-risk-reviewer",
+          "score": 0.479514
+        },
+        {
+          "skill": "analytics-ops-handoff-brief-writer",
+          "score": 0.471969
+        },
+        {
+          "skill": "analytics-ops-comparison-builder",
+          "score": 0.453538
+        },
+        {
+          "skill": "search-ops-monitoring-plan-builder",
+          "score": 0.421335
+        },
+        {
+          "skill": "analytics-ops-compliance-checker",
+          "score": 0.391199
+        },
+        {
+          "skill": "analytics-ops-priority-ranker",
+          "score": 0.367675
+        },
+        {
+          "skill": "dataset-ops-monitoring-plan-builder",
+          "score": 0.293858
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.223158
+        },
+        {
+          "skill": "dataset-ops-compliance-checker",
+          "score": 0.018732
+        }
+      ]
+    },
+    {
+      "prompt_id": "skill_p1_find_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-finder",
+      "closest_alternatives": [
+        "skill-creator",
+        "skill-installer",
+        "skill-editor"
+      ],
+      "instruction_text": "Before I make anything new, search my existing capability library, shortlist available entries, assess fit and confidence, and decide whether one of them covers a workflow for turning messy meeting notes into action items and follow-up messages. I only want a reuse recommendation, not creation.",
+      "ranking": [
+        {
+          "skill": "skill-finder",
+          "score": 1.0
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.423307
+        },
+        {
+          "skill": "meeting-ops-comparison-builder",
+          "score": 0.305249
+        },
+        {
+          "skill": "skill-creator",
+          "score": 0.204325
+        },
+        {
+          "skill": "repo-ops-comparison-builder",
+          "score": 0.19806
+        },
+        {
+          "skill": "meeting-ops-dependency-mapper",
+          "score": 0.189403
+        },
+        {
+          "skill": "search-ops-dependency-mapper",
+          "score": 0.171343
+        },
+        {
+          "skill": "citation-note-extractor",
+          "score": 0.111829
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.097365
+        },
+        {
+          "skill": "research-ops-dependency-mapper",
+          "score": 0.085677
+        },
+        {
+          "skill": "repo-ops-dependency-mapper",
+          "score": 0.079753
+        },
+        {
+          "skill": "ux-ops-dependency-mapper",
+          "score": 0.075774
+        },
+        {
+          "skill": "repo-ops-resource-linker",
+          "score": 0.066342
+        },
+        {
+          "skill": "research-ops-comparison-builder",
+          "score": 0.064616
+        },
+        {
+          "skill": "ml-ops-dependency-mapper",
+          "score": 0.03469
+        },
+        {
+          "skill": "knowledge-ops-dependency-mapper",
+          "score": 0.032181
+        },
+        {
+          "skill": "recruiting-ops-dependency-mapper",
+          "score": 0.028901
+        },
+        {
+          "skill": "support-ops-dependency-mapper",
+          "score": 0.01581
+        },
+        {
+          "skill": "api-ops-dependency-mapper",
+          "score": 0.013514
+        },
+        {
+          "skill": "personal-ops-dependency-mapper",
+          "score": 0.009331
+        }
+      ]
+    },
+    {
+      "prompt_id": "skill_p2_install_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-installer",
+      "closest_alternatives": [
+        "skill-finder",
+        "skill-creator",
+        "skill-packager"
+      ],
+      "instruction_text": "I found an existing spreadsheet-analysis capability in a public catalog and want it added to my active local library. Please fetch or prepare the package, verify the expected files, and report the source, local path, setup result, and any activation caveats.",
+      "ranking": [
+        {
+          "skill": "public-xlsx",
+          "score": 1.0
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.809016
+        },
+        {
+          "skill": "analytics-ops-artifact-packager",
+          "score": 0.581342
+        },
+        {
+          "skill": "public-pptx",
+          "score": 0.571629
+        },
+        {
+          "skill": "dataset-ops-artifact-packager",
+          "score": 0.560097
+        },
+        {
+          "skill": "finance-ops-artifact-packager",
+          "score": 0.558415
+        },
+        {
+          "skill": "research-ops-artifact-packager",
+          "score": 0.538752
+        },
+        {
+          "skill": "public-pdf",
+          "score": 0.480907
+        },
+        {
+          "skill": "public-markitdown",
+          "score": 0.474525
+        },
+        {
+          "skill": "dataset-ops-summary-writer",
+          "score": 0.439069
+        },
+        {
+          "skill": "data-analysis-with-validation",
+          "score": 0.430495
+        },
+        {
+          "skill": "data-analysis-overview",
+          "score": 0.41104
+        },
+        {
+          "skill": "public-huggingface-datasets",
+          "score": 0.404889
+        },
+        {
+          "skill": "data-analysis-for-ranking-selection",
+          "score": 0.303741
+        },
+        {
+          "skill": "dataset-ops-comparison-builder",
+          "score": 0.294003
+        },
+        {
+          "skill": "data-analysis-with-anomaly-focus",
+          "score": 0.290181
+        },
+        {
+          "skill": "data-analysis-for-forecasting",
+          "score": 0.288314
+        },
+        {
+          "skill": "analytics-ops-comparison-builder",
+          "score": 0.264165
+        },
+        {
+          "skill": "data-analysis-for-root-cause-diagnosis",
+          "score": 0.207481
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.197447
+        }
+      ]
+    },
+    {
+      "prompt_id": "skill_p3_create_new",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-creator",
+      "closest_alternatives": [
+        "skill-editor",
+        "skill-finder",
+        "skill-packager"
+      ],
+      "instruction_text": "Create a new atomic skill for a repeated workflow: I often need to turn supervisor meeting notes into a thesis action list with owners, deadlines, and open questions. There is no existing skill for this exact workflow.",
+      "ranking": [
+        {
+          "skill": "thesis-ops-handoff-brief-writer",
+          "score": 0.688086
+        },
+        {
+          "skill": "meeting-followup-extractor",
+          "score": 0.60806
+        },
+        {
+          "skill": "agent-ops-handoff-brief-writer",
+          "score": 0.485039
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.453006
+        },
+        {
+          "skill": "thesis-ops-timeline-builder",
+          "score": 0.416813
+        },
+        {
+          "skill": "thesis-ops-dependency-mapper",
+          "score": 0.385676
+        },
+        {
+          "skill": "repo-ops-handoff-brief-writer",
+          "score": 0.382706
+        },
+        {
+          "skill": "personal-ops-handoff-brief-writer",
+          "score": 0.25922
+        },
+        {
+          "skill": "thesis-ops-summary-writer",
+          "score": 0.240061
+        },
+        {
+          "skill": "thesis-ops-monitoring-plan-builder",
+          "score": 0.221388
+        },
+        {
+          "skill": "task-extractor",
+          "score": 0.216886
+        },
+        {
+          "skill": "support-ops-handoff-brief-writer",
+          "score": 0.207758
+        },
+        {
+          "skill": "knowledge-ops-handoff-brief-writer",
+          "score": 0.200014
+        },
+        {
+          "skill": "operations-ops-handoff-brief-writer",
+          "score": 0.198552
+        },
+        {
+          "skill": "thesis-ops-quality-auditor",
+          "score": 0.183255
+        },
+        {
+          "skill": "docs-ops-handoff-brief-writer",
+          "score": 0.180174
+        },
+        {
+          "skill": "research-ops-handoff-brief-writer",
+          "score": 0.177933
+        },
+        {
+          "skill": "crm-ops-handoff-brief-writer",
+          "score": 0.167374
+        },
+        {
+          "skill": "product-ops-handoff-brief-writer",
+          "score": 0.115842
+        },
+        {
+          "skill": "personal-ops-summary-writer",
+          "score": 0.052043
+        }
+      ]
+    },
+    {
+      "prompt_id": "skill_p4_edit_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-editor",
+      "closest_alternatives": [
+        "skill-creator",
+        "skill-evaluator",
+        "skill-packager"
+      ],
+      "instruction_text": "This existing skill's description is too broad and it keeps triggering for document summaries when it should only handle structured field extraction. Please revise the skill so its selection boundary is clearer.",
+      "ranking": [
+        {
+          "skill": "docs-ops-field-extractor",
+          "score": 1.0
+        },
+        {
+          "skill": "operations-ops-field-extractor",
+          "score": 0.689175
+        },
+        {
+          "skill": "hr-ops-field-extractor",
+          "score": 0.674908
+        },
+        {
+          "skill": "agent-ops-field-extractor",
+          "score": 0.665147
+        },
+        {
+          "skill": "personal-ops-field-extractor",
+          "score": 0.662243
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.661365
+        },
+        {
+          "skill": "product-ops-field-extractor",
+          "score": 0.65196
+        },
+        {
+          "skill": "research-ops-field-extractor",
+          "score": 0.642145
+        },
+        {
+          "skill": "support-ops-field-extractor",
+          "score": 0.636112
+        },
+        {
+          "skill": "crm-ops-field-extractor",
+          "score": 0.592689
+        },
+        {
+          "skill": "repo-ops-field-extractor",
+          "score": 0.558659
+        },
+        {
+          "skill": "vendor-ops-field-extractor",
+          "score": 0.549331
+        },
+        {
+          "skill": "knowledge-ops-field-extractor",
+          "score": 0.535491
+        },
+        {
+          "skill": "contract-ops-field-extractor",
+          "score": 0.505284
+        },
+        {
+          "skill": "meeting-ops-field-extractor",
+          "score": 0.495576
+        },
+        {
+          "skill": "legal-ops-field-extractor",
+          "score": 0.494905
+        },
+        {
+          "skill": "ml-ops-field-extractor",
+          "score": 0.49298
+        },
+        {
+          "skill": "recruiting-ops-field-extractor",
+          "score": 0.492461
+        },
+        {
+          "skill": "events-ops-field-extractor",
+          "score": 0.444575
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.003828
+        }
+      ]
+    },
+    {
+      "prompt_id": "skill_p5_evaluate_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-evaluator",
+      "closest_alternatives": [
+        "skill-editor",
+        "skill-finder",
+        "skill-creator"
+      ],
+      "instruction_text": "Test whether my `reply-polisher` skill actually triggers only when there is already a draft reply. I want an evaluation with realistic near-boundary prompts before deciding whether to edit it.",
+      "ranking": [
+        {
+          "skill": "reply-polisher",
+          "score": 0.994202
+        },
+        {
+          "skill": "reply-drafter",
+          "score": 0.932355
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.673623
+        },
+        {
+          "skill": "groupwork-reply",
+          "score": 0.48523
+        },
+        {
+          "skill": "professor-email-reply",
+          "score": 0.462643
+        },
+        {
+          "skill": "proposal-drafter",
+          "score": 0.417223
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.352693
+        },
+        {
+          "skill": "agent-ops-rewrite-editor",
+          "score": 0.211533
+        },
+        {
+          "skill": "writing-ops-rewrite-editor",
+          "score": 0.177461
+        },
+        {
+          "skill": "privacy-policy-drafter",
+          "score": 0.139642
+        },
+        {
+          "skill": "incident-ops-rewrite-editor",
+          "score": 0.123284
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.064995
+        },
+        {
+          "skill": "email-ops-rewrite-editor",
+          "score": 0.063423
+        },
+        {
+          "skill": "email-drafter",
+          "score": 0.060545
+        },
+        {
+          "skill": "personal-ops-rewrite-editor",
+          "score": 0.05473
+        },
+        {
+          "skill": "legal-ops-rewrite-editor",
+          "score": 0.053361
+        },
+        {
+          "skill": "support-ops-rewrite-editor",
+          "score": 0.051693
+        },
+        {
+          "skill": "email-ops-evidence-grounder",
+          "score": 0.025519
+        },
+        {
+          "skill": "vendor-ops-rewrite-editor",
+          "score": 0.012463
+        },
+        {
+          "skill": "email-ops-quality-auditor",
+          "score": 0.010557
+        }
+      ]
+    },
+    {
+      "prompt_id": "skill_p6_package_existing",
+      "family": "skill_lifecycle",
+      "gold_skill": "skill-packager",
+      "closest_alternatives": [
+        "skill-creator",
+        "skill-installer",
+        "skill-editor"
+      ],
+      "instruction_text": "I finished an existing `paper-summariser` skill and want to share it with someone else. Check the folder shape, metadata, resource links, and unnecessary files so it is package-ready.",
+      "ranking": [
+        {
+          "skill": "agent-ops-summary-writer",
+          "score": 0.65505
+        },
+        {
+          "skill": "public-pdf",
+          "score": 0.610731
+        },
+        {
+          "skill": "paper-summariser",
+          "score": 0.508424
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.463339
+        },
+        {
+          "skill": "docs-ops-summary-writer",
+          "score": 0.420321
+        },
+        {
+          "skill": "research-ops-summary-writer",
+          "score": 0.343386
+        },
+        {
+          "skill": "hr-ops-summary-writer",
+          "score": 0.297967
+        },
+        {
+          "skill": "ml-ops-summary-writer",
+          "score": 0.297125
+        },
+        {
+          "skill": "support-ops-summary-writer",
+          "score": 0.232845
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.177187
+        },
+        {
+          "skill": "repo-ops-summary-writer",
+          "score": 0.149663
+        },
+        {
+          "skill": "devops-ops-summary-writer",
+          "score": 0.111278
+        },
+        {
+          "skill": "operations-ops-summary-writer",
+          "score": 0.091522
+        },
+        {
+          "skill": "media-ops-summary-writer",
+          "score": 0.076471
+        },
+        {
+          "skill": "incident-ops-summary-writer",
+          "score": 0.048183
+        },
+        {
+          "skill": "general-source-summariser",
+          "score": 0.041246
+        },
+        {
+          "skill": "lab-ops-summary-writer",
+          "score": 0.035503
+        },
+        {
+          "skill": "knowledge-ops-summary-writer",
+          "score": 0.030098
+        },
+        {
+          "skill": "product-ops-summary-writer",
+          "score": 0.020815
+        },
+        {
+          "skill": "crm-ops-summary-writer",
+          "score": 0.018522
+        }
+      ]
+    }
+  ]
+}

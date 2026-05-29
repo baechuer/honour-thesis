@@ -1,0 +1,25 @@
+{
+  "slug": "public-office-pdf-extraction",
+  "source_name": "pdf-extraction",
+  "origin": "claude-office-skills/skills",
+  "source_url": "https://github.com/claude-office-skills/skills/tree/main/pdf-extraction",
+  "raw_url": "https://raw.githubusercontent.com/claude-office-skills/skills/main/pdf-extraction/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "PDF-focused workflow; depends on file type, page content, layout evidence, and possible OCR or conversion tooling",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "PDF file",
+    "page rendering or text extraction",
+    "layout evidence"
+  ],
+  "resource_signals": [
+    "pdf extraction",
+    "public SKILL.md metadata",
+    "PDF",
+    "pages",
+    "layout",
+    "extraction"
+  ]
+}

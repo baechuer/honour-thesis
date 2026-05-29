@@ -1,0 +1,25 @@
+{
+  "slug": "public-pptx",
+  "source_name": "pptx",
+  "origin": "anthropics/skills",
+  "source_url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+  "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "presentation artifact workflow; depends on slide structure, speaker notes, visual layouts, templates, and render checks",
+  "external_dependencies": [
+    ".pptx file",
+    "slide layouts",
+    "speaker notes",
+    "template assets",
+    "rendering tools"
+  ],
+  "resource_signals": [
+    "slides",
+    "layouts",
+    "notes",
+    "theme",
+    "visual QA",
+    "export"
+  ]
+}

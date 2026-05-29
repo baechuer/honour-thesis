@@ -1,0 +1,90 @@
+[
+  {
+    "id": "read_p1_paper_summary",
+    "family": "reading_research",
+    "gold_skill": "paper-summariser",
+    "closest_alternatives": [
+      "general-source-summariser",
+      "method-note-builder",
+      "citation-note-extractor"
+    ],
+    "prompt": "Give me a balanced research-oriented recap of this academic paper. I want the research problem, overall approach, main findings, and limitations in one readable summary, not citation-ready notes and not a method-only audit: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks. However, most gains appear on structured benchmarks with known tool interfaces, and we do not establish that the same advantage transfers to noisier real-world environments."
+  },
+  {
+    "id": "read_p2_general_source_summary",
+    "family": "reading_research",
+    "gold_skill": "general-source-summariser",
+    "closest_alternatives": [
+      "paper-summariser",
+      "document-extractor",
+      "citation-note-extractor"
+    ],
+    "prompt": "Summarise this as a general source report rather than an academic paper. I need the context, main observations, practical recommendations, and evidence limits in plain language: A university innovation office spent six months following student teams that were using AI assistants for coursework, scheduling, and writing support. Instead of running a formal experiment, the office collected staff observations, student reflections, and examples of where the tools helped or created confusion. The report says students benefited most when the assistant had a narrow, concrete role, such as turning rough notes into clearer plans or identifying missing details in drafts. It also found that students became overconfident when the assistant sounded polished but skipped important caveats. The report recommends building clearer role boundaries for educational AI systems, but it notes that the evidence comes from a small number of teams and should not be treated as a broad performance claim."
+  },
+  {
+    "id": "read_p3_citation_notes",
+    "family": "reading_research",
+    "gold_skill": "citation-note-extractor",
+    "closest_alternatives": [
+      "document-extractor",
+      "paper-summariser",
+      "citation-grounding-helper"
+    ],
+    "prompt": "Make this source usable for me later when I'm writing by producing citation-ready notes: a citable claim, supporting detail, limitation/caveat, and how I could use it in a literature review. Do not only summarize the paper: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks. However, most gains appear on structured benchmarks with known tool interfaces, and we do not establish that the same advantage transfers to noisier real-world environments."
+  },
+  {
+    "id": "read_p4_document_extraction",
+    "family": "reading_research",
+    "gold_skill": "document-extractor",
+    "closest_alternatives": [
+      "citation-note-extractor",
+      "method-note-builder",
+      "paper-summariser"
+    ],
+    "prompt": "Extract the specific details from this source into a structured table of fields and values: main claims, method components, evaluation setting, baselines, findings, and limitations. I need explicit extractable details, not a narrative summary: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks. However, most gains appear on structured benchmarks with known tool interfaces, and we do not establish that the same advantage transfers to noisier real-world environments."
+  },
+  {
+    "id": "read_p5_method_notes",
+    "family": "reading_research",
+    "gold_skill": "method-note-builder",
+    "closest_alternatives": [
+      "paper-summariser",
+      "document-extractor",
+      "citation-note-extractor"
+    ],
+    "prompt": "Help me make sense of this source by focusing on how the work was actually carried out, how it was evaluated, and what assumptions or constraints shaped the result: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks. However, most gains appear on structured benchmarks with known tool interfaces, and we do not establish that the same advantage transfers to noisier real-world environments."
+  },
+  {
+    "id": "read_p6_grounding_check",
+    "family": "reading_research",
+    "gold_skill": "citation-grounding-helper",
+    "closest_alternatives": [
+      "citation-note-extractor",
+      "paper-summariser",
+      "document-extractor"
+    ],
+    "prompt": "I wrote this exact sentence from the source: 'Explicit task decomposition reliably improves agent performance in realistic environments.' Perform a citation-grounding support audit: mark which parts of the sentence are supported, overstated, or unsupported, explain the overreach, and give a safer revised sentence if needed. Source: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks. However, most gains appear on structured benchmarks with known tool interfaces, and we do not establish that the same advantage transfers to noisier real-world environments."
+  },
+  {
+    "id": "read_p7_multi_source_comparison",
+    "family": "reading_research",
+    "gold_skill": "multi-source-comparison-builder",
+    "closest_alternatives": [
+      "related-work-synthesiser",
+      "method-note-builder",
+      "citation-note-extractor"
+    ],
+    "prompt": "Compare these two sources in a side-by-side table with separate columns for Source A and Source B so I can clearly see how they line up, where they differ, and what each one contributes. Use rows such as approach, evaluation, strengths, limitations, and contribution; do not turn it into a synthesized related-work paragraph, method-only note, or citation-note list. Source A: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks, though the results are benchmark-bound. Source B: We investigate whether lightweight iterative revision can improve personal-agent performance without requiring an explicit plan structure. Our system allows the agent to attempt a task, inspect intermediate failures, and revise its next action using a shorter feedback loop. On the same benchmark family, revision improves adaptability on tasks with shifting context, but it is less stable on very long sequences and depends more heavily on model quality."
+  },
+  {
+    "id": "read_p8_related_work_synthesis",
+    "family": "reading_research",
+    "gold_skill": "related-work-synthesiser",
+    "closest_alternatives": [
+      "multi-source-comparison-builder",
+      "citation-note-extractor",
+      "paper-summariser"
+    ],
+    "prompt": "Synthesize these two sources into related-work style notes: explain the main approaches, how they relate, the shared research direction, and what remains unresolved across them. I want an integrated synthesis, not a side-by-side comparison table. Source A: We study whether explicit task decomposition improves the reliability of tool-using language agents on long-horizon tasks. Our system first predicts a structured plan, then retrieves candidate tools for each subtask, and finally executes the plan step by step with intermediate state tracking. We evaluate on a benchmark of multi-step personal-assistant tasks and compare against direct prompting and lightweight replanning baselines. The decomposed system improves task completion and reduces cascading errors, especially on longer tasks, though the results are benchmark-bound. Source B: We investigate whether lightweight iterative revision can improve personal-agent performance without requiring an explicit plan structure. Our system allows the agent to attempt a task, inspect intermediate failures, and revise its next action using a shorter feedback loop. On the same benchmark family, revision improves adaptability on tasks with shifting context, but it is less stable on very long sequences and depends more heavily on model quality."
+  }
+]

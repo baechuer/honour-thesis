@@ -1,0 +1,2420 @@
+[
+  {
+    "family": "api_backend_design",
+    "gold_boundary_score": 0.408149,
+    "gold_score": 0.705536,
+    "gold_skill": "openapi-contract-reviewer",
+    "id": "api_p1_openapi_contract_review",
+    "instruction_text": "Please review billing_openapi.yaml as an API contract. I need endpoint-level issues around schemas, examples, status codes, auth behavior, pagination, and client compatibility.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_backend_design",
+    "gold_boundary_score": 0.309024,
+    "gold_score": 0.499605,
+    "gold_skill": "external-api-integration-planner",
+    "id": "api_p2_external_api_integration",
+    "instruction_text": "Please plan how our app should connect to the Acme Billing API. Cover authentication, endpoint choices, request/response mapping, provider throttling, recovery behavior, page-through results, secrets, and verification tests.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_backend_design",
+    "gold_boundary_score": 0.289929,
+    "gold_score": 0.49632,
+    "gold_skill": "webhook-contract-planner",
+    "id": "api_p3_webhook_contract",
+    "instruction_text": "A payment provider will send event callbacks into our app. Please design the receiver behavior: which events to accept, how to validate the body, how to check signatures, how to handle duplicate deliveries, retry timing, ordering assumptions, and failed-message storage.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_backend_design",
+    "gold_boundary_score": 0.414751,
+    "gold_score": 0.657754,
+    "gold_skill": "architecture-boundary-reviewer",
+    "id": "api_p4_architecture_boundary",
+    "instruction_text": "Please review service_modules.md for backend architecture boundaries. I care about module ownership, dependency direction, coupling, misplaced responsibilities, and a safe refactoring sequence.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_backend_design",
+    "gold_boundary_score": 0.329494,
+    "gold_score": 0.72225,
+    "gold_skill": "database-migration-risk-assessor",
+    "id": "api_p5_database_migration_risk",
+    "instruction_text": "Please assess add_subscription_status_migration.sql before production rollout. I need locking risk, backfill plan, compatibility with old app versions, rollback path, and verification queries.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_backend_design",
+    "gold_boundary_score": 0.28756,
+    "gold_score": 0.456195,
+    "gold_skill": "service-dependency-mapper",
+    "id": "api_p6_service_dependency_map",
+    "instruction_text": "Please trace how the billing, notification, account, and analytics services rely on each other using service_trace_notes.md. Include call direction, responsible teams, shared data promises, ways failures propagate, and evidence gaps.",
+    "non_core_above_gold_count": 2,
+    "non_core_competitor_count": 3,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.004388,
+        "score": 0.460583,
+        "shared_terms": [
+          "evidence"
+        ],
+        "skill": "support-ops-monitoring-plan-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.003421,
+        "score": 0.459616,
+        "shared_terms": [
+          "account",
+          "data",
+          "evidence"
+        ],
+        "skill": "customer-success-ops-monitoring-plan-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.003703,
+        "score": 0.452492,
+        "shared_terms": [
+          "evidence"
+        ],
+        "skill": "dashboard-ops-monitoring-plan-builder",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "browser_web_automation",
+    "gold_boundary_score": 0.33437,
+    "gold_score": 0.52851,
+    "gold_skill": "web-page-snapshotter",
+    "id": "web_p1_page_snapshot",
+    "instruction_text": "Open the staging dashboard and capture a page snapshot of what the user sees on the account settings page right now. I need the visible state, screenshot-style observations, and any obvious rendering issue; do not click through a full interaction test.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "browser_web_automation",
+    "gold_boundary_score": 0.416541,
+    "gold_score": 0.550503,
+    "gold_skill": "web-form-filler",
+    "id": "web_p2_form_filling",
+    "instruction_text": "Go through the demo signup flow and fill in the form fields with the sample details I provided. Report which fields were entered and pause before final submission if it would create a real account. This is delegated browser form completion, not expected-versus-actual UI validation or a general test report.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "browser_web_automation",
+    "gold_boundary_score": 0.145835,
+    "gold_score": 0.321338,
+    "gold_skill": "web-ui-tester",
+    "id": "web_p3_ui_test",
+    "instruction_text": "Test whether the checkout page correctly shows a validation message when the postcode field is empty, and report the expected versus actual behavior.",
+    "non_core_above_gold_count": 5,
+    "non_core_competitor_count": 16,
+    "non_core_near_gold_count": 11,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.03503,
+        "score": 0.356369,
+        "shared_terms": [
+          "test",
+          "check",
+          "message",
+          "expect",
+          "behavior"
+        ],
+        "skill": "email-ops-acceptance-test-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.011945,
+        "score": 0.333283,
+        "shared_terms": [
+          "test",
+          "check",
+          "message",
+          "report",
+          "expect",
+          "behavior"
+        ],
+        "skill": "ecommerce-ops-acceptance-test-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.009248,
+        "score": 0.330586,
+        "shared_terms": [
+          "test",
+          "check",
+          "report",
+          "expect",
+          "behavior"
+        ],
+        "skill": "facilities-ops-acceptance-test-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.003915,
+        "score": 0.325253,
+        "shared_terms": [
+          "test",
+          "check",
+          "expect",
+          "behavior"
+        ],
+        "skill": "travel-ops-acceptance-test-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.000966,
+        "score": 0.322304,
+        "shared_terms": [
+          "test",
+          "check",
+          "expect",
+          "behavior"
+        ],
+        "skill": "procurement-ops-acceptance-test-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.002134,
+        "score": 0.319205,
+        "shared_terms": [
+          "test",
+          "check",
+          "expect",
+          "behavior"
+        ],
+        "skill": "contract-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.003594,
+        "score": 0.317744,
+        "shared_terms": [
+          "test",
+          "check",
+          "report",
+          "expect",
+          "behavior"
+        ],
+        "skill": "social-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.003813,
+        "score": 0.317525,
+        "shared_terms": [
+          "test",
+          "check",
+          "message",
+          "report",
+          "expect",
+          "behavior"
+        ],
+        "skill": "property-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.005372,
+        "score": 0.315966,
+        "shared_terms": [
+          "test",
+          "check",
+          "report",
+          "expect",
+          "behavior"
+        ],
+        "skill": "retail-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.006985,
+        "score": 0.314354,
+        "shared_terms": [
+          "test",
+          "check",
+          "report",
+          "expect",
+          "behavior"
+        ],
+        "skill": "mobile-ops-acceptance-test-builder",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "browser_web_automation",
+    "gold_boundary_score": 0.250655,
+    "gold_score": 0.554829,
+    "gold_skill": "web-data-extractor",
+    "id": "web_p4_data_extraction",
+    "instruction_text": "From this product listing page, extract the product names, prices, availability labels, and detail-page links into a structured table. I do not need a screenshot.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "browser_web_automation",
+    "gold_boundary_score": 0.234812,
+    "gold_score": 0.315399,
+    "gold_skill": "frontend-debugger",
+    "id": "web_p5_frontend_debugging",
+    "instruction_text": "The settings page opens but clicking Save does nothing, and the console shows `Cannot read properties of undefined (reading 'id')` after the profile API call. Use the UI symptom as evidence, then inspect the frontend event handler, state update path, and API response contract. The deliverable is the likely source-level cause plus the smallest code patch.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "browser_web_automation",
+    "gold_boundary_score": 0.469652,
+    "gold_score": 0.50112,
+    "gold_skill": "accessibility-checker",
+    "id": "web_p6_accessibility_check",
+    "instruction_text": "Evaluate the signup form for keyboard navigation, input labels, focus order, and whether screen-reader users can understand the error messages.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "code_github_workflow",
+    "gold_boundary_score": 0.185265,
+    "gold_score": 0.265525,
+    "gold_skill": "code-reviewer",
+    "id": "code_p1_local_code_review",
+    "instruction_text": "Review this local change before I commit it. The patch updates the cache key from `user.id` to `user.email`, adds a fallback for missing names, and changes the unit test fixture. I want to know if this could introduce bugs or missing-test risk, not have you rewrite it yet.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.009705,
+        "score": 0.25582,
+        "shared_terms": [
+          "user",
+          "review",
+          "email",
+          "test"
+        ],
+        "skill": "email-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "email_communication",
+        "margin_vs_gold": -0.017662,
+        "score": 0.247863,
+        "shared_terms": [
+          "change",
+          "user",
+          "email"
+        ],
+        "skill": "email-polisher",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "code_github_workflow",
+    "gold_boundary_score": 0.294148,
+    "gold_score": 0.378857,
+    "gold_skill": "pr-reviewer",
+    "id": "code_p2_pr_review",
+    "instruction_text": "Can you review this pull request as if you were leaving PR feedback? It changes the auth middleware, adds a migration, updates two API tests, and the PR discussion says the branch is meant to preserve backward compatibility.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "code_github_workflow",
+    "gold_boundary_score": 0.509682,
+    "gold_score": 0.500133,
+    "gold_skill": "review-comment-resolver",
+    "id": "code_p3_review_comment_resolution",
+    "instruction_text": "I already got review comments on this branch. Please address this specific reviewer request by planning and making the requested code/test change: `The retry loop can spin forever if the response is 429 and Retry-After is missing. Please add a cap and a test.` I need the existing comment resolved with an implementation response, not a fresh PR review or CI debugging.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "code_github_workflow",
+    "gold_boundary_score": 0.394735,
+    "gold_score": 0.485988,
+    "gold_skill": "ci-failure-debugger",
+    "id": "code_p4_ci_failure_debugging",
+    "instruction_text": "The CI run failed after my last commit. The failing job is `unit-tests`, and the first useful error says `Expected status 200, received 401` in `auth.middleware.test.ts` after the token refresh change. Help me find the cause and the smallest fix.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "code_github_workflow",
+    "gold_boundary_score": 0.421591,
+    "gold_score": 0.564747,
+    "gold_skill": "changelog-writer",
+    "id": "code_p5_changelog_entry",
+    "instruction_text": "Turn these completed changes into a concise internal changelog entry for the repository changelog, grouped by change type if useful: fixed retry timeout handling, added token-refresh tests, improved cache invalidation for renamed users, and removed an unused feature flag. Do not write user-facing release notes.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "code_github_workflow",
+    "gold_boundary_score": 0.256387,
+    "gold_score": 0.288466,
+    "gold_skill": "release-note-writer",
+    "id": "code_p6_release_notes",
+    "instruction_text": "Write user-facing release notes for this update. We improved sign-in reliability when sessions expire, made profile changes appear faster across devices, and fixed a retry issue that could delay requests during temporary service pressure.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 4,
+    "non_core_near_gold_count": 4,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.00502,
+        "score": 0.283446,
+        "shared_terms": [
+          "release",
+          "note",
+          "device"
+        ],
+        "skill": "mobile-ops-monitoring-plan-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.010326,
+        "score": 0.27814,
+        "shared_terms": [
+          "release",
+          "note",
+          "device"
+        ],
+        "skill": "mobile-ops-risk-reviewer",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.016921,
+        "score": 0.271545,
+        "shared_terms": [
+          "release",
+          "note",
+          "device"
+        ],
+        "skill": "mobile-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.01777,
+        "score": 0.270696,
+        "shared_terms": [
+          "release",
+          "note",
+          "device"
+        ],
+        "skill": "mobile-ops-compliance-checker",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.359928,
+    "gold_score": 0.511806,
+    "gold_skill": "data-analysis-overview",
+    "id": "data_p1_overview",
+    "instruction_text": "Please read channel_performance_weekly.csv. I need a broad exploratory orientation: what the sheet contains, the overall picture, the main patterns, the most useful caveats, and a few sensible next questions. Do not turn it into an executive report, forecast, ranking recommendation, or diagnosis of one specific problem yet.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.489748,
+    "gold_score": 0.58995,
+    "gold_skill": "data-analysis-with-anomaly-focus",
+    "id": "data_p2_anomaly_focus",
+    "instruction_text": "Please read channel_performance_weekly.csv. Build an anomaly watchlist: which spikes, dips, outliers, or concentrated deviations look most worth worrying about, and how confident should I be that each one is real? Do not explain root cause yet.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.215319,
+    "gold_score": 0.347347,
+    "gold_skill": "data-analysis-with-validation",
+    "id": "data_p3_validation",
+    "instruction_text": "Please read channel_performance_weekly.csv. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.228132,
+    "gold_score": 0.312753,
+    "gold_skill": "data-analysis-for-root-cause-diagnosis",
+    "id": "data_p4_root_cause",
+    "instruction_text": "Please read channel_performance_weekly.csv. This seems to be getting worse. Assume the data is usable enough for analysis and trace the most likely driver: which channel, metric, or segment appears to explain the degradation, and what evidence supports that diagnosis?",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.349323,
+    "gold_score": 0.561854,
+    "gold_skill": "data-analysis-for-reporting",
+    "id": "data_p5_reporting",
+    "instruction_text": "Please read channel_performance_weekly.csv. Turn this into an upward-facing reporting brief: a headline, two or three executive takeaways, the clearest supporting numbers, and one caveat. Do not give me a broad exploratory analysis.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.105418,
+    "gold_score": 0.546789,
+    "gold_skill": "data-analysis-for-forecasting",
+    "id": "data_p6_forecasting",
+    "instruction_text": "Please read channel_performance_weekly.csv. Forecast the likely next direction if the current pattern keeps going: what seems likely to happen next, what evidence supports that continuation, and how much should I trust the forecast?",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "data_spreadsheet",
+    "gold_boundary_score": 0.450378,
+    "gold_score": 0.57747,
+    "gold_skill": "data-analysis-for-ranking-selection",
+    "id": "data_p7_ranking_selection",
+    "instruction_text": "Please read pilot_priority_options.csv. Compare the options, rank them for action now, recommend the first choice, explain the decision criteria and trade-offs behind that ordering, and say what follow-up check would reduce decision risk. This is a selection task, not a forecast of one metric or a broad overview.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "deployment_browser_qa",
+    "gold_boundary_score": 0.112501,
+    "gold_score": 0.249928,
+    "gold_skill": "playwright-flow-debugger",
+    "id": "deploy_p1_playwright_flow_debug",
+    "instruction_text": "The checkout flow at `http://localhost:4173/checkout` fails after I click Apply coupon. Please reproduce the interaction with browser evidence, capture console or network clues, and identify why the flow breaks.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.016708,
+        "score": 0.23322,
+        "shared_terms": [
+          "evidence",
+          "identify"
+        ],
+        "skill": "ecommerce-ops-acceptance-test-builder",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "deployment_browser_qa",
+    "gold_boundary_score": 0.078349,
+    "gold_score": 0.652034,
+    "gold_skill": "visual-regression-checker",
+    "id": "deploy_p2_visual_regression",
+    "instruction_text": "Please compare the baseline and current screenshots for pricing_page_desktop.png and pricing_page_mobile.png. I need visual regressions like clipping, spacing shifts, text overflow, and contrast changes.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "deployment_browser_qa",
+    "gold_boundary_score": 0.164116,
+    "gold_score": 0.612113,
+    "gold_skill": "accessibility-interaction-auditor",
+    "id": "deploy_p3_accessibility_interaction",
+    "instruction_text": "Please audit the account-settings modal for keyboard and screen-reader interaction. Focus on tab order, focus trapping, accessible names, ARIA state, and whether form errors are announced.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "deployment_browser_qa",
+    "gold_boundary_score": 0.182677,
+    "gold_score": 0.390181,
+    "gold_skill": "deployment-build-triager",
+    "id": "deploy_p4_build_log_triage",
+    "instruction_text": "The Netlify deploy for build_log.txt failed. Please inspect the build log and identify the likely root cause, missing env/config assumptions, and the smallest rerun sequence.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.136224,
+        "score": 0.526405,
+        "shared_terms": [
+          "netlify",
+          "deploy",
+          "build",
+          "config"
+        ],
+        "skill": "public-netlify-deploy",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "deployment_browser_qa",
+    "gold_boundary_score": 0.317812,
+    "gold_score": 0.460268,
+    "gold_skill": "deployment-release-verifier",
+    "id": "deploy_p5_release_verification",
+    "instruction_text": "The production deploy is live at `https://example-release.netlify.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, and rollback notes.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.099825,
+        "score": 0.560093,
+        "shared_terms": [
+          "production",
+          "deploy",
+          "netlify",
+          "url",
+          "environment"
+        ],
+        "skill": "public-netlify-deploy",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "deployment_browser_qa",
+    "gold_boundary_score": 0.267703,
+    "gold_score": 0.521178,
+    "gold_skill": "web-performance-budget-checker",
+    "id": "deploy_p6_performance_budget",
+    "instruction_text": "Please review lighthouse_trace_summary.txt against a mobile performance budget. I care about LCP, blocking scripts, network weight, image size, and which fixes matter most.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.147677,
+    "gold_score": 0.230037,
+    "gold_skill": "document-summariser",
+    "id": "doc_p1_document_summary",
+    "instruction_text": "Please read internal_travel_policy_update.txt and help me make sense of it quickly. I want the main point, the most important details, and anything I should pay attention to.",
+    "non_core_above_gold_count": 115,
+    "non_core_competitor_count": 176,
+    "non_core_near_gold_count": 61,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.171254,
+        "score": 0.401291,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-compliance-checker",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.154455,
+        "score": 0.384492,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-risk-reviewer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.147888,
+        "score": 0.377925,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-rewrite-editor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.136485,
+        "score": 0.366522,
+        "shared_terms": [
+          "point",
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-summary-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.12628,
+        "score": 0.356317,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-scenario-planner",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.112345,
+        "score": 0.342381,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-dependency-mapper",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.112267,
+        "score": 0.342304,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-priority-ranker",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.111723,
+        "score": 0.341759,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-resource-linker",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.110121,
+        "score": 0.340158,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-handoff-brief-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.099315,
+        "score": 0.329352,
+        "shared_terms": [
+          "important",
+          "detail"
+        ],
+        "skill": "travel-ops-acceptance-test-builder",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.412335,
+    "gold_score": 0.578482,
+    "gold_skill": "document-rewriter",
+    "id": "doc_p2_document_rewriter",
+    "instruction_text": "Please read travel_request_note_raw.txt and produce a revised full prose version for a human reader. Keep it as continuous paragraphs in the same document form, improve wording, flow, and polish, and preserve the same meaning and commitments.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.020007,
+        "score": 0.598489,
+        "shared_terms": [
+          "produce",
+          "keep",
+          "form",
+          "word",
+          "preserve"
+        ],
+        "skill": "travel-ops-rewrite-editor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.011814,
+        "score": 0.566668,
+        "shared_terms": [
+          "produce",
+          "keep",
+          "form",
+          "preserve"
+        ],
+        "skill": "travel-ops-summary-writer",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.438652,
+    "gold_score": 0.565077,
+    "gold_skill": "document-normaliser",
+    "id": "doc_p3_document_normaliser",
+    "instruction_text": "Please read travel_request_note_raw.txt and normalise the document structure: keep the original wording and order as much as possible, but fix inconsistent headings, spacing, list style, and layout noise. Do not substantially rewrite the prose.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.346601,
+    "gold_score": 0.49019,
+    "gold_skill": "document-field-extractor",
+    "id": "doc_p4_field_extraction",
+    "instruction_text": "Please read invoice_northbridge_supplies.txt and extract the reusable fields into a structured table, including supplier, invoice number, dates, line items, totals, and payment details. Do not write a narrative summary.",
+    "non_core_above_gold_count": 17,
+    "non_core_competitor_count": 22,
+    "non_core_near_gold_count": 5,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.080366,
+        "score": 0.570556,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "table",
+          "supplier",
+          "narrative",
+          "summary"
+        ],
+        "skill": "supply-chain-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.062933,
+        "score": 0.553123,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "table",
+          "narrative",
+          "summary"
+        ],
+        "skill": "procurement-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.056061,
+        "score": 0.546251,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "structur",
+          "detail",
+          "summary"
+        ],
+        "skill": "procurement-ops-summary-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.053386,
+        "score": 0.543576,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "table",
+          "narrative",
+          "summary"
+        ],
+        "skill": "ecommerce-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.045696,
+        "score": 0.535886,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "structur",
+          "supplier",
+          "detail",
+          "summary"
+        ],
+        "skill": "supply-chain-ops-summary-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.043559,
+        "score": 0.533749,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "table",
+          "narrative",
+          "summary"
+        ],
+        "skill": "vendor-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.030492,
+        "score": 0.520682,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "table",
+          "narrative",
+          "summary"
+        ],
+        "skill": "sales-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.022441,
+        "score": 0.512631,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "table",
+          "invoice",
+          "narrative",
+          "summary"
+        ],
+        "skill": "finance-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.020678,
+        "score": 0.510868,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "structur",
+          "detail",
+          "summary"
+        ],
+        "skill": "ecommerce-ops-summary-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.018285,
+        "score": 0.508475,
+        "shared_terms": [
+          "extract",
+          "reusable",
+          "field",
+          "structur",
+          "invoice",
+          "date",
+          "line",
+          "item"
+        ],
+        "skill": "receipt-extractor",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.337782,
+    "gold_score": 0.534908,
+    "gold_skill": "multi-document-comparison-preparer",
+    "id": "doc_p5_comparison_preparation",
+    "instruction_text": "Please read policy_draft_a.txt and policy_draft_b.txt, then prepare a side-by-side comparison matrix so I can quickly see matching sections, changed wording, additions, removals, and unresolved differences.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 3,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.012968,
+        "score": 0.547876,
+        "shared_terms": [
+          "compare",
+          "match",
+          "difference"
+        ],
+        "skill": "legal-ops-comparison-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.003514,
+        "score": 0.531394,
+        "shared_terms": [
+          "compare",
+          "match",
+          "difference"
+        ],
+        "skill": "writing-ops-comparison-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.008426,
+        "score": 0.526482,
+        "shared_terms": [
+          "compare",
+          "match",
+          "section",
+          "difference"
+        ],
+        "skill": "docs-ops-comparison-builder",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.391524,
+    "gold_score": 0.541969,
+    "gold_skill": "document-converter",
+    "id": "doc_p6_conversion",
+    "instruction_text": "Please read request_form.txt and convert the whole form into clean markdown notes I can drop into my repo. Preserve the content and labels, but simplify the source formatting rather than keeping the exact visual layout.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "documents_files",
+    "gold_boundary_score": 0.309864,
+    "gold_score": 0.466476,
+    "gold_skill": "layout-preserving-converter",
+    "id": "doc_p7_layout_preserving_conversion",
+    "instruction_text": "Please read request_form.txt and turn it into markdown while preserving the layout cues: headings, labels, rows, and grouped fields should remain recognizable. The priority is layout fidelity, not just simplified notes.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "metrics_observability",
+    "gold_boundary_score": 0.312886,
+    "gold_score": 0.482765,
+    "gold_skill": "metrics-overview",
+    "id": "obs_p1_metrics_overview",
+    "instruction_text": "Give me a triage overview of this service snapshot",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "metrics_observability",
+    "gold_boundary_score": 0.29778,
+    "gold_score": 0.599926,
+    "gold_skill": "latency-anomaly-detector",
+    "id": "obs_p2_latency_anomaly",
+    "instruction_text": "Run an anomaly-focused readout on this service snapshot. Identify unusual performance behavior, especially tail-latency spikes, outliers, and whether the deviation is broad or concentrated in a smaller slice of requests. Do not give only a general metrics overview",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "metrics_observability",
+    "gold_boundary_score": 0.324676,
+    "gold_score": 0.566305,
+    "gold_skill": "slo-breach-checker",
+    "id": "obs_p3_slo_breach",
+    "instruction_text": "Check this service snapshot against a reliability-objective risk frame",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "metrics_observability",
+    "gold_boundary_score": 0.396774,
+    "gold_score": 0.574882,
+    "gold_skill": "capacity-risk-forecaster",
+    "id": "obs_p4_capacity_risk",
+    "instruction_text": "Forecast capacity risk from this service snapshot if the pattern keeps going. Focus on future pressure, saturation risk, queue growth, headroom, and likely bottlenecks that could turn into a bigger operational problem. Do not decide current SLO breach or root cause",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "metrics_observability",
+    "gold_boundary_score": 0.315596,
+    "gold_score": 0.479804,
+    "gold_skill": "metrics-root-cause-diagnoser",
+    "id": "obs_p5_root_cause",
+    "instruction_text": "Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. Snapshot data",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "metrics_observability",
+    "gold_boundary_score": 0.255102,
+    "gold_score": 0.479443,
+    "gold_skill": "incident-summary-writer",
+    "id": "obs_p6_incident_summary",
+    "instruction_text": "Turn this service snapshot into an incident update I could quickly share with the team",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "news_monitoring",
+    "gold_boundary_score": 0.371758,
+    "gold_score": 0.527844,
+    "gold_skill": "news-summariser",
+    "id": "news_p1_plain_summary",
+    "instruction_text": "Summarise this news article in a straightforward neutral recap",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "news_monitoring",
+    "gold_boundary_score": 0.369153,
+    "gold_score": 0.495434,
+    "gold_skill": "news-briefing-writer",
+    "id": "news_p2_briefing",
+    "instruction_text": "Turn this article into a short decision memo with clear sections for the key event, current state of play, significance now, affected parties, and follow-up signals. The output should support quick situation awareness, not just summarize the article chronologically",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "news_monitoring",
+    "gold_boundary_score": 0.245207,
+    "gold_score": 0.336197,
+    "gold_skill": "source-grounding-extractor",
+    "id": "news_p3_grounded_claims",
+    "instruction_text": "From this article, identify the source-backed claims and facts, including important product details, named companies or people, and any figures or stated plans",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.010868,
+        "score": 0.347066,
+        "shared_terms": [
+          "nam"
+        ],
+        "skill": "public-office-crypto-report",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.019021,
+        "score": 0.317176,
+        "shared_terms": [
+          "identify",
+          "claim",
+          "important",
+          "product"
+        ],
+        "skill": "product-ops-evidence-grounder",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "news_monitoring",
+    "gold_boundary_score": 0.375191,
+    "gold_score": 0.65525,
+    "gold_skill": "news-theme-extractor",
+    "id": "news_p4_theme_extraction",
+    "instruction_text": "Extract the recurring themes across these three tech news snippets, grouping repeated ideas without forecasting market direction. Snippet 1",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "news_monitoring",
+    "gold_boundary_score": 0.440276,
+    "gold_score": 0.68015,
+    "gold_skill": "tech-news-trend-extractor",
+    "id": "news_p5_trend_signal",
+    "instruction_text": "Identify which patterns across these three tech news snippets look like actionable tech trend signals right now, why they matter strategically, and what evidence would confirm or weaken the trend. Snippet 1",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_artifact_workflows",
+    "gold_boundary_score": 0.387715,
+    "gold_score": 0.563863,
+    "gold_skill": "pdf-layout-reviewer",
+    "id": "office_p1_pdf_layout_review",
+    "instruction_text": "Please inspect grant_application_packet.pdf as a rendered PDF. I need page-by-page layout issues: cropped tables, broken headers, missing signature areas, and anything that would make the form hard to read. Do not just extract the fields.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_artifact_workflows",
+    "gold_boundary_score": 0.454795,
+    "gold_score": 0.60325,
+    "gold_skill": "pdf-ocr-extractor",
+    "id": "office_p2_scanned_pdf_ocr",
+    "instruction_text": "Please recover the text from scanned_receipts_packet.pdf. It looks like image scans, so keep page numbers and mark uncertain OCR text instead of pretending every amount is reliable.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_artifact_workflows",
+    "gold_boundary_score": 0.429086,
+    "gold_score": 0.722234,
+    "gold_skill": "docx-redline-editor",
+    "id": "office_p3_docx_redline",
+    "instruction_text": "Please review vendor_agreement_draft.docx as a Word document and prepare redline-style edits with short reviewer comments. Preserve sections and explain any substantive change.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_artifact_workflows",
+    "gold_boundary_score": 0.339521,
+    "gold_score": 0.48389,
+    "gold_skill": "spreadsheet-formula-auditor",
+    "id": "office_p4_formula_audit",
+    "instruction_text": "Please check pricing_model.xlsx for calculation and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.010779,
+        "score": 0.473112,
+        "shared_terms": [
+          "xlsx",
+          "link"
+        ],
+        "skill": "public-xlsx",
+        "status": "near_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.015003,
+        "score": 0.468887,
+        "shared_terms": [
+          "xlsx",
+          "link"
+        ],
+        "skill": "public-office-xlsx-manipulation",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "office_artifact_workflows",
+    "gold_boundary_score": 0.42092,
+    "gold_score": 0.750352,
+    "gold_skill": "slide-deck-visual-auditor",
+    "id": "office_p5_slide_visual_audit",
+    "instruction_text": "Please review thesis_proposal_deck.pptx for presentation readiness. I need slide-level feedback on visual hierarchy, text overflow, alignment, theme consistency, and speaker-note fit.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_artifact_workflows",
+    "gold_boundary_score": 0.37451,
+    "gold_score": 0.556829,
+    "gold_skill": "office-to-markdown-converter",
+    "id": "office_p6_office_to_markdown",
+    "instruction_text": "Please convert project_brief.docx into clean Markdown for a repository. Preserve headings, tables, labels, and source traceability, but do not create tracked changes or a layout audit.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "planning_meetings",
+    "gold_boundary_score": 0.625517,
+    "gold_score": 0.719133,
+    "gold_skill": "meeting-agenda-builder",
+    "id": "plan_p1_meeting_agenda",
+    "instruction_text": "I have a short group project meeting tomorrow for a class presentation on AI study assistants. Please turn these topics into an agenda for that upcoming meeting: who will cover the demo, who will finish the slides, what risks could delay us before Friday, and what we need to prepare before the next check-in. The output should guide the meeting discussion, not schedule my whole week or only extract tasks.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "planning_meetings",
+    "gold_boundary_score": 0.65175,
+    "gold_score": 0.697731,
+    "gold_skill": "meeting-summary-writer",
+    "id": "plan_p2_meeting_summary",
+    "instruction_text": "Summarise these meeting notes into a clean meeting recap",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "planning_meetings",
+    "gold_boundary_score": 0.590259,
+    "gold_score": 0.514676,
+    "gold_skill": "meeting-followup-extractor",
+    "id": "plan_p3_meeting_followup",
+    "instruction_text": "I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention",
+    "non_core_above_gold_count": 2,
+    "non_core_competitor_count": 4,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.056007,
+        "score": 0.570684,
+        "shared_terms": [
+          "meet",
+          "note"
+        ],
+        "skill": "meeting-ops-summary-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.008143,
+        "score": 0.522819,
+        "shared_terms": [
+          "meet",
+          "note"
+        ],
+        "skill": "meeting-ops-quality-auditor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.002174,
+        "score": 0.512502,
+        "shared_terms": [
+          "meet",
+          "note"
+        ],
+        "skill": "meeting-ops-rewrite-editor",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.007066,
+        "score": 0.50761,
+        "shared_terms": [
+          "meet",
+          "note"
+        ],
+        "skill": "meeting-ops-normalizer",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "planning_meetings",
+    "gold_boundary_score": 0.479981,
+    "gold_score": 0.67848,
+    "gold_skill": "task-extractor",
+    "id": "plan_p4_task_extractor",
+    "instruction_text": "Turn these rough notes into a plain action-item list without scheduling the week and without treating them as completed meeting notes",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "planning_meetings",
+    "gold_boundary_score": 0.368333,
+    "gold_score": 0.734082,
+    "gold_skill": "weekly-planner",
+    "id": "plan_p5_weekly_planner",
+    "instruction_text": "Help me make a realistic week-level plan with sequencing and time buffers. I need to finish the planning skill family, revise prompts for the reply cluster, prepare for a Tuesday project meeting about collaborating on a prototype and brainstorming test cases for a multi-agent system, review two papers, send my supervisor a grounded summary by Thursday, and leave time for benchmark testing. I also have classes on Tuesday and Thursday afternoon. Do not just extract a raw task list or prepare a single meeting agenda.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.444915,
+    "gold_score": 0.582543,
+    "gold_skill": "paper-summariser",
+    "id": "read_p1_paper_summary",
+    "instruction_text": "Give me a balanced research-oriented recap of this academic paper. I want the research problem, overall approach, main findings, and limitations in one readable summary, not citation-ready notes and not a method-only audit",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.450578,
+    "gold_score": 0.476792,
+    "gold_skill": "general-source-summariser",
+    "id": "read_p2_general_source_summary",
+    "instruction_text": "Summarise this as a general source report rather than an academic paper. I need the context, main observations, practical recommendations, and evidence limits in plain language",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.416384,
+    "gold_score": 0.718352,
+    "gold_skill": "citation-note-extractor",
+    "id": "read_p3_citation_notes",
+    "instruction_text": "Make this source usable for me later when I'm writing by producing citation-ready notes",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.167909,
+    "gold_score": 0.571717,
+    "gold_skill": "document-extractor",
+    "id": "read_p4_document_extraction",
+    "instruction_text": "Extract the specific details from this source into a structured table of fields and values",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.449215,
+    "gold_score": 0.38924,
+    "gold_skill": "method-note-builder",
+    "id": "read_p5_method_notes",
+    "instruction_text": "Help me make sense of this source by focusing on how the work was actually carried out, how it was evaluated, and what assumptions or constraints shaped the result",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.017778,
+        "score": 0.371462,
+        "shared_terms": [
+          "focus",
+          "constraint",
+          "result"
+        ],
+        "skill": "procurement-risk-summariser",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.434153,
+    "gold_score": 0.521605,
+    "gold_skill": "citation-grounding-helper",
+    "id": "read_p6_grounding_check",
+    "instruction_text": "I wrote this exact sentence from the source: 'Explicit task decomposition reliably improves agent performance in realistic environments.' Perform a citation-grounding support audit: mark which parts of the sentence are supported, overstated, or unsupported, explain the overreach, and give a safer revised sentence if needed.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 6,
+    "non_core_near_gold_count": 6,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.008746,
+        "score": 0.512859,
+        "shared_terms": [
+          "task"
+        ],
+        "skill": "research-ops-rewrite-editor",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.009854,
+        "score": 0.511751,
+        "shared_terms": [
+          "task"
+        ],
+        "skill": "research-ops-summary-writer",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.009866,
+        "score": 0.511739,
+        "shared_terms": [
+          "task",
+          "audit"
+        ],
+        "skill": "research-ops-quality-auditor",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.01555,
+        "score": 0.506055,
+        "shared_terms": [
+          "task"
+        ],
+        "skill": "incident-ops-rewrite-editor",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.017316,
+        "score": 0.504289,
+        "shared_terms": [
+          "task",
+          "agent"
+        ],
+        "skill": "agent-ops-summary-writer",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.019514,
+        "score": 0.502091,
+        "shared_terms": [
+          "task"
+        ],
+        "skill": "research-ops-risk-reviewer",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.560977,
+    "gold_score": 0.664666,
+    "gold_skill": "multi-source-comparison-builder",
+    "id": "read_p7_multi_source_comparison",
+    "instruction_text": "Compare these two sources in a side-by-side table with separate columns for Source A and Source B so I can clearly see how they line up, where they differ, and what each one contributes. Use rows such as approach, evaluation, strengths, limitations, and contribution; do not turn it into a synthesized related-work paragraph, method-only note, or citation-note list.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reading_research",
+    "gold_boundary_score": 0.47685,
+    "gold_score": 0.715724,
+    "gold_skill": "related-work-synthesiser",
+    "id": "read_p8_related_work_synthesis",
+    "instruction_text": "Synthesize these two sources into related-work style notes: explain the main approaches, how they relate, the shared research direction, and what remains unresolved across them. I want an integrated synthesis, not a side-by-side comparison table.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reply_messaging",
+    "gold_boundary_score": 0.275409,
+    "gold_score": 0.562447,
+    "gold_skill": "professor-email-reply",
+    "id": "reply_p1_professor_reply",
+    "instruction_text": "Draft a respectful academic email reply to this message from my professor, including availability and a polite tone suitable for a supervisor relationship: 'Hi Jacky, thanks for your update. Would you be available to meet next Tuesday afternoon to discuss the revised thesis scope? Please let me know what time suits you best.'",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reply_messaging",
+    "gold_boundary_score": 0.449286,
+    "gold_score": 0.587236,
+    "gold_skill": "reply-polisher",
+    "id": "reply_p2_polish_supervisor",
+    "instruction_text": "Edit this already-written message only. Keep the same meaning, availability, and commitments, but improve flow, phrasing, tone, and readability. Return the refined version of this message.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reply_messaging",
+    "gold_boundary_score": 0.394253,
+    "gold_score": 0.619414,
+    "gold_skill": "groupwork-reply",
+    "id": "reply_p3_groupwork_coordination",
+    "instruction_text": "Draft a reply to these teammates about shared project coordination. The reply should clarify what I can take ownership of, confirm the deadline situation, and help the group move the work forward: 'Hey everyone, we need to lock in who is doing the slides, who is writing the report section, and whether we can still meet the Friday deadline. Can each of you confirm what you can finish by tomorrow?'",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reply_messaging",
+    "gold_boundary_score": 0.496402,
+    "gold_score": 0.610973,
+    "gold_skill": "followup-reply-writer",
+    "id": "reply_p4_followup_commitment",
+    "instruction_text": "Write a response whose main purpose is to state my next actions clearly",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "reply_messaging",
+    "gold_boundary_score": 0.544044,
+    "gold_score": 0.592637,
+    "gold_skill": "reply-drafter",
+    "id": "reply_p5_generic_fresh_draft",
+    "instruction_text": "Compose a concise new response from the source message only, confirming that I can send the requested file tomorrow. There is no existing reply text to polish, and I do not need a detailed action plan: 'Thanks for the update. Could you send me the file by tomorrow if possible?'",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "security_appsec",
+    "gold_boundary_score": 0.278701,
+    "gold_score": 0.404704,
+    "gold_skill": "security-threat-modeler",
+    "id": "sec_p1_threat_model",
+    "instruction_text": "We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk.",
+    "non_core_above_gold_count": 3,
+    "non_core_competitor_count": 5,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.058708,
+        "score": 0.463412,
+        "shared_terms": [
+          "user",
+          "public",
+          "link",
+          "external",
+          "security",
+          "risk"
+        ],
+        "skill": "public-openai-security-ownership-map",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.016516,
+        "score": 0.42122,
+        "shared_terms": [
+          "user",
+          "public",
+          "link",
+          "acces",
+          "external"
+        ],
+        "skill": "public-anthropic-slack-gif-creator",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.002296,
+        "score": 0.407,
+        "shared_terms": [
+          "user",
+          "public",
+          "link",
+          "external"
+        ],
+        "skill": "public-office-file-organizer",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.014896,
+        "score": 0.389808,
+        "shared_terms": [
+          "user",
+          "email",
+          "public",
+          "link",
+          "external",
+          "security",
+          "risk"
+        ],
+        "skill": "public-office-suspicious-email",
+        "status": "near_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.019178,
+        "score": 0.385526,
+        "shared_terms": [
+          "email",
+          "public",
+          "link",
+          "acces",
+          "external"
+        ],
+        "skill": "public-office-gmail-workflows",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "security_appsec",
+    "gold_boundary_score": 0.184873,
+    "gold_score": 0.472226,
+    "gold_skill": "security-code-reviewer",
+    "id": "sec_p2_security_code_review",
+    "instruction_text": "Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "security_appsec",
+    "gold_boundary_score": 0.229702,
+    "gold_score": 0.555982,
+    "gold_skill": "dependency-risk-auditor",
+    "id": "sec_p3_dependency_risk",
+    "instruction_text": "Check the risk of adding this new npm package. It has a broad dependency tree, a postinstall script, and the lockfile pulls in several old transitive packages. I need a dependency and supply-chain risk assessment.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "security_appsec",
+    "gold_boundary_score": 0.250661,
+    "gold_score": 0.481252,
+    "gold_skill": "secret-leak-scanner",
+    "id": "sec_p4_secret_leak",
+    "instruction_text": "Look at this diff and tell me if I accidentally exposed anything sensitive: it adds `.env.example`, updates a deployment log, and includes strings that look like `sk_live_...`, a database URL, and a webhook signing secret.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "security_appsec",
+    "gold_boundary_score": 0.281402,
+    "gold_score": 0.491952,
+    "gold_skill": "auth-flow-reviewer",
+    "id": "sec_p5_auth_flow",
+    "instruction_text": "Check whether this account-access change is safe. Users can refresh expired sessions, reset passwords by email link, and switch between workspace roles. I care about bypasses, stale permissions, and privilege escalation.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "security_appsec",
+    "gold_boundary_score": 0.401777,
+    "gold_score": 0.559842,
+    "gold_skill": "privacy-risk-reviewer",
+    "id": "sec_p6_privacy_review",
+    "instruction_text": "Assess the data-protection concerns in this analytics change. We want to log search queries, account region, user role, clicked filters, and partial email domains for 18 months so the product team can study usage patterns.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_lifecycle",
+    "gold_boundary_score": 0.271178,
+    "gold_score": 0.476134,
+    "gold_skill": "skill-finder",
+    "id": "skill_p1_find_existing",
+    "instruction_text": "Before I make anything new, search my existing capability library, shortlist available entries, assess fit and confidence, and decide whether one of them covers a workflow for turning messy meeting notes into action items and follow-up messages. I only want a reuse recommendation, not creation.",
+    "non_core_above_gold_count": 21,
+    "non_core_competitor_count": 38,
+    "non_core_near_gold_count": 17,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.157155,
+        "score": 0.633289,
+        "shared_terms": [
+          "capability",
+          "workflow",
+          "meet",
+          "note"
+        ],
+        "skill": "public-office-meeting-notes",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.06742,
+        "score": 0.543554,
+        "shared_terms": [
+          "available",
+          "fit",
+          "meet",
+          "note",
+          "action",
+          "follow-up"
+        ],
+        "skill": "meeting-ops-resource-linker",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.066183,
+        "score": 0.542316,
+        "shared_terms": [
+          "capability",
+          "workflow",
+          "meet"
+        ],
+        "skill": "public-openai-notion-meeting-intelligence",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.061298,
+        "score": 0.537432,
+        "shared_terms": [
+          "exist",
+          "fit",
+          "meet",
+          "note",
+          "action",
+          "follow-up"
+        ],
+        "skill": "meeting-ops-rewrite-editor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.058185,
+        "score": 0.534318,
+        "shared_terms": [
+          "fit",
+          "meet",
+          "note",
+          "action",
+          "follow-up"
+        ],
+        "skill": "meeting-ops-summary-writer",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.0381,
+        "score": 0.514234,
+        "shared_terms": [
+          "capability",
+          "entrie",
+          "workflow",
+          "turn",
+          "note"
+        ],
+        "skill": "public-openai-notion-knowledge-capture",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.03613,
+        "score": 0.512263,
+        "shared_terms": [
+          "available",
+          "fit",
+          "meet",
+          "note",
+          "action",
+          "item",
+          "follow-up",
+          "recommendation"
+        ],
+        "skill": "meeting-ops-comparison-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.033166,
+        "score": 0.5093,
+        "shared_terms": [
+          "fit",
+          "meet",
+          "note",
+          "action",
+          "item",
+          "follow-up"
+        ],
+        "skill": "meeting-ops-dependency-mapper",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.029016,
+        "score": 0.50515,
+        "shared_terms": [
+          "fit",
+          "meet",
+          "note",
+          "action",
+          "follow-up"
+        ],
+        "skill": "meeting-ops-artifact-packager",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.024283,
+        "score": 0.500417,
+        "shared_terms": [
+          "fit",
+          "note",
+          "item",
+          "follow-up"
+        ],
+        "skill": "personal-ops-summary-writer",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "skill_lifecycle",
+    "gold_boundary_score": 0.202407,
+    "gold_score": 0.282795,
+    "gold_skill": "skill-installer",
+    "id": "skill_p2_install_existing",
+    "instruction_text": "I found an existing spreadsheet-analysis capability in a public catalog and want it added to my active local library. Please fetch or prepare the package, verify the expected files, and report the source, local path, setup result, and any activation caveats.",
+    "non_core_above_gold_count": 73,
+    "non_core_competitor_count": 118,
+    "non_core_near_gold_count": 45,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.276184,
+        "score": 0.558979,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file",
+          "report"
+        ],
+        "skill": "public-office-data-analysis",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.253182,
+        "score": 0.535977,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file"
+        ],
+        "skill": "public-office-excel-automation",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.250816,
+        "score": 0.533611,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file"
+        ],
+        "skill": "public-office-xlsx-manipulation",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.234258,
+        "score": 0.517053,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file",
+          "report"
+        ],
+        "skill": "public-office-sheets-automation",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.209118,
+        "score": 0.491913,
+        "shared_terms": [
+          "exist",
+          "capability",
+          "add",
+          "file",
+          "report",
+          "path"
+        ],
+        "skill": "public-xlsx",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.17146,
+        "score": 0.454255,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file",
+          "report"
+        ],
+        "skill": "public-office-stock-analysis",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.124746,
+        "score": 0.407541,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file",
+          "report"
+        ],
+        "skill": "public-office-competitive-analysis",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.119926,
+        "score": 0.402721,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file"
+        ],
+        "skill": "public-office-data-pipeline",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.116926,
+        "score": 0.399721,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file"
+        ],
+        "skill": "public-office-etl-pipeline",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.108942,
+        "score": 0.391737,
+        "shared_terms": [
+          "capability",
+          "public",
+          "file"
+        ],
+        "skill": "public-office-linear-automation",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "skill_lifecycle",
+    "gold_boundary_score": 0.423506,
+    "gold_score": 0.578331,
+    "gold_skill": "skill-creator",
+    "id": "skill_p3_create_new",
+    "instruction_text": "Create a new atomic skill for a repeated workflow: I often need to turn supervisor meeting notes into a thesis action list with owners, deadlines, and open questions. There is no existing skill for this exact workflow.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.000436,
+        "score": 0.578767,
+        "shared_terms": [
+          "skill",
+          "supervisor",
+          "note",
+          "thesi",
+          "deadline",
+          "question"
+        ],
+        "skill": "thesis-ops-timeline-builder",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.017908,
+        "score": 0.560423,
+        "shared_terms": [
+          "skill",
+          "supervisor",
+          "note",
+          "thesi",
+          "question"
+        ],
+        "skill": "thesis-ops-normalizer",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "skill_lifecycle",
+    "gold_boundary_score": 0.376285,
+    "gold_score": 0.498999,
+    "gold_skill": "skill-editor",
+    "id": "skill_p4_edit_existing",
+    "instruction_text": "This existing skill's description is too broad and it keeps triggering for document summaries when it should only handle structured field extraction. Please revise the skill so its selection boundary is clearer.",
+    "non_core_above_gold_count": 108,
+    "non_core_competitor_count": 133,
+    "non_core_near_gold_count": 25,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.179724,
+        "score": 0.678723,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "document",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "docs-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.160404,
+        "score": 0.659403,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "search-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.157735,
+        "score": 0.656734,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "writing-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.156679,
+        "score": 0.655678,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "content-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.15477,
+        "score": 0.653769,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "research-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.154639,
+        "score": 0.653638,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "knowledge-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.142474,
+        "score": 0.641473,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "ux-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.138077,
+        "score": 0.637076,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "thesis-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.131574,
+        "score": 0.630573,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "training-ops-field-extractor",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": 0.128446,
+        "score": 0.627445,
+        "shared_terms": [
+          "skill'",
+          "keep",
+          "summary",
+          "structur",
+          "field",
+          "extract",
+          "skill"
+        ],
+        "skill": "seo-ops-field-extractor",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "skill_lifecycle",
+    "gold_boundary_score": 0.33368,
+    "gold_score": 0.463809,
+    "gold_skill": "skill-evaluator",
+    "id": "skill_p5_evaluate_existing",
+    "instruction_text": "Test whether my `reply-polisher` skill actually triggers only when there is already a draft reply. I want an evaluation with realistic near-boundary prompts before deciding whether to edit it.",
+    "non_core_above_gold_count": 2,
+    "non_core_competitor_count": 4,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "email_communication",
+        "margin_vs_gold": 0.123894,
+        "score": 0.587702,
+        "shared_terms": [
+          "only",
+          "already",
+          "draft",
+          "reply"
+        ],
+        "skill": "email-polisher",
+        "status": "above_gold"
+      },
+      {
+        "family": "email_communication",
+        "margin_vs_gold": 0.038358,
+        "score": 0.502167,
+        "shared_terms": [
+          "only",
+          "draft",
+          "reply",
+          "edit"
+        ],
+        "skill": "email-drafter",
+        "status": "above_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.016154,
+        "score": 0.447655,
+        "shared_terms": [
+          "skill",
+          "evaluation",
+          "prompt"
+        ],
+        "skill": "prompt-refiner",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.016967,
+        "score": 0.446842,
+        "shared_terms": [
+          "test",
+          "skill",
+          "draft",
+          "reply"
+        ],
+        "skill": "email-ops-acceptance-test-builder",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "skill_lifecycle",
+    "gold_boundary_score": 0.372645,
+    "gold_score": 0.476395,
+    "gold_skill": "skill-packager",
+    "id": "skill_p6_package_existing",
+    "instruction_text": "I finished an existing `paper-summariser` skill and want to share it with someone else. Check the folder shape, metadata, resource links, and unnecessary files so it is package-ready.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.010359,
+        "score": 0.466036,
+        "shared_terms": [
+          "skill",
+          "check",
+          "metadata",
+          "resource",
+          "link",
+          "file"
+        ],
+        "skill": "public-anthropic-doc-coauthoring",
+        "status": "near_gold"
+      }
+    ]
+  }
+]

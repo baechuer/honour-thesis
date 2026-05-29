@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper,oneside]{report}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.75em}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\newcommand{\placeholder}[1]{%
+  \par\noindent
+  \fbox{\begin{minipage}{0.96\textwidth}
+  \textbf{Placeholder.} #1
+  \end{minipage}}\par
+}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Large INFO4990 Honours Thesis Draft\par}
+  \vspace{1.5cm}
+  {\huge\bfseries Skill Representation for Scalable Agent Skill Retrieval under Semantic Confusability\par}
+  \vspace{1.5cm}
+  {\Large Jacky Zhang\par}
+  \vfill
+  {\large The University of Sydney\par}
+  {\large Draft date: \today\par}
+\end{titlepage}
+\clearpage
+
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\input{chapters/00_abstract}
+\input{chapters/00_declaration}
+
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+\input{chapters/01_introduction}
+\input{chapters/02_literature_review}
+\input{chapters/03_conceptual_framework}
+\input{chapters/04_benchmark_design}
+\input{chapters/05_methodology}
+\input{chapters/06_results}
+\input{chapters/07_discussion}
+\input{chapters/08_conclusion}
+
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{../references}
+
+\appendix
+\input{chapters/appendix_a_benchmark_rubric}
+\input{chapters/appendix_b_prompt_examples}
+
+\end{document}

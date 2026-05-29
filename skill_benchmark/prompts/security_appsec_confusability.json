@@ -1,0 +1,68 @@
+[
+  {
+    "id": "sec_p1_threat_model",
+    "family": "security_appsec",
+    "gold_skill": "security-threat-modeler",
+    "closest_alternatives": [
+      "security-code-reviewer",
+      "auth-flow-reviewer",
+      "privacy-risk-reviewer"
+    ],
+    "prompt": "We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk."
+  },
+  {
+    "id": "sec_p2_security_code_review",
+    "family": "security_appsec",
+    "gold_skill": "security-code-reviewer",
+    "closest_alternatives": [
+      "code-reviewer",
+      "auth-flow-reviewer",
+      "security-threat-modeler"
+    ],
+    "prompt": "Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function."
+  },
+  {
+    "id": "sec_p3_dependency_risk",
+    "family": "security_appsec",
+    "gold_skill": "dependency-risk-auditor",
+    "closest_alternatives": [
+      "security-code-reviewer",
+      "secret-leak-scanner",
+      "ci-failure-debugger"
+    ],
+    "prompt": "Check the risk of adding this new npm package. It has a broad dependency tree, a postinstall script, and the lockfile pulls in several old transitive packages. I need a dependency and supply-chain risk assessment."
+  },
+  {
+    "id": "sec_p4_secret_leak",
+    "family": "security_appsec",
+    "gold_skill": "secret-leak-scanner",
+    "closest_alternatives": [
+      "dependency-risk-auditor",
+      "security-code-reviewer",
+      "privacy-risk-reviewer"
+    ],
+    "prompt": "Look at this diff and tell me if I accidentally exposed anything sensitive: it adds `.env.example`, updates a deployment log, and includes strings that look like `sk_live_...`, a database URL, and a webhook signing secret."
+  },
+  {
+    "id": "sec_p5_auth_flow",
+    "family": "security_appsec",
+    "gold_skill": "auth-flow-reviewer",
+    "closest_alternatives": [
+      "security-code-reviewer",
+      "security-threat-modeler",
+      "privacy-risk-reviewer"
+    ],
+    "prompt": "Check whether this account-access change is safe. Users can refresh expired sessions, reset passwords by email link, and switch between workspace roles. I care about bypasses, stale permissions, and privilege escalation."
+  },
+  {
+    "id": "sec_p6_privacy_review",
+    "family": "security_appsec",
+    "gold_skill": "privacy-risk-reviewer",
+    "closest_alternatives": [
+      "security-threat-modeler",
+      "secret-leak-scanner",
+      "auth-flow-reviewer"
+    ],
+    "prompt": "Assess the data-protection concerns in this analytics change. We want to log search queries, account region, user role, clicked filters, and partial email domains for 18 months so the product team can study usage patterns."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "slug": "public-anthropic-claude-api",
+  "source_name": "claude-api",
+  "origin": "anthropics/skills",
+  "source_url": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
+  "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for claude api; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "API documentation",
+    "authentication context",
+    "schema or tool contract"
+  ],
+  "resource_signals": [
+    "claude api",
+    "public SKILL.md metadata",
+    "API",
+    "tool contract",
+    "auth",
+    "schema"
+  ]
+}

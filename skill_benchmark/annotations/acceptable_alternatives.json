@@ -1,0 +1,56 @@
+{
+  "api_p2_external_api_integration": {
+    "acceptable": [
+      "api-integration-planner"
+    ],
+    "borderline": [],
+    "notes": "The generated background skill is a near-duplicate of the controlled external API integration planner. Count it as acceptable if selected, but keep the controlled gold for core-cluster comparisons."
+  },
+  "code_p5_changelog_entry": {
+    "acceptable": [
+      "public-office-changelog-generator"
+    ],
+    "borderline": [],
+    "notes": "The public imported changelog generator is a genuine changelog-writing capability. It is acceptable in the scaled-library condition even though the controlled gold remains the hand-authored changelog writer."
+  },
+  "doc_p2_document_rewriter": {
+    "acceptable": [
+      "travel-ops-rewrite-editor"
+    ],
+    "borderline": [
+      "travel-ops-summary-writer"
+    ],
+    "notes": "The source is a travel request note and the requested artifact is a polished prose rewrite. A domain-specific travel rewrite skill is a near-equivalent acceptable selection."
+  },
+  "doc_p5_comparison_preparation": {
+    "acceptable": [
+      "legal-ops-comparison-builder"
+    ],
+    "borderline": [
+      "writing-ops-comparison-builder",
+      "docs-ops-comparison-builder"
+    ],
+    "notes": "The prompt compares policy drafts. A legal/policy comparison skill is close enough that strict gold-only scoring is misleading."
+  },
+  "doc_p6_conversion": {
+    "acceptable": [
+      "public-markitdown"
+    ],
+    "borderline": [],
+    "notes": "The prompt asks to convert a form into clean Markdown notes. A public MarkItDown-style conversion skill is a reasonable near-equivalent."
+  },
+  "obs_p6_incident_summary": {
+    "acceptable": [
+      "incident-ops-summary-writer"
+    ],
+    "borderline": [],
+    "notes": "Both skills produce incident summaries from operational material. The controlled gold is more tailored, but the background skill is acceptable."
+  },
+  "skill_p2_install_existing": {
+    "acceptable": [
+      "public-skill-installer"
+    ],
+    "borderline": [],
+    "notes": "The public skill-installer wrapper is a true installation procedure and should count as acceptable if selected; public-xlsx is only the object/source capability."
+  }
+}

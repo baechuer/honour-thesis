@@ -1,0 +1,52 @@
+[
+  {
+    "id": "reply_p1_professor_reply",
+    "family": "reply_messaging",
+    "gold_skill": "professor-email-reply",
+    "closest_alternatives": [
+      "reply-drafter",
+      "reply-polisher"
+    ],
+    "prompt": "Draft a respectful academic email reply to this message from my professor, including availability and a polite tone suitable for a supervisor relationship: 'Hi Jacky, thanks for your update. Would you be available to meet next Tuesday afternoon to discuss the revised thesis scope? Please let me know what time suits you best.'"
+  },
+  {
+    "id": "reply_p2_polish_supervisor",
+    "family": "reply_messaging",
+    "gold_skill": "reply-polisher",
+    "closest_alternatives": [
+      "professor-email-reply",
+      "reply-drafter"
+    ],
+    "prompt": "Edit this already-written message only. Keep the same meaning, availability, and commitments, but improve flow, phrasing, tone, and readability. Return the refined version of this message. Text: 'Hi, Tuesday should be okay. I can probably do sometime after lunch. Let me know.'"
+  },
+  {
+    "id": "reply_p3_groupwork_coordination",
+    "family": "reply_messaging",
+    "gold_skill": "groupwork-reply",
+    "closest_alternatives": [
+      "reply-drafter",
+      "followup-reply-writer"
+    ],
+    "prompt": "Draft a reply to these teammates about shared project coordination. The reply should clarify what I can take ownership of, confirm the deadline situation, and help the group move the work forward: 'Hey everyone, we need to lock in who is doing the slides, who is writing the report section, and whether we can still meet the Friday deadline. Can each of you confirm what you can finish by tomorrow?'"
+  },
+  {
+    "id": "reply_p4_followup_commitment",
+    "family": "reply_messaging",
+    "gold_skill": "followup-reply-writer",
+    "closest_alternatives": [
+      "reply-drafter",
+      "groupwork-reply"
+    ],
+    "prompt": "Write a response whose main purpose is to state my next actions clearly: what I will revise, what I will send back, and when I will send the update. This is about commitments and timing, not just a generic fresh reply: 'Thanks for sending this through. Could you confirm which parts you will revise, and when you expect to have the updated draft ready?'"
+  },
+  {
+    "id": "reply_p5_generic_fresh_draft",
+    "family": "reply_messaging",
+    "gold_skill": "reply-drafter",
+    "closest_alternatives": [
+      "reply-polisher",
+      "followup-reply-writer"
+    ],
+    "prompt": "Compose a concise new response from the source message only, confirming that I can send the requested file tomorrow. There is no existing reply text to polish, and I do not need a detailed action plan: 'Thanks for the update. Could you send me the file by tomorrow if possible?'"
+  }
+]

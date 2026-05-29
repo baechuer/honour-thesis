@@ -1,0 +1,68 @@
+[
+  {
+    "id": "skill_p1_find_existing",
+    "family": "skill_lifecycle",
+    "gold_skill": "skill-finder",
+    "closest_alternatives": [
+      "skill-creator",
+      "skill-installer",
+      "skill-editor"
+    ],
+    "prompt": "Before I make anything new, search my existing capability library, shortlist available entries, assess fit and confidence, and decide whether one of them covers a workflow for turning messy meeting notes into action items and follow-up messages. I only want a reuse recommendation, not creation."
+  },
+  {
+    "id": "skill_p2_install_existing",
+    "family": "skill_lifecycle",
+    "gold_skill": "skill-installer",
+    "closest_alternatives": [
+      "skill-finder",
+      "skill-creator",
+      "skill-packager"
+    ],
+    "prompt": "I found an existing spreadsheet-analysis capability in a public catalog and want it added to my active local library. Please fetch or prepare the package, verify the expected files, and report the source, local path, setup result, and any activation caveats."
+  },
+  {
+    "id": "skill_p3_create_new",
+    "family": "skill_lifecycle",
+    "gold_skill": "skill-creator",
+    "closest_alternatives": [
+      "skill-editor",
+      "skill-finder",
+      "skill-packager"
+    ],
+    "prompt": "Create a new atomic skill for a repeated workflow: I often need to turn supervisor meeting notes into a thesis action list with owners, deadlines, and open questions. There is no existing skill for this exact workflow."
+  },
+  {
+    "id": "skill_p4_edit_existing",
+    "family": "skill_lifecycle",
+    "gold_skill": "skill-editor",
+    "closest_alternatives": [
+      "skill-creator",
+      "skill-evaluator",
+      "skill-packager"
+    ],
+    "prompt": "This existing skill's description is too broad and it keeps triggering for document summaries when it should only handle structured field extraction. Please revise the skill so its selection boundary is clearer."
+  },
+  {
+    "id": "skill_p5_evaluate_existing",
+    "family": "skill_lifecycle",
+    "gold_skill": "skill-evaluator",
+    "closest_alternatives": [
+      "skill-editor",
+      "skill-finder",
+      "skill-creator"
+    ],
+    "prompt": "Test whether my `reply-polisher` skill actually triggers only when there is already a draft reply. I want an evaluation with realistic near-boundary prompts before deciding whether to edit it."
+  },
+  {
+    "id": "skill_p6_package_existing",
+    "family": "skill_lifecycle",
+    "gold_skill": "skill-packager",
+    "closest_alternatives": [
+      "skill-creator",
+      "skill-installer",
+      "skill-editor"
+    ],
+    "prompt": "I finished an existing `paper-summariser` skill and want to share it with someone else. Check the folder shape, metadata, resource links, and unnecessary files so it is package-ready."
+  }
+]

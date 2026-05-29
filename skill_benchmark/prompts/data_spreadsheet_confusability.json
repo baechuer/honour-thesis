@@ -1,0 +1,79 @@
+[
+  {
+    "id": "data_p1_overview",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-overview",
+    "closest_alternatives": [
+      "data-analysis-for-reporting",
+      "data-analysis-with-anomaly-focus",
+      "data-analysis-with-validation"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. I need a broad exploratory orientation: what the sheet contains, the overall picture, the main patterns, the most useful caveats, and a few sensible next questions. Do not turn it into an executive report, forecast, ranking recommendation, or diagnosis of one specific problem yet."
+  },
+  {
+    "id": "data_p2_anomaly_focus",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-with-anomaly-focus",
+    "closest_alternatives": [
+      "data-analysis-overview",
+      "data-analysis-for-root-cause-diagnosis",
+      "data-analysis-with-validation"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Build an anomaly watchlist: which spikes, dips, outliers, or concentrated deviations look most worth worrying about, and how confident should I be that each one is real? Do not explain root cause yet."
+  },
+  {
+    "id": "data_p3_validation",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-with-validation",
+    "closest_alternatives": [
+      "data-analysis-overview",
+      "data-analysis-with-anomaly-focus",
+      "data-analysis-for-root-cause-diagnosis"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is."
+  },
+  {
+    "id": "data_p4_root_cause",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-for-root-cause-diagnosis",
+    "closest_alternatives": [
+      "data-analysis-with-anomaly-focus",
+      "data-analysis-overview",
+      "data-analysis-with-validation"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. This seems to be getting worse. Assume the data is usable enough for analysis and trace the most likely driver: which channel, metric, or segment appears to explain the degradation, and what evidence supports that diagnosis?"
+  },
+  {
+    "id": "data_p5_reporting",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-for-reporting",
+    "closest_alternatives": [
+      "data-analysis-overview",
+      "data-analysis-for-root-cause-diagnosis",
+      "data-analysis-with-anomaly-focus"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Turn this into an upward-facing reporting brief: a headline, two or three executive takeaways, the clearest supporting numbers, and one caveat. Do not give me a broad exploratory analysis."
+  },
+  {
+    "id": "data_p6_forecasting",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-for-forecasting",
+    "closest_alternatives": [
+      "data-analysis-overview",
+      "data-analysis-for-root-cause-diagnosis",
+      "data-analysis-with-anomaly-focus"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Forecast the likely next direction if the current pattern keeps going: what seems likely to happen next, what evidence supports that continuation, and how much should I trust the forecast?"
+  },
+  {
+    "id": "data_p7_ranking_selection",
+    "family": "data_spreadsheet",
+    "gold_skill": "data-analysis-for-ranking-selection",
+    "closest_alternatives": [
+      "data-analysis-overview",
+      "data-analysis-for-reporting",
+      "data-analysis-for-forecasting"
+    ],
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/pilot_priority_options.csv`. Compare the options, rank them for action now, recommend the first choice, explain the decision criteria and trade-offs behind that ordering, and say what follow-up check would reduce decision risk. This is a selection task, not a forecast of one metric or a broad overview."
+  }
+]

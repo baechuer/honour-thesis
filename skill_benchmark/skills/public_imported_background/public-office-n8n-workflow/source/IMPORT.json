@@ -1,0 +1,18 @@
+{
+  "slug": "public-office-n8n-workflow",
+  "source_name": "n8n-workflow",
+  "origin": "claude-office-skills/skills",
+  "source_url": "https://github.com/claude-office-skills/skills/tree/main/n8n-workflow",
+  "raw_url": "https://raw.githubusercontent.com/claude-office-skills/skills/main/n8n-workflow/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for n8n workflow; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request"
+  ],
+  "resource_signals": [
+    "n8n workflow",
+    "public SKILL.md metadata"
+  ]
+}

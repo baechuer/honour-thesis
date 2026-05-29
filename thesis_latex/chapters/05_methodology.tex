@@ -1,0 +1,83 @@
+\chapter{Methodology}
+
+\section{Experimental Overview}
+
+The methodology is a controlled comparison of representation-and-retrieval conditions. Each method receives the same user prompts and skill library, produces a ranked list of candidate skills, and is evaluated against gold labels and acceptable alternatives.
+
+The independent variables are the selection representation and retrieval policy. The main dependent measures are top-1 accuracy, top-k recall, mean reciprocal rank, context cost, latency, and qualitative failure type.
+
+\section{Representation Conditions}
+
+The current experiments include the following representation conditions:
+
+\begin{itemize}
+  \item \textbf{R1 flat metadata:} skill name, family, tags, and short description.
+  \item \textbf{Full artifact text:} the full \texttt{SKILL.md} text.
+  \item \textbf{R2 structured procedural card:} explicit procedural fields such as use cases, preconditions, workflow, outputs, and negative boundaries.
+  \item \textbf{R3 dependency/resource-aware representation:} structured procedural fields plus dependency and resource signals.
+  \item \textbf{R4 graph edges:} explicit relation files for future graph experiments.
+\end{itemize}
+
+\placeholder{Clarify which R-levels are used in the final experiments. If R3 and R4 are not central, explain that they are prepared but not fully evaluated.}
+
+\section{Retrieval Strategies}
+
+The current method families are:
+
+\begin{itemize}
+  \item \textbf{M0 progressive disclosure:} the main agent sees visible skill cards and decides which full skill documents to load.
+  \item \textbf{M1 lexical flat retrieval:} BM25 or TF-IDF over flat metadata.
+  \item \textbf{M2 embedding retrieval:} dense retrieval over descriptions or full skill artifacts.
+  \item \textbf{M3 schema-based retrieval:} structured scoring over procedural fields.
+  \item \textbf{M6 local hybrid retrieval:} first-stage retrieval followed by deterministic schema reranking.
+  \item \textbf{M7 provider embedding retrieval:} API-based dense retrieval using Qwen embeddings.
+  \item \textbf{M8 provider neural reranking:} Qwen embedding retrieval followed by Qwen reranking.
+  \item \textbf{M8b provider retrieval plus local schema reranking:} Qwen first-stage retrieval followed by deterministic procedural reranking.
+\end{itemize}
+
+Tree-based and graph-based strategies are currently planned but not yet fully implemented. They remain relevant to the thesis design, but the current strongest evidence comes from full-artifact embedding retrieval combined with procedural schema reranking.
+
+\section{Schema Reranking}
+
+The local schema reranker is deterministic. It scores overlap between the user request and structured skill fields, with stronger weights assigned to fields that should reflect procedural suitability. These include use cases, outputs, preconditions, workflow steps, dependencies, resources, and negative boundaries. The final reranked score combines the first-stage retrieval score with the schema score.
+
+This method is intentionally simple. Its purpose is not to claim that hand-weighted overlap is the best possible architecture, but to test whether explicit procedural fields contain information that helps resolve semantically confusable retrieval cases.
+
+\placeholder{Insert the final exact weighting formula and justify each field weight. Include an ablation if time permits.}
+
+\section{Evaluation Metrics}
+
+The retrieval metrics are:
+
+\begin{itemize}
+  \item \textbf{Top-1 accuracy:} whether the top-ranked skill is the gold or acceptable skill.
+  \item \textbf{Top-k recall:} whether the gold or acceptable skill appears within the top-k candidate set.
+  \item \textbf{Mean reciprocal rank:} how highly the gold skill is ranked.
+  \item \textbf{Non-core top-1 rate:} how often a background skill outranks the intended controlled skill.
+\end{itemize}
+
+The efficiency metrics are:
+
+\begin{itemize}
+  \item candidate budget;
+  \item representation length;
+  \item token or context cost;
+  \item latency;
+  \item API calls and cache behaviour.
+\end{itemize}
+
+The qualitative evaluation records failure modes such as first-stage exclusion, reranker misweighting, negation failure, object/meta-skill confusion, underspecified prompts, and acceptable-alternative ambiguity.
+
+\section{Downstream Validation Plan}
+
+Downstream validation will test whether retrieval improvements translate into better task outcomes. A smaller subset of prompts will be selected, and the agent will receive either the top-1 selected skill or a top-k candidate set. Generated artifacts will then be graded against task-specific success criteria.
+
+\placeholder{Step 8 is not yet executed. Add final downstream task selection, grading rubric, evaluator design, and results once the experiment is complete.}
+
+\section{Ethics, Copyright, and Reproducibility}
+
+This project does not currently involve human participants or sensitive personal data. The benchmark consists of synthetic prompts, controlled skill artifacts, generated background skills, and a small number of public skill examples used for research comparison. Any public skill material should be recorded with source information and license notes where available.
+
+Reproducibility is supported by storing benchmark prompts, skill artifacts, representation exports, selector scripts, cached provider outputs, and evaluation reports in the project repository. Provider-based experiments should report model names, API providers, candidate budgets, cache status, and approximate cost or latency where possible.
+
+\placeholder{Confirm the final ethics status with supervisor guidance. Add any required USYD academic honesty, copyright, AI-use, and data-management statements.}

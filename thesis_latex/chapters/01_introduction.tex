@@ -1,0 +1,48 @@
+\chapter{Introduction}
+
+\section{Background}
+
+Large language model (LLM) agents are increasingly designed as systems that combine reasoning, action, memory, and external capability use rather than as standalone text generators. Early work on retrieval-augmented generation showed that language models can improve performance by accessing external information at inference time rather than relying solely on knowledge stored in model parameters \cite{lewis2021rag, izacard2022atlas}. Later work on tool use extended this idea from document retrieval to action execution by enabling models to call external functions and APIs \cite{schick2023toolformer, patil2023gorilla, qin2023toolllm}.
+
+More recently, agent systems have begun to treat reusable capabilities as \emph{skills}. A skill is not simply an atomic tool call. It may include instructions, workflow steps, scripts, examples, dependencies, input requirements, output expectations, and constraints. In practical systems such as filesystem-based agent skill libraries, the full skill artifact may be stored as a directory containing a \texttt{SKILL.md} file plus optional resources. The agent may initially see only a compressed representation, such as a name and description, before deciding whether to load the full artifact.
+
+This shift changes the retrieval problem. If the object being selected is a high-level procedure rather than an atomic function, retrieval quality depends not only on topical relevance, but also on procedural suitability. Two skills may look semantically similar because they refer to the same domain or task family, while still differing in preconditions, workflow steps, required resources, output format, or side effects.
+
+\section{Problem Statement}
+
+The problem addressed in this thesis is semantic confusion in large agent skill libraries. As skill libraries grow, a user request may match many plausible skills at the level of names and descriptions. The correct skill may exist, but the retrieval system may surface a nearby skill that sounds relevant while being procedurally wrong.
+
+This failure mode is different from ordinary retrieval failure. The wrong result is often not unrelated. It is close enough to be tempting. For example, a request to ``extract information from this PDF'' may plausibly match document review, document summarisation, citation grounding, field extraction, or layout-preserving conversion. These skills may all mention documents, extraction, or PDFs, but they require different procedures and produce different outputs. A flat description may not preserve the procedural distinctions required for correct selection.
+
+The scalability issue makes this worse. In a small library, the main agent may be able to inspect all skill names and short descriptions in context. In a larger library, even this metadata can become too large or noisy. The system then needs a candidate-subsetting stage before the main agent loads any full skill document. This makes the selection representation critical: the correct skill must be surfaced before the full artifact can be inspected.
+
+\section{Research Questions}
+
+This thesis uses the following working research questions:
+
+\textbf{RQ1:} What information must agent skill representations preserve to distinguish semantically similar but procedurally distinct skills at scale?
+
+\textbf{RQ2:} How do retrieval strategies that use flat text, dense embeddings, structured procedural fields, or hybrid reranking differ in accuracy, efficiency, and failure modes when applied to scalable skill libraries?
+
+These questions revise an earlier framing that asked more generally how structure-aware representations improve over flat description-based retrieval. The revised framing keeps retrieval strategies in scope, but makes representation quality the central research object. The thesis therefore asks not only which method performs best, but what kinds of information are being preserved, lost, or exploited by each method.
+
+\section{Scope}
+
+The thesis focuses on retrieval and candidate selection before full skill execution. It does not attempt to build a complete general-purpose agent operating system. The main agent, the retriever, and the reranker are treated as separable components. The retriever may be a lexical method, an embedding model, a deterministic schema scorer, a neural reranker, or a hybrid pipeline. What matters is whether the retrieval stage can produce a candidate set that contains and ranks the procedurally correct skill.
+
+The evaluation focuses on skill libraries where some skills are intentionally confusable. This is important because broad relevance retrieval is too easy for the research question. A benchmark that only asks whether a document task retrieves a document skill would not test the central failure mode. The difficult case is selecting between skills that share the same broad domain but differ in operational requirements.
+
+\section{Contributions}
+
+This thesis aims to make four contributions:
+
+\begin{enumerate}
+  \item A conceptual framework that separates skill artifacts, selection representations, and retrieval policies.
+  \item A benchmark design for scalable skill retrieval under semantic confusability and procedural distinctness.
+  \item An empirical comparison of flat metadata, full skill artifacts, structured procedural representations, and hybrid retrieval-reranking methods.
+  \item A failure-mode analysis identifying what information is needed for robust skill selection, including inputs, outputs, preconditions, workflow constraints, dependencies, resources, negative boundaries, and meta-level task roles.
+\end{enumerate}
+
+\section{Thesis Structure}
+
+Chapter 2 reviews the literature on retrieval-augmented language models, tool use, agent skills, skill-library scaling, and structure-aware retrieval. Chapter 3 defines the conceptual framework used throughout the thesis. Chapter 4 describes the benchmark design. Chapter 5 explains the methodology and evaluation metrics. Chapter 6 reports current and planned results. Chapter 7 discusses implications and failure modes. Chapter 8 concludes the thesis and outlines future work.

@@ -1,0 +1,35 @@
+.env
+.env.*
+!.env.example
+.local.env
+
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+node_modules/
+.git-backups/
+
+skill_benchmark/runtime/provider_cache/
+
+# LaTeX build intermediates
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+
+# Generated/transient local artifacts
+/output/
+/outputs/
+
+# Submitted assignment source PDFs are local reference material.
+thesis_notes/submitted_assignment/*.pdf

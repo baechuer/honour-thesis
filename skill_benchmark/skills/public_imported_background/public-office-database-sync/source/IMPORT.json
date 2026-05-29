@@ -1,0 +1,25 @@
+{
+  "slug": "public-office-database-sync",
+  "source_name": "database-sync",
+  "origin": "claude-office-skills/skills",
+  "source_url": "https://github.com/claude-office-skills/skills/tree/main/database-sync",
+  "raw_url": "https://raw.githubusercontent.com/claude-office-skills/skills/main/database-sync/SKILL.md",
+  "import_status": "downloaded",
+  "error": null,
+  "dependency_profile": "public workflow for database sync; depends on the source artifact and task context named by the user",
+  "external_dependencies": [
+    "user-provided task context",
+    "source material named in the request",
+    "dataset or export",
+    "schema",
+    "processing rules"
+  ],
+  "resource_signals": [
+    "database sync",
+    "public SKILL.md metadata",
+    "data",
+    "schema",
+    "pipeline",
+    "quality"
+  ]
+}

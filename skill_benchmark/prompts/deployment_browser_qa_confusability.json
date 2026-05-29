@@ -1,0 +1,72 @@
+[
+  {
+    "id": "deploy_p1_playwright_flow_debug",
+    "family": "deployment_browser_qa",
+    "gold_skill": "playwright-flow-debugger",
+    "closest_alternatives": [
+      "visual-regression-checker",
+      "accessibility-interaction-auditor",
+      "public-playwright-interactive",
+      "public-openai-playwright"
+    ],
+    "prompt": "The checkout flow at `http://localhost:4173/checkout` fails after I click Apply coupon. Please reproduce the interaction with browser evidence, capture console or network clues, and identify why the flow breaks."
+  },
+  {
+    "id": "deploy_p2_visual_regression",
+    "family": "deployment_browser_qa",
+    "gold_skill": "visual-regression-checker",
+    "closest_alternatives": [
+      "playwright-flow-debugger",
+      "accessibility-interaction-auditor",
+      "public-openai-screenshot",
+      "public-anthropic-webapp-testing"
+    ],
+    "prompt": "Please compare the baseline and current screenshots for `/workspace/fixtures/deployment_browser_qa/pricing_page_desktop.png` and `/workspace/fixtures/deployment_browser_qa/pricing_page_mobile.png`. I need visual regressions like clipping, spacing shifts, text overflow, and contrast changes."
+  },
+  {
+    "id": "deploy_p3_accessibility_interaction",
+    "family": "deployment_browser_qa",
+    "gold_skill": "accessibility-interaction-auditor",
+    "closest_alternatives": [
+      "visual-regression-checker",
+      "playwright-flow-debugger",
+      "web-ui-tester",
+      "public-anthropic-webapp-testing"
+    ],
+    "prompt": "Please audit the account-settings modal for keyboard and screen-reader interaction. Focus on tab order, focus trapping, accessible names, ARIA state, and whether form errors are announced."
+  },
+  {
+    "id": "deploy_p4_build_log_triage",
+    "family": "deployment_browser_qa",
+    "gold_skill": "deployment-build-triager",
+    "closest_alternatives": [
+      "deployment-release-verifier",
+      "playwright-flow-debugger",
+      "web-performance-budget-checker"
+    ],
+    "prompt": "The Netlify deploy for `/workspace/fixtures/deployment_browser_qa/build_log.txt` failed. Please inspect the build log and identify the likely root cause, missing env/config assumptions, and the smallest rerun sequence."
+  },
+  {
+    "id": "deploy_p5_release_verification",
+    "family": "deployment_browser_qa",
+    "gold_skill": "deployment-release-verifier",
+    "closest_alternatives": [
+      "deployment-build-triager",
+      "visual-regression-checker",
+      "public-netlify-deploy",
+      "public-openai-vercel-deploy"
+    ],
+    "prompt": "The production deploy is live at `https://example-release.netlify.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, and rollback notes."
+  },
+  {
+    "id": "deploy_p6_performance_budget",
+    "family": "deployment_browser_qa",
+    "gold_skill": "web-performance-budget-checker",
+    "closest_alternatives": [
+      "visual-regression-checker",
+      "deployment-release-verifier",
+      "accessibility-interaction-auditor"
+    ],
+    "prompt": "Please review `/workspace/fixtures/deployment_browser_qa/lighthouse_trace_summary.txt` against a mobile performance budget. I care about LCP, blocking scripts, network weight, image size, and which fixes matter most."
+  }
+]

@@ -1,0 +1,115 @@
+\chapter{Results}
+
+\section{Benchmark Validation Results}
+
+The current benchmark contains 1006 skills and 67 evaluated prompts. The validation rubric currently shows:
+
+\begin{itemize}
+  \item Step 1 integrity passed: all prompts and gold skills resolve.
+  \item Step 2 procedural alignment passed: all prompts pass field audit, with a small number of watch items under stricter alignment.
+  \item Step 3 semantic confusability passed: most prompts have measurable near-neighbour semantic competition.
+  \item Step 4 prompt leakage passed: no critical exact-name leaks or high-risk leaks.
+  \item Step 5 scale regime passed: the library is large enough to test scalable retrieval pressure.
+\end{itemize}
+
+\placeholder{Insert the final benchmark validation table from the rubric output. Include exact counts and thresholds.}
+
+\section{Local Selector Results}
+
+Table \ref{tab:local-results} summarises the current local full-library results.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Method & Top-1 & Top-5 & MRR \\
+\midrule
+M1 BM25 flat & 64.2\% & 86.6\% & 0.733 \\
+M1 TF-IDF flat & 58.2\% & 85.1\% & 0.697 \\
+M2a MiniLM description & 47.8\% & 74.6\% & 0.603 \\
+M2b MiniLM full skill & 61.2\% & 82.1\% & 0.717 \\
+M3 TF-IDF schema & 71.6\% & 95.5\% & 0.808 \\
+M6 BM25 to schema rerank & 71.6\% & 92.5\% & 0.815 \\
+M6 TF-IDF to schema rerank & 70.2\% & 85.1\% & 0.778 \\
+M6 MiniLM full to schema rerank & 80.6\% & 91.0\% & 0.856 \\
+\bottomrule
+\end{tabular}
+\caption{Current local selector results on the 1006-skill library.}
+\label{tab:local-results}
+\end{table}
+
+These results suggest that description-only embedding is fragile under scale, while full-skill retrieval and schema-aware reranking improve performance. The best local method is the hybrid full-skill embedding plus schema reranking condition.
+
+\section{Provider Results}
+
+Qwen provider experiments test whether the benchmark remains difficult under stronger embedding and reranking models. Current full-library results show that Qwen reranking improves over Qwen embedding-only for each representation, but generic neural reranking does not fully solve the benchmark.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Method & Top-1 & Top-5 & MRR \\
+\midrule
+Qwen R1 embedding only & 35.8\% & 56.7\% & 0.449 \\
+Qwen R1 embedding + rerank & 64.2\% & 67.2\% & 0.649 \\
+Qwen full embedding only & 46.3\% & 71.6\% & 0.574 \\
+Qwen full embedding + rerank & 61.2\% & 65.7\% & 0.644 \\
+Qwen R2 embedding only & 47.8\% & 65.7\% & 0.563 \\
+Qwen R2 embedding + rerank & 65.7\% & 71.6\% & 0.688 \\
+\bottomrule
+\end{tabular}
+\caption{Current Qwen provider results on the 1006-skill library.}
+\label{tab:qwen-results}
+\end{table}
+
+\section{Hybrid Qwen Retrieval plus Schema Reranking}
+
+The strongest current method uses Qwen full-skill embedding as a first-stage candidate generator and the deterministic local schema reranker for final ranking. Table \ref{tab:qwen-schema} shows the effect of candidate budget.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Candidate budget & Top-1 & Top-5 & MRR \\
+\midrule
+Top-20 & 68.7\% & 74.6\% & 0.715 \\
+Top-50 & 80.6\% & 88.1\% & 0.834 \\
+Top-100 & 85.1\% & 91.0\% & 0.878 \\
+\bottomrule
+\end{tabular}
+\caption{Qwen full-skill retrieval followed by local schema reranking.}
+\label{tab:qwen-schema}
+\end{table}
+
+This result supports the main thesis framing: dense retrieval is useful for broad candidate generation, but final selection benefits from explicit procedural information.
+
+\section{Low-Information Stress Test}
+
+A separate low-information prompt set was used to check whether schema reranking depends on explicit procedural cues. Performance drops sharply across methods. The best strict top-1 score is currently 41.7\% for MiniLM full-skill embedding. Qwen full-skill retrieval plus local schema reranking reaches 25.0\% top-1 and 66.7\% top-5.
+
+This suggests that schema reranking is not secretly inferring hidden intent. It works best when the request contains enough procedural evidence to match structured fields. Very underspecified requests may require a query-understanding or clarification step before retrieval.
+
+\section{Failure Mode Analysis}
+
+The strongest current method has 10 strict top-1 failures out of 67 prompts. Four failures are first-stage exclusions where Qwen does not place the gold skill in the top-100. Six failures are reranker, boundary, negation, meta-skill, or annotation issues.
+
+The main failure types are:
+
+\begin{itemize}
+  \item first-stage embedding confuses task object with required procedure;
+  \item schema reranking overweights secondary terms;
+  \item negative usage boundaries are too weak;
+  \item meta-skill tasks such as editing or evaluating a skill are confused with using the named skill;
+  \item some domain-specific competitors may require acceptable-alternative adjudication;
+  \item underspecified prompts create genuine ambiguity.
+\end{itemize}
+
+\placeholder{Add the final failure-mode table with prompt IDs, gold skill, predicted skill, first-stage rank, final rank, and failure category.}
+
+\section{Efficiency Results}
+
+\placeholder{Not yet complete. Add candidate-budget latency, API cost, token cost, cache behavior, and top-20/top-50/top-100 trade-off analysis.}
+
+\section{Downstream Results}
+
+\placeholder{Not yet complete. Add Step 8 downstream artifact generation results and grading. This should connect retrieval accuracy to actual task success.}

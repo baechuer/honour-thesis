@@ -1,0 +1,72 @@
+[
+  {
+    "id": "office_p1_pdf_layout_review",
+    "family": "office_artifact_workflows",
+    "gold_skill": "pdf-layout-reviewer",
+    "closest_alternatives": [
+      "pdf-ocr-extractor",
+      "office-to-markdown-converter",
+      "public-office-pdf-extraction",
+      "public-pdf"
+    ],
+    "prompt": "Please inspect `/workspace/fixtures/office_artifact_workflows/grant_application_packet.pdf` as a rendered PDF. I need page-by-page layout issues: cropped tables, broken headers, missing signature areas, and anything that would make the form hard to read. Do not just extract the fields."
+  },
+  {
+    "id": "office_p2_scanned_pdf_ocr",
+    "family": "office_artifact_workflows",
+    "gold_skill": "pdf-ocr-extractor",
+    "closest_alternatives": [
+      "pdf-layout-reviewer",
+      "office-to-markdown-converter",
+      "document-field-extractor"
+    ],
+    "prompt": "Please recover the text from `/workspace/fixtures/office_artifact_workflows/scanned_receipts_packet.pdf`. It looks like image scans, so keep page numbers and mark uncertain OCR text instead of pretending every amount is reliable."
+  },
+  {
+    "id": "office_p3_docx_redline",
+    "family": "office_artifact_workflows",
+    "gold_skill": "docx-redline-editor",
+    "closest_alternatives": [
+      "office-to-markdown-converter",
+      "document-rewriter",
+      "public-docx",
+      "public-office-docx-manipulation"
+    ],
+    "prompt": "Please review `/workspace/fixtures/office_artifact_workflows/vendor_agreement_draft.docx` as a Word document and prepare redline-style edits with short reviewer comments. Preserve sections and explain any substantive change."
+  },
+  {
+    "id": "office_p4_formula_audit",
+    "family": "office_artifact_workflows",
+    "gold_skill": "spreadsheet-formula-auditor",
+    "closest_alternatives": [
+      "office-to-markdown-converter",
+      "data-analysis-with-validation",
+      "public-xlsx",
+      "public-office-xlsx-manipulation"
+    ],
+    "prompt": "Please check `/workspace/fixtures/office_artifact_workflows/pricing_model.xlsx` for calculation and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly."
+  },
+  {
+    "id": "office_p5_slide_visual_audit",
+    "family": "office_artifact_workflows",
+    "gold_skill": "slide-deck-visual-auditor",
+    "closest_alternatives": [
+      "office-to-markdown-converter",
+      "pdf-layout-reviewer",
+      "public-pptx",
+      "public-office-ppt-visual"
+    ],
+    "prompt": "Please review `/workspace/fixtures/office_artifact_workflows/thesis_proposal_deck.pptx` for presentation readiness. I need slide-level feedback on visual hierarchy, text overflow, alignment, theme consistency, and speaker-note fit."
+  },
+  {
+    "id": "office_p6_office_to_markdown",
+    "family": "office_artifact_workflows",
+    "gold_skill": "office-to-markdown-converter",
+    "closest_alternatives": [
+      "pdf-layout-reviewer",
+      "docx-redline-editor",
+      "document-converter"
+    ],
+    "prompt": "Please convert `/workspace/fixtures/office_artifact_workflows/project_brief.docx` into clean Markdown for a repository. Preserve headings, tables, labels, and source traceability, but do not create tracked changes or a layout audit."
+  }
+]

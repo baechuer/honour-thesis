@@ -1,0 +1,68 @@
+[
+  {
+    "id": "obs_p1_metrics_overview",
+    "family": "metrics_observability",
+    "gold_skill": "metrics-overview",
+    "closest_alternatives": [
+      "incident-summary-writer",
+      "metrics-root-cause-diagnoser",
+      "latency-anomaly-detector"
+    ],
+    "prompt": "Give me a triage overview of this service snapshot: summarize the main signals, rank what seems most important right now, and suggest where to focus first. Do not do a detailed root-cause investigation yet: request volume is roughly steady, p95 and p99 latency have risen sharply over the last 30 minutes, median latency is only slightly worse, error rate increased from 0.4% to 2.1%, queue depth is growing, CPU is elevated but not maxed out, one downstream dependency has slower response times, and the current state looks degraded but not like a full outage."
+  },
+  {
+    "id": "obs_p2_latency_anomaly",
+    "family": "metrics_observability",
+    "gold_skill": "latency-anomaly-detector",
+    "closest_alternatives": [
+      "metrics-root-cause-diagnoser",
+      "metrics-overview",
+      "slo-breach-checker"
+    ],
+    "prompt": "Run an anomaly-focused readout on this service snapshot. Identify unusual performance behavior, especially tail-latency spikes, outliers, and whether the deviation is broad or concentrated in a smaller slice of requests. Do not give only a general metrics overview: request volume is roughly steady, p95 and p99 latency have risen sharply over the last 30 minutes, median latency is only slightly worse, error rate increased from 0.4% to 2.1%, queue depth is growing, CPU is elevated but not maxed out, one downstream dependency has slower response times, and the current state looks degraded but not like a full outage."
+  },
+  {
+    "id": "obs_p3_slo_breach",
+    "family": "metrics_observability",
+    "gold_skill": "slo-breach-checker",
+    "closest_alternatives": [
+      "capacity-risk-forecaster",
+      "metrics-overview",
+      "metrics-root-cause-diagnoser"
+    ],
+    "prompt": "Check this service snapshot against a reliability-objective risk frame: say whether the service target is likely in danger, what error-budget or threshold evidence matters, and what to confirm before declaring a breach. Do not just give a general overview, capacity forecast, or root-cause diagnosis: request volume is roughly steady, p95 and p99 latency have risen sharply over the last 30 minutes, median latency is only slightly worse, error rate increased from 0.4% to 2.1%, queue depth is growing, CPU is elevated but not maxed out, one downstream dependency has slower response times, and the current state looks degraded but not like a full outage."
+  },
+  {
+    "id": "obs_p4_capacity_risk",
+    "family": "metrics_observability",
+    "gold_skill": "capacity-risk-forecaster",
+    "closest_alternatives": [
+      "slo-breach-checker",
+      "metrics-root-cause-diagnoser",
+      "metrics-overview"
+    ],
+    "prompt": "Forecast capacity risk from this service snapshot if the pattern keeps going. Focus on future pressure, saturation risk, queue growth, headroom, and likely bottlenecks that could turn into a bigger operational problem. Do not decide current SLO breach or root cause: request volume is roughly steady, p95 and p99 latency have risen sharply over the last 30 minutes, median latency is only slightly worse, error rate increased from 0.4% to 2.1%, queue depth is growing, CPU is elevated but not maxed out, one downstream dependency has slower response times, and the current state looks degraded but not like a full outage."
+  },
+  {
+    "id": "obs_p5_root_cause",
+    "family": "metrics_observability",
+    "gold_skill": "metrics-root-cause-diagnoser",
+    "closest_alternatives": [
+      "latency-anomaly-detector",
+      "capacity-risk-forecaster",
+      "incident-summary-writer"
+    ],
+    "prompt": "Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. Snapshot data: request volume is roughly steady, p95 and p99 latency have risen sharply over the last 30 minutes, median latency is only slightly worse, error rate increased from 0.4% to 2.1%, queue depth is growing, CPU is elevated but not maxed out, one downstream dependency has slower response times, and the current state looks degraded but not like a full outage."
+  },
+  {
+    "id": "obs_p6_incident_summary",
+    "family": "metrics_observability",
+    "gold_skill": "incident-summary-writer",
+    "closest_alternatives": [
+      "metrics-overview",
+      "metrics-root-cause-diagnoser",
+      "slo-breach-checker"
+    ],
+    "prompt": "Turn this service snapshot into an incident update I could quickly share with the team: what is happening, user impact, current status, suspected area, next action, and open questions. Do not make it only an analysis memo: request volume is roughly steady, p95 and p99 latency have risen sharply over the last 30 minutes, median latency is only slightly worse, error rate increased from 0.4% to 2.1%, queue depth is growing, CPU is elevated but not maxed out, one downstream dependency has slower response times, and the current state looks degraded but not like a full outage."
+  }
+]
