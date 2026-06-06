@@ -32,19 +32,28 @@ BENCHMARK_ARTIFACT_PATTERNS = [
 
 MAIN_EVALUATED_FAMILIES = {
     "api_backend_design",
+    "api_mcp_tooling",
     "browser_web_automation",
     "code_github_workflow",
     "data_spreadsheet",
     "deployment_browser_qa",
     "documents_files",
+    "github_ci_maintenance",
+    "huggingface_ml_workflows",
+    "implicit_field_stress",
     "metrics_observability",
     "news_monitoring",
+    "observability_reliability",
+    "office_business_automation",
     "office_artifact_workflows",
+    "pdf_document_operations",
     "planning_meetings",
+    "public_style_controlled",
     "reading_research",
     "reply_messaging",
     "security_appsec",
     "skill_lifecycle",
+    "skill_representation_analysis",
 }
 
 
@@ -113,6 +122,99 @@ def parse_sections(body: str) -> dict[str, str]:
     return sections
 
 
+def sentence_chunks(text: str) -> list[str]:
+    text = re.sub(r"^\s*#+\s+.*$", " ", text, flags=re.MULTILINE)
+    chunks = re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", text).strip())
+    return [chunk.strip() for chunk in chunks if len(chunk.strip()) > 20]
+
+
+def inferred_fields_from_body(description: str, body: str) -> dict[str, list[str]]:
+    """Extract a light structured view when a skill is prose-only.
+
+    This is intentionally conservative: it does not try to rewrite the skill,
+    only lifts sentences that already signal routing, output, workflow, or
+    boundaries. It models the representation layer as an extractor rather than
+    assuming authors supplied clean headings.
+    """
+    source = "\n".join([description, body])
+    sentences = sentence_chunks(source)
+    inferred: dict[str, list[str]] = {
+        "use_when": [],
+        "not_for": [],
+        "preconditions": [],
+        "workflow": [],
+        "output_shape": [],
+        "writing_rules": [],
+    }
+
+    cue_sets = {
+        "use_when": [
+            "use this",
+            "this routine is for",
+            "this routine translates",
+            "this routine works",
+            "works with",
+            "when ",
+            "for the moment",
+            "assumes there is",
+            "starts from hardware",
+        ],
+        "not_for": [
+            "wrong routine",
+            "poor fit",
+            "not the fit",
+            "not for",
+            "not a ",
+            "belongs elsewhere",
+            "choose a different routine",
+        ],
+        "preconditions": [
+            "needs ",
+            "requires ",
+            "assumes ",
+            "there is ",
+            "starts from",
+            "already has",
+        ],
+        "workflow": [
+            "starts",
+            "begins",
+            "looks for",
+            "checks",
+            "collecting",
+            "reads",
+            "compares",
+            "follows",
+            "then ",
+            "identifies",
+            "connects",
+        ],
+        "output_shape": [
+            "output is",
+            "deliverable is",
+            "result is",
+            "artifact is",
+            "answer should",
+            "response contains",
+        ],
+        "writing_rules": [
+            "should quote",
+            "should keep",
+            "should not",
+            "must ",
+            "must not",
+        ],
+    }
+
+    lowered_pairs = [(sentence, sentence.lower()) for sentence in sentences]
+    for field, cues in cue_sets.items():
+        for sentence, lowered in lowered_pairs:
+            if any(cue in lowered for cue in cues) and sentence not in inferred[field]:
+                inferred[field].append(sentence)
+
+    return inferred
+
+
 def lines_from_section(text: str) -> list[str]:
     lines: list[str] = []
     for line in text.splitlines():
@@ -145,6 +247,13 @@ def compact_text(parts: list[str]) -> str:
     return "\n".join(part for part in parts if part).strip()
 
 
+def lines_from_first_sections(sections: dict[str, str], names: list[str], limit: int = 16) -> list[str]:
+    lines: list[str] = []
+    for name in names:
+        lines.extend(lines_from_section(sections.get(name, "")))
+    return lines[:limit]
+
+
 def find_skill_files(skills_root: Path, include_families: set[str] | None) -> list[Path]:
     files = sorted(skills_root.glob("*/*/SKILL.md"))
     if include_families is None:
@@ -171,6 +280,13 @@ def skill_record(path: Path) -> dict[str, object]:
     metadata = frontmatter.get("metadata")
     if not isinstance(metadata, dict):
         metadata = {}
+    source_body = ""
+    source_sections: dict[str, str] = {}
+    source_path = skill_dir / "source" / "SKILL.original.md"
+    if family == "public_imported_background" and source_path.exists():
+        source_text = source_path.read_text(encoding="utf-8")
+        _, source_body = parse_frontmatter(source_text)
+        source_sections = parse_sections(source_body)
 
     return {
         "name": name,
@@ -179,7 +295,10 @@ def skill_record(path: Path) -> dict[str, object]:
         "skill_dir": str(skill_dir),
         "description": clean_description(str(frontmatter.get("description") or "")),
         "metadata": metadata,
+        "body": body,
         "sections": sections,
+        "source_body": source_body,
+        "source_sections": source_sections,
         "resources": resource_files(skill_dir),
         "is_main_evaluated": family in MAIN_EVALUATED_FAMILIES,
         "is_background": family in {"background_scale", "public_imported_background", "email_communication"},
@@ -206,6 +325,18 @@ def flat_metadata(record: dict[str, object]) -> dict[str, object]:
 
 def structured_procedural(record: dict[str, object]) -> dict[str, object]:
     sections: dict[str, str] = record["sections"]  # type: ignore[assignment]
+    source_sections = record.get("source_sections")
+    if isinstance(source_sections, dict) and source_sections:
+        sections = {**sections, **source_sections}
+    body_for_inference = "\n\n".join(
+        part
+        for part in [
+            str(record.get("body", "")),
+            str(record.get("source_body", "")),
+        ]
+        if part
+    )
+    inferred = inferred_fields_from_body(str(record["description"]), body_for_inference)
     use_when = remove_benchmark_artifacts(lines_from_section(sections.get("use_when", "")))
     not_for = remove_benchmark_artifacts(lines_from_section(sections.get("not_for", "")))
     workflow = remove_benchmark_artifacts(lines_from_section(sections.get("workflow", "")))
@@ -222,6 +353,101 @@ def structured_procedural(record: dict[str, object]) -> dict[str, object]:
             )
         )
     )
+    if not use_when:
+        use_when = remove_benchmark_artifacts(
+            lines_from_first_sections(
+                sections,
+                [
+                    "when_to_use",
+                    "when_to_use_this_skill",
+                    "overview",
+                    "core_capabilities",
+                    "capabilities",
+                    "skill_capabilities",
+                ],
+                limit=10,
+            )
+        )
+    if not use_when:
+        use_when = remove_benchmark_artifacts(inferred["use_when"])
+    if not not_for:
+        not_for = remove_benchmark_artifacts(
+            lines_from_first_sections(
+                sections,
+                [
+                    "not_for",
+                    "when_not_to_use",
+                    "when_not_to_use_this_skill",
+                    "do_not_use_when",
+                    "do_not_use_this_skill_when",
+                    "wrong",
+                    "anti_patterns",
+                ],
+                limit=10,
+            )
+        )
+    if not not_for:
+        not_for = remove_benchmark_artifacts(inferred["not_for"])
+    if not workflow:
+        workflow = remove_benchmark_artifacts(
+            lines_from_first_sections(
+                sections,
+                [
+                    "workflow",
+                    "workflows",
+                    "how_to_use",
+                    "how_to_use_me",
+                    "instructions",
+                    "core_workflows",
+                    "process",
+                    "the_process",
+                    "build_workflow",
+                    "usage",
+                ],
+                limit=18,
+            )
+        )
+    if not workflow:
+        workflow = remove_benchmark_artifacts(inferred["workflow"])
+    if not preconditions:
+        preconditions = remove_benchmark_artifacts(
+            lines_from_first_sections(
+                sections,
+                [
+                    "prerequisites",
+                    "preconditions",
+                    "requirements",
+                    "input_requirements",
+                    "required_intake_packet",
+                    "before_you_start",
+                    "default_operating_assumptions",
+                ],
+                limit=12,
+            )
+        )
+    if not preconditions:
+        preconditions = remove_benchmark_artifacts(inferred["preconditions"])
+    if not output_shape:
+        output_shape = remove_benchmark_artifacts(
+            lines_from_first_sections(
+                sections,
+                [
+                    "output",
+                    "output_format",
+                    "output_formats",
+                    "outputs",
+                    "deliverables",
+                    "complete_guide_template",
+                    "presentation_structure",
+                    "content_generation_pattern",
+                ],
+                limit=14,
+            )
+        )
+    if not output_shape:
+        output_shape = remove_benchmark_artifacts(inferred["output_shape"])
+    if not writing_rules:
+        writing_rules = remove_benchmark_artifacts(inferred["writing_rules"])
 
     text = compact_text(
         [

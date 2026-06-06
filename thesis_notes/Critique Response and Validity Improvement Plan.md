@@ -85,7 +85,7 @@ Risk:
 
 Mitigation:
 
-- Keep the 200 public imported skills in the library.
+- Keep the 460 public imported skills in the library.
 - Use public-skill audit to show which fields are observed, extractable, or proposed.
 - Report that public skills are messier than controlled benchmark skills.
 - Treat this as a limitation and motivation for representation-layer normalization.
@@ -242,7 +242,7 @@ Scope:
 
 What this tests:
 
-- Whether the field taxonomy generalizes beyond the original 200 public skills.
+- Whether the field taxonomy generalizes beyond the original 460 public skills.
 - Whether structured/hybrid retrieval remains robust when many public skills are not semantically similar to the target prompt.
 - Whether the retriever can avoid irrelevant public skills that happen to share tools, resources, or broad domain terms.
 

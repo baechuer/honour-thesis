@@ -2,114 +2,273 @@
 
 \section{Benchmark Validation Results}
 
-The current benchmark contains 1006 skills and 67 evaluated prompts. The validation rubric currently shows:
+The active benchmark contains 2401 skills and 137 controlled evaluated prompts. Table \ref{tab:validation-status} summarises the current validation state.
 
-\begin{itemize}
-  \item Step 1 integrity passed: all prompts and gold skills resolve.
-  \item Step 2 procedural alignment passed: all prompts pass field audit, with a small number of watch items under stricter alignment.
-  \item Step 3 semantic confusability passed: most prompts have measurable near-neighbour semantic competition.
-  \item Step 4 prompt leakage passed: no critical exact-name leaks or high-risk leaks.
-  \item Step 5 scale regime passed: the library is large enough to test scalable retrieval pressure.
-\end{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{p{0.30\textwidth}p{0.58\textwidth}}
+\toprule
+Check & Current result \\
+\midrule
+Integrity & PASS: 137 prompts and 2401 skills resolve. \\
+Procedural distinctness & PASS: 137/137 prompts and 449/449 gold/alternative pairs pass field-audit criteria. \\
+Prompt-specific alignment & PASS with caveat: 122/137 prompts pass MiniLM alignment. \\
+Semantic confusability & WARN/near-pass: 116/137 prompts, or 84.7\%, have at least two plausible alternatives. \\
+Prompt leakage & PASS: 0 critical exact-name leaks and 0 high-risk leaks. \\
+Scale regime & PASS: R1 flat metadata is approximately 123k visible tokens; full skill artifacts exceed 1M visible tokens. \\
+Public field audit & Mostly complete: 460/460 public skills audited heuristically and with DeepSeek model-assisted verification. \\
+Public-gold validation & Manually adjudicated: 21 strict keep, 7 keep with acceptable alternatives, 4 revise/exclude. \\
+\bottomrule
+\end{tabular}
+\caption{Current benchmark validation status.}
+\label{tab:validation-status}
+\end{table}
 
-\placeholder{Insert the final benchmark validation table from the rubric output. Include exact counts and thresholds.}
+These results indicate that the benchmark is valid enough for retrieval-method comparison, but not final enough for unrestricted claims. The main remaining risks are public-gold cleanup, non-core winner adjudication, and downstream validation.
 
 \section{Local Selector Results}
 
-Table \ref{tab:local-results} summarises the current local full-library results.
+Table \ref{tab:local-2401} summarises the current deterministic local selectors on the 2401-skill library.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lrrr}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Top-1 & Top-5 & MRR & Non-core top-1 \\
+\midrule
+M1 BM25 flat & 67.9\% & 88.3\% & 0.771 & 10.9\% \\
+M1 TF-IDF flat & 60.6\% & 83.9\% & 0.713 & 19.0\% \\
+M3 TF-IDF schema & 71.5\% & 94.9\% & 0.823 & 7.3\% \\
+M6-v0 BM25 to schema rerank & 72.3\% & 93.4\% & 0.817 & 3.6\% \\
+M6-v0 TF-IDF to schema rerank & 73.0\% & 89.8\% & 0.808 & 8.0\% \\
+\bottomrule
+\end{tabular}
+\caption{Local selector results on the active 2401-skill benchmark.}
+\label{tab:local-2401}
+\end{table}
+
+The local results show that structured representations and schema reranking reduce some scale-related errors. Compared with flat TF-IDF, TF-IDF schema retrieval improves top-1 from 60.6\% to 71.5\% and reduces non-core top-1 from 19.0\% to 7.3\%. However, these are lexical/schema baselines, not a final proof that structure-aware retrieval is solved.
+
+\section{Field Ablation Results}
+
+Field ablations test which representation fields contribute to retrieval performance. Table \ref{tab:field-ablation} shows selected full-scale cumulative ablations.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Field set & Scorer & Top-1 & Top-5 & Visible tokens \\
+\midrule
+Description only & TF-IDF & 61.3\% & 83.9\% & 98,433 \\
+Description + use conditions & TF-IDF & 70.1\% & 91.2\% & 272,829 \\
++ input/preconditions & TF-IDF & 67.2\% & 89.0\% & 468,875 \\
++ output artifacts & TF-IDF & 69.3\% & 91.2\% & 507,087 \\
++ workflow/procedure & TF-IDF & 73.7\% & 94.2\% & 665,434 \\
++ constraints/not-for & TF-IDF & 73.7\% & 94.2\% & 706,385 \\
++ dependencies/resources & TF-IDF & 73.7\% & 94.9\% & 885,767 \\
+Description only & BM25 & 66.4\% & 91.2\% & 98,433 \\
+Description + use conditions & BM25 & 79.6\% & 94.9\% & 272,829 \\
++ output artifacts & BM25 & 81.0\% & 97.8\% & 507,087 \\
++ workflow/procedure & BM25 & 80.3\% & 98.5\% & 665,434 \\
+\bottomrule
+\end{tabular}
+\caption{Selected cumulative field ablations on the full 2401-skill condition.}
+\label{tab:field-ablation}
+\end{table}
+
+The ablations support the current field taxonomy. Use conditions provide a large early gain. Output artifacts and workflow/procedure fields provide further procedural discrimination. Constraint, dependency, and resource fields do not behave like simple positive text: they may add cost and noise unless handled conditionally.
+
+\section{Representation-by-Architecture Coverage}
+
+The main experimental object is the interaction between representation layer and retrieval architecture. Table \ref{tab:representation-architecture-coverage} summarises which cells have been evaluated on the current or near-current scale. This table is important because some earlier comparisons mixed representation effects with model effects. For example, Qwen reranking over R2 structured cards should not be compared directly with SkillRouter reranking over full skill artifacts as if only the model changed.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.18\textwidth}p{0.17\textwidth}p{0.18\textwidth}p{0.18\textwidth}p{0.18\textwidth}}
+\toprule
+Representation & Qwen embedding & Qwen rerank & SkillRouter embedding & SkillRouter rerank \\
+\midrule
+R1 flat metadata & Public 82 run; controlled rerun needed. & Public 82 run; controlled rerun needed. & Not run. & Not run. \\
+R2 structured procedural & Public 82 run; controlled rerun needed. & Public 82 run; controlled rerun needed. & Not run. & Not run. \\
+Full \texttt{SKILL.md} & Controlled 137 and public 82 run. & Controlled 137 and public 82 run. & Controlled 137 and public 82 hosted run. & Controlled 137 and public 82 hosted run. \\
+\bottomrule
+\end{tabular}
+\caption{Coverage of the crossed representation-layer and retrieval-architecture comparison.}
+\label{tab:representation-architecture-coverage}
+\end{table}
+
+The current result set is therefore incomplete for the strongest representation-level claim. The active controlled benchmark has strong full-skill comparisons, but it does not yet contain current-scale R1/R2 runs for SkillRouter, nor current-scale controlled R1/R2 reruns for Qwen. The public-gold benchmark has a cleaner Qwen representation comparison across R1, R2, and full artifacts, but it lacks SkillRouter R1/R2 runs. The next experiment cycle should fill these cells before making final claims about representation superiority.
+
+\section{Public-Gold Horizontal Representation Results}
+
+The cleaned public-gold stratum currently provides the clearest horizontal comparison for Qwen because R1, R2, and full skill artifacts were tested on the same 82 prompts and 2401-skill library. Table \ref{tab:public-gold-horizontal} shows that full skill artifacts are not automatically the best retrieval representation.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.22\textwidth}rrrr}
+\toprule
+Representation and architecture & Strict top-1 & Accept top-1 & Strict top-5 & MRR \\
+\midrule
+Qwen R1 embedding & 62.2\% & 72.0\% & 84.2\% & 0.720 \\
+Qwen R1 + Qwen rerank, top-20 & 74.4\% & 85.4\% & 96.3\% & 0.837 \\
+Qwen R2 embedding & 59.8\% & 73.2\% & 82.9\% & 0.714 \\
+Qwen R2 + Qwen rerank, top-20 & \textbf{76.8\%} & \textbf{90.2\%} & \textbf{100.0\%} & \textbf{0.861} \\
+Qwen full artifact embedding & 31.7\% & 50.0\% & 58.5\% & 0.448 \\
+Qwen full artifact + Qwen rerank, top-20 & 68.3\% & 79.3\% & 80.5\% & 0.739 \\
+\bottomrule
+\end{tabular}
+\caption{Public-gold horizontal comparison across representation layers using Qwen embedding and reranking.}
+\label{tab:public-gold-horizontal}
+\end{table}
+
+The public-gold horizontal comparison suggests that representation compression can help rather than merely remove information. Full \texttt{SKILL.md} artifacts contain more raw content, but generic embedding over full artifacts performs poorly because the signal is diluted by broad instructions, examples, source-specific wording, and wrapper behaviour. R1 and R2 compact representations perform better for Qwen on public-gold. R2 does not beat R1 by embedding alone, but R2 plus neural reranking is strongest, suggesting that structured procedural information is useful when the architecture can compare it at reranking time.
+
+\section{Provider and SkillRouter Results}
+
+Provider experiments test whether the benchmark remains difficult under stronger modern retrieval models. Table \ref{tab:qwen-2401} shows current 2401-scale Qwen full-skill results.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.49\textwidth}rrrr}
+\toprule
+Method & Top-1 & Top-5 & MRR & Non-main top-1 \\
+\midrule
+Qwen full-skill embedding & 52.5\% & 73.7\% & 0.617 & 26.3\% \\
+Qwen full-skill + Qwen generic rerank, top-20 & 62.0\% & 75.2\% & 0.684 & 24.8\% \\
+Qwen full-skill + M6-v0 local schema rerank, top-100 & 77.4\% & 91.2\% & 0.840 & 8.0\% \\
+Qwen full-skill + M6-v1-local task/output/workflow rerank, top-100 & 78.8\% & 92.0\% & 0.851 & 6.6\% \\
+\bottomrule
+\end{tabular}
+\caption{Current Qwen provider results on the active 2401-skill benchmark.}
+\label{tab:qwen-2401}
+\end{table}
+
+The result suggests that dense retrieval is useful for broad candidate generation but insufficient by itself. Generic Qwen reranking improves over full-skill embedding alone, but it does not close the gap on the controlled procedurally confusable benchmark. Adding a procedural reranking layer improves top-1 more substantially and reduces non-main false positives.
+
+Table \ref{tab:skillrouter-2401} reports the SkillRouter hosted baseline. This is important because SkillRouter is a skill-specific retrieve-and-rerank model rather than a generic embedding provider.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.46\textwidth}rrrr}
+\toprule
+Method & Top-1 & Top-5 & MRR & Non-main top-1 \\
+\midrule
+SkillRouter full-skill embedding & 73.0\% & 94.2\% & 0.827 & 14.6\% \\
+SkillRouter full-skill + SkillRouter rerank, top-20 & 83.2\% & 97.8\% & 0.898 & 4.4\% \\
+\bottomrule
+\end{tabular}
+\caption{SkillRouter hosted results on the controlled 2401-skill benchmark.}
+\label{tab:skillrouter-2401}
+\end{table}
+
+SkillRouter changes the interpretation of the provider baselines. The controlled benchmark is not only hard for weak local methods or generic embeddings: a skill-specific embedding model performs much better than Qwen full-skill embedding, and SkillRouter's neural reranker becomes a strong comparison point for any proposed structure-aware reranker.
+
+\section{M6-v1 Field-Aware Reranker Results}
+
+M6-v1-local fixes the first-stage candidate generator and varies which information fields the reranker uses. Table \ref{tab:m6v1-fieldsets} shows the Qwen full-skill first-stage condition.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.34\textwidth}rrrrr}
+\toprule
+Field set & Top-1 & Top-5 & MRR & Candidate R@100 & Non-main top-1 \\
+\midrule
+Task only & 75.2\% & 88.3\% & 0.816 & 93.4\% & 8.0\% \\
+Task + output + workflow & 78.8\% & 92.0\% & 0.851 & 93.4\% & 6.6\% \\
+Core: task + input + output + workflow & 77.4\% & 92.0\% & 0.843 & 93.4\% & 6.6\% \\
+Core + boundary & 77.4\% & 92.7\% & 0.841 & 93.4\% & 8.0\% \\
+All fields & 73.0\% & 89.0\% & 0.809 & 93.4\% & 11.7\% \\
+\bottomrule
+\end{tabular}
+\caption{M6-v1-local field-set comparison with Qwen full-skill candidate generation.}
+\label{tab:m6v1-fieldsets}
+\end{table}
+
+This result is important because it does not say that adding more structure always helps. The strongest field set is task/use condition plus output and workflow. Adding all fields hurts top-1 and increases non-main false positives, which supports the claim that dependency, boundary, and hierarchy signals must be used conditionally rather than treated as ordinary positive text.
+
+\section{SkillRouter plus M6-v1 Hybrid Results}
+
+The strongest current controlled result comes from combining SkillRouter first-stage retrieval with the M6-v1-local field-aware reranker. Table \ref{tab:skillrouter-m6v1} compares the best field-aware hybrid results against the SkillRouter-only baseline.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.42\textwidth}rrrrr}
+\toprule
+Method & Budget & Top-1 & Top-5 & MRR & Non-main \\
+\midrule
+SkillRouter embedding only & -- & 73.0\% & 94.2\% & 0.827 & 14.6\% \\
+SkillRouter + SkillRouter rerank & 20 & 83.2\% & 97.8\% & 0.898 & 4.4\% \\
+SkillRouter + M6-v1 task/output/workflow & 20 & 83.2\% & 95.6\% & 0.895 & 5.1\% \\
+SkillRouter + M6-v1 task/output/workflow & 100 & \textbf{86.9\%} & \textbf{98.5\%} & \textbf{0.927} & \textbf{0.7\%} \\
+\bottomrule
+\end{tabular}
+\caption{Controlled SkillRouter and SkillRouter--M6-v1 hybrid comparison. Top-20 rows are the budget-fair reranker comparison; the top-100 M6-v1 row is a larger-candidate-budget condition.}
+\label{tab:skillrouter-m6v1}
+\end{table}
+
+This result suggests that SkillRouter provides an excellent first-stage candidate set, while explicit procedural fields can improve final ordering when reranking a larger candidate pool. The fair top-20 comparison is cautious: M6-v1 task/output/workflow matches SkillRouter reranking on top-1, but has slightly lower top-5 and MRR. The top-100 M6-v1 condition improves to 86.9\% top-1, 98.5\% top-5, and 0.927 MRR, but this should be interpreted as a larger-candidate-budget result rather than a direct reranker-only win over SkillRouter's top-20 reranker. Candidate recall is effectively saturated: SkillRouter includes the gold skill in the top-20 for 97.8\% of controlled prompts and in the top-100 for 100.0\%. Therefore, remaining controlled failures are mainly reranker-ordering errors rather than candidate-generation errors.
+
+\section{Public-Gold Results}
+
+The public-gold stratum behaves differently from the controlled benchmark. Table \ref{tab:public-gold} summarises results before applying final public-gold cleanup.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.52\textwidth}rrr}
 \toprule
 Method & Top-1 & Top-5 & MRR \\
 \midrule
-M1 BM25 flat & 64.2\% & 86.6\% & 0.733 \\
-M1 TF-IDF flat & 58.2\% & 85.1\% & 0.697 \\
-M2a MiniLM description & 47.8\% & 74.6\% & 0.603 \\
-M2b MiniLM full skill & 61.2\% & 82.1\% & 0.717 \\
-M3 TF-IDF schema & 71.6\% & 95.5\% & 0.808 \\
-M6 BM25 to schema rerank & 71.6\% & 92.5\% & 0.815 \\
-M6 TF-IDF to schema rerank & 70.2\% & 85.1\% & 0.778 \\
-M6 MiniLM full to schema rerank & 80.6\% & 91.0\% & 0.856 \\
+M1 BM25 flat & 62.5\% & 87.5\% & 0.715 \\
+M1 TF-IDF flat & 59.4\% & 87.5\% & 0.701 \\
+M2a MiniLM description & 65.6\% & 87.5\% & 0.738 \\
+M2b MiniLM full skill & 31.2\% & 71.9\% & 0.483 \\
+M3 TF-IDF schema & 50.0\% & 71.9\% & 0.607 \\
+M6-v0 local schema rerank & 34.4--46.9\% & 75.0--87.5\% & 0.521--0.631 \\
+Qwen R1/R2 embedding & 59.4\% & 87.5\% & 0.716--0.732 \\
+Qwen full-skill embedding & 28.1\% & 65.6\% & 0.469 \\
+Qwen full-skill + Qwen rerank & 68.8\% & 84.4\% & 0.763 \\
+Qwen full-skill + M6-v1-local, best strict top-1 & 53.1\% & 78.1\% & 0.647 \\
+SkillRouter full-skill embedding & 65.6\% & 96.9\% & 0.770 \\
+SkillRouter + SkillRouter rerank & 65.6\% & 93.8\% & 0.788 \\
+SkillRouter + M6-v1-local, best strict top-1 & 62.5\% & 93.8--96.9\% & 0.765 \\
 \bottomrule
 \end{tabular}
-\caption{Current local selector results on the 1006-skill library.}
-\label{tab:local-results}
+\caption{Public-gold selector results before final cleanup.}
+\label{tab:public-gold}
 \end{table}
 
-These results suggest that description-only embedding is fragile under scale, while full-skill retrieval and schema-aware reranking improve performance. The best local method is the hybrid full-skill embedding plus schema reranking condition.
+The public-gold results are a useful caution. On this stratum, the current schema method underperforms flat or description retrieval, while Qwen generic reranking is strongest on strict top-1. SkillRouter embedding performs much better than Qwen full-skill embedding and has very strong top-5 recall, but neither SkillRouter reranking nor M6-v1 field-aware reranking improves strict public-gold top-1. M6-v1-local has high candidate recall on public-gold, approximately 96.9\% at top-20 and top-100, but weak top-1 reranking. This does not invalidate the representation claim; it shows that extraction quality, broad public wrappers, duplicates, hierarchy, and semantic field matching must be handled explicitly. Public-gold results should therefore be reported separately from controlled results, and final reporting should distinguish strict gold from acceptable alternatives after the manually marked revise/exclude cases are cleaned.
 
-\section{Provider Results}
+The generic non-main top-1 metric is not used as a headline public-gold metric because public gold skills are themselves public/background skills. Public-gold failures should instead be classified by stratum and cause: wrong controlled equivalent, wrong public wrapper, broad parent/router skill, duplicate or acceptable alternative, extraction failure, first-stage exclusion, or reranker ordering failure.
 
-Qwen provider experiments test whether the benchmark remains difficult under stronger embedding and reranking models. Current full-library results show that Qwen reranking improves over Qwen embedding-only for each representation, but generic neural reranking does not fully solve the benchmark.
+\section{M0 Progressive Disclosure}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lrrr}
-\toprule
-Method & Top-1 & Top-5 & MRR \\
-\midrule
-Qwen R1 embedding only & 35.8\% & 56.7\% & 0.449 \\
-Qwen R1 embedding + rerank & 64.2\% & 67.2\% & 0.649 \\
-Qwen full embedding only & 46.3\% & 71.6\% & 0.574 \\
-Qwen full embedding + rerank & 61.2\% & 65.7\% & 0.644 \\
-Qwen R2 embedding only & 47.8\% & 65.7\% & 0.563 \\
-Qwen R2 embedding + rerank & 65.7\% & 71.6\% & 0.688 \\
-\bottomrule
-\end{tabular}
-\caption{Current Qwen provider results on the 1006-skill library.}
-\label{tab:qwen-results}
-\end{table}
+The existing M0 progressive-disclosure trace covers an older core condition. The current manifest summary reports 129 runs over 43 prompts, with 68.2\% top-1 accuracy, 69.8\% any-hit rate, 21.7\% no explicit skill loaded, and a mean of 0.83 full skill documents loaded.
 
-\section{Hybrid Qwen Retrieval plus Schema Reranking}
+This baseline is useful because it represents normal main-agent selection behaviour. However, it has not yet been rerun on the active 137-prompt, 2401-skill condition. At full scale, M0 is mainly a context/cost stress test because compact R1 metadata is already approximately 123k visible tokens and full artifacts exceed 1M visible tokens.
 
-The strongest current method uses Qwen full-skill embedding as a first-stage candidate generator and the deterministic local schema reranker for final ranking. Table \ref{tab:qwen-schema} shows the effect of candidate budget.
+\section{Low-Information and Implicit-Field Cases}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lrrr}
-\toprule
-Candidate budget & Top-1 & Top-5 & MRR \\
-\midrule
-Top-20 & 68.7\% & 74.6\% & 0.715 \\
-Top-50 & 80.6\% & 88.1\% & 0.834 \\
-Top-100 & 85.1\% & 91.0\% & 0.878 \\
-\bottomrule
-\end{tabular}
-\caption{Qwen full-skill retrieval followed by local schema reranking.}
-\label{tab:qwen-schema}
-\end{table}
+Low-information and implicit-field cases test whether methods depend on explicit procedural cues. Performance drops sharply when prompts are underspecified. This suggests that procedural reranking is not simply guessing hidden intent; it needs request evidence. In a real agent system, very underspecified requests may require clarification before retrieval.
 
-This result supports the main thesis framing: dense retrieval is useful for broad candidate generation, but final selection benefits from explicit procedural information.
+The 10 implicit-field stress prompts are now integrated into the main benchmark. Their raw skills remain prose-only, while R2/R3 use conservative extraction to recover procedural fields. This better matches the thesis claim: structure-aware representation should include extraction and normalization rather than assuming perfect author-provided schema fields.
 
-\section{Low-Information Stress Test}
+\section{Interim Interpretation}
 
-A separate low-information prompt set was used to check whether schema reranking depends on explicit procedural cues. Performance drops sharply across methods. The best strict top-1 score is currently 41.7\% for MiniLM full-skill embedding. Qwen full-skill retrieval plus local schema reranking reaches 25.0\% top-1 and 66.7\% top-5.
+The current results support four interim conclusions:
 
-This suggests that schema reranking is not secretly inferring hidden intent. It works best when the request contains enough procedural evidence to match structured fields. Very underspecified requests may require a query-understanding or clarification step before retrieval.
+\begin{enumerate}
+  \item Scale creates real retrieval pressure, including non-core false positives.
+  \item Use conditions, output artifacts, and workflow/procedure fields are the strongest current positive fields.
+  \item Dependency, resource, and boundary fields require field-aware handling rather than naive concatenation.
+  \item SkillRouter plus M6-v1-local is the strongest controlled result so far, but the same field-aware matcher remains too brittle for public-gold cases.
+\end{enumerate}
 
-\section{Failure Mode Analysis}
-
-The strongest current method has 10 strict top-1 failures out of 67 prompts. Four failures are first-stage exclusions where Qwen does not place the gold skill in the top-100. Six failures are reranker, boundary, negation, meta-skill, or annotation issues.
-
-The main failure types are:
-
-\begin{itemize}
-  \item first-stage embedding confuses task object with required procedure;
-  \item schema reranking overweights secondary terms;
-  \item negative usage boundaries are too weak;
-  \item meta-skill tasks such as editing or evaluating a skill are confused with using the named skill;
-  \item some domain-specific competitors may require acceptable-alternative adjudication;
-  \item underspecified prompts create genuine ambiguity.
-\end{itemize}
-
-\placeholder{Add the final failure-mode table with prompt IDs, gold skill, predicted skill, first-stage rank, final rank, and failure category.}
-
-\section{Efficiency Results}
-
-\placeholder{Not yet complete. Add candidate-budget latency, API cost, token cost, cache behavior, and top-20/top-50/top-100 trade-off analysis.}
-
-\section{Downstream Results}
-
-\placeholder{Not yet complete. Add Step 8 downstream artifact generation results and grading. This should connect retrieval accuracy to actual task success.}
+Downstream task success, M4 tree routing, M5 graph retrieval, and stronger semantic M6-v1 variants remain future work at this stage.

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "observability_reliability_p1_prometheus_alert_rule_writer",
+    "family": "observability_reliability",
+    "gold_skill": "prometheus-alert-rule-writer",
+    "closest_alternatives": [
+      "public-swebench-prometheus-configuration",
+      "slo-breach-checker",
+      "grafana-dashboard-builder",
+      "distributed-trace-investigator"
+    ],
+    "prompt": "Produce PromQL alerting expressions for checkout latency and error-budget burn using `/workspace/fixtures/observability_reliability/metrics.md`. Include windows, labels, severity, and verification queries; do not build a dashboard."
+  },
+  {
+    "id": "observability_reliability_p2_grafana_dashboard_builder",
+    "family": "observability_reliability",
+    "gold_skill": "grafana-dashboard-builder",
+    "closest_alternatives": [
+      "public-swebench-grafana-dashboards",
+      "public-swebench-python-observability",
+      "metrics-overview",
+      "prometheus-alert-rule-writer"
+    ],
+    "prompt": "Design a Grafana dashboard for checkout service health with panels, variables, queries, thresholds, and operator layout. This is not an alert-rule task."
+  },
+  {
+    "id": "observability_reliability_p3_distributed_trace_investigator",
+    "family": "observability_reliability",
+    "gold_skill": "distributed-trace-investigator",
+    "closest_alternatives": [
+      "public-swebench-distributed-tracing",
+      "public-swebench-python-observability",
+      "metrics-root-cause-diagnoser",
+      "prometheus-alert-rule-writer"
+    ],
+    "prompt": "Use `/workspace/fixtures/observability_reliability/checkout_trace.json` to find where checkout latency is introduced across services. I need trace-based diagnosis, not a dashboard."
+  },
+  {
+    "id": "observability_reliability_p4_slo_breach_narrative_writer",
+    "family": "observability_reliability",
+    "gold_skill": "slo-breach-narrative-writer",
+    "closest_alternatives": [
+      "incident-summary-writer",
+      "slo-breach-checker",
+      "prometheus-alert-rule-writer",
+      "grafana-dashboard-builder"
+    ],
+    "prompt": "Using `/workspace/fixtures/observability_reliability/incident_notes.md`, write an SLO breach narrative with timeline, user impact, mitigation, and follow-up actions."
+  },
+  {
+    "id": "observability_reliability_p5_resilience_pattern_reviewer",
+    "family": "observability_reliability",
+    "gold_skill": "resilience-pattern-reviewer",
+    "closest_alternatives": [
+      "public-swebench-python-resilience",
+      "dependency-risk-auditor",
+      "prometheus-alert-rule-writer",
+      "grafana-dashboard-builder"
+    ],
+    "prompt": "Review `/workspace/fixtures/observability_reliability/payment_client.py` for retry, timeout, backoff, fallback, and cascading-failure risks."
+  },
+  {
+    "id": "observability_reliability_p6_service_mesh_traffic_debugger",
+    "family": "observability_reliability",
+    "gold_skill": "service-mesh-traffic-debugger",
+    "closest_alternatives": [
+      "public-swebench-service-mesh-observability",
+      "public-swebench-istio-traffic-management",
+      "public-swebench-linkerd-patterns",
+      "prometheus-alert-rule-writer"
+    ],
+    "prompt": "Debug the service-mesh routing notes in `/workspace/fixtures/observability_reliability/mesh_config.yaml`, focusing on traffic split, mTLS, retries, and destination rules."
+  }
+]

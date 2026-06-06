@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.05cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\definecolor{headingblue}{HTML}{1F4E79}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.24em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.02}
+\setlist[itemize]{leftmargin=1.2em, itemsep=0.05em, topsep=0.1em}
+
+\newcommand{\sectiontitle}[1]{\vspace{0.22em}{\normalsize\bfseries\color{headingblue} #1}\par\vspace{-0.35em}}
+
+\begin{document}
+\fontsize{9}{10.2}\selectfont
+
+\begin{center}
+{\large\bfseries Honours Thesis Progress Update}\\[-0.15em]
+{\small Agent Skill Representation and Retrieval under Semantic Confusability}\\[-0.15em]
+{\small Jacky Zhang \hfill 29 May 2026}
+\end{center}
+
+\sectiontitle{Recent Progress}
+
+I have been building the empirical core of the thesis around one question: what information should a scalable agent-skill representation preserve so that a retriever can distinguish skills that are semantically similar but procedurally different? The practical aim is to test \textbf{how actual skills should be encoded} and \textbf{which retrieval/reranking strategy can use that encoding} to improve selection accuracy, while tracking the added context, candidate, and latency cost.
+
+The current benchmark contains 2349 skills: 85 controlled evaluated skills, 1800 generated background-scale skills, 460 imported public skills, and 4 support/email skills. The prompt set contains 85 gold-labelled prompts.
+
+The controlled skills were built as confusability clusters: skills share surface vocabulary but differ in procedural requirements such as input, output artifact, workflow, precondition, tool dependency, resource requirement, or success criterion. Example domains include document workflows, reading/citation support, spreadsheets, planning, deployment/browser QA, API/backend design, security review, skill lifecycle management, and office artifact workflows.
+
+\sectiontitle{Benchmark Validation and Public Skill Grounding}
+
+The controlled benchmark passes the main validation checks: all prompt/skill references resolve, gold labels are procedurally justified, prompt leakage checks show no critical or high-risk exact-name leaks, and the large library creates scale pressure for compact metadata/progressive-disclosure systems.
+
+A key concern is circularity: the controlled gold skills deliberately contain the procedural fields that I hypothesize are important. To address this, I imported 460 public \texttt{SKILL.md} artifacts and audited whether similar fields appear in real skill artifacts. I ran both a deterministic heuristic audit and a DeepSeek model-assisted verification pass, requiring evidence quotes where possible. The model audit suggests many fields are common or extractable:
+
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}lrl@{}}
+\toprule
+\textbf{Field} & \textbf{Model-present rate} & \textbf{Current interpretation} \\
+\midrule
+Workflow/procedure & 90.4\% & Strongly observed \\
+Dependencies/tools & 89.6\% & Strongly observed \\
+Examples/tests & 87.6\% & Strongly observed \\
+Routing trigger & 85.7\% & Observed, but broad descriptions need care \\
+Output artifact & 80.2\% & Observed/extractable \\
+Resources/references & 77.2\% & Observed/extractable \\
+Input/precondition & 68.3\% & Often implicit/extractable \\
+Hierarchy/links & 51.7\% & Partially observed \\
+Safety/side effects & 29.8\% & Weakly observed; likely a proposed quality field \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This supports a careful claim: public skills often contain procedural signals, but unevenly. A representation layer should therefore extract and normalize retrieval-critical information rather than assume clean author-provided schemas.
+
+\sectiontitle{Retrieval Results So Far}
+
+I have implemented flat metadata retrieval, lexical retrieval over skill cards, dense embedding retrieval over descriptions/full skill text, structured procedural representations, and hybrid retrieval with a schema-aware reranker. These runs test whether preserving information such as use conditions, inputs, outputs, workflow, dependencies, and boundaries improves selection under semantic similarity. The table below lists the main completed runs; more method details are in the appendix.
+
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+\textbf{Method / condition} & \textbf{Scale} & \textbf{Top-1} & \textbf{Status} \\
+\midrule
+M0 progressive disclosure baseline & 67 core & 61.2\% & Done, historical core run \\
+BM25 flat metadata & 2349 & 68.2\% & Done \\
+TF-IDF flat metadata & 2349 & 58.8\% & Done \\
+TF-IDF structured schema & 2349 & 76.5\% & Done \\
+BM25 + schema rerank & 2349 & 78.8\% & Done \\
+MiniLM full-skill + schema rerank & 2089 & 82.3\% & Done, not rerun at 2349 \\
+Qwen full-skill embedding only & 2089 & 50.6\% & Done \\
+Qwen full-skill + Qwen rerank & 2089 & 63.5\% & Done \\
+Qwen full-skill + local schema rerank & 2089 & 84.7\% & Done \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Current interpretation: structure-aware and hybrid retrieval improves strict top-1 accuracy over flat metadata and embedding-only baselines. The remaining question is the trade-off: how much extra context, candidate budget, reranking latency, and representation construction effort is needed for that gain.
+
+\sectiontitle{Current Risks and Next Steps}
+
+The main methodological risk is that the schema-aware reranker may be too aligned with the controlled skills because those skills explicitly expose the tested fields. To reduce this, I plan to add/refine cases where procedural information is implicit, distributed, or requires parsing from the full skill artifact rather than appearing as an obvious labelled field. I will also manually adjudicate the current 80 public-skill heuristic/model disagreement cases and freeze the final field taxonomy into observed, extractable, proposed, and special structural fields.
+
+Next, I will finalize the method set, compare top-20/top-50/top-100 candidate budgets, complete failure-mode analysis, and run a small downstream validation set to test whether better retrieval improves task success rather than only offline ranking metrics.
+
+\newpage
+
+\begin{center}
+{\large\bfseries Appendix: Method Inventory and Planned Work}\\[-0.15em]
+{\small FYI detail for current retrieval/representation experiments}
+\end{center}
+
+\sectiontitle{Planned Retrieval Architecture}
+
+I am treating skill selection as a candidate-subsetting pipeline before the main agent loads full skill documents. The experiment asks: \textbf{which skill information should be encoded, how should candidates be retrieved from that encoding, and whether an optional reranker improves final selection enough to justify its cost}.
+
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}p{3.1cm}p{5.0cm}p{4.1cm}p{4.7cm}@{}}
+\toprule
+\textbf{Component} & \textbf{Variants to compare} & \textbf{Purpose} & \textbf{Current status} \\
+\midrule
+Skill encoding & Flat metadata; full skill text; structured procedural fields; dependency/resource-aware fields; graph/tree relations. & Tests which information should be preserved: topic, use condition, input, output, workflow, constraints, dependencies, resources, hierarchy. & Flat, full-text, structured, and dependency/resource fields implemented. Graph/tree remains planned. \\
+Candidate retrieval & Lexical BM25/TF-IDF; local embedding; Qwen embedding; progressive-disclosure baseline. & Produces a top-$k$ shortlist from a large skill library and tests recall under scale. & Lexical, local embedding, Qwen embedding, and historical M0 baseline have been run. \\
+Optional reranking & None; Qwen generic reranker; local schema-aware reranker; future graph-aware reranker. & Tests whether procedural information improves final ordering after broad candidate retrieval. & Qwen reranker and local schema reranker implemented; schema reranker is strongest so far. \\
+Evaluation & Strict top-1; acceptable top-1; top-5; MRR; non-core false positives; context/candidate cost; downstream task success. & Measures accuracy under semantic similarity and the cost of exposing/processing richer representations. & Ranking metrics done; cost/candidate-budget and downstream validation remain to finish. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In short, the main comparison is not ``one algorithm versus another algorithm''. It is: \textbf{flat vs embedding vs structure-aware encodings}, then \textbf{with or without reranking}, evaluated by accuracy and cost. This keeps the thesis focused on how skills should be represented for scalable retrieval.
+
+\sectiontitle{What Has Not Been Completed Yet}
+
+\begin{itemize}
+  \item Full M0 progressive-disclosure run on the expanded 85-prompt or 2349-skill setting, if feasible.
+  \item Qwen/provider reruns for every representation on the final 2349-skill library; current Qwen results are mainly 2089-scale/full-skill conditions.
+  \item Manual adjudication of the 80 public-skill heuristic/model disagreement cases.
+  \item Final freeze of the representation-field taxonomy.
+  \item Candidate-budget/cost comparison for top-20, top-50, and top-100 retrieval pipelines.
+  \item Graph/tree representation experiment, if hierarchy/resource relations become central after taxonomy review.
+  \item Systematic failure-mode analysis across the final frozen method set.
+  \item Downstream validation showing whether improved retrieval improves actual agent task success.
+\end{itemize}
+
+\sectiontitle{Why More Cluster Refinement Is Planned}
+
+The current controlled gold skills often expose the fields I believe are important, which is good for controlled testing but creates a possible alignment risk for the schema reranker. To make the evaluation more robust, I plan to add/refine test cases where the relevant information is still present but less directly labelled: for example, preconditions implied by examples, output artifacts embedded in workflow text, dependencies expressed through commands, or boundaries expressed as route-out instructions. This will test whether the representation layer can parse and normalize procedural information rather than merely exploit hand-labelled fields.
+
+\sectiontitle{Expected Next Deliverables}
+
+\begin{itemize}
+  \item A frozen field taxonomy: observed, extractable, proposed, and structural fields.
+  \item A final method table with top-1, acceptable top-1, top-5, MRR, non-core false positives, and context/candidate cost.
+  \item A short downstream validation set, likely 12--20 representative tasks.
+  \item Revised thesis methodology/results sections using the benchmark validation, public-skill field audit, and retrieval comparisons.
+\end{itemize}
+
+\end{document}

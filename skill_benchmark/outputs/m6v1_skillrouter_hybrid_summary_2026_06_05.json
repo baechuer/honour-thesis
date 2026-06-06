@@ -1,0 +1,52 @@
+{
+  "job_id": "6a2242eee52fdd2a02ed8b51",
+  "date": "2026-06-05",
+  "hardware": "Hugging Face Jobs t4-small",
+  "first_stage_model": "pipizhao/SkillRouter-Embedding-0.6B",
+  "first_stage_representation": "full",
+  "reranker": "M6-v1 local deterministic field-aware matcher",
+  "results": {
+    "controlled_top20": {
+      "best_field_set": "task_output_workflow",
+      "top1": 0.8321,
+      "accept_top1": 0.8321,
+      "top5": 0.9562,
+      "accept_top5": 0.9562,
+      "mrr": 0.8954,
+      "candidate_recall_20": 0.9781,
+      "candidate_recall_100": 1.0,
+      "non_main_top1": 0.0511
+    },
+    "controlled_top100": {
+      "best_field_set": "task_output_workflow",
+      "top1": 0.8686,
+      "accept_top1": 0.8686,
+      "top5": 0.9854,
+      "accept_top5": 0.9854,
+      "mrr": 0.9269,
+      "candidate_recall_20": 0.9781,
+      "candidate_recall_100": 1.0,
+      "non_main_top1": 0.0073
+    },
+    "public_gold_top20": {
+      "best_field_set_by_strict_top1": "task_or_core_boundary",
+      "top1": 0.625,
+      "accept_top1": 0.6875,
+      "top5_range": "0.9375-0.9688",
+      "accept_top5": 0.9688,
+      "mrr_best": 0.7649,
+      "candidate_recall_20": 0.9688,
+      "candidate_recall_100": 0.9688
+    },
+    "public_gold_top100": {
+      "best_field_set_by_strict_top1": "task",
+      "top1": 0.625,
+      "accept_top1": 0.6875,
+      "top5": 0.9375,
+      "accept_top5": 0.9688,
+      "mrr": 0.7649,
+      "candidate_recall_20": 0.9688,
+      "candidate_recall_100": 0.9688
+    }
+  }
+}

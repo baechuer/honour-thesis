@@ -72,7 +72,7 @@ def render(summary: dict[str, Any], cases: list[dict[str, Any]]) -> str:
     lines = [
         "# Public Skill Field Disagreement Review Packet",
         "",
-        "Purpose: targeted manual review of heuristic/model disagreements from the 200-skill public field audit.",
+        "Purpose: targeted manual review of heuristic/model disagreements from the public field audit.",
         "",
         f"- Skills compared in source report: {summary['skills_compared']}",
         f"- Total selected disagreement cases: {len(cases)}",

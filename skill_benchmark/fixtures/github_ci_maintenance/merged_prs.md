@@ -1,0 +1,3 @@
+- Add subscription pause API
+- Fix tax rounding bug
+- Remove legacy invoice endpoint

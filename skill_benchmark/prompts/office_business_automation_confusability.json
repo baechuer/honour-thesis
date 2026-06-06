@@ -1,0 +1,74 @@
+[
+  {
+    "id": "office_business_automation_p1_xlsx_formula_model_builder",
+    "family": "office_business_automation",
+    "gold_skill": "xlsx-formula-model-builder",
+    "closest_alternatives": [
+      "public-office-xlsx-manipulation",
+      "public-swebench-xlsx",
+      "public-office-data-analysis",
+      "airtable-workflow-automator"
+    ],
+    "prompt": "Build a spreadsheet formula model for subscription revenue using `/workspace/fixtures/office_business_automation/revenue_assumptions.md`. I need formulas and validation checks, not Airtable automation."
+  },
+  {
+    "id": "office_business_automation_p2_airtable_workflow_automator",
+    "family": "office_business_automation",
+    "gold_skill": "airtable-workflow-automator",
+    "closest_alternatives": [
+      "public-office-airtable-automation",
+      "public-office-crm-automation",
+      "xlsx-formula-model-builder",
+      "notion-research-database-builder"
+    ],
+    "prompt": "Design an Airtable automation for inbound partner requests: fields, views, trigger conditions, Slack notification, and testing steps."
+  },
+  {
+    "id": "office_business_automation_p3_notion_research_database_builder",
+    "family": "office_business_automation",
+    "gold_skill": "notion-research-database-builder",
+    "closest_alternatives": [
+      "public-office-notion-automation",
+      "public-openai-notion-research-documentation",
+      "xlsx-formula-model-builder",
+      "airtable-workflow-automator"
+    ],
+    "prompt": "Create a Notion research database structure for thesis papers with properties, relations, review status, tags, and capture templates."
+  },
+  {
+    "id": "office_business_automation_p4_calendar_scheduling_optimizer",
+    "family": "office_business_automation",
+    "gold_skill": "calendar-scheduling-optimizer",
+    "closest_alternatives": [
+      "public-office-calendar-automation",
+      "meeting-agenda-builder",
+      "xlsx-formula-model-builder",
+      "airtable-workflow-automator"
+    ],
+    "prompt": "Use these availability notes to propose two meeting slots with buffers and conflict tradeoffs. This is scheduling, not meeting-note extraction."
+  },
+  {
+    "id": "office_business_automation_p5_meeting_notes_action_extractor",
+    "family": "office_business_automation",
+    "gold_skill": "meeting-notes-action-extractor",
+    "closest_alternatives": [
+      "public-office-meeting-notes",
+      "meeting-followup-extractor",
+      "xlsx-formula-model-builder",
+      "airtable-workflow-automator"
+    ],
+    "prompt": "From `/workspace/fixtures/office_business_automation/meeting_notes.md`, extract decisions, actions, owners, due dates, and open questions. Do not draft a calendar schedule."
+  },
+  {
+    "id": "office_business_automation_p6_email_classification_router",
+    "family": "office_business_automation",
+    "gold_skill": "email-classification-router",
+    "closest_alternatives": [
+      "public-office-email-classifier",
+      "public-office-gmail-workflows",
+      "public-office-suspicious-email",
+      "xlsx-formula-model-builder"
+    ],
+    "prompt": "Classify the emails in `/workspace/fixtures/office_business_automation/inbox_sample.md` by category, priority, routing destination, and escalation risk. Do not write replies."
+  }
+]

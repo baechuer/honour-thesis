@@ -72,8 +72,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.007858,
-        "score": 0.06494,
+        "margin_vs_gold": 0.008114,
+        "score": 0.065195,
         "shared_terms": [
           "account",
           "service",
@@ -84,8 +84,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014439,
-        "score": 0.042642,
+        "margin_vs_gold": -0.014142,
+        "score": 0.042939,
         "shared_terms": [
           "analytic",
           "data",
@@ -97,8 +97,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.015138,
-        "score": 0.041943,
+        "margin_vs_gold": -0.014849,
+        "score": 0.042232,
         "shared_terms": [
           "analytic",
           "data",
@@ -110,8 +110,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.015983,
-        "score": 0.041099,
+        "margin_vs_gold": -0.015653,
+        "score": 0.041429,
         "shared_terms": [
           "analytic",
           "data",
@@ -122,8 +122,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016163,
-        "score": 0.040919,
+        "margin_vs_gold": -0.015886,
+        "score": 0.041195,
         "shared_terms": [
           "analytic",
           "data",
@@ -134,8 +134,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016708,
-        "score": 0.040373,
+        "margin_vs_gold": -0.016433,
+        "score": 0.040649,
         "shared_terms": [
           "analytic",
           "data",
@@ -146,8 +146,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017376,
-        "score": 0.039706,
+        "margin_vs_gold": -0.0171,
+        "score": 0.039981,
         "shared_terms": [
           "analytic",
           "data",
@@ -158,8 +158,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017481,
-        "score": 0.0396,
+        "margin_vs_gold": -0.0172,
+        "score": 0.039882,
         "shared_terms": [
           "analytic",
           "data",
@@ -170,8 +170,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017508,
-        "score": 0.039574,
+        "margin_vs_gold": -0.017216,
+        "score": 0.039865,
         "shared_terms": [
           "analytic",
           "data",
@@ -183,8 +183,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017584,
-        "score": 0.039497,
+        "margin_vs_gold": -0.017326,
+        "score": 0.039756,
         "shared_terms": [
           "analytic",
           "data",
@@ -194,6 +194,110 @@
         "status": "near_gold"
       }
     ]
+  },
+  {
+    "family": "api_mcp_tooling",
+    "gold_boundary_score": 0.017565,
+    "gold_score": 0.200422,
+    "gold_skill": "rest-api-contract-designer",
+    "id": "api_mcp_tooling_p1_rest_api_contract_designer",
+    "instruction_text": "Specify a new client-facing HTTP interface for subscription invoices, including resources, endpoints, request and response shapes, status codes, pagination, and error examples. This is not an MCP wrapper.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_mcp_tooling",
+    "gold_boundary_score": 0.05655,
+    "gold_score": 0.144145,
+    "gold_skill": "mcp-server-builder",
+    "id": "api_mcp_tooling_p2_mcp_server_builder",
+    "instruction_text": "Create an MCP server design that exposes two local file-inspection tools with narrow schemas and resource boundaries. Do not design a public REST API.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 2,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.013871,
+        "score": 0.130274,
+        "shared_terms": [
+          "mcp",
+          "server",
+          "tool",
+          "schema",
+          "resource",
+          "public",
+          "api"
+        ],
+        "skill": "public-office-office-mcp",
+        "status": "near_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.018845,
+        "score": 0.1253,
+        "shared_terms": [
+          "design",
+          "tool",
+          "schema",
+          "resource",
+          "public",
+          "api"
+        ],
+        "skill": "public-oh-my-api-design",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "api_mcp_tooling",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.254753,
+    "gold_skill": "webhook-integration-planner",
+    "id": "api_mcp_tooling_p3_webhook_integration_planner",
+    "instruction_text": "Plan webhook handling for payment events: accepted event types, signature checks, idempotency, retry behavior, ordering, and dead-letter storage.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_mcp_tooling",
+    "gold_boundary_score": 0.042164,
+    "gold_score": 0.215188,
+    "gold_skill": "auth-flow-integrator",
+    "id": "api_mcp_tooling_p4_auth_flow_integrator",
+    "instruction_text": "Integrate OAuth login for a dashboard app, covering scopes, token refresh, secret storage, logout, and authorization checks. Do not turn it into webhook planning.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_mcp_tooling",
+    "gold_boundary_score": 0.023338,
+    "gold_score": 0.268631,
+    "gold_skill": "api-documentation-writer",
+    "id": "api_mcp_tooling_p5_api_documentation_writer",
+    "instruction_text": "Write developer docs for the existing billing API contract in billing_contract.yaml, including quickstart, examples, auth notes, and errors.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "api_mcp_tooling",
+    "gold_boundary_score": 0.035002,
+    "gold_score": 0.278277,
+    "gold_skill": "api-security-threat-reviewer",
+    "id": "api_mcp_tooling_p6_api_security_threat_reviewer",
+    "instruction_text": "Threat-review the billing API for authorization gaps, sensitive data exposure, rate-limit abuse, and validation risks. I need security findings, not user-facing docs.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
   },
   {
     "family": "browser_web_automation",
@@ -268,8 +372,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.010182,
-        "score": 0.109983,
+        "margin_vs_gold": 0.010354,
+        "score": 0.110156,
         "shared_terms": [
           "keyboard",
           "navigation",
@@ -305,8 +409,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.028761,
-        "score": 0.173169,
+        "margin_vs_gold": 0.028667,
+        "score": 0.173076,
         "shared_terms": [
           "review",
           "extract",
@@ -406,8 +510,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.003924,
-        "score": 0.058049,
+        "margin_vs_gold": -0.00396,
+        "score": 0.058014,
         "shared_terms": [
           "suspiciou",
           "artifact"
@@ -417,19 +521,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.005716,
-        "score": 0.056258,
-        "shared_terms": [
-          "react",
-          "artifact"
-        ],
-        "skill": "public-oh-my-react-best-practices",
-        "status": "near_gold"
-      },
-      {
-        "family": "public_imported_background",
-        "margin_vs_gold": -0.005728,
-        "score": 0.056245,
+        "margin_vs_gold": -0.005769,
+        "score": 0.056205,
         "shared_terms": [
           "react",
           "artifact"
@@ -438,9 +531,20 @@
         "status": "near_gold"
       },
       {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.005775,
+        "score": 0.056198,
+        "shared_terms": [
+          "react",
+          "artifact"
+        ],
+        "skill": "public-oh-my-react-best-practices",
+        "status": "near_gold"
+      },
+      {
         "family": "background_scale",
-        "margin_vs_gold": -0.017093,
-        "score": 0.04488,
+        "margin_vs_gold": -0.017131,
+        "score": 0.044843,
         "shared_terms": [
           "audit",
           "miss",
@@ -454,8 +558,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.019111,
-        "score": 0.042863,
+        "margin_vs_gold": -0.019519,
+        "score": 0.042455,
         "shared_terms": [
           "audit",
           "miss",
@@ -468,8 +572,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.019925,
-        "score": 0.042049,
+        "margin_vs_gold": -0.019951,
+        "score": 0.042022,
         "shared_terms": [
           "audit",
           "miss",
@@ -531,8 +635,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016869,
-        "score": 0.066748,
+        "margin_vs_gold": -0.017247,
+        "score": 0.066371,
         "shared_terms": [
           "decision",
           "compare",
@@ -589,14 +693,14 @@
     "gold_skill": "deployment-build-triager",
     "id": "deploy_p4_build_log_triage",
     "instruction_text": "The Netlify deploy for build_log.txt failed. Please inspect the build log and identify the likely root cause, missing env/config assumptions, and the smallest rerun sequence.",
-    "non_core_above_gold_count": 1,
-    "non_core_competitor_count": 2,
+    "non_core_above_gold_count": 2,
+    "non_core_competitor_count": 3,
     "non_core_near_gold_count": 1,
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.053341,
-        "score": 0.169049,
+        "margin_vs_gold": 0.05513,
+        "score": 0.170839,
         "shared_terms": [
           "netlify",
           "deploy",
@@ -607,9 +711,24 @@
         "status": "above_gold"
       },
       {
+        "family": "implicit_field_stress",
+        "margin_vs_gold": 0.024978,
+        "score": 0.140686,
+        "shared_terms": [
+          "identify",
+          "likely",
+          "root",
+          "cause",
+          "rerun",
+          "sequence"
+        ],
+        "skill": "implicit-ci-failure-reader",
+        "status": "above_gold"
+      },
+      {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.014217,
-        "score": 0.101491,
+        "margin_vs_gold": -0.013003,
+        "score": 0.102705,
         "shared_terms": [
           "build",
           "log"
@@ -692,8 +811,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.087045,
-        "score": 0.146295,
+        "margin_vs_gold": 0.085239,
+        "score": 0.144489,
         "shared_terms": [
           "extract",
           "reusable",
@@ -708,8 +827,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.075701,
-        "score": 0.134952,
+        "margin_vs_gold": 0.075136,
+        "score": 0.134387,
         "shared_terms": [
           "extract",
           "reusable",
@@ -725,8 +844,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.011677,
-        "score": 0.070928,
+        "margin_vs_gold": 0.011501,
+        "score": 0.070752,
         "shared_terms": [
           "extract",
           "reusable",
@@ -742,8 +861,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.011164,
-        "score": 0.070415,
+        "margin_vs_gold": 0.011285,
+        "score": 0.070536,
         "shared_terms": [
           "extract",
           "reusable",
@@ -759,8 +878,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.00208,
-        "score": 0.061331,
+        "margin_vs_gold": 0.001121,
+        "score": 0.060372,
         "shared_terms": [
           "invoice",
           "payment"
@@ -770,8 +889,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.005709,
-        "score": 0.053542,
+        "margin_vs_gold": -0.005629,
+        "score": 0.053622,
         "shared_terms": [
           "extract",
           "reusable",
@@ -786,29 +905,9 @@
         "status": "near_gold"
       },
       {
-        "family": "public_imported_background",
-        "margin_vs_gold": -0.005957,
-        "score": 0.053294,
-        "shared_terms": [
-          "write"
-        ],
-        "skill": "public-oh-my-write-a-skill",
-        "status": "near_gold"
-      },
-      {
-        "family": "public_imported_background",
-        "margin_vs_gold": -0.006498,
-        "score": 0.052752,
-        "shared_terms": [
-          "write"
-        ],
-        "skill": "public-mattpocock-write-a-skill",
-        "status": "near_gold"
-      },
-      {
         "family": "background_scale",
-        "margin_vs_gold": -0.008041,
-        "score": 0.05121,
+        "margin_vs_gold": -0.007916,
+        "score": 0.051335,
         "shared_terms": [
           "extract",
           "reusable",
@@ -822,9 +921,19 @@
         "status": "near_gold"
       },
       {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.008367,
+        "score": 0.050884,
+        "shared_terms": [
+          "write"
+        ],
+        "skill": "public-oh-my-write-a-skill",
+        "status": "near_gold"
+      },
+      {
         "family": "background_scale",
-        "margin_vs_gold": -0.008754,
-        "score": 0.050497,
+        "margin_vs_gold": -0.008678,
+        "score": 0.050573,
         "shared_terms": [
           "extract",
           "reusable",
@@ -835,6 +944,16 @@
           "summary"
         ],
         "skill": "crm-ops-field-extractor",
+        "status": "near_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.008804,
+        "score": 0.050447,
+        "shared_terms": [
+          "write"
+        ],
+        "skill": "public-mattpocock-write-a-skill",
         "status": "near_gold"
       }
     ]
@@ -876,6 +995,299 @@
     "top_non_core_competitors": []
   },
   {
+    "family": "github_ci_maintenance",
+    "gold_boundary_score": 0.022493,
+    "gold_score": 0.193087,
+    "gold_skill": "ci-log-root-cause-debugger",
+    "id": "github_ci_maintenance_p1_ci_log_root_cause_debugger",
+    "instruction_text": "Inspect ci_log.txt and identify the CI root cause, the first meaningful error, and the smallest rerun sequence.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "implicit_field_stress",
+        "margin_vs_gold": -0.010835,
+        "score": 0.182252,
+        "shared_terms": [
+          "identify",
+          "root",
+          "cause",
+          "first",
+          "meaningful",
+          "rerun",
+          "sequence"
+        ],
+        "skill": "implicit-ci-failure-reader",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "github_ci_maintenance",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.188519,
+    "gold_skill": "pr-review-comment-resolver",
+    "id": "github_ci_maintenance_p2_pr_review_comment_resolver",
+    "instruction_text": "Use pr_review_comments.md to plan how to resolve the review comments and what response to leave. Do not perform a general code review.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.008934,
+        "score": 0.179586,
+        "shared_terms": [
+          "review",
+          "code"
+        ],
+        "skill": "public-oh-my-code-review",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "github_ci_maintenance",
+    "gold_boundary_score": 0.069473,
+    "gold_score": 0.142993,
+    "gold_skill": "repo-code-reviewer",
+    "id": "github_ci_maintenance_p3_repo_code_reviewer",
+    "instruction_text": "Review the diff described in payment_diff.patch for bugs and missing tests. This is a fresh code review, not a CI log diagnosis.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.018929,
+        "score": 0.161921,
+        "shared_terms": [
+          "review",
+          "code"
+        ],
+        "skill": "public-oh-my-code-review",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.0101,
+        "score": 0.132893,
+        "shared_terms": [
+          "review",
+          "code"
+        ],
+        "skill": "public-addy-agent-code-review-and-quality",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "github_ci_maintenance",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.203341,
+    "gold_skill": "github-issue-triager",
+    "id": "github_ci_maintenance_p4_github_issue_triager",
+    "instruction_text": "Triage the issues in issues.md into bug/feature/support labels, priority, owner guess, and missing reproduction details.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.002149,
+        "score": 0.201193,
+        "shared_terms": [
+          "issue",
+          "triage",
+          "feature"
+        ],
+        "skill": "public-mattpocock-triage",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "github_ci_maintenance",
+    "gold_boundary_score": 0.030175,
+    "gold_score": 0.200183,
+    "gold_skill": "release-changelog-generator",
+    "id": "github_ci_maintenance_p5_release_changelog_generator",
+    "instruction_text": "Turn merged_prs.md into release notes grouped by features, fixes, and breaking changes. Do not review the code.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "github_ci_maintenance",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.105421,
+    "gold_skill": "git-safety-guardrail-installer",
+    "id": "github_ci_maintenance_p6_git_safety_guardrail_installer",
+    "instruction_text": "Design repository guardrails to block accidental `git push`, `reset --hard`, and secret commits. I need hook/config steps and verification, not issue triage.",
+    "non_core_above_gold_count": 2,
+    "non_core_competitor_count": 3,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.120387,
+        "score": 0.225808,
+        "shared_terms": [
+          "guardrail",
+          "block",
+          "git",
+          "push",
+          "reset",
+          "hard",
+          "hook"
+        ],
+        "skill": "public-mattpocock-git-guardrails-claude-code",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.012219,
+        "score": 0.11764,
+        "shared_terms": [
+          "issue",
+          "triage"
+        ],
+        "skill": "public-mattpocock-triage",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.010993,
+        "score": 0.094428,
+        "shared_terms": [
+          "guardrail",
+          "git"
+        ],
+        "skill": "public-oh-my-git-guardrails-claude-code",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "huggingface_ml_workflows",
+    "gold_boundary_score": 0.023772,
+    "gold_score": 0.274376,
+    "gold_skill": "hf-dataset-viewer-inspector",
+    "id": "huggingface_ml_workflows_p1_hf_dataset_viewer_inspector",
+    "instruction_text": "For the dataset described in customer_tickets_dataset.md, inspect expected subsets, splits, columns, and row examples before we choose any model.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "huggingface_ml_workflows",
+    "gold_boundary_score": 0.039754,
+    "gold_score": 0.134566,
+    "gold_skill": "hf-local-model-selector",
+    "id": "huggingface_ml_workflows_p2_hf_local_model_selector",
+    "instruction_text": "I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options; do not design a dataset audit.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "implicit_field_stress",
+        "margin_vs_gold": 0.103579,
+        "score": 0.238145,
+        "shared_terms": [
+          "local",
+          "model",
+          "choose",
+          "hugg",
+          "face",
+          "gguf",
+          "quantization"
+        ],
+        "skill": "implicit-hf-local-model-chooser",
+        "status": "above_gold"
+      },
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.000527,
+        "score": 0.134039,
+        "shared_terms": [
+          "local",
+          "model",
+          "realistic",
+          "hugg",
+          "face",
+          "dataset"
+        ],
+        "skill": "public-huggingface-hf-cli",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "huggingface_ml_workflows",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.185675,
+    "gold_skill": "sentence-transformer-finetuner",
+    "id": "huggingface_ml_workflows_p3_sentence_transformer_finetuner",
+    "instruction_text": "We have labelled skill-query pairs and hard negatives for agent skill routing. Plan a sentence-transformer fine-tuning setup with losses, splits, and retrieval metrics.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "huggingface_ml_workflows",
+    "gold_boundary_score": 0.02142,
+    "gold_score": 0.105211,
+    "gold_skill": "gradio-demo-builder",
+    "id": "huggingface_ml_workflows_p4_gradio_demo_builder",
+    "instruction_text": "Create a small Python web UI plan for a ticket classifier with a text box, confidence display, sample inputs, and launch checks. We already have the model; do not discuss fine-tuning.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "huggingface_ml_workflows",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.253587,
+    "gold_skill": "hf-zerogpu-space-deployer",
+    "id": "huggingface_ml_workflows_p5_hf_zerogpu_space_deployer",
+    "instruction_text": "Prepare our Gradio classifier for Hugging Face ZeroGPU Spaces. Focus on dependency files, GPU queue behavior, sleep constraints, and deployment verification.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "huggingface_ml_workflows",
+    "gold_boundary_score": 0.023313,
+    "gold_score": 0.134304,
+    "gold_skill": "hf-community-eval-runner",
+    "id": "huggingface_ml_workflows_p6_hf_community_eval_runner",
+    "instruction_text": "Compare two Hugging Face classifiers on a held-out ticket dataset using reproducible metrics. I need an evaluation plan and result table, not a Gradio app.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": 0.001852,
+        "score": 0.136156,
+        "shared_terms": [
+          "hugg",
+          "face",
+          "dataset"
+        ],
+        "skill": "public-huggingface-hf-cli",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
     "family": "metrics_observability",
     "gold_boundary_score": 0.0,
     "gold_score": 0.093133,
@@ -888,8 +1300,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.106876,
-        "score": 0.200009,
+        "margin_vs_gold": 0.097927,
+        "score": 0.19106,
         "shared_terms": [
           "triage"
         ],
@@ -898,8 +1310,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.087267,
-        "score": 0.1804,
+        "margin_vs_gold": 0.078054,
+        "score": 0.171187,
         "shared_terms": [
           "triage"
         ],
@@ -908,8 +1320,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.021722,
-        "score": 0.114855,
+        "margin_vs_gold": 0.015569,
+        "score": 0.108702,
         "shared_terms": [
           "triage"
         ],
@@ -918,8 +1330,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.015939,
-        "score": 0.109072,
+        "margin_vs_gold": 0.01006,
+        "score": 0.103193,
         "shared_terms": [
           "triage"
         ],
@@ -953,8 +1365,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.017134,
-        "score": 0.111713,
+        "margin_vs_gold": 0.017369,
+        "score": 0.111948,
         "shared_terms": [
           "service",
           "risk"
@@ -964,8 +1376,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004021,
-        "score": 0.090558,
+        "margin_vs_gold": -0.003999,
+        "score": 0.090579,
         "shared_terms": [
           "service"
         ],
@@ -974,8 +1386,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004962,
-        "score": 0.089617,
+        "margin_vs_gold": -0.004938,
+        "score": 0.089641,
         "shared_terms": [
           "service"
         ],
@@ -984,8 +1396,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.005613,
-        "score": 0.088966,
+        "margin_vs_gold": -0.005591,
+        "score": 0.088988,
         "shared_terms": [
           "service"
         ],
@@ -994,8 +1406,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.006027,
-        "score": 0.088552,
+        "margin_vs_gold": -0.00599,
+        "score": 0.088589,
         "shared_terms": [
           "service",
           "risk"
@@ -1005,8 +1417,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.006513,
-        "score": 0.088066,
+        "margin_vs_gold": -0.00645,
+        "score": 0.088129,
         "shared_terms": [
           "service"
         ],
@@ -1015,8 +1427,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.006745,
-        "score": 0.087833,
+        "margin_vs_gold": -0.006719,
+        "score": 0.08786,
         "shared_terms": [
           "service",
           "risk"
@@ -1026,8 +1438,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.006873,
-        "score": 0.087706,
+        "margin_vs_gold": -0.006851,
+        "score": 0.087728,
         "shared_terms": [
           "service"
         ],
@@ -1036,8 +1448,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.007291,
-        "score": 0.087287,
+        "margin_vs_gold": -0.007252,
+        "score": 0.087327,
         "shared_terms": [
           "service"
         ],
@@ -1046,8 +1458,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.007916,
-        "score": 0.086663,
+        "margin_vs_gold": -0.007819,
+        "score": 0.08676,
         "shared_terms": [
           "service"
         ],
@@ -1093,8 +1505,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014009,
-        "score": 0.064616,
+        "margin_vs_gold": -0.013902,
+        "score": 0.064723,
         "shared_terms": [
           "service",
           "incident"
@@ -1104,8 +1516,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014745,
-        "score": 0.063879,
+        "margin_vs_gold": -0.014634,
+        "score": 0.06399,
         "shared_terms": [
           "service",
           "incident"
@@ -1115,8 +1527,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.015262,
-        "score": 0.063362,
+        "margin_vs_gold": -0.015152,
+        "score": 0.063473,
         "shared_terms": [
           "service",
           "incident"
@@ -1126,8 +1538,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016113,
-        "score": 0.062512,
+        "margin_vs_gold": -0.015994,
+        "score": 0.06263,
         "shared_terms": [
           "service",
           "incident"
@@ -1137,8 +1549,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016253,
-        "score": 0.062372,
+        "margin_vs_gold": -0.016138,
+        "score": 0.062486,
         "shared_terms": [
           "service",
           "incident"
@@ -1148,8 +1560,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016363,
-        "score": 0.062261,
+        "margin_vs_gold": -0.016253,
+        "score": 0.062371,
         "shared_terms": [
           "service",
           "incident"
@@ -1159,8 +1571,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016656,
-        "score": 0.061968,
+        "margin_vs_gold": -0.016506,
+        "score": 0.062118,
         "shared_terms": [
           "service",
           "incident"
@@ -1170,8 +1582,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.016895,
-        "score": 0.06173,
+        "margin_vs_gold": -0.01677,
+        "score": 0.061855,
         "shared_terms": [
           "service",
           "incident"
@@ -1181,8 +1593,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017139,
-        "score": 0.061486,
+        "margin_vs_gold": -0.017028,
+        "score": 0.061596,
         "shared_terms": [
           "service",
           "incident"
@@ -1192,8 +1604,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017345,
-        "score": 0.06128,
+        "margin_vs_gold": -0.017244,
+        "score": 0.061381,
         "shared_terms": [
           "service",
           "incident"
@@ -1216,8 +1628,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.008073,
-        "score": 0.108465,
+        "margin_vs_gold": -0.007958,
+        "score": 0.108579,
         "shared_terms": [
           "news"
         ],
@@ -1239,8 +1651,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.017347,
-        "score": 0.071145,
+        "margin_vs_gold": -0.017535,
+        "score": 0.070956,
         "shared_terms": [
           "article",
           "decision",
@@ -1255,8 +1667,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.019197,
-        "score": 0.069294,
+        "margin_vs_gold": -0.019374,
+        "score": 0.069118,
         "shared_terms": [
           "article",
           "decision",
@@ -1302,6 +1714,196 @@
     "gold_skill": "tech-news-trend-extractor",
     "id": "news_p5_trend_signal",
     "instruction_text": "Identify which patterns across these three tech news snippets look like actionable tech trend signals right now, why they matter strategically, and what evidence would confirm or weaken the trend. Snippet 1",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "observability_reliability",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.099791,
+    "gold_skill": "prometheus-alert-rule-writer",
+    "id": "observability_reliability_p1_prometheus_alert_rule_writer",
+    "instruction_text": "Produce PromQL alerting expressions for checkout latency and error-budget burn using metrics.md. Include windows, labels, severity, and verification queries; do not build a dashboard.",
+    "non_core_above_gold_count": 1,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": [
+      {
+        "family": "implicit_field_stress",
+        "margin_vs_gold": 0.065984,
+        "score": 0.165775,
+        "shared_terms": [
+          "produce",
+          "alert",
+          "metric",
+          "window",
+          "label",
+          "severity"
+        ],
+        "skill": "implicit-slo-alert-author",
+        "status": "above_gold"
+      }
+    ]
+  },
+  {
+    "family": "observability_reliability",
+    "gold_boundary_score": 0.022041,
+    "gold_score": 0.31627,
+    "gold_skill": "grafana-dashboard-builder",
+    "id": "observability_reliability_p2_grafana_dashboard_builder",
+    "instruction_text": "Design a Grafana dashboard for checkout service health with panels, variables, queries, thresholds, and operator layout. This is not an alert-rule task.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "observability_reliability",
+    "gold_boundary_score": 0.026265,
+    "gold_score": 0.074965,
+    "gold_skill": "distributed-trace-investigator",
+    "id": "observability_reliability_p3_distributed_trace_investigator",
+    "instruction_text": "Use checkout_trace.json to find where checkout latency is introduced across services. I need trace-based diagnosis, not a dashboard.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 21,
+    "non_core_near_gold_count": 21,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.00265,
+        "score": 0.072314,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-resource-linker",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.003799,
+        "score": 0.071166,
+        "shared_terms": [
+          "acros",
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-comparison-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.003985,
+        "score": 0.07098,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-priority-ranker",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.00438,
+        "score": 0.070584,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-failure-diagnoser",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.00467,
+        "score": 0.070294,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-scenario-planner",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.005191,
+        "score": 0.069774,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-intake-classifier",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.005342,
+        "score": 0.069623,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-rewrite-editor",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.005691,
+        "score": 0.069274,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-acceptance-test-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.00576,
+        "score": 0.069205,
+        "shared_terms": [
+          "dashboard"
+        ],
+        "skill": "dashboard-ops-normalizer",
+        "status": "near_gold"
+      },
+      {
+        "family": "implicit_field_stress",
+        "margin_vs_gold": -0.00653,
+        "score": 0.068434,
+        "shared_terms": [
+          "latency"
+        ],
+        "skill": "implicit-trace-path-diagnoser",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "observability_reliability",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.430616,
+    "gold_skill": "slo-breach-narrative-writer",
+    "id": "observability_reliability_p4_slo_breach_narrative_writer",
+    "instruction_text": "Using incident_notes.md, write an SLO breach narrative with timeline, user impact, mitigation, and follow-up actions.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "observability_reliability",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.106925,
+    "gold_skill": "resilience-pattern-reviewer",
+    "id": "observability_reliability_p5_resilience_pattern_reviewer",
+    "instruction_text": "Review payment_client.py for retry, timeout, backoff, fallback, and cascading-failure risks.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "observability_reliability",
+    "gold_boundary_score": 0.021714,
+    "gold_score": 0.310996,
+    "gold_skill": "service-mesh-traffic-debugger",
+    "id": "observability_reliability_p6_service_mesh_traffic_debugger",
+    "instruction_text": "Debug the service-mesh routing notes in mesh_config.yaml, focusing on traffic split, mTLS, retries, and destination rules.",
     "non_core_above_gold_count": 0,
     "non_core_competitor_count": 0,
     "non_core_near_gold_count": 0,
@@ -1356,8 +1958,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.004293,
-        "score": 0.048435,
+        "margin_vs_gold": 0.004368,
+        "score": 0.04851,
         "shared_terms": [
           "xlsx",
           "link"
@@ -1367,8 +1969,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.000992,
-        "score": 0.045134,
+        "margin_vs_gold": 0.001133,
+        "score": 0.045274,
         "shared_terms": [
           "xlsx",
           "link"
@@ -1378,8 +1980,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.002678,
-        "score": 0.041463,
+        "margin_vs_gold": -0.002594,
+        "score": 0.041548,
         "shared_terms": [
           "summary",
           "trace"
@@ -1389,8 +1991,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004409,
-        "score": 0.039733,
+        "margin_vs_gold": -0.004303,
+        "score": 0.039839,
         "shared_terms": [
           "calculation",
           "summary"
@@ -1400,8 +2002,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.006081,
-        "score": 0.038061,
+        "margin_vs_gold": -0.006003,
+        "score": 0.038139,
         "shared_terms": [
           "summary"
         ],
@@ -1410,8 +2012,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.010461,
-        "score": 0.03368,
+        "margin_vs_gold": -0.010338,
+        "score": 0.033803,
         "shared_terms": [
           "xlsx",
           "link"
@@ -1421,8 +2023,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.011509,
-        "score": 0.032632,
+        "margin_vs_gold": -0.011583,
+        "score": 0.032559,
         "shared_terms": [
           "assumption",
           "risk",
@@ -1433,8 +2035,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.012998,
-        "score": 0.031144,
+        "margin_vs_gold": -0.012968,
+        "score": 0.031174,
         "shared_terms": [
           "summary",
           "trace"
@@ -1444,8 +2046,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.013105,
-        "score": 0.031037,
+        "margin_vs_gold": -0.013166,
+        "score": 0.030975,
         "shared_terms": [
           "calculation",
           "assumption",
@@ -1456,8 +2058,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.013362,
-        "score": 0.03078,
+        "margin_vs_gold": -0.013447,
+        "score": 0.030694,
         "shared_terms": [
           "assumption",
           "risk"
@@ -1492,6 +2094,243 @@
     "top_non_core_competitors": []
   },
   {
+    "family": "office_business_automation",
+    "gold_boundary_score": 0.024895,
+    "gold_score": 0.180476,
+    "gold_skill": "xlsx-formula-model-builder",
+    "id": "office_business_automation_p1_xlsx_formula_model_builder",
+    "instruction_text": "Build a spreadsheet formula model for subscription revenue using revenue_assumptions.md. I need formulas and validation checks, not Airtable automation.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_business_automation",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.225352,
+    "gold_skill": "airtable-workflow-automator",
+    "id": "office_business_automation_p2_airtable_workflow_automator",
+    "instruction_text": "Design an Airtable automation for inbound partner requests: fields, views, trigger conditions, Slack notification, and testing steps.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_business_automation",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.326027,
+    "gold_skill": "notion-research-database-builder",
+    "id": "office_business_automation_p3_notion_research_database_builder",
+    "instruction_text": "Create a Notion research database structure for thesis papers with properties, relations, review status, tags, and capture templates.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_business_automation",
+    "gold_boundary_score": 0.076629,
+    "gold_score": 0.156544,
+    "gold_skill": "calendar-scheduling-optimizer",
+    "id": "office_business_automation_p4_calendar_scheduling_optimizer",
+    "instruction_text": "Use these availability notes to propose two meeting slots with buffers and conflict tradeoffs. This is scheduling, not meeting-note extraction.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 6,
+    "non_core_near_gold_count": 6,
+    "top_non_core_competitors": [
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.002014,
+        "score": 0.154531,
+        "shared_terms": [
+          "note",
+          "two",
+          "meet",
+          "conflict",
+          "tradeoff",
+          "extract"
+        ],
+        "skill": "meeting-ops-comparison-builder",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.012939,
+        "score": 0.143605,
+        "shared_terms": [
+          "note",
+          "meet",
+          "extract"
+        ],
+        "skill": "meeting-ops-resource-linker",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.015199,
+        "score": 0.141346,
+        "shared_terms": [
+          "note",
+          "meet",
+          "extract"
+        ],
+        "skill": "meeting-ops-priority-ranker",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.016632,
+        "score": 0.139912,
+        "shared_terms": [
+          "availability",
+          "propose",
+          "meet",
+          "schedul",
+          "extract"
+        ],
+        "skill": "meeting-scheduler",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.019197,
+        "score": 0.137347,
+        "shared_terms": [
+          "note",
+          "meet",
+          "extract"
+        ],
+        "skill": "meeting-ops-failure-diagnoser",
+        "status": "near_gold"
+      },
+      {
+        "family": "background_scale",
+        "margin_vs_gold": -0.019866,
+        "score": 0.136679,
+        "shared_terms": [
+          "note",
+          "meet",
+          "extract"
+        ],
+        "skill": "meeting-ops-risk-reviewer",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "office_business_automation",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.227229,
+    "gold_skill": "meeting-notes-action-extractor",
+    "id": "office_business_automation_p5_meeting_notes_action_extractor",
+    "instruction_text": "From meeting_notes.md, extract decisions, actions, owners, due dates, and open questions. Do not draft a calendar schedule.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "office_business_automation",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.217669,
+    "gold_skill": "email-classification-router",
+    "id": "office_business_automation_p6_email_classification_router",
+    "instruction_text": "Classify the emails in inbox_sample.md by category, priority, routing destination, and escalation risk. Do not write replies.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "pdf_document_operations",
+    "gold_boundary_score": 0.05655,
+    "gold_score": 0.233378,
+    "gold_skill": "pdf-question-answerer",
+    "id": "pdf_document_operations_p1_pdf_question_answerer",
+    "instruction_text": "Please answer this from sample_packet.pdf: what evidence does the policy give for reimbursing delayed travel meals? Cite the page or section evidence rather than converting the whole document.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "pdf_document_operations",
+    "gold_boundary_score": 0.087746,
+    "gold_score": 0.135909,
+    "gold_skill": "pdf-layout-table-extractor",
+    "id": "pdf_document_operations_p2_pdf_layout_table_extractor",
+    "instruction_text": "From vendor_statement.pdf, extract the invoice table into structured rows with invoice id, date, subtotal, tax, total, and page/row anchors. Do not answer it as a general PDF question.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 1,
+    "non_core_near_gold_count": 1,
+    "top_non_core_competitors": [
+      {
+        "family": "public_imported_background",
+        "margin_vs_gold": -0.018073,
+        "score": 0.117836,
+        "shared_terms": [
+          "pdf",
+          "extract",
+          "page",
+          "answer",
+          "question"
+        ],
+        "skill": "public-office-chat-with-pdf",
+        "status": "near_gold"
+      }
+    ]
+  },
+  {
+    "family": "pdf_document_operations",
+    "gold_boundary_score": 0.019031,
+    "gold_score": 0.221952,
+    "gold_skill": "pdf-ocr-cleaner",
+    "id": "pdf_document_operations_p3_pdf_ocr_cleaner",
+    "instruction_text": "The file scanned_receipts.pdf is mostly images. Recover the text page by page and mark uncertain OCR regions; do not treat it as a normal digital table extraction.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "pdf_document_operations",
+    "gold_boundary_score": 0.039544,
+    "gold_score": 0.108511,
+    "gold_skill": "pdf-form-filler",
+    "id": "pdf_document_operations_p4_pdf_form_filler",
+    "instruction_text": "Use reimbursement_form.pdf and the supplied employee details to prepare a field-entry checklist for the reimbursement packet. Identify required blanks that still need values; do not summarize the packet.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "pdf_document_operations",
+    "gold_boundary_score": 0.04596,
+    "gold_score": 0.197033,
+    "gold_skill": "pdf-redaction-reviewer",
+    "id": "pdf_document_operations_p5_pdf_redaction_reviewer",
+    "instruction_text": "Before we send client_contract.pdf to an external vendor, identify page-specific redaction targets such as IDs, addresses, pricing, and confidential clauses.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "pdf_document_operations",
+    "gold_boundary_score": 0.076227,
+    "gold_score": 0.233577,
+    "gold_skill": "pdf-to-docx-converter",
+    "id": "pdf_document_operations_p6_pdf_to_docx_converter",
+    "instruction_text": "Convert training_manual.pdf into an editable DOCX-style structure with headings and tables preserved. Do not just answer questions from it.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
     "family": "planning_meetings",
     "gold_boundary_score": 0.104188,
     "gold_score": 0.193591,
@@ -1516,8 +2355,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.072783,
-        "score": 0.278659,
+        "margin_vs_gold": 0.071301,
+        "score": 0.277176,
         "shared_terms": [
           "meet",
           "note"
@@ -1527,8 +2366,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.033105,
-        "score": 0.23898,
+        "margin_vs_gold": 0.031338,
+        "score": 0.237213,
         "shared_terms": [
           "meet",
           "note"
@@ -1538,8 +2377,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.029345,
-        "score": 0.23522,
+        "margin_vs_gold": 0.027606,
+        "score": 0.233481,
         "shared_terms": [
           "meet",
           "summary",
@@ -1550,8 +2389,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.026047,
-        "score": 0.231922,
+        "margin_vs_gold": 0.024291,
+        "score": 0.230166,
         "shared_terms": [
           "meet",
           "note"
@@ -1561,8 +2400,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.022817,
-        "score": 0.228692,
+        "margin_vs_gold": 0.021202,
+        "score": 0.227077,
         "shared_terms": [
           "meet",
           "note"
@@ -1572,8 +2411,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.021606,
-        "score": 0.227481,
+        "margin_vs_gold": 0.019874,
+        "score": 0.225749,
         "shared_terms": [
           "meet",
           "note"
@@ -1583,8 +2422,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.021018,
-        "score": 0.226893,
+        "margin_vs_gold": 0.019306,
+        "score": 0.225181,
         "shared_terms": [
           "meet",
           "note"
@@ -1594,8 +2433,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.020325,
-        "score": 0.226201,
+        "margin_vs_gold": 0.01862,
+        "score": 0.224496,
         "shared_terms": [
           "meet",
           "note"
@@ -1605,8 +2444,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.019603,
-        "score": 0.225478,
+        "margin_vs_gold": 0.017937,
+        "score": 0.223812,
         "shared_terms": [
           "meet",
           "note"
@@ -1616,8 +2455,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.017504,
-        "score": 0.22338,
+        "margin_vs_gold": 0.015873,
+        "score": 0.221748,
         "shared_terms": [
           "meet",
           "note"
@@ -1634,14 +2473,14 @@
     "gold_skill": "meeting-followup-extractor",
     "id": "plan_p3_meeting_followup",
     "instruction_text": "I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention",
-    "non_core_above_gold_count": 3,
+    "non_core_above_gold_count": 2,
     "non_core_competitor_count": 21,
-    "non_core_near_gold_count": 18,
+    "non_core_near_gold_count": 19,
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.053503,
-        "score": 0.166122,
+        "margin_vs_gold": 0.053114,
+        "score": 0.165733,
         "shared_terms": [
           "meet",
           "note"
@@ -1651,8 +2490,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.002036,
-        "score": 0.114655,
+        "margin_vs_gold": 0.001433,
+        "score": 0.114052,
         "shared_terms": [
           "meet",
           "note"
@@ -1662,19 +2501,19 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.000232,
-        "score": 0.112851,
+        "margin_vs_gold": -0.000362,
+        "score": 0.112258,
         "shared_terms": [
           "meet",
           "note"
         ],
         "skill": "meeting-ops-priority-ranker",
-        "status": "above_gold"
+        "status": "near_gold"
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.002213,
-        "score": 0.110406,
+        "margin_vs_gold": -0.002828,
+        "score": 0.109792,
         "shared_terms": [
           "meet",
           "note"
@@ -1684,8 +2523,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.003751,
-        "score": 0.108868,
+        "margin_vs_gold": -0.004301,
+        "score": 0.108318,
         "shared_terms": [
           "meet",
           "note"
@@ -1695,8 +2534,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.003763,
-        "score": 0.108856,
+        "margin_vs_gold": -0.004352,
+        "score": 0.108267,
         "shared_terms": [
           "meet",
           "note"
@@ -1706,8 +2545,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004146,
-        "score": 0.108473,
+        "margin_vs_gold": -0.004683,
+        "score": 0.107937,
         "shared_terms": [
           "meet",
           "note",
@@ -1718,8 +2557,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004327,
-        "score": 0.108292,
+        "margin_vs_gold": -0.004935,
+        "score": 0.107685,
         "shared_terms": [
           "meet",
           "note"
@@ -1729,8 +2568,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004937,
-        "score": 0.107682,
+        "margin_vs_gold": -0.005533,
+        "score": 0.107087,
         "shared_terms": [
           "meet",
           "note"
@@ -1740,8 +2579,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.005449,
-        "score": 0.10717,
+        "margin_vs_gold": -0.006003,
+        "score": 0.106616,
         "shared_terms": [
           "meet",
           "note"
@@ -1759,13 +2598,13 @@
     "id": "plan_p4_task_extractor",
     "instruction_text": "Turn these rough notes into a plain action-item list without scheduling the week and without treating them as completed meeting notes",
     "non_core_above_gold_count": 1,
-    "non_core_competitor_count": 20,
-    "non_core_near_gold_count": 19,
+    "non_core_competitor_count": 19,
+    "non_core_near_gold_count": 18,
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.017328,
-        "score": 0.138938,
+        "margin_vs_gold": 0.017071,
+        "score": 0.138682,
         "shared_terms": [
           "note",
           "meet"
@@ -1775,8 +2614,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.010578,
-        "score": 0.111032,
+        "margin_vs_gold": -0.010861,
+        "score": 0.110749,
         "shared_terms": [
           "note",
           "list",
@@ -1787,8 +2626,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.010887,
-        "score": 0.110724,
+        "margin_vs_gold": -0.011106,
+        "score": 0.110504,
         "shared_terms": [
           "note",
           "list",
@@ -1799,8 +2638,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.011881,
-        "score": 0.109729,
+        "margin_vs_gold": -0.012202,
+        "score": 0.109408,
         "shared_terms": [
           "note",
           "list",
@@ -1812,8 +2651,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.012017,
-        "score": 0.109593,
+        "margin_vs_gold": -0.012234,
+        "score": 0.109377,
         "shared_terms": [
           "note",
           "list",
@@ -1824,8 +2663,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.01235,
-        "score": 0.109261,
+        "margin_vs_gold": -0.012583,
+        "score": 0.109027,
         "shared_terms": [
           "note",
           "list",
@@ -1836,8 +2675,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.012398,
-        "score": 0.109213,
+        "margin_vs_gold": -0.012624,
+        "score": 0.108986,
         "shared_terms": [
           "note",
           "list",
@@ -1848,8 +2687,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.013281,
-        "score": 0.10833,
+        "margin_vs_gold": -0.013547,
+        "score": 0.108064,
         "shared_terms": [
           "note",
           "list",
@@ -1860,8 +2699,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.01432,
-        "score": 0.10729,
+        "margin_vs_gold": -0.014554,
+        "score": 0.107056,
         "shared_terms": [
           "note",
           "list",
@@ -1872,8 +2711,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014711,
-        "score": 0.1069,
+        "margin_vs_gold": -0.014979,
+        "score": 0.106632,
         "shared_terms": [
           "note",
           "list",
@@ -1897,8 +2736,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.001342,
-        "score": 0.09342,
+        "margin_vs_gold": -0.001538,
+        "score": 0.093225,
         "shared_terms": [
           "plan",
           "meet",
@@ -1914,8 +2753,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.003386,
-        "score": 0.091376,
+        "margin_vs_gold": -0.003527,
+        "score": 0.091236,
         "shared_terms": [
           "plan",
           "meet",
@@ -1931,8 +2770,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004105,
-        "score": 0.090657,
+        "margin_vs_gold": -0.004311,
+        "score": 0.090451,
         "shared_terms": [
           "plan",
           "meet",
@@ -1948,8 +2787,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004177,
-        "score": 0.090585,
+        "margin_vs_gold": -0.004384,
+        "score": 0.090378,
         "shared_terms": [
           "plan",
           "meet",
@@ -1965,8 +2804,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.006047,
-        "score": 0.088715,
+        "margin_vs_gold": -0.006295,
+        "score": 0.088467,
         "shared_terms": [
           "plan",
           "meet",
@@ -1982,8 +2821,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008029,
-        "score": 0.086733,
+        "margin_vs_gold": -0.008279,
+        "score": 0.086483,
         "shared_terms": [
           "plan",
           "meet",
@@ -1999,8 +2838,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008349,
-        "score": 0.086414,
+        "margin_vs_gold": -0.00858,
+        "score": 0.086182,
         "shared_terms": [
           "plan",
           "meet",
@@ -2015,8 +2854,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008631,
-        "score": 0.086131,
+        "margin_vs_gold": -0.008836,
+        "score": 0.085927,
         "shared_terms": [
           "plan",
           "meet",
@@ -2031,8 +2870,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008748,
-        "score": 0.086015,
+        "margin_vs_gold": -0.008974,
+        "score": 0.085788,
         "shared_terms": [
           "plan",
           "meet",
@@ -2048,8 +2887,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008902,
-        "score": 0.08586,
+        "margin_vs_gold": -0.009104,
+        "score": 0.085658,
         "shared_terms": [
           "plan",
           "meet",
@@ -2149,8 +2988,8 @@
     "top_non_core_competitors": [
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.004792,
-        "score": 0.06152,
+        "margin_vs_gold": -0.004537,
+        "score": 0.061775,
         "shared_terms": [
           "table",
           "note"
@@ -2160,8 +2999,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.00529,
-        "score": 0.061023,
+        "margin_vs_gold": -0.005076,
+        "score": 0.061237,
         "shared_terms": [
           "compare",
           "two",
@@ -2174,8 +3013,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008043,
-        "score": 0.05827,
+        "margin_vs_gold": -0.00784,
+        "score": 0.058472,
         "shared_terms": [
           "note"
         ],
@@ -2184,8 +3023,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.008518,
-        "score": 0.057795,
+        "margin_vs_gold": -0.008307,
+        "score": 0.058006,
         "shared_terms": [
           "note"
         ],
@@ -2194,8 +3033,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.009349,
-        "score": 0.056963,
+        "margin_vs_gold": -0.009152,
+        "score": 0.057161,
         "shared_terms": [
           "note"
         ],
@@ -2204,8 +3043,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.009792,
-        "score": 0.056521,
+        "margin_vs_gold": -0.009575,
+        "score": 0.056738,
         "shared_terms": [
           "note"
         ],
@@ -2214,8 +3053,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.009977,
-        "score": 0.056335,
+        "margin_vs_gold": -0.009765,
+        "score": 0.056548,
         "shared_terms": [
           "note"
         ],
@@ -2224,8 +3063,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.010242,
-        "score": 0.056071,
+        "margin_vs_gold": -0.010054,
+        "score": 0.056258,
         "shared_terms": [
           "note"
         ],
@@ -2234,8 +3073,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.010933,
-        "score": 0.05538,
+        "margin_vs_gold": -0.010742,
+        "score": 0.055571,
         "shared_terms": [
           "note"
         ],
@@ -2244,8 +3083,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.012434,
-        "score": 0.053879,
+        "margin_vs_gold": -0.012276,
+        "score": 0.054036,
         "shared_terms": [
           "note"
         ],
@@ -2315,8 +3154,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.027064,
-        "score": 0.093857,
+        "margin_vs_gold": 0.022862,
+        "score": 0.089656,
         "shared_terms": [
           "write"
         ],
@@ -2325,8 +3164,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.02611,
-        "score": 0.092904,
+        "margin_vs_gold": 0.022092,
+        "score": 0.088886,
         "shared_terms": [
           "write"
         ],
@@ -2335,8 +3174,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.010634,
-        "score": 0.05616,
+        "margin_vs_gold": -0.013172,
+        "score": 0.053622,
         "shared_terms": [
           "write"
         ],
@@ -2345,8 +3184,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.012998,
-        "score": 0.053796,
+        "margin_vs_gold": -0.013914,
+        "score": 0.05288,
         "shared_terms": [
           "write",
           "clearly"
@@ -2356,8 +3195,8 @@
       },
       {
         "family": "email_communication",
-        "margin_vs_gold": -0.01505,
-        "score": 0.051743,
+        "margin_vs_gold": -0.015197,
+        "score": 0.051597,
         "shared_terms": [
           "reply",
           "main",
@@ -2377,13 +3216,26 @@
     "id": "reply_p5_generic_fresh_draft",
     "instruction_text": "Compose a concise new response from the source message only, confirming that I can send the requested file tomorrow. There is no existing reply text to polish, and I do not need a detailed action plan: 'Thanks for the update. Could you send me the file by tomorrow if possible?'",
     "non_core_above_gold_count": 0,
-    "non_core_competitor_count": 1,
-    "non_core_near_gold_count": 1,
+    "non_core_competitor_count": 2,
+    "non_core_near_gold_count": 2,
     "top_non_core_competitors": [
       {
+        "family": "implicit_field_stress",
+        "margin_vs_gold": -0.007557,
+        "score": 0.075723,
+        "shared_terms": [
+          "reply",
+          "exist",
+          "action",
+          "plan"
+        ],
+        "skill": "implicit-review-comment-planner",
+        "status": "near_gold"
+      },
+      {
         "family": "background_scale",
-        "margin_vs_gold": -0.016753,
-        "score": 0.066526,
+        "margin_vs_gold": -0.016524,
+        "score": 0.066756,
         "shared_terms": [
           "compose",
           "confirm",
@@ -2443,8 +3295,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": -0.009575,
-        "score": 0.055517,
+        "margin_vs_gold": -0.009597,
+        "score": 0.055495,
         "shared_terms": [
           "deployment",
           "url"
@@ -2474,13 +3326,13 @@
     "id": "sec_p6_privacy_review",
     "instruction_text": "Assess the data-protection concerns in this analytics change. We want to log search queries, account region, user role, clicked filters, and partial email domains for 18 months so the product team can study usage patterns.",
     "non_core_above_gold_count": 2,
-    "non_core_competitor_count": 38,
-    "non_core_near_gold_count": 36,
+    "non_core_competitor_count": 39,
+    "non_core_near_gold_count": 37,
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.006547,
-        "score": 0.063176,
+        "margin_vs_gold": 0.00658,
+        "score": 0.063209,
         "shared_terms": [
           "search",
           "querie",
@@ -2491,8 +3343,8 @@
       },
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.001908,
-        "score": 0.058536,
+        "margin_vs_gold": 0.001945,
+        "score": 0.058573,
         "shared_terms": [
           "search",
           "querie",
@@ -2504,8 +3356,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.009018,
-        "score": 0.04761,
+        "margin_vs_gold": -0.00904,
+        "score": 0.047588,
         "shared_terms": [
           "log",
           "search",
@@ -2519,8 +3371,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.013381,
-        "score": 0.043248,
+        "margin_vs_gold": -0.013275,
+        "score": 0.043353,
         "shared_terms": [
           "analytic",
           "user",
@@ -2532,8 +3384,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.013817,
-        "score": 0.042812,
+        "margin_vs_gold": -0.013848,
+        "score": 0.04278,
         "shared_terms": [
           "log",
           "search",
@@ -2546,8 +3398,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014124,
-        "score": 0.042505,
+        "margin_vs_gold": -0.014122,
+        "score": 0.042506,
         "shared_terms": [
           "log",
           "search",
@@ -2560,8 +3412,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014342,
-        "score": 0.042287,
+        "margin_vs_gold": -0.014374,
+        "score": 0.042255,
         "shared_terms": [
           "log",
           "search",
@@ -2574,8 +3426,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014607,
-        "score": 0.042021,
+        "margin_vs_gold": -0.014635,
+        "score": 0.041994,
         "shared_terms": [
           "log",
           "search",
@@ -2588,8 +3440,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014673,
-        "score": 0.041955,
+        "margin_vs_gold": -0.014703,
+        "score": 0.041925,
         "shared_terms": [
           "log",
           "search",
@@ -2602,8 +3454,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.014985,
-        "score": 0.041644,
+        "margin_vs_gold": -0.015009,
+        "score": 0.041619,
         "shared_terms": [
           "log",
           "search",
@@ -2629,8 +3481,8 @@
     "top_non_core_competitors": [
       {
         "family": "public_imported_background",
-        "margin_vs_gold": 0.024914,
-        "score": 0.097902,
+        "margin_vs_gold": 0.02461,
+        "score": 0.097597,
         "shared_terms": [
           "capability",
           "workflow",
@@ -2642,8 +3494,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.007544,
-        "score": 0.080531,
+        "margin_vs_gold": 0.00724,
+        "score": 0.080228,
         "shared_terms": [
           "fit",
           "meet",
@@ -2657,8 +3509,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.007007,
-        "score": 0.079994,
+        "margin_vs_gold": 0.006713,
+        "score": 0.0797,
         "shared_terms": [
           "available",
           "fit",
@@ -2674,8 +3526,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": 0.003719,
-        "score": 0.076706,
+        "margin_vs_gold": 0.003421,
+        "score": 0.076408,
         "shared_terms": [
           "fit",
           "decide",
@@ -2690,8 +3542,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.000292,
-        "score": 0.072695,
+        "margin_vs_gold": -0.000591,
+        "score": 0.072396,
         "shared_terms": [
           "available",
           "fit",
@@ -2706,8 +3558,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.001297,
-        "score": 0.07169,
+        "margin_vs_gold": -0.00165,
+        "score": 0.071337,
         "shared_terms": [
           "available",
           "fit",
@@ -2721,8 +3573,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.001443,
-        "score": 0.071544,
+        "margin_vs_gold": -0.001847,
+        "score": 0.07114,
         "shared_terms": [
           "exist",
           "fit",
@@ -2736,8 +3588,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.001992,
-        "score": 0.070995,
+        "margin_vs_gold": -0.002298,
+        "score": 0.070689,
         "shared_terms": [
           "fit",
           "workflow",
@@ -2751,8 +3603,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.002515,
-        "score": 0.070472,
+        "margin_vs_gold": -0.002841,
+        "score": 0.070147,
         "shared_terms": [
           "available",
           "fit",
@@ -2767,8 +3619,8 @@
       },
       {
         "family": "background_scale",
-        "margin_vs_gold": -0.003722,
-        "score": 0.069265,
+        "margin_vs_gold": -0.004038,
+        "score": 0.068949,
         "shared_terms": [
           "fit",
           "meet",
@@ -2836,6 +3688,78 @@
     "gold_skill": "skill-packager",
     "id": "skill_p6_package_existing",
     "instruction_text": "I finished an existing `paper-summariser` skill and want to share it with someone else. Check the folder shape, metadata, resource links, and unnecessary files so it is package-ready.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_representation_analysis",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.205163,
+    "gold_skill": "skill-field-auditor",
+    "id": "skill_representation_analysis_p1_skill_field_auditor",
+    "instruction_text": "Audit public_skill_sample.md and extract triggers, inputs, outputs, workflow, dependencies, resources, examples, and missing fields.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_representation_analysis",
+    "gold_boundary_score": 0.066543,
+    "gold_score": 0.186169,
+    "gold_skill": "skill-authoring-guide",
+    "id": "skill_representation_analysis_p2_skill_authoring_guide",
+    "instruction_text": "Draft a new atomic skill for reviewing database migrations, including triggers, boundaries, workflow, dependencies, and examples. Do not just audit an existing skill.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_representation_analysis",
+    "gold_boundary_score": 0.051401,
+    "gold_score": 0.345335,
+    "gold_skill": "skill-router-policy-designer",
+    "id": "skill_representation_analysis_p3_skill_router_policy_designer",
+    "instruction_text": "Design a two-stage skill routing policy for a 2000-skill library, including candidate budget, representation fields, reranking, and fallback behavior.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_representation_analysis",
+    "gold_boundary_score": 0.083349,
+    "gold_score": 0.287229,
+    "gold_skill": "skill-hierarchy-flattener",
+    "id": "skill_representation_analysis_p4_skill_hierarchy_flattener",
+    "instruction_text": "Decompose the broad all-in-one skill in hierarchical_skill.md into atomic standalone skill definitions while preserving cross-references, common resources, and routing boundaries.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_representation_analysis",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.28876,
+    "gold_skill": "skill-installer-wrapper",
+    "id": "skill_representation_analysis_p5_skill_installer_wrapper",
+    "instruction_text": "Install the public skill from  into the local library, preserving resources and source metadata.",
+    "non_core_above_gold_count": 0,
+    "non_core_competitor_count": 0,
+    "non_core_near_gold_count": 0,
+    "top_non_core_competitors": []
+  },
+  {
+    "family": "skill_representation_analysis",
+    "gold_boundary_score": 0.0,
+    "gold_score": 0.117236,
+    "gold_skill": "skill-benchmark-evaluator",
+    "id": "skill_representation_analysis_p6_skill_benchmark_evaluator",
+    "instruction_text": "Evaluate retrieval_results.json with top-1, top-5, MRR, non-core false positives, and failure-mode categories.",
     "non_core_above_gold_count": 0,
     "non_core_competitor_count": 0,
     "non_core_near_gold_count": 0,

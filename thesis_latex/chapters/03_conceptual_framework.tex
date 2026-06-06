@@ -1,62 +1,91 @@
 \chapter{Conceptual Framework}
 
-\section{Skill Artifacts}
+\section{Skill Artifacts, Representations, and Retrieval Policies}
 
-A skill artifact is the stored capability unit. In this thesis, the canonical artifact is a skill directory containing a \texttt{SKILL.md} file and optional supporting files such as scripts, examples, reference documents, or templates. The artifact is the complete procedural object available to the system.
+This thesis treats skill selection as a layered problem. A \emph{skill artifact} is the complete stored capability unit. In the benchmark used here, the canonical artifact is a skill directory containing a \texttt{SKILL.md} file and, where applicable, supporting resources such as scripts, examples, reference files, templates, or external documentation.
 
-The artifact is not necessarily what the retriever sees. A complete skill may be too long to expose in every retrieval decision, especially when the library contains hundreds or thousands of skills. This motivates a distinction between the stored artifact and the selection representation.
+A \emph{selection representation} is the compressed or transformed view of a skill used for retrieval. It may be a short card containing a name and description, the full \texttt{SKILL.md} artifact, an extracted procedural schema, a dependency/resource card, a hierarchy node, or a graph of typed relations. The representation is not identical to the artifact. A system may store a rich skill artifact while exposing only a short description to the selector.
 
-\section{Selection Representations}
+A \emph{retrieval policy} is the mechanism that uses a representation to produce a candidate set or ranked list. It may be lexical retrieval, dense embedding retrieval, progressive disclosure by the main agent, neural reranking, deterministic field scoring, tree routing, graph retrieval, or a hybrid pipeline. This distinction is essential because a method can fail for two different reasons: the needed procedural information may be absent from the representation, or it may be present but not used correctly by the retrieval policy.
 
-A selection representation is the version of a skill used for retrieval or routing. It may be a short card containing name and description, a full \texttt{SKILL.md} document, a structured schema, a hierarchy node, or a graph node with typed edges.
+\section{The Core Failure Mode}
 
-The key question is what information this representation preserves. For the thesis problem, the most important candidate fields are:
+The target failure mode is \emph{semantic confusion}: the selected skill is semantically plausible but procedurally wrong. This is different from retrieving a random unrelated skill. The failure is subtle because the wrong skill often shares the same domain, nouns, or surface trigger phrases as the gold skill.
 
-\begin{itemize}
-  \item skill name and family;
-  \item description and use cases;
-  \item required inputs and source type;
-  \item expected outputs and artifact shape;
-  \item preconditions and assumptions;
-  \item workflow steps and ordering constraints;
-  \item dependencies, resources, scripts, and external services;
-  \item negative usage boundaries, such as \texttt{not\_for} conditions;
-  \item meta-level task role, such as editing a skill versus using a skill.
-\end{itemize}
+For example, several document skills may all mention PDFs and extraction. One may answer questions from a PDF using page-grounded evidence, another may reconstruct tables from layout, another may clean OCR output, another may fill form fields, and another may convert formats. A flat description can make these skills look close even though their inputs, workflows, outputs, and success criteria differ.
 
-\section{Retrieval Policies}
-
-A retrieval policy is the mechanism that selects candidate skills from the representation. The policy may be:
+This thesis defines \emph{procedural distinctness} as the condition where semantically similar skills differ in at least one operationally important axis, such as:
 
 \begin{itemize}
-  \item direct main-agent selection from visible skill cards;
-  \item lexical retrieval using BM25 or TF-IDF;
-  \item dense embedding retrieval;
-  \item structured field scoring;
-  \item neural reranking;
-  \item deterministic schema reranking;
-  \item hierarchical or tree routing;
-  \item graph traversal or graph-based expansion;
-  \item a hybrid pipeline combining candidate generation and reranking.
+  \item input type or input state;
+  \item preconditions or assumptions;
+  \item expected output artifact;
+  \item workflow steps and ordering;
+  \item required tools, resources, or external dependencies;
+  \item negative usage boundaries;
+  \item success criteria or verification requirements.
 \end{itemize}
 
-This separation is essential. A method can fail because the representation lacks the needed information, or because the retrieval policy cannot use information that is present. Conversely, a strong retriever may still fail if the representation compresses away procedural boundaries.
+\section{Representation Conditions}
 
-\section{Semantic Confusability and Procedural Distinctness}
+The benchmark exports several representation conditions:
 
-This thesis defines semantic confusability as a condition where multiple skills appear close at the level of name, description, domain, or trigger phrases. It defines procedural distinctness as a condition where those same skills require materially different execution procedures, inputs, outputs, constraints, or verification criteria.
+\begin{description}
+  \item[R1 flat metadata.] Skill name, family/category, and short description. This approximates the compact view used by progressive disclosure systems.
+  \item[R2 extracted procedural card.] Use conditions, input/precondition fields, output fields, workflow/procedure fields, and boundaries. This tests whether preserving procedural information improves retrieval.
+  \item[R3 dependency/resource-aware card.] R2 plus tools, external dependencies, resources, platform assumptions, and public-source metadata. These fields are useful for feasibility and context loading, but can introduce noise if treated as ordinary positive text.
+  \item[R4 graph edges.] A heterogeneous graph view derived from R2/R3, where skills connect to typed nodes such as triggers, outputs, workflow steps, preconditions, dependencies, resources, and avoid conditions.
+  \item[Full artifact.] The complete \texttt{SKILL.md} text. This is important as a strong dense-retrieval baseline because it exposes the most information, but it is costly and can be noisy.
+\end{description}
 
-The target failure mode occurs when a retrieved skill is semantically plausible but procedurally inappropriate. This is why the benchmark does not simply evaluate whether the correct broad domain is retrieved. The system must identify the correct procedure within a set of plausible neighbours.
+\section{Retrieval Architecture Families}
+
+The architecture families are separated from the representation conditions:
+
+\begin{description}
+  \item[M0 progressive disclosure.] The main agent sees compact skill cards and decides which full skill documents to load.
+  \item[M1 flat lexical retrieval.] BM25 or TF-IDF over R1. This is a lexical control, not the proposed architecture.
+  \item[M2 dense retrieval.] Embedding retrieval over R1, R2, or full artifacts.
+  \item[M3 structured-card retrieval.] Retrieval over serialized R2 procedural fields.
+  \item[M4 tree routing.] Hierarchical selection through family or cluster nodes before selecting a skill.
+  \item[M5 graph retrieval.] Retrieval or reranking over R4 relation edges.
+  \item[M6 hybrid procedural reranking.] A first-stage retriever produces a candidate set, then a procedural layer reranks candidates.
+  \item[M7/M8 provider retrieval and reranking.] Modern API embedding and reranking baselines, currently using Qwen embeddings and Qwen reranking.
+\end{description}
+
+The current deterministic schema reranker is treated as \textbf{M6-v0}. It is useful as a transparent diagnostic but is not the final proposed structure-aware method. The planned \textbf{M6-v1} method should parse the user request into fields and compare those request fields against extracted skill fields. This distinction prevents the thesis from overclaiming that simple text overlap is equivalent to structured reasoning.
+
+\section{Tree and Graph Structure}
+
+Tree and graph methods are structure-aware architectures, not separate information sources. M4 tree routing tests whether a hierarchy can reduce candidate set size without excluding the gold skill too early. M5 graph retrieval tests whether explicit typed relations improve retrieval beyond serialized structured cards.
+
+In the current R4 export, graph edges include:
+
+\begin{itemize}
+  \item \texttt{belongs\_to\_family};
+  \item \texttt{triggered\_by};
+  \item \texttt{avoid\_when};
+  \item \texttt{has\_precondition};
+  \item \texttt{has\_workflow\_step};
+  \item \texttt{produces\_output};
+  \item \texttt{requires\_dependency};
+  \item \texttt{has\_resource\_signal};
+  \item \texttt{uses\_resource};
+  \item \texttt{derived\_from\_public\_skill}.
+\end{itemize}
+
+These edges encode the same proposed fields as R2/R3, but they expose them relationally. This allows edge ablations: for example, testing trigger-only retrieval, trigger plus output, trigger plus output plus workflow, and then adding dependencies, resources, and avoid penalties.
+
+The graph should not include benchmark-only edges such as \texttt{confusable\_with} if those edges are derived from gold labels, closest alternatives, or manual adjudication. Such edges are useful for analysis, but using them for retrieval would leak the benchmark structure. Final M5 retrieval should use only skill-artifact information, public provenance, or unsupervised similarity that would be available outside the evaluation set.
 
 \section{Working Hypotheses}
 
-The experiments are guided by four working hypotheses:
+The experiments are guided by five working hypotheses:
 
 \begin{enumerate}
   \item Flat metadata will degrade under scale because it under-specifies procedural distinctions.
-  \item Full skill artifacts will improve over short descriptions because they expose more procedural information, but may increase context and computation cost.
-  \item Structured procedural fields will improve disambiguation when the user request contains enough evidence to match those fields.
-  \item Hybrid retrieval-reranking methods will perform best when dense retrieval provides broad candidate coverage and procedural reranking resolves near-neighbour confusion.
+  \item Full skill artifacts will improve over short descriptions in some cases because they expose more information, but they may also introduce noise and cost.
+  \item Use conditions, output artifacts, and workflow/procedure fields will be the most important positive fields for distinguishing near-neighbour skills.
+  \item Dependency, resource, and boundary fields should be used conditionally or as penalties rather than appended naively as positive retrieval text.
+  \item Hybrid retrieval-reranking methods will perform best when dense retrieval provides broad candidate recall and procedural reranking resolves near-neighbour confusion.
 \end{enumerate}
-
-\placeholder{Add a diagram showing the three-layer framework: artifact -> selection representation -> retrieval policy -> candidate skills -> main agent.}

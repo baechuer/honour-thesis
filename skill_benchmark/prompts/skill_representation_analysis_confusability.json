@@ -1,0 +1,74 @@
+[
+  {
+    "id": "skill_representation_analysis_p1_skill_field_auditor",
+    "family": "skill_representation_analysis",
+    "gold_skill": "skill-field-auditor",
+    "closest_alternatives": [
+      "skill-authoring-guide",
+      "skill-router-policy-designer",
+      "skill-hierarchy-flattener",
+      "skill-installer-wrapper"
+    ],
+    "prompt": "Audit `/workspace/fixtures/skill_representation_analysis/public_skill_sample.md` and extract triggers, inputs, outputs, workflow, dependencies, resources, examples, and missing fields."
+  },
+  {
+    "id": "skill_representation_analysis_p2_skill_authoring_guide",
+    "family": "skill_representation_analysis",
+    "gold_skill": "skill-authoring-guide",
+    "closest_alternatives": [
+      "skill-field-auditor",
+      "skill-router-policy-designer",
+      "skill-hierarchy-flattener",
+      "skill-installer-wrapper"
+    ],
+    "prompt": "Draft a new atomic skill for reviewing database migrations, including triggers, boundaries, workflow, dependencies, and examples. Do not just audit an existing skill."
+  },
+  {
+    "id": "skill_representation_analysis_p3_skill_router_policy_designer",
+    "family": "skill_representation_analysis",
+    "gold_skill": "skill-router-policy-designer",
+    "closest_alternatives": [
+      "skill-field-auditor",
+      "skill-authoring-guide",
+      "skill-hierarchy-flattener",
+      "skill-installer-wrapper"
+    ],
+    "prompt": "Design a two-stage skill routing policy for a 2000-skill library, including candidate budget, representation fields, reranking, and fallback behavior."
+  },
+  {
+    "id": "skill_representation_analysis_p4_skill_hierarchy_flattener",
+    "family": "skill_representation_analysis",
+    "gold_skill": "skill-hierarchy-flattener",
+    "closest_alternatives": [
+      "skill-field-auditor",
+      "skill-authoring-guide",
+      "skill-router-policy-designer",
+      "skill-installer-wrapper"
+    ],
+    "prompt": "Decompose the broad all-in-one skill in `/workspace/fixtures/skill_representation_analysis/hierarchical_skill.md` into atomic standalone skill definitions while preserving cross-references, common resources, and routing boundaries."
+  },
+  {
+    "id": "skill_representation_analysis_p5_skill_installer_wrapper",
+    "family": "skill_representation_analysis",
+    "gold_skill": "skill-installer-wrapper",
+    "closest_alternatives": [
+      "skill-field-auditor",
+      "skill-authoring-guide",
+      "skill-router-policy-designer",
+      "skill-hierarchy-flattener"
+    ],
+    "prompt": "Install the public skill from `/workspace/fixtures/skill_representation_analysis/public_skill_repo/` into the local library, preserving resources and source metadata."
+  },
+  {
+    "id": "skill_representation_analysis_p6_skill_benchmark_evaluator",
+    "family": "skill_representation_analysis",
+    "gold_skill": "skill-benchmark-evaluator",
+    "closest_alternatives": [
+      "skill-field-auditor",
+      "skill-authoring-guide",
+      "skill-router-policy-designer",
+      "skill-hierarchy-flattener"
+    ],
+    "prompt": "Evaluate `/workspace/fixtures/skill_representation_analysis/retrieval_results.json` with top-1, top-5, MRR, non-core false positives, and failure-mode categories."
+  }
+]

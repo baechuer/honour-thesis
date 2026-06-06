@@ -1,0 +1,3328 @@
+{
+  "embedding_provider": "qwen",
+  "embedding_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "embedding_model": "text-embedding-v4",
+  "embedding_representation": "full",
+  "scale": "current_full",
+  "reranker_provider": "qwen",
+  "reranker_model": "qwen3-rerank",
+  "rerank_candidates": 20,
+  "local_schema_base_weight": null,
+  "local_schema_weight": null,
+  "elapsed_ms": 32819.97,
+  "metrics": {
+    "total_prompts": 32,
+    "scale_skill_count": 2401,
+    "selector_visible_tokens_approx": 1599226,
+    "top1_accuracy": 0.6875,
+    "top1_hits": 22,
+    "acceptable_top1_accuracy": 0.7188,
+    "acceptable_top1_hits": 23,
+    "borderline_top1": 0,
+    "borderline_top1_rate": 0.0,
+    "top3_recall": 0.8438,
+    "top3_hits": 27,
+    "acceptable_top3_recall": 0.8438,
+    "acceptable_top3_hits": 27,
+    "top5_recall": 0.8438,
+    "top5_hits": 27,
+    "acceptable_top5_recall": 0.8438,
+    "acceptable_top5_hits": 27,
+    "mrr": 0.7635,
+    "acceptable_mrr": 0.7792,
+    "mean_gold_rank": 1.54,
+    "mean_acceptable_rank": 1.5,
+    "wrong_top1": 10,
+    "unacceptable_top1": 9,
+    "unacceptable_top1_rate": 0.2812,
+    "listed_alternative_top1": 1,
+    "listed_alternative_top1_rate": 0.0312,
+    "non_main_top1": 27,
+    "non_main_top1_rate": 0.8438,
+    "background_top1": 3,
+    "background_top1_rate": 0.0938,
+    "public_import_top1": 24,
+    "public_import_top1_rate": 0.75,
+    "by_family": {
+      "public_gold_validation": {
+        "total": 32,
+        "top1_accuracy": 0.6875,
+        "acceptable_top1_accuracy": 0.7188,
+        "top3_recall": 0.8438,
+        "acceptable_top3_recall": 0.8438,
+        "top5_recall": 0.8438,
+        "acceptable_top5_recall": 0.8438
+      }
+    },
+    "top_confusions": [
+      {
+        "pair": "public-office-pdf-ocr -> pdf-ocr-cleaner",
+        "count": 1
+      },
+      {
+        "pair": "public-office-pdf-form-filler -> pdf-form-filler",
+        "count": 1
+      },
+      {
+        "pair": "public-addy-web-accessibility -> accessibility-interaction-auditor",
+        "count": 1
+      },
+      {
+        "pair": "public-oh-my-debugging -> localization-ops-failure-diagnoser",
+        "count": 1
+      },
+      {
+        "pair": "public-openai-gh-address-comments -> review-comment-resolver",
+        "count": 1
+      },
+      {
+        "pair": "public-office-data-pipeline -> public-office-etl-pipeline",
+        "count": 1
+      },
+      {
+        "pair": "public-office-contract-review -> contract-risk-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "public-openai-figma-implement-design -> public-openai-figma",
+        "count": 1
+      },
+      {
+        "pair": "public-skill-creator -> skill-creator",
+        "count": 1
+      },
+      {
+        "pair": "public-security-threat-model -> security-ops-risk-reviewer",
+        "count": 1
+      }
+    ],
+    "top_unacceptable_confusions": [
+      {
+        "pair": "public-office-pdf-ocr -> pdf-ocr-cleaner",
+        "count": 1
+      },
+      {
+        "pair": "public-addy-web-accessibility -> accessibility-interaction-auditor",
+        "count": 1
+      },
+      {
+        "pair": "public-oh-my-debugging -> localization-ops-failure-diagnoser",
+        "count": 1
+      },
+      {
+        "pair": "public-openai-gh-address-comments -> review-comment-resolver",
+        "count": 1
+      },
+      {
+        "pair": "public-office-data-pipeline -> public-office-etl-pipeline",
+        "count": 1
+      },
+      {
+        "pair": "public-office-contract-review -> contract-risk-reviewer",
+        "count": 1
+      },
+      {
+        "pair": "public-openai-figma-implement-design -> public-openai-figma",
+        "count": 1
+      },
+      {
+        "pair": "public-skill-creator -> skill-creator",
+        "count": 1
+      },
+      {
+        "pair": "public-security-threat-model -> security-ops-risk-reviewer",
+        "count": 1
+      }
+    ]
+  },
+  "api_usage": {
+    "embedding_api_calls": 0,
+    "embedding_cache_hits": 2433,
+    "embedding_tokens_approx": 0,
+    "rerank_api_calls": 32,
+    "rerank_cache_hits": 0,
+    "rerank_tokens_approx": 346861
+  },
+  "acceptable_alternatives": {
+    "public_gold_p03_pdf_form_filler": {
+      "acceptable": [
+        "pdf-form-filler"
+      ],
+      "borderline": []
+    },
+    "public_gold_p07_web_accessibility": {
+      "acceptable": [
+        "public-oh-my-web-accessibility"
+      ],
+      "borderline": []
+    },
+    "public_gold_p09_systematic_debugging": {
+      "acceptable": [
+        "public-addy-agent-debugging-and-error-recovery"
+      ],
+      "borderline": []
+    },
+    "public_gold_p11_setup_pre_commit": {
+      "acceptable": [
+        "public-oh-my-setup-pre-commit"
+      ],
+      "borderline": []
+    },
+    "public_gold_p12_git_guardrails": {
+      "acceptable": [
+        "public-oh-my-git-guardrails-claude-code"
+      ],
+      "borderline": []
+    },
+    "public_gold_p17_mcp_builder": {
+      "acceptable": [
+        "mcp-server-builder"
+      ],
+      "borderline": []
+    },
+    "public_gold_p32_security_threat_model": {
+      "acceptable": [
+        "security-threat-modeler"
+      ],
+      "borderline": []
+    }
+  },
+  "results": [
+    {
+      "prompt_id": "public_gold_p01_pdf_extraction",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-pdf-extraction",
+      "closest_alternatives": [
+        "public-office-chat-with-pdf",
+        "public-office-pdf-ocr",
+        "public-office-pdf-converter",
+        "public-openai-pdf"
+      ],
+      "instruction_text": "Using pdfplumber-style extraction, pull the native text, table cells, and document metadata from `/workspace/public_gold/vendor_pack.pdf` into structured JSON with page anchors. The file is not scanned, and I do not need a conversational answer or format conversion.",
+      "gold_first_stage_rank": 5,
+      "gold_final_rank": 1,
+      "first_stage_top1": "pdf-layout-table-extractor",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-office-pdf-extraction",
+          "score": 0.851722
+        },
+        {
+          "skill": "public-pdf",
+          "score": 0.77039
+        },
+        {
+          "skill": "implicit-pdf-evidence-answerer",
+          "score": 0.674852
+        },
+        {
+          "skill": "implicit-pdf-table-reconstructor",
+          "score": 0.653071
+        },
+        {
+          "skill": "pdf-layout-table-extractor",
+          "score": 0.567848
+        },
+        {
+          "skill": "public-office-pdf-ocr",
+          "score": 0.560364
+        },
+        {
+          "skill": "docs-ops-field-extractor",
+          "score": 0.556617
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.549977
+        },
+        {
+          "skill": "pdf-ocr-extractor",
+          "score": 0.505413
+        },
+        {
+          "skill": "public-office-table-extractor",
+          "score": 0.48736
+        },
+        {
+          "skill": "pdf-question-answerer",
+          "score": 0.478129
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.452675
+        },
+        {
+          "skill": "vendor-ops-field-extractor",
+          "score": 0.433686
+        },
+        {
+          "skill": "receipt-extractor",
+          "score": 0.427505
+        },
+        {
+          "skill": "procurement-ops-field-extractor",
+          "score": 0.426133
+        },
+        {
+          "skill": "sales-ops-field-extractor",
+          "score": 0.423272
+        },
+        {
+          "skill": "pdf-layout-reviewer",
+          "score": 0.410717
+        },
+        {
+          "skill": "pdf-ocr-cleaner",
+          "score": 0.352097
+        },
+        {
+          "skill": "pdf-redaction-reviewer",
+          "score": 0.265208
+        },
+        {
+          "skill": "pdf-to-docx-converter",
+          "score": 0.250727
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p02_pdf_ocr",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-pdf-ocr",
+      "closest_alternatives": [
+        "public-office-pdf-extraction",
+        "public-office-chat-with-pdf",
+        "public-office-pdf-converter",
+        "public-openai-pdf"
+      ],
+      "instruction_text": "The uploaded PDF is a scan of signed forms. Run OCR to recover readable text and mark uncertain recognition regions by page; do not treat it as a normal embedded-text PDF or convert it to Word.",
+      "gold_first_stage_rank": 15,
+      "gold_final_rank": 3,
+      "first_stage_top1": "pdf-ocr-cleaner",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "pdf-ocr-cleaner",
+          "score": 0.890629
+        },
+        {
+          "skill": "pdf-ocr-extractor",
+          "score": 0.887491
+        },
+        {
+          "skill": "public-office-pdf-ocr",
+          "score": 0.796337
+        },
+        {
+          "skill": "implicit-pdf-evidence-answerer",
+          "score": 0.681102
+        },
+        {
+          "skill": "docs-ops-scenario-planner",
+          "score": 0.569036
+        },
+        {
+          "skill": "docs-ops-field-extractor",
+          "score": 0.565285
+        },
+        {
+          "skill": "implicit-pdf-table-reconstructor",
+          "score": 0.552813
+        },
+        {
+          "skill": "docs-ops-risk-reviewer",
+          "score": 0.545963
+        },
+        {
+          "skill": "pdf-question-answerer",
+          "score": 0.528969
+        },
+        {
+          "skill": "docs-ops-rewrite-editor",
+          "score": 0.520798
+        },
+        {
+          "skill": "pdf-layout-reviewer",
+          "score": 0.504335
+        },
+        {
+          "skill": "docs-ops-normalizer",
+          "score": 0.490832
+        },
+        {
+          "skill": "pdf-layout-table-extractor",
+          "score": 0.476193
+        },
+        {
+          "skill": "office-to-markdown-converter",
+          "score": 0.374254
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.36721
+        },
+        {
+          "skill": "pdf-form-filler",
+          "score": 0.367202
+        },
+        {
+          "skill": "document-converter",
+          "score": 0.35313
+        },
+        {
+          "skill": "document-normaliser",
+          "score": 0.343368
+        },
+        {
+          "skill": "pdf-to-docx-converter",
+          "score": 0.326771
+        },
+        {
+          "skill": "pdf-redaction-reviewer",
+          "score": 0.309082
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p03_pdf_form_filler",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-pdf-form-filler",
+      "closest_alternatives": [
+        "pdf-form-filler",
+        "public-office-pdf-extraction",
+        "public-office-pdf-converter",
+        "public-office-template-engine"
+      ],
+      "instruction_text": "Use the reimbursement PDF and the employee data sheet to fill the form fields and report any required blanks still missing. I am not asking for general extraction, conversion, or a reusable document template.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 2,
+      "first_stage_top1": "pdf-form-filler",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "pdf-form-filler",
+          "score": 0.885057
+        },
+        {
+          "skill": "public-office-pdf-form-filler",
+          "score": 0.764006
+        },
+        {
+          "skill": "implicit-pdf-evidence-answerer",
+          "score": 0.56728
+        },
+        {
+          "skill": "hr-ops-field-extractor",
+          "score": 0.56178
+        },
+        {
+          "skill": "docs-ops-field-extractor",
+          "score": 0.551256
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.50096
+        },
+        {
+          "skill": "hr-ops-artifact-packager",
+          "score": 0.494162
+        },
+        {
+          "skill": "public-office-pdf-extraction",
+          "score": 0.492445
+        },
+        {
+          "skill": "hr-ops-handoff-brief-writer",
+          "score": 0.490963
+        },
+        {
+          "skill": "hr-ops-summary-writer",
+          "score": 0.48671
+        },
+        {
+          "skill": "public-office-expense-report",
+          "score": 0.4861
+        },
+        {
+          "skill": "implicit-pdf-table-reconstructor",
+          "score": 0.485532
+        },
+        {
+          "skill": "pdf-layout-reviewer",
+          "score": 0.483564
+        },
+        {
+          "skill": "pdf-question-answerer",
+          "score": 0.47346
+        },
+        {
+          "skill": "finance-ops-field-extractor",
+          "score": 0.462133
+        },
+        {
+          "skill": "document-converter",
+          "score": 0.412854
+        },
+        {
+          "skill": "pdf-layout-table-extractor",
+          "score": 0.391037
+        },
+        {
+          "skill": "pdf-to-docx-converter",
+          "score": 0.37884
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.376694
+        },
+        {
+          "skill": "pdf-redaction-reviewer",
+          "score": 0.317076
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p04_markitdown_conversion",
+      "family": "public_gold_validation",
+      "gold_skill": "public-markitdown",
+      "closest_alternatives": [
+        "office-to-markdown-converter",
+        "public-office-pdf-converter",
+        "public-office-batch-convert",
+        "public-office-doc-parser"
+      ],
+      "instruction_text": "Use a MarkItDown-style pipeline to convert a mixed folder of PDF, DOCX, PPTX, XLSX, image, HTML, CSV, and JSON files into Markdown text suitable for indexing. Preserve lightweight structure and OCR where needed; do not create Office files from Markdown.",
+      "gold_first_stage_rank": 3,
+      "gold_final_rank": 1,
+      "first_stage_top1": "office-to-markdown-converter",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-markitdown",
+          "score": 0.916996
+        },
+        {
+          "skill": "public-office-batch-convert",
+          "score": 0.687782
+        },
+        {
+          "skill": "docs-ops-normalizer",
+          "score": 0.563998
+        },
+        {
+          "skill": "public-office-pdf-converter",
+          "score": 0.526251
+        },
+        {
+          "skill": "office-to-markdown-converter",
+          "score": 0.502414
+        },
+        {
+          "skill": "docs-ops-rewrite-editor",
+          "score": 0.500908
+        },
+        {
+          "skill": "docs-ops-artifact-packager",
+          "score": 0.4828
+        },
+        {
+          "skill": "public-office-pdf-ocr",
+          "score": 0.461984
+        },
+        {
+          "skill": "public-office-pdf-to-docx",
+          "score": 0.449977
+        },
+        {
+          "skill": "document-converter",
+          "score": 0.449341
+        },
+        {
+          "skill": "docs-ops-field-extractor",
+          "score": 0.433836
+        },
+        {
+          "skill": "docs-ops-summary-writer",
+          "score": 0.41119
+        },
+        {
+          "skill": "implicit-pdf-table-reconstructor",
+          "score": 0.391843
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.373017
+        },
+        {
+          "skill": "pdf-ocr-extractor",
+          "score": 0.332658
+        },
+        {
+          "skill": "document-normaliser",
+          "score": 0.309252
+        },
+        {
+          "skill": "pdf-ocr-cleaner",
+          "score": 0.298539
+        },
+        {
+          "skill": "pdf-question-answerer",
+          "score": 0.296317
+        },
+        {
+          "skill": "pdf-layout-table-extractor",
+          "score": 0.28782
+        },
+        {
+          "skill": "pdf-to-docx-converter",
+          "score": 0.260065
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p05_pdf_merge_split",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-pdf-merge-split",
+      "closest_alternatives": [
+        "public-office-pdf-converter",
+        "public-office-pdf-watermark",
+        "public-office-pdf-compress",
+        "public-openai-pdf"
+      ],
+      "instruction_text": "Combine three policy PDFs into one packet, then split the appendix pages into a separate file. Do not watermark, compress, summarize, or convert the PDFs.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-office-pdf-merge-split",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-office-pdf-merge-split",
+          "score": 0.920084
+        },
+        {
+          "skill": "legal-ops-artifact-packager",
+          "score": 0.794067
+        },
+        {
+          "skill": "docs-ops-artifact-packager",
+          "score": 0.79294
+        },
+        {
+          "skill": "public-pdf",
+          "score": 0.735893
+        },
+        {
+          "skill": "docs-ops-normalizer",
+          "score": 0.639095
+        },
+        {
+          "skill": "docs-ops-quality-auditor",
+          "score": 0.627071
+        },
+        {
+          "skill": "implicit-pdf-evidence-answerer",
+          "score": 0.607674
+        },
+        {
+          "skill": "docs-ops-rewrite-editor",
+          "score": 0.585155
+        },
+        {
+          "skill": "docs-ops-evidence-grounder",
+          "score": 0.572169
+        },
+        {
+          "skill": "docs-ops-summary-writer",
+          "score": 0.534034
+        },
+        {
+          "skill": "public-office-pdf-compress",
+          "score": 0.519963
+        },
+        {
+          "skill": "public-office-pdf-watermark",
+          "score": 0.512432
+        },
+        {
+          "skill": "implicit-pdf-table-reconstructor",
+          "score": 0.484042
+        },
+        {
+          "skill": "document-normaliser",
+          "score": 0.457797
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.435917
+        },
+        {
+          "skill": "document-rewriter",
+          "score": 0.384763
+        },
+        {
+          "skill": "multi-document-comparison-preparer",
+          "score": 0.381083
+        },
+        {
+          "skill": "document-summariser",
+          "score": 0.378605
+        },
+        {
+          "skill": "pdf-redaction-reviewer",
+          "score": 0.34453
+        },
+        {
+          "skill": "pdf-to-docx-converter",
+          "score": 0.311473
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p06_browser_devtools_testing",
+      "family": "public_gold_validation",
+      "gold_skill": "public-addy-agent-browser-testing-with-devtools",
+      "closest_alternatives": [
+        "public-openai-playwright",
+        "public-playwright-interactive",
+        "public-office-browser-automation",
+        "public-anthropic-webapp-testing"
+      ],
+      "instruction_text": "Use Chrome DevTools MCP on the local checkout to inspect DOM state, console errors, failed network requests, and runtime screenshots. Do not just write a Playwright script from scratch.",
+      "gold_first_stage_rank": 7,
+      "gold_final_rank": 1,
+      "first_stage_top1": "playwright-flow-debugger",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-addy-agent-browser-testing-with-devtools",
+          "score": 0.936234
+        },
+        {
+          "skill": "public-office-browser-automation",
+          "score": 0.684265
+        },
+        {
+          "skill": "public-openai-playwright",
+          "score": 0.653405
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.647904
+        },
+        {
+          "skill": "public-oh-my-playwriter",
+          "score": 0.641991
+        },
+        {
+          "skill": "web-ops-quality-auditor",
+          "score": 0.618924
+        },
+        {
+          "skill": "web-ops-failure-diagnoser",
+          "score": 0.588017
+        },
+        {
+          "skill": "public-playwright-interactive",
+          "score": 0.583739
+        },
+        {
+          "skill": "web-ops-acceptance-test-builder",
+          "score": 0.557512
+        },
+        {
+          "skill": "web-ops-artifact-packager",
+          "score": 0.52065
+        },
+        {
+          "skill": "web-ops-scenario-planner",
+          "score": 0.519507
+        },
+        {
+          "skill": "playwright-flow-debugger",
+          "score": 0.519233
+        },
+        {
+          "skill": "implicit-browser-flow-investigator",
+          "score": 0.513553
+        },
+        {
+          "skill": "web-ops-compliance-checker",
+          "score": 0.508219
+        },
+        {
+          "skill": "web-ops-summary-writer",
+          "score": 0.481993
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.463994
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.402874
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.338283
+        },
+        {
+          "skill": "web-performance-budget-checker",
+          "score": 0.257178
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.23889
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p07_web_accessibility",
+      "family": "public_gold_validation",
+      "gold_skill": "public-addy-web-accessibility",
+      "closest_alternatives": [
+        "public-oh-my-web-accessibility",
+        "public-addy-web-web-quality-audit",
+        "public-addy-web-core-web-vitals",
+        "public-addy-web-best-practices"
+      ],
+      "instruction_text": "Audit the product settings page against WCAG 2.2, focusing on keyboard navigation, labels, focus order, contrast, and screen-reader semantics. Do not broaden this into SEO or performance.",
+      "gold_first_stage_rank": 21,
+      "gold_final_rank": null,
+      "first_stage_top1": "accessibility-interaction-auditor",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "accessibility-interaction-auditor",
+          "score": 0.736752
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.726148
+        },
+        {
+          "skill": "product-ops-quality-auditor",
+          "score": 0.578189
+        },
+        {
+          "skill": "product-ops-compliance-checker",
+          "score": 0.557008
+        },
+        {
+          "skill": "ecommerce-ops-quality-auditor",
+          "score": 0.520863
+        },
+        {
+          "skill": "retail-ops-quality-auditor",
+          "score": 0.492439
+        },
+        {
+          "skill": "ecommerce-ops-compliance-checker",
+          "score": 0.473818
+        },
+        {
+          "skill": "web-ops-rewrite-editor",
+          "score": 0.452201
+        },
+        {
+          "skill": "retail-ops-compliance-checker",
+          "score": 0.439811
+        },
+        {
+          "skill": "product-ops-field-extractor",
+          "score": 0.430929
+        },
+        {
+          "skill": "product-ops-priority-ranker",
+          "score": 0.428592
+        },
+        {
+          "skill": "product-ops-handoff-brief-writer",
+          "score": 0.422336
+        },
+        {
+          "skill": "product-ops-rewrite-editor",
+          "score": 0.417207
+        },
+        {
+          "skill": "product-ops-normalizer",
+          "score": 0.414728
+        },
+        {
+          "skill": "product-ops-comparison-builder",
+          "score": 0.392481
+        },
+        {
+          "skill": "ecommerce-ops-rewrite-editor",
+          "score": 0.380127
+        },
+        {
+          "skill": "seo-ops-rewrite-editor",
+          "score": 0.378023
+        },
+        {
+          "skill": "ecommerce-ops-comparison-builder",
+          "score": 0.361311
+        },
+        {
+          "skill": "retail-ops-rewrite-editor",
+          "score": 0.350732
+        },
+        {
+          "skill": "retail-ops-comparison-builder",
+          "score": 0.32589
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p08_core_web_vitals",
+      "family": "public_gold_validation",
+      "gold_skill": "public-addy-web-core-web-vitals",
+      "closest_alternatives": [
+        "public-addy-web-accessibility",
+        "public-addy-web-best-practices",
+        "public-addy-web-performance",
+        "public-addy-agent-browser-testing-with-devtools"
+      ],
+      "instruction_text": "Investigate only the page's Core Web Vitals: identify the LCP element, INP handler delay, any CLS source, and metric-specific fixes. Do not broaden this into accessibility, SEO, browser automation, or general best-practice review.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 1,
+      "first_stage_top1": "web-performance-budget-checker",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-addy-web-core-web-vitals",
+          "score": 0.810557
+        },
+        {
+          "skill": "web-ops-quality-auditor",
+          "score": 0.705675
+        },
+        {
+          "skill": "web-ops-evidence-grounder",
+          "score": 0.646518
+        },
+        {
+          "skill": "web-ops-failure-diagnoser",
+          "score": 0.64122
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.63377
+        },
+        {
+          "skill": "web-ops-priority-ranker",
+          "score": 0.61933
+        },
+        {
+          "skill": "public-addy-web-performance",
+          "score": 0.60748
+        },
+        {
+          "skill": "web-ops-resource-linker",
+          "score": 0.592824
+        },
+        {
+          "skill": "implicit-browser-flow-investigator",
+          "score": 0.585679
+        },
+        {
+          "skill": "web-ops-dependency-mapper",
+          "score": 0.578338
+        },
+        {
+          "skill": "web-ops-summary-writer",
+          "score": 0.552604
+        },
+        {
+          "skill": "web-ops-monitoring-plan-builder",
+          "score": 0.550484
+        },
+        {
+          "skill": "web-ops-risk-reviewer",
+          "score": 0.549813
+        },
+        {
+          "skill": "seo-ops-evidence-grounder",
+          "score": 0.518799
+        },
+        {
+          "skill": "web-performance-budget-checker",
+          "score": 0.479736
+        },
+        {
+          "skill": "seo-metadata-checker",
+          "score": 0.452883
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.4347
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.433281
+        },
+        {
+          "skill": "visual-regression-checker",
+          "score": 0.409532
+        },
+        {
+          "skill": "implicit-visual-diff-reviewer",
+          "score": 0.377789
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p09_systematic_debugging",
+      "family": "public_gold_validation",
+      "gold_skill": "public-oh-my-debugging",
+      "closest_alternatives": [
+        "public-addy-agent-code-simplification",
+        "public-oh-my-code-review",
+        "public-addy-agent-code-review-and-quality",
+        "public-openai-gh-fix-ci"
+      ],
+      "instruction_text": "A local feature intermittently returns the wrong result. Use the debugging packet style: freeze the failure definition, build the smallest reproducer, isolate the boundary where behaviour changes, and propose the first evidence-backed fix. Do not review code quality, simplify code, or inspect GitHub CI.",
+      "gold_first_stage_rank": 1130,
+      "gold_final_rank": null,
+      "first_stage_top1": "geospatial-ops-failure-diagnoser",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "localization-ops-failure-diagnoser",
+          "score": 0.666225
+        },
+        {
+          "skill": "product-ops-failure-diagnoser",
+          "score": 0.655457
+        },
+        {
+          "skill": "geospatial-ops-failure-diagnoser",
+          "score": 0.653358
+        },
+        {
+          "skill": "mobile-ops-failure-diagnoser",
+          "score": 0.590544
+        },
+        {
+          "skill": "localization-ops-evidence-grounder",
+          "score": 0.545155
+        },
+        {
+          "skill": "product-ops-evidence-grounder",
+          "score": 0.537217
+        },
+        {
+          "skill": "geospatial-ops-evidence-grounder",
+          "score": 0.53503
+        },
+        {
+          "skill": "geospatial-ops-acceptance-test-builder",
+          "score": 0.518418
+        },
+        {
+          "skill": "localization-ops-field-extractor",
+          "score": 0.511952
+        },
+        {
+          "skill": "mobile-ops-evidence-grounder",
+          "score": 0.510072
+        },
+        {
+          "skill": "geospatial-ops-normalizer",
+          "score": 0.508251
+        },
+        {
+          "skill": "geospatial-ops-field-extractor",
+          "score": 0.50655
+        },
+        {
+          "skill": "geospatial-ops-compliance-checker",
+          "score": 0.49214
+        },
+        {
+          "skill": "mobile-ops-field-extractor",
+          "score": 0.487192
+        },
+        {
+          "skill": "geospatial-ops-comparison-builder",
+          "score": 0.472082
+        },
+        {
+          "skill": "geospatial-ops-scenario-planner",
+          "score": 0.466742
+        },
+        {
+          "skill": "geospatial-ops-quality-auditor",
+          "score": 0.4657
+        },
+        {
+          "skill": "geospatial-ops-summary-writer",
+          "score": 0.459846
+        },
+        {
+          "skill": "geospatial-ops-risk-reviewer",
+          "score": 0.459399
+        },
+        {
+          "skill": "geospatial-ops-artifact-packager",
+          "score": 0.459389
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p10_analyze_ci",
+      "family": "public_gold_validation",
+      "gold_skill": "public-swebench-analyze-ci",
+      "closest_alternatives": [
+        "public-openai-gh-fix-ci",
+        "public-swebench-github-actions-templates",
+        "public-addy-agent-ci-cd-and-automation",
+        "public-oh-my-debugging"
+      ],
+      "instruction_text": "Given the PR number and failed GitHub Actions job URLs, analyze the failing CI logs and identify the likely cause. Do not design a new workflow template or perform a general debugging session.",
+      "gold_first_stage_rank": 10,
+      "gold_final_rank": 1,
+      "first_stage_top1": "ci-failure-debugger",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-swebench-analyze-ci",
+          "score": 0.891589
+        },
+        {
+          "skill": "repo-ops-failure-diagnoser",
+          "score": 0.831659
+        },
+        {
+          "skill": "implicit-ci-failure-reader",
+          "score": 0.829493
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "score": 0.828474
+        },
+        {
+          "skill": "ci-log-root-cause-debugger",
+          "score": 0.802065
+        },
+        {
+          "skill": "public-openai-gh-fix-ci",
+          "score": 0.784663
+        },
+        {
+          "skill": "repo-ops-quality-auditor",
+          "score": 0.732466
+        },
+        {
+          "skill": "repo-ops-evidence-grounder",
+          "score": 0.708683
+        },
+        {
+          "skill": "repo-ops-normalizer",
+          "score": 0.628707
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.618741
+        },
+        {
+          "skill": "deployment-build-triager",
+          "score": 0.590102
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.498132
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.46064
+        },
+        {
+          "skill": "repo-code-reviewer",
+          "score": 0.449008
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.443707
+        },
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.400637
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.360133
+        },
+        {
+          "skill": "resilience-pattern-reviewer",
+          "score": 0.360112
+        },
+        {
+          "skill": "pr-review-comment-resolver",
+          "score": 0.34733
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.230116
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p11_setup_pre_commit",
+      "family": "public_gold_validation",
+      "gold_skill": "public-mattpocock-setup-pre-commit",
+      "closest_alternatives": [
+        "public-oh-my-setup-pre-commit",
+        "git-safety-guardrail-installer",
+        "public-mattpocock-git-guardrails-claude-code",
+        "public-swebench-fix"
+      ],
+      "instruction_text": "Add a repo-local Husky pre-commit setup with lint-staged so Prettier, type checking, and tests run before commits. Do not configure GitHub Actions, run a one-off fixer, or block dangerous git commands.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 1,
+      "first_stage_top1": "git-safety-guardrail-installer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-mattpocock-setup-pre-commit",
+          "score": 0.942161
+        },
+        {
+          "skill": "public-oh-my-setup-pre-commit",
+          "score": 0.647826
+        },
+        {
+          "skill": "version-control-helper",
+          "score": 0.537629
+        },
+        {
+          "skill": "git-safety-guardrail-installer",
+          "score": 0.483144
+        },
+        {
+          "skill": "public-mattpocock-git-guardrails-claude-code",
+          "score": 0.472123
+        },
+        {
+          "skill": "git-commit-writer",
+          "score": 0.419145
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.379729
+        },
+        {
+          "skill": "ci-failure-debugger",
+          "score": 0.317422
+        },
+        {
+          "skill": "ci-log-root-cause-debugger",
+          "score": 0.299317
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.296422
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.276441
+        },
+        {
+          "skill": "repo-code-reviewer",
+          "score": 0.266616
+        },
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.261889
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.251878
+        },
+        {
+          "skill": "pr-review-comment-resolver",
+          "score": 0.249262
+        },
+        {
+          "skill": "release-changelog-generator",
+          "score": 0.248532
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.189056
+        },
+        {
+          "skill": "changelog-writer",
+          "score": 0.178819
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.147942
+        },
+        {
+          "skill": "database-migration-risk-assessor",
+          "score": 0.109955
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p12_git_guardrails",
+      "family": "public_gold_validation",
+      "gold_skill": "public-mattpocock-git-guardrails-claude-code",
+      "closest_alternatives": [
+        "public-oh-my-git-guardrails-claude-code",
+        "public-mattpocock-setup-pre-commit",
+        "public-addy-agent-git-workflow-and-versioning",
+        "public-openai-yeet"
+      ],
+      "instruction_text": "Set up Claude Code git guardrail hooks that prevent dangerous git operations such as force-push, reset --hard, clean, and branch deletion before they execute. I am not asking for formatting hooks, general git workflow advice, or a PR publishing flow.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-mattpocock-git-guardrails-claude-code",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-mattpocock-git-guardrails-claude-code",
+          "score": 0.97238
+        },
+        {
+          "skill": "public-oh-my-git-guardrails-claude-code",
+          "score": 0.912099
+        },
+        {
+          "skill": "git-safety-guardrail-installer",
+          "score": 0.844912
+        },
+        {
+          "skill": "version-control-helper",
+          "score": 0.668218
+        },
+        {
+          "skill": "repo-ops-compliance-checker",
+          "score": 0.548892
+        },
+        {
+          "skill": "repo-ops-risk-reviewer",
+          "score": 0.526368
+        },
+        {
+          "skill": "public-oh-my-git-workflow",
+          "score": 0.497724
+        },
+        {
+          "skill": "public-addy-agent-git-workflow-and-versioning",
+          "score": 0.454791
+        },
+        {
+          "skill": "public-anthropic-claude-api",
+          "score": 0.417132
+        },
+        {
+          "skill": "public-mattpocock-setup-pre-commit",
+          "score": 0.408238
+        },
+        {
+          "skill": "git-commit-writer",
+          "score": 0.396706
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.386042
+        },
+        {
+          "skill": "public-openai-gh-fix-ci",
+          "score": 0.358849
+        },
+        {
+          "skill": "public-addy-agent-code-review-and-quality",
+          "score": 0.348326
+        },
+        {
+          "skill": "repo-code-reviewer",
+          "score": 0.334062
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.325357
+        },
+        {
+          "skill": "public-office-changelog-generator",
+          "score": 0.310402
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.288341
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.28394
+        },
+        {
+          "skill": "pr-review-comment-resolver",
+          "score": 0.271292
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p13_address_pr_comments",
+      "family": "public_gold_validation",
+      "gold_skill": "public-openai-gh-address-comments",
+      "closest_alternatives": [
+        "public-openai-gh-fix-ci",
+        "public-openai-yeet",
+        "public-lbussell-creating-pull-requests",
+        "public-lbussell-triaging-issues"
+      ],
+      "instruction_text": "There are unresolved review comments on the current GitHub PR. Inspect the actionable threads, patch the requested changes, and report what was addressed. Do not create a new PR or debug failing checks.",
+      "gold_first_stage_rank": 32,
+      "gold_final_rank": null,
+      "first_stage_top1": "review-comment-resolver",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.871979
+        },
+        {
+          "skill": "pr-review-comment-resolver",
+          "score": 0.802722
+        },
+        {
+          "skill": "repo-ops-risk-reviewer",
+          "score": 0.681348
+        },
+        {
+          "skill": "implicit-review-comment-planner",
+          "score": 0.681093
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.664817
+        },
+        {
+          "skill": "public-mattpocock-review",
+          "score": 0.660492
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.616876
+        },
+        {
+          "skill": "repo-ops-quality-auditor",
+          "score": 0.601878
+        },
+        {
+          "skill": "repo-ops-evidence-grounder",
+          "score": 0.578738
+        },
+        {
+          "skill": "repo-ops-compliance-checker",
+          "score": 0.567317
+        },
+        {
+          "skill": "repo-ops-resource-linker",
+          "score": 0.563388
+        },
+        {
+          "skill": "repo-code-reviewer",
+          "score": 0.5627
+        },
+        {
+          "skill": "repo-ops-normalizer",
+          "score": 0.555427
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.542378
+        },
+        {
+          "skill": "repo-ops-dependency-mapper",
+          "score": 0.540185
+        },
+        {
+          "skill": "repo-ops-monitoring-plan-builder",
+          "score": 0.503493
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.457923
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.406234
+        },
+        {
+          "skill": "resilience-pattern-reviewer",
+          "score": 0.395326
+        },
+        {
+          "skill": "api-security-threat-reviewer",
+          "score": 0.366864
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p14_netlify_deploy",
+      "family": "public_gold_validation",
+      "gold_skill": "public-netlify-deploy",
+      "closest_alternatives": [
+        "public-openai-vercel-deploy",
+        "public-openai-cloudflare-deploy",
+        "public-openai-render-deploy",
+        "public-oh-my-vercel-deploy"
+      ],
+      "instruction_text": "Deploy this static web project to Netlify, using the Netlify CLI and returning the deployment URL with verification. Do not target Vercel, Cloudflare, Render, or Kubernetes.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-netlify-deploy",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-netlify-deploy",
+          "score": 0.948379
+        },
+        {
+          "skill": "public-openai-render-deploy",
+          "score": 0.58721
+        },
+        {
+          "skill": "public-oh-my-deployment-automation",
+          "score": 0.586627
+        },
+        {
+          "skill": "public-openai-vercel-deploy",
+          "score": 0.586244
+        },
+        {
+          "skill": "public-openai-cloudflare-deploy",
+          "score": 0.55866
+        },
+        {
+          "skill": "public-oh-my-vercel-deploy",
+          "score": 0.495519
+        },
+        {
+          "skill": "public-addy-web-best-practices",
+          "score": 0.467871
+        },
+        {
+          "skill": "public-oh-my-vercel-react-best-practices",
+          "score": 0.467642
+        },
+        {
+          "skill": "public-openai-aspnet-core",
+          "score": 0.428784
+        },
+        {
+          "skill": "public-anthropic-web-artifacts-builder",
+          "score": 0.40665
+        },
+        {
+          "skill": "deployment-release-verifier",
+          "score": 0.40579
+        },
+        {
+          "skill": "public-swebench-add-admin-api-endpoint",
+          "score": 0.401015
+        },
+        {
+          "skill": "public-swebench-k8s-manifest-generator",
+          "score": 0.395177
+        },
+        {
+          "skill": "deployment-build-triager",
+          "score": 0.388942
+        },
+        {
+          "skill": "public-mattpocock-setup-pre-commit",
+          "score": 0.388758
+        },
+        {
+          "skill": "hf-zerogpu-space-deployer",
+          "score": 0.372842
+        },
+        {
+          "skill": "kubernetes-deployment-helper",
+          "score": 0.371788
+        },
+        {
+          "skill": "public-obsidian-defuddle",
+          "score": 0.335414
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.290604
+        },
+        {
+          "skill": "release-changelog-generator",
+          "score": 0.245231
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p15_cloudflare_deploy",
+      "family": "public_gold_validation",
+      "gold_skill": "public-openai-cloudflare-deploy",
+      "closest_alternatives": [
+        "public-netlify-deploy",
+        "public-openai-vercel-deploy",
+        "public-openai-render-deploy",
+        "public-swebench-k8s-manifest-generator"
+      ],
+      "instruction_text": "Publish the worker and static assets to Cloudflare Pages/Workers, including the required Wrangler or Cloudflare platform checks. Do not use Netlify, Vercel, Render, or Kubernetes manifests.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-openai-cloudflare-deploy",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-openai-cloudflare-deploy",
+          "score": 0.806381
+        },
+        {
+          "skill": "platform-ops-artifact-packager",
+          "score": 0.491445
+        },
+        {
+          "skill": "public-openai-vercel-deploy",
+          "score": 0.477083
+        },
+        {
+          "skill": "public-addy-web-best-practices",
+          "score": 0.472593
+        },
+        {
+          "skill": "public-openai-render-deploy",
+          "score": 0.457387
+        },
+        {
+          "skill": "cloud-ops-artifact-packager",
+          "score": 0.455524
+        },
+        {
+          "skill": "public-oh-my-vercel-deploy",
+          "score": 0.438982
+        },
+        {
+          "skill": "deployment-build-triager",
+          "score": 0.432913
+        },
+        {
+          "skill": "infrastructure-as-code-planner",
+          "score": 0.432731
+        },
+        {
+          "skill": "cloud-ops-quality-auditor",
+          "score": 0.427899
+        },
+        {
+          "skill": "public-netlify-deploy",
+          "score": 0.423085
+        },
+        {
+          "skill": "platform-ops-handoff-brief-writer",
+          "score": 0.418237
+        },
+        {
+          "skill": "deployment-release-verifier",
+          "score": 0.395995
+        },
+        {
+          "skill": "cloud-ops-handoff-brief-writer",
+          "score": 0.376872
+        },
+        {
+          "skill": "public-swebench-k8s-manifest-generator",
+          "score": 0.367748
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.324014
+        },
+        {
+          "skill": "hf-zerogpu-space-deployer",
+          "score": 0.320688
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.304621
+        },
+        {
+          "skill": "web-performance-budget-checker",
+          "score": 0.302986
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.221444
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p16_render_deploy",
+      "family": "public_gold_validation",
+      "gold_skill": "public-openai-render-deploy",
+      "closest_alternatives": [
+        "public-netlify-deploy",
+        "public-openai-vercel-deploy",
+        "public-openai-cloudflare-deploy",
+        "public-swebench-k8s-manifest-generator"
+      ],
+      "instruction_text": "Prepare this service specifically for Render deployment by analyzing the repo, generating a `render.yaml` Blueprint, and giving the Render Dashboard deployment path. Do not deploy to Netlify, Vercel, Cloudflare, or Kubernetes.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-openai-render-deploy",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-openai-render-deploy",
+          "score": 0.910889
+        },
+        {
+          "skill": "kubernetes-deployment-helper",
+          "score": 0.490635
+        },
+        {
+          "skill": "platform-ops-artifact-packager",
+          "score": 0.472939
+        },
+        {
+          "skill": "public-oh-my-deployment-automation",
+          "score": 0.464656
+        },
+        {
+          "skill": "platform-ops-dependency-mapper",
+          "score": 0.462995
+        },
+        {
+          "skill": "public-openai-vercel-deploy",
+          "score": 0.453791
+        },
+        {
+          "skill": "public-oh-my-vercel-deploy",
+          "score": 0.449732
+        },
+        {
+          "skill": "public-netlify-deploy",
+          "score": 0.446781
+        },
+        {
+          "skill": "public-openai-cloudflare-deploy",
+          "score": 0.436534
+        },
+        {
+          "skill": "public-swebench-k8s-manifest-generator",
+          "score": 0.436257
+        },
+        {
+          "skill": "platform-ops-handoff-brief-writer",
+          "score": 0.428875
+        },
+        {
+          "skill": "environment-config-auditor",
+          "score": 0.42223
+        },
+        {
+          "skill": "cloud-ops-artifact-packager",
+          "score": 0.412612
+        },
+        {
+          "skill": "cloud-ops-dependency-mapper",
+          "score": 0.395559
+        },
+        {
+          "skill": "public-oh-my-vercel-react-best-practices",
+          "score": 0.385221
+        },
+        {
+          "skill": "cloud-ops-handoff-brief-writer",
+          "score": 0.367532
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.336088
+        },
+        {
+          "skill": "deployment-build-triager",
+          "score": 0.332671
+        },
+        {
+          "skill": "hf-zerogpu-space-deployer",
+          "score": 0.304639
+        },
+        {
+          "skill": "deployment-release-verifier",
+          "score": 0.293349
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p17_mcp_builder",
+      "family": "public_gold_validation",
+      "gold_skill": "public-anthropic-mcp-builder",
+      "closest_alternatives": [
+        "public-api-design-principles",
+        "public-office-mcp-hub",
+        "public-openai-chatgpt-apps",
+        "mcp-server-builder"
+      ],
+      "instruction_text": "Design and implement an MCP server that exposes a third-party issue-tracking API as well-typed tools with authentication and schema-aware tool contracts. Do not just browse a hub of existing MCP tools.",
+      "gold_first_stage_rank": 5,
+      "gold_final_rank": 1,
+      "first_stage_top1": "mcp-server-builder",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-anthropic-mcp-builder",
+          "score": 0.876106
+        },
+        {
+          "skill": "public-swebench-mcp-builder",
+          "score": 0.866434
+        },
+        {
+          "skill": "public-office-office-mcp",
+          "score": 0.841506
+        },
+        {
+          "skill": "mcp-server-builder",
+          "score": 0.806553
+        },
+        {
+          "skill": "public-office-mcp-hub",
+          "score": 0.676637
+        },
+        {
+          "skill": "public-lbussell-creating-issues",
+          "score": 0.537719
+        },
+        {
+          "skill": "public-mattpocock-to-issues",
+          "score": 0.520779
+        },
+        {
+          "skill": "rest-api-contract-designer",
+          "score": 0.513859
+        },
+        {
+          "skill": "api-integration-planner",
+          "score": 0.483696
+        },
+        {
+          "skill": "api-documentation-writer",
+          "score": 0.475748
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.461983
+        },
+        {
+          "skill": "api-ops-dependency-mapper",
+          "score": 0.451917
+        },
+        {
+          "skill": "public-swebench-add-malli-schemas",
+          "score": 0.450051
+        },
+        {
+          "skill": "support-ops-dependency-mapper",
+          "score": 0.431135
+        },
+        {
+          "skill": "api-ops-artifact-packager",
+          "score": 0.419109
+        },
+        {
+          "skill": "support-ops-ops-dependency-mapper",
+          "score": 0.4159
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.412789
+        },
+        {
+          "skill": "auth-flow-integrator",
+          "score": 0.410678
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.381146
+        },
+        {
+          "skill": "api-security-threat-reviewer",
+          "score": 0.368752
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p18_chatgpt_apps",
+      "family": "public_gold_validation",
+      "gold_skill": "public-openai-chatgpt-apps",
+      "closest_alternatives": [
+        "public-anthropic-mcp-builder",
+        "public-openai-cli-creator",
+        "public-openai-openai-docs",
+        "public-office-ai-agent-builder"
+      ],
+      "instruction_text": "Build a ChatGPT App with an MCP server plus widget UI, following the Apps SDK structure. I need app scaffolding and troubleshooting, not a generic MCP server or CLI.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-openai-chatgpt-apps",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-openai-chatgpt-apps",
+          "score": 0.964
+        },
+        {
+          "skill": "public-anthropic-mcp-builder",
+          "score": 0.589556
+        },
+        {
+          "skill": "public-swebench-mcp-builder",
+          "score": 0.572634
+        },
+        {
+          "skill": "mcp-server-builder",
+          "score": 0.562919
+        },
+        {
+          "skill": "public-openai-winui-app",
+          "score": 0.544697
+        },
+        {
+          "skill": "gradio-demo-builder",
+          "score": 0.489929
+        },
+        {
+          "skill": "public-office-office-mcp",
+          "score": 0.468682
+        },
+        {
+          "skill": "public-office-mcp-hub",
+          "score": 0.421269
+        },
+        {
+          "skill": "auth-flow-integrator",
+          "score": 0.372168
+        },
+        {
+          "skill": "mobile-ops-artifact-packager",
+          "score": 0.368576
+        },
+        {
+          "skill": "mobile-ops-handoff-brief-writer",
+          "score": 0.354387
+        },
+        {
+          "skill": "public-anthropic-webapp-testing",
+          "score": 0.351628
+        },
+        {
+          "skill": "public-swebench-add-admin-api-endpoint",
+          "score": 0.348324
+        },
+        {
+          "skill": "mobile-ops-dependency-mapper",
+          "score": 0.343097
+        },
+        {
+          "skill": "rest-api-contract-designer",
+          "score": 0.342577
+        },
+        {
+          "skill": "mobile-ops-rewrite-editor",
+          "score": 0.339464
+        },
+        {
+          "skill": "mobile-ops-timeline-builder",
+          "score": 0.334622
+        },
+        {
+          "skill": "api-documentation-writer",
+          "score": 0.310331
+        },
+        {
+          "skill": "mobile-ops-monitoring-plan-builder",
+          "score": 0.290963
+        },
+        {
+          "skill": "hf-zerogpu-space-deployer",
+          "score": 0.214276
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p19_cli_creator",
+      "family": "public_gold_validation",
+      "gold_skill": "public-openai-cli-creator",
+      "closest_alternatives": [
+        "public-openai-openai-docs",
+        "public-obsidian-obsidian-cli",
+        "openapi-contract-reviewer",
+        "mcp-server-builder"
+      ],
+      "instruction_text": "Given an OpenAPI spec, API docs, SDK notes, and a few curl examples, build a composable command-line interface with subcommands, a clear command contract, auth/config handling, and runtime choices. Do not design the API itself, write documentation only, or create an MCP server.",
+      "gold_first_stage_rank": 7,
+      "gold_final_rank": 1,
+      "first_stage_top1": "api-documentation-writer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-openai-cli-creator",
+          "score": 0.846333
+        },
+        {
+          "skill": "api-documentation-writer",
+          "score": 0.580731
+        },
+        {
+          "skill": "openapi-contract-tester",
+          "score": 0.513174
+        },
+        {
+          "skill": "api-ops-acceptance-test-builder",
+          "score": 0.470822
+        },
+        {
+          "skill": "openapi-contract-reviewer",
+          "score": 0.459153
+        },
+        {
+          "skill": "api-ops-dependency-mapper",
+          "score": 0.453189
+        },
+        {
+          "skill": "api-ops-monitoring-plan-builder",
+          "score": 0.452974
+        },
+        {
+          "skill": "api-ops-normalizer",
+          "score": 0.451157
+        },
+        {
+          "skill": "rest-api-contract-designer",
+          "score": 0.448618
+        },
+        {
+          "skill": "api-ops-artifact-packager",
+          "score": 0.442444
+        },
+        {
+          "skill": "api-ops-handoff-brief-writer",
+          "score": 0.433861
+        },
+        {
+          "skill": "mcp-server-builder",
+          "score": 0.432458
+        },
+        {
+          "skill": "api-ops-scenario-planner",
+          "score": 0.431598
+        },
+        {
+          "skill": "api-ops-compliance-checker",
+          "score": 0.423004
+        },
+        {
+          "skill": "api-ops-summary-writer",
+          "score": 0.417015
+        },
+        {
+          "skill": "api-ops-rewrite-editor",
+          "score": 0.413166
+        },
+        {
+          "skill": "public-api-design-principles",
+          "score": 0.407702
+        },
+        {
+          "skill": "auth-flow-integrator",
+          "score": 0.382519
+        },
+        {
+          "skill": "api-security-threat-reviewer",
+          "score": 0.356939
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.352977
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p20_hf_datasets",
+      "family": "public_gold_validation",
+      "gold_skill": "public-huggingface-datasets",
+      "closest_alternatives": [
+        "public-huggingface-hf-cli",
+        "public-huggingface-huggingface-tool-builder",
+        "public-huggingface-train-sentence-transformers",
+        "public-office-data-extractor"
+      ],
+      "instruction_text": "Use the Hugging Face Dataset Viewer API to list subsets and splits, paginate sample rows, and inspect schema information for a dataset. Do not download models or train embeddings.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 1,
+      "first_stage_top1": "hf-dataset-viewer-inspector",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-huggingface-datasets",
+          "score": 0.930962
+        },
+        {
+          "skill": "hf-dataset-viewer-inspector",
+          "score": 0.87645
+        },
+        {
+          "skill": "implicit-hf-dataset-inspector",
+          "score": 0.770166
+        },
+        {
+          "skill": "dataset-ops-dependency-mapper",
+          "score": 0.611543
+        },
+        {
+          "skill": "dataset-ops-resource-linker",
+          "score": 0.604954
+        },
+        {
+          "skill": "dataset-ops-acceptance-test-builder",
+          "score": 0.602225
+        },
+        {
+          "skill": "dataset-ops-normalizer",
+          "score": 0.58624
+        },
+        {
+          "skill": "dataset-ops-compliance-checker",
+          "score": 0.574733
+        },
+        {
+          "skill": "dataset-ops-quality-auditor",
+          "score": 0.574221
+        },
+        {
+          "skill": "dataset-ops-scenario-planner",
+          "score": 0.562688
+        },
+        {
+          "skill": "dataset-ops-risk-reviewer",
+          "score": 0.550324
+        },
+        {
+          "skill": "dataset-ops-handoff-brief-writer",
+          "score": 0.545285
+        },
+        {
+          "skill": "dataset-ops-evidence-grounder",
+          "score": 0.53206
+        },
+        {
+          "skill": "dataset-ops-field-extractor",
+          "score": 0.524567
+        },
+        {
+          "skill": "dataset-ops-comparison-builder",
+          "score": 0.523871
+        },
+        {
+          "skill": "dataset-ops-timeline-builder",
+          "score": 0.523828
+        },
+        {
+          "skill": "dataset-ops-artifact-packager",
+          "score": 0.513043
+        },
+        {
+          "skill": "dataset-ops-failure-diagnoser",
+          "score": 0.512999
+        },
+        {
+          "skill": "dataset-ops-summary-writer",
+          "score": 0.471644
+        },
+        {
+          "skill": "public-huggingface-huggingface-vision-trainer",
+          "score": 0.460274
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p21_hf_gradio",
+      "family": "public_gold_validation",
+      "gold_skill": "public-huggingface-huggingface-gradio",
+      "closest_alternatives": [
+        "public-huggingface-huggingface-zerogpu",
+        "public-huggingface-huggingface-tool-builder",
+        "public-huggingface-datasets",
+        "public-huggingface-transformers-js"
+      ],
+      "instruction_text": "Create a Gradio demo UI with Python components, event listeners, layout, and launch behavior. This is not about ZeroGPU quota, Dataset Viewer API calls, or Transformers.js in the browser.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 1,
+      "first_stage_top1": "gradio-demo-builder",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-huggingface-huggingface-gradio",
+          "score": 0.924051
+        },
+        {
+          "skill": "gradio-demo-builder",
+          "score": 0.899053
+        },
+        {
+          "skill": "public-huggingface-datasets",
+          "score": 0.591048
+        },
+        {
+          "skill": "public-huggingface-huggingface-zerogpu",
+          "score": 0.567141
+        },
+        {
+          "skill": "public-huggingface-transformers-js",
+          "score": 0.487059
+        },
+        {
+          "skill": "public-huggingface-huggingface-llm-trainer",
+          "score": 0.483923
+        },
+        {
+          "skill": "public-huggingface-huggingface-vision-trainer",
+          "score": 0.462732
+        },
+        {
+          "skill": "hf-dataset-viewer-inspector",
+          "score": 0.460814
+        },
+        {
+          "skill": "public-oh-my-ui-component-patterns",
+          "score": 0.457699
+        },
+        {
+          "skill": "deck-template-applier",
+          "score": 0.432189
+        },
+        {
+          "skill": "ml-ops-dependency-mapper",
+          "score": 0.41629
+        },
+        {
+          "skill": "hf-zerogpu-space-deployer",
+          "score": 0.380974
+        },
+        {
+          "skill": "hf-local-model-selector",
+          "score": 0.365773
+        },
+        {
+          "skill": "hf-community-eval-runner",
+          "score": 0.349538
+        },
+        {
+          "skill": "implicit-hf-local-model-chooser",
+          "score": 0.324321
+        },
+        {
+          "skill": "sentence-transformer-finetuner",
+          "score": 0.311403
+        },
+        {
+          "skill": "implicit-hf-dataset-inspector",
+          "score": 0.292479
+        },
+        {
+          "skill": "implicit-visual-diff-reviewer",
+          "score": 0.26242
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.259901
+        },
+        {
+          "skill": "implicit-browser-flow-investigator",
+          "score": 0.218348
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p22_hf_vision_trainer",
+      "family": "public_gold_validation",
+      "gold_skill": "public-huggingface-huggingface-vision-trainer",
+      "closest_alternatives": [
+        "public-huggingface-huggingface-llm-trainer",
+        "public-huggingface-huggingface-community-evals",
+        "public-huggingface-huggingface-local-models",
+        "public-huggingface-train-sentence-transformers"
+      ],
+      "instruction_text": "Fine-tune an object detection model from an image dataset and prepare training/evaluation code for vision labels. Do not choose a local GGUF model or train sentence embeddings.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-huggingface-huggingface-vision-trainer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-huggingface-huggingface-vision-trainer",
+          "score": 0.805893
+        },
+        {
+          "skill": "public-huggingface-huggingface-llm-trainer",
+          "score": 0.572681
+        },
+        {
+          "skill": "ml-ops-dependency-mapper",
+          "score": 0.567657
+        },
+        {
+          "skill": "ml-ops-artifact-packager",
+          "score": 0.555374
+        },
+        {
+          "skill": "implicit-hf-local-model-chooser",
+          "score": 0.542994
+        },
+        {
+          "skill": "gradio-demo-builder",
+          "score": 0.518953
+        },
+        {
+          "skill": "ml-ops-quality-auditor",
+          "score": 0.518581
+        },
+        {
+          "skill": "ml-ops-evidence-grounder",
+          "score": 0.511434
+        },
+        {
+          "skill": "ml-ops-normalizer",
+          "score": 0.508272
+        },
+        {
+          "skill": "ml-ops-risk-reviewer",
+          "score": 0.478961
+        },
+        {
+          "skill": "hf-local-model-selector",
+          "score": 0.472243
+        },
+        {
+          "skill": "ml-ops-rewrite-editor",
+          "score": 0.467364
+        },
+        {
+          "skill": "ml-ops-comparison-builder",
+          "score": 0.434905
+        },
+        {
+          "skill": "public-huggingface-train-sentence-transformers",
+          "score": 0.428698
+        },
+        {
+          "skill": "ml-ops-summary-writer",
+          "score": 0.424865
+        },
+        {
+          "skill": "hf-dataset-viewer-inspector",
+          "score": 0.42415
+        },
+        {
+          "skill": "implicit-hf-dataset-inspector",
+          "score": 0.422489
+        },
+        {
+          "skill": "hf-community-eval-runner",
+          "score": 0.386389
+        },
+        {
+          "skill": "sentence-transformer-finetuner",
+          "score": 0.361463
+        },
+        {
+          "skill": "layout-preserving-converter",
+          "score": 0.243007
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p23_sentence_transformer_training",
+      "family": "public_gold_validation",
+      "gold_skill": "public-huggingface-train-sentence-transformers",
+      "closest_alternatives": [
+        "public-huggingface-transformers-js",
+        "public-huggingface-huggingface-llm-trainer",
+        "public-huggingface-huggingface-local-models",
+        "public-huggingface-datasets"
+      ],
+      "instruction_text": "Train or fine-tune a SentenceTransformer bi-encoder for retrieval using paired text data and report evaluation settings. Do not build a browser Transformers.js demo or choose a local inference model.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 1,
+      "first_stage_top1": "sentence-transformer-finetuner",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-huggingface-train-sentence-transformers",
+          "score": 0.936204
+        },
+        {
+          "skill": "sentence-transformer-finetuner",
+          "score": 0.870721
+        },
+        {
+          "skill": "public-huggingface-transformers-js",
+          "score": 0.813544
+        },
+        {
+          "skill": "public-huggingface-huggingface-vision-trainer",
+          "score": 0.634626
+        },
+        {
+          "skill": "hf-community-eval-runner",
+          "score": 0.597728
+        },
+        {
+          "skill": "ml-ops-rewrite-editor",
+          "score": 0.547685
+        },
+        {
+          "skill": "search-ops-acceptance-test-builder",
+          "score": 0.516634
+        },
+        {
+          "skill": "training-ops-acceptance-test-builder",
+          "score": 0.512962
+        },
+        {
+          "skill": "ml-ops-evidence-grounder",
+          "score": 0.508229
+        },
+        {
+          "skill": "gradio-demo-builder",
+          "score": 0.50732
+        },
+        {
+          "skill": "ml-ops-comparison-builder",
+          "score": 0.503054
+        },
+        {
+          "skill": "ml-ops-summary-writer",
+          "score": 0.49111
+        },
+        {
+          "skill": "training-ops-comparison-builder",
+          "score": 0.483972
+        },
+        {
+          "skill": "search-ops-rewrite-editor",
+          "score": 0.481624
+        },
+        {
+          "skill": "training-ops-evidence-grounder",
+          "score": 0.472247
+        },
+        {
+          "skill": "implicit-hf-local-model-chooser",
+          "score": 0.464824
+        },
+        {
+          "skill": "training-ops-summary-writer",
+          "score": 0.459555
+        },
+        {
+          "skill": "docs-ops-comparison-builder",
+          "score": 0.453747
+        },
+        {
+          "skill": "search-ops-comparison-builder",
+          "score": 0.453136
+        },
+        {
+          "skill": "hf-local-model-selector",
+          "score": 0.417526
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p24_hf_cli",
+      "family": "public_gold_validation",
+      "gold_skill": "public-huggingface-hf-cli",
+      "closest_alternatives": [
+        "public-huggingface-datasets",
+        "public-huggingface-huggingface-paper-publisher",
+        "public-huggingface-huggingface-local-models",
+        "public-huggingface-huggingface-tool-builder"
+      ],
+      "instruction_text": "Use the Hugging Face Hub CLI to upload a model repo, manage files, and check repo metadata from the terminal. Do not query the Dataset Viewer API or design a custom tool.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-huggingface-hf-cli",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-huggingface-hf-cli",
+          "score": 0.896657
+        },
+        {
+          "skill": "public-huggingface-huggingface-best",
+          "score": 0.709382
+        },
+        {
+          "skill": "public-huggingface-huggingface-local-models",
+          "score": 0.661809
+        },
+        {
+          "skill": "public-huggingface-huggingface-tool-builder",
+          "score": 0.660069
+        },
+        {
+          "skill": "public-huggingface-huggingface-trackio",
+          "score": 0.640278
+        },
+        {
+          "skill": "public-huggingface-huggingface-zerogpu",
+          "score": 0.623657
+        },
+        {
+          "skill": "public-huggingface-datasets",
+          "score": 0.619008
+        },
+        {
+          "skill": "public-huggingface-huggingface-community-evals",
+          "score": 0.612564
+        },
+        {
+          "skill": "public-huggingface-huggingface-paper-publisher",
+          "score": 0.60643
+        },
+        {
+          "skill": "public-huggingface-huggingface-vision-trainer",
+          "score": 0.599344
+        },
+        {
+          "skill": "public-huggingface-transformers-js",
+          "score": 0.596422
+        },
+        {
+          "skill": "public-huggingface-huggingface-papers",
+          "score": 0.573872
+        },
+        {
+          "skill": "public-huggingface-huggingface-llm-trainer",
+          "score": 0.561045
+        },
+        {
+          "skill": "public-mattpocock-git-guardrails-claude-code",
+          "score": 0.402941
+        },
+        {
+          "skill": "implicit-hf-dataset-inspector",
+          "score": 0.395053
+        },
+        {
+          "skill": "hf-dataset-viewer-inspector",
+          "score": 0.37108
+        },
+        {
+          "skill": "hf-community-eval-runner",
+          "score": 0.369976
+        },
+        {
+          "skill": "implicit-hf-local-model-chooser",
+          "score": 0.36381
+        },
+        {
+          "skill": "hf-local-model-selector",
+          "score": 0.33689
+        },
+        {
+          "skill": "hf-zerogpu-space-deployer",
+          "score": 0.326443
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p25_data_pipeline",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-data-pipeline",
+      "closest_alternatives": [
+        "public-office-data-analysis",
+        "public-office-data-extractor",
+        "public-office-database-sync",
+        "public-swebench-dbt-transformation-patterns"
+      ],
+      "instruction_text": "Design an ETL workflow that extracts data from two sources, transforms it, loads it into analytics storage, and schedules the pipeline. Do not just analyze a finished dataset or sync two databases.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 2,
+      "first_stage_top1": "public-office-etl-pipeline",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-office-etl-pipeline",
+          "score": 0.794097
+        },
+        {
+          "skill": "public-office-data-pipeline",
+          "score": 0.735432
+        },
+        {
+          "skill": "dataset-ops-timeline-builder",
+          "score": 0.562406
+        },
+        {
+          "skill": "dataset-ops-dependency-mapper",
+          "score": 0.562331
+        },
+        {
+          "skill": "public-office-data-extractor",
+          "score": 0.544589
+        },
+        {
+          "skill": "dataset-ops-field-extractor",
+          "score": 0.5258
+        },
+        {
+          "skill": "public-office-database-sync",
+          "score": 0.517831
+        },
+        {
+          "skill": "dataset-ops-artifact-packager",
+          "score": 0.51428
+        },
+        {
+          "skill": "public-swebench-dbt-transformation-patterns",
+          "score": 0.514005
+        },
+        {
+          "skill": "analytics-ops-dependency-mapper",
+          "score": 0.495925
+        },
+        {
+          "skill": "dataset-ops-handoff-brief-writer",
+          "score": 0.490406
+        },
+        {
+          "skill": "ci-cd-pipeline-builder",
+          "score": 0.482932
+        },
+        {
+          "skill": "dataset-ops-monitoring-plan-builder",
+          "score": 0.464711
+        },
+        {
+          "skill": "analytics-ops-artifact-packager",
+          "score": 0.446583
+        },
+        {
+          "skill": "analytics-ops-field-extractor",
+          "score": 0.441069
+        },
+        {
+          "skill": "analytics-ops-normalizer",
+          "score": 0.44094
+        },
+        {
+          "skill": "public-office-data-analysis",
+          "score": 0.440433
+        },
+        {
+          "skill": "analytics-ops-timeline-builder",
+          "score": 0.440145
+        },
+        {
+          "skill": "analytics-ops-monitoring-plan-builder",
+          "score": 0.388045
+        },
+        {
+          "skill": "external-api-integration-planner",
+          "score": 0.295644
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p26_database_sync",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-database-sync",
+      "closest_alternatives": [
+        "public-office-data-pipeline",
+        "public-office-airtable-automation",
+        "public-office-crm-automation",
+        "public-office-data-analysis"
+      ],
+      "instruction_text": "Set up a two-way synchronization plan between PostgreSQL and MySQL with table mapping, change handling, and conflict rules. Do not create a general ETL pipeline or dashboard analysis.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 1,
+      "first_stage_top1": "database-migration-risk-assessor",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-office-database-sync",
+          "score": 0.683851
+        },
+        {
+          "skill": "database-schema-designer",
+          "score": 0.649924
+        },
+        {
+          "skill": "database-ops-comparison-builder",
+          "score": 0.616257
+        },
+        {
+          "skill": "database-ops-resource-linker",
+          "score": 0.604069
+        },
+        {
+          "skill": "database-ops-dependency-mapper",
+          "score": 0.574767
+        },
+        {
+          "skill": "database-ops-scenario-planner",
+          "score": 0.565293
+        },
+        {
+          "skill": "database-ops-normalizer",
+          "score": 0.565182
+        },
+        {
+          "skill": "database-ops-evidence-grounder",
+          "score": 0.54184
+        },
+        {
+          "skill": "database-ops-handoff-brief-writer",
+          "score": 0.529639
+        },
+        {
+          "skill": "database-ops-rewrite-editor",
+          "score": 0.521782
+        },
+        {
+          "skill": "database-ops-field-extractor",
+          "score": 0.517214
+        },
+        {
+          "skill": "migration-risk-auditor",
+          "score": 0.498827
+        },
+        {
+          "skill": "database-ops-timeline-builder",
+          "score": 0.4752
+        },
+        {
+          "skill": "database-ops-monitoring-plan-builder",
+          "score": 0.459419
+        },
+        {
+          "skill": "partnerships-ops-comparison-builder",
+          "score": 0.439663
+        },
+        {
+          "skill": "database-backup-planner",
+          "score": 0.437597
+        },
+        {
+          "skill": "database-migration-risk-assessor",
+          "score": 0.421921
+        },
+        {
+          "skill": "partnerships-ops-normalizer",
+          "score": 0.408838
+        },
+        {
+          "skill": "webhook-integration-planner",
+          "score": 0.335483
+        },
+        {
+          "skill": "service-dependency-mapper",
+          "score": 0.3033
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p27_contract_review",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-contract-review",
+      "closest_alternatives": [
+        "public-office-contract-template",
+        "public-security-threat-model",
+        "public-office-proposal-writer",
+        "document-summariser"
+      ],
+      "instruction_text": "Review this vendor contract for risky clauses, missing protections, obligations, renewal terms, and negotiation recommendations. Do not generate a new template or summarize it generically.",
+      "gold_first_stage_rank": 36,
+      "gold_final_rank": null,
+      "first_stage_top1": "contract-risk-reviewer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "contract-risk-reviewer",
+          "score": 0.955577
+        },
+        {
+          "skill": "contract-ops-risk-reviewer",
+          "score": 0.892956
+        },
+        {
+          "skill": "vendor-ops-risk-reviewer",
+          "score": 0.829337
+        },
+        {
+          "skill": "contract-ops-quality-auditor",
+          "score": 0.809949
+        },
+        {
+          "skill": "contract-ops-scenario-planner",
+          "score": 0.716921
+        },
+        {
+          "skill": "contract-ops-rewrite-editor",
+          "score": 0.689197
+        },
+        {
+          "skill": "vendor-ops-quality-auditor",
+          "score": 0.666846
+        },
+        {
+          "skill": "vendor-ops-evidence-grounder",
+          "score": 0.666529
+        },
+        {
+          "skill": "vendor-ops-compliance-checker",
+          "score": 0.663225
+        },
+        {
+          "skill": "vendor-ops-rewrite-editor",
+          "score": 0.641669
+        },
+        {
+          "skill": "vendor-ops-artifact-packager",
+          "score": 0.626845
+        },
+        {
+          "skill": "vendor-ops-scenario-planner",
+          "score": 0.612329
+        },
+        {
+          "skill": "vendor-ops-timeline-builder",
+          "score": 0.602115
+        },
+        {
+          "skill": "vendor-ops-failure-diagnoser",
+          "score": 0.598069
+        },
+        {
+          "skill": "vendor-ops-resource-linker",
+          "score": 0.591817
+        },
+        {
+          "skill": "vendor-ops-handoff-brief-writer",
+          "score": 0.563276
+        },
+        {
+          "skill": "vendor-ops-normalizer",
+          "score": 0.544139
+        },
+        {
+          "skill": "procurement-risk-summariser",
+          "score": 0.538522
+        },
+        {
+          "skill": "vendor-ops-summary-writer",
+          "score": 0.501189
+        },
+        {
+          "skill": "vendor-ops-monitoring-plan-builder",
+          "score": 0.462652
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p28_suspicious_email",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-suspicious-email",
+      "closest_alternatives": [
+        "public-office-email-classifier",
+        "public-office-email-drafter",
+        "public-office-gmail-workflows",
+        "public-office-security-monitoring"
+      ],
+      "instruction_text": "Analyze this suspicious email for phishing indicators, spoofed sender details, malicious links, urgency tactics, and recommended safety response. Do not merely classify or draft a reply.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "public-office-suspicious-email",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-office-suspicious-email",
+          "score": 0.805883
+        },
+        {
+          "skill": "email-ops-risk-reviewer",
+          "score": 0.609349
+        },
+        {
+          "skill": "email-ops-priority-ranker",
+          "score": 0.594419
+        },
+        {
+          "skill": "email-ops-evidence-grounder",
+          "score": 0.592842
+        },
+        {
+          "skill": "email-ops-intake-classifier",
+          "score": 0.574046
+        },
+        {
+          "skill": "email-ops-failure-diagnoser",
+          "score": 0.563199
+        },
+        {
+          "skill": "email-ops-resource-linker",
+          "score": 0.549631
+        },
+        {
+          "skill": "email-ops-artifact-packager",
+          "score": 0.536361
+        },
+        {
+          "skill": "email-ops-quality-auditor",
+          "score": 0.530171
+        },
+        {
+          "skill": "email-ops-scenario-planner",
+          "score": 0.528291
+        },
+        {
+          "skill": "email-ops-handoff-brief-writer",
+          "score": 0.509058
+        },
+        {
+          "skill": "email-ops-field-extractor",
+          "score": 0.505907
+        },
+        {
+          "skill": "email-ops-compliance-checker",
+          "score": 0.487782
+        },
+        {
+          "skill": "email-ops-summary-writer",
+          "score": 0.475847
+        },
+        {
+          "skill": "email-ops-monitoring-plan-builder",
+          "score": 0.451699
+        },
+        {
+          "skill": "email-action-extractor",
+          "score": 0.433392
+        },
+        {
+          "skill": "email-classification-router",
+          "score": 0.430526
+        },
+        {
+          "skill": "email-polisher",
+          "score": 0.344291
+        },
+        {
+          "skill": "reply-polisher",
+          "score": 0.336884
+        },
+        {
+          "skill": "professor-email-reply",
+          "score": 0.271975
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p29_ai_slides",
+      "family": "public_gold_validation",
+      "gold_skill": "public-office-ai-slides",
+      "closest_alternatives": [
+        "public-office-md-slides",
+        "public-office-html-slides",
+        "public-office-dev-slides",
+        "public-anthropic-theme-factory"
+      ],
+      "instruction_text": "Generate a complete presentation from the topic brief, including outline, slide content, and polished deck structure. Do not only convert existing Markdown or apply a visual theme.",
+      "gold_first_stage_rank": 6,
+      "gold_final_rank": 1,
+      "first_stage_top1": "slide-outline-builder",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-office-ai-slides",
+          "score": 0.896651
+        },
+        {
+          "skill": "slide-outline-builder",
+          "score": 0.860768
+        },
+        {
+          "skill": "public-oh-my-presentation-builder",
+          "score": 0.757683
+        },
+        {
+          "skill": "public-office-ppt-visual",
+          "score": 0.674199
+        },
+        {
+          "skill": "public-office-md-slides",
+          "score": 0.667977
+        },
+        {
+          "skill": "public-office-pptx-manipulation",
+          "score": 0.637119
+        },
+        {
+          "skill": "deck-template-applier",
+          "score": 0.596519
+        },
+        {
+          "skill": "sales-ops-handoff-brief-writer",
+          "score": 0.564461
+        },
+        {
+          "skill": "speaker-notes-writer",
+          "score": 0.562453
+        },
+        {
+          "skill": "meeting-ops-handoff-brief-writer",
+          "score": 0.548978
+        },
+        {
+          "skill": "content-strategy-builder",
+          "score": 0.536675
+        },
+        {
+          "skill": "product-ops-artifact-packager",
+          "score": 0.530237
+        },
+        {
+          "skill": "product-ops-summary-writer",
+          "score": 0.515498
+        },
+        {
+          "skill": "events-ops-summary-writer",
+          "score": 0.509586
+        },
+        {
+          "skill": "marketing-ops-summary-writer",
+          "score": 0.490071
+        },
+        {
+          "skill": "meeting-ops-artifact-packager",
+          "score": 0.485975
+        },
+        {
+          "skill": "sales-ops-summary-writer",
+          "score": 0.46403
+        },
+        {
+          "skill": "slide-deck-visual-auditor",
+          "score": 0.391016
+        },
+        {
+          "skill": "data-analysis-for-reporting",
+          "score": 0.361075
+        },
+        {
+          "skill": "meeting-agenda-builder",
+          "score": 0.318266
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p30_figma_implement_design",
+      "family": "public_gold_validation",
+      "gold_skill": "public-openai-figma-implement-design",
+      "closest_alternatives": [
+        "public-openai-figma-generate-design",
+        "public-openai-figma-generate-library",
+        "public-openai-figma-code-connect-components",
+        "public-openai-figma-use"
+      ],
+      "instruction_text": "Given a Figma URL with a specific node id, fetch the design context and screenshot, download required assets, and implement the existing frame as production UI code inside the repository with 1:1 visual parity. Do not create or update a Figma screen, generate a new design from a prompt, create a component library, or only fetch context.",
+      "gold_first_stage_rank": 3,
+      "gold_final_rank": 2,
+      "first_stage_top1": "public-openai-figma-generate-design",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "public-openai-figma",
+          "score": 0.888075
+        },
+        {
+          "skill": "public-openai-figma-implement-design",
+          "score": 0.886219
+        },
+        {
+          "skill": "public-openai-figma-use",
+          "score": 0.725999
+        },
+        {
+          "skill": "public-openai-figma-generate-design",
+          "score": 0.713002
+        },
+        {
+          "skill": "public-anthropic-frontend-design",
+          "score": 0.642137
+        },
+        {
+          "skill": "public-openai-figma-code-connect-components",
+          "score": 0.6345
+        },
+        {
+          "skill": "public-openai-figma-generate-library",
+          "score": 0.626262
+        },
+        {
+          "skill": "public-openai-figma-create-new-file",
+          "score": 0.596153
+        },
+        {
+          "skill": "public-oh-my-frontend-design-system",
+          "score": 0.588121
+        },
+        {
+          "skill": "public-openai-figma-create-design-system-rules",
+          "score": 0.572862
+        },
+        {
+          "skill": "public-oh-my-design-system",
+          "score": 0.527462
+        },
+        {
+          "skill": "public-openai-screenshot",
+          "score": 0.503862
+        },
+        {
+          "skill": "ux-ops-artifact-packager",
+          "score": 0.501736
+        },
+        {
+          "skill": "public-oh-my-web-design-guidelines",
+          "score": 0.464627
+        },
+        {
+          "skill": "public-oh-my-ui-component-patterns",
+          "score": 0.445263
+        },
+        {
+          "skill": "public-oh-my-video-production",
+          "score": 0.44505
+        },
+        {
+          "skill": "ux-ops-handoff-brief-writer",
+          "score": 0.432858
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.35177
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.327602
+        },
+        {
+          "skill": "implicit-browser-flow-investigator",
+          "score": 0.3179
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p31_skill_creator",
+      "family": "public_gold_validation",
+      "gold_skill": "public-skill-creator",
+      "closest_alternatives": [
+        "public-skill-installer",
+        "public-openai-migrate-to-codex",
+        "public-oh-my-agentic-skills",
+        "skill-field-auditor"
+      ],
+      "instruction_text": "Create a new Codex skill for a repeated workflow, including the SKILL.md structure, trigger description, and optional resources/scripts guidance. Do not install an existing skill or migrate settings.",
+      "gold_first_stage_rank": 6,
+      "gold_final_rank": 2,
+      "first_stage_top1": "skill-creator",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "skill-creator",
+          "score": 0.915817
+        },
+        {
+          "skill": "public-skill-creator",
+          "score": 0.758779
+        },
+        {
+          "skill": "skill-authoring-guide",
+          "score": 0.735742
+        },
+        {
+          "skill": "public-anthropic-doc-coauthoring",
+          "score": 0.679251
+        },
+        {
+          "skill": "public-oh-my-workflow-automation",
+          "score": 0.592287
+        },
+        {
+          "skill": "public-skill-installer",
+          "score": 0.584021
+        },
+        {
+          "skill": "public-addy-agent-ci-cd-and-automation",
+          "score": 0.553981
+        },
+        {
+          "skill": "public-office-n8n-workflow",
+          "score": 0.542064
+        },
+        {
+          "skill": "public-oh-my-setup-pre-commit",
+          "score": 0.521955
+        },
+        {
+          "skill": "public-oh-my-code-review",
+          "score": 0.507205
+        },
+        {
+          "skill": "warehouse-ops-handoff-brief-writer",
+          "score": 0.471612
+        },
+        {
+          "skill": "code-documentation-writer",
+          "score": 0.467567
+        },
+        {
+          "skill": "devops-ops-handoff-brief-writer",
+          "score": 0.460829
+        },
+        {
+          "skill": "operations-ops-handoff-brief-writer",
+          "score": 0.457918
+        },
+        {
+          "skill": "operations-ops-rewrite-editor",
+          "score": 0.444416
+        },
+        {
+          "skill": "skill-editor",
+          "score": 0.426309
+        },
+        {
+          "skill": "agent-ops-handoff-brief-writer",
+          "score": 0.394837
+        },
+        {
+          "skill": "skill-evaluator",
+          "score": 0.367205
+        },
+        {
+          "skill": "skill-field-auditor",
+          "score": 0.36059
+        },
+        {
+          "skill": "skill-finder",
+          "score": 0.357029
+        }
+      ]
+    },
+    {
+      "prompt_id": "public_gold_p32_security_threat_model",
+      "family": "public_gold_validation",
+      "gold_skill": "public-security-threat-model",
+      "closest_alternatives": [
+        "public-openai-security-best-practices",
+        "public-openai-security-ownership-map",
+        "public-swebench-security-review",
+        "security-threat-modeler"
+      ],
+      "instruction_text": "Given the repository and architecture notes, identify sensitive data and functions, crossings between users/services, likely misuse scenarios, and concrete mitigations. Do not just list generic best practices or ownership files.",
+      "gold_first_stage_rank": 16,
+      "gold_final_rank": 10,
+      "first_stage_top1": "privacy-risk-reviewer",
+      "candidate_count": 20,
+      "ranking": [
+        {
+          "skill": "security-ops-risk-reviewer",
+          "score": 0.768079
+        },
+        {
+          "skill": "api-security-threat-reviewer",
+          "score": 0.729183
+        },
+        {
+          "skill": "repo-ops-risk-reviewer",
+          "score": 0.710629
+        },
+        {
+          "skill": "security-ops-dependency-mapper",
+          "score": 0.706373
+        },
+        {
+          "skill": "security-ops-quality-auditor",
+          "score": 0.701349
+        },
+        {
+          "skill": "secret-leak-scanner",
+          "score": 0.692538
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.65469
+        },
+        {
+          "skill": "security-ops-handoff-brief-writer",
+          "score": 0.651043
+        },
+        {
+          "skill": "security-ops-evidence-grounder",
+          "score": 0.650827
+        },
+        {
+          "skill": "public-security-threat-model",
+          "score": 0.645733
+        },
+        {
+          "skill": "security-threat-modeler",
+          "score": 0.639315
+        },
+        {
+          "skill": "database-ops-risk-reviewer",
+          "score": 0.617505
+        },
+        {
+          "skill": "service-dependency-mapper",
+          "score": 0.616682
+        },
+        {
+          "skill": "security-ops-summary-writer",
+          "score": 0.613444
+        },
+        {
+          "skill": "security-ops-normalizer",
+          "score": 0.608673
+        },
+        {
+          "skill": "auth-flow-reviewer",
+          "score": 0.6073
+        },
+        {
+          "skill": "privacy-risk-reviewer",
+          "score": 0.588647
+        },
+        {
+          "skill": "security-ops-timeline-builder",
+          "score": 0.58222
+        },
+        {
+          "skill": "security-ops-artifact-packager",
+          "score": 0.572973
+        },
+        {
+          "skill": "architecture-boundary-reviewer",
+          "score": 0.492529
+        }
+      ]
+    }
+  ]
+}

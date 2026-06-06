@@ -1,0 +1,1374 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+
+FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+SCALAR_RE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*?)\s*$")
+
+
+CASES = [
+    {
+        "id": "public_gold_p01_pdf_extraction",
+        "gold_skill": "public-office-pdf-extraction",
+        "closest_alternatives": [
+            "public-office-chat-with-pdf",
+            "public-office-pdf-ocr",
+            "public-office-pdf-converter",
+            "public-openai-pdf",
+        ],
+        "prompt": "Using pdfplumber-style extraction, pull the native text, table cells, and document metadata from `/workspace/public_gold/vendor_pack.pdf` into structured JSON with page anchors. The file is not scanned, and I do not need a conversational answer or format conversion.",
+        "source_family": "office-document",
+        "field_axes": ["input_or_precondition", "output_artifact", "workflow_or_procedure"],
+        "gold_rationale": "The public PDF extraction skill targets native PDF text/table/metadata extraction, not Q&A, OCR, or conversion.",
+    },
+    {
+        "id": "public_gold_p02_pdf_ocr",
+        "gold_skill": "public-office-pdf-ocr",
+        "closest_alternatives": [
+            "public-office-pdf-extraction",
+            "public-office-chat-with-pdf",
+            "public-office-pdf-converter",
+            "public-openai-pdf",
+        ],
+        "prompt": "The uploaded PDF is a scan of signed forms. Run OCR to recover readable text and mark uncertain recognition regions by page; do not treat it as a normal embedded-text PDF or convert it to Word.",
+        "source_family": "office-document",
+        "field_axes": ["input_or_precondition", "workflow_or_procedure", "success_criterion"],
+        "gold_rationale": "The public PDF OCR skill is specifically for scanned image PDFs requiring optical character recognition.",
+        "acceptable_alternatives": ["pdf-ocr-cleaner"],
+    },
+    {
+        "id": "public_gold_p03_pdf_form_filler",
+        "gold_skill": "public-office-pdf-form-filler",
+        "closest_alternatives": [
+            "pdf-form-filler",
+            "public-office-pdf-extraction",
+            "public-office-pdf-converter",
+            "public-office-template-engine",
+        ],
+        "prompt": "Use the reimbursement PDF and the employee data sheet to fill the form fields and report any required blanks still missing. I am not asking for general extraction, conversion, or a reusable document template.",
+        "source_family": "office-document",
+        "field_axes": ["input_or_precondition", "output_artifact", "workflow_or_procedure"],
+        "gold_rationale": "The public PDF form filler skill focuses on programmatically filling PDF forms and extracting form data.",
+        "acceptable_alternatives": ["pdf-form-filler"],
+    },
+    {
+        "id": "public_gold_p04_markitdown_conversion",
+        "gold_skill": "public-markitdown",
+        "closest_alternatives": [
+            "office-to-markdown-converter",
+            "public-office-pdf-converter",
+            "public-office-batch-convert",
+            "public-office-doc-parser",
+        ],
+        "prompt": "Use a MarkItDown-style pipeline to convert a mixed folder of PDF, DOCX, PPTX, XLSX, image, HTML, CSV, and JSON files into Markdown text suitable for indexing. Preserve lightweight structure and OCR where needed; do not create Office files from Markdown.",
+        "source_family": "document-conversion",
+        "field_axes": ["input_or_precondition", "output_artifact", "dependency_or_tool"],
+        "gold_rationale": "MarkItDown is specifically a multi-format document-to-Markdown conversion skill.",
+    },
+    {
+        "id": "public_gold_p05_pdf_merge_split",
+        "gold_skill": "public-office-pdf-merge-split",
+        "closest_alternatives": [
+            "public-office-pdf-converter",
+            "public-office-pdf-watermark",
+            "public-office-pdf-compress",
+            "public-openai-pdf",
+        ],
+        "prompt": "Combine three policy PDFs into one packet, then split the appendix pages into a separate file. Do not watermark, compress, summarize, or convert the PDFs.",
+        "source_family": "office-document",
+        "field_axes": ["workflow_or_procedure", "output_artifact", "boundary_signal"],
+        "gold_rationale": "The public PDF merge/split skill is the one whose procedure is combining and separating PDF files.",
+    },
+    {
+        "id": "public_gold_p06_browser_devtools_testing",
+        "gold_skill": "public-addy-agent-browser-testing-with-devtools",
+        "closest_alternatives": [
+            "public-openai-playwright",
+            "public-playwright-interactive",
+            "public-office-browser-automation",
+            "public-anthropic-webapp-testing",
+        ],
+        "prompt": "Use Chrome DevTools MCP on the local checkout to inspect DOM state, console errors, failed network requests, and runtime screenshots. Do not just write a Playwright script from scratch.",
+        "source_family": "browser-qa",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "success_criterion"],
+        "gold_rationale": "The public DevTools browser testing skill requires Chrome DevTools MCP and runtime inspection evidence.",
+    },
+    {
+        "id": "public_gold_p07_web_accessibility",
+        "gold_skill": "public-addy-web-accessibility",
+        "closest_alternatives": [
+            "public-oh-my-web-accessibility",
+            "public-addy-web-web-quality-audit",
+            "public-addy-web-core-web-vitals",
+            "public-addy-web-best-practices",
+        ],
+        "prompt": "Audit the product settings page against WCAG 2.2, focusing on keyboard navigation, labels, focus order, contrast, and screen-reader semantics. Do not broaden this into SEO or performance.",
+        "source_family": "web-quality",
+        "field_axes": ["success_criterion", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public accessibility skill is explicitly about WCAG-focused accessibility review.",
+        "acceptable_alternatives": [
+            "public-oh-my-web-accessibility",
+            "accessibility-checker",
+            "accessibility-interaction-auditor",
+        ],
+    },
+    {
+        "id": "public_gold_p08_core_web_vitals",
+        "gold_skill": "public-addy-web-core-web-vitals",
+        "closest_alternatives": [
+            "public-addy-web-accessibility",
+            "public-addy-web-best-practices",
+            "public-addy-web-performance",
+            "public-addy-agent-browser-testing-with-devtools",
+        ],
+        "prompt": "Investigate only the page's Core Web Vitals: identify the LCP element, INP handler delay, any CLS source, and metric-specific fixes. Do not broaden this into accessibility, SEO, browser automation, or general best-practice review.",
+        "source_family": "web-quality",
+        "field_axes": ["success_criterion", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The Core Web Vitals skill targets LCP, INP, CLS, and related performance diagnosis.",
+    },
+    {
+        "id": "public_gold_p09_systematic_debugging",
+        "gold_skill": "public-oh-my-debugging",
+        "closest_alternatives": [
+            "public-addy-agent-code-simplification",
+            "public-oh-my-code-review",
+            "public-addy-agent-code-review-and-quality",
+            "public-openai-gh-fix-ci",
+        ],
+        "prompt": "A local feature intermittently returns the wrong result. Use the debugging packet style: freeze the failure definition, build the smallest reproducer, isolate the boundary where behaviour changes, and propose the first evidence-backed fix. Do not review code quality, simplify code, or inspect GitHub CI.",
+        "source_family": "software-maintenance",
+        "field_axes": ["workflow_or_procedure", "input_or_precondition", "boundary_signal"],
+        "gold_rationale": "The public debugging skill is for general failure isolation, not specifically GitHub CI or code review.",
+        "acceptable_alternatives": ["public-addy-agent-debugging-and-error-recovery"],
+    },
+    {
+        "id": "public_gold_p10_analyze_ci",
+        "gold_skill": "public-swebench-analyze-ci",
+        "closest_alternatives": [
+            "public-openai-gh-fix-ci",
+            "public-swebench-github-actions-templates",
+            "public-addy-agent-ci-cd-and-automation",
+            "public-oh-my-debugging",
+            "pr-reviewer",
+            "repo-ops-failure-diagnoser",
+        ],
+        "prompt": "Given the PR number and failed GitHub Actions job URLs, analyze the failing CI logs and identify the likely cause. Do not design a new workflow template or perform a general debugging session.",
+        "source_family": "github-ci",
+        "field_axes": ["input_or_precondition", "dependency_or_tool", "workflow_or_procedure"],
+        "gold_rationale": "The public analyze-ci skill is for diagnosing failed GitHub Action jobs from PR/job evidence.",
+        "acceptable_alternatives": ["public-openai-gh-fix-ci", "ci-failure-debugger", "ci-log-root-cause-debugger"],
+    },
+    {
+        "id": "public_gold_p11_setup_pre_commit",
+        "gold_skill": "public-mattpocock-setup-pre-commit",
+        "closest_alternatives": [
+            "public-oh-my-setup-pre-commit",
+            "git-safety-guardrail-installer",
+            "public-mattpocock-git-guardrails-claude-code",
+            "public-swebench-fix",
+            "git-commit-writer",
+            "public-swebench-github-actions-templates",
+        ],
+        "prompt": "Add a repo-local Husky pre-commit setup with lint-staged so Prettier, type checking, and tests run before commits. Do not configure GitHub Actions, run a one-off fixer, or block dangerous git commands.",
+        "source_family": "github-ci",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public setup-pre-commit skill is about Husky/lint-staged commit-time checks.",
+        "acceptable_alternatives": ["public-oh-my-setup-pre-commit"],
+    },
+    {
+        "id": "public_gold_p12_git_guardrails",
+        "gold_skill": "public-mattpocock-git-guardrails-claude-code",
+        "closest_alternatives": [
+            "public-oh-my-git-guardrails-claude-code",
+            "public-mattpocock-setup-pre-commit",
+            "public-addy-agent-git-workflow-and-versioning",
+            "public-openai-yeet",
+            "version-control-helper",
+            "public-swebench-github-actions-templates",
+        ],
+        "prompt": "Set up Claude Code git guardrail hooks that prevent dangerous git operations such as force-push, reset --hard, clean, and branch deletion before they execute. I am not asking for formatting hooks, general git workflow advice, or a PR publishing flow.",
+        "source_family": "github-ci",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public git guardrails skill protects against dangerous git commands through Claude Code hooks.",
+        "acceptable_alternatives": ["public-oh-my-git-guardrails-claude-code"],
+    },
+    {
+        "id": "public_gold_p13_address_pr_comments",
+        "gold_skill": "public-openai-gh-address-comments",
+        "closest_alternatives": [
+            "public-openai-gh-fix-ci",
+            "public-openai-yeet",
+            "public-lbussell-creating-pull-requests",
+            "public-lbussell-triaging-issues",
+        ],
+        "prompt": "There are unresolved review comments on the current GitHub PR. Inspect the actionable threads, patch the requested changes, and report what was addressed. Do not create a new PR or debug failing checks.",
+        "source_family": "github-ci",
+        "field_axes": ["input_or_precondition", "dependency_or_tool", "workflow_or_procedure"],
+        "gold_rationale": "The public gh-address-comments skill is for resolving review feedback on an existing PR.",
+    },
+    {
+        "id": "public_gold_p14_netlify_deploy",
+        "gold_skill": "public-netlify-deploy",
+        "closest_alternatives": [
+            "public-openai-vercel-deploy",
+            "public-openai-cloudflare-deploy",
+            "public-openai-render-deploy",
+            "public-oh-my-vercel-deploy",
+        ],
+        "prompt": "Deploy this static web project to Netlify, using the Netlify CLI and returning the deployment URL with verification. Do not target Vercel, Cloudflare, Render, or Kubernetes.",
+        "source_family": "deployment",
+        "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+        "gold_rationale": "The public Netlify deploy skill is platform-specific to Netlify CLI deployment and verification.",
+    },
+    {
+        "id": "public_gold_p15_cloudflare_deploy",
+        "gold_skill": "public-openai-cloudflare-deploy",
+        "closest_alternatives": [
+            "public-netlify-deploy",
+            "public-openai-vercel-deploy",
+            "public-openai-render-deploy",
+            "public-swebench-k8s-manifest-generator",
+        ],
+        "prompt": "Publish the worker and static assets to Cloudflare Pages/Workers, including the required Wrangler or Cloudflare platform checks. Do not use Netlify, Vercel, Render, or Kubernetes manifests.",
+        "source_family": "deployment",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public Cloudflare deploy skill is tied to Cloudflare Workers/Pages infrastructure.",
+    },
+    {
+        "id": "public_gold_p16_render_deploy",
+        "gold_skill": "public-openai-render-deploy",
+        "closest_alternatives": [
+            "public-netlify-deploy",
+            "public-openai-vercel-deploy",
+            "public-openai-cloudflare-deploy",
+            "public-swebench-k8s-manifest-generator",
+        ],
+        "prompt": "Prepare this service specifically for Render deployment by analyzing the repo, generating a `render.yaml` Blueprint, and giving the Render Dashboard deployment path. Do not deploy to Netlify, Vercel, Cloudflare, or Kubernetes.",
+        "source_family": "deployment",
+        "field_axes": ["dependency_or_tool", "output_artifact", "workflow_or_procedure"],
+        "gold_rationale": "The public Render deploy skill specifically handles Render Blueprints and Dashboard deployment details.",
+    },
+    {
+        "id": "public_gold_p17_mcp_builder",
+        "gold_skill": "public-anthropic-mcp-builder",
+        "closest_alternatives": [
+            "public-api-design-principles",
+            "public-office-mcp-hub",
+            "public-openai-chatgpt-apps",
+            "mcp-server-builder",
+            "webhook-integration-planner",
+        ],
+        "prompt": "Design and implement an MCP server that exposes a third-party issue-tracking API as well-typed tools with authentication and schema-aware tool contracts. Do not just browse a hub of existing MCP tools.",
+        "source_family": "api-mcp",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "output_artifact"],
+        "gold_rationale": "The public MCP builder skill is for creating MCP servers around external APIs and services.",
+        "acceptable_alternatives": ["mcp-server-builder"],
+    },
+    {
+        "id": "public_gold_p18_chatgpt_apps",
+        "gold_skill": "public-openai-chatgpt-apps",
+        "closest_alternatives": [
+            "public-anthropic-mcp-builder",
+            "public-openai-cli-creator",
+            "public-openai-openai-docs",
+            "public-office-ai-agent-builder",
+        ],
+        "prompt": "Build a ChatGPT App with an MCP server plus widget UI, following the Apps SDK structure. I need app scaffolding and troubleshooting, not a generic MCP server or CLI.",
+        "source_family": "api-mcp",
+        "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+        "gold_rationale": "The public ChatGPT Apps skill is specific to Apps SDK applications combining MCP and widgets.",
+    },
+    {
+        "id": "public_gold_p19_cli_creator",
+        "gold_skill": "public-openai-cli-creator",
+        "closest_alternatives": [
+            "public-openai-openai-docs",
+            "public-obsidian-obsidian-cli",
+            "openapi-contract-reviewer",
+            "mcp-server-builder",
+        ],
+        "prompt": "Given an OpenAPI spec, API docs, SDK notes, and a few curl examples, build a composable command-line interface with subcommands, a clear command contract, auth/config handling, and runtime choices. Do not design the API itself, write documentation only, or create an MCP server.",
+        "source_family": "api-mcp",
+        "field_axes": ["input_or_precondition", "output_artifact", "workflow_or_procedure"],
+        "gold_rationale": "The public CLI creator skill targets building a CLI from API docs/specs/examples.",
+    },
+    {
+        "id": "public_gold_p20_hf_datasets",
+        "gold_skill": "public-huggingface-datasets",
+        "closest_alternatives": [
+            "public-huggingface-hf-cli",
+            "public-huggingface-huggingface-tool-builder",
+            "public-huggingface-train-sentence-transformers",
+            "public-office-data-extractor",
+        ],
+        "prompt": "Use the Hugging Face Dataset Viewer API to list subsets and splits, paginate sample rows, and inspect schema information for a dataset. Do not download models or train embeddings.",
+        "source_family": "huggingface",
+        "field_axes": ["dependency_or_tool", "input_or_precondition", "boundary_signal"],
+        "gold_rationale": "The public Hugging Face datasets skill is specific to Dataset Viewer API workflows.",
+    },
+    {
+        "id": "public_gold_p21_hf_gradio",
+        "gold_skill": "public-huggingface-huggingface-gradio",
+        "closest_alternatives": [
+            "public-huggingface-huggingface-zerogpu",
+            "public-huggingface-huggingface-tool-builder",
+            "public-huggingface-datasets",
+            "public-huggingface-transformers-js",
+        ],
+        "prompt": "Create a Gradio demo UI with Python components, event listeners, layout, and launch behavior. This is not about ZeroGPU quota, Dataset Viewer API calls, or Transformers.js in the browser.",
+        "source_family": "huggingface",
+        "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+        "gold_rationale": "The public Hugging Face Gradio skill is for building Gradio web UIs and demos.",
+        "acceptable_alternatives": ["gradio-demo-builder"],
+    },
+    {
+        "id": "public_gold_p22_hf_vision_trainer",
+        "gold_skill": "public-huggingface-huggingface-vision-trainer",
+        "closest_alternatives": [
+            "public-huggingface-huggingface-llm-trainer",
+            "public-huggingface-huggingface-community-evals",
+            "public-huggingface-huggingface-local-models",
+            "public-huggingface-train-sentence-transformers",
+        ],
+        "prompt": "Fine-tune an object detection model from an image dataset and prepare training/evaluation code for vision labels. Do not choose a local GGUF model or train sentence embeddings.",
+        "source_family": "huggingface",
+        "field_axes": ["input_or_precondition", "workflow_or_procedure", "dependency_or_tool"],
+        "gold_rationale": "The public vision trainer skill targets vision model fine-tuning such as detection and classification.",
+    },
+    {
+        "id": "public_gold_p23_sentence_transformer_training",
+        "gold_skill": "public-huggingface-train-sentence-transformers",
+        "closest_alternatives": [
+            "public-huggingface-transformers-js",
+            "public-huggingface-huggingface-llm-trainer",
+            "public-huggingface-huggingface-local-models",
+            "public-huggingface-datasets",
+        ],
+        "prompt": "Train or fine-tune a SentenceTransformer bi-encoder for retrieval using paired text data and report evaluation settings. Do not build a browser Transformers.js demo or choose a local inference model.",
+        "source_family": "huggingface",
+        "field_axes": ["input_or_precondition", "workflow_or_procedure", "success_criterion"],
+        "gold_rationale": "The public train-sentence-transformers skill targets sentence-transformer training and evaluation.",
+        "acceptable_alternatives": ["sentence-transformer-finetuner"],
+    },
+    {
+        "id": "public_gold_p24_hf_cli",
+        "gold_skill": "public-huggingface-hf-cli",
+        "closest_alternatives": [
+            "public-huggingface-datasets",
+            "public-huggingface-huggingface-paper-publisher",
+            "public-huggingface-huggingface-local-models",
+            "public-huggingface-huggingface-tool-builder",
+        ],
+        "prompt": "Use the Hugging Face Hub CLI to upload a model repo, manage files, and check repo metadata from the terminal. Do not query the Dataset Viewer API or design a custom tool.",
+        "source_family": "huggingface",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public HF CLI skill is specifically about `hf` command-line workflows.",
+    },
+    {
+        "id": "public_gold_p25_data_pipeline",
+        "gold_skill": "public-office-data-pipeline",
+        "closest_alternatives": [
+            "public-office-data-analysis",
+            "public-office-data-extractor",
+            "public-office-database-sync",
+            "public-swebench-dbt-transformation-patterns",
+        ],
+        "prompt": "Design an ETL workflow that extracts data from two sources, transforms it, loads it into analytics storage, and schedules the pipeline. Do not just analyze a finished dataset or sync two databases.",
+        "source_family": "data-office",
+        "field_axes": ["workflow_or_procedure", "output_artifact", "boundary_signal"],
+        "gold_rationale": "The public data pipeline skill targets ETL workflow construction.",
+        "acceptable_alternatives": ["public-office-etl-pipeline"],
+    },
+    {
+        "id": "public_gold_p26_database_sync",
+        "gold_skill": "public-office-database-sync",
+        "closest_alternatives": [
+            "public-office-data-pipeline",
+            "public-office-airtable-automation",
+            "public-office-crm-automation",
+            "public-office-data-analysis",
+        ],
+        "prompt": "Set up a two-way synchronization plan between PostgreSQL and MySQL with table mapping, change handling, and conflict rules. Do not create a general ETL pipeline or dashboard analysis.",
+        "source_family": "data-office",
+        "field_axes": ["dependency_or_tool", "workflow_or_procedure", "success_criterion"],
+        "gold_rationale": "The public database sync skill targets source/target synchronization and conflict handling.",
+    },
+    {
+        "id": "public_gold_p27_contract_review",
+        "gold_skill": "public-office-contract-review",
+        "closest_alternatives": [
+            "public-office-contract-template",
+            "public-security-threat-model",
+            "public-office-proposal-writer",
+            "document-summariser",
+        ],
+        "prompt": "Review this vendor contract for risky clauses, missing protections, obligations, renewal terms, and negotiation recommendations. Do not generate a new template or summarize it generically.",
+        "source_family": "office-business",
+        "field_axes": ["input_or_precondition", "workflow_or_procedure", "output_artifact"],
+        "gold_rationale": "The public contract review skill analyzes existing contracts for risk and recommendations.",
+        "acceptable_alternatives": ["contract-risk-reviewer"],
+    },
+    {
+        "id": "public_gold_p28_suspicious_email",
+        "gold_skill": "public-office-suspicious-email",
+        "closest_alternatives": [
+            "public-office-email-classifier",
+            "public-office-email-drafter",
+            "public-office-gmail-workflows",
+            "public-office-security-monitoring",
+        ],
+        "prompt": "Analyze this suspicious email for phishing indicators, spoofed sender details, malicious links, urgency tactics, and recommended safety response. Do not merely classify or draft a reply.",
+        "source_family": "office-business",
+        "field_axes": ["success_criterion", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public suspicious-email skill is specifically about phishing and scam analysis.",
+    },
+    {
+        "id": "public_gold_p29_ai_slides",
+        "gold_skill": "public-office-ai-slides",
+        "closest_alternatives": [
+            "public-office-md-slides",
+            "public-office-html-slides",
+            "public-office-dev-slides",
+            "public-anthropic-theme-factory",
+        ],
+        "prompt": "Generate a complete presentation from the topic brief, including outline, slide content, and polished deck structure. Do not only convert existing Markdown or apply a visual theme.",
+        "source_family": "office-artifact",
+        "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public AI slides skill creates full presentations from an input brief.",
+    },
+    {
+        "id": "public_gold_p30_figma_implement_design",
+        "gold_skill": "public-openai-figma-implement-design",
+        "closest_alternatives": [
+            "public-openai-figma-generate-design",
+            "public-openai-figma-generate-library",
+            "public-openai-figma-code-connect-components",
+            "public-openai-figma-use",
+        ],
+        "prompt": "Given a Figma URL with a specific node id, fetch the design context and screenshot, download required assets, and implement the existing frame as production UI code inside the repository with 1:1 visual parity. Do not create or update a Figma screen, generate a new design from a prompt, create a component library, or only fetch context.",
+        "source_family": "figma",
+        "field_axes": ["input_or_precondition", "output_artifact", "boundary_signal"],
+        "gold_rationale": "The public Figma implement-design skill converts an existing Figma design into code.",
+    },
+    {
+        "id": "public_gold_p31_skill_creator",
+        "gold_skill": "public-skill-creator",
+        "closest_alternatives": [
+            "public-skill-installer",
+            "public-openai-migrate-to-codex",
+            "public-oh-my-agentic-skills",
+            "skill-field-auditor",
+        ],
+        "prompt": "Create a new Codex skill for a repeated workflow, including the SKILL.md structure, trigger description, and optional resources/scripts guidance. Do not install an existing skill or migrate settings.",
+        "source_family": "skill-lifecycle",
+        "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+        "gold_rationale": "The public skill creator skill is for authoring or updating skills.",
+        "acceptable_alternatives": ["skill-creator"],
+    },
+    {
+        "id": "public_gold_p32_security_threat_model",
+        "gold_skill": "public-security-threat-model",
+        "closest_alternatives": [
+            "public-openai-security-best-practices",
+            "public-openai-security-ownership-map",
+            "public-swebench-security-review",
+            "security-threat-modeler",
+        ],
+        "prompt": "Given the repository and architecture notes, identify sensitive data and functions, crossings between users/services, likely misuse scenarios, and concrete mitigations. Do not just list generic best practices or ownership files.",
+        "source_family": "security",
+        "field_axes": ["input_or_precondition", "workflow_or_procedure", "output_artifact"],
+        "gold_rationale": "The public security threat model skill is repository-grounded threat modeling over assets and trust boundaries.",
+        "acceptable_alternatives": ["security-threat-modeler"],
+    },
+]
+
+CASES.extend(
+    [
+        {
+            "id": "public_gold_p33_openai_docs",
+            "gold_skill": "public-openai-openai-docs",
+            "closest_alternatives": [
+                "public-openai-chatgpt-apps",
+                "public-openai-cli-creator",
+                "public-anthropic-claude-api",
+                "public-huggingface-huggingface-tool-builder",
+            ],
+            "prompt": "Look up the current OpenAI API documentation for model parameters, tool-calling behavior, and migration notes, then summarize the relevant official guidance with links. Do not build a ChatGPT App, generate a CLI, or use Anthropic API docs.",
+            "source_family": "openai-api",
+            "field_axes": ["dependency_or_tool", "input_or_precondition", "boundary_signal"],
+            "gold_rationale": "The OpenAI docs skill is the public skill for retrieving and using official OpenAI product/API documentation.",
+        },
+        {
+            "id": "public_gold_p34_playwright",
+            "gold_skill": "public-openai-playwright",
+            "closest_alternatives": [
+                "public-playwright-interactive",
+                "public-addy-agent-browser-testing-with-devtools",
+                "public-anthropic-webapp-testing",
+                "playwright-flow-debugger",
+            ],
+            "prompt": "Write and run Playwright browser tests for the local checkout, including navigation, form interactions, assertions, and screenshots. I do not need Chrome DevTools MCP inspection or a manual interactive browser session.",
+            "source_family": "browser-qa",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "output_artifact"],
+            "gold_rationale": "The public Playwright skill targets automated browser testing with Playwright.",
+            "acceptable_alternatives": ["playwright-flow-debugger"],
+        },
+        {
+            "id": "public_gold_p35_screenshot",
+            "gold_skill": "public-openai-screenshot",
+            "closest_alternatives": [
+                "public-openai-playwright",
+                "public-addy-agent-browser-testing-with-devtools",
+                "public-office-browser-automation",
+                "public-anthropic-webapp-testing",
+            ],
+            "prompt": "Capture a screenshot of the specified local page and return the image artifact for visual inspection. Do not write a full Playwright test suite or perform console/network debugging.",
+            "source_family": "browser-qa",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The screenshot skill is specifically for producing screenshot artifacts rather than broader browser QA.",
+        },
+        {
+            "id": "public_gold_p36_sentry",
+            "gold_skill": "public-openai-sentry",
+            "closest_alternatives": [
+                "public-oh-my-monitoring-observability",
+                "public-swebench-python-observability",
+                "metrics-root-cause-diagnoser",
+                "distributed-trace-investigator",
+            ],
+            "prompt": "Use Sentry issue data to inspect the event, stack trace, release, affected users, and likely regression source. Do not build a generic observability dashboard or inspect distributed traces.",
+            "source_family": "observability",
+            "field_axes": ["dependency_or_tool", "input_or_precondition", "workflow_or_procedure"],
+            "gold_rationale": "The public Sentry skill is tied to Sentry issue investigation and error event context.",
+        },
+        {
+            "id": "public_gold_p37_transcribe",
+            "gold_skill": "public-openai-transcribe",
+            "closest_alternatives": [
+                "public-openai-speech",
+                "public-office-transcription-automation",
+                "public-office-podcast-automation",
+                "public-office-meeting-notes",
+            ],
+            "prompt": "Transcribe the recorded interview audio into timestamped text with speaker turns where possible. Do not synthesize speech, produce a podcast workflow, or summarize meeting actions.",
+            "source_family": "audio",
+            "field_axes": ["input_or_precondition", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The public transcribe skill handles audio-to-text transcription.",
+        },
+        {
+            "id": "public_gold_p38_speech",
+            "gold_skill": "public-openai-speech",
+            "closest_alternatives": [
+                "public-openai-transcribe",
+                "public-office-transcription-automation",
+                "public-office-podcast-automation",
+                "public-anthropic-slack-gif-creator",
+            ],
+            "prompt": "Generate spoken audio from the supplied narration script using a text-to-speech workflow. Do not transcribe an existing recording or automate podcast publishing.",
+            "source_family": "audio",
+            "field_axes": ["input_or_precondition", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The public speech skill targets text-to-speech generation rather than transcription.",
+        },
+        {
+            "id": "public_gold_p39_jupyter_notebook",
+            "gold_skill": "public-openai-jupyter-notebook",
+            "closest_alternatives": [
+                "public-office-data-analysis",
+                "public-huggingface-datasets",
+                "public-swebench-python-configuration",
+                "public-office-report-generator",
+            ],
+            "prompt": "Create or update a `.ipynb` Jupyter notebook that loads the CSV, runs Python exploratory analysis, and leaves executable cells with plots and explanations. Do not only write a static report, inspect a Hugging Face dataset, or produce an Excel workbook.",
+            "source_family": "data-analysis",
+            "field_axes": ["output_artifact", "dependency_or_tool", "workflow_or_procedure"],
+            "gold_rationale": "The public Jupyter notebook skill is specifically for notebook-based analysis artifacts.",
+        },
+        {
+            "id": "public_gold_p40_linear",
+            "gold_skill": "public-openai-linear",
+            "closest_alternatives": [
+                "public-lbussell-creating-issues",
+                "public-lbussell-triaging-issues",
+                "public-office-jira-automation",
+                "public-office-asana-automation",
+            ],
+            "prompt": "Create and update Linear issues for the implementation plan, including team/project fields, labels, priorities, and links back to the spec. Do not create GitHub, Jira, or Asana issues.",
+            "source_family": "issue-tracking",
+            "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The public Linear skill is platform-specific to Linear issue workflows.",
+        },
+        {
+            "id": "public_gold_p41_yeet",
+            "gold_skill": "public-openai-yeet",
+            "closest_alternatives": [
+                "public-lbussell-creating-pull-requests",
+                "public-openai-gh-address-comments",
+                "public-openai-gh-fix-ci",
+                "public-addy-agent-git-workflow-and-versioning",
+            ],
+            "prompt": "Package the current local changes, create an intentional commit, push the branch, and open a draft GitHub pull request. Do not address existing review comments or debug CI logs.",
+            "source_family": "github-workflow",
+            "field_axes": ["workflow_or_procedure", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The public yeet skill is the push-and-draft-PR publishing workflow.",
+            "acceptable_alternatives": [
+                "public-lbussell-creating-pull-requests",
+                "public-addy-agent-git-workflow-and-versioning",
+            ],
+        },
+        {
+            "id": "public_gold_p42_migrate_to_codex",
+            "gold_skill": "public-openai-migrate-to-codex",
+            "closest_alternatives": [
+                "public-skill-creator",
+                "public-skill-installer",
+                "public-addy-agent-context-engineering",
+                "public-oh-my-agentic-skills",
+            ],
+            "prompt": "Migrate an existing agent setup into Codex conventions, including local instructions, skills, and environment notes. Do not author a brand-new skill or install an existing one.",
+            "source_family": "codex-migration",
+            "field_axes": ["workflow_or_procedure", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The public migrate-to-Codex skill is for moving an existing workflow into Codex-specific conventions.",
+        },
+        {
+            "id": "public_gold_p43_notion_knowledge_capture",
+            "gold_skill": "public-openai-notion-knowledge-capture",
+            "closest_alternatives": [
+                "public-openai-notion-meeting-intelligence",
+                "public-openai-notion-research-documentation",
+                "public-office-notion-automation",
+                "notion-research-database-builder",
+            ],
+            "prompt": "Capture mixed project notes, decisions, links, and loose observations into a durable Notion knowledge base with structured pages, tags, summaries, and backlinks. Do not extract meeting action items or build a research database only.",
+            "source_family": "notion-workflow",
+            "field_axes": ["dependency_or_tool", "output_artifact", "workflow_or_procedure"],
+            "gold_rationale": "The public Notion knowledge capture skill targets durable Notion knowledge-base capture.",
+            "acceptable_alternatives": [
+                "notion-research-database-builder",
+                "public-openai-notion-research-documentation",
+            ],
+        },
+        {
+            "id": "public_gold_p44_notion_meeting_intelligence",
+            "gold_skill": "public-openai-notion-meeting-intelligence",
+            "closest_alternatives": [
+                "public-openai-notion-knowledge-capture",
+                "public-office-meeting-notes",
+                "meeting-notes-action-extractor",
+                "public-office-notion-automation",
+            ],
+            "prompt": "Turn the meeting transcript into Notion-ready decisions, action items, owners, due dates, and follow-up pages linked to the meeting record. Do not create a general knowledge base or research documentation page.",
+            "source_family": "notion-workflow",
+            "field_axes": ["input_or_precondition", "output_artifact", "workflow_or_procedure"],
+            "gold_rationale": "The public Notion meeting intelligence skill is specifically for meeting-derived Notion artifacts.",
+            "acceptable_alternatives": [
+                "public-office-meeting-notes",
+                "meeting-notes-action-extractor",
+                "public-openai-notion-knowledge-capture",
+            ],
+        },
+        {
+            "id": "public_gold_p45_notion_spec_to_implementation",
+            "gold_skill": "public-openai-notion-spec-to-implementation",
+            "closest_alternatives": [
+                "public-openai-notion-knowledge-capture",
+                "public-addy-agent-spec-driven-development",
+                "public-lbussell-creating-issues",
+                "public-openai-linear",
+            ],
+            "prompt": "Convert a Notion product spec into an implementation plan with scoped engineering tasks, dependencies, acceptance criteria, and links back to the source spec. Do not just document research or create generic issues.",
+            "source_family": "notion-workflow",
+            "field_axes": ["input_or_precondition", "output_artifact", "workflow_or_procedure"],
+            "gold_rationale": "The public Notion spec-to-implementation skill bridges Notion specs to implementation plans.",
+        },
+        {
+            "id": "public_gold_p46_figma_code_connect",
+            "gold_skill": "public-openai-figma-code-connect-components",
+            "closest_alternatives": [
+                "public-openai-figma-implement-design",
+                "public-openai-figma-generate-library",
+                "public-openai-figma-generate-design",
+                "public-openai-figma-use",
+            ],
+            "prompt": "Map existing Figma components to code components using Code Connect so design components are linked to implementation examples. Do not implement a single Figma screen or generate a new component library.",
+            "source_family": "figma",
+            "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The Figma Code Connect skill is specifically about linking design components to code components.",
+        },
+        {
+            "id": "public_gold_p47_figma_generate_library",
+            "gold_skill": "public-openai-figma-generate-library",
+            "closest_alternatives": [
+                "public-openai-figma-code-connect-components",
+                "public-openai-figma-generate-design",
+                "public-openai-figma-implement-design",
+                "public-openai-figma-create-design-system-rules",
+            ],
+            "prompt": "Generate a reusable component library inside Figma with variants, variables, tokens, and theming foundations from the design-system brief. Do not implement an existing frame in application code, only write design-system rules, or only create Code Connect mappings.",
+            "source_family": "figma",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Figma generate-library skill creates reusable design library assets inside Figma.",
+            "acceptable_alternatives": ["public-openai-figma-generate-design"],
+        },
+        {
+            "id": "public_gold_p48_figma_design_system_rules",
+            "gold_skill": "public-openai-figma-create-design-system-rules",
+            "closest_alternatives": [
+                "public-openai-figma-generate-library",
+                "public-openai-figma-generate-design",
+                "public-anthropic-brand-guidelines",
+                "public-anthropic-theme-factory",
+            ],
+            "prompt": "Create design-system rules for Figma usage, naming, layout, component variants, and token conventions. Do not generate the actual screen or convert Figma to code.",
+            "source_family": "figma",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The design-system-rules skill is for codifying Figma design-system rules rather than generating assets.",
+        },
+        {
+            "id": "public_gold_p49_web_seo",
+            "gold_skill": "public-addy-web-seo",
+            "closest_alternatives": [
+                "public-addy-web-accessibility",
+                "public-addy-web-core-web-vitals",
+                "seo-metadata-checker",
+                "public-office-seo-optimizer",
+                "public-addy-web-best-practices",
+            ],
+            "prompt": "Audit the landing page for technical SEO: title, meta description, canonical, structured data, headings, crawlability, and search snippets. Do not focus on accessibility or Core Web Vitals.",
+            "source_family": "web-quality",
+            "field_axes": ["success_criterion", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The public web SEO skill is for search optimization rather than accessibility or performance metrics.",
+            "acceptable_alternatives": ["public-office-seo-optimizer", "seo-metadata-checker"],
+        },
+        {
+            "id": "public_gold_p50_web_performance",
+            "gold_skill": "public-addy-web-performance",
+            "closest_alternatives": [
+                "public-addy-web-core-web-vitals",
+                "public-addy-web-best-practices",
+                "public-addy-agent-performance-optimization",
+                "public-addy-web-web-quality-audit",
+            ],
+            "prompt": "Profile the web app's overall loading and runtime performance, including bundle size, network waterfalls, render blocking, and expensive client code. Do not limit the review only to LCP, INP, and CLS.",
+            "source_family": "web-quality",
+            "field_axes": ["workflow_or_procedure", "success_criterion", "boundary_signal"],
+            "gold_rationale": "The public web performance skill is broader than Core Web Vitals and focuses on practical web performance diagnosis.",
+        },
+        {
+            "id": "public_gold_p51_web_quality_audit",
+            "gold_skill": "public-addy-web-web-quality-audit",
+            "closest_alternatives": [
+                "public-addy-web-accessibility",
+                "public-addy-web-core-web-vitals",
+                "public-addy-web-seo",
+                "public-addy-web-best-practices",
+            ],
+            "prompt": "Run a broad web quality audit that covers accessibility, performance, SEO, best practices, and user-facing quality risks in one prioritized report. Do not narrow it to only WCAG or only Core Web Vitals.",
+            "source_family": "web-quality",
+            "field_axes": ["workflow_or_procedure", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The public web quality audit skill is the broad multi-axis web review rather than a single-axis specialist.",
+        },
+        {
+            "id": "public_gold_p52_api_interface_design",
+            "gold_skill": "public-addy-agent-api-and-interface-design",
+            "closest_alternatives": [
+                "public-oh-my-api-design",
+                "public-api-design-principles",
+                "openapi-contract-reviewer",
+                "public-openai-cli-creator",
+                "external-api-integration-planner",
+            ],
+            "prompt": "Design stable REST module boundaries and typed request/response contracts between the frontend and backend before implementation. Do not review an existing OpenAPI contract or build a CLI.",
+            "source_family": "software-design",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Addy API/interface skill targets stable interface design and module boundaries.",
+            "acceptable_alternatives": ["public-oh-my-api-design", "public-api-design-principles"],
+        },
+        {
+            "id": "public_gold_p53_context_engineering",
+            "gold_skill": "public-addy-agent-context-engineering",
+            "closest_alternatives": [
+                "public-addy-agent-source-driven-development",
+                "public-addy-agent-planning-and-task-breakdown",
+                "public-oh-my-codebase-search",
+                "public-openai-migrate-to-codex",
+            ],
+            "prompt": "Prepare focused agent context for a new coding session by selecting relevant files, rules, project constraints, and task state without flooding the model. Do not search the codebase for one answer or migrate the project to Codex.",
+            "source_family": "agent-workflow",
+            "field_axes": ["workflow_or_procedure", "input_or_precondition", "boundary_signal"],
+            "gold_rationale": "The context-engineering skill is about shaping agent context and rules for better task execution.",
+        },
+        {
+            "id": "public_gold_p54_deprecation_migration",
+            "gold_skill": "public-addy-agent-deprecation-and-migration",
+            "closest_alternatives": [
+                "public-mattpocock-migrate-to-shoehorn",
+                "public-addy-agent-incremental-implementation",
+                "public-addy-agent-api-and-interface-design",
+                "database-migration-risk-assessor",
+            ],
+            "prompt": "Plan how to sunset the legacy API while migrating callers to the new implementation, including compatibility, rollout, communication, and removal criteria. Do not perform a database migration risk review.",
+            "source_family": "software-design",
+            "field_axes": ["workflow_or_procedure", "output_artifact", "success_criterion"],
+            "gold_rationale": "The deprecation/migration skill handles retiring and migrating systems or APIs.",
+        },
+        {
+            "id": "public_gold_p55_documentation_adrs",
+            "gold_skill": "public-addy-agent-documentation-and-adrs",
+            "closest_alternatives": [
+                "public-oh-my-api-documentation",
+                "code-documentation-writer",
+                "public-openai-notion-research-documentation",
+                "public-office-report-generator",
+            ],
+            "prompt": "Write an Architecture Decision Record for the caching approach, including context, considered options, decision, consequences, and follow-up documentation. Do not write API docs or a general report.",
+            "source_family": "software-design",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The documentation-and-ADRs skill is specifically for ADR-style software decision documentation.",
+        },
+        {
+            "id": "public_gold_p56_spec_driven_development",
+            "gold_skill": "public-addy-agent-spec-driven-development",
+            "closest_alternatives": [
+                "public-addy-agent-test-driven-development",
+                "public-addy-agent-incremental-implementation",
+                "public-openai-notion-spec-to-implementation",
+                "public-mattpocock-to-prd",
+            ],
+            "prompt": "Turn the feature idea into a precise implementation spec with requirements, acceptance criteria, edge cases, and sequencing before coding. Do not start with tests or convert a Notion spec.",
+            "source_family": "agent-workflow",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The spec-driven-development skill is about writing a specification before implementation.",
+        },
+        {
+            "id": "public_gold_p57_test_driven_development",
+            "gold_skill": "public-addy-agent-test-driven-development",
+            "closest_alternatives": [
+                "public-mattpocock-tdd",
+                "public-swebench-tdd-workflow",
+                "public-addy-agent-spec-driven-development",
+                "public-oh-my-testing-strategies",
+            ],
+            "prompt": "Implement the bug fix using a red-green-refactor loop: write the failing test first, make it pass, then clean up. Do not only draft a specification or general testing strategy.",
+            "source_family": "agent-workflow",
+            "field_axes": ["workflow_or_procedure", "success_criterion", "boundary_signal"],
+            "gold_rationale": "The test-driven-development skill is centered on the TDD red-green-refactor workflow.",
+            "acceptable_alternatives": ["public-mattpocock-tdd", "public-swebench-tdd-workflow"],
+        },
+        {
+            "id": "public_gold_p58_source_driven_development",
+            "gold_skill": "public-addy-agent-source-driven-development",
+            "closest_alternatives": [
+                "public-addy-agent-context-engineering",
+                "public-oh-my-codebase-search",
+                "public-addy-agent-incremental-implementation",
+                "public-mattpocock-diagnose",
+            ],
+            "prompt": "Before changing code, inspect the existing source paths, local conventions, helper APIs, and tests so the implementation follows the codebase. Do not merely prepare generic context or search for one symbol.",
+            "source_family": "agent-workflow",
+            "field_axes": ["workflow_or_procedure", "input_or_precondition", "success_criterion"],
+            "gold_rationale": "The source-driven-development skill emphasizes grounding implementation in the actual source code.",
+        },
+        {
+            "id": "public_gold_p59_anthropic_claude_api",
+            "gold_skill": "public-anthropic-claude-api",
+            "closest_alternatives": [
+                "public-openai-openai-docs",
+                "public-openai-cli-creator",
+                "public-anthropic-mcp-builder",
+                "public-huggingface-hf-cli",
+            ],
+            "prompt": "Use Anthropic Claude API guidance to design a Messages API call with tools, model parameters, and error-handling notes. Do not use OpenAI docs, Hugging Face CLI guidance, or build an MCP server.",
+            "source_family": "api-docs",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Anthropic Claude API skill is specific to Claude API usage and documentation.",
+        },
+        {
+            "id": "public_gold_p60_doc_coauthoring",
+            "gold_skill": "public-anthropic-doc-coauthoring",
+            "closest_alternatives": [
+                "public-office-report-generator",
+                "document-rewriter",
+                "public-mattpocock-edit-article",
+                "public-office-content-writer",
+            ],
+            "prompt": "Co-author the strategy document by preserving the existing argument, improving structure, adding missing sections, and keeping revision notes. Do not only rewrite tone or generate a report from scratch.",
+            "source_family": "writing",
+            "field_axes": ["workflow_or_procedure", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The doc-coauthoring skill is for collaborative document development rather than simple rewriting.",
+            "acceptable_alternatives": ["document-rewriter", "public-mattpocock-edit-article"],
+        },
+        {
+            "id": "public_gold_p61_canvas_design",
+            "gold_skill": "public-anthropic-canvas-design",
+            "closest_alternatives": [
+                "public-anthropic-frontend-design",
+                "public-anthropic-web-artifacts-builder",
+                "public-anthropic-theme-factory",
+                "public-openai-figma-generate-design",
+                "public-office-diagram-creator",
+                "public-office-infographic",
+            ],
+            "prompt": "Create a canvas-based visual composition for an explainer, with layout, typography, and interactive visual elements. Do not build a frontend web app or Figma design file.",
+            "source_family": "visual-design",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The canvas-design skill targets canvas visual compositions.",
+        },
+        {
+            "id": "public_gold_p62_theme_factory",
+            "gold_skill": "public-anthropic-theme-factory",
+            "closest_alternatives": [
+                "public-openai-figma-create-design-system-rules",
+                "public-office-brand-guidelines",
+                "public-oh-my-design-system",
+                "public-anthropic-canvas-design",
+                "public-anthropic-frontend-design",
+                "public-mattpocock-prototype",
+            ],
+            "prompt": "Generate a reusable visual theme with palette, type scale, spacing, and component styling tokens for a product prototype. Do not write full brand guidelines or implement the frontend.",
+            "source_family": "visual-design",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The theme-factory skill produces reusable visual themes rather than full brand or frontend artifacts.",
+        },
+        {
+            "id": "public_gold_p63_hf_zerogpu",
+            "gold_skill": "public-huggingface-huggingface-zerogpu",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-gradio",
+                "public-huggingface-huggingface-local-models",
+                "public-huggingface-hf-cli",
+                "public-huggingface-huggingface-tool-builder",
+                "gradio-demo-builder",
+                "public-huggingface-huggingface-llm-trainer",
+            ],
+            "prompt": "Prepare the Hugging Face Space to run on ZeroGPU, including decorators, GPU-duration constraints, queue behavior, and deployment caveats. Do not just build a Gradio UI or choose a local model.",
+            "source_family": "huggingface",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The ZeroGPU skill is specifically about Hugging Face ZeroGPU deployment constraints.",
+        },
+        {
+            "id": "public_gold_p64_hf_llm_trainer",
+            "gold_skill": "public-huggingface-huggingface-llm-trainer",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-vision-trainer",
+                "public-huggingface-huggingface-community-evals",
+                "public-huggingface-huggingface-local-models",
+                "public-swebench-llm-evaluation",
+            ],
+            "prompt": "Fine-tune a causal language model with Hugging Face training code, tokenizer setup, instruction dataset formatting, evaluation, and push-to-hub notes. Do not train a vision model, train a SentenceTransformer embedding model, or only evaluate an LLM.",
+            "source_family": "huggingface",
+            "field_axes": ["input_or_precondition", "workflow_or_procedure", "dependency_or_tool"],
+            "gold_rationale": "The HF LLM trainer skill targets LLM fine-tuning workflows.",
+        },
+        {
+            "id": "public_gold_p65_hf_local_models",
+            "gold_skill": "public-huggingface-huggingface-local-models",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-gradio",
+                "public-huggingface-huggingface-zerogpu",
+                "public-huggingface-transformers-js",
+                "implicit-hf-local-model-chooser",
+                "public-huggingface-huggingface-llm-trainer",
+                "public-huggingface-huggingface-community-evals",
+            ],
+            "prompt": "Choose and run a local Hugging Face model for laptop inference with GGUF or llama.cpp-style runtime choices, quantization, memory limits, and local serving options. Do not train a model, deploy a Space, or build browser-side Transformers.js inference.",
+            "source_family": "huggingface",
+            "field_axes": ["dependency_or_tool", "input_or_precondition", "boundary_signal"],
+            "gold_rationale": "The local-models skill is about local inference/model selection rather than training or deployment.",
+            "acceptable_alternatives": ["implicit-hf-local-model-chooser", "hf-local-model-selector"],
+        },
+        {
+            "id": "public_gold_p66_hf_trackio",
+            "gold_skill": "public-huggingface-huggingface-trackio",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-community-evals",
+                "public-swebench-llm-evaluation",
+                "public-huggingface-huggingface-llm-trainer",
+                "public-office-saas-metrics",
+                "dashboard-ops-monitoring-plan-builder",
+                "metrics-overview",
+            ],
+            "prompt": "Instrument the training run with Trackio experiment tracking, logging metrics, configs, artifacts, and run comparison. Do not design a community evaluation or SaaS metrics dashboard.",
+            "source_family": "huggingface",
+            "field_axes": ["dependency_or_tool", "output_artifact", "workflow_or_procedure"],
+            "gold_rationale": "The Trackio skill is specific to experiment tracking and logged training runs.",
+        },
+        {
+            "id": "public_gold_p67_hf_papers",
+            "gold_skill": "public-huggingface-huggingface-papers",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-paper-publisher",
+                "public-office-academic-search",
+                "public-office-deep-research",
+                "public-oh-my-research-paper-writing",
+            ],
+            "prompt": "Find relevant Hugging Face paper entries for this model topic, compare abstracts and linked artifacts, and summarize which papers are most relevant. Do not publish a paper page or write a manuscript.",
+            "source_family": "huggingface",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The HF papers skill is for searching and analyzing Hugging Face paper entries.",
+        },
+        {
+            "id": "public_gold_p68_hf_paper_publisher",
+            "gold_skill": "public-huggingface-huggingface-paper-publisher",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-papers",
+                "public-oh-my-research-paper-writing",
+                "public-office-academic-search",
+                "public-huggingface-hf-cli",
+            ],
+            "prompt": "Prepare and publish the model paper artifacts to Hugging Face, including metadata, model links, and paper page details. Do not merely search existing papers or write the academic manuscript.",
+            "source_family": "huggingface",
+            "field_axes": ["output_artifact", "dependency_or_tool", "boundary_signal"],
+            "gold_rationale": "The HF paper publisher skill is about publishing paper artifacts/pages on Hugging Face.",
+            "acceptable_alternatives": ["public-huggingface-huggingface-papers"],
+        },
+        {
+            "id": "public_gold_p69_transformers_js",
+            "gold_skill": "public-huggingface-transformers-js",
+            "closest_alternatives": [
+                "public-huggingface-huggingface-gradio",
+                "public-huggingface-huggingface-local-models",
+                "public-anthropic-web-artifacts-builder",
+                "public-office-browser-automation",
+            ],
+            "prompt": "Build a browser-side ML demo using Transformers.js so inference runs in the client, with model loading and UI wiring. Do not build a Python Gradio demo or local server inference script.",
+            "source_family": "huggingface",
+            "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The Transformers.js skill targets browser-side JavaScript inference.",
+        },
+        {
+            "id": "public_gold_p70_obsidian_json_canvas",
+            "gold_skill": "public-obsidian-json-canvas",
+            "closest_alternatives": [
+                "public-obsidian-obsidian-markdown",
+                "public-obsidian-obsidian-bases",
+                "public-obsidian-obsidian-cli",
+                "public-mattpocock-obsidian-vault",
+            ],
+            "prompt": "Create an Obsidian JSON Canvas map with nodes and edges representing the research argument. Do not just write Markdown notes, a Bases view, or CLI commands.",
+            "source_family": "obsidian",
+            "field_axes": ["output_artifact", "dependency_or_tool", "boundary_signal"],
+            "gold_rationale": "The JSON Canvas skill is specific to Obsidian canvas graph artifacts.",
+        },
+        {
+            "id": "public_gold_p71_obsidian_bases",
+            "gold_skill": "public-obsidian-obsidian-bases",
+            "closest_alternatives": [
+                "public-obsidian-json-canvas",
+                "public-obsidian-obsidian-markdown",
+                "public-oh-my-obsidian-plugin",
+                "public-office-notion-automation",
+            ],
+            "prompt": "Build an Obsidian Bases view for the vault that filters notes by metadata fields, status, and tags. Do not create a JSON Canvas graph or run generic CLI commands.",
+            "source_family": "obsidian",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Obsidian Bases skill targets Bases views over structured note metadata.",
+        },
+        {
+            "id": "public_gold_p72_obsidian_cli",
+            "gold_skill": "public-obsidian-obsidian-cli",
+            "closest_alternatives": [
+                "public-obsidian-json-canvas",
+                "public-obsidian-obsidian-bases",
+                "public-oh-my-obsidian-cli",
+                "public-mattpocock-obsidian-vault",
+            ],
+            "prompt": "Use the Obsidian CLI to create, update, and query vault notes from the terminal with command-line operations. Do not hand-write a Markdown note, maintain a general vault workflow, or create a canvas file.",
+            "source_family": "obsidian",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Obsidian CLI skill is specifically about command-line vault operations.",
+            "acceptable_alternatives": ["public-oh-my-obsidian-cli", "public-mattpocock-obsidian-vault"],
+        },
+        {
+            "id": "public_gold_p73_excel_automation",
+            "gold_skill": "public-office-excel-automation",
+            "closest_alternatives": [
+                "public-office-xlsx-manipulation",
+                "public-office-sheets-automation",
+                "xlsx-formula-model-builder",
+                "public-office-data-analysis",
+            ],
+            "prompt": "Automate an Excel workbook by adding formulas, formatting, pivot-style summaries, and saved workbook output. Do not use Google Sheets or only analyze the data.",
+            "source_family": "office-automation",
+            "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The Excel automation skill targets Excel workbook automation rather than generic analysis or Google Sheets.",
+            "acceptable_alternatives": ["public-office-xlsx-manipulation", "xlsx-formula-model-builder"],
+        },
+        {
+            "id": "public_gold_p74_sheets_automation",
+            "gold_skill": "public-office-sheets-automation",
+            "closest_alternatives": [
+                "public-office-excel-automation",
+                "public-office-xlsx-manipulation",
+                "public-office-data-analysis",
+                "public-office-data-pipeline",
+            ],
+            "prompt": "Automate a Google Sheets workbook with formulas, tabs, formatting, and update steps using the online Sheets workflow. Do not produce a local Excel or XLSX file.",
+            "source_family": "office-automation",
+            "field_axes": ["dependency_or_tool", "output_artifact", "boundary_signal"],
+            "gold_rationale": "The Sheets automation skill is platform-specific to Google Sheets.",
+            "acceptable_alternatives": ["public-office-excel-automation", "public-office-xlsx-manipulation"],
+        },
+        {
+            "id": "public_gold_p75_airtable_automation",
+            "gold_skill": "public-office-airtable-automation",
+            "closest_alternatives": [
+                "airtable-workflow-automator",
+                "public-office-notion-automation",
+                "public-office-crm-automation",
+                "public-office-sheets-automation",
+            ],
+            "prompt": "Create an Airtable automation that routes new form submissions, updates linked records, and sends follow-up notifications. Do not build a Notion or CRM workflow.",
+            "source_family": "office-automation",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "output_artifact"],
+            "gold_rationale": "The Airtable automation skill is specifically for Airtable bases and automations.",
+            "acceptable_alternatives": ["airtable-workflow-automator"],
+        },
+        {
+            "id": "public_gold_p76_invoice_automation",
+            "gold_skill": "public-office-invoice-automation",
+            "closest_alternatives": [
+                "public-office-invoice-generator",
+                "public-office-invoice-organizer",
+                "public-office-quickbooks-automation",
+                "public-office-expense-report",
+            ],
+            "prompt": "Automate the accounts-payable invoice workflow from incoming invoice files through extraction, validation, approval routing, and accounting-system update. Do not merely generate a single outbound invoice template.",
+            "source_family": "office-business",
+            "field_axes": ["workflow_or_procedure", "input_or_precondition", "boundary_signal"],
+            "gold_rationale": "The invoice automation skill handles end-to-end invoice processing workflow.",
+            "acceptable_alternatives": ["public-office-invoice-generator"],
+        },
+        {
+            "id": "public_gold_p77_lead_routing",
+            "gold_skill": "public-office-lead-routing",
+            "closest_alternatives": [
+                "public-office-lead-qualification",
+                "public-office-lead-research",
+                "public-office-crm-automation",
+                "public-office-pipedrive-automation",
+            ],
+            "prompt": "Route inbound leads to the right sales owner based on region, company size, product interest, and priority rules. Do not only research or qualify the lead.",
+            "source_family": "sales-automation",
+            "field_axes": ["workflow_or_procedure", "success_criterion", "boundary_signal"],
+            "gold_rationale": "The lead-routing skill is about assignment/routing rules rather than research or qualification.",
+        },
+        {
+            "id": "public_gold_p78_saas_metrics",
+            "gold_skill": "public-office-saas-metrics",
+            "closest_alternatives": [
+                "public-office-dcf-valuation",
+                "public-office-financial-modeling",
+                "public-office-stock-analysis",
+                "public-office-data-analysis",
+            ],
+            "prompt": "Calculate SaaS metrics such as MRR, ARR, churn, expansion, retention cohorts, CAC payback, and LTV from the subscription export. Do not build a DCF valuation or stock analysis report.",
+            "source_family": "finance-analytics",
+            "field_axes": ["input_or_precondition", "output_artifact", "success_criterion"],
+            "gold_rationale": "The SaaS metrics skill is specifically about subscription-business metrics.",
+        },
+        {
+            "id": "public_gold_p79_stock_analysis",
+            "gold_skill": "public-office-stock-analysis",
+            "closest_alternatives": [
+                "public-office-dcf-valuation",
+                "public-office-investment-memo",
+                "public-office-crypto-report",
+                "public-office-company-research",
+            ],
+            "prompt": "Analyze a listed company's stock using recent financials, valuation multiples, catalysts, risks, and investment view. Do not write a crypto report or only build a DCF spreadsheet.",
+            "source_family": "finance-analytics",
+            "field_axes": ["input_or_precondition", "output_artifact", "workflow_or_procedure"],
+            "gold_rationale": "The stock-analysis skill targets public equity analysis rather than generic company research.",
+        },
+        {
+            "id": "public_gold_p80_dcf_valuation",
+            "gold_skill": "public-office-dcf-valuation",
+            "closest_alternatives": [
+                "public-office-stock-analysis",
+                "public-office-financial-modeling",
+                "public-office-investment-memo",
+                "public-swebench-creating-financial-models",
+            ],
+            "prompt": "Build a DCF valuation with revenue forecasts, margin assumptions, WACC, terminal value, sensitivity table, and implied share value. Do not only write a stock memo.",
+            "source_family": "finance-analytics",
+            "field_axes": ["output_artifact", "workflow_or_procedure", "success_criterion"],
+            "gold_rationale": "The DCF valuation skill is specifically for discounted-cash-flow modelling.",
+        },
+        {
+            "id": "public_gold_p81_shopify_automation",
+            "gold_skill": "public-office-shopify-automation",
+            "closest_alternatives": [
+                "public-office-woocommerce-automation",
+                "public-office-stripe-payments",
+                "public-office-amazon-seller",
+                "public-office-invoice-automation",
+            ],
+            "prompt": "Automate Shopify Admin product and order workflows for a Shopify store, including product updates, fulfillment status changes, and customer notifications through Shopify-specific operations. Do not build WooCommerce, Amazon seller, or Stripe payment automation.",
+            "source_family": "commerce-automation",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Shopify automation skill is platform-specific to Shopify commerce workflows.",
+        },
+        {
+            "id": "public_gold_p82_zendesk_automation",
+            "gold_skill": "public-office-zendesk-automation",
+            "closest_alternatives": [
+                "public-office-intercom-automation",
+                "public-office-customer-success",
+                "public-office-email-classifier",
+                "public-office-slack-workflows",
+                "support-ticket-triager",
+                "support-ops-monitoring-plan-builder",
+            ],
+            "prompt": "Automate Zendesk ticket triage, tags, macros, assignments, and escalation rules for support requests. Do not build Intercom, Slack, or email classification automation.",
+            "source_family": "support-automation",
+            "field_axes": ["dependency_or_tool", "workflow_or_procedure", "boundary_signal"],
+            "gold_rationale": "The Zendesk automation skill is platform-specific to Zendesk support-ticket workflows.",
+        },
+    ]
+)
+
+
+def parse_name(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    match = FRONTMATTER_RE.match(text)
+    if not match:
+        return path.parent.name
+    for line in match.group(1).splitlines():
+        scalar = SCALAR_RE.match(line)
+        if scalar and scalar.group(1) == "name":
+            return scalar.group(2).strip().strip("\"'")
+    return path.parent.name
+
+
+def skill_names(repo_root: Path) -> set[str]:
+    return {parse_name(path) for path in (repo_root / "skills").glob("*/*/SKILL.md")}
+
+
+def prompt_rows() -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    for case in CASES:
+        acceptable = list(case.get("acceptable_alternatives", []))
+        closest = [skill for skill in case["closest_alternatives"] if skill not in set(acceptable)]
+        row = {
+            "id": case["id"],
+            "family": "public_gold_validation",
+            "gold_skill": case["gold_skill"],
+            "closest_alternatives": closest,
+            "prompt": case["prompt"],
+            "source_family": case["source_family"],
+            "atomization_status": "atomic",
+            "field_axes": case["field_axes"],
+            "gold_rationale": case["gold_rationale"],
+            "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+            "acceptable_alternatives": acceptable,
+            "validation_status": "draft_pending_manual_adjudication",
+        }
+        rows.append(row)
+    return rows
+
+
+def render_review(rows: list[dict[str, object]], missing: list[dict[str, str]]) -> str:
+    lines = [
+        "# Public-Gold Validation Draft",
+        "",
+        "This file is generated by `skill_benchmark/scripts/generate_public_gold_validation.py`.",
+        "",
+        "Purpose: draft public imported skills as candidate gold-label retrieval targets for Step 6b. These cases are not final thesis gold labels until manual atomization and gold-label adjudication are complete.",
+        "",
+        "## Summary",
+        "",
+        f"- Draft prompts: {len(rows)}",
+        f"- Missing references: {len(missing)}",
+        "- Status: draft pending manual adjudication",
+        "",
+    ]
+    if missing:
+        lines.extend(["## Missing References", "", "| Prompt | Field | Skill |", "|---|---|---|"])
+        for row in missing:
+            lines.append(f"| `{row['id']}` | `{row['field']}` | `{row['skill']}` |")
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Draft Cases",
+            "",
+            "| Prompt | Public gold | Source family | Axes | Acceptable alternatives |",
+            "|---|---|---|---|---|",
+        ]
+    )
+    for row in rows:
+        axes = ", ".join(row["field_axes"])  # type: ignore[arg-type]
+        acceptable = ", ".join(row["acceptable_alternatives"]) or "-"  # type: ignore[arg-type]
+        lines.append(
+            f"| `{row['id']}` | `{row['gold_skill']}` | `{row['source_family']}` | {axes} | {acceptable} |"
+        )
+
+    lines.extend(["", "## Manual Adjudication Checklist", ""])
+    lines.extend(
+        [
+            "- Does the public skill define one stable procedure rather than a broad router?",
+            "- Does the prompt require the public skill without naming the skill/source?",
+            "- Are the alternatives genuinely plausible but procedurally weaker?",
+            "- Is any alternative acceptable enough to record as `acceptable_alternatives`?",
+            "- Is the decisive information explicit or extractable from the original public skill body?",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
+def acceptable_map(rows: list[dict[str, object]]) -> dict[str, dict[str, object]]:
+    out: dict[str, dict[str, object]] = {}
+    for row in rows:
+        acceptable = row.get("acceptable_alternatives") or []
+        if acceptable:
+            out[str(row["id"])] = {
+                "acceptable": acceptable,
+                "borderline": [],
+                "notes": "Public-gold validation annotation: near-equivalent alternative recorded during draft construction.",
+            }
+    return out
+
+
+def main() -> int:
+    repo_root = Path(__file__).resolve().parent.parent
+    names = skill_names(repo_root)
+    rows = prompt_rows()
+    missing: list[dict[str, str]] = []
+    seen_ids: set[str] = set()
+    for row in rows:
+        if row["id"] in seen_ids:
+            missing.append({"id": str(row["id"]), "field": "id", "skill": "duplicate prompt id"})
+        seen_ids.add(str(row["id"]))
+        for field in ["gold_skill", "closest_alternatives", "acceptable_alternatives"]:
+            values = row[field]
+            if isinstance(values, str):
+                values = [values]
+            for value in values:
+                if value and value not in names:
+                    missing.append({"id": str(row["id"]), "field": field, "skill": str(value)})
+
+    prompt_path = repo_root / "prompts_public_gold" / "public_gold_validation_confusability.json"
+    report_path = repo_root / "outputs" / "public_gold_validation_draft.md"
+    acceptable_path = repo_root / "annotations" / "public_gold_acceptable_alternatives.json"
+    prompt_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    acceptable_path.parent.mkdir(parents=True, exist_ok=True)
+    prompt_path.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    report_path.write_text(render_review(rows, missing), encoding="utf-8")
+    acceptable_path.write_text(json.dumps(acceptable_map(rows), indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    print(f"Wrote {prompt_path}")
+    print(f"Wrote {report_path}")
+    print(f"Wrote {acceptable_path}")
+    print(f"Draft prompts: {len(rows)}")
+    print(f"Missing references: {len(missing)}")
+    return 1 if missing else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

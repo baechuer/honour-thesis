@@ -1,0 +1,81 @@
+{
+  "job_id": "6a22409ce6aa50b87b9eb371",
+  "date": "2026-06-05",
+  "hardware": "Hugging Face Jobs t4-small",
+  "snapshot_repo": "baechuer1/honour-thesis-skillrouter-benchmark-snapshot",
+  "embedding_model": "pipizhao/SkillRouter-Embedding-0.6B",
+  "reranker_model": "pipizhao/SkillRouter-Reranker-0.6B",
+  "embedding_representation": "full",
+  "rerank_candidates": 20,
+  "artifact_note": "Remote job printed compact summaries only; full per-prompt JSON artifacts were not uploaded from the job.",
+  "results": {
+    "controlled_embedding": {
+      "top1": 0.7299,
+      "accept_top1": 0.7591,
+      "top5": 0.9416,
+      "accept_top5": 0.9489,
+      "mrr": 0.8274,
+      "non_main_top1": 0.146,
+      "selector_visible_tokens_approx": 1349259,
+      "elapsed_ms": 44839.1,
+      "wall_s": 48.69,
+      "runtime": {
+        "embedding_cache_hits": 0,
+        "embedding_items_encoded": 2538,
+        "rerank_cache_hits": 0,
+        "rerank_items_scored": 0
+      }
+    },
+    "controlled_rerank_top20": {
+      "top1": 0.8321,
+      "accept_top1": 0.8321,
+      "top5": 0.9781,
+      "accept_top5": 0.9854,
+      "mrr": 0.8984,
+      "non_main_top1": 0.0438,
+      "selector_visible_tokens_approx": 3011163,
+      "elapsed_ms": 112663.62,
+      "wall_s": 116.54,
+      "runtime": {
+        "embedding_cache_hits": 2538,
+        "embedding_items_encoded": 0,
+        "rerank_cache_hits": 0,
+        "rerank_items_scored": 2740
+      }
+    },
+    "public_gold_embedding": {
+      "top1": 0.6562,
+      "accept_top1": 0.75,
+      "top5": 0.9688,
+      "accept_top5": 0.9688,
+      "mrr": 0.7703,
+      "non_main_top1": 0.8438,
+      "selector_visible_tokens_approx": 1349259,
+      "elapsed_ms": 5669.74,
+      "wall_s": 9.52,
+      "runtime": {
+        "embedding_cache_hits": 2401,
+        "embedding_items_encoded": 32,
+        "rerank_cache_hits": 0,
+        "rerank_items_scored": 0
+      }
+    },
+    "public_gold_rerank_top20": {
+      "top1": 0.6562,
+      "accept_top1": 0.6875,
+      "top5": 0.9375,
+      "accept_top5": 0.9688,
+      "mrr": 0.7883,
+      "non_main_top1": 0.875,
+      "selector_visible_tokens_approx": 1776947,
+      "elapsed_ms": 30195.21,
+      "wall_s": 34.11,
+      "runtime": {
+        "embedding_cache_hits": 2433,
+        "embedding_items_encoded": 0,
+        "rerank_cache_hits": 0,
+        "rerank_items_scored": 640
+      }
+    }
+  }
+}

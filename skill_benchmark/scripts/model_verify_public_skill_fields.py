@@ -13,7 +13,9 @@ import time
 import urllib.error
 import urllib.request
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from threading import Lock
 from typing import Any
 
 
@@ -280,6 +282,8 @@ def build_prompt(skill: str, skill_text: str) -> str:
         "Strict rules:\n"
         "- Every non-missing field must include 1-3 EXACT quotes copied verbatim from the SKILL.md text.\n"
         "- DO NOT paraphrase, summarize, or shorten the evidence. The quote must be a character-for-character match to a span in the text.\n"
+        "- Keep each evidence quote short: at most 180 characters.\n"
+        "- Prefer a short sentence, heading, bullet, or phrase. Do not quote multi-line code blocks, YAML blocks, or long tables.\n"
         "- If you cannot find an exact verbatim quote, mark the field missing.\n"
         "- Do not infer what the skill should contain. Only annotate what the text actually contains.\n"
         "- Keep reasons short.\n\n"
@@ -350,6 +354,7 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=120)
     parser.add_argument("--max-retries", type=int, default=2)
     parser.add_argument("--cache-dir", default=str(repo_root / "runtime" / "provider_cache"))
+    parser.add_argument("--concurrency", type=int, default=1)
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
@@ -380,17 +385,40 @@ def main() -> int:
         max_retries=args.max_retries,
     )
 
-    processed = 0
-    for row in selected:
-        if row["skill"] in done:
-            continue
+    pending = [row for row in selected if row["skill"] not in done]
+
+    def verify_row(row: dict[str, Any]) -> dict[str, Any]:
         skill_text = read_text(Path(row["audit_file"]))
         prompt = build_prompt(row["skill"], truncate_skill_text(skill_text, args.max_chars))
         raw = client.verify(prompt)
-        append_jsonl(output_jsonl, normalize_model_result(raw, row, skill_text))
-        processed += 1
+        return normalize_model_result(raw, row, skill_text)
+
+    processed = 0
+    append_lock = Lock()
+    concurrency = max(1, args.concurrency)
+    if concurrency == 1:
+        for row in pending:
+            append_jsonl(output_jsonl, verify_row(row))
+            processed += 1
+            if processed % 10 == 0:
+                print(f"Progress: {processed}/{len(pending)} new rows", flush=True)
+    else:
+        with ThreadPoolExecutor(max_workers=concurrency) as executor:
+            futures = {executor.submit(verify_row, row): row for row in pending}
+            for future in as_completed(futures):
+                row = futures[future]
+                try:
+                    result = future.result()
+                except Exception as exc:  # noqa: BLE001 - identify failed skill before exiting.
+                    raise RuntimeError(f"Verification failed for {row['skill']}: {exc}") from exc
+                with append_lock:
+                    append_jsonl(output_jsonl, result)
+                processed += 1
+                if processed % 10 == 0 or processed == len(pending):
+                    print(f"Progress: {processed}/{len(pending)} new rows", flush=True)
 
     print(f"Selected skills: {len(selected)}")
+    print(f"Pending skills at start: {len(pending)}")
     print(f"New model-audited skills: {processed}")
     print(f"Cache hits: {client.cache_hits}")
     print(f"API calls: {client.api_calls}")

@@ -51,7 +51,7 @@ The result supports this claim:
 
 This changes the earlier interpretation. It is not accurate to say "local beats Qwen" in general. The better result is:
 
-> Qwen's generic reranker underperforms our task-specific schema reranker, but Qwen embeddings combined with schema reranking become the strongest current method.
+> Qwen's generic reranker underperforms the current deterministic schema reranker on the controlled benchmark, but that reranker should now be treated as `M6-v0` diagnostic evidence. It motivates, rather than replaces, the next `M6-v1` field-aware procedural reranker.
 
 ## Next Checks
 

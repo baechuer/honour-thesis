@@ -2,39 +2,80 @@
 
 \section{What the Results Suggest about Representation}
 
-The current results suggest that the central issue is not simply choosing a stronger retriever. Stronger embeddings and neural reranking improve some conditions, but they do not eliminate semantic confusion. The strongest current result comes from combining broad semantic candidate generation with a reranker that uses explicit procedural fields.
+The current results support the central thesis framing: skill retrieval is not only an architecture problem, but an information-preservation problem. Flat metadata can retrieve broad topical matches, but it often under-specifies the procedural distinctions that matter when skills are near neighbours. Full skill artifacts expose more information, but dense embedding over long artifacts can be noisy, especially for public-authored skills that include broad wrappers, resources, examples, or hierarchy.
 
-This supports the claim that retrieval strategies and representation quality are coupled. A dense retriever can find plausible candidates quickly, but it may not reliably distinguish skills whose descriptions overlap. A procedural schema can help distinguish candidates, but only when the correct skill appears in the candidate pool and the user request contains enough procedural evidence.
+Structured procedural fields improve controlled benchmark performance because they preserve information that flat descriptions compress away. The field ablation results suggest that use conditions, output artifacts, and workflow/procedure fields are currently the strongest positive signals. These fields directly correspond to the difference between a skill that sounds relevant and a skill that is procedurally suitable.
 
-\section{Information that Appears Important}
+The SkillRouter experiments sharpen this claim. SkillRouter's embedding model is a strong skill-specific first-stage retriever, and its reranker is a strong neural baseline. When the same SkillRouter first-stage candidates are reranked by M6-v1-local, the task/output/workflow field set matches SkillRouter reranking on top-1 at the same top-20 budget and improves further when M6-v1-local is allowed a larger top-100 candidate budget. This does not prove that the deterministic matcher is generally superior to neural reranking; rather, it shows that explicit procedural fields can add useful ordering evidence after a strong skill-specific embedding model has already produced a high-recall candidate set.
 
-The benchmark and failure analysis indicate that the following information types are especially important:
+\section{Why M6-v0 Is Diagnostic, Not Final}
+
+The current local schema reranker, M6-v0, is useful because it is transparent. It shows that procedural fields can improve selection when the correct skill appears in the first-stage candidate set. However, it is not strong enough to serve as the final proposed method. It relies on lexical overlap, does not parse the request into structured requirements, under-models workflow semantics, and handles dependency/resource terms too crudely.
+
+The first M6-v1-local prototype addresses part of this weakness by parsing request-side fields and comparing them against skill-side fields. It improves the controlled Qwen condition and, when paired with SkillRouter first-stage retrieval, performs competitively with the SkillRouter neural reranker at a top-20 budget while giving the strongest controlled result at a larger top-100 budget. It also reveals that task/use condition, output, and workflow are the strongest current field set. But public-gold results show that this deterministic matcher is still not enough for messy public skills. The next methodological improvement is not another broad architecture list; it is better semantic field matching, budget-fair comparisons, statistical uncertainty, and cleaner public-gold adjudication.
+
+The public-gold results make this limitation clear. On public-authored skills, naive schema extraction and overlap can underperform flat or description-based retrieval. This is not surprising: public skills are less standardized, often broader, sometimes duplicated, and sometimes hierarchical. Therefore, the correct conclusion is not that structured representation fails. The stronger conclusion is that structured representation must be paired with reliable extraction and field-aware matching.
+
+\section{What the SkillRouter Hybrid Adds}
+
+The SkillRouter hybrid experiment separates two questions that were previously entangled. First, can a strong skill-specific embedding model retrieve the right candidate? On the controlled benchmark, the answer is mostly yes: candidate recall reaches 97.8\% at top-20 and 100.0\% at top-100. Second, can explicit procedural fields improve the final ordering of those candidates? On the controlled benchmark, the answer is promising but must be read with budget discipline. At the same top-20 budget, M6-v1-local matches SkillRouter reranking on top-1 but has slightly lower top-5 and MRR. At a larger top-100 budget, M6-v1-local reaches 86.9\% top-1 and reduces non-main top-1 to 0.7\%. This larger-budget result is evidence that procedural fields can be useful when the candidate set has high recall, not a direct proof that M6-v1-local is a better reranker than SkillRouter under equal compute.
+
+The public-gold stratum gives the opposite lesson. SkillRouter retrieves public-gold candidates well, but M6-v1-local does not improve top-1. This suggests that the public-gold problem is not mainly first-stage recall. It is a field extraction and semantic matching problem: public skills may contain the relevant information, but not in the clean form expected by the current deterministic field matcher.
+
+\section{Information That Appears Important}
+
+The current evidence suggests the following hierarchy of retrieval information:
+
+\begin{description}
+  \item[Strong positive fields.] Use conditions, expected output artifact, and workflow/procedure. These most directly distinguish semantically similar skills.
+  \item[Moderate fields.] Input state and preconditions. These are important when the request specifies the available artifact, environment, or starting state.
+  \item[Conditional fields.] Dependencies, resources, tools, platforms, and external services. These help when feasibility matters, but can attract false positives if treated as ordinary positive text.
+  \item[Penalty fields.] Negative boundaries and avoid conditions. These should be used as filters or penalties rather than appended to retrieval text.
+  \item[Audit/downstream fields.] Examples, tests, safety notes, and provenance. These may support validation and execution, but are not always central to first-stage retrieval.
+\end{description}
+
+This field hierarchy is still provisional. The thesis should avoid claiming that every public skill already contains these fields explicitly. The more defensible claim is that skill artifacts often contain these procedural signals, sometimes implicitly, and that a retrieval representation layer should extract and normalize them.
+
+\section{Tree and Graph Methods}
+
+Tree and graph methods help clarify the difference between information and architecture. M4 tree routing tests whether a hierarchy can reduce candidate set size and context cost. Its main risk is early branch exclusion: once the correct family is missed, the correct skill cannot be recovered unless multi-branch routing is used.
+
+M5 graph retrieval tests a different claim. It asks whether explicit relations among skills and information nodes improve over serialized structured cards. A graph can represent that a skill produces a particular output, requires a dependency, follows a workflow step, or should be avoided under a condition. Edge ablations can then show whether output edges, workflow edges, dependency edges, or avoid edges actually help retrieval. If graph retrieval improves over M6-v1, the thesis can claim that relational structure matters. If it does not, the thesis can still claim that the fields matter while graph architecture may be unnecessary overhead.
+
+\section{Benchmark Validity}
+
+The benchmark has several strengths. It contains controlled confusable clusters, a large scale condition, public imported skills, public-skill field audits, and manual public-gold adjudication. It also records acceptable alternatives rather than forcing every near-equivalent skill to count as a strict failure.
+
+The benchmark also has limitations. The controlled skills were authored for the research problem, so they may express procedural fields more cleanly than real skill libraries. Public skills help address this, but public-gold validation shows that external artifacts are messy. Some public skills are broad parent skills rather than atomic procedures. Some overlap with controlled equivalents. Some contain procedural information only implicitly. These issues should be reported as validity findings, not hidden.
+
+There is also a measurement limitation in the field ablations. Cumulative field conditions add more text as they add more fields, so some gains may reflect additional vocabulary rather than field identity alone. The current pattern still suggests that use conditions, outputs, and workflow matter, but final reporting should include length-controlled or field-dropout checks before making strong causal claims about individual fields.
+
+\section{Failure Modes}
+
+The current experiments reveal several recurring failure modes:
 
 \begin{itemize}
-  \item input source type;
-  \item expected output shape;
-  \item workflow steps and ordering;
-  \item preconditions and assumptions;
-  \item resource or dependency requirements;
-  \item negative boundaries;
-  \item whether the task is about using a skill or modifying a skill;
-  \item primary user intent versus secondary content terms.
+  \item \textbf{First-stage exclusion:} the correct skill is not included in the candidate set, so no reranker can recover it.
+  \item \textbf{Object-procedure confusion:} retrieval focuses on the task object, such as PDF or GitHub, rather than the required procedure.
+  \item \textbf{Boundary failure:} negative usage conditions are ignored or treated as positive text.
+  \item \textbf{Dependency attraction:} skills using the same tool, platform, or resource are ranked highly even when their outputs differ.
+  \item \textbf{Broad parent selection:} a broad public or hierarchical skill is selected instead of the more specific atomic skill.
+  \item \textbf{Acceptable alternative ambiguity:} a competing skill is genuinely close enough to count as a reasonable answer.
+  \item \textbf{Underspecification:} the user request lacks enough procedural evidence for stable selection.
 \end{itemize}
-
-\placeholder{After final ablations, rank these information types by evidence strength.}
-
-\section{Why Architecture Alone Is Not the Thesis}
-
-The experiments compare architectures, but the thesis contribution is not simply that one architecture wins. The more important finding is which representational information each architecture preserves or loses. A flat metadata system loses many procedural distinctions. Full-skill embedding exposes more information but may still score based on broad semantic similarity. Structured procedural fields make the relevant distinctions explicit, but depend on authoring quality and request specificity. Hybrid methods work because they combine complementary strengths.
-
-\section{Failure Modes and Limits}
-
-The low-information stress test shows a key limitation: retrieval cannot always solve underspecification. If a request lacks procedural evidence, the correct response may be to ask a clarification question rather than force a skill selection. This means future systems may need a query-understanding stage before retrieval, especially for vague user requests.
-
-Another limitation is that deterministic schema reranking may overfit to the benchmark's structured fields if not carefully validated. The use of background skills, non-core procedural review, low-information prompts, and provider-based retrieval helps reduce this risk, but further external validation would strengthen the thesis.
 
 \section{Implications for Agent Skill Systems}
 
-The practical implication is that large skill libraries should not rely only on skill names and short descriptions. They should preserve procedural fields that support disambiguation, and retrieval pipelines should separate candidate generation from final procedural selection. The results also suggest that full skill artifacts and structured summaries may both be useful, but for different stages of retrieval.
+The practical implication is that large skill libraries should not rely only on skill names and short descriptions. A scalable system should preserve procedural information, separate candidate generation from final selection, and treat dependencies, resources, and boundaries with field-aware logic. It should also distinguish atomic skills from broad parent skills and should ask clarification questions when the request lacks procedural evidence. A strong embedding model such as SkillRouter can provide high candidate recall, but final selection may still benefit from explicit procedural matching.
 
-\placeholder{Add final design recommendations for future agent skill systems, based on final experiments.}
+For thesis writing, the safest claim is:
+
+\begin{quote}
+Better skill retrieval depends on preserving and using procedural information. Dense retrieval is useful for broad recall, but semantic similarity alone does not reliably distinguish near-neighbour skills. Structure-aware methods are promising when they use extracted fields deliberately, but naive schema text or crude overlap is not sufficient.
+\end{quote}
+
+\section{Limitations}
+
+Several parts of the project remain incomplete. M6-v1-local has been implemented and paired with SkillRouter first-stage retrieval, but stronger semantic or LLM-assisted field matching has not. M4 tree routing and M5 graph retrieval are planned but not evaluated. Downstream task validation has not yet been run. Latency and cost analysis are incomplete. Public-gold results still require cleanup after manual adjudication. Final result tables also need confidence intervals or paired tests, because several controlled gains correspond to a small number of prompts.
+
+These limitations do not invalidate the current thesis direction, but they constrain the strength of the final claims. Until downstream validation is complete, the thesis should claim evidence about retrieval quality and representation design, not full end-to-end agent reliability.

@@ -22,7 +22,7 @@ This thesis uses the following working research questions:
 
 \textbf{RQ1:} What information must agent skill representations preserve to distinguish semantically similar but procedurally distinct skills at scale?
 
-\textbf{RQ2:} How do retrieval strategies that use flat text, dense embeddings, structured procedural fields, or hybrid reranking differ in accuracy, efficiency, and failure modes when applied to scalable skill libraries?
+\textbf{RQ2:} How do retrieval strategies that use flat text, dense embeddings, structured procedural fields, tree or graph structure, or hybrid reranking differ in accuracy, efficiency, and failure modes when applied to scalable skill libraries?
 
 These questions revise an earlier framing that asked more generally how structure-aware representations improve over flat description-based retrieval. The revised framing keeps retrieval strategies in scope, but makes representation quality the central research object. The thesis therefore asks not only which method performs best, but what kinds of information are being preserved, lost, or exploited by each method.
 
@@ -39,7 +39,7 @@ This thesis aims to make four contributions:
 \begin{enumerate}
   \item A conceptual framework that separates skill artifacts, selection representations, and retrieval policies.
   \item A benchmark design for scalable skill retrieval under semantic confusability and procedural distinctness.
-  \item An empirical comparison of flat metadata, full skill artifacts, structured procedural representations, and hybrid retrieval-reranking methods.
+  \item An empirical comparison of flat metadata, full skill artifacts, structured procedural representations, hybrid retrieval-reranking methods, and planned tree/graph structure-aware architectures.
   \item A failure-mode analysis identifying what information is needed for robust skill selection, including inputs, outputs, preconditions, workflow constraints, dependencies, resources, negative boundaries, and meta-level task roles.
 \end{enumerate}
 

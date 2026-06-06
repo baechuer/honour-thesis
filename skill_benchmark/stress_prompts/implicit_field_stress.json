@@ -1,0 +1,112 @@
+[
+  {
+    "id": "implicit_p1_pdf_answer",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-pdf-evidence-answerer",
+    "closest_alternatives": [
+      "implicit-pdf-table-reconstructor",
+      "pdf-question-answerer",
+      "pdf-layout-table-extractor"
+    ],
+    "prompt": "Read the PDF packet and answer whether travel meals after a delay are reimbursable. I need the answer and page evidence, not a reconstructed table."
+  },
+  {
+    "id": "implicit_p2_pdf_table",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-pdf-table-reconstructor",
+    "closest_alternatives": [
+      "implicit-pdf-evidence-answerer",
+      "pdf-layout-table-extractor",
+      "pdf-question-answerer"
+    ],
+    "prompt": "Pull the invoice rows from the PDF with page and row anchors. Keep it as structured data rather than a prose answer."
+  },
+  {
+    "id": "implicit_p3_browser_flow",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-browser-flow-investigator",
+    "closest_alternatives": [
+      "implicit-visual-diff-reviewer",
+      "playwright-flow-debugger",
+      "visual-regression-checker"
+    ],
+    "prompt": "The checkout button stops working after a coupon is applied. Reproduce the click path and use console or network evidence to explain the failure."
+  },
+  {
+    "id": "implicit_p4_visual_diff",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-visual-diff-reviewer",
+    "closest_alternatives": [
+      "implicit-browser-flow-investigator",
+      "visual-regression-checker",
+      "playwright-flow-debugger"
+    ],
+    "prompt": "Compare the baseline and new screenshots for layout shifts, clipping, spacing, and text overflow across desktop and mobile."
+  },
+  {
+    "id": "implicit_p5_ci_failure",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-ci-failure-reader",
+    "closest_alternatives": [
+      "implicit-review-comment-planner",
+      "ci-log-root-cause-debugger",
+      "repo-code-reviewer"
+    ],
+    "prompt": "Look at the CI log and find the first meaningful error plus the smallest fix and rerun sequence."
+  },
+  {
+    "id": "implicit_p6_review_comments",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-review-comment-planner",
+    "closest_alternatives": [
+      "implicit-ci-failure-reader",
+      "pr-review-comment-resolver",
+      "repo-code-reviewer"
+    ],
+    "prompt": "Use the existing reviewer feedback to group required fixes, note any questions, and prepare responses for each thread; do not do a fresh code review."
+  },
+  {
+    "id": "implicit_p7_hf_dataset",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-hf-dataset-inspector",
+    "closest_alternatives": [
+      "implicit-hf-local-model-chooser",
+      "hf-dataset-viewer-inspector",
+      "hf-local-model-selector"
+    ],
+    "prompt": "Before modelling, inspect the dataset splits, columns, row examples, labels, and schema caveats."
+  },
+  {
+    "id": "implicit_p8_hf_model",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-hf-local-model-chooser",
+    "closest_alternatives": [
+      "implicit-hf-dataset-inspector",
+      "hf-local-model-selector",
+      "hf-dataset-viewer-inspector"
+    ],
+    "prompt": "Choose a local model and quantization that can run on an 8 GB laptop for ticket classification."
+  },
+  {
+    "id": "implicit_p9_alert_rule",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-slo-alert-author",
+    "closest_alternatives": [
+      "implicit-trace-path-diagnoser",
+      "prometheus-alert-rule-writer",
+      "distributed-trace-investigator"
+    ],
+    "prompt": "Create alert rules from these checkout SLO metrics with windows, severity labels, and verification queries."
+  },
+  {
+    "id": "implicit_p10_trace_path",
+    "family": "implicit_field_stress",
+    "gold_skill": "implicit-trace-path-diagnoser",
+    "closest_alternatives": [
+      "implicit-slo-alert-author",
+      "distributed-trace-investigator",
+      "prometheus-alert-rule-writer"
+    ],
+    "prompt": "Use these distributed trace spans to locate where checkout latency is introduced across services."
+  }
+]

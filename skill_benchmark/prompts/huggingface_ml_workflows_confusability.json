@@ -1,0 +1,74 @@
+[
+  {
+    "id": "huggingface_ml_workflows_p1_hf_dataset_viewer_inspector",
+    "family": "huggingface_ml_workflows",
+    "gold_skill": "hf-dataset-viewer-inspector",
+    "closest_alternatives": [
+      "public-huggingface-datasets",
+      "public-huggingface-huggingface-tool-builder",
+      "hf-local-model-selector",
+      "sentence-transformer-finetuner"
+    ],
+    "prompt": "For the dataset described in `/workspace/fixtures/huggingface_ml_workflows/customer_tickets_dataset.md`, inspect expected subsets, splits, columns, and row examples before we choose any model."
+  },
+  {
+    "id": "huggingface_ml_workflows_p2_hf_local_model_selector",
+    "family": "huggingface_ml_workflows",
+    "gold_skill": "hf-local-model-selector",
+    "closest_alternatives": [
+      "public-huggingface-huggingface-local-models",
+      "public-huggingface-huggingface-best",
+      "hf-dataset-viewer-inspector",
+      "sentence-transformer-finetuner"
+    ],
+    "prompt": "I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options; do not design a dataset audit."
+  },
+  {
+    "id": "huggingface_ml_workflows_p3_sentence_transformer_finetuner",
+    "family": "huggingface_ml_workflows",
+    "gold_skill": "sentence-transformer-finetuner",
+    "closest_alternatives": [
+      "public-huggingface-train-sentence-transformers",
+      "public-swebench-similarity-search-patterns",
+      "hf-dataset-viewer-inspector",
+      "hf-local-model-selector"
+    ],
+    "prompt": "We have labelled skill-query pairs and hard negatives for agent skill routing. Plan a sentence-transformer fine-tuning setup with losses, splits, and retrieval metrics."
+  },
+  {
+    "id": "huggingface_ml_workflows_p4_gradio_demo_builder",
+    "family": "huggingface_ml_workflows",
+    "gold_skill": "gradio-demo-builder",
+    "closest_alternatives": [
+      "hf-dataset-viewer-inspector",
+      "hf-local-model-selector",
+      "sentence-transformer-finetuner",
+      "hf-zerogpu-space-deployer"
+    ],
+    "prompt": "Create a small Python web UI plan for a ticket classifier with a text box, confidence display, sample inputs, and launch checks. We already have the model; do not discuss fine-tuning."
+  },
+  {
+    "id": "huggingface_ml_workflows_p5_hf_zerogpu_space_deployer",
+    "family": "huggingface_ml_workflows",
+    "gold_skill": "hf-zerogpu-space-deployer",
+    "closest_alternatives": [
+      "hf-dataset-viewer-inspector",
+      "hf-local-model-selector",
+      "sentence-transformer-finetuner",
+      "gradio-demo-builder"
+    ],
+    "prompt": "Prepare our Gradio classifier for Hugging Face ZeroGPU Spaces. Focus on dependency files, GPU queue behavior, sleep constraints, and deployment verification."
+  },
+  {
+    "id": "huggingface_ml_workflows_p6_hf_community_eval_runner",
+    "family": "huggingface_ml_workflows",
+    "gold_skill": "hf-community-eval-runner",
+    "closest_alternatives": [
+      "hf-dataset-viewer-inspector",
+      "hf-local-model-selector",
+      "sentence-transformer-finetuner",
+      "gradio-demo-builder"
+    ],
+    "prompt": "Compare two Hugging Face classifiers on a held-out ticket dataset using reproducible metrics. I need an evaluation plan and result table, not a Gradio app."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "pdf_document_operations_p1_pdf_question_answerer",
+    "family": "pdf_document_operations",
+    "gold_skill": "pdf-question-answerer",
+    "closest_alternatives": [
+      "pdf-layout-table-extractor",
+      "pdf-ocr-cleaner",
+      "pdf-form-filler",
+      "pdf-redaction-reviewer"
+    ],
+    "prompt": "Please answer this from `/workspace/fixtures/pdf_document_operations/sample_packet.pdf`: what evidence does the policy give for reimbursing delayed travel meals? Cite the page or section evidence rather than converting the whole document."
+  },
+  {
+    "id": "pdf_document_operations_p2_pdf_layout_table_extractor",
+    "family": "pdf_document_operations",
+    "gold_skill": "pdf-layout-table-extractor",
+    "closest_alternatives": [
+      "pdf-question-answerer",
+      "pdf-ocr-cleaner",
+      "pdf-form-filler",
+      "pdf-redaction-reviewer"
+    ],
+    "prompt": "From `/workspace/fixtures/pdf_document_operations/vendor_statement.pdf`, extract the invoice table into structured rows with invoice id, date, subtotal, tax, total, and page/row anchors. Do not answer it as a general PDF question."
+  },
+  {
+    "id": "pdf_document_operations_p3_pdf_ocr_cleaner",
+    "family": "pdf_document_operations",
+    "gold_skill": "pdf-ocr-cleaner",
+    "closest_alternatives": [
+      "pdf-question-answerer",
+      "pdf-layout-table-extractor",
+      "pdf-form-filler",
+      "pdf-redaction-reviewer"
+    ],
+    "prompt": "The file `/workspace/fixtures/pdf_document_operations/scanned_receipts.pdf` is mostly images. Recover the text page by page and mark uncertain OCR regions; do not treat it as a normal digital table extraction."
+  },
+  {
+    "id": "pdf_document_operations_p4_pdf_form_filler",
+    "family": "pdf_document_operations",
+    "gold_skill": "pdf-form-filler",
+    "closest_alternatives": [
+      "public-office-pdf-form-filler",
+      "document-field-extractor",
+      "pdf-question-answerer",
+      "pdf-layout-table-extractor"
+    ],
+    "prompt": "Use `/workspace/fixtures/pdf_document_operations/reimbursement_form.pdf` and the supplied employee details to prepare a field-entry checklist for the reimbursement packet. Identify required blanks that still need values; do not summarize the packet."
+  },
+  {
+    "id": "pdf_document_operations_p5_pdf_redaction_reviewer",
+    "family": "pdf_document_operations",
+    "gold_skill": "pdf-redaction-reviewer",
+    "closest_alternatives": [
+      "privacy-risk-reviewer",
+      "public-office-contract-review",
+      "public-openai-pdf",
+      "pdf-question-answerer"
+    ],
+    "prompt": "Before we send `/workspace/fixtures/pdf_document_operations/client_contract.pdf` to an external vendor, identify page-specific redaction targets such as IDs, addresses, pricing, and confidential clauses."
+  },
+  {
+    "id": "pdf_document_operations_p6_pdf_to_docx_converter",
+    "family": "pdf_document_operations",
+    "gold_skill": "pdf-to-docx-converter",
+    "closest_alternatives": [
+      "pdf-question-answerer",
+      "pdf-layout-table-extractor",
+      "pdf-ocr-cleaner",
+      "pdf-form-filler"
+    ],
+    "prompt": "Convert `/workspace/fixtures/pdf_document_operations/training_manual.pdf` into an editable DOCX-style structure with headings and tables preserved. Do not just answer questions from it."
+  }
+]

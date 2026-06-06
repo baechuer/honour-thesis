@@ -1,0 +1,74 @@
+[
+  {
+    "id": "api_mcp_tooling_p1_rest_api_contract_designer",
+    "family": "api_mcp_tooling",
+    "gold_skill": "rest-api-contract-designer",
+    "closest_alternatives": [
+      "mcp-server-builder",
+      "webhook-integration-planner",
+      "auth-flow-integrator",
+      "api-documentation-writer"
+    ],
+    "prompt": "Specify a new client-facing HTTP interface for subscription invoices, including resources, endpoints, request and response shapes, status codes, pagination, and error examples. This is not an MCP wrapper."
+  },
+  {
+    "id": "api_mcp_tooling_p2_mcp_server_builder",
+    "family": "api_mcp_tooling",
+    "gold_skill": "mcp-server-builder",
+    "closest_alternatives": [
+      "rest-api-contract-designer",
+      "webhook-integration-planner",
+      "auth-flow-integrator",
+      "api-documentation-writer"
+    ],
+    "prompt": "Create an MCP server design that exposes two local file-inspection tools with narrow schemas and resource boundaries. Do not design a public REST API."
+  },
+  {
+    "id": "api_mcp_tooling_p3_webhook_integration_planner",
+    "family": "api_mcp_tooling",
+    "gold_skill": "webhook-integration-planner",
+    "closest_alternatives": [
+      "public-office-webhook-automation",
+      "webhook-contract-planner",
+      "rest-api-contract-designer",
+      "mcp-server-builder"
+    ],
+    "prompt": "Plan webhook handling for payment events: accepted event types, signature checks, idempotency, retry behavior, ordering, and dead-letter storage."
+  },
+  {
+    "id": "api_mcp_tooling_p4_auth_flow_integrator",
+    "family": "api_mcp_tooling",
+    "gold_skill": "auth-flow-integrator",
+    "closest_alternatives": [
+      "rest-api-contract-designer",
+      "mcp-server-builder",
+      "webhook-integration-planner",
+      "api-documentation-writer"
+    ],
+    "prompt": "Integrate OAuth login for a dashboard app, covering scopes, token refresh, secret storage, logout, and authorization checks. Do not turn it into webhook planning."
+  },
+  {
+    "id": "api_mcp_tooling_p5_api_documentation_writer",
+    "family": "api_mcp_tooling",
+    "gold_skill": "api-documentation-writer",
+    "closest_alternatives": [
+      "rest-api-contract-designer",
+      "mcp-server-builder",
+      "webhook-integration-planner",
+      "auth-flow-integrator"
+    ],
+    "prompt": "Write developer docs for the existing billing API contract in `/workspace/fixtures/api_mcp_tooling/billing_contract.yaml`, including quickstart, examples, auth notes, and errors."
+  },
+  {
+    "id": "api_mcp_tooling_p6_api_security_threat_reviewer",
+    "family": "api_mcp_tooling",
+    "gold_skill": "api-security-threat-reviewer",
+    "closest_alternatives": [
+      "public-security-threat-model",
+      "public-openai-security-best-practices",
+      "security-threat-modeler",
+      "rest-api-contract-designer"
+    ],
+    "prompt": "Threat-review the billing API for authorization gaps, sensitive data exposure, rate-limit abuse, and validation risks. I need security findings, not user-facing docs."
+  }
+]

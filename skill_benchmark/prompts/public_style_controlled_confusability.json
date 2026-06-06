@@ -1,0 +1,1794 @@
+[
+  {
+    "id": "psc_pdf_document_work_p01_1_psc_pdf_native_extraction_pack",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-native-extraction-pack",
+    "closest_alternatives": [
+      "psc-pdf-scan-ocr-recovery",
+      "psc-pdf-evidence-qa",
+      "psc-pdf-redaction-pass"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the structured text/table/metadata extraction produced by `psc-pdf-native-extraction-pack`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-scan-ocr-recovery": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-evidence-qa": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-redaction-pass": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "The vendor packet PDF has selectable text and tables. Pull out the document metadata, section text, and invoice rows into structured JSON with page anchors."
+  },
+  {
+    "id": "psc_pdf_document_work_p01_2_psc_pdf_native_extraction_pack",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-pdf-native-extraction-pack",
+    "closest_alternatives": [
+      "psc-pdf-scan-ocr-recovery",
+      "psc-pdf-evidence-qa",
+      "psc-pdf-redaction-pass"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the structured text/table/metadata extraction produced by `psc-pdf-native-extraction-pack`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-scan-ocr-recovery": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-evidence-qa": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-redaction-pass": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Use a pdfplumber-style native extraction workflow on the vendor packet. I need embedded text, table cells, metadata, and page anchors, not OCR or a prose answer."
+  },
+  {
+    "id": "psc_pdf_document_work_p02_1_psc_pdf_scan_ocr_recovery",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-scan-ocr-recovery",
+    "closest_alternatives": [
+      "psc-pdf-native-extraction-pack",
+      "psc-pdf-evidence-qa",
+      "psc-pdf-redaction-pass"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the recovered page text produced by `psc-pdf-scan-ocr-recovery`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-native-extraction-pack": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-evidence-qa": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-redaction-pass": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "This signed PDF packet looks like photographed scans. Recover the readable text page by page and flag uncertain handwriting or blurred regions."
+  },
+  {
+    "id": "psc_pdf_document_work_p02_2_psc_pdf_scan_ocr_recovery",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-scan-ocr-recovery",
+    "closest_alternatives": [
+      "psc-pdf-native-extraction-pack",
+      "psc-pdf-evidence-qa",
+      "psc-pdf-redaction-pass"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the recovered page text produced by `psc-pdf-scan-ocr-recovery`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-native-extraction-pack": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-evidence-qa": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-redaction-pass": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Run an OCR recovery workflow for the scanned receipt PDF. Preserve page order and confidence notes instead of treating it as a born-digital table extraction."
+  },
+  {
+    "id": "psc_pdf_document_work_p03_1_psc_pdf_evidence_qa",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-evidence-qa",
+    "closest_alternatives": [
+      "psc-pdf-native-extraction-pack",
+      "psc-pdf-scan-ocr-recovery",
+      "psc-pdf-redaction-pass"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the short answer produced by `psc-pdf-evidence-qa`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-native-extraction-pack": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-scan-ocr-recovery": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-redaction-pass": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "From the policy PDF, tell me whether delayed-travel meals are reimbursable and point to the page evidence that supports the answer."
+  },
+  {
+    "id": "psc_pdf_document_work_p03_2_psc_pdf_evidence_qa",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-evidence-qa",
+    "closest_alternatives": [
+      "psc-pdf-native-extraction-pack",
+      "psc-pdf-scan-ocr-recovery",
+      "psc-pdf-redaction-pass"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the short answer produced by `psc-pdf-evidence-qa`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-native-extraction-pack": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-scan-ocr-recovery": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-redaction-pass": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Answer a narrow question from the PDF with cited page evidence. I only need the supported answer and uncertainty notes, not a converted document or extracted table."
+  },
+  {
+    "id": "psc_pdf_document_work_p04_1_psc_pdf_redaction_pass",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-redaction-pass",
+    "closest_alternatives": [
+      "psc-pdf-native-extraction-pack",
+      "psc-pdf-scan-ocr-recovery",
+      "psc-pdf-evidence-qa"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the redaction target list produced by `psc-pdf-redaction-pass`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-native-extraction-pack": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-scan-ocr-recovery": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-evidence-qa": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Before I send this contract PDF to a vendor, identify the page-level items that should be hidden, including names, addresses, pricing, IDs, and confidential clauses."
+  },
+  {
+    "id": "psc_pdf_document_work_p04_2_psc_pdf_redaction_pass",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_pdf_document_work",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pdf-redaction-pass",
+    "closest_alternatives": [
+      "psc-pdf-native-extraction-pack",
+      "psc-pdf-scan-ocr-recovery",
+      "psc-pdf-evidence-qa"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the redaction target list produced by `psc-pdf-redaction-pass`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pdf-native-extraction-pack": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-scan-ocr-recovery": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pdf-evidence-qa": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Prepare a PDF redaction checklist for external sharing. I need sensitive targets with page anchors, not a summary or field extraction table."
+  },
+  {
+    "id": "psc_browser_quality_p01_1_psc_devtools_runtime_diagnoser",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-devtools-runtime-diagnoser",
+    "closest_alternatives": [
+      "psc-playwright-regression-suite",
+      "psc-visual-screenshot-reviewer",
+      "psc-accessibility-interaction-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the reproduction trace produced by `psc-devtools-runtime-diagnoser`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-playwright-regression-suite": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-visual-screenshot-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-accessibility-interaction-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "The checkout Apply Coupon button stops responding after the first click. Reproduce the path and use browser evidence to explain whether it is DOM state, network, or JavaScript logic."
+  },
+  {
+    "id": "psc_browser_quality_p01_2_psc_devtools_runtime_diagnoser",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-devtools-runtime-diagnoser",
+    "closest_alternatives": [
+      "psc-playwright-regression-suite",
+      "psc-visual-screenshot-reviewer",
+      "psc-accessibility-interaction-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the reproduction trace produced by `psc-devtools-runtime-diagnoser`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-playwright-regression-suite": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-visual-screenshot-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-accessibility-interaction-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Use Chrome DevTools-style evidence for the broken checkout interaction: console errors, network failures, DOM state, and screenshots. Do not only write Playwright assertions."
+  },
+  {
+    "id": "psc_browser_quality_p02_1_psc_playwright_regression_suite",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-playwright-regression-suite",
+    "closest_alternatives": [
+      "psc-devtools-runtime-diagnoser",
+      "psc-visual-screenshot-reviewer",
+      "psc-accessibility-interaction-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the playwright test steps or code produced by `psc-playwright-regression-suite`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-devtools-runtime-diagnoser": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-visual-screenshot-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-accessibility-interaction-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Build a repeatable browser regression check for the checkout form: navigate, fill fields, apply the coupon, assert the discount message, and capture failure evidence."
+  },
+  {
+    "id": "psc_browser_quality_p02_2_psc_playwright_regression_suite",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-playwright-regression-suite",
+    "closest_alternatives": [
+      "psc-devtools-runtime-diagnoser",
+      "psc-visual-screenshot-reviewer",
+      "psc-accessibility-interaction-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the playwright test steps or code produced by `psc-playwright-regression-suite`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-devtools-runtime-diagnoser": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-visual-screenshot-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-accessibility-interaction-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Write a Playwright test for the checkout coupon flow with assertions and screenshots. I need reusable regression coverage, not just a manual DevTools diagnosis."
+  },
+  {
+    "id": "psc_browser_quality_p03_1_psc_visual_screenshot_reviewer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-visual-screenshot-reviewer",
+    "closest_alternatives": [
+      "psc-devtools-runtime-diagnoser",
+      "psc-playwright-regression-suite",
+      "psc-accessibility-interaction-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the visual difference list produced by `psc-visual-screenshot-reviewer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-devtools-runtime-diagnoser": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-playwright-regression-suite": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-accessibility-interaction-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Compare the old and new pricing-page screenshots and call out visible layout regressions, spacing changes, clipped content, and mobile text overflow."
+  },
+  {
+    "id": "psc_browser_quality_p03_2_psc_visual_screenshot_reviewer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-visual-screenshot-reviewer",
+    "closest_alternatives": [
+      "psc-devtools-runtime-diagnoser",
+      "psc-playwright-regression-suite",
+      "psc-accessibility-interaction-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the visual difference list produced by `psc-visual-screenshot-reviewer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-devtools-runtime-diagnoser": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-playwright-regression-suite": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-accessibility-interaction-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Do a visual regression review from screenshot pairs across desktop and mobile. I need layout differences and severity, not browser interaction debugging."
+  },
+  {
+    "id": "psc_browser_quality_p04_1_psc_accessibility_interaction_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-accessibility-interaction-auditor",
+    "closest_alternatives": [
+      "psc-devtools-runtime-diagnoser",
+      "psc-playwright-regression-suite",
+      "psc-visual-screenshot-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the accessibility findings produced by `psc-accessibility-interaction-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-devtools-runtime-diagnoser": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-playwright-regression-suite": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-visual-screenshot-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Audit the account settings modal for keyboard navigation, focus trapping, labels, contrast, and whether form errors are announced clearly."
+  },
+  {
+    "id": "psc_browser_quality_p04_2_psc_accessibility_interaction_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_browser_quality",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-accessibility-interaction-auditor",
+    "closest_alternatives": [
+      "psc-devtools-runtime-diagnoser",
+      "psc-playwright-regression-suite",
+      "psc-visual-screenshot-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the accessibility findings produced by `psc-accessibility-interaction-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-devtools-runtime-diagnoser": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-playwright-regression-suite": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-visual-screenshot-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Review this web form specifically for accessibility interaction quality: keyboard path, accessible names, ARIA state, focus order, and screen-reader error feedback."
+  },
+  {
+    "id": "psc_huggingface_workflow_p01_1_psc_hf_dataset_card_inspector",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-hf-dataset-card-inspector",
+    "closest_alternatives": [
+      "psc-local-model-fit-selector",
+      "psc-sentence-embedding-trainer",
+      "psc-hf-space-deployment-preparer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the dataset readiness summary produced by `psc-hf-dataset-card-inspector`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-local-model-fit-selector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-sentence-embedding-trainer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-hf-space-deployment-preparer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Use Hugging Face dataset information to inspect the ticket dataset's splits, columns, labels, row examples, and licensing caveats before we model it."
+  },
+  {
+    "id": "psc_huggingface_workflow_p01_2_psc_hf_dataset_card_inspector",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-hf-dataset-card-inspector",
+    "closest_alternatives": [
+      "psc-local-model-fit-selector",
+      "psc-sentence-embedding-trainer",
+      "psc-hf-space-deployment-preparer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the dataset readiness summary produced by `psc-hf-dataset-card-inspector`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-local-model-fit-selector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-sentence-embedding-trainer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-hf-space-deployment-preparer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Before training anything, audit the dataset card: subsets, train/validation/test split, feature schema, example rows, labels, and data caveats."
+  },
+  {
+    "id": "psc_huggingface_workflow_p02_1_psc_local_model_fit_selector",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-local-model-fit-selector",
+    "closest_alternatives": [
+      "psc-hf-dataset-card-inspector",
+      "psc-sentence-embedding-trainer",
+      "psc-hf-space-deployment-preparer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the model shortlist produced by `psc-local-model-fit-selector`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-hf-dataset-card-inspector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-sentence-embedding-trainer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-hf-space-deployment-preparer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "I need a support-ticket classifier that can run locally on an 8 GB laptop. Shortlist realistic model sizes, quantization choices, and latency tradeoffs."
+  },
+  {
+    "id": "psc_huggingface_workflow_p02_2_psc_local_model_fit_selector",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-local-model-fit-selector",
+    "closest_alternatives": [
+      "psc-hf-dataset-card-inspector",
+      "psc-sentence-embedding-trainer",
+      "psc-hf-space-deployment-preparer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the model shortlist produced by `psc-local-model-fit-selector`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-hf-dataset-card-inspector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-sentence-embedding-trainer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-hf-space-deployment-preparer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Choose Hugging Face or GGUF local model candidates for an 8 GB Mac. I need memory-fit and quantization reasoning, not a dataset card audit."
+  },
+  {
+    "id": "psc_huggingface_workflow_p03_1_psc_sentence_embedding_trainer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-sentence-embedding-trainer",
+    "closest_alternatives": [
+      "psc-hf-dataset-card-inspector",
+      "psc-local-model-fit-selector",
+      "psc-hf-space-deployment-preparer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the training plan produced by `psc-sentence-embedding-trainer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-hf-dataset-card-inspector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-local-model-fit-selector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-hf-space-deployment-preparer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "We have labelled skill queries, gold skills, and hard negatives. Design the embedding fine-tuning setup and retrieval evaluation for a skill router."
+  },
+  {
+    "id": "psc_huggingface_workflow_p03_2_psc_sentence_embedding_trainer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-sentence-embedding-trainer",
+    "closest_alternatives": [
+      "psc-hf-dataset-card-inspector",
+      "psc-local-model-fit-selector",
+      "psc-hf-space-deployment-preparer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the training plan produced by `psc-sentence-embedding-trainer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-hf-dataset-card-inspector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-local-model-fit-selector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-hf-space-deployment-preparer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Plan a SentenceTransformer fine-tuning run with positives, hard negatives, loss function, splits, top-k recall, and MRR. Do not choose a local chatbot model."
+  },
+  {
+    "id": "psc_huggingface_workflow_p04_1_psc_hf_space_deployment_preparer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-hf-space-deployment-preparer",
+    "closest_alternatives": [
+      "psc-hf-dataset-card-inspector",
+      "psc-local-model-fit-selector",
+      "psc-sentence-embedding-trainer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the space file checklist produced by `psc-hf-space-deployment-preparer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-hf-dataset-card-inspector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-local-model-fit-selector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-sentence-embedding-trainer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Prepare the classifier demo for Hugging Face Spaces with requirements, app entrypoint, secrets, hardware tier, queue behavior, and verification after launch."
+  },
+  {
+    "id": "psc_huggingface_workflow_p04_2_psc_hf_space_deployment_preparer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_huggingface_workflow",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-hf-space-deployment-preparer",
+    "closest_alternatives": [
+      "psc-hf-dataset-card-inspector",
+      "psc-local-model-fit-selector",
+      "psc-sentence-embedding-trainer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the space file checklist produced by `psc-hf-space-deployment-preparer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-hf-dataset-card-inspector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-local-model-fit-selector": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-sentence-embedding-trainer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Package this model demo for a hosted Space-style deployment. Focus on runtime files, dependency pins, GPU/queue assumptions, and launch checks rather than training."
+  },
+  {
+    "id": "psc_github_maintenance_p01_1_psc_ci_log_first_failure_reader",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-ci-log-first-failure-reader",
+    "closest_alternatives": [
+      "psc-pr-thread-fix-planner",
+      "psc-repo-guardrail-hook-installer",
+      "psc-release-communication-packager"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the failing job produced by `psc-ci-log-first-failure-reader`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pr-thread-fix-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-repo-guardrail-hook-installer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-release-communication-packager": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "The build failed after the last push. Read the CI output, identify the first real error, explain the likely cause, and give the smallest rerun sequence."
+  },
+  {
+    "id": "psc_github_maintenance_p01_2_psc_ci_log_first_failure_reader",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-ci-log-first-failure-reader",
+    "closest_alternatives": [
+      "psc-pr-thread-fix-planner",
+      "psc-repo-guardrail-hook-installer",
+      "psc-release-communication-packager"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the failing job produced by `psc-ci-log-first-failure-reader`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-pr-thread-fix-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-repo-guardrail-hook-installer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-release-communication-packager": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Analyze the failed GitHub Actions log for the first meaningful failure and minimal fix path. Do not turn this into a PR review or release note."
+  },
+  {
+    "id": "psc_github_maintenance_p02_1_psc_pr_thread_fix_planner",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-pr-thread-fix-planner",
+    "closest_alternatives": [
+      "psc-ci-log-first-failure-reader",
+      "psc-repo-guardrail-hook-installer",
+      "psc-release-communication-packager"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the thread action map produced by `psc-pr-thread-fix-planner`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-ci-log-first-failure-reader": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-repo-guardrail-hook-installer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-release-communication-packager": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Use the review threads on this PR to plan the required fixes, tests, and replies. The comments already exist; I need an action map."
+  },
+  {
+    "id": "psc_github_maintenance_p02_2_psc_pr_thread_fix_planner",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_explicit",
+    "gold_skill": "psc-pr-thread-fix-planner",
+    "closest_alternatives": [
+      "psc-ci-log-first-failure-reader",
+      "psc-repo-guardrail-hook-installer",
+      "psc-release-communication-packager"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the thread action map produced by `psc-pr-thread-fix-planner`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-ci-log-first-failure-reader": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-repo-guardrail-hook-installer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-release-communication-packager": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Address unresolved GitHub PR review comments by mapping each thread to code/test changes and response text. Do not perform a fresh review from scratch."
+  },
+  {
+    "id": "psc_github_maintenance_p03_1_psc_repo_guardrail_hook_installer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-repo-guardrail-hook-installer",
+    "closest_alternatives": [
+      "psc-ci-log-first-failure-reader",
+      "psc-pr-thread-fix-planner",
+      "psc-release-communication-packager"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the hook/config plan produced by `psc-repo-guardrail-hook-installer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-ci-log-first-failure-reader": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pr-thread-fix-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-release-communication-packager": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Set up repository safeguards so contributors cannot accidentally commit secrets or run destructive git operations without confirmation."
+  },
+  {
+    "id": "psc_github_maintenance_p03_2_psc_repo_guardrail_hook_installer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-repo-guardrail-hook-installer",
+    "closest_alternatives": [
+      "psc-ci-log-first-failure-reader",
+      "psc-pr-thread-fix-planner",
+      "psc-release-communication-packager"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the hook/config plan produced by `psc-repo-guardrail-hook-installer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-ci-log-first-failure-reader": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pr-thread-fix-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-release-communication-packager": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Design git hook guardrails for secret commits, force pushes, reset --hard, branch deletion, and unsafe clean commands, including verification steps."
+  },
+  {
+    "id": "psc_github_maintenance_p04_1_psc_release_communication_packager",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-release-communication-packager",
+    "closest_alternatives": [
+      "psc-ci-log-first-failure-reader",
+      "psc-pr-thread-fix-planner",
+      "psc-repo-guardrail-hook-installer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the release notes produced by `psc-release-communication-packager`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-ci-log-first-failure-reader": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pr-thread-fix-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-repo-guardrail-hook-installer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Turn the merged PR list into release notes grouped by features, fixes, and breaking changes, with upgrade notes where needed."
+  },
+  {
+    "id": "psc_github_maintenance_p04_2_psc_release_communication_packager",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_github_maintenance",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-release-communication-packager",
+    "closest_alternatives": [
+      "psc-ci-log-first-failure-reader",
+      "psc-pr-thread-fix-planner",
+      "psc-repo-guardrail-hook-installer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the release notes produced by `psc-release-communication-packager`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-ci-log-first-failure-reader": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-pr-thread-fix-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-repo-guardrail-hook-installer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Prepare user-facing release communication from completed changes. I need release notes/changelog language, not bug-finding or CI triage."
+  },
+  {
+    "id": "psc_security_appsec_p01_1_psc_feature_threat_modeler",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-feature-threat-modeler",
+    "closest_alternatives": [
+      "psc-handler-vulnerability-reviewer",
+      "psc-dependency-supply-chain-auditor",
+      "psc-privacy-telemetry-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the threat model produced by `psc-feature-threat-modeler`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-handler-vulnerability-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-dependency-supply-chain-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-privacy-telemetry-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Before building invite-by-link file sharing, map what needs protection, who can interact with it, where control changes hands, how it could be abused, and what safeguards we should add."
+  },
+  {
+    "id": "psc_security_appsec_p01_2_psc_feature_threat_modeler",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-feature-threat-modeler",
+    "closest_alternatives": [
+      "psc-handler-vulnerability-reviewer",
+      "psc-dependency-supply-chain-auditor",
+      "psc-privacy-telemetry-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the threat model produced by `psc-feature-threat-modeler`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-handler-vulnerability-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-dependency-supply-chain-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-privacy-telemetry-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Create a design-stage threat model for the new collaborator-invite feature. I need abuse paths and mitigations, not a code-level vulnerability review."
+  },
+  {
+    "id": "psc_security_appsec_p02_1_psc_handler_vulnerability_reviewer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-handler-vulnerability-reviewer",
+    "closest_alternatives": [
+      "psc-feature-threat-modeler",
+      "psc-dependency-supply-chain-auditor",
+      "psc-privacy-telemetry-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the vulnerability finding produced by `psc-handler-vulnerability-reviewer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-feature-threat-modeler": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-dependency-supply-chain-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-privacy-telemetry-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Review this redirect handler for concrete security bugs around user input, auth checks, URL validation, and test coverage."
+  },
+  {
+    "id": "psc_security_appsec_p02_2_psc_handler_vulnerability_reviewer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-handler-vulnerability-reviewer",
+    "closest_alternatives": [
+      "psc-feature-threat-modeler",
+      "psc-dependency-supply-chain-auditor",
+      "psc-privacy-telemetry-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the vulnerability finding produced by `psc-handler-vulnerability-reviewer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-feature-threat-modeler": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-dependency-supply-chain-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-privacy-telemetry-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Do an implementation-level security review of the API handler. Focus on exploitable flaws and code fixes, not feature-level threat modeling."
+  },
+  {
+    "id": "psc_security_appsec_p03_1_psc_dependency_supply_chain_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-dependency-supply-chain-auditor",
+    "closest_alternatives": [
+      "psc-feature-threat-modeler",
+      "psc-handler-vulnerability-reviewer",
+      "psc-privacy-telemetry-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the dependency risk summary produced by `psc-dependency-supply-chain-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-feature-threat-modeler": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-handler-vulnerability-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-privacy-telemetry-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "We are about to add an npm package with a postinstall script and many transitive dependencies. Assess the supply-chain risk and mitigation options."
+  },
+  {
+    "id": "psc_security_appsec_p03_2_psc_dependency_supply_chain_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-dependency-supply-chain-auditor",
+    "closest_alternatives": [
+      "psc-feature-threat-modeler",
+      "psc-handler-vulnerability-reviewer",
+      "psc-privacy-telemetry-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the dependency risk summary produced by `psc-dependency-supply-chain-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-feature-threat-modeler": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-handler-vulnerability-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-privacy-telemetry-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Audit a third-party dependency before adoption: maintainer health, install scripts, transitive risk, old packages, and safer alternatives."
+  },
+  {
+    "id": "psc_security_appsec_p04_1_psc_privacy_telemetry_reviewer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-privacy-telemetry-reviewer",
+    "closest_alternatives": [
+      "psc-feature-threat-modeler",
+      "psc-handler-vulnerability-reviewer",
+      "psc-dependency-supply-chain-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the privacy risks produced by `psc-privacy-telemetry-reviewer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-feature-threat-modeler": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-handler-vulnerability-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-dependency-supply-chain-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Review the analytics plan that logs search queries, account region, role, clicked filters, and partial email domains for 18 months."
+  },
+  {
+    "id": "psc_security_appsec_p04_2_psc_privacy_telemetry_reviewer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_security_appsec",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-privacy-telemetry-reviewer",
+    "closest_alternatives": [
+      "psc-feature-threat-modeler",
+      "psc-handler-vulnerability-reviewer",
+      "psc-dependency-supply-chain-auditor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the privacy risks produced by `psc-privacy-telemetry-reviewer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-feature-threat-modeler": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-handler-vulnerability-reviewer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-dependency-supply-chain-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Assess privacy risk for a telemetry change: data minimization, retention, consent, access controls, and re-identification. Do not focus on code exploits."
+  },
+  {
+    "id": "psc_research_reading_p01_1_psc_paper_method_mapper",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-paper-method-mapper",
+    "closest_alternatives": [
+      "psc-citation-claim-support-auditor",
+      "psc-related-work-synthesizer",
+      "psc-source-field-table-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the method map produced by `psc-paper-method-mapper`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-citation-claim-support-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-related-work-synthesizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-source-field-table-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "For this paper, map how the study was carried out: data, method components, baselines, metrics, assumptions, and evaluation limits."
+  },
+  {
+    "id": "psc_research_reading_p01_2_psc_paper_method_mapper",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-paper-method-mapper",
+    "closest_alternatives": [
+      "psc-citation-claim-support-auditor",
+      "psc-related-work-synthesizer",
+      "psc-source-field-table-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the method map produced by `psc-paper-method-mapper`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-citation-claim-support-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-related-work-synthesizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-source-field-table-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Extract method and evaluation details from the paper. I need setup, baselines, metrics, assumptions, and limitations, not a broad summary."
+  },
+  {
+    "id": "psc_research_reading_p02_1_psc_citation_claim_support_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-citation-claim-support-auditor",
+    "closest_alternatives": [
+      "psc-paper-method-mapper",
+      "psc-related-work-synthesizer",
+      "psc-source-field-table-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the support verdict produced by `psc-citation-claim-support-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-paper-method-mapper": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-related-work-synthesizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-source-field-table-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Check whether this source really supports my sentence about skill libraries improving agent reliability, and suggest safer wording if it overclaims."
+  },
+  {
+    "id": "psc_research_reading_p02_2_psc_citation_claim_support_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-citation-claim-support-auditor",
+    "closest_alternatives": [
+      "psc-paper-method-mapper",
+      "psc-related-work-synthesizer",
+      "psc-source-field-table-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the support verdict produced by `psc-citation-claim-support-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-paper-method-mapper": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-related-work-synthesizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-source-field-table-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Perform a citation-grounding audit for one draft claim: support strength, exact evidence, caveats, and revised claim wording."
+  },
+  {
+    "id": "psc_research_reading_p03_1_psc_related_work_synthesizer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-related-work-synthesizer",
+    "closest_alternatives": [
+      "psc-paper-method-mapper",
+      "psc-citation-claim-support-auditor",
+      "psc-source-field-table-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the related-work synthesis produced by `psc-related-work-synthesizer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-paper-method-mapper": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-citation-claim-support-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-source-field-table-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Use these three papers to write related-work notes that compare approaches, show where they agree or diverge, and identify the gap my thesis targets."
+  },
+  {
+    "id": "psc_research_reading_p03_2_psc_related_work_synthesizer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-related-work-synthesizer",
+    "closest_alternatives": [
+      "psc-paper-method-mapper",
+      "psc-citation-claim-support-auditor",
+      "psc-source-field-table-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the related-work synthesis produced by `psc-related-work-synthesizer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-paper-method-mapper": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-citation-claim-support-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-source-field-table-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Synthesize multiple sources into a related-work argument with themes, contrasts, unresolved limitations, and thesis positioning."
+  },
+  {
+    "id": "psc_research_reading_p04_1_psc_source_field_table_extractor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-source-field-table-extractor",
+    "closest_alternatives": [
+      "psc-paper-method-mapper",
+      "psc-citation-claim-support-auditor",
+      "psc-related-work-synthesizer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the field-value table produced by `psc-source-field-table-extractor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-paper-method-mapper": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-citation-claim-support-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-related-work-synthesizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Extract each paper's dataset, task, model, baseline, metric, result, and limitation into a comparison table with source evidence."
+  },
+  {
+    "id": "psc_research_reading_p04_2_psc_source_field_table_extractor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_research_reading",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-source-field-table-extractor",
+    "closest_alternatives": [
+      "psc-paper-method-mapper",
+      "psc-citation-claim-support-auditor",
+      "psc-related-work-synthesizer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the field-value table produced by `psc-source-field-table-extractor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-paper-method-mapper": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-citation-claim-support-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-related-work-synthesizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Turn the source into a structured field table. I need field values and evidence snippets, not a narrative summary or related-work synthesis."
+  },
+  {
+    "id": "psc_skill_representation_p01_1_psc_messy_skill_field_extractor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-messy-skill-field-extractor",
+    "closest_alternatives": [
+      "psc-public-skill-atomizer",
+      "psc-skill-routing-budget-planner",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the field audit produced by `psc-messy-skill-field-extractor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-public-skill-atomizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-skill-routing-budget-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-retrieval-result-adjudicator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Review this rough capability note and produce a selector-facing inventory: when it should trigger, required inputs, expected artifact, steps, tools, examples, and gaps."
+  },
+  {
+    "id": "psc_skill_representation_p01_2_psc_messy_skill_field_extractor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-messy-skill-field-extractor",
+    "closest_alternatives": [
+      "psc-public-skill-atomizer",
+      "psc-skill-routing-budget-planner",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the field audit produced by `psc-messy-skill-field-extractor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-public-skill-atomizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-skill-routing-budget-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-retrieval-result-adjudicator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Perform a field-taxonomy audit of an existing skill artifact with evidence spans. Do not write or install a new skill."
+  },
+  {
+    "id": "psc_skill_representation_p02_1_psc_public_skill_atomizer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-public-skill-atomizer",
+    "closest_alternatives": [
+      "psc-messy-skill-field-extractor",
+      "psc-skill-routing-budget-planner",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the atomic skill list produced by `psc-public-skill-atomizer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-messy-skill-field-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-skill-routing-budget-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-retrieval-result-adjudicator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "This public skill has separate finance, document, and research branches inside one file. Split it into atomic skill candidates and keep shared resources linked."
+  },
+  {
+    "id": "psc_skill_representation_p02_2_psc_public_skill_atomizer",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-public-skill-atomizer",
+    "closest_alternatives": [
+      "psc-messy-skill-field-extractor",
+      "psc-skill-routing-budget-planner",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the atomic skill list produced by `psc-public-skill-atomizer`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-messy-skill-field-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-skill-routing-budget-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-retrieval-result-adjudicator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Atomize a broad hierarchical skill into standalone child skills with preserved resource references and routing boundaries."
+  },
+  {
+    "id": "psc_skill_representation_p03_1_psc_skill_routing_budget_planner",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-skill-routing-budget-planner",
+    "closest_alternatives": [
+      "psc-messy-skill-field-extractor",
+      "psc-public-skill-atomizer",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the routing stages produced by `psc-skill-routing-budget-planner`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-messy-skill-field-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-public-skill-atomizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-retrieval-result-adjudicator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Design a routing policy for a 2000-skill library: candidate generation, representation fields, reranking, fallback, and cost controls."
+  },
+  {
+    "id": "psc_skill_representation_p03_2_psc_skill_routing_budget_planner",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-skill-routing-budget-planner",
+    "closest_alternatives": [
+      "psc-messy-skill-field-extractor",
+      "psc-public-skill-atomizer",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the routing stages produced by `psc-skill-routing-budget-planner`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-messy-skill-field-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-public-skill-atomizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-retrieval-result-adjudicator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Specify a candidate-subsetting architecture for skill retrieval with top-k budgets, field-aware reranking, fallback, and evaluation metrics."
+  },
+  {
+    "id": "psc_skill_representation_p04_1_psc_retrieval_result_adjudicator",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-retrieval-result-adjudicator",
+    "closest_alternatives": [
+      "psc-messy-skill-field-extractor",
+      "psc-public-skill-atomizer",
+      "psc-skill-routing-budget-planner"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the metrics produced by `psc-retrieval-result-adjudicator`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-messy-skill-field-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-public-skill-atomizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-skill-routing-budget-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Evaluate these skill retrieval rankings with strict gold labels, acceptable alternatives, top-1, top-5, MRR, and failure categories."
+  },
+  {
+    "id": "psc_skill_representation_p04_2_psc_retrieval_result_adjudicator",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_skill_representation",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-retrieval-result-adjudicator",
+    "closest_alternatives": [
+      "psc-messy-skill-field-extractor",
+      "psc-public-skill-atomizer",
+      "psc-skill-routing-budget-planner"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the metrics produced by `psc-retrieval-result-adjudicator`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-messy-skill-field-extractor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-public-skill-atomizer": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-skill-routing-budget-planner": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Adjudicate retrieval results: separate strict and acceptable scoring, identify candidate misses versus reranker losses, and flag better-than-gold cases."
+  },
+  {
+    "id": "psc_data_analysis_intent_p01_1_psc_data_trust_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-data-trust-auditor",
+    "closest_alternatives": [
+      "psc-anomaly-watchlist-builder",
+      "psc-decision-ranking-analyst",
+      "psc-executive-metric-narrator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the data-quality findings produced by `psc-data-trust-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-anomaly-watchlist-builder": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-decision-ranking-analyst": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-executive-metric-narrator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Before we make a decision from this weekly channel CSV, check whether the data is trustworthy: missing values, duplicate rows, invalid ranges, and schema issues."
+  },
+  {
+    "id": "psc_data_analysis_intent_p01_2_psc_data_trust_auditor",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-data-trust-auditor",
+    "closest_alternatives": [
+      "psc-anomaly-watchlist-builder",
+      "psc-decision-ranking-analyst",
+      "psc-executive-metric-narrator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the data-quality findings produced by `psc-data-trust-auditor`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-anomaly-watchlist-builder": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-decision-ranking-analyst": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-executive-metric-narrator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Audit the spreadsheet's data quality and assumptions. I need trustworthiness checks, not a ranking recommendation or executive summary."
+  },
+  {
+    "id": "psc_data_analysis_intent_p02_1_psc_anomaly_watchlist_builder",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-anomaly-watchlist-builder",
+    "closest_alternatives": [
+      "psc-data-trust-auditor",
+      "psc-decision-ranking-analyst",
+      "psc-executive-metric-narrator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the anomaly watchlist produced by `psc-anomaly-watchlist-builder`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-data-trust-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-decision-ranking-analyst": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-executive-metric-narrator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Scan the weekly channel metrics for unusual spikes, drops, outliers, or concentrated deviations that deserve follow-up."
+  },
+  {
+    "id": "psc_data_analysis_intent_p02_2_psc_anomaly_watchlist_builder",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-anomaly-watchlist-builder",
+    "closest_alternatives": [
+      "psc-data-trust-auditor",
+      "psc-decision-ranking-analyst",
+      "psc-executive-metric-narrator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the anomaly watchlist produced by `psc-anomaly-watchlist-builder`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-data-trust-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-decision-ranking-analyst": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-executive-metric-narrator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Build an anomaly watchlist from the CSV with evidence windows and priorities. Do not turn it into a broad reporting brief."
+  },
+  {
+    "id": "psc_data_analysis_intent_p03_1_psc_decision_ranking_analyst",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-decision-ranking-analyst",
+    "closest_alternatives": [
+      "psc-data-trust-auditor",
+      "psc-anomaly-watchlist-builder",
+      "psc-executive-metric-narrator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the ranked options produced by `psc-decision-ranking-analyst`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-data-trust-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-anomaly-watchlist-builder": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-executive-metric-narrator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Compare the pilot options and rank which one we should act on first, using cost, impact, risk, confidence, and time-to-value."
+  },
+  {
+    "id": "psc_data_analysis_intent_p03_2_psc_decision_ranking_analyst",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-decision-ranking-analyst",
+    "closest_alternatives": [
+      "psc-data-trust-auditor",
+      "psc-anomaly-watchlist-builder",
+      "psc-executive-metric-narrator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the ranked options produced by `psc-decision-ranking-analyst`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-data-trust-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-anomaly-watchlist-builder": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-executive-metric-narrator": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Use the option table to produce a decision ranking with criteria, tradeoffs, and first-choice recommendation. Do not just summarize the dataset."
+  },
+  {
+    "id": "psc_data_analysis_intent_p04_1_psc_executive_metric_narrator",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L2_natural",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-executive-metric-narrator",
+    "closest_alternatives": [
+      "psc-data-trust-auditor",
+      "psc-anomaly-watchlist-builder",
+      "psc-decision-ranking-analyst"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "medium",
+    "gold_rationale": "The request asks for the executive headline produced by `psc-executive-metric-narrator`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-data-trust-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-anomaly-watchlist-builder": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-decision-ranking-analyst": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Turn the weekly performance table into a leadership-ready brief: headline, key movements, risks, and two recommended next steps."
+  },
+  {
+    "id": "psc_data_analysis_intent_p04_2_psc_executive_metric_narrator",
+    "family": "public_style_controlled",
+    "cluster_id": "psc_data_analysis_intent",
+    "source_style": "public_style_controlled",
+    "prompt_information_level": "L3_high_information",
+    "provider_cue": "provider_implicit",
+    "gold_skill": "psc-executive-metric-narrator",
+    "closest_alternatives": [
+      "psc-data-trust-auditor",
+      "psc-anomaly-watchlist-builder",
+      "psc-decision-ranking-analyst"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "dependency_or_tool",
+      "input_or_precondition"
+    ],
+    "ambiguity_risk": "low",
+    "gold_rationale": "The request asks for the executive headline produced by `psc-executive-metric-narrator`, with requirements matching its operating context.",
+    "rejection_rationale": {
+      "psc-data-trust-auditor": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-anomaly-watchlist-builder": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion.",
+      "psc-decision-ranking-analyst": "Plausible same-cluster alternative, but it optimizes for a different artifact, workflow, dependency, or success criterion."
+    },
+    "prompt": "Write an executive metric narrative from the spreadsheet. I need business takeaways and actions, not data validation or anomaly hunting."
+  }
+]

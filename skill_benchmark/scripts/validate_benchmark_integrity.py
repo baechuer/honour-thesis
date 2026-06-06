@@ -15,19 +15,28 @@ FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 SCALAR_RE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*?)\s*$")
 MAIN_EVALUATED_FAMILIES = {
     "api_backend_design",
+    "api_mcp_tooling",
     "browser_web_automation",
     "code_github_workflow",
     "data_spreadsheet",
     "deployment_browser_qa",
     "documents_files",
+    "github_ci_maintenance",
+    "huggingface_ml_workflows",
+    "implicit_field_stress",
     "metrics_observability",
     "news_monitoring",
+    "observability_reliability",
+    "office_business_automation",
     "office_artifact_workflows",
+    "pdf_document_operations",
     "planning_meetings",
+    "public_style_controlled",
     "reading_research",
     "reply_messaging",
     "security_appsec",
     "skill_lifecycle",
+    "skill_representation_analysis",
 }
 
 

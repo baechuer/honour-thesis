@@ -4,64 +4,117 @@
 
 The benchmark is designed to test skill retrieval under the failure mode that motivates the thesis: semantic confusability between procedurally distinct skills. It is not enough for the benchmark to contain many unrelated skills. The benchmark must contain clusters where several skills sound relevant to the same request, but only one skill is procedurally correct.
 
-The benchmark therefore has three goals:
+The benchmark therefore has four goals:
 
 \begin{enumerate}
   \item create controlled near-neighbour skill clusters;
-  \item scale the library with background skills so retrieval is not performed in a toy setting;
-  \item validate that gold labels remain defensible even when non-core background skills are considered.
+  \item scale the library with generated and public background skills;
+  \item validate that gold labels remain defensible under non-core competition;
+  \item test whether proposed representation fields are also visible or extractable in public skill artifacts.
 \end{enumerate}
 
-\section{Skill Library}
+\section{Skill Library Composition}
 
-The current benchmark contains 1006 skills:
+The active benchmark contains 2401 skills:
 
 \begin{itemize}
-  \item 67 controlled core skills;
-  \item 920 generated background-scale skills;
-  \item 15 public imported background skills;
+  \item 137 controlled evaluated skills;
+  \item 1800 generated background-scale skills;
+  \item 460 imported public background skills;
   \item 4 support or email skills.
 \end{itemize}
 
-The controlled core skills are the main evaluation targets. They are organized into task families such as document processing, code and GitHub workflows, planning and meetings, reading and research, security and privacy, metrics and observability, browser or web automation, reply and messaging, data and spreadsheets, and skill lifecycle operations.
+The controlled evaluated skills are organised into task families such as document and PDF operations, browser automation, GitHub and CI workflows, Hugging Face workflows, observability, office automation, API design, deployment, planning, reading and research, messaging, security, and skill lifecycle operations. These skills form the main controlled benchmark. The public skills are used both as realistic background distractors and as evidence for whether the proposed fields exist or are extractable in real skill artifacts.
 
-\placeholder{Add a table listing all controlled clusters, each cluster's skills, and the procedural distinction being tested.}
+\section{Controlled Confusable Clusters}
 
-\section{Confusable Clusters}
+A valid controlled cluster must satisfy three conditions. First, the skills must overlap in surface meaning, name, description, or trigger phrases. Second, the skills must differ in operationally important procedure. Third, choosing the wrong skill must matter for the resulting workflow or artifact.
 
-A valid confusable cluster must satisfy three conditions. First, the skills must overlap in surface meaning, name, description, or trigger phrases. Second, the skills must differ in operationally important procedure. Third, choosing the wrong skill must matter for the resulting workflow or artifact.
+Examples include:
 
-For example, a document cluster may include document summarisation, field extraction, citation grounding, document normalisation, and layout-preserving conversion. These skills all involve documents, but they differ in input requirements, output shape, workflow steps, and verification criteria.
+\begin{itemize}
+  \item \textbf{PDF/document operations:} PDF question answering, layout table extraction, OCR cleaning, form filling, redaction review, and PDF-to-DOCX conversion.
+  \item \textbf{CI and GitHub workflows:} CI log root-cause debugging, PR review-comment resolution, repository code review, issue triage, changelog generation, and git safety guardrail installation.
+  \item \textbf{Observability:} Prometheus alert writing, dashboard building, distributed trace investigation, SLO breach narrative writing, resilience review, and service-mesh traffic debugging.
+  \item \textbf{Skill representation analysis:} skill field auditing, router policy design, skill deduplication, benchmark cluster construction, and graph-edge schema design.
+\end{itemize}
 
-\placeholder{Insert 3-5 detailed cluster examples. For each example, include the prompt, gold skill, near-neighbour distractors, and the exact procedural distinction.}
+The purpose of these clusters is not to model every possible agent skill. It is to create controlled pressure around the exact failure mode of interest: plausible semantic neighbours with different procedures.
 
-\section{Background Scale Skills}
+\section{Background and Public Skills}
 
-Background skills are included to make the library scale more realistic. They are not the main research target, but they test whether retrieval methods remain robust when many plausible but non-gold candidates are present. Background skills also help reveal whether a supposedly controlled prompt accidentally matches a non-core skill better than the intended gold skill.
+The 1800 generated background-scale skills provide scale pressure and near-domain distractors. They are designed to be functional enough to compete semantically with evaluated prompts, but they are not the main gold-label targets. Their role is to reveal whether retrieval methods are robust when the library contains many plausible non-core candidates.
 
-The benchmark includes generated background skills and a small number of public imported skills. Generated skills are useful for controlled scale, while public skills improve ecological validity by introducing less curated wording and real-world skill variation.
+The 460 public imported skills improve ecological validity. They introduce authoring styles, broad skills, implicit fields, resources, dependencies, and hierarchical patterns that are less clean than the controlled skills. Public skills are used in three ways:
+
+\begin{enumerate}
+  \item as background scale and distractors;
+  \item as a field-taxonomy audit corpus;
+  \item as a separate public-gold validation stratum when a public skill can be manually adjudicated as a stable target.
+\end{enumerate}
+
+\section{Public-Gold Validation Stratum}
+
+A separate 32-prompt public-gold stratum was built to test whether externally authored public skills can serve as retrieval targets. This is deliberately separated from the controlled benchmark because public skills are often broader, less atomic, duplicated, or hierarchical.
+
+Manual adjudication found:
+
+\begin{itemize}
+  \item 21 stable strict public-gold cases;
+  \item 7 cases that should be kept only with acceptable alternatives;
+  \item 4 cases that should be revised or excluded before final reporting.
+\end{itemize}
+
+This result is important because it supports a cautious claim. Public skills are valuable for external validity, but they are not clean gold labels by default. Public-gold results should therefore be reported separately as strict public-only, gold-or-acceptable, and cleaned strict subsets.
 
 \section{Gold Labels and Acceptable Alternatives}
 
-Each evaluated prompt has a gold-label intended skill. A gold label is valid when a careful human reading shows that the prompt's procedural requirements align more strongly with the gold skill than with its near neighbours.
+Each evaluated prompt has a gold-label intended skill. A gold label is the skill that should be selected if the selector correctly interprets the user's procedural requirements, not merely the skill whose name or description is most semantically similar to the prompt. A gold label is valid when careful reading shows that the prompt's requirements align more strongly with the gold skill than with its near neighbours.
 
-Some cases may require acceptable alternatives. This is especially true when a background skill is domain-specific and could reasonably satisfy the prompt even if it was not the original target. Acceptable alternatives should be recorded explicitly rather than silently counted as failures or successes.
+Operationally, a skill is treated as the gold label only when it satisfies the following criteria:
 
-\placeholder{Add the final acceptable-alternatives policy and include examples from the document field extraction and reply drafting cases.}
+\begin{enumerate}
+  \item \textbf{Procedural fit:} the skill's intended use, inputs or preconditions, workflow, output artifact, and success criterion match the request.
+  \item \textbf{Discriminative fit:} at least one concrete requirement in the prompt explains why this skill is better than the listed alternatives.
+  \item \textbf{Near-neighbour pressure:} the alternatives are semantically plausible, but differ from the gold skill on an operational axis such as input state, output type, workflow, dependency, boundary condition, or success criterion.
+  \item \textbf{Atomicity:} the skill is specific enough to be selected as a single procedural capability. Broad router skills or hierarchical skills are not used as strict gold labels unless the prompt explicitly asks for that broad routing behaviour.
+  \item \textbf{No leakage:} the prompt should not reveal the gold skill through exact skill names, copied distinctive phrases, or artificial labels.
+  \item \textbf{Stability under scale:} when public and generated background skills are added, no unrecorded competitor should be clearly more procedurally suitable than the gold skill.
+\end{enumerate}
+
+These criteria distinguish the gold label from a merely plausible retrieval hit. For example, in a PDF cluster, a request to extract native text, tables, and metadata from a non-scanned PDF has a different gold skill from a request to OCR a scanned PDF, fill a PDF form, answer questions over a PDF, or convert a PDF to DOCX. All of those alternatives are semantically close because they concern PDFs, but they are procedurally different.
+
+Acceptable alternatives are recorded when a competing skill is genuinely near-equivalent. This avoids treating annotation ambiguity as either a retrieval success or retrieval failure. In public-gold cases, acceptable alternatives are especially important because imported public skills can overlap with controlled skills or with other public skills.
 
 \section{Validation Rubric}
 
-The benchmark is validated through a multi-step rubric:
+The benchmark is validated through a staged rubric:
 
 \begin{enumerate}
-  \item Integrity: all prompts and gold skills resolve.
-  \item Procedural alignment: each prompt contains requirements that justify the gold skill.
-  \item Semantic confusability: each prompt has plausible near-neighbour skills.
-  \item Prompt leakage: prompts should not reveal exact skill names in a way that makes retrieval trivial.
-  \item Scale regime: the library should be large enough to test scalable retrieval pressure.
-  \item Selector pressure: baseline methods should show meaningful performance differences.
-  \item Progressive-disclosure baseline: the normal main-agent selection pattern should be evaluated where feasible.
-  \item Downstream validation: retrieval differences should be tested for downstream task impact.
+  \item \textbf{Integrity:} all prompts, gold skills, and alternatives resolve.
+  \item \textbf{Procedural alignment:} each prompt contains requirements that justify the gold skill.
+  \item \textbf{Semantic confusability:} each prompt has plausible near-neighbour skills.
+  \item \textbf{Prompt leakage:} prompts should not reveal exact skill names or copied distinctive phrases.
+  \item \textbf{Scale regime:} the library should be large enough to create context and retrieval pressure.
+  \item \textbf{Public field audit:} proposed fields should be observed, extractable, or clearly labelled as proposed normalization fields in public skills.
+  \item \textbf{Public-gold validation:} public skills should be manually atomized and adjudicated before being used as gold targets.
+  \item \textbf{Selector pressure:} baseline methods should show meaningful performance differences rather than all succeeding or all failing randomly.
+  \item \textbf{Downstream validation:} a smaller sample should test whether retrieval quality affects task success.
 \end{enumerate}
 
-\placeholder{Move the detailed pass/fail thresholds from the benchmark methodology rubric into an appendix table.}
+\section{Current Validation Status}
+
+The active validation status is:
+
+\begin{itemize}
+  \item Step 1 integrity: passed for 137 prompts and 2401 skills.
+  \item Step 2 procedural distinctness: passed for 137/137 prompts and 449/449 gold/alternative pairs.
+  \item Step 2 prompt-specific alignment: passed for 122/137 prompts under MiniLM alignment.
+  \item Step 3 semantic confusability: near-pass, with 116/137 prompts, or 84.7\%, having at least two plausible alternatives.
+  \item Step 4 prompt leakage: passed with 0 critical exact-name leaks and 0 high-risk leaks.
+  \item Step 5 scale regime: passed; R1 flat metadata is approximately 123k selector-visible tokens, while full skill artifacts exceed 1M selector-visible tokens.
+  \item Step 6 public field audit: mostly complete; 460/460 public skills audited heuristically and with DeepSeek model-assisted verification.
+  \item Step 6b public-gold validation: manually adjudicated but still needs annotation cleanup.
+\end{itemize}
+
+The main remaining benchmark risk is gold-label stability under realistic public/generated competitors. This risk is handled by manual adjudication, acceptable alternatives, and separate reporting of controlled and public-gold strata.

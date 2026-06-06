@@ -1,3 +1,40 @@
 \chapter{Benchmark Rubric}
 
-\placeholder{Paste or summarize the final benchmark methodology rubric from \texttt{skill\_benchmark/notes/benchmark\_methodology\_rubric.md}. Include pass thresholds for Steps 1-8.}
+This appendix summarises the benchmark validation loop used in the project. The full operational rubric is maintained in \texttt{skill\_benchmark/notes/benchmark\_methodology\_rubric.md}.
+
+\section{Validation Steps}
+
+\begin{enumerate}
+  \item \textbf{Skill and prompt integrity.} Every prompt has a unique identifier, every gold skill exists, every listed alternative exists, and skill metadata can be parsed.
+  \item \textbf{Procedural requirement alignment.} Each prompt must contain concrete requirements that justify why the gold skill is better than its alternatives.
+  \item \textbf{Semantic confusability.} Alternatives should be plausible neighbours, not random unrelated distractors.
+  \item \textbf{Gold-label stability and leakage.} Prompts should not reveal the answer through exact skill names, copied phrases, or hidden assumptions.
+  \item \textbf{Scale regime.} The benchmark should include enough skills to create retrieval pressure and context pressure.
+  \item \textbf{Public-skill field audit.} Public skills should be checked for observed, extractable, and proposed representation fields.
+  \item \textbf{Public-gold validation.} Public skills can be used as gold targets only after atomization, leakage checks, semantic alternatives, and manual adjudication.
+  \item \textbf{Offline selector evaluation.} Methods should be compared on top-1, top-k, MRR, non-core false positives, and candidate budget.
+  \item \textbf{Progressive-disclosure baseline.} The normal main-agent skill-selection pattern should be evaluated where feasible.
+  \item \textbf{Downstream validation.} A smaller sample should test whether retrieval differences affect final task artifacts.
+\end{enumerate}
+
+\section{Current Pass/Warning Summary}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{0.30\textwidth}p{0.58\textwidth}}
+\toprule
+Step & Current status \\
+\midrule
+Integrity & PASS: 137 prompts and 2401 skills resolve. \\
+Procedural distinctness & PASS: 137/137 prompts and 449/449 pairs pass. \\
+Prompt-specific alignment & PASS with caveat: 122/137 prompts pass MiniLM alignment. \\
+Semantic confusability & WARN/near-pass: 116/137 prompts pass. \\
+Prompt leakage & PASS: 0 critical and 0 high-risk leaks. \\
+Scale & PASS: 2401 skills; R1 approximately 123k visible tokens. \\
+Public field audit & Mostly done: 460/460 public skills audited. \\
+Public-gold & Manually adjudicated; cleanup required. \\
+Downstream validation & Planned but not executed. \\
+\bottomrule
+\end{tabular}
+\caption{Current validation summary.}
+\end{table}

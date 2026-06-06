@@ -1,0 +1,1131 @@
+{
+  "embedding_provider": "qwen",
+  "embedding_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "embedding_model": "text-embedding-v4",
+  "embedding_representation": "full",
+  "scale": "current_full",
+  "reranker_provider": "none",
+  "reranker_model": null,
+  "rerank_candidates": 0,
+  "local_schema_base_weight": null,
+  "local_schema_weight": null,
+  "elapsed_ms": 9101.2,
+  "metrics": {
+    "total_prompts": 10,
+    "scale_skill_count": 2401,
+    "selector_visible_tokens_approx": 1252365,
+    "top1_accuracy": 0.5,
+    "top1_hits": 5,
+    "acceptable_top1_accuracy": 0.5,
+    "acceptable_top1_hits": 5,
+    "borderline_top1": 0,
+    "borderline_top1_rate": 0.0,
+    "top3_recall": 0.9,
+    "top3_hits": 9,
+    "acceptable_top3_recall": 0.9,
+    "acceptable_top3_hits": 9,
+    "top5_recall": 0.9,
+    "top5_hits": 9,
+    "acceptable_top5_recall": 0.9,
+    "acceptable_top5_hits": 9,
+    "mrr": 0.691,
+    "acceptable_mrr": 0.691,
+    "mean_gold_rank": 2.7,
+    "mean_acceptable_rank": 2.7,
+    "wrong_top1": 5,
+    "unacceptable_top1": 5,
+    "unacceptable_top1_rate": 0.5,
+    "listed_alternative_top1": 2,
+    "listed_alternative_top1_rate": 0.2,
+    "non_main_top1": 7,
+    "non_main_top1_rate": 0.7,
+    "background_top1": 2,
+    "background_top1_rate": 0.2,
+    "public_import_top1": 0,
+    "public_import_top1_rate": 0.0,
+    "by_family": {
+      "implicit_field_stress": {
+        "total": 10,
+        "top1_accuracy": 0.5,
+        "acceptable_top1_accuracy": 0.5,
+        "top3_recall": 0.9,
+        "acceptable_top3_recall": 0.9,
+        "top5_recall": 0.9,
+        "acceptable_top5_recall": 0.9
+      }
+    },
+    "top_confusions": [
+      {
+        "pair": "implicit-pdf-evidence-answerer -> travel-ops-evidence-grounder",
+        "count": 1
+      },
+      {
+        "pair": "implicit-pdf-table-reconstructor -> pdf-layout-table-extractor",
+        "count": 1
+      },
+      {
+        "pair": "implicit-visual-diff-reviewer -> visual-regression-checker",
+        "count": 1
+      },
+      {
+        "pair": "implicit-ci-failure-reader -> ci-failure-debugger",
+        "count": 1
+      },
+      {
+        "pair": "implicit-hf-local-model-chooser -> support-ticket-triager",
+        "count": 1
+      }
+    ],
+    "top_unacceptable_confusions": [
+      {
+        "pair": "implicit-pdf-evidence-answerer -> travel-ops-evidence-grounder",
+        "count": 1
+      },
+      {
+        "pair": "implicit-pdf-table-reconstructor -> pdf-layout-table-extractor",
+        "count": 1
+      },
+      {
+        "pair": "implicit-visual-diff-reviewer -> visual-regression-checker",
+        "count": 1
+      },
+      {
+        "pair": "implicit-ci-failure-reader -> ci-failure-debugger",
+        "count": 1
+      },
+      {
+        "pair": "implicit-hf-local-model-chooser -> support-ticket-triager",
+        "count": 1
+      }
+    ]
+  },
+  "api_usage": {
+    "embedding_api_calls": 10,
+    "embedding_cache_hits": 2401,
+    "embedding_tokens_approx": 287,
+    "rerank_api_calls": 0,
+    "rerank_cache_hits": 0,
+    "rerank_tokens_approx": 0
+  },
+  "acceptable_alternatives": {
+    "api_p2_external_api_integration": {
+      "acceptable": [
+        "api-integration-planner"
+      ],
+      "borderline": []
+    },
+    "code_p5_changelog_entry": {
+      "acceptable": [
+        "public-office-changelog-generator"
+      ],
+      "borderline": []
+    },
+    "doc_p2_document_rewriter": {
+      "acceptable": [
+        "travel-ops-rewrite-editor"
+      ],
+      "borderline": [
+        "travel-ops-summary-writer"
+      ]
+    },
+    "doc_p5_comparison_preparation": {
+      "acceptable": [
+        "legal-ops-comparison-builder"
+      ],
+      "borderline": [
+        "docs-ops-comparison-builder",
+        "writing-ops-comparison-builder"
+      ]
+    },
+    "doc_p6_conversion": {
+      "acceptable": [
+        "public-markitdown"
+      ],
+      "borderline": []
+    },
+    "obs_p6_incident_summary": {
+      "acceptable": [
+        "incident-ops-summary-writer"
+      ],
+      "borderline": []
+    },
+    "skill_p2_install_existing": {
+      "acceptable": [
+        "public-skill-installer"
+      ],
+      "borderline": []
+    }
+  },
+  "results": [
+    {
+      "prompt_id": "implicit_p1_pdf_answer",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-pdf-evidence-answerer",
+      "closest_alternatives": [
+        "implicit-pdf-table-reconstructor",
+        "pdf-question-answerer",
+        "pdf-layout-table-extractor"
+      ],
+      "instruction_text": "Read the PDF packet and answer whether travel meals after a delay are reimbursable. I need the answer and page evidence, not a reconstructed table.",
+      "gold_first_stage_rank": 13,
+      "gold_final_rank": 13,
+      "first_stage_top1": "travel-ops-evidence-grounder",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "travel-ops-evidence-grounder",
+          "score": 0.539279
+        },
+        {
+          "skill": "travel-ops-summary-writer",
+          "score": 0.536508
+        },
+        {
+          "skill": "travel-ops-compliance-checker",
+          "score": 0.531913
+        },
+        {
+          "skill": "travel-ops-risk-reviewer",
+          "score": 0.518704
+        },
+        {
+          "skill": "travel-ops-handoff-brief-writer",
+          "score": 0.518581
+        },
+        {
+          "skill": "travel-ops-quality-auditor",
+          "score": 0.513369
+        },
+        {
+          "skill": "travel-ops-artifact-packager",
+          "score": 0.510729
+        },
+        {
+          "skill": "travel-ops-rewrite-editor",
+          "score": 0.507152
+        },
+        {
+          "skill": "travel-ops-resource-linker",
+          "score": 0.505939
+        },
+        {
+          "skill": "travel-ops-scenario-planner",
+          "score": 0.502589
+        },
+        {
+          "skill": "travel-ops-field-extractor",
+          "score": 0.497025
+        },
+        {
+          "skill": "travel-ops-normalizer",
+          "score": 0.496745
+        },
+        {
+          "skill": "implicit-pdf-evidence-answerer",
+          "score": 0.493779
+        },
+        {
+          "skill": "travel-ops-timeline-builder",
+          "score": 0.492524
+        },
+        {
+          "skill": "travel-ops-intake-classifier",
+          "score": 0.486489
+        },
+        {
+          "skill": "travel-ops-acceptance-test-builder",
+          "score": 0.481677
+        },
+        {
+          "skill": "travel-ops-failure-diagnoser",
+          "score": 0.480763
+        },
+        {
+          "skill": "travel-ops-dependency-mapper",
+          "score": 0.47966
+        },
+        {
+          "skill": "travel-ops-monitoring-plan-builder",
+          "score": 0.478463
+        },
+        {
+          "skill": "travel-ops-comparison-builder",
+          "score": 0.473554
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p2_pdf_table",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-pdf-table-reconstructor",
+      "closest_alternatives": [
+        "implicit-pdf-evidence-answerer",
+        "pdf-layout-table-extractor",
+        "pdf-question-answerer"
+      ],
+      "instruction_text": "Pull the invoice rows from the PDF with page and row anchors. Keep it as structured data rather than a prose answer.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 2,
+      "first_stage_top1": "pdf-layout-table-extractor",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "pdf-layout-table-extractor",
+          "score": 0.752985
+        },
+        {
+          "skill": "implicit-pdf-table-reconstructor",
+          "score": 0.752364
+        },
+        {
+          "skill": "pdf-question-answerer",
+          "score": 0.650287
+        },
+        {
+          "skill": "implicit-pdf-evidence-answerer",
+          "score": 0.645004
+        },
+        {
+          "skill": "pdf-ocr-extractor",
+          "score": 0.636755
+        },
+        {
+          "skill": "document-field-extractor",
+          "score": 0.61892
+        },
+        {
+          "skill": "pdf-ocr-cleaner",
+          "score": 0.616261
+        },
+        {
+          "skill": "invoice-payment-checker",
+          "score": 0.609895
+        },
+        {
+          "skill": "receipt-extractor",
+          "score": 0.60699
+        },
+        {
+          "skill": "document-extractor",
+          "score": 0.59763
+        },
+        {
+          "skill": "pdf-to-docx-converter",
+          "score": 0.590371
+        },
+        {
+          "skill": "finance-ops-field-extractor",
+          "score": 0.590276
+        },
+        {
+          "skill": "pdf-layout-reviewer",
+          "score": 0.588176
+        },
+        {
+          "skill": "vendor-ops-field-extractor",
+          "score": 0.579149
+        },
+        {
+          "skill": "public-office-pdf-extraction",
+          "score": 0.573255
+        },
+        {
+          "skill": "public-office-invoice-template",
+          "score": 0.572763
+        },
+        {
+          "skill": "pdf-redaction-reviewer",
+          "score": 0.571685
+        },
+        {
+          "skill": "public-office-invoice-organizer",
+          "score": 0.564514
+        },
+        {
+          "skill": "docs-ops-field-extractor",
+          "score": 0.56315
+        },
+        {
+          "skill": "public-pdf",
+          "score": 0.562714
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p3_browser_flow",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-browser-flow-investigator",
+      "closest_alternatives": [
+        "implicit-visual-diff-reviewer",
+        "browser-flow-tester",
+        "visual-regression-checker"
+      ],
+      "instruction_text": "The checkout button stops working after a coupon is applied. Reproduce the click path and use console or network evidence to explain the failure.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "implicit-browser-flow-investigator",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "implicit-browser-flow-investigator",
+          "score": 0.402933
+        },
+        {
+          "skill": "ecommerce-ops-acceptance-test-builder",
+          "score": 0.398765
+        },
+        {
+          "skill": "ecommerce-ops-compliance-checker",
+          "score": 0.381067
+        },
+        {
+          "skill": "web-form-filler",
+          "score": 0.376834
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.37625
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.368893
+        },
+        {
+          "skill": "ecommerce-ops-comparison-builder",
+          "score": 0.366042
+        },
+        {
+          "skill": "retail-ops-compliance-checker",
+          "score": 0.364892
+        },
+        {
+          "skill": "retail-ops-acceptance-test-builder",
+          "score": 0.364305
+        },
+        {
+          "skill": "ecommerce-ops-evidence-grounder",
+          "score": 0.363375
+        },
+        {
+          "skill": "ecommerce-ops-rewrite-editor",
+          "score": 0.360288
+        },
+        {
+          "skill": "ecommerce-ops-quality-auditor",
+          "score": 0.359755
+        },
+        {
+          "skill": "ecommerce-ops-failure-diagnoser",
+          "score": 0.357629
+        },
+        {
+          "skill": "ecommerce-ops-artifact-packager",
+          "score": 0.354273
+        },
+        {
+          "skill": "ecommerce-ops-normalizer",
+          "score": 0.351154
+        },
+        {
+          "skill": "ecommerce-ops-risk-reviewer",
+          "score": 0.348248
+        },
+        {
+          "skill": "retail-ops-quality-auditor",
+          "score": 0.34774
+        },
+        {
+          "skill": "implicit-visual-diff-reviewer",
+          "score": 0.347056
+        },
+        {
+          "skill": "ecommerce-ops-intake-classifier",
+          "score": 0.346351
+        },
+        {
+          "skill": "playwright-flow-debugger",
+          "score": 0.343758
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p4_visual_diff",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-visual-diff-reviewer",
+      "closest_alternatives": [
+        "implicit-browser-flow-investigator",
+        "visual-regression-checker",
+        "browser-flow-tester"
+      ],
+      "instruction_text": "Compare the baseline and new screenshots for layout shifts, clipping, spacing, and text overflow across desktop and mobile.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 2,
+      "first_stage_top1": "visual-regression-checker",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "visual-regression-checker",
+          "score": 0.602249
+        },
+        {
+          "skill": "implicit-visual-diff-reviewer",
+          "score": 0.55386
+        },
+        {
+          "skill": "web-performance-budget-checker",
+          "score": 0.493505
+        },
+        {
+          "skill": "web-page-snapshotter",
+          "score": 0.484617
+        },
+        {
+          "skill": "implicit-browser-flow-investigator",
+          "score": 0.465155
+        },
+        {
+          "skill": "slide-deck-visual-auditor",
+          "score": 0.446058
+        },
+        {
+          "skill": "frontend-debugger",
+          "score": 0.442333
+        },
+        {
+          "skill": "public-addy-web-core-web-vitals",
+          "score": 0.432388
+        },
+        {
+          "skill": "accessibility-checker",
+          "score": 0.43186
+        },
+        {
+          "skill": "pdf-layout-reviewer",
+          "score": 0.431148
+        },
+        {
+          "skill": "web-ui-tester",
+          "score": 0.425997
+        },
+        {
+          "skill": "accessibility-interaction-auditor",
+          "score": 0.420631
+        },
+        {
+          "skill": "web-ops-comparison-builder",
+          "score": 0.419194
+        },
+        {
+          "skill": "web-ops-normalizer",
+          "score": 0.41667
+        },
+        {
+          "skill": "mobile-ops-evidence-grounder",
+          "score": 0.413937
+        },
+        {
+          "skill": "mobile-ops-rewrite-editor",
+          "score": 0.412323
+        },
+        {
+          "skill": "mobile-ops-comparison-builder",
+          "score": 0.411668
+        },
+        {
+          "skill": "web-ops-quality-auditor",
+          "score": 0.411519
+        },
+        {
+          "skill": "playwright-flow-debugger",
+          "score": 0.410845
+        },
+        {
+          "skill": "web-ops-rewrite-editor",
+          "score": 0.408988
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p5_ci_failure",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-ci-failure-reader",
+      "closest_alternatives": [
+        "implicit-review-comment-planner",
+        "ci-log-root-cause-debugger",
+        "repo-code-reviewer"
+      ],
+      "instruction_text": "Look at the CI log and find the first meaningful error plus the smallest fix and rerun sequence.",
+      "gold_first_stage_rank": 3,
+      "gold_final_rank": 3,
+      "first_stage_top1": "ci-failure-debugger",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "ci-failure-debugger",
+          "score": 0.685869
+        },
+        {
+          "skill": "ci-log-root-cause-debugger",
+          "score": 0.684607
+        },
+        {
+          "skill": "implicit-ci-failure-reader",
+          "score": 0.683822
+        },
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.534437
+        },
+        {
+          "skill": "deployment-build-triager",
+          "score": 0.515436
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.50526
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.475921
+        },
+        {
+          "skill": "repo-ops-failure-diagnoser",
+          "score": 0.470438
+        },
+        {
+          "skill": "devops-ops-quality-auditor",
+          "score": 0.46376
+        },
+        {
+          "skill": "repo-ops-quality-auditor",
+          "score": 0.462964
+        },
+        {
+          "skill": "pr-review-comment-resolver",
+          "score": 0.4567
+        },
+        {
+          "skill": "resilience-pattern-reviewer",
+          "score": 0.456296
+        },
+        {
+          "skill": "devops-ops-failure-diagnoser",
+          "score": 0.456129
+        },
+        {
+          "skill": "repo-code-reviewer",
+          "score": 0.454851
+        },
+        {
+          "skill": "devops-ops-evidence-grounder",
+          "score": 0.453188
+        },
+        {
+          "skill": "repo-ops-evidence-grounder",
+          "score": 0.440729
+        },
+        {
+          "skill": "repo-ops-artifact-packager",
+          "score": 0.438973
+        },
+        {
+          "skill": "devops-ops-normalizer",
+          "score": 0.437124
+        },
+        {
+          "skill": "ci-cd-pipeline-builder",
+          "score": 0.434376
+        },
+        {
+          "skill": "public-swebench-gitlab-ci-patterns",
+          "score": 0.434293
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p6_review_comments",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-review-comment-planner",
+      "closest_alternatives": [
+        "implicit-ci-failure-reader",
+        "pr-review-comment-resolver",
+        "repo-code-reviewer"
+      ],
+      "instruction_text": "Use the reviewer comments to make an action plan and response map for each thread; do not do a fresh code review.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "implicit-review-comment-planner",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "implicit-review-comment-planner",
+          "score": 0.751026
+        },
+        {
+          "skill": "pr-review-comment-resolver",
+          "score": 0.694368
+        },
+        {
+          "skill": "review-comment-resolver",
+          "score": 0.662569
+        },
+        {
+          "skill": "code-reviewer",
+          "score": 0.600263
+        },
+        {
+          "skill": "pr-reviewer",
+          "score": 0.575902
+        },
+        {
+          "skill": "email-thread-summariser",
+          "score": 0.575114
+        },
+        {
+          "skill": "repo-code-reviewer",
+          "score": 0.554346
+        },
+        {
+          "skill": "security-code-reviewer",
+          "score": 0.544935
+        },
+        {
+          "skill": "repo-ops-rewrite-editor",
+          "score": 0.542762
+        },
+        {
+          "skill": "release-note-writer",
+          "score": 0.537379
+        },
+        {
+          "skill": "community-ops-risk-reviewer",
+          "score": 0.535897
+        },
+        {
+          "skill": "community-ops-dependency-mapper",
+          "score": 0.53588
+        },
+        {
+          "skill": "repo-ops-dependency-mapper",
+          "score": 0.535511
+        },
+        {
+          "skill": "email-action-extractor",
+          "score": 0.535199
+        },
+        {
+          "skill": "api-security-threat-reviewer",
+          "score": 0.533476
+        },
+        {
+          "skill": "research-ops-monitoring-plan-builder",
+          "score": 0.530013
+        },
+        {
+          "skill": "followup-reply-writer",
+          "score": 0.528926
+        },
+        {
+          "skill": "support-ops-dependency-mapper",
+          "score": 0.528432
+        },
+        {
+          "skill": "support-ops-risk-reviewer",
+          "score": 0.527091
+        },
+        {
+          "skill": "repo-ops-handoff-brief-writer",
+          "score": 0.522815
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p7_hf_dataset",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-hf-dataset-inspector",
+      "closest_alternatives": [
+        "implicit-hf-local-model-chooser",
+        "hf-dataset-viewer-inspector",
+        "hf-local-model-selector"
+      ],
+      "instruction_text": "Before modelling, inspect the dataset splits, columns, row examples, labels, and schema caveats.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "implicit-hf-dataset-inspector",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "implicit-hf-dataset-inspector",
+          "score": 0.710263
+        },
+        {
+          "skill": "hf-dataset-viewer-inspector",
+          "score": 0.647541
+        },
+        {
+          "skill": "ml-ops-normalizer",
+          "score": 0.568219
+        },
+        {
+          "skill": "dataset-ops-normalizer",
+          "score": 0.567511
+        },
+        {
+          "skill": "dataset-ops-quality-auditor",
+          "score": 0.56745
+        },
+        {
+          "skill": "dataset-ops-evidence-grounder",
+          "score": 0.552194
+        },
+        {
+          "skill": "ml-ops-quality-auditor",
+          "score": 0.550656
+        },
+        {
+          "skill": "dataset-ops-dependency-mapper",
+          "score": 0.54566
+        },
+        {
+          "skill": "dataset-ops-scenario-planner",
+          "score": 0.544928
+        },
+        {
+          "skill": "dataset-ops-compliance-checker",
+          "score": 0.542422
+        },
+        {
+          "skill": "dataset-ops-intake-classifier",
+          "score": 0.539721
+        },
+        {
+          "skill": "dataset-ops-field-extractor",
+          "score": 0.539572
+        },
+        {
+          "skill": "ml-ops-field-extractor",
+          "score": 0.539059
+        },
+        {
+          "skill": "dataset-ops-risk-reviewer",
+          "score": 0.537875
+        },
+        {
+          "skill": "dataset-ops-summary-writer",
+          "score": 0.53683
+        },
+        {
+          "skill": "dataset-ops-handoff-brief-writer",
+          "score": 0.536385
+        },
+        {
+          "skill": "dataset-ops-rewrite-editor",
+          "score": 0.534777
+        },
+        {
+          "skill": "dataset-ops-failure-diagnoser",
+          "score": 0.53333
+        },
+        {
+          "skill": "dataset-ops-acceptance-test-builder",
+          "score": 0.533265
+        },
+        {
+          "skill": "ml-ops-artifact-packager",
+          "score": 0.532857
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p8_hf_model",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-hf-local-model-chooser",
+      "closest_alternatives": [
+        "implicit-hf-dataset-inspector",
+        "hf-local-model-selector",
+        "hf-dataset-viewer-inspector"
+      ],
+      "instruction_text": "Choose a local model and quantization that can run on an 8 GB laptop for ticket classification.",
+      "gold_first_stage_rank": 2,
+      "gold_final_rank": 2,
+      "first_stage_top1": "support-ticket-triager",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "support-ticket-triager",
+          "score": 0.522847
+        },
+        {
+          "skill": "implicit-hf-local-model-chooser",
+          "score": 0.517671
+        },
+        {
+          "skill": "hf-local-model-selector",
+          "score": 0.512604
+        },
+        {
+          "skill": "support-ops-intake-classifier",
+          "score": 0.512335
+        },
+        {
+          "skill": "localization-ops-intake-classifier",
+          "score": 0.500732
+        },
+        {
+          "skill": "support-ops-summary-writer",
+          "score": 0.468703
+        },
+        {
+          "skill": "ml-ops-intake-classifier",
+          "score": 0.467651
+        },
+        {
+          "skill": "support-ops-ops-intake-classifier",
+          "score": 0.465535
+        },
+        {
+          "skill": "support-ops-evidence-grounder",
+          "score": 0.465319
+        },
+        {
+          "skill": "support-ops-normalizer",
+          "score": 0.462746
+        },
+        {
+          "skill": "training-ops-intake-classifier",
+          "score": 0.461409
+        },
+        {
+          "skill": "docs-ops-intake-classifier",
+          "score": 0.459927
+        },
+        {
+          "skill": "travel-ops-intake-classifier",
+          "score": 0.459665
+        },
+        {
+          "skill": "support-ops-priority-ranker",
+          "score": 0.457201
+        },
+        {
+          "skill": "procurement-ops-intake-classifier",
+          "score": 0.457068
+        },
+        {
+          "skill": "support-ops-comparison-builder",
+          "score": 0.45626
+        },
+        {
+          "skill": "support-ops-rewrite-editor",
+          "score": 0.455056
+        },
+        {
+          "skill": "support-ops-quality-auditor",
+          "score": 0.454156
+        },
+        {
+          "skill": "support-ops-artifact-packager",
+          "score": 0.454038
+        },
+        {
+          "skill": "qa-ops-intake-classifier",
+          "score": 0.452442
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p9_alert_rule",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-slo-alert-author",
+      "closest_alternatives": [
+        "implicit-trace-path-diagnoser",
+        "prometheus-alert-rule-writer",
+        "distributed-trace-investigator"
+      ],
+      "instruction_text": "Create alert rules from these checkout SLO metrics with windows, severity labels, and verification queries.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "implicit-slo-alert-author",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "implicit-slo-alert-author",
+          "score": 0.808645
+        },
+        {
+          "skill": "prometheus-alert-rule-writer",
+          "score": 0.758777
+        },
+        {
+          "skill": "slo-breach-checker",
+          "score": 0.701798
+        },
+        {
+          "skill": "sre-ops-monitoring-plan-builder",
+          "score": 0.629716
+        },
+        {
+          "skill": "slo-breach-narrative-writer",
+          "score": 0.620662
+        },
+        {
+          "skill": "sre-ops-risk-reviewer",
+          "score": 0.616602
+        },
+        {
+          "skill": "sre-ops-quality-auditor",
+          "score": 0.6165
+        },
+        {
+          "skill": "sre-ops-compliance-checker",
+          "score": 0.606586
+        },
+        {
+          "skill": "sre-ops-acceptance-test-builder",
+          "score": 0.604976
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.603634
+        },
+        {
+          "skill": "dashboard-ops-acceptance-test-builder",
+          "score": 0.602502
+        },
+        {
+          "skill": "sre-ops-normalizer",
+          "score": 0.601718
+        },
+        {
+          "skill": "metrics-root-cause-diagnoser",
+          "score": 0.592641
+        },
+        {
+          "skill": "metrics-overview",
+          "score": 0.591183
+        },
+        {
+          "skill": "sre-ops-evidence-grounder",
+          "score": 0.590755
+        },
+        {
+          "skill": "dashboard-ops-monitoring-plan-builder",
+          "score": 0.590559
+        },
+        {
+          "skill": "repo-ops-monitoring-plan-builder",
+          "score": 0.590157
+        },
+        {
+          "skill": "dashboard-ops-compliance-checker",
+          "score": 0.589533
+        },
+        {
+          "skill": "dashboard-ops-risk-reviewer",
+          "score": 0.584417
+        },
+        {
+          "skill": "sre-ops-summary-writer",
+          "score": 0.584401
+        }
+      ]
+    },
+    {
+      "prompt_id": "implicit_p10_trace_path",
+      "family": "implicit_field_stress",
+      "gold_skill": "implicit-trace-path-diagnoser",
+      "closest_alternatives": [
+        "implicit-slo-alert-author",
+        "distributed-trace-investigator",
+        "prometheus-alert-rule-writer"
+      ],
+      "instruction_text": "Use these distributed trace spans to locate where checkout latency is introduced across services.",
+      "gold_first_stage_rank": 1,
+      "gold_final_rank": 1,
+      "first_stage_top1": "implicit-trace-path-diagnoser",
+      "candidate_count": 2401,
+      "ranking": [
+        {
+          "skill": "implicit-trace-path-diagnoser",
+          "score": 0.641438
+        },
+        {
+          "skill": "distributed-trace-investigator",
+          "score": 0.614753
+        },
+        {
+          "skill": "resilience-pattern-reviewer",
+          "score": 0.534571
+        },
+        {
+          "skill": "ecommerce-ops-monitoring-plan-builder",
+          "score": 0.498273
+        },
+        {
+          "skill": "service-dependency-mapper",
+          "score": 0.491009
+        },
+        {
+          "skill": "ecommerce-ops-dependency-mapper",
+          "score": 0.488878
+        },
+        {
+          "skill": "ecommerce-ops-timeline-builder",
+          "score": 0.485992
+        },
+        {
+          "skill": "public-swebench-distributed-tracing",
+          "score": 0.481743
+        },
+        {
+          "skill": "ecommerce-ops-acceptance-test-builder",
+          "score": 0.477149
+        },
+        {
+          "skill": "latency-anomaly-detector",
+          "score": 0.475614
+        },
+        {
+          "skill": "cloud-monitoring-configurer",
+          "score": 0.474966
+        },
+        {
+          "skill": "retail-ops-monitoring-plan-builder",
+          "score": 0.468376
+        },
+        {
+          "skill": "ecommerce-ops-failure-diagnoser",
+          "score": 0.46658
+        },
+        {
+          "skill": "logistics-ops-monitoring-plan-builder",
+          "score": 0.464092
+        },
+        {
+          "skill": "supply-chain-ops-acceptance-test-builder",
+          "score": 0.463871
+        },
+        {
+          "skill": "retail-ops-acceptance-test-builder",
+          "score": 0.463791
+        },
+        {
+          "skill": "supply-chain-ops-monitoring-plan-builder",
+          "score": 0.462126
+        },
+        {
+          "skill": "travel-ops-monitoring-plan-builder",
+          "score": 0.459192
+        },
+        {
+          "skill": "service-mesh-traffic-debugger",
+          "score": 0.458733
+        },
+        {
+          "skill": "ecommerce-ops-resource-linker",
+          "score": 0.457198
+        }
+      ]
+    }
+  ]
+}

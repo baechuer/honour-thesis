@@ -1,3 +1,47 @@
 \chapter{Prompt and Skill Examples}
 
-\placeholder{Add representative prompt examples from each controlled cluster. For each example, show the user request, gold skill, plausible distractors, and why the gold label is procedurally correct.}
+This appendix gives representative examples of the intended benchmark pressure. The exact prompt files are stored under \path{skill_benchmark/prompts/} and \path{skill_benchmark/prompts_public_gold/}.
+
+\section{PDF Table Extraction}
+
+\textbf{User request:} extract a table from a PDF while preserving row and column structure.
+
+\textbf{Gold skill:} PDF layout table extractor.
+
+\textbf{Plausible alternatives:} PDF question answerer, PDF OCR cleaner, document field extractor, PDF-to-DOCX converter.
+
+\textbf{Procedural distinction:} the gold skill must inspect layout and reconstruct table structure. A PDF question-answering skill may ground answers in pages but not reconstruct tables. OCR cleaning handles scanned text uncertainty. Conversion changes format but is not optimized for table reconstruction.
+
+\section{GitHub CI Root Cause}
+
+\textbf{User request:} inspect a failed CI run and identify the likely root cause from logs.
+
+\textbf{Gold skill:} CI log root-cause debugger.
+
+\textbf{Plausible alternatives:} deployment build triager, PR review-comment resolver, repository code reviewer, release changelog generator.
+
+\textbf{Procedural distinction:} the gold skill must parse CI logs and isolate the failing command, error, dependency, or environment condition. Review-comment resolution and code review are semantically adjacent GitHub workflows but require different inputs and outputs.
+
+\section{Observability Trace Diagnosis}
+
+\textbf{User request:} diagnose latency across a distributed trace path.
+
+\textbf{Gold skill:} distributed trace investigator or implicit trace path diagnoser, depending on the prompt stratum.
+
+\textbf{Plausible alternatives:} latency anomaly detector, SLO breach checker, service dependency mapper, metrics overview.
+
+\textbf{Procedural distinction:} trace diagnosis follows spans and service boundaries. A metrics overview summarizes signals, and a dependency mapper describes architecture, but neither necessarily reconstructs a trace path.
+
+\section{Public-Gold Example: Figma Implementation}
+
+\textbf{User request:} implement an existing Figma node as production UI code with close visual parity.
+
+\textbf{Gold skill:} public Figma implement-design skill.
+
+\textbf{Plausible alternatives:} broad Figma parent skill, Figma generate-design skill, generic frontend implementation skill.
+
+\textbf{Procedural distinction:} the gold skill targets an existing Figma node and produces code. A broad parent skill may route to several subskills, while generate-design writes or creates design content rather than implementing an existing node.
+
+\section{Public-Gold Ambiguity Example}
+
+Some public-gold prompts are not stable strict targets. For example, a public OCR skill may be valid for scanned PDF OCR, but a controlled OCR-cleaning skill may be better if the prompt asks for uncertain recognition regions and page anchors. These cases are either revised, excluded, or marked with acceptable alternatives before final reporting.

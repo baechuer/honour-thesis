@@ -2,82 +2,221 @@
 
 \section{Experimental Overview}
 
-The methodology is a controlled comparison of representation-and-retrieval conditions. Each method receives the same user prompts and skill library, produces a ranked list of candidate skills, and is evaluated against gold labels and acceptable alternatives.
+The methodology is a controlled comparison of representation-and-retrieval conditions. Each method receives the same user prompts and skill library, produces a ranked list of candidate skills, and is evaluated against gold labels and documented acceptable alternatives.
 
-The independent variables are the selection representation and retrieval policy. The main dependent measures are top-1 accuracy, top-k recall, mean reciprocal rank, context cost, latency, and qualitative failure type.
+The methodology treats skill selection as a \emph{two-factor design}. The first factor is the representation layer: what information about each skill is visible to the selector. The second factor is the retrieval architecture: how that representation is searched, ranked, or reranked. This separation is essential because a selector can fail either because the representation has lost the relevant procedural distinction, or because the retrieval architecture fails to use information that is present.
+
+The independent variables are therefore:
+
+\begin{itemize}
+  \item the selection representation exposed to the retriever;
+  \item the first-stage retrieval strategy;
+  \item whether a reranker is used;
+  \item whether the reranker uses selection information as structured fields or as ordinary text.
+\end{itemize}
+
+The main dependent measures are top-1 accuracy, top-k recall, mean reciprocal rank (MRR), background or non-core false positives, candidate budget, context cost, latency, and qualitative failure type.
+
+The intended final experiment matrix is shown in Table \ref{tab:method-crossed-design}. Rows correspond to representation layers and columns correspond to retrieval/reranking architectures. A result is only interpreted as a representation effect when the retriever, reranker, prompt stratum, skill library scale, and candidate budget are held fixed. A result is only interpreted as an architecture effect when the representation layer is held fixed.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.18\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}}
+\toprule
+Representation layer & Embedding only & Neural reranker & Field-aware reranker & Tree/graph retrieval \\
+\midrule
+R1 flat metadata & Qwen public run; controlled rerun needed. SkillRouter not run. & Qwen public run; controlled rerun needed. SkillRouter not run. & Diagnostic only; weak procedural fields. & Not central. \\
+R2 structured procedural & Qwen public run; controlled rerun needed. SkillRouter not run. & Qwen public run; controlled rerun needed. SkillRouter not run. & Main field-aware target. & Candidate ablation. \\
+R3 dependency/resource-aware & Partial local ablations. & Not complete. & Dependency and boundary ablation. & Candidate graph ablation. \\
+Full \texttt{SKILL.md} artifact & Qwen and SkillRouter run. & Qwen and SkillRouter run. & Qwen or SkillRouter first stage plus local field rerank. & Requires field extraction first. \\
+\bottomrule
+\end{tabular}
+\caption{Crossed representation-layer and retrieval-architecture design. Blank or partial cells are methodological gaps rather than negative results.}
+\label{tab:method-crossed-design}
+\end{table}
+
+This crossed design also explains why provider results must be interpreted carefully. For example, Qwen reranking over R2 structured cards is not directly comparable with SkillRouter reranking over full \texttt{SKILL.md} artifacts. That comparison changes both the model and the representation. The fair comparison requires running each architecture against the same representation layer, especially R1, R2, and full skill text.
 
 \section{Representation Conditions}
 
-The current experiments include the following representation conditions:
+The experiments use the following representation conditions:
+
+\begin{description}
+  \item[R1 flat metadata.] Skill name, family, and short description. This approximates the compact representation that a main agent might see in a progressive-disclosure setup.
+  \item[Full artifact text.] The complete \texttt{SKILL.md} text. This exposes the richest information but is expensive and can dilute the signal with examples, resources, and broad documentation.
+  \item[R2 structured procedural card.] Extracted fields for use conditions, preconditions, workflow, outputs, and boundaries.
+  \item[R3 dependency/resource-aware card.] R2 plus external dependencies, resource signals, public-source metadata, and bundled resource files.
+  \item[R4 graph edges.] A typed edge view derived from R2/R3 fields. It is prepared for M5 graph retrieval and graph-aware reranking.
+\end{description}
+
+The thesis does not assume that public skill authors always write clean fields. The representation layer is allowed to extract or normalize fields from prose. This is important because the public skill audit shows that many selection signals are present but not always explicitly labelled.
+
+The current fixed selection-information groups are task/use condition, input/precondition, output/artifact, workflow/procedure, dependency/resource/platform, boundary/not-for, and hierarchy/task role. These are not all simple positive retrieval text. Task, output, and workflow are primary disambiguation fields; dependency, boundary, and hierarchy are conditional feasibility or guardrail fields.
+
+\section{Retrieval and Reranking Methods}
+
+The method families are:
+
+\begin{description}
+  \item[M0 progressive disclosure.] The main agent sees compact skill cards and decides which full skill documents to load. This is the normal-agent baseline, but it becomes expensive at large scale.
+  \item[M1 flat lexical retrieval.] BM25 or TF-IDF over R1. This is a control for lexical cueing rather than a proposed final architecture.
+  \item[M2 dense retrieval.] Embedding retrieval over R1, R2, or full artifacts. Current provider experiments use Qwen \texttt{text-embedding-v4} and the released SkillRouter embedding model; MiniLM is retained mainly as a local construction and validation model.
+  \item[M3 structured-card retrieval.] Retrieval over serialized R2 procedural fields. This tests whether procedural information helps when exposed in a structured card.
+  \item[M4 tree routing.] A planned hierarchy-based architecture: route from root to family or cluster, then to skill. This tests scale efficiency and branch-exclusion failure.
+  \item[M5 graph retrieval.] A planned graph-based architecture over R4 edges. This tests whether explicit relations among triggers, outputs, workflow steps, dependencies, resources, and boundaries help beyond serialized text.
+  \item[M6-v0 diagnostic schema reranking.] The current deterministic local schema reranker. It uses weighted lexical overlap over extracted fields. It is transparent and useful for diagnosis, but too crude to be the final structure-aware method.
+  \item[M6-v1 field-aware rerank.] The current first prototype of the proposed structure-aware method. It parses the request into fields and compares those fields against extracted skill fields.
+  \item[M7/M8 provider retrieval and reranking.] Provider or hosted-model embedding retrieval and neural reranking. Current implementations include Qwen embeddings with Qwen reranking, and SkillRouter embedding with SkillRouter reranking on Hugging Face Jobs.
+\end{description}
+
+\section{M6-v0 Diagnostic Reranker}
+
+The existing schema reranker scores lexical overlap between the user request and skill fields. It assigns weight to skill name, description, use conditions, output shape, preconditions, workflow, dependencies/resources, and a negative boundary penalty.
+
+This method is intentionally simple. It tests whether extracted procedural fields contain useful information, but it has limitations:
 
 \begin{itemize}
-  \item \textbf{R1 flat metadata:} skill name, family, tags, and short description.
-  \item \textbf{Full artifact text:} the full \texttt{SKILL.md} text.
-  \item \textbf{R2 structured procedural card:} explicit procedural fields such as use cases, preconditions, workflow, outputs, and negative boundaries.
-  \item \textbf{R3 dependency/resource-aware representation:} structured procedural fields plus dependency and resource signals.
-  \item \textbf{R4 graph edges:} explicit relation files for future graph experiments.
+  \item it does not parse the user request into structured requirements;
+  \item it uses lexical overlap rather than semantic field matching;
+  \item it can overweight tool or resource words;
+  \item it does not reliably detect broad parent/router skills;
+  \item it treats extracted public-skill fields as clean even when extraction is noisy.
 \end{itemize}
 
-\placeholder{Clarify which R-levels are used in the final experiments. If R3 and R4 are not central, explain that they are prepared but not fully evaluated.}
+Therefore, M6-v0 should be reported as diagnostic evidence, not as the final proposed retrieval architecture.
 
-\section{Retrieval Strategies}
+\section{M6-v1 Field-Aware Procedural Reranking}
 
-The current method families are:
+The M6-v1 method better matches the thesis claim. Its pipeline is:
+
+\begin{enumerate}
+  \item A first-stage retriever returns a top-50 or top-100 candidate set.
+  \item A request parser extracts request-side fields: intended action, input or precondition, desired output, workflow requirement, tool/platform requirement, explicit exclusion, and success criterion.
+  \item The reranker compares request fields to R2/R3 skill fields.
+  \item The final score combines first-stage retrieval score with field matches and penalties.
+\end{enumerate}
+
+A transparent starting score is:
+
+\begin{verbatim}
+score =
+  0.30 * normalized_first_stage_score
++ 0.20 * use_when_match
++ 0.20 * output_match
++ 0.15 * workflow_match
++ 0.10 * input_precondition_match
++ 0.05 * success_criterion_match
++ conditional_dependency_bonus
+- boundary_mismatch_penalty
+- hierarchy_router_penalty
+\end{verbatim}
+
+The purpose is not to hand-tune the benchmark until this score wins. The purpose is to test whether extracted selection information improves selection when it is used as field-to-field evidence rather than appended as plain text.
+
+The implemented prototype should be interpreted as M6-v1-local, a lexical field-aware prototype. It is stronger than M6-v0 because it includes request-side field extraction and candidate-recall decomposition. However, it is not yet a robust semantic field matcher. The request parser uses cue-based extraction, and the field matcher mainly uses token overlap rather than learned semantic entailment or contradiction detection. A later version could replace the matcher with a stronger neural or LLM-assisted field matcher while keeping the same information taxonomy.
+
+This distinction matters for interpretation. If M6-v1-local improves a controlled result, the evidence supports the value of the extracted fields and field-to-field matching under a transparent scoring rule. It does not yet prove that the scoring rule is the best possible structure-aware architecture. Conversely, if M6-v1-local fails on public-authored skills, that failure may come from noisy field extraction, weak request parsing, lexical mismatch, public-skill breadth, or duplicated public skills. These sources must be separated before making a general claim about structure-aware retrieval.
+
+The current M6-v1-local analysis therefore records candidate recall separately from final top-1. A first-stage failure means the gold skill never entered the reranker candidate set. A reranking failure means the gold skill was present but not placed first. This separation is important because dense retrievers may be good high-recall candidate generators even when final ordering remains poor.
+
+\section{SkillRouter Hybrid Experiment}
+
+To compare the proposed field-aware reranker against a strong skill-specific neural baseline, the thesis also evaluates a hybrid pipeline:
+
+\begin{enumerate}
+  \item SkillRouter's released embedding model, \texttt{pipizhao/SkillRouter-Embedding-0.6B}, embeds full skill artifacts and the user request.
+  \item The embedding model produces a first-stage ranked candidate list.
+  \item Either SkillRouter's released reranker, \texttt{pipizhao/SkillRouter-Reranker-0.6B}, reranks top-20 candidates, or the M6-v1-local field-aware reranker reranks top-20 or top-100 candidates.
+\end{enumerate}
+
+This experiment was executed inside a Hugging Face Jobs \texttt{t4-small} GPU container. The benchmark snapshot, including skills, prompts, representation files, and scripts, was uploaded to a private Hugging Face dataset. The container downloaded the snapshot, loaded the SkillRouter model weights from Hugging Face, computed first-stage embeddings, and then ran either the SkillRouter neural reranker or the local M6-v1 field-aware reranker inside the same remote environment. Embeddings were not transferred back to the laptop for local reranking.
+
+This design gives a comparison between two second-stage selection policies over the same strong first-stage retriever: learned SkillRouter reranking versus explicit procedural field matching. Candidate budget must be held fixed for a direct reranker comparison. The SkillRouter neural reranker has currently been run at a top-20 budget, while M6-v1-local has been run at both top-20 and top-100 budgets. Therefore, top-20 results are the budget-fair comparison; top-100 M6-v1-local results are reported as a larger-candidate-budget condition unless SkillRouter reranking is also evaluated at top-100.
+
+\section{M4 Tree Routing}
+
+M4 represents skills in a hierarchy:
+
+\begin{verbatim}
+root -> family -> optional cluster -> skill
+\end{verbatim}
+
+The method first routes the request to one or more families, then ranks only skills inside the chosen branch or branches. It should report:
 
 \begin{itemize}
-  \item \textbf{M0 progressive disclosure:} the main agent sees visible skill cards and decides which full skill documents to load.
-  \item \textbf{M1 lexical flat retrieval:} BM25 or TF-IDF over flat metadata.
-  \item \textbf{M2 embedding retrieval:} dense retrieval over descriptions or full skill artifacts.
-  \item \textbf{M3 schema-based retrieval:} structured scoring over procedural fields.
-  \item \textbf{M6 local hybrid retrieval:} first-stage retrieval followed by deterministic schema reranking.
-  \item \textbf{M7 provider embedding retrieval:} API-based dense retrieval using Qwen embeddings.
-  \item \textbf{M8 provider neural reranking:} Qwen embedding retrieval followed by Qwen reranking.
-  \item \textbf{M8b provider retrieval plus local schema reranking:} Qwen first-stage retrieval followed by deterministic procedural reranking.
+  \item family top-1 accuracy;
+  \item family top-n recall;
+  \item final skill top-1/top-5/MRR;
+  \item gold-excluded-by-branch rate;
+  \item candidate reduction ratio;
+  \item context and latency cost.
 \end{itemize}
 
-Tree-based and graph-based strategies are currently planned but not yet fully implemented. They remain relevant to the thesis design, but the current strongest evidence comes from full-artifact embedding retrieval combined with procedural schema reranking.
+M4 mainly tests scalability and early-routing risk. It is not the central method for discovering which procedural fields matter.
 
-\section{Schema Reranking}
+\section{M5 Graph Retrieval}
 
-The local schema reranker is deterministic. It scores overlap between the user request and structured skill fields, with stronger weights assigned to fields that should reflect procedural suitability. These include use cases, outputs, preconditions, workflow steps, dependencies, resources, and negative boundaries. The final reranked score combines the first-stage retrieval score with the schema score.
+M5 uses a heterogeneous graph over skills and information nodes. The current R4 export includes typed edges such as:
 
-This method is intentionally simple. Its purpose is not to claim that hand-weighted overlap is the best possible architecture, but to test whether explicit procedural fields contain information that helps resolve semantically confusable retrieval cases.
+\begin{itemize}
+  \item \texttt{belongs\_to\_family};
+  \item \texttt{triggered\_by};
+  \item \texttt{avoid\_when};
+  \item \texttt{has\_precondition};
+  \item \texttt{has\_workflow\_step};
+  \item \texttt{produces\_output};
+  \item \texttt{requires\_dependency};
+  \item \texttt{has\_resource\_signal};
+  \item \texttt{uses\_resource};
+  \item \texttt{derived\_from\_public\_skill}.
+\end{itemize}
 
-\placeholder{Insert the final exact weighting formula and justify each field weight. Include an ablation if time permits.}
+Two graph variants are planned. M5a is graph-only retrieval: the request is parsed into requirement nodes and matched to adjacent skill nodes. M5b is hybrid dense-plus-graph reranking: a dense retriever first returns a candidate set, and graph scoring reranks only that subgraph.
+
+Not all edge types should contribute to ranking. For example, \texttt{derived\_from\_public\_skill} is provenance evidence for audit and reporting, not retrieval evidence. Similarly, benchmark-derived relations such as manually listed alternatives should not be used by M5, because they would leak evaluation structure into the selector.
+
+Graph edge ablations should test:
+
+\begin{itemize}
+  \item family only;
+  \item trigger only;
+  \item trigger plus output;
+  \item trigger plus output plus workflow;
+  \item adding input/precondition;
+  \item adding dependency/resource;
+  \item adding avoid penalties;
+  \item full graph.
+\end{itemize}
+
+This allows the thesis to distinguish an information claim from an architecture claim. If M5 improves over M6-v1, explicit relation structure may be useful. If M5 does not improve, the thesis can still argue that the fields matter while graph structure may be unnecessary overhead.
 
 \section{Evaluation Metrics}
 
 The retrieval metrics are:
 
 \begin{itemize}
-  \item \textbf{Top-1 accuracy:} whether the top-ranked skill is the gold or acceptable skill.
-  \item \textbf{Top-k recall:} whether the gold or acceptable skill appears within the top-k candidate set.
-  \item \textbf{Mean reciprocal rank:} how highly the gold skill is ranked.
-  \item \textbf{Non-core top-1 rate:} how often a background skill outranks the intended controlled skill.
+  \item \textbf{Strict top-1 accuracy:} whether the top-ranked skill is the gold skill.
+  \item \textbf{Gold-or-acceptable top-1 accuracy:} whether the top-ranked skill is either the gold skill or a documented acceptable alternative.
+  \item \textbf{Strict top-k recall:} whether the gold skill appears within the top-k candidate set.
+  \item \textbf{Gold-or-acceptable top-k recall:} whether the gold skill or a documented acceptable alternative appears within the top-k candidate set.
+  \item \textbf{Mean reciprocal rank:} how highly the strict gold skill is ranked.
+  \item \textbf{Non-core top-1 rate:} how often a background or public skill outranks the intended controlled skill.
+  \item \textbf{Candidate recall:} whether the first-stage retriever includes the gold skill before reranking.
 \end{itemize}
 
-The efficiency metrics are:
+Strict and acceptable scores are reported separately because they answer different questions. Strict scoring tests whether the selector recovers the intended benchmark target. Acceptable scoring tests whether the selector found a near-equivalent skill that may still be reasonable for task success. Public-gold results require extra care: a public skill may be the correct target, so a generic non-core rate is not meaningful for that stratum. Public-gold failures should instead be labelled as wrong controlled skill, wrong public wrapper, broad parent/router, duplicate or acceptable alternative, extraction failure, first-stage exclusion, or reranking failure.
 
-\begin{itemize}
-  \item candidate budget;
-  \item representation length;
-  \item token or context cost;
-  \item latency;
-  \item API calls and cache behaviour.
-\end{itemize}
+The efficiency metrics are candidate budget, representation length, selector-visible token cost, latency, provider API calls, and cache behaviour.
 
-The qualitative evaluation records failure modes such as first-stage exclusion, reranker misweighting, negation failure, object/meta-skill confusion, underspecified prompts, and acceptable-alternative ambiguity.
+Qualitative failure analysis records first-stage exclusion, reranker misweighting, boundary or negation failure, broad parent/router selection, public-skill duplication, underspecified request ambiguity, and acceptable-alternative ambiguity.
 
 \section{Downstream Validation Plan}
 
-Downstream validation will test whether retrieval improvements translate into better task outcomes. A smaller subset of prompts will be selected, and the agent will receive either the top-1 selected skill or a top-k candidate set. Generated artifacts will then be graded against task-specific success criteria.
+Downstream validation remains planned rather than completed. A smaller sample of prompts should be selected after offline retrieval behaviour is stable. The main agent will receive selected candidate skills under fixed conditions, generate task artifacts, and be graded for task success, artifact correctness, evidence use, and misuse of wrong skills.
 
-\placeholder{Step 8 is not yet executed. Add final downstream task selection, grading rubric, evaluator design, and results once the experiment is complete.}
+This step is necessary before claiming that retrieval improvements directly improve final agent task performance. Until then, the thesis should frame current results as retrieval and representation evidence rather than full end-to-end agent reliability evidence.
 
-\section{Ethics, Copyright, and Reproducibility}
+\section{Reproducibility}
 
-This project does not currently involve human participants or sensitive personal data. The benchmark consists of synthetic prompts, controlled skill artifacts, generated background skills, and a small number of public skill examples used for research comparison. Any public skill material should be recorded with source information and license notes where available.
-
-Reproducibility is supported by storing benchmark prompts, skill artifacts, representation exports, selector scripts, cached provider outputs, and evaluation reports in the project repository. Provider-based experiments should report model names, API providers, candidate budgets, cache status, and approximate cost or latency where possible.
-
-\placeholder{Confirm the final ethics status with supervisor guidance. Add any required USYD academic honesty, copyright, AI-use, and data-management statements.}
+Reproducibility is supported by storing prompts, skill artifacts, representation exports, selector scripts, cached provider outputs, validation reports, public-skill audit outputs, and manual adjudication notes in the project repository. Provider-based experiments should report model names, candidate budgets, cache status, and approximate cost or latency where available.

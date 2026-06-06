@@ -71,7 +71,7 @@ Continue incrementally:
 python3 skill_benchmark/scripts/audit_public_skill_fields.py --limit 30
 ```
 
-Run the full local 200-skill audit:
+Run the full local public-skill audit:
 
 ```bash
 python3 skill_benchmark/scripts/audit_public_skill_fields.py
@@ -92,7 +92,7 @@ python3 skill_benchmark/scripts/build_public_skill_manual_review_packet.py --sam
 Model-assisted semantic extraction:
 
 ```bash
-python3 skill_benchmark/scripts/model_verify_public_skill_fields.py --limit 20
+python3 skill_benchmark/scripts/model_verify_public_skill_fields.py --limit 460 --concurrency 4
 ```
 
 Model/heuristic agreement report:
@@ -110,16 +110,16 @@ Current output files:
 - model checkpoint output: `skill_benchmark/outputs/public_skill_field_model_audit.jsonl`
 - model/heuristic comparison output: `skill_benchmark/outputs/public_skill_field_agreement_report.md`
 - model pilot checkpoint note: `thesis_notes/Public Skill Model Verification Checkpoint - 20 Skills.md`
-- model full checkpoint note: `thesis_notes/Public Skill Model Verification Checkpoint - 200 Skills.md`
+- model full checkpoint note: `thesis_notes/Public Skill Model Verification Checkpoint - 460 Skills.md`
 - subagent review protocol: `thesis_notes/Public Skill Subagent Review Protocol.md`
 - subagent pilot folder: `skill_benchmark/outputs/subagent_reviews/`
 - subagent pilot summary: `skill_benchmark/outputs/subagent_reviews/public_skill_subagent_pilot_summary.md`
 
 ## Current Checkpoint
 
-Checkpoint date: 2026-05-28.
+Checkpoint date: 2026-05-29.
 
-Current audit size: 200 public skills.
+Current audit size: 460 public skills.
 
 Subagent calibration:
 
@@ -129,10 +129,10 @@ Subagent calibration:
 
 Model-assisted verification:
 
-- DeepSeek checkpoint completed for all 200 imported public skills.
+- DeepSeek checkpoint completed for all 460 imported public skills.
 - Agreement report: `skill_benchmark/outputs/public_skill_field_agreement_report.md`.
 - Pilot checkpoint note: `thesis_notes/Public Skill Model Verification Checkpoint - 20 Skills.md`.
-- Full checkpoint note: `thesis_notes/Public Skill Model Verification Checkpoint - 200 Skills.md`.
+- Full checkpoint note: `thesis_notes/Public Skill Model Verification Checkpoint - 460 Skills.md`.
 
 Initial pattern:
 
@@ -140,19 +140,19 @@ Initial pattern:
 - Moderately present: constraints/boundaries and hierarchy links.
 - Weakest field so far: safety/side effects.
 
-Full 200-skill checkpoint:
+Full 460-skill heuristic checkpoint:
 
 | Field | Explicit | Explicit or Extractable | Provisional Read |
 |---|---:|---:|---|
 | `routing_trigger` | 100.0% | 100.0% | observed |
-| `input_precondition` | 35.5% | 87.5% | often extractable |
-| `output_artifact` | 62.5% | 91.0% | observed/extractable |
-| `workflow_procedure` | 75.0% | 90.5% | observed |
-| `constraints_boundaries` | 49.0% | 71.5% | partially observed/extractable |
-| `dependencies_tools` | 81.0% | 90.0% | observed |
-| `resources_references` | 68.0% | 86.5% | observed/extractable |
-| `examples_tests` | 60.5% | 93.5% | observed/extractable |
-| `safety_side_effects` | 11.0% | 26.5% | proposed or weakly observed |
+| `input_precondition` | 25.2% | 81.5% | often extractable |
+| `output_artifact` | 45.2% | 85.2% | observed/extractable |
+| `workflow_procedure` | 71.7% | 84.4% | observed |
+| `constraints_boundaries` | 41.3% | 77.6% | partially observed/extractable |
+| `dependencies_tools` | 72.8% | 85.0% | observed |
+| `resources_references` | 66.7% | 82.0% | observed/extractable |
+| `examples_tests` | 63.5% | 93.9% | observed/extractable |
+| `safety_side_effects` | 11.3% | 37.0% | proposed or weakly observed |
 | `portability_environment` | 72.0% | 85.5% | observed/extractable |
 | `hierarchy_links` | 41.0% | 46.5% | partially observed |
 
@@ -318,7 +318,7 @@ The weaker but still useful claim would be:
 3. Compare heuristic and model labels by field.
 4. Manually review disagreement cases and the existing 20-skill packet.
 5. Fix detector/model prompt rules if there are systematic false positives.
-6. Rerun the full 200-skill local audit and, if affordable, the model audit.
+6. Rerun the full 460-skill local audit and model audit only if the schema, detector, or verifier prompt changes materially.
 7. Summarize observed/extractable/proposed fields in the thesis notes.
 8. Run field ablations to test whether the fields that appear useful actually improve retrieval.
 9. Optionally import full folders for a small number of public repositories if the thesis needs stronger evidence about scripts, references, assets, and hierarchy.

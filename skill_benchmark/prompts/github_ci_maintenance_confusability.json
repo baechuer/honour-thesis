@@ -1,0 +1,74 @@
+[
+  {
+    "id": "github_ci_maintenance_p1_ci_log_root_cause_debugger",
+    "family": "github_ci_maintenance",
+    "gold_skill": "ci-log-root-cause-debugger",
+    "closest_alternatives": [
+      "pr-review-comment-resolver",
+      "repo-code-reviewer",
+      "github-issue-triager",
+      "release-changelog-generator"
+    ],
+    "prompt": "Inspect `/workspace/fixtures/github_ci_maintenance/ci_log.txt` and identify the CI root cause, the first meaningful error, and the smallest rerun sequence."
+  },
+  {
+    "id": "github_ci_maintenance_p2_pr_review_comment_resolver",
+    "family": "github_ci_maintenance",
+    "gold_skill": "pr-review-comment-resolver",
+    "closest_alternatives": [
+      "public-openai-gh-address-comments",
+      "review-comment-resolver",
+      "ci-log-root-cause-debugger",
+      "repo-code-reviewer"
+    ],
+    "prompt": "Use `/workspace/fixtures/github_ci_maintenance/pr_review_comments.md` to plan how to resolve the review comments and what response to leave. Do not perform a general code review."
+  },
+  {
+    "id": "github_ci_maintenance_p3_repo_code_reviewer",
+    "family": "github_ci_maintenance",
+    "gold_skill": "repo-code-reviewer",
+    "closest_alternatives": [
+      "ci-log-root-cause-debugger",
+      "pr-review-comment-resolver",
+      "github-issue-triager",
+      "release-changelog-generator"
+    ],
+    "prompt": "Review the diff described in `/workspace/fixtures/github_ci_maintenance/payment_diff.patch` for bugs and missing tests. This is a fresh code review, not a CI log diagnosis."
+  },
+  {
+    "id": "github_ci_maintenance_p4_github_issue_triager",
+    "family": "github_ci_maintenance",
+    "gold_skill": "github-issue-triager",
+    "closest_alternatives": [
+      "ci-log-root-cause-debugger",
+      "pr-review-comment-resolver",
+      "repo-code-reviewer",
+      "release-changelog-generator"
+    ],
+    "prompt": "Triage the issues in `/workspace/fixtures/github_ci_maintenance/issues.md` into bug/feature/support labels, priority, owner guess, and missing reproduction details."
+  },
+  {
+    "id": "github_ci_maintenance_p5_release_changelog_generator",
+    "family": "github_ci_maintenance",
+    "gold_skill": "release-changelog-generator",
+    "closest_alternatives": [
+      "ci-log-root-cause-debugger",
+      "pr-review-comment-resolver",
+      "repo-code-reviewer",
+      "github-issue-triager"
+    ],
+    "prompt": "Turn `/workspace/fixtures/github_ci_maintenance/merged_prs.md` into release notes grouped by features, fixes, and breaking changes. Do not review the code."
+  },
+  {
+    "id": "github_ci_maintenance_p6_git_safety_guardrail_installer",
+    "family": "github_ci_maintenance",
+    "gold_skill": "git-safety-guardrail-installer",
+    "closest_alternatives": [
+      "public-mattpocock-git-guardrails-claude-code",
+      "public-mattpocock-setup-pre-commit",
+      "ci-log-root-cause-debugger",
+      "pr-review-comment-resolver"
+    ],
+    "prompt": "Design repository guardrails to block accidental `git push`, `reset --hard`, and secret commits. I need hook/config steps and verification, not issue triage."
+  }
+]

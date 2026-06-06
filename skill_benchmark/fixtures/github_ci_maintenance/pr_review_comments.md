@@ -1,0 +1,2 @@
+- Reviewer A: Please handle empty invoice lines.
+- Reviewer B: Add a regression test for tax rounding.
