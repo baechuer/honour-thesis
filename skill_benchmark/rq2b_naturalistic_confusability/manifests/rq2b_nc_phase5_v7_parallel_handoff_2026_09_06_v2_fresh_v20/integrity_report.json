@@ -1,0 +1,56 @@
+{
+  "assignment_version": "rq2b_nc_phase5_v7_parallel_handoff_v2_fresh_state",
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/unified_independent_reviewer_return_schema.json": "605ec69bffa6f55f9a5c94be0f9bd40e1d096afddea1f38caaa454882fd1e625",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/unified_prompt_group_batch_manifest.jsonl": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_execution_state_reconciliation_2026_09_06_v20_v7_dispatch_freshness_replay/execution_state_reconciliation.json": "28332bbb41e9a11b69503a5caab6efda24b81bed50b83d60bac22f3fedba0ffb",
+    "skill_benchmark/scripts/materialize_rq2b_nc_phase5_v7_parallel_handoff_2026_09_06.py": "2e1acaa4fa7de61cb8320f2435c3921c96fca0518a406b30d57123e7674041fb",
+    "skill_benchmark/scripts/materialize_rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2.py": "efdfffcc591c0db272e8819a97069233fd7c6a1f8f1db6e86e067ae350b1847f",
+    "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "claim_boundary": "Dispatch and integrity only. No reviewer adequacy outcome, target join, acceptable-set result, retrieval, reranking, provider call, metric, or thesis result is read or generated.",
+  "counts": {
+    "finalised_locked": 160,
+    "machine_a": 533,
+    "machine_b": 533,
+    "pending_assigned": 1066,
+    "required_independent_reviewer_lanes": 2132,
+    "started_incomplete_traceable_reissues": 1,
+    "unstarted_issued": 1065,
+    "v7_prompt_groups": 1226
+  },
+  "fresh_state_counts": {
+    "FINALISED": 160,
+    "STARTED_INCOMPLETE": 1,
+    "UNSTARTED": 1065
+  },
+  "integrity_report_sha256": "16d72340abf39219377f704850e9f8040669e16e9de016a68876dfd5b184cea3",
+  "outputs": {
+    "README.md": "0542c69d7aba7df88cb0d40a5b2172e7b3c6764b90e37d2fe9f026e0ed98759e",
+    "V7_SCOPE_AMENDMENT.md": "9b002c1f81798649e0d1fbba0df60fbd6c2bb317dd9cb4f795bf7dfe19230ce2",
+    "current_phase5_pending_assignment_v1.jsonl": "0bf00f05b44dae83754a9f7cea6966b2b1cdecae219ff4eba955a89983a7d25f",
+    "machine_a_manifest.jsonl": "068d7adcda5c81c8d5ec6c8cedfe48c2b5fbbd11a4da367d907f58d7056a9770",
+    "machine_b_manifest.jsonl": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "reviewer_return_schema.json": "605ec69bffa6f55f9a5c94be0f9bd40e1d096afddea1f38caaa454882fd1e625"
+  },
+  "schema_version": "rq2b_nc_phase5_v7_parallel_handoff_integrity_v2",
+  "scope_boundary": {
+    "deferred_successor_package": "newer_528_group_current_package",
+    "operative_library": "historical_v7_unified_dispatch_package",
+    "token_return_label_or_outcome_mixing_permitted": false
+  },
+  "status": "PASS_RQ2B_V7_PHASE5_FRESH_TWO_MACHINE_HANDOFF_FREEZE",
+  "validation": {
+    "all_main_and_tail_packet_hashes_bind_to_v7_manifest": true,
+    "all_packets_are_complete_eight_candidate_v7_packets": true,
+    "fresh_state_has_only_dispatchable_states": true,
+    "machine_balance_within_one_group": true,
+    "machine_sets_disjoint": true,
+    "machine_union_equals_pending": true,
+    "no_finalised_batch_assigned": true,
+    "pending_assignment_matches_fresh_state": true,
+    "reviewer_packets_are_role_hidden": true,
+    "started_incomplete_reissues_are_traceable": true,
+    "state_counts_match_manifest_total": true
+  }
+}

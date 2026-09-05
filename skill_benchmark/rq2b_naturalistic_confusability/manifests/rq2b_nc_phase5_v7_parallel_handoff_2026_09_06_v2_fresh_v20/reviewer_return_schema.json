@@ -1,0 +1,65 @@
+{
+  "adequacy_values": [
+    "FULLY_ACCEPTABLE",
+    "INADEQUATE",
+    "PARTIALLY_ADEQUATE",
+    "UNCLEAR"
+  ],
+  "allowed_assessment_fields": [
+    "adequacy",
+    "candidate_token",
+    "missing_material_requirement_or_null",
+    "rationale",
+    "source_anchor"
+  ],
+  "allowed_top_level": [
+    "assessments",
+    "batch_id",
+    "batch_input_sha256",
+    "blind_packet_id",
+    "reviewer_blind_id",
+    "reviewer_instruction_sha256",
+    "reviewer_output_sha256"
+  ],
+  "assessment_required": [
+    "adequacy",
+    "candidate_token",
+    "missing_material_requirement_or_null",
+    "rationale",
+    "source_anchor"
+  ],
+  "blindness_prohibitions": [
+    "Read only the assigned rendered packet and this frozen schema.",
+    "Do not inspect allocation, token join, target/local/historical reference, source path/provenance/licence, peer return, rank/lane/channel/main/tail metadata, retrieval/reranking/provider output or metric.",
+    "Do not communicate with the other reviewer before submitting the sealed return."
+  ],
+  "required_top_level": [
+    "assessments",
+    "batch_id",
+    "batch_input_sha256",
+    "blind_packet_id",
+    "reviewer_blind_id",
+    "reviewer_instruction_sha256",
+    "reviewer_output_sha256"
+  ],
+  "return_validation": [
+    "Exactly eight assessments, one for each unified-packet token.",
+    "Top-level and assessment objects have exactly the allowed fields; extra fields are rejected.",
+    "source_anchor is one literal source-visible heading or short phrase and is mechanically located in the rendered source.",
+    "FULLY_ACCEPTABLE requires a null missing_material_requirement_or_null; every other adequacy requires a non-empty string.",
+    "reviewer_output_sha256 is SHA-256 of canonical JSON excluding that field (UTF-8, sorted keys, comma/colon separators)."
+  ],
+  "reviewer_blind_id_values": [
+    "A",
+    "B"
+  ],
+  "reviewer_instruction": "Read the prompt and every complete source-visible candidate. Independently assess each candidate as FULLY_ACCEPTABLE, PARTIALLY_ADEQUATE, INADEQUATE or UNCLEAR under the frozen rubric. For source_anchor, provide exactly one literal section heading or short quoted phrase that appears in the source-visible skill; do not combine multiple anchors. Candidate-token order has no target, rank, route, main-pool or tail meaning. Do not select MOST_SUITABLE.",
+  "rubric": {
+    "FULLY_ACCEPTABLE": "Independently satisfies every material input, transformation, constraint and requested output without an unrecorded component or material unsupported assumption.",
+    "INADEQUATE": "Not a plausible route for the central task/input/output boundary.",
+    "PARTIALLY_ADEQUATE": "Meaningful neighbouring route that misses a material requirement, output, constraint, executable step or dependency.",
+    "UNCLEAR": "Source-visible material is insufficient or internally ambiguous; this blocks closure and is not a weak negative."
+  },
+  "schema_version": "rq2b_nc_phase4_v7_strict_unified_blind_batch_return",
+  "status": "FROZEN_BEFORE_REVIEW"
+}
