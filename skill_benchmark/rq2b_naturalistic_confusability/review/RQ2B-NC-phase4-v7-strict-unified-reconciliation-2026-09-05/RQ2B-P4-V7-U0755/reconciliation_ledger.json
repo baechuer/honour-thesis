@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0755",
+  "blind_packet_id": "P-EE5A3C020A90379D62",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-073A1EFBE6B9AFFC",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Deep Research",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT use for designing a study"
+    },
+    {
+      "candidate_token": "C-0F7113D6E683ADB7",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Tiangong KB Patent Search",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Searches only `patent`"
+    },
+    {
+      "candidate_token": "C-14BE02E27C261ACE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Tiangong KB Report Search",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Searches only `report`"
+    },
+    {
+      "candidate_token": "C-2E7A33970DCD3A22",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-6C3211C5FDE6F9B7",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Test Data Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Builds realistic domain fixtures"
+    },
+    {
+      "candidate_token": "C-6E2C389F0E316A4C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Tiangong KB SCI Search",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Searches only `sci`"
+    },
+    {
+      "candidate_token": "C-893BBD56CA9C8416",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Skill",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "GO and KEGG enrichment"
+    },
+    {
+      "candidate_token": "C-CBA7DC97A154D21F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ZINC Chemical Library Database",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Query ZINC15/ZINC22 virtual compound libraries"
+    }
+  ],
+  "reviewer_A_return_sha256": "975995d4127043c90c6ef31787def3bbae85ea859be4c4b569ebf23c4abc9b1c",
+  "reviewer_B_return_sha256": "f042beeb7a44cc7c741694a20d857e6201b5136321ba09b29b0a96f7d11ebce7",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

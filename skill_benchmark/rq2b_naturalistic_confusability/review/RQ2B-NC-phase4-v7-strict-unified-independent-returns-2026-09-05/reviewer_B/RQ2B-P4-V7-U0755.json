@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-073A1EFBE6B9AFFC",
+      "missing_material_requirement_or_null": "The task is an isolated single-source market-report search, not a broad multi-source synthesis.",
+      "rationale": "The task is an isolated single-source market-report search, not a broad multi-source synthesis.",
+      "source_anchor": "Do NOT use for designing a study"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0F7113D6E683ADB7",
+      "missing_material_requirement_or_null": "This skill searches patent sources, while the prompt requires a market report search.",
+      "rationale": "This skill searches patent sources, while the prompt requires a market report search.",
+      "source_anchor": "Searches only `patent`"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-14BE02E27C261ACE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly matches the isolated report-source retrieval boundary and excludes broader synthesis.",
+      "source_anchor": "Searches only `report`"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E7A33970DCD3A22",
+      "missing_material_requirement_or_null": "This is a sprint retrospective facilitation skill, not a market-report retrieval route.",
+      "rationale": "This is a sprint retrospective facilitation skill, not a market-report retrieval route.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6C3211C5FDE6F9B7",
+      "missing_material_requirement_or_null": "This builds test fixtures rather than retrieving market-report evidence.",
+      "rationale": "This builds test fixtures rather than retrieving market-report evidence.",
+      "source_anchor": "Builds realistic domain fixtures"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6E2C389F0E316A4C",
+      "missing_material_requirement_or_null": "This searches SCI sources, while the prompt requires a market report search.",
+      "rationale": "This searches SCI sources, while the prompt requires a market report search.",
+      "source_anchor": "Searches only `sci`"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-893BBD56CA9C8416",
+      "missing_material_requirement_or_null": "This performs biological GO/KEGG enrichment, not market-report retrieval.",
+      "rationale": "This performs biological GO/KEGG enrichment, not market-report retrieval.",
+      "source_anchor": "GO and KEGG enrichment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CBA7DC97A154D21F",
+      "missing_material_requirement_or_null": "This queries compound libraries, not market-report evidence.",
+      "rationale": "This queries compound libraries, not market-report evidence.",
+      "source_anchor": "Query ZINC15/ZINC22 virtual compound libraries"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0755",
+  "batch_input_sha256": "021b61537dc7d84136d767389cc1c38284ea0bb0f8c2dc575878ebc15a3b6fd7",
+  "blind_packet_id": "P-EE5A3C020A90379D62",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "070b418f53c3fe94e9868c7a46988fe3f7ba34a5aa6043a976d555056996fcd7"
+}
