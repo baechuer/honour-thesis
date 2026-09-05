@@ -1,0 +1,18 @@
+{
+  "assessments":[
+    {"adequacy":"INADEQUATE","candidate_token":"C-0D416E8CE490040A","missing_material_requirement_or_null":"pathway-activity scoring from expression data","rationale":"This skill ranks spreadsheet decisions and business metrics, not differential pathway-activity scores from a bulk expression matrix with a reusable analysis object and heat map.","source_anchor":"## Capability"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-375C42AD83E66C54","missing_material_requirement_or_null":"bulk-expression pathway analysis","rationale":"This skill reviews credit agreements and produces legal review tables; it does not analyze expression matrices or pathway activity.","source_anchor":"## Instructions"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-666B65073ED9732D","missing_material_requirement_or_null":"sample-group matrix input and reusable pathway-activity analysis object","rationale":"This skill performs GSEA from a ranked gene list and produces enrichment outputs, making it a meaningful neighboring pathway-analysis route, but it does not directly provide group-wise GSVA-style activity scores from a bulk matrix with the requested reusable object and heat map workflow.","source_anchor":"## Scope"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-8F07A649961841D3","missing_material_requirement_or_null":"differential pathway analysis from expression matrix","rationale":"This skill gathers financial estimate data and does not address expression matrices, pathway activity, or heat-map visualization.","source_anchor":"# Estimate Analysis Skill"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-94C4198AFEA4915E","missing_material_requirement_or_null":"bulk-expression pathway analysis","rationale":"This skill facilitates sprint retrospectives rather than performing differential pathway-activity analysis.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-AA5015D25E1C7F0A","missing_material_requirement_or_null":null,"rationale":"This skill directly runs GSVA or ssGSEA pathway-level differential analysis from a bulk expression matrix and sample group file, and produces a reusable analysis object and heat map.","source_anchor":"# GSVA Analysis And Visualization"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-CF29AD527E2F1BAF","missing_material_requirement_or_null":"differential pathway-activity scoring and heat map","rationale":"This skill queries gene information from Xena/TCGA rather than carrying out the requested group-wise pathway-activity analysis workflow.","source_anchor":"## Trigger"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-E179C2775B3B556B","missing_material_requirement_or_null":"sample-group differential pathway activity and reusable analysis object","rationale":"This skill performs GO and KEGG enrichment from a gene list and generates a dot chart, which is a related pathway-analysis route, but it does not provide matrix-based differential activity scores and the requested reusable object and heat map.","source_anchor":"## When To Use"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0184",
+  "batch_input_sha256":"50d81214ba61198e7f32ab57f1854c9d79c2ccab7cf86b9a8a9fe88a92f2ed2c",
+  "blind_packet_id":"P-8D475FE12E666EA424",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"3b7f5750d8a02a335b9a38219f8a7968460b29ae7857069e23f1cb7f575227d4"
+}
