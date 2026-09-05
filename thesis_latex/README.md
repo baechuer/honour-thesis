@@ -6,9 +6,12 @@ Target length: 30-40 pages.
 
 ## Current Structure
 
-- `main.tex`: thesis entry point.
+- `main.tex`: thesis entry point, now using the supplied 2024 `usydthesis`
+  class, template title page, preliminary-matter order, page numbering, and
+  chapter/contents formatting.
 - `chapters/00_abstract.tex`: abstract.
-- `chapters/00_declaration.tex`: declaration and acknowledgements placeholders.
+- `chapters/00_declaration.tex`: academic-integrity declaration placeholder.
+- `chapters/00_acknowledgements.tex`: optional acknowledgements placeholder.
 - `chapters/01_introduction.tex`: introduction and research questions.
 - `chapters/02_literature_review.tex`: literature review adapted from Assignment 3.
 - `chapters/03_conceptual_framework.tex`: artifact vs representation vs retrieval policy.
@@ -40,6 +43,14 @@ The public USYD pages I checked do not state a strict public page count for this
 
 ## USYD Alignment Notes
 
+## Template Alignment
+
+The supplied `thesis_2024_latex.zip` has been used as a formatting reference.
+Its `usydthesis` class and supporting style assets are vendored locally in
+`usydthesis.cls` and `style/`. The thesis keeps its existing research chapters,
+bibliography database, and current content; template sample prose and the
+historical declaration wording were not imported as thesis claims.
+
 Official public pages checked:
 
 - INFO4990 unit page: https://www.sydney.edu.au/units/INFO4990
@@ -54,9 +65,11 @@ Implications for this scaffold:
 
 ## Current Framing
 
-RQ1: What information must agent skill representations preserve to distinguish semantically similar but procedurally distinct skills at scale?
+RQ1: Which operational information types help distinguish semantically similar but procedurally distinct agent skills?
 
-RQ2: How do retrieval strategies that use flat text, dense embeddings, structured procedural fields, or hybrid reranking differ in accuracy, efficiency, and failure modes when applied to scalable skill libraries?
+RQ2: How do skill representation and retrieval-pipeline choices affect the preservation and use of the routing-relevant operational information identified in RQ1 under semantic confusability, and what accuracy, candidate-recall, and retrieval-cost trade-offs result?
+
+Current framing note, 2026-08-02: RQ1a's seven field-isolation suites are reviewed and complete. RQ2a development, immutable freeze, 280-cluster confirmatory matrix, paired statistics, cost ledger, failure analysis, user review, and thesis integration are complete. The final result rejects a universal field-heading advantage under Qwen single-vector selection while supporting a narrower representation-retrieval compatibility claim. RQ2b is an unreviewed draft. Historical I1/I2/I3, M6, and external SkillRouter results are retained separately as exploratory or portability evidence; graph/tree/DAG and downstream execution remain outside the active implementation.
 
 ## Compile
 

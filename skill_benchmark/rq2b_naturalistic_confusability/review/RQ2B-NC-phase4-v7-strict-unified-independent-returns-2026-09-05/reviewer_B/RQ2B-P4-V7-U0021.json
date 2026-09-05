@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-34B86FFBE75E6FD2","missing_material_requirement_or_null":null,"rationale":"It transforms raw notes or descriptions into customizable structured summaries; its project-review template covers current status, completed and in-progress work, risks or decisions needing escalation, and upcoming actions.","source_anchor":"### Project Review Notes"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-4093A8CFD2A425EF","missing_material_requirement_or_null":"A short manager-facing account of project status, changes, help needed, and next-week intentions.","rationale":"It gathers sprint facts and produces owned action items, but its deliverable is a facilitated retrospective packet rather than the requested synthesis of attached updates for an absent manager.","source_anchor":"## Deliverable"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6D4EBEDEC1EC8C72","missing_material_requirement_or_null":"A direct workflow for turning work updates into a short manager-facing project-status account.","rationale":"This is explicitly a multi-agent orchestration mode for complex parallel work, not a status-reporting or update-synthesis workflow for the stated single-domain request.","source_anchor":"# Coordinator Mode — Multi-Agent Orchestration"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-83F63EA90065EB8E","missing_material_requirement_or_null":"A workflow for summarizing work updates into a manager-facing project-status account.","rationale":"This skill refactors source code for readability and has no route to synthesize project updates, support needs, or next-week intentions.","source_anchor":"# Code Simplification"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-B3AEAA938FD703AF","missing_material_requirement_or_null":"Coverage of current and in-progress project status, help needed, and intended next-week work.","rationale":"It can truthfully summarize what shipped or changed, but it is confined to release-history communication and omits the requested project-state, support, and next-week update components.","source_anchor":"# Changelog Maintenance"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-B4DECC970DDDB0C5","missing_material_requirement_or_null":null,"rationale":"It directly creates manager-facing weekly status reports from supplied updates, with accomplishments and in-progress status, blockers and requested help, and prioritized next-week work.","source_anchor":"# Weekly Report"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-C7D0EC95D3D2C0FB","missing_material_requirement_or_null":"A workflow for synthesizing work updates into a short manager-facing status account.","rationale":"This is a Git staging, commit, push, and pull-request workflow and does not address the requested project update.","source_anchor":"## Workflow"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-DFD2C4B0771E4425","missing_material_requirement_or_null":"A manager-facing account that explicitly summarizes project changes, current status, and help needed.","rationale":"It reviews commitments and selects next-week outcomes, but its output is a personal weekly-review record rather than the requested concise project-status update for a manager.","source_anchor":"## Deliverable"}
+  ],
+  "batch_id": "RQ2B-P4-V7-U0021",
+  "batch_input_sha256": "d62d5ee7c2e491a52bdae06479a2c6fcabbb107e2b588c70ae648f30cb29a907",
+  "blind_packet_id": "P-C577EDBD54F3FA7A1F",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "95c3899e7ed7f5096e7fc030b08d5959fcf5a543204687559ed0816149a7d2c3"
+}

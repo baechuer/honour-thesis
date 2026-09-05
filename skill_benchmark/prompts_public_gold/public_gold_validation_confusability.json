@@ -20,7 +20,16 @@
     "gold_rationale": "The public PDF extraction skill targets native PDF text/table/metadata extraction, not Q&A, OCR, or conversion.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p02_pdf_ocr",
@@ -45,7 +54,16 @@
     "acceptable_alternatives": [
       "pdf-ocr-cleaner"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, workflow_or_procedure, success_criterion."
   },
   {
     "id": "public_gold_p03_pdf_form_filler",
@@ -69,7 +87,16 @@
     "acceptable_alternatives": [
       "pdf-form-filler"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p04_markitdown_conversion",
@@ -92,7 +119,16 @@
     "gold_rationale": "MarkItDown is specifically a multi-format document-to-Markdown conversion skill.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "dependency_or_tool"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, dependency_or_tool."
   },
   {
     "id": "public_gold_p05_pdf_merge_split",
@@ -115,7 +151,16 @@
     "gold_rationale": "The public PDF merge/split skill is the one whose procedure is combining and separating PDF files.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p06_browser_devtools_testing",
@@ -138,7 +183,16 @@
     "gold_rationale": "The public DevTools browser testing skill requires Chrome DevTools MCP and runtime inspection evidence.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, success_criterion."
   },
   {
     "id": "public_gold_p07_web_accessibility",
@@ -164,7 +218,16 @@
       "accessibility-checker",
       "accessibility-interaction-auditor"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p08_core_web_vitals",
@@ -187,7 +250,16 @@
     "gold_rationale": "The Core Web Vitals skill targets LCP, INP, CLS, and related performance diagnosis.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p09_systematic_debugging",
@@ -212,7 +284,16 @@
     "acceptable_alternatives": [
       "public-addy-agent-debugging-and-error-recovery"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: workflow_or_procedure, input_or_precondition, boundary_signal."
   },
   {
     "id": "public_gold_p10_analyze_ci",
@@ -240,13 +321,23 @@
       "ci-failure-debugger",
       "ci-log-root-cause-debugger"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "dependency_or_tool",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: input_or_precondition, dependency_or_tool, workflow_or_procedure."
   },
   {
     "id": "public_gold_p11_setup_pre_commit",
     "family": "public_gold_validation",
     "gold_skill": "public-mattpocock-setup-pre-commit",
     "closest_alternatives": [
+      "psc-repo-guardrail-hook-installer",
       "git-safety-guardrail-installer",
       "public-mattpocock-git-guardrails-claude-code",
       "public-swebench-fix",
@@ -266,7 +357,16 @@
     "acceptable_alternatives": [
       "public-oh-my-setup-pre-commit"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p12_git_guardrails",
@@ -292,7 +392,16 @@
     "acceptable_alternatives": [
       "public-oh-my-git-guardrails-claude-code"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p13_address_pr_comments",
@@ -315,7 +424,16 @@
     "gold_rationale": "The public gh-address-comments skill is for resolving review feedback on an existing PR.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "dependency_or_tool",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, dependency_or_tool, workflow_or_procedure."
   },
   {
     "id": "public_gold_p14_netlify_deploy",
@@ -338,7 +456,16 @@
     "gold_rationale": "The public Netlify deploy skill is platform-specific to Netlify CLI deployment and verification.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p15_cloudflare_deploy",
@@ -361,7 +488,16 @@
     "gold_rationale": "The public Cloudflare deploy skill is tied to Cloudflare Workers/Pages infrastructure.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p16_render_deploy",
@@ -384,7 +520,16 @@
     "gold_rationale": "The public Render deploy skill specifically handles Render Blueprints and Dashboard deployment details.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p17_mcp_builder",
@@ -409,7 +554,16 @@
     "acceptable_alternatives": [
       "mcp-server-builder"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
   },
   {
     "id": "public_gold_p18_chatgpt_apps",
@@ -432,7 +586,16 @@
     "gold_rationale": "The public ChatGPT Apps skill is specific to Apps SDK applications combining MCP and widgets.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p19_cli_creator",
@@ -455,7 +618,16 @@
     "gold_rationale": "The public CLI creator skill targets building a CLI from API docs/specs/examples.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p20_hf_datasets",
@@ -478,7 +650,16 @@
     "gold_rationale": "The public Hugging Face datasets skill is specific to Dataset Viewer API workflows.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, input_or_precondition, boundary_signal."
   },
   {
     "id": "public_gold_p21_hf_gradio",
@@ -503,7 +684,16 @@
     "acceptable_alternatives": [
       "gradio-demo-builder"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p22_hf_vision_trainer",
@@ -526,7 +716,16 @@
     "gold_rationale": "The public vision trainer skill targets vision model fine-tuning such as detection and classification.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "dependency_or_tool"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, workflow_or_procedure, dependency_or_tool."
   },
   {
     "id": "public_gold_p23_sentence_transformer_training",
@@ -551,7 +750,16 @@
     "acceptable_alternatives": [
       "sentence-transformer-finetuner"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, workflow_or_procedure, success_criterion."
   },
   {
     "id": "public_gold_p24_hf_cli",
@@ -574,7 +782,16 @@
     "gold_rationale": "The public HF CLI skill is specifically about `hf` command-line workflows.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p25_data_pipeline",
@@ -599,7 +816,16 @@
     "acceptable_alternatives": [
       "public-office-etl-pipeline"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p26_database_sync",
@@ -622,7 +848,16 @@
     "gold_rationale": "The public database sync skill targets source/target synchronization and conflict handling.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, success_criterion."
   },
   {
     "id": "public_gold_p27_contract_review",
@@ -647,7 +882,16 @@
     "acceptable_alternatives": [
       "contract-risk-reviewer"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, workflow_or_procedure, output_artifact."
   },
   {
     "id": "public_gold_p28_suspicious_email",
@@ -670,7 +914,16 @@
     "gold_rationale": "The public suspicious-email skill is specifically about phishing and scam analysis.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p29_ai_slides",
@@ -693,7 +946,16 @@
     "gold_rationale": "The public AI slides skill creates full presentations from an input brief.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p30_figma_implement_design",
@@ -716,7 +978,16 @@
     "gold_rationale": "The public Figma implement-design skill converts an existing Figma design into code.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p31_skill_creator",
@@ -741,7 +1012,16 @@
     "acceptable_alternatives": [
       "skill-creator"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p32_security_threat_model",
@@ -765,7 +1045,16 @@
     "acceptable_alternatives": [
       "security-threat-modeler"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, workflow_or_procedure, output_artifact."
   },
   {
     "id": "public_gold_p33_openai_docs",
@@ -788,7 +1077,16 @@
     "gold_rationale": "The OpenAI docs skill is the public skill for retrieving and using official OpenAI product/API documentation.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, input_or_precondition, boundary_signal."
   },
   {
     "id": "public_gold_p34_playwright",
@@ -812,7 +1110,16 @@
     "acceptable_alternatives": [
       "playwright-flow-debugger"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
   },
   {
     "id": "public_gold_p35_screenshot",
@@ -835,7 +1142,16 @@
     "gold_rationale": "The screenshot skill is specifically for producing screenshot artifacts rather than broader browser QA.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p36_sentry",
@@ -847,7 +1163,7 @@
       "metrics-root-cause-diagnoser",
       "distributed-trace-investigator"
     ],
-    "prompt": "Use Sentry issue data to inspect the event, stack trace, release, affected users, and likely regression source. Do not build a generic observability dashboard or inspect distributed traces.",
+    "prompt": "Use Sentry issue data and the Sentry CLI to inspect the error event, stack frames, release, affected users, and likely regression source. Do not build a generic observability dashboard or inspect distributed tracing spans.",
     "source_family": "observability",
     "atomization_status": "atomic",
     "field_axes": [
@@ -858,7 +1174,16 @@
     "gold_rationale": "The public Sentry skill is tied to Sentry issue investigation and error event context.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "input_or_precondition",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, input_or_precondition, workflow_or_procedure."
   },
   {
     "id": "public_gold_p37_transcribe",
@@ -881,7 +1206,16 @@
     "gold_rationale": "The public transcribe skill handles audio-to-text transcription.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p38_speech",
@@ -904,7 +1238,16 @@
     "gold_rationale": "The public speech skill targets text-to-speech generation rather than transcription.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p39_jupyter_notebook",
@@ -927,7 +1270,16 @@
     "gold_rationale": "The public Jupyter notebook skill is specifically for notebook-based analysis artifacts.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "dependency_or_tool",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, dependency_or_tool, workflow_or_procedure."
   },
   {
     "id": "public_gold_p40_linear",
@@ -950,7 +1302,16 @@
     "gold_rationale": "The public Linear skill is platform-specific to Linear issue workflows.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p41_yeet",
@@ -974,7 +1335,16 @@
       "public-lbussell-creating-pull-requests",
       "public-addy-agent-git-workflow-and-versioning"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p42_migrate_to_codex",
@@ -997,7 +1367,16 @@
     "gold_rationale": "The public migrate-to-Codex skill is for moving an existing workflow into Codex-specific conventions.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p43_notion_knowledge_capture",
@@ -1021,7 +1400,16 @@
       "notion-research-database-builder",
       "public-openai-notion-research-documentation"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p44_notion_meeting_intelligence",
@@ -1045,7 +1433,16 @@
       "meeting-notes-action-extractor",
       "public-openai-notion-knowledge-capture"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p45_notion_spec_to_implementation",
@@ -1057,7 +1454,7 @@
       "public-lbussell-creating-issues",
       "public-openai-linear"
     ],
-    "prompt": "Convert a Notion product spec into an implementation plan with scoped engineering tasks, dependencies, acceptance criteria, and links back to the source spec. Do not just document research or create generic issues.",
+    "prompt": "Convert a Notion product spec or PRD into a Notion implementation plan with scoped engineering tasks, dependencies, acceptance criteria, progress tracking, and links back to the source spec. Do not just document research or create generic issues.",
     "source_family": "notion-workflow",
     "atomization_status": "atomic",
     "field_axes": [
@@ -1068,7 +1465,16 @@
     "gold_rationale": "The public Notion spec-to-implementation skill bridges Notion specs to implementation plans.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p46_figma_code_connect",
@@ -1091,7 +1497,16 @@
     "gold_rationale": "The Figma Code Connect skill is specifically about linking design components to code components.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p47_figma_generate_library",
@@ -1102,7 +1517,7 @@
       "public-openai-figma-implement-design",
       "public-openai-figma-create-design-system-rules"
     ],
-    "prompt": "Generate a reusable component library inside Figma with variants, variables, tokens, and theming foundations from the design-system brief. Do not implement an existing frame in application code, only write design-system rules, or only create Code Connect mappings.",
+    "prompt": "Build or update a reusable component library inside Figma from the codebase and design-system brief, including variables, tokens, variants, light/dark theming foundations, and documented components. Do not implement an existing frame in application code, only write design-system rules, or only create Code Connect mappings.",
     "source_family": "figma",
     "atomization_status": "atomic",
     "field_axes": [
@@ -1115,7 +1530,16 @@
     "acceptable_alternatives": [
       "public-openai-figma-generate-design"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "hard_public_label_case",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "hard_public_case",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Retain as a hard public-gold case for external-validity pressure; manual inspection is required before using this prompt in headline strict-only tables. Current procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p48_figma_design_system_rules",
@@ -1138,7 +1562,16 @@
     "gold_rationale": "The design-system-rules skill is for codifying Figma design-system rules rather than generating assets.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p49_web_seo",
@@ -1163,7 +1596,16 @@
       "public-office-seo-optimizer",
       "seo-metadata-checker"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p50_web_performance",
@@ -1186,7 +1628,16 @@
     "gold_rationale": "The public web performance skill is broader than Core Web Vitals and focuses on practical web performance diagnosis.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, success_criterion, boundary_signal."
   },
   {
     "id": "public_gold_p51_web_quality_audit",
@@ -1209,7 +1660,16 @@
     "gold_rationale": "The public web quality audit skill is the broad multi-axis web review rather than a single-axis specialist.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p52_api_interface_design",
@@ -1234,7 +1694,16 @@
       "public-oh-my-api-design",
       "public-api-design-principles"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p53_context_engineering",
@@ -1257,7 +1726,16 @@
     "gold_rationale": "The context-engineering skill is about shaping agent context and rules for better task execution.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, input_or_precondition, boundary_signal."
   },
   {
     "id": "public_gold_p54_deprecation_migration",
@@ -1280,7 +1758,16 @@
     "gold_rationale": "The deprecation/migration skill handles retiring and migrating systems or APIs.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, success_criterion."
   },
   {
     "id": "public_gold_p55_documentation_adrs",
@@ -1303,7 +1790,16 @@
     "gold_rationale": "The documentation-and-ADRs skill is specifically for ADR-style software decision documentation.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p56_spec_driven_development",
@@ -1326,7 +1822,16 @@
     "gold_rationale": "The spec-driven-development skill is about writing a specification before implementation.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p57_test_driven_development",
@@ -1350,7 +1855,16 @@
       "public-mattpocock-tdd",
       "public-swebench-tdd-workflow"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: workflow_or_procedure, success_criterion, boundary_signal."
   },
   {
     "id": "public_gold_p58_source_driven_development",
@@ -1373,7 +1887,16 @@
     "gold_rationale": "The source-driven-development skill emphasizes grounding implementation in the actual source code.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "input_or_precondition",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, input_or_precondition, success_criterion."
   },
   {
     "id": "public_gold_p59_anthropic_claude_api",
@@ -1396,7 +1919,16 @@
     "gold_rationale": "The Anthropic Claude API skill is specific to Claude API usage and documentation.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p60_doc_coauthoring",
@@ -1420,7 +1952,16 @@
       "document-rewriter",
       "public-mattpocock-edit-article"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p61_canvas_design",
@@ -1445,7 +1986,16 @@
     "gold_rationale": "The canvas-design skill targets canvas visual compositions.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p62_theme_factory",
@@ -1470,7 +2020,16 @@
     "gold_rationale": "The theme-factory skill produces reusable visual themes rather than full brand or frontend artifacts.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p63_hf_zerogpu",
@@ -1495,7 +2054,16 @@
     "gold_rationale": "The ZeroGPU skill is specifically about Hugging Face ZeroGPU deployment constraints.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p64_hf_llm_trainer",
@@ -1518,7 +2086,16 @@
     "gold_rationale": "The HF LLM trainer skill targets LLM fine-tuning workflows.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "dependency_or_tool"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, workflow_or_procedure, dependency_or_tool."
   },
   {
     "id": "public_gold_p65_hf_local_models",
@@ -1531,7 +2108,7 @@
       "public-huggingface-huggingface-llm-trainer",
       "public-huggingface-huggingface-community-evals"
     ],
-    "prompt": "Choose and run a local Hugging Face model for laptop inference with GGUF or llama.cpp-style runtime choices, quantization, memory limits, and local serving options. Do not train a model, deploy a Space, or build browser-side Transformers.js inference.",
+    "prompt": "Choose and run Hugging Face local models for laptop inference using native local runtimes such as GGUF, llama.cpp, or local serving, with model selection, quantization, and memory-limit tradeoffs. Do not train a model, deploy a Space, or build browser-side Transformers.js/WebGPU inference.",
     "source_family": "huggingface",
     "atomization_status": "atomic",
     "field_axes": [
@@ -1545,7 +2122,16 @@
       "implicit-hf-local-model-chooser",
       "hf-local-model-selector"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "hard_public_label_case",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "hard_public_case",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Retain as a hard public-gold case for external-validity pressure; manual inspection is required before using this prompt in headline strict-only tables. Current procedural axes: dependency_or_tool, input_or_precondition, boundary_signal."
   },
   {
     "id": "public_gold_p66_hf_trackio",
@@ -1570,7 +2156,16 @@
     "gold_rationale": "The Trackio skill is specific to experiment tracking and logged training runs.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p67_hf_papers",
@@ -1593,7 +2188,16 @@
     "gold_rationale": "The HF papers skill is for searching and analyzing Hugging Face paper entries.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p68_hf_paper_publisher",
@@ -1617,7 +2221,16 @@
     "acceptable_alternatives": [
       "public-huggingface-huggingface-papers"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "dependency_or_tool",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: output_artifact, dependency_or_tool, boundary_signal."
   },
   {
     "id": "public_gold_p69_transformers_js",
@@ -1640,7 +2253,16 @@
     "gold_rationale": "The Transformers.js skill targets browser-side JavaScript inference.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p70_obsidian_json_canvas",
@@ -1663,7 +2285,16 @@
     "gold_rationale": "The JSON Canvas skill is specific to Obsidian canvas graph artifacts.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "dependency_or_tool",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, dependency_or_tool, boundary_signal."
   },
   {
     "id": "public_gold_p71_obsidian_bases",
@@ -1686,7 +2317,16 @@
     "gold_rationale": "The Obsidian Bases skill targets Bases views over structured note metadata.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p72_obsidian_cli",
@@ -1710,7 +2350,16 @@
       "public-oh-my-obsidian-cli",
       "public-mattpocock-obsidian-vault"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p73_excel_automation",
@@ -1734,7 +2383,16 @@
       "public-office-xlsx-manipulation",
       "xlsx-formula-model-builder"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p74_sheets_automation",
@@ -1758,7 +2416,16 @@
       "public-office-excel-automation",
       "public-office-xlsx-manipulation"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, output_artifact, boundary_signal."
   },
   {
     "id": "public_gold_p75_airtable_automation",
@@ -1782,7 +2449,16 @@
     "acceptable_alternatives": [
       "airtable-workflow-automator"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
   },
   {
     "id": "public_gold_p76_invoice_automation",
@@ -1806,7 +2482,16 @@
     "acceptable_alternatives": [
       "public-office-invoice-generator"
     ],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: workflow_or_procedure, input_or_precondition, boundary_signal."
   },
   {
     "id": "public_gold_p77_lead_routing",
@@ -1829,7 +2514,16 @@
     "gold_rationale": "The lead-routing skill is about assignment/routing rules rather than research or qualification.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, success_criterion, boundary_signal."
   },
   {
     "id": "public_gold_p78_saas_metrics",
@@ -1852,7 +2546,16 @@
     "gold_rationale": "The SaaS metrics skill is specifically about subscription-business metrics.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, success_criterion."
   },
   {
     "id": "public_gold_p79_stock_analysis",
@@ -1875,7 +2578,16 @@
     "gold_rationale": "The stock-analysis skill targets public equity analysis rather than generic company research.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
   },
   {
     "id": "public_gold_p80_dcf_valuation",
@@ -1898,7 +2610,16 @@
     "gold_rationale": "The DCF valuation skill is specifically for discounted-cash-flow modelling.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, success_criterion."
   },
   {
     "id": "public_gold_p81_shopify_automation",
@@ -1910,7 +2631,7 @@
       "public-office-amazon-seller",
       "public-office-invoice-automation"
     ],
-    "prompt": "Automate Shopify Admin product and order workflows for a Shopify store, including product updates, fulfillment status changes, and customer notifications through Shopify-specific operations. Do not build WooCommerce, Amazon seller, or Stripe payment automation.",
+    "prompt": "Automate Shopify e-commerce operations for a Shopify store through the Shopify Admin API, including Shopify inventory management, product updates, order processing, fulfillment status changes, customer workflows, and analytics. Do not build WooCommerce, Amazon seller, marketplace, or Stripe payment automation.",
     "source_family": "commerce-automation",
     "atomization_status": "atomic",
     "field_axes": [
@@ -1921,7 +2642,16 @@
     "gold_rationale": "The Shopify automation skill is platform-specific to Shopify commerce workflows.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "hard_public_label_case",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "hard_public_case",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Retain as a hard public-gold case for external-validity pressure; manual inspection is required before using this prompt in headline strict-only tables. Current procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
   },
   {
     "id": "public_gold_p82_zendesk_automation",
@@ -1933,7 +2663,8 @@
       "public-office-email-classifier",
       "public-office-slack-workflows",
       "support-ticket-triager",
-      "support-ops-monitoring-plan-builder"
+      "support-ops-monitoring-plan-builder",
+      "public-office-crm-automation"
     ],
     "prompt": "Automate Zendesk ticket triage, tags, macros, assignments, and escalation rules for support requests. Do not build Intercom, Slack, or email classification automation.",
     "source_family": "support-automation",
@@ -1946,6 +2677,1253 @@
     "gold_rationale": "The Zendesk automation skill is platform-specific to Zendesk support-ticket workflows.",
     "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
     "acceptable_alternatives": [],
-    "validation_status": "draft_pending_manual_adjudication"
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p83_web_seo",
+    "family": "public_gold_validation",
+    "gold_skill": "public-addy-web-seo",
+    "closest_alternatives": [
+      "public-addy-web-web-quality-audit",
+      "public-addy-web-best-practices",
+      "public-addy-web-performance"
+    ],
+    "prompt": "Improve search visibility for the landing page by fixing metadata, structured data, sitemap/indexability issues, and search-result snippets. Do not turn this into a broad performance, accessibility, or general web-quality audit.",
+    "source_family": "web-quality",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public SEO skill targets search visibility, metadata, structured data, and indexability rather than general web quality.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "public-office-seo-optimizer"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p84_web_performance",
+    "family": "public_gold_validation",
+    "gold_skill": "public-addy-web-performance",
+    "closest_alternatives": [
+      "public-addy-web-core-web-vitals",
+      "public-addy-web-web-quality-audit",
+      "public-addy-agent-browser-testing-with-devtools",
+      "public-addy-agent-performance-optimization"
+    ],
+    "prompt": "Speed up the web app by profiling load time, bundle weight, render blocking resources, caching, and runtime bottlenecks. Do not limit the task to only LCP/INP/CLS metrics or browser smoke testing.",
+    "source_family": "web-quality",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public web-performance skill covers broad web speed optimization beyond the narrower Core Web Vitals subset.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, success_criterion, boundary_signal."
+  },
+  {
+    "id": "public_gold_p85_web_quality_audit",
+    "family": "public_gold_validation",
+    "gold_skill": "public-addy-web-web-quality-audit",
+    "closest_alternatives": [
+      "public-addy-web-accessibility",
+      "public-addy-web-core-web-vitals",
+      "public-addy-web-seo",
+      "public-addy-web-best-practices"
+    ],
+    "prompt": "Run a combined site review that covers speed, accessibility, search visibility, security/compatibility practices, and a prioritized issue list. Do not focus on just one dimension such as only SEO or only accessibility.",
+    "source_family": "web-quality",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "success_criterion"
+    ],
+    "gold_rationale": "The public web-quality-audit skill is the broad multi-axis audit over performance, accessibility, SEO, and best practices.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, success_criterion."
+  },
+  {
+    "id": "public_gold_p86_web_best_practices",
+    "family": "public_gold_validation",
+    "gold_skill": "public-addy-web-best-practices",
+    "closest_alternatives": [
+      "public-addy-web-accessibility",
+      "public-addy-web-performance",
+      "public-openai-security-best-practices"
+    ],
+    "prompt": "Review the site for modern web best practices: secure defaults, compatibility, maintainable markup, sensible dependency usage, and production readiness. Do not run a metric-specific performance audit or a WCAG-only review.",
+    "source_family": "web-quality",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public best-practices skill targets general web engineering practice rather than a single metric or compliance category.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "public-addy-web-web-quality-audit"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p87_api_design_principles",
+    "family": "public_gold_validation",
+    "gold_skill": "public-api-design-principles",
+    "closest_alternatives": [
+      "openapi-contract-reviewer"
+    ],
+    "prompt": "Design a new REST API contract with clear resources, methods, pagination, errors, versioning, and developer-facing consistency rules before implementation. Do not only review an existing OpenAPI file or generate documentation.",
+    "source_family": "api-design",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public API design principles skill focuses on designing intuitive REST/GraphQL API contracts and conventions.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "public-oh-my-api-design",
+      "rest-api-contract-designer",
+      "public-addy-agent-api-and-interface-design"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p88_interface_design",
+    "family": "public_gold_validation",
+    "gold_skill": "public-addy-agent-api-and-interface-design",
+    "closest_alternatives": [
+      "public-api-design-principles",
+      "public-architecture-patterns",
+      "api-design-reviewer",
+      "rest-api-contract-designer"
+    ],
+    "prompt": "Use API and interface design guidance to define the exported SDK/public interface for plugin authors, including module boundaries, stable method names, type contracts, expected inputs, returned objects, compatibility guarantees, and deprecation rules. Do not choose backend architecture patterns or write a REST endpoint contract only.",
+    "source_family": "software-design",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public API/interface-design skill handles stable module and public-interface boundaries beyond only REST API design.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p89_api_documentation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-oh-my-api-documentation",
+    "closest_alternatives": [
+      "public-api-design-principles",
+      "public-openai-openai-docs",
+      "openapi-contract-reviewer"
+    ],
+    "prompt": "Write developer-facing API documentation pages, endpoint reference, quickstart examples, authentication notes, parameters, error cases, webhook/SDK examples, and migration notes from existing API behavior. The API contract is already fixed; do not redesign the API, validate an OpenAPI contract, or look up OpenAI product docs.",
+    "source_family": "api-docs",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public API documentation skill is for documenting an existing API, not designing or reviewing its contract.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "api-documentation-writer"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: input_or_precondition, output_artifact, boundary_signal."
+  },
+  {
+    "id": "public_gold_p90_claude_api",
+    "family": "public_gold_validation",
+    "gold_skill": "public-anthropic-claude-api",
+    "closest_alternatives": [
+      "public-openai-openai-docs",
+      "public-office-ai-agent-builder",
+      "public-anthropic-mcp-builder",
+      "public-openai-chatgpt-apps",
+      "api-integration-planner",
+      "external-api-integration-planner",
+      "public-openai-cli-creator",
+      "public-addy-agent-incremental-implementation"
+    ],
+    "prompt": "Debug and optimize a Claude API integration using the Anthropic SDK, including prompt caching behavior, request shape, streaming, and model-specific error handling. Do not switch the task to OpenAI docs, ChatGPT Apps, or an MCP server.",
+    "source_family": "api-provider",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public Claude API skill is provider-specific to Anthropic SDK and Claude API integration behavior.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p91_admin_api_endpoint",
+    "family": "public_gold_validation",
+    "gold_skill": "public-swebench-add-admin-api-endpoint",
+    "closest_alternatives": [
+      "public-api-design-principles",
+      "rest-api-contract-designer",
+      "public-swebench-add-malli-schemas",
+      "api-security-threat-reviewer",
+      "public-swebench-fix",
+      "public-swebench-turborepo",
+      "openapi-contract-reviewer"
+    ],
+    "prompt": "Add a Ghost Admin API endpoint under `ghost/api/admin/**` following the repository's route, controller, permissions, and test patterns. Do not merely design a generic REST contract or add Malli schemas.",
+    "source_family": "api-implementation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "dependency_or_tool",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The public Add Admin API Endpoint skill is tied to Ghost Admin API implementation patterns.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "dependency_or_tool",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, dependency_or_tool, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_p92_security_review",
+    "family": "public_gold_validation",
+    "gold_skill": "public-swebench-security-review",
+    "closest_alternatives": [
+      "public-openai-security-best-practices",
+      "public-addy-agent-security-and-hardening",
+      "api-security-threat-reviewer"
+    ],
+    "prompt": "Review the actual repository code diff for authentication, user input, secrets, API endpoints, and payment handling. Return concrete vulnerable lines, exploit paths, severity, and patch suggestions tied to implementation behavior. Do not write a general secure-coding checklist, hardening plan, or threat model diagram.",
+    "source_family": "security",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The public security-review skill targets concrete code/security review for risky implementation changes.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "security-code-reviewer"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_p93_security_best_practices",
+    "family": "public_gold_validation",
+    "gold_skill": "public-openai-security-best-practices",
+    "closest_alternatives": [
+      "public-swebench-security-review",
+      "security-code-reviewer"
+    ],
+    "prompt": "Provide language- and framework-specific security best-practice improvements for a service, focusing on defaults, input handling, dependency hygiene, and secure configuration. Do not inspect a particular diff for concrete vulnerabilities only.",
+    "source_family": "security",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public security-best-practices skill is for best-practice guidance rather than a line-by-line security code review.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "public-oh-my-security-best-practices",
+      "public-addy-agent-security-and-hardening"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: success_criterion, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p94_security_ownership_map",
+    "family": "public_gold_validation",
+    "gold_skill": "public-openai-security-ownership-map",
+    "closest_alternatives": [
+      "public-security-threat-model",
+      "security-threat-modeler",
+      "public-office-security-monitoring",
+      "repo-code-reviewer",
+      "public-openai-security-best-practices",
+      "security-ops-dependency-mapper",
+      "identity-ops-dependency-mapper"
+    ],
+    "prompt": "Analyze the git repository to build a security ownership topology: people-to-file ownership, sensitive-code areas, bus-factor risks, and CSV/JSON exports. Do not produce a threat model or monitor runtime alerts.",
+    "source_family": "security",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The security ownership map skill is specifically about repository ownership topology and export artifacts.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_p95_security_monitoring",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-security-monitoring",
+    "closest_alternatives": [
+      "public-openai-security-ownership-map",
+      "public-security-threat-model",
+      "public-office-devops-automation",
+      "public-swebench-distributed-tracing"
+    ],
+    "prompt": "Set up an operational security monitoring workflow for alerts, threat detection, incident response, and compliance reporting. Do not map code ownership or design a static threat model.",
+    "source_family": "security-ops",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The public security-monitoring skill handles operational monitoring and incident-response workflows.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
+  },
+  {
+    "id": "public_gold_p96_jira_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-jira-automation",
+    "closest_alternatives": [
+      "public-openai-linear",
+      "public-office-linear-automation",
+      "public-office-trello-automation",
+      "public-office-monday-automation"
+    ],
+    "prompt": "Automate Jira sprint issue creation, status transitions, project reports, and backlog rules for a Jira project. Do not build the same workflow in Linear, Trello, or Monday.com.",
+    "source_family": "project-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Jira automation skill is platform-specific to Jira project and issue workflows.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p97_linear_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-linear-automation",
+    "closest_alternatives": [
+      "public-office-jira-automation",
+      "public-office-trello-automation",
+      "public-office-clickup-automation"
+    ],
+    "prompt": "Automate Linear issue tracking, cycles, roadmap updates, and engineering workflow reports across a Linear workspace. Do not use Jira, Trello, or ClickUp.",
+    "source_family": "project-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Linear automation skill targets Linear workspace automation rather than generic issue management.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "public-openai-linear"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p98_trello_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-trello-automation",
+    "closest_alternatives": [
+      "public-office-jira-automation",
+      "public-office-linear-automation",
+      "public-office-asana-automation"
+    ],
+    "prompt": "Automate Trello board card movement, labels, due-date reminders, and team collaboration rules. Do not implement this in Jira, Linear, Monday.com, or Asana.",
+    "source_family": "project-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Trello automation skill is specific to Trello board and card workflows.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p99_slack_workflows",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-slack-workflows",
+    "closest_alternatives": [
+      "public-office-microsoft-teams",
+      "public-office-twilio-sms",
+      "public-office-whatsapp-automation",
+      "public-office-telegram-bot"
+    ],
+    "prompt": "Create Slack workflow automations for standup reminders, approval flows, channel notifications, and cross-platform handoffs. Do not build Microsoft Teams, SMS, WhatsApp, or Telegram automation.",
+    "source_family": "communication-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Slack workflows skill is specific to Slack notifications, approvals, and channel workflows.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p100_teams_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-microsoft-teams",
+    "closest_alternatives": [
+      "public-office-slack-workflows",
+      "public-office-calendar-automation",
+      "public-office-meeting-notes",
+      "public-office-office-mcp"
+    ],
+    "prompt": "Automate Microsoft Teams channel messages, meeting coordination, and workflow notifications for a Teams workspace. Do not use Slack, generic calendar scheduling, or Office document MCP operations.",
+    "source_family": "communication-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Microsoft Teams skill is provider-specific to Teams messaging, meetings, channels, and workflow integrations.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p101_twilio_sms",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-twilio-sms",
+    "closest_alternatives": [
+      "public-office-whatsapp-automation",
+      "public-office-telegram-bot",
+      "public-office-slack-workflows",
+      "public-office-email-drafter"
+    ],
+    "prompt": "Build Twilio SMS automation for two-way text messages, delivery notifications, and voice/SMS workflow triggers. Do not implement WhatsApp, Telegram, Slack, or email drafting.",
+    "source_family": "communication-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Twilio SMS skill is tied to Twilio SMS/voice communication automation.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p102_webhook_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-webhook-automation",
+    "closest_alternatives": [
+      "webhook-contract-planner",
+      "api-integration-planner",
+      "external-api-integration-planner"
+    ],
+    "prompt": "Implement a running webhook automation workflow for real-time event ingestion: create receiver endpoints, configure webhook sources, verify signatures, retry failed deliveries, process events, monitor failures, and trigger downstream API actions. Do not only draft an API integration plan, endpoint schema, or static webhook contract.",
+    "source_family": "api-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The webhook automation skill handles operational event-processing workflows rather than only contract planning.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "webhook-integration-planner"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_implicit_or_generic. Procedural axes: input_or_precondition, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_p103_mailchimp_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-mailchimp-automation",
+    "closest_alternatives": [
+      "public-office-social-publisher",
+      "public-office-ads-copywriter",
+      "public-office-email-drafter",
+      "public-office-linkedin-automation"
+    ],
+    "prompt": "Automate Mailchimp audience segmentation, campaign scheduling, email automations, and campaign analytics. Do not only write ad copy, draft one email, or publish social posts.",
+    "source_family": "marketing-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The Mailchimp automation skill is provider-specific to email marketing campaigns and audience workflows.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_p104_social_publisher",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-social-publisher",
+    "closest_alternatives": [
+      "public-office-linkedin-automation",
+      "public-office-twitter-automation",
+      "public-office-youtube-automation",
+      "public-office-tiktok-marketing"
+    ],
+    "prompt": "Schedule and publish coordinated posts across multiple social platforms with tracking metadata and channel-specific copy. Do not automate only LinkedIn, only Twitter/X, only YouTube, or only TikTok.",
+    "source_family": "marketing-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "dependency_or_tool",
+      "success_criterion"
+    ],
+    "gold_rationale": "The social publisher skill handles multi-platform publishing rather than one network's automation.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "dependency_or_tool",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, dependency_or_tool, success_criterion."
+  },
+  {
+    "id": "public_gold_p105_youtube_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-youtube-automation",
+    "closest_alternatives": [
+      "public-office-social-publisher",
+      "public-office-tiktok-marketing",
+      "public-office-podcast-automation",
+      "public-office-transcription-automation"
+    ],
+    "prompt": "Automate YouTube channel workflows for video metadata, publishing schedule, analytics summaries, and content management. Do not build TikTok marketing, podcast production, or transcription only.",
+    "source_family": "media-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The YouTube automation skill is specific to YouTube channel operations and analytics.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p106_google_ads_manager",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-google-ads-manager",
+    "closest_alternatives": [
+      "public-office-facebook-ads",
+      "public-office-ads-copywriter",
+      "public-office-seo-optimizer",
+      "public-office-social-publisher"
+    ],
+    "prompt": "Manage Google Ads campaigns by setting up keywords, bids, campaign structure, performance reporting, and optimization actions. Do not write only ad copy, run SEO, or manage Meta/Facebook ads.",
+    "source_family": "marketing-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_rationale": "The Google Ads manager skill is provider-specific to campaign management and optimization in Google Ads.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, success_criterion."
+  },
+  {
+    "id": "public_gold_p107_proposal_writer",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-proposal-writer",
+    "closest_alternatives": [
+      "public-office-investment-memo",
+      "public-office-report-generator",
+      "public-office-content-writer",
+      "public-office-contract-template"
+    ],
+    "prompt": "Write a client-facing business proposal with problem framing, proposed solution, scope, pricing assumptions, timeline, and persuasive win themes. Do not write an investment memo, generic report, or legal contract template.",
+    "source_family": "business-writing",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "output_artifact",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The proposal writer skill targets persuasive business proposals for deals and partnerships.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, success_criterion, boundary_signal."
+  },
+  {
+    "id": "public_gold_p108_report_generator",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-report-generator",
+    "closest_alternatives": [
+      "public-office-data-analysis",
+      "public-office-chart-designer",
+      "public-office-weekly-report",
+      "public-office-infographic"
+    ],
+    "prompt": "Generate a polished data report with charts, tables, executive summary, and recommendations from a spreadsheet export. Do not only analyze the data, design one chart, or make an infographic layout.",
+    "source_family": "business-reporting",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The report generator skill produces full professional reports, not only analysis or visualization components.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_p109_job_description",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-job-description",
+    "closest_alternatives": [
+      "public-office-offer-letter",
+      "public-office-applicant-screening",
+      "public-office-resume-tailor",
+      "public-office-cover-letter"
+    ],
+    "prompt": "Draft an employer-side job description and hiring-page role posting with job title, responsibilities, required qualifications, nice-to-have skills, interview expectations, compensation/context notes, and inclusive hiring language. Do not screen applicants, tailor a resume, write a candidate cover letter, or produce an offer letter.",
+    "source_family": "hr-writing",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The job-description skill is for creating role descriptions rather than candidate or offer artifacts.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p110_offer_letter",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-offer-letter",
+    "closest_alternatives": [
+      "public-office-job-description",
+      "public-office-contract-template",
+      "public-office-nda-generator",
+      "public-office-hr-automation"
+    ],
+    "prompt": "Create a formal employment offer letter with role title, compensation, start date, reporting line, contingencies, and acceptance terms. Do not draft a job posting, NDA, or generic contract template.",
+    "source_family": "hr-writing",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "output_artifact",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The offer-letter skill creates employment offer artifacts with compensation and terms.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "input_or_precondition",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, input_or_precondition, boundary_signal."
+  },
+  {
+    "id": "public_gold_p111_docusign_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-docusign-automation",
+    "closest_alternatives": [
+      "public-office-contract-template",
+      "public-office-nda-generator",
+      "public-office-invoice-automation",
+      "public-office-form-builder",
+      "public-office-crm-automation",
+      "public-office-notion-automation",
+      "public-office-slack-workflows"
+    ],
+    "prompt": "Automate DocuSign envelope creation, signer routing, reminders, and completed-document status tracking. Do not only generate a contract template, NDA, invoice workflow, or generic form.",
+    "source_family": "document-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The DocuSign automation skill is provider-specific to e-signature envelope workflow automation.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_p112_expense_tracker",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-expense-tracker",
+    "closest_alternatives": [
+      "public-office-expense-report",
+      "public-office-quickbooks-automation",
+      "public-office-invoice-organizer",
+      "public-office-invoice-automation"
+    ],
+    "prompt": "Maintain an ongoing employee expense tracker/register from receipts through categorization, reimbursement status, approval workflow, monthly spending summaries, and tracker dashboard updates over time. Do not only generate a one-off expense report, organize invoice files, or run QuickBooks accounting automation.",
+    "source_family": "finance-ops",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "input_or_precondition",
+      "output_artifact"
+    ],
+    "gold_rationale": "The expense tracker skill handles ongoing receipt/expense tracking and reimbursement workflow.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "input_or_precondition",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, input_or_precondition, output_artifact."
+  },
+  {
+    "id": "public_gold_p113_quickbooks_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-quickbooks-automation",
+    "closest_alternatives": [
+      "public-office-invoice-automation",
+      "public-office-expense-tracker",
+      "public-office-stripe-payments",
+      "public-office-saas-metrics"
+    ],
+    "prompt": "Automate QuickBooks accounting workflows for invoices, expenses, bank reconciliation, and financial reporting. Do not build a generic invoice workflow, Stripe payment workflow, or SaaS metric report.",
+    "source_family": "finance-ops",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The QuickBooks automation skill is provider-specific to QuickBooks accounting workflows.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p114_stripe_payments",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-stripe-payments",
+    "closest_alternatives": [
+      "public-office-subscription-management",
+      "public-office-invoice-automation",
+      "public-office-shopify-automation",
+      "public-office-quickbooks-automation"
+    ],
+    "prompt": "Automate Stripe payment processing, subscription billing events, invoices, and payment-status reporting. Do not automate Shopify orders, QuickBooks accounting, or generic subscription lifecycle playbooks without Stripe payment operations.",
+    "source_family": "finance-ops",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The Stripe payments skill is specific to Stripe payment and subscription-payment automation.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, boundary_signal."
+  },
+  {
+    "id": "public_gold_p115_subscription_management",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-subscription-management",
+    "closest_alternatives": [
+      "public-office-saas-metrics",
+      "public-office-stripe-payments",
+      "public-office-customer-success",
+      "public-office-invoice-automation"
+    ],
+    "prompt": "Manage SaaS subscription lifecycle workflows such as upgrades, downgrades, churn-prevention playbooks, renewal alerts, and retention actions. Do not only calculate SaaS metrics or process Stripe payments.",
+    "source_family": "finance-ops",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The subscription-management skill targets operational subscription lifecycle management, not metric analysis alone.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, success_criterion, boundary_signal."
+  },
+  {
+    "id": "public_gold_p116_transcription_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-transcription-automation",
+    "closest_alternatives": [
+      "public-openai-transcribe",
+      "public-office-meeting-notes",
+      "public-office-podcast-automation",
+      "public-markitdown",
+      "public-office-smart-ocr"
+    ],
+    "prompt": "Automate audio and video transcription with timestamps, speaker labels, subtitle output, and transcript delivery. Do not only create meeting notes, convert documents to Markdown, or run OCR on images.",
+    "source_family": "media-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The transcription automation skill is for audio/video transcription and subtitle-style outputs.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_p117_podcast_automation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-podcast-automation",
+    "closest_alternatives": [
+      "public-office-transcription-automation",
+      "public-office-youtube-automation",
+      "public-office-spotify-automation",
+      "public-office-social-publisher"
+    ],
+    "prompt": "Automate podcast production from episode recording through editing, show notes, publishing, and distribution workflow. Do not only transcribe audio, manage YouTube videos, or publish social snippets.",
+    "source_family": "media-automation",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The podcast automation skill handles end-to-end podcast production workflow.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
+  },
+  {
+    "id": "public_gold_p118_news_monitor",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-news-monitor",
+    "closest_alternatives": [
+      "public-office-web-search",
+      "public-office-academic-search",
+      "public-office-deep-research",
+      "tech-news-trend-extractor"
+    ],
+    "prompt": "Set up ongoing news monitoring for a company and create a media digest with coverage trends, alerts, and synthesized current-event updates. Do not run a one-off web search, academic paper search, or deep research report.",
+    "source_family": "research-monitoring",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_rationale": "The news monitor skill is for ongoing monitoring and news digests rather than one-off search or research synthesis.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "boundary_signal"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, boundary_signal."
+  },
+  {
+    "id": "public_gold_p119_data_analysis",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-data-analysis",
+    "closest_alternatives": [
+      "public-office-report-generator",
+      "public-office-chart-designer",
+      "public-office-saas-metrics",
+      "public-office-xlsx-manipulation"
+    ],
+    "prompt": "Analyze spreadsheet data to identify trends, anomalies, correlations, and business insights, then recommend what follow-up analysis is needed. Do not manipulate Excel cells, design charts only, calculate SaaS metrics only, or generate a polished report artifact.",
+    "source_family": "data-analysis",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_rationale": "The data-analysis skill focuses on interpreting spreadsheet data and generating insights.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, workflow_or_procedure, success_criterion."
+  },
+  {
+    "id": "public_gold_p120_xlsx_manipulation",
+    "family": "public_gold_validation",
+    "gold_skill": "public-office-xlsx-manipulation",
+    "closest_alternatives": [
+      "public-office-sheets-automation",
+      "public-office-data-analysis",
+      "public-swebench-xlsx"
+    ],
+    "prompt": "Use openpyxl-style workbook manipulation to create sheets, write formulas, format cells, and save an `.xlsx` file. Do not automate Google Sheets, run analysis only, or solve a SWE-bench xlsx bug.",
+    "source_family": "data-office",
+    "atomization_status": "atomic",
+    "field_axes": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The xlsx-manipulation skill is specifically about programmatic Excel workbook editing and artifact generation.",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [
+      "public-office-excel-automation"
+    ],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_with_acceptable_alternatives",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is defensible, but near-equivalent alternatives are recorded and should count under acceptable scoring. Provider/tool cue status: provider_or_tool_explicit. Procedural axes: dependency_or_tool, output_artifact, workflow_or_procedure."
   }
 ]

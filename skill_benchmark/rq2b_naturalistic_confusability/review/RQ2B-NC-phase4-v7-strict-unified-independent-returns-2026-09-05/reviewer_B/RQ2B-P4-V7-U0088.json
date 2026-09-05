@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-022EBA23D7DA0739",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly matches the requested defensive deployment-security review: it covers IAM, network exposure, secrets, containers, pipelines, and IaC; requires evidence, risk ordering, and remediation without exploitation or changes.",
+      "source_anchor": "### Phase 2 — Review checklist (defensive)"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2C82B55FDCB073F6",
+      "missing_material_requirement_or_null": "A cross-layer security review covering container and pipeline configuration.",
+      "rationale": "Provides an evidence-based, read-only Terraform/IaC review with IAM, exposure, and secrets checks plus ranked remediation plans, but it is limited to Terraform and does not cover the requested container and pipeline settings.",
+      "source_anchor": "### Phase 2 — Review checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-83284DC12FDB1056",
+      "missing_material_requirement_or_null": "A cross-layer deployment-security review covering identity, network exposure, containers, and infrastructure configuration.",
+      "rationale": "Provides a read-only, evidence-based security review and prioritised remediation plans for CI/CD, including permissions, secret exposure, and supply-chain risks, but it is confined to pipelines rather than the full requested deployment configuration.",
+      "source_anchor": "### Phase 2 — Review checklist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9E91495F27736A6B",
+      "missing_material_requirement_or_null": "A deployment-security review workflow covering IAM, network, secrets, containers, pipelines, and IaC with evidence-ranked findings and defensive fixes.",
+      "rationale": "Defines a generic feature-delivery lifecycle with a security scan gate, but does not direct an evidence-based assessment of deployment security weaknesses or provide the requested cross-layer risk analysis and defensive findings.",
+      "source_anchor": "## The Pipeline"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A4302AA7B41B4FC0",
+      "missing_material_requirement_or_null": "A defensive deployment-security assessment covering identity, network exposure, secrets, container settings, pipelines, and infrastructure configuration.",
+      "rationale": "Teaches defensive Bash authoring patterns; it neither assesses deployment configuration nor supplies the requested security-risk ranking and evidence-based defensive remediations.",
+      "source_anchor": "## Core Defensive Principles"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E7637289ED5FB01F",
+      "missing_material_requirement_or_null": "An evidence-based deployment-configuration review covering network exposure and container hardening and ranking findings with defensive remediations.",
+      "rationale": "Supplies relevant security requirements for access control, secrets, secure configuration, and pipeline security, but it is a general development policy rather than a complete deployment review with the requested network, container, evidence, and prioritisation coverage.",
+      "source_anchor": "## Secure Configuration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EF62A27368CD31BB",
+      "missing_material_requirement_or_null": "A defensive deployment-security assessment workflow.",
+      "rationale": "Performs gene-set enrichment analysis, which is unrelated to assessing deployment security weaknesses or producing defensive infrastructure findings.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4925EEDF4EA745E",
+      "missing_material_requirement_or_null": "A security-focused review of identity, network exposure, secrets, containers, and pipelines.",
+      "rationale": "Focuses on cloud-cost optimisation and savings evidence, not security weaknesses; its IaC coverage does not supply the requested defensive security assessment across the stated layers.",
+      "source_anchor": "### Phase 2 — Review checklist"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0088",
+  "batch_input_sha256": "f673e8af60e29309c94d8ffc35024b2018af654e1e9ae28030c2fdef3da391f9",
+  "blind_packet_id": "P-B651D019F732D263A7",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "44f372c4562a41c1efed9f3ccbca9715b075c16965a4353d6140de6ba810b68f"
+}

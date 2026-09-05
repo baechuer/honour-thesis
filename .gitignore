@@ -11,11 +11,23 @@ __pycache__/
 .ruff_cache/
 
 .venv/
+.venv-rq2a/
 venv/
 node_modules/
 .git-backups/
 
 skill_benchmark/runtime/provider_cache/
+skill_benchmark/cache/rq2b_b0g/
+skill_benchmark/cache/rq2b_b0g_semantic_review/
+skill_benchmark/cache/rq2b_b0g_semantic_review_v2/
+
+# External SkillRouter-Eval-Core data is reproducible from Hugging Face.
+# Keep scripts and small reports, but do not commit multi-GB raw pools,
+# derived representation dumps, chunk caches, or FTS indexes.
+skill_benchmark/external/skillrouter_eval_core/raw/
+skill_benchmark/external/skillrouter_eval_core/derived/i3_chunks/
+skill_benchmark/external/skillrouter_eval_core/derived/representations/
+skill_benchmark/external/skillrouter_eval_core/outputs/fts_indexes/
 
 # LaTeX build intermediates
 *.aux
@@ -26,6 +38,8 @@ skill_benchmark/runtime/provider_cache/
 *.log
 *.out
 *.toc
+*.lof
+*.lot
 
 # Generated/transient local artifacts
 /output/
@@ -33,3 +47,21 @@ skill_benchmark/runtime/provider_cache/
 
 # Submitted assignment source PDFs are local reference material.
 thesis_notes/submitted_assignment/*.pdf
+
+# Local research runtime state and regenerated visual/output scratch space.
+# Canonical manifests, protocols, trackers, and compact reports remain tracked.
+skill_benchmark/cache/
+skill_benchmark/external/skillrouter_eval_core/outputs/
+tmp/
+thesis_latex/tmp/
+agent_work_round3/
+icebun-noir-v2-upgrade/
+.tmp_*
+reviewer_a_return.jsonl
+
+# Local-only archives and superseded bulk discovery/materialisation snapshots.
+skill_benchmark_snapshot*.tar.gz
+skillrouter_eval_core_i3c_v2_neural_matrix_snapshot_2026_06_21.tar.gz
+skill_benchmark/rq2b_naturalistic_confusability/review/source_native_dense_lexical_union_*/
+skill_benchmark/rq2b_naturalistic_confusability/review/source_native_local_bge_embedding_*/
+skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_parallel_microbatch_2026_09_05_v1/

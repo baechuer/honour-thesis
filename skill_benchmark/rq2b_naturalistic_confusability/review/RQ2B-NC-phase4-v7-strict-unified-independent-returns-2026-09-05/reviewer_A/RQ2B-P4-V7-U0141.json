@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-05B145DEC8963334",
+      "missing_material_requirement_or_null": "A spreadsheet-ready extraction of dataset names, model names, evaluation metrics, and reported scores without prose synthesis.",
+      "rationale": "It can read supplied papers and gather a corpus, but its required thematic argument and consensus/dispute synthesis do not produce the requested extraction table.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0A0CD5CD8D2BA362",
+      "missing_material_requirement_or_null": "A workflow for reading papers and extracting datasets, model names, evaluation metrics, and reported scores into a spreadsheet-ready table.",
+      "rationale": "This skill resolves data-lake catalog assets across AWS services rather than extracting reported information from research papers.",
+      "source_anchor": "# Find Data Lake Assets"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-40135A6B3587C42B",
+      "missing_material_requirement_or_null": "A workflow for extracting paper metadata and reported evaluation results into a spreadsheet-ready table.",
+      "rationale": "It synthesizes interview transcripts into themes and stakeholder-ready quotes, which is not a route to the requested paper-result extraction.",
+      "source_anchor": "# Interview Synthesis"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5BA04C9F95BCEB1C",
+      "missing_material_requirement_or_null": "A spreadsheet-ready table that explicitly captures dataset names, model names, evaluation metrics, and reported scores from the supplied papers.",
+      "rationale": "Its deep-read procedure supports careful source-level extraction and records some study details, but it is scoped to published user-research findings and does not require the four requested fields or spreadsheet table output.",
+      "source_anchor": "### Procedure 3 — deep-read one source into its findings"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-85B698CC73E4FD3D",
+      "missing_material_requirement_or_null": "A spreadsheet-ready extraction table for datasets, model names, evaluation metrics, and reported scores across the supplied papers.",
+      "rationale": "It preserves research evidence and directs reading source materials, but its deliverable is technical-paper writing rather than structured extraction of the requested fields.",
+      "source_anchor": "## Preserve Technical Integrity"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B4055201B2F8A0DB",
+      "missing_material_requirement_or_null": "A workflow that reads supplied papers and extracts their dataset names, model names, metrics, and reported scores into a spreadsheet-ready table.",
+      "rationale": "It designs and reports a new ML model evaluation using provided evaluation inputs, rather than extracting reported results from papers.",
+      "source_anchor": "# Model Evaluation Report"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DD370FB84FD11D94",
+      "missing_material_requirement_or_null": "A spreadsheet-ready extraction of datasets, model names, evaluation metrics, and reported scores without quality-scoring the papers.",
+      "rationale": "It reads and assesses scholarly papers, including their results, but its prescribed output is a quality evaluation rather than the requested factual extraction table.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E017D1A07CCA3904",
+      "missing_material_requirement_or_null": "A workflow for extracting structured experimental details and reported scores from research papers.",
+      "rationale": "This skill performs security threat modeling for system designs, not paper reading or evaluation-result extraction.",
+      "source_anchor": "# Threat Model STRIDE"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0141",
+  "batch_input_sha256": "c2a3d6defcb9c9fed8ebfaa8715c0acb13b35ee375a61acea0937a38c2a8ec5b",
+  "blind_packet_id": "P-39899CF672E2F71F5B",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1a5572806489cb76a53f4ada0a44dddd8acb4f0bb2bddb373098267f7379e2fc"
+}

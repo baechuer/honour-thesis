@@ -261,13 +261,20 @@ def find_skill_files(skills_root: Path) -> dict[str, Path]:
     return mapping
 
 
+def full_skill_source_path(wrapper_path: Path) -> Path:
+    original_path = wrapper_path.parent / "source" / "SKILL.original.md"
+    if original_path.exists():
+        return original_path
+    return wrapper_path
+
+
 def load_full_skill_texts(skills_root: Path, skill_names: list[str]) -> dict[str, str]:
     files = find_skill_files(skills_root)
     full: dict[str, str] = {}
     for skill in skill_names:
         path = files.get(skill)
         if path and path.exists():
-            full[skill] = path.read_text(encoding="utf-8")
+            full[skill] = full_skill_source_path(path).read_text(encoding="utf-8")
     return full
 
 

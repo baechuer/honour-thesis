@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-001E38871292E005","missing_material_requirement_or_null":"Availability and tail-latency alert-rule definitions plus incident handoff guidance.","rationale":"It configures PagerDuty routing, escalation, schedules, and an error-rate event, but lacks the requested availability/tail-latency rules and handoff procedure.","source_anchor":"# PagerDuty"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-301A95F065E298DD","missing_material_requirement_or_null":"Alert-rule, routing, on-call rotation, and escalation-policy configuration.","rationale":"It supplies detailed incident handoff guidance and watch thresholds, but not the requested alerting and on-call configuration.","source_anchor":"## Deliverable"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-3FB5DF2AD2D75328","missing_material_requirement_or_null":"Availability and tail-latency alert-rule definitions plus incident handoff guidance.","rationale":"It provides Opsgenie routing, escalation, weekly schedules, error-rate alert examples, runbook details, and deduplication, but omits the other requested rules and handoff guidance.","source_anchor":"## Best Practices"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-752664D3A620D230","missing_material_requirement_or_null":"Alert thresholds, severity routing, on-call rotation, escalation, handoff, and notification-noise configuration.","rationale":"This skill concerns Azure tenant and subscription governance rather than operational alerting or on-call management.","source_anchor":"# Azure Landing Zone Setup"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-7E63FD186B43061C","missing_material_requirement_or_null":null,"rationale":"It provides Prometheus availability, error-rate, and latency rules; severity, routing, timing, runbook, weekly rotation, escalation, handoff, fatigue-reduction, and operational-checklist guidance.","source_anchor":"# Alerting & On-Call"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-8599DD3DEDA07911","missing_material_requirement_or_null":"Alert thresholds, severity routing, on-call rotation, escalation, handoff, and notification-noise configuration.","rationale":"This is a security prior-art research workflow, not a service alerting or on-call configuration workflow.","source_anchor":"## Overview"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-8860DBFB9E2661CD","missing_material_requirement_or_null":"Alert thresholds, severity routing, on-call rotation, escalation, handoff, and notification-noise configuration.","rationale":"This presentation-authoring skill does not configure production alerts, routing, or on-call operations.","source_anchor":"# HTML Slides Skill"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-C2A5BC10CF6A1719","missing_material_requirement_or_null":"Alert thresholds, severity routing, on-call rotation, escalation, handoff, and notification-noise configuration.","rationale":"This PDF page-management skill provides no production alerting or on-call configuration capabilities.","source_anchor":"# PDF Merge & Split"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0256",
+  "batch_input_sha256":"47f4ad4137143e2f603899dcec9f15c784205f934c4e70ff2332313e4ee5bffe",
+  "blind_packet_id":"P-B1FA5F51598389695F",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"456e1646364a6474618a666d6af0d48de3e6590055dd8a1976a7988b901aa5e9"
+}

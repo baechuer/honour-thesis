@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-18A4B779DC8F8F91",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality fields covering particulate matter, gases, dust, ultraviolet exposure, pollen, and an air-quality index.",
+      "rationale": "This is a flood endpoint for daily river-discharge data, so it cannot supply the requested hourly air-conditions dataset or its specified field coverage.",
+      "source_anchor": "daily river-discharge data"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-33099BDA18888BDF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supports hourly modeled air-quality retrieval by coordinates and date window, explicitly covers the requested field families, and returns normalized records with validation, metadata, and logs.",
+      "source_anchor": "Fetch Open-Meteo Air Quality API hourly background fields"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4AA2C2ABF76C2C6C",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality retrieval dataset and validated retrieval log.",
+      "rationale": "This skill facilitates sprint retrospectives and has no capability to retrieve environmental data, select hourly fields, or validate a retrieval.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9C14A062D5BEBA7A",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality fields covering particulate matter, gases, dust, pollen, ultraviolet exposure, and an air-quality index.",
+      "rationale": "This historical-fetch workflow is scoped to weather and shallow-soil variables, not the requested air-quality variables.",
+      "source_anchor": "weather and shallow-soil variables"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D3B01D527AD962A2",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality retrieval dataset and validated retrieval log.",
+      "rationale": "This is a documentation-based survey of UI and interaction conventions; it neither retrieves air data nor produces the requested dataset and log.",
+      "source_anchor": "UI-pattern vocabulary map"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DB04205D09C8BF69",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality retrieval dataset and validated retrieval log.",
+      "rationale": "This summarizes a supplied practical document rather than retrieving or validating modeled air-quality observations.",
+      "source_anchor": "Summarises a document into a clear and compact recap."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E4E60B09CEB32146",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality retrieval dataset and validated retrieval log.",
+      "rationale": "This routes LangSmith tracing, evaluation, and review workflows; it has no environmental-data retrieval or hourly air-variable capability.",
+      "source_anchor": "Route LangSmith work into one workflow packet"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FAEC5290AA587A6E",
+      "missing_material_requirement_or_null": "Hourly modeled air-quality retrieval dataset and validated retrieval log.",
+      "rationale": "This performs first-pass pattern and anomaly routing across existing evidence, not retrieval and validation of modeled air conditions.",
+      "source_anchor": "Route repeated pattern, rule, and anomaly work into one detection packet"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0075",
+  "batch_input_sha256": "93c23b0c6cfdaa6f6d5eded239d7cd055171cb3a08fe71b1833dfc5bd4cc9962",
+  "blind_packet_id": "P-81EBD9E6A228FCCD71",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "79215d1458b069e226ceaa3d5d99b42f96cd681ef6c2edc9cdd10aaebdb1fd45"
+}

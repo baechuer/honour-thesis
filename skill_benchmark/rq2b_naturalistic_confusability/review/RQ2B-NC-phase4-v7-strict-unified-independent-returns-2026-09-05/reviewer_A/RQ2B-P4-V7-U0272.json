@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-03F9F258515243AC","missing_material_requirement_or_null":"VM-specific golden-image hardening/scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"Generic SDLC flow does not provide the requested VM security controls.","source_anchor":"## The Pipeline"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9DC51BD377A3F1F8","missing_material_requirement_or_null":"VM-specific golden-image hardening/scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"Kubernetes admission and External Secrets controls do not implement the requested VM pipeline.","source_anchor":"## Purpose"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-BC845CF7D2382D92","missing_material_requirement_or_null":null,"rationale":"Explicitly provides VM security gates, CIS-hardened golden-image scanning, Ansible Vault secrets, and deploy-independent patch/drift detection.","source_anchor":"### Phase 6 — Ongoing patch/drift detection, independent of any single deploy"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-C8B055A658862B3B","missing_material_requirement_or_null":"A security-gated VM delivery pipeline with golden-image scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"Release-note authoring does not design delivery pipelines or their security controls.","source_anchor":"# Write release notes"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-CDCDB3F454B2088A","missing_material_requirement_or_null":"VM-specific golden-image hardening/scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"Serverless package, IAM, and runtime-secret controls do not implement the requested VM pipeline.","source_anchor":"## Purpose"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D53EE977A8453B3C","missing_material_requirement_or_null":"A security-gated VM delivery pipeline with golden-image scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"API contract design does not provide VM delivery or security operations.","source_anchor":"# API and Interface Design"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-E849E4B176C43E6E","missing_material_requirement_or_null":"A security-gated VM delivery pipeline with golden-image scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"Notification-copy guidance does not address VM delivery or security controls.","source_anchor":"# Push Notification Copy"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-F4A9B193FC1DE78D","missing_material_requirement_or_null":"A security-gated VM delivery pipeline with golden-image scanning, configuration-managed secrets, and recurring patch/drift detection.","rationale":"Visual-convention research does not design VM delivery or security controls.","source_anchor":"## Overview"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0272",
+  "batch_input_sha256":"0630ec2ffc594d0dcd51bc3fc7a6a61bd1784858d185840de932a7e644c1a94d",
+  "blind_packet_id":"P-64E9361FE1C2F7EF57",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"7dce07a418abe3a9c904c8d873568bf466968eb92a199497426faaafd4f3cd73"
+}

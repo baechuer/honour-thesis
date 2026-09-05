@@ -39,7 +39,9 @@
     "closest_alternatives": [
       "web-page-snapshotter",
       "web-ui-tester",
-      "frontend-debugger"
+      "frontend-debugger",
+      "product-ops-field-extractor",
+      "document-extractor"
     ],
     "prompt": "From this product listing page, extract the product names, prices, availability labels, and detail-page links into a structured table. I do not need a screenshot."
   },
@@ -50,7 +52,10 @@
     "closest_alternatives": [
       "web-ui-tester",
       "web-page-snapshotter",
-      "code-reviewer"
+      "code-reviewer",
+      "playwright-flow-debugger",
+      "psc-devtools-runtime-diagnoser",
+      "web-ops-failure-diagnoser"
     ],
     "prompt": "The settings page opens but clicking Save does nothing, and the console shows `Cannot read properties of undefined (reading 'id')` after the profile API call. Use the UI symptom as evidence, then inspect the frontend event handler, state update path, and API response contract. The deliverable is the likely source-level cause plus the smallest code patch."
   },

@@ -1,0 +1,54 @@
+{
+  "assignment_version": "rq2b_nc_phase5_v7_parallel_handoff_v1",
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/unified_independent_reviewer_return_schema.json": "605ec69bffa6f55f9a5c94be0f9bd40e1d096afddea1f38caaa454882fd1e625",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/unified_prompt_group_batch_manifest.jsonl": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_execution_state_reconciliation_2026_09_06_v14_after_m0037_complete/execution_state_reconciliation.json": "3b8172bb33d8d9dd2d8161c23088680591e0c11a5a45b0cb7d0cf7fbef8edf87",
+    "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "claim_boundary": "Dispatch and integrity only; no reviewer adequacy outcome, reconciliation decision, target join, acceptable-set result, retrieval, reranking, provider output or metric is read or produced.",
+  "compatibility": {
+    "execution_state_reconciler_validate_handoff": "The existing execution-state reconciliation script exposes validate-handoff for this state-pinned package; it verifies assignment coverage without reading outcomes.",
+    "existing_return_and_reconciliation_contract": "V7 protocol validates returned files after they are integrated into its canonical reviewer return paths; this handoff does not alter those paths or returns.",
+    "frozen_v7_protocol_verify_execution": "PASS",
+    "official_execution_state_reconciliation_hash": "PASS",
+    "packet_reconstruction_against_v7_main_tail_hashes": "PASS"
+  },
+  "counts": {
+    "finalised_locked": 147,
+    "machine_a": 540,
+    "machine_b": 539,
+    "pending_assigned": 1079,
+    "required_new_or_revalidated_independent_returns": 2158,
+    "started_incomplete_reissued": 1,
+    "unstarted_issued": 1078,
+    "v7_prompt_groups": 1226
+  },
+  "integrity_report_sha256": "0da5c55da760cdae6ba88195b298735ff965b0c39eeed0aa998014464cf44f79",
+  "official_state_counts": {
+    "FINALISED": 147,
+    "STARTED_INCOMPLETE": 1,
+    "UNSTARTED": 1078
+  },
+  "outputs": {
+    "README.md": "3cb05f7f813c4744a9d813c009e3c9698c71a33808081e9f24c33bee5042b79a",
+    "machine_a_manifest.jsonl": "1745048844e874c0546fdaa7f1beeaf63785d1f88f149a04346c8a3ed2af6291",
+    "machine_b_manifest.jsonl": "50344f54ea88556515ccdf174bb98640bfc4cc5dc8d12c29d17cb3aebbdcb6b4",
+    "phase5_v7_pending_assignment_v1.jsonl": "0a9a802170955b14776132a811ae52325e3bb87ea97e155c16e4a83fee25be48",
+    "reviewer_return_schema.json": "605ec69bffa6f55f9a5c94be0f9bd40e1d096afddea1f38caaa454882fd1e625"
+  },
+  "schema_version": "rq2b_nc_phase5_v7_parallel_handoff_integrity_v1",
+  "status": "PASS_RQ2B_V7_PHASE5_TWO_MACHINE_HANDOFF_FREEZE",
+  "validation": {
+    "all_packets_are_complete_eight_candidate_v7_packets": true,
+    "machine_a_count_exact": true,
+    "machine_b_count_exact": true,
+    "machine_rows_expose_only_the_expected_role_hidden_packet_fields": true,
+    "machine_sets_disjoint": true,
+    "machine_union_equals_pending": true,
+    "no_finalised_batch_assigned": true,
+    "official_state_counts_exact": true,
+    "one_started_incomplete_traceable_reissue": true,
+    "pending_count_exact": true
+  }
+}

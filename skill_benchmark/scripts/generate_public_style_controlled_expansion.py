@@ -782,34 +782,219 @@ def bullets(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items)
 
 
-def render_skill(skill: dict[str, object], cluster_id: str, intent: str) -> str:
+def numbered(items: list[str]) -> str:
+    return "\n".join(f"{index}. {item}" for index, item in enumerate(items, 1))
+
+
+def heading_variants(skill_name: str) -> dict[str, str]:
+    variants = [
+        {
+            "overview": "Overview",
+            "fit": "When to use this skill",
+            "flow": "Quick start",
+            "outputs": "Output format",
+            "limits": "When not to use this skill",
+            "deps": "References",
+            "examples": "Examples",
+            "quality": "Best Practices",
+        },
+        {
+            "overview": "Purpose",
+            "fit": "Common requests",
+            "flow": "Instructions",
+            "outputs": "Response shape",
+            "limits": "Common mistakes",
+            "deps": "Environment notes",
+            "examples": "Example prompts",
+            "quality": "Validation",
+        },
+        {
+            "overview": "Guide",
+            "fit": "Routing notes",
+            "flow": "Workflow",
+            "outputs": "Deliverables",
+            "limits": "Anti-patterns",
+            "deps": "Dependencies",
+            "examples": "Usage examples",
+            "quality": "Quality bar",
+        },
+        {
+            "overview": "Capability",
+            "fit": "Good fit",
+            "flow": "Playbook",
+            "outputs": "Handoff",
+            "limits": "Boundaries",
+            "deps": "Tools and files",
+            "examples": "Samples",
+            "quality": "Checks",
+        },
+        {
+            "overview": "How this works",
+            "fit": "Typical triggers",
+            "flow": "Steps",
+            "outputs": "What to return",
+            "limits": "Neighbouring skills",
+            "deps": "Operational notes",
+            "examples": "Requests",
+            "quality": "Review notes",
+        },
+        {
+            "overview": "About",
+            "fit": "Use it for",
+            "flow": "Process",
+            "outputs": "Expected artifacts",
+            "limits": "Do not use for",
+            "deps": "Runtime assumptions",
+            "examples": "Examples",
+            "quality": "Acceptance",
+        },
+    ]
+    index = sum(ord(char) for char in skill_name) % len(variants)
+    return variants[index]
+
+
+def example_lines(skill: dict[str, object]) -> str:
+    prompts: list[dict[str, str]] = skill["prompts"]  # type: ignore[assignment]
+    lines = []
+    for prompt in prompts:
+        lines.append(f"- {prompt['text']}")
+    return "\n".join(lines)
+
+
+def quality_checks(skill: dict[str, object]) -> list[str]:
+    deliverables: list[str] = skill["deliverables"]  # type: ignore[assignment]
+    checks = [
+        f"The response clearly produces {deliverables[0].lower()}.",
+        "The answer explains uncertainty instead of silently guessing.",
+        "The chosen process matches the user's artifact and requested outcome.",
+    ]
+    if len(deliverables) > 1:
+        checks.append("Secondary outputs are included only when they support the requested result.")
+    return checks
+
+
+def comma_items(items: list[str]) -> str:
+    if not items:
+        return ""
+    if len(items) == 1:
+        return items[0]
+    return ", ".join(items[:-1]) + f", and {items[-1]}"
+
+
+def paragraph_lines(items: list[str]) -> str:
+    return " ".join(item.rstrip(".") + "." for item in items)
+
+
+def loose_table(skill: dict[str, object]) -> str:
+    requirements: list[str] = skill["requirements"]  # type: ignore[assignment]
+    deliverables: list[str] = skill["deliverables"]  # type: ignore[assignment]
+    rows = []
+    for index, requirement in enumerate(requirements):
+        deliverable = deliverables[index % len(deliverables)]
+        rows.append(f"| {requirement} | {deliverable} |")
+    return "\n".join(
+        [
+            "| Useful clue | Why it matters |",
+            "|---|---|",
+            *rows,
+        ]
+    )
+
+
+def related_skill_notes(skill: dict[str, object], sibling_names: list[str]) -> str:
+    current = str(skill["name"])
+    siblings = [name for name in sibling_names if name != current][:3]
+    if not siblings:
+        return ""
+    labels = ", ".join(f"`{name}`" for name in siblings)
+    return (
+        f"Nearby skills in this cluster include {labels}. They may share nouns with this skill, "
+        "so route by the requested artifact and the work sequence, not by the domain word alone."
+    )
+
+
+def pseudo_fixture_note(skill: dict[str, object]) -> str:
+    requirements: list[str] = skill["requirements"]  # type: ignore[assignment]
+    deliverables: list[str] = skill["deliverables"]  # type: ignore[assignment]
+    dependencies: list[str] = skill["dependencies"]  # type: ignore[assignment]
+    return "\n".join(
+        [
+            "```yaml",
+            "handoff:",
+            f"  needs: {json.dumps(requirements[:2])}",
+            f"  returns: {json.dumps(deliverables[:2])}",
+            f"  tools: {json.dumps(dependencies[:2])}",
+            "  uncertainty: keep page, file, row, log, or source anchors when available",
+            "```",
+        ]
+    )
+
+
+def render_skill(skill: dict[str, object], cluster_id: str, intent: str, sibling_names: list[str]) -> str:
     title = str(skill["name"]).replace("psc-", "").replace("-", " ").title()
     description = f"{SHARED_CONTEXT.get(cluster_id, '')} {skill['description']}".strip()
+    heads = heading_variants(str(skill["name"]))
+    requirements: list[str] = skill["requirements"]  # type: ignore[assignment]
+    instructions: list[str] = skill["instructions"]  # type: ignore[assignment]
+    deliverables: list[str] = skill["deliverables"]  # type: ignore[assignment]
+    dependencies: list[str] = skill["dependencies"]  # type: ignore[assignment]
+    checks = quality_checks(skill)
     return (
         f"---\n"
         f"name: {skill['name']}\n"
         f"description: {json.dumps(description)}\n"
+        f"category: public-style-controlled\n"
+        f"tags:\n"
+        f"  - public-style\n"
+        f"  - controlled-confusability\n"
+        f"  - {cluster_id.replace('_', '-')}\n"
         f"metadata:\n"
         f"  source_style: public_style_controlled\n"
         f"  cluster_id: {cluster_id}\n"
         f"---\n\n"
         f"# {title}\n\n"
-        f"This is a public-style controlled skill used for retrieval evaluation. It is written as a practical capability note rather than a neat benchmark schema.\n\n"
-        f"Cluster intent: {intent}\n\n"
-        f"## When to use\n\n"
-        f"{skill['good_fit']}\n\n"
-        f"## Requirements\n\n"
-        f"{bullets(skill['requirements'])}\n\n"
-        f"## Instructions\n\n"
-        f"{bullets(skill['instructions'])}\n\n"
-        f"## Deliverables\n\n"
-        f"{bullets(skill['deliverables'])}\n\n"
-        f"## When not to use\n\n"
-        f"{skill['watch_out']}\n\n"
-        f"## External dependencies to preserve\n\n"
-        f"{bullets(skill['dependencies'])}\n\n"
-        f"## Example use\n\n"
-        f"A good request names the artifact or situation, gives enough operational context to choose this capability, and asks for the deliverable above.\n"
+        f"## {heads['overview']}\n\n"
+        f"{skill['description']} This guide is written for a public-skill style library where the same "
+        f"artifact can be handled by several neighbouring workflows. {intent}\n\n"
+        f"The important distinction is not just the file type or tool name. Route here when the user is asking "
+        f"for {deliverables[0].lower()} and the request depends on {comma_items(requirements[:2]).lower()}. "
+        f"If the task shifts toward a different final artifact, keep the domain context but choose the neighbouring skill instead.\n\n"
+        f"## {heads['fit']}\n\n"
+        f"{skill['good_fit']} In practice the request may mention only part of the context, so check for "
+        f"the combination of source material, requested judgement, and the kind of handoff the user expects.\n\n"
+        f"{loose_table(skill)}\n\n"
+        f"When the request is underspecified, ask for the smallest missing item. For example, if the user gives the "
+        f"artifact but not the acceptance criterion, state what you will assume before doing irreversible work.\n\n"
+        f"## {heads['flow']}\n\n"
+        f"A normal run is usually:\n\n"
+        f"{numbered(instructions)}\n\n"
+        f"Do not treat the list above as a rigid template. Public skills often arrive with partial notes, linked files, "
+        f"or copied examples. Preserve the user's ordering when it matters, but keep the final answer focused on the "
+        f"decision the skill is responsible for.\n\n"
+        f"{pseudo_fixture_note(skill)}\n\n"
+        f"## {heads['outputs']}\n\n"
+        f"The handoff is usually a compact artifact rather than a long essay. Include {comma_items(deliverables).lower()} "
+        f"when those pieces are supported by the source material. If a requested field cannot be found, mark it as "
+        f"missing instead of inventing it.\n\n"
+        f"Typical return blocks:\n\n"
+        f"{bullets(deliverables)}\n\n"
+        f"## {heads['limits']}\n\n"
+        f"{skill['watch_out']} {related_skill_notes(skill, sibling_names)}\n\n"
+        f"A common routing mistake is to select by a shared noun in the prompt and miss the user's requested output. "
+        f"Prefer the skill whose procedure would actually produce the requested handoff.\n\n"
+        f"## {heads['deps']}\n\n"
+        f"This workflow can be carried out with {comma_items(dependencies).lower()}. Equivalent tools are fine, but "
+        f"they must preserve the same inspection or verification standard. Keep anchors such as filenames, pages, "
+        f"rows, source snippets, log lines, screenshots, or model/dataset identifiers when they are available.\n\n"
+        f"Useful source clues, in rough order: {paragraph_lines(requirements)}\n\n"
+        f"## {heads['examples']}\n\n"
+        f"{example_lines(skill)}\n\n"
+        f"Less ideal but still valid request: \"Can you look at this and tell me what should happen next?\" In that case, "
+        f"first decide whether the user wants {deliverables[0].lower()} or a neighbouring artifact, then ask one clarifying question if needed.\n\n"
+        f"## {heads['quality']}\n\n"
+        f"{bullets(checks)}\n\n"
+        f"Before finishing, compare the answer against the nearby-skill boundary above. If the output would be more naturally "
+        f"produced by another skill, say so and switch rather than stretching this workflow.\n"
     )
 
 
@@ -864,14 +1049,18 @@ def main() -> int:
     for cluster in CLUSTERS:
         cluster_id = str(cluster["cluster_id"])
         intent = str(cluster["intent"])
+        sibling_names = [str(skill["name"]) for skill in cluster["skills"]]  # type: ignore[index]
         for skill in cluster["skills"]:  # type: ignore[index]
             skill_dir = skills_root / str(skill["name"])
             skill_dir.mkdir(parents=True)
-            (skill_dir / "SKILL.md").write_text(render_skill(skill, cluster_id, intent), encoding="utf-8")
+            (skill_dir / "SKILL.md").write_text(render_skill(skill, cluster_id, intent, sibling_names), encoding="utf-8")
             resources_dir = skill_dir / "resources"
             resources_dir.mkdir()
             (resources_dir / "operating_notes.md").write_text(
-                f"# Operating Notes\n\nCluster: {cluster_id}\n\n{intent}\n",
+                f"# Operating Notes\n\n"
+                f"This note records the neighbouring capability family for maintainers.\n\n"
+                f"Family: {cluster_id}\n\n"
+                f"{intent}\n",
                 encoding="utf-8",
             )
         all_prompts.extend(prompt_rows(cluster))

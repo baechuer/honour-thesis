@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0008",
+  "blind_packet_id": "P-91CED736057B44292E",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-02CA946654F01CCD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Table Partition Planner",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT"
+    },
+    {
+      "candidate_token": "C-31516577025830BA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Index Advisor",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT"
+    },
+    {
+      "candidate_token": "C-34BBB3CE291CB98B",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "### Step 4: apply the matching fix",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT"
+    },
+    {
+      "candidate_token": "C-557935E21B5002BE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Spark Training Gotchas",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "When to Use This Skill"
+    },
+    {
+      "candidate_token": "C-91D88FE30D3D3BF6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# DAG Template Generate Skill",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "DAG Template Generate Skill"
+    },
+    {
+      "candidate_token": "C-B15418C3B90BBDB4",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Overview",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Competitive Analysis Skill"
+    },
+    {
+      "candidate_token": "C-C204D414204A558F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# SQL Query Rewriter",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Convert deep OFFSET to keyset pagination"
+    },
+    {
+      "candidate_token": "C-DA61E9CB9C35A7E8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# GSVA Analysis And Visualization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "When to Use"
+    }
+  ],
+  "reviewer_A_return_sha256": "374bbfac30fc91ecb443949377b40e54dde52bcf5b09cc4b0d5020768497337d",
+  "reviewer_B_return_sha256": "27cacd44cba1118b12826f8f7217a993450c42e7ed6cf2fd5a943b981e52570e",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

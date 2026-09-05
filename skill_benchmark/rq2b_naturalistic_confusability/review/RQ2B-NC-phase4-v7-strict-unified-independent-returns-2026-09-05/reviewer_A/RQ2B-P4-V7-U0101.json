@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1642B6D776B03D61",
+      "missing_material_requirement_or_null": "Relational table DDL with keys, ownership, uniqueness and lifecycle constraints, plus a safe migration sequence.",
+      "rationale": "This is explicitly for GraphQL schema and resolver design, and directs underlying table design elsewhere; it cannot supply the requested relational persistence design.",
+      "source_anchor": "Do NOT use for the underlying table design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-63F9CECAFA35CC50",
+      "missing_material_requirement_or_null": "Relational table DDL with keys, ownership, uniqueness and lifecycle constraints, plus a safe migration sequence.",
+      "rationale": "This is a feature-store design workflow and explicitly excludes general relational schema design, so it does not provide the requested persistence tables and migration.",
+      "source_anchor": "for general relational schema design"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-7E8670F5523CE2DB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers normalized relational table design, primary and foreign keys, uniqueness and lifecycle constraints, plus lock-safe reversible migrations; its deliverable requests DDL and an ordered migration plan.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8902141F59844AC4",
+      "missing_material_requirement_or_null": "Relational table DDL with keys, ownership, uniqueness and lifecycle constraints, plus a safe migration sequence.",
+      "rationale": "This is a debugging and error-recovery process, not a design method for relational persistence or schema migration.",
+      "source_anchor": "# Debugging and Error Recovery"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A76A9845AC4D0CB8",
+      "missing_material_requirement_or_null": "Relational table DDL with keys, ownership, uniqueness and lifecycle constraints, plus a safe migration sequence.",
+      "rationale": "This writes editorial related-article teasers and has no material for relational database design or migration.",
+      "source_anchor": "# Related Articles Teaser Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D672932264C50E68",
+      "missing_material_requirement_or_null": "Relational table DDL with keys, ownership, uniqueness and lifecycle constraints, plus a safe migration sequence.",
+      "rationale": "It covers external-system integration resilience and synchronization, but does not provide a relational data model, constraints, or schema migration plan for the requested entities.",
+      "source_anchor": "third-party and external system integration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DDB7CC5C7455A84A",
+      "missing_material_requirement_or_null": "Relational table DDL with keys, ownership, uniqueness and lifecycle constraints, plus a safe migration sequence.",
+      "rationale": "This is a presentation-table formatting guide and explicitly excludes database table, key, and normalization design.",
+      "source_anchor": "Do NOT use for designing database tables, keys, and normalization"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-ED223FF1489DE43C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Its relational physical-schema phase covers table structure, primary and foreign keys, integrity and lifecycle choices, while its migration phase and deliverables provide an implementable schema and migration plan.",
+      "source_anchor": "Physical Schema Design (Relational Databases)"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0101",
+  "batch_input_sha256": "02f32e704b3eb0adeceec6b9bc097efb4af27773a47d300eb35012917f816eaf",
+  "blind_packet_id": "P-5BF935C030EBA41DE8",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "446756723c3ac6838be2cd46d144a61aa7d2720cf60cbebfe79aceef083ee40a"
+}

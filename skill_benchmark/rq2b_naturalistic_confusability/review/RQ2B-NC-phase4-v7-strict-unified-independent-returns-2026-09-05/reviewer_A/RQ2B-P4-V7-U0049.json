@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-18AD09DA0B678033",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The skill directly provides sequence retrieval, track-data querying for repeat and regulatory annotations, RefSeq gene models, and per-base conservation-score retrieval needed for the locus report.",
+      "source_anchor": "### Query 2: Track Data Query"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-369E35023936B33F",
+      "missing_material_requirement_or_null": "Retrieval and synthesis of genomic DNA, locus annotations, and evolutionary constraints",
+      "rationale": "The source is a recruiting-message workflow whose operating procedure gathers candidate-published professional facts rather than genomic data.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-693B744E86470DB2",
+      "missing_material_requirement_or_null": "Retrieval of DNA, nearby genomic annotations, and conservation information",
+      "rationale": "The source routes a project packet to a next planning artifact and supplies no genomic data-query workflow.",
+      "source_anchor": "### Step 4: Choose one next artifact, not a parallel stack"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6D7D1439D0057EFB",
+      "missing_material_requirement_or_null": "Retrieval and reporting of locus-level DNA, annotation, and evolutionary-constraint data",
+      "rationale": "The source workflow derives a security threat-vocabulary map and searches prior art, not genomic intervals or biological annotations.",
+      "source_anchor": "### Procedure 1 — derive the threat-vocabulary map"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7BE3896F2ADF5FB5",
+      "missing_material_requirement_or_null": "Repeat annotations and a per-interval evolutionary-constraint summary",
+      "rationale": "The source supports genomic sequence, expanded gene/transcript lookup, and regional regulatory features, but its comparative-genomics procedure returns orthologs and paralogs rather than evolutionary constraint and it does not provide a repeat-annotation query.",
+      "source_anchor": "### Query 7: Comparative Genomics (Orthologs / Gene Trees)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A207A517F12B8F12",
+      "missing_material_requirement_or_null": "Genomic locus-data retrieval and biological reporting",
+      "rationale": "The source describes frontend performance auditing, Core Web Vitals optimization, and browser performance engineering rather than genomic analysis.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B5E5E17E42A85E61",
+      "missing_material_requirement_or_null": "Genomic DNA, locus annotations, repeats, and evolutionary-constraint summaries",
+      "rationale": "The source is explicitly organized around protein search and protein-entry retrieval, not genomic-region analysis.",
+      "source_anchor": "### 1. Protein Search"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C39307AF7C043B00",
+      "missing_material_requirement_or_null": "Genomic locus-data retrieval and compact locus reporting",
+      "rationale": "The source facilitates a sprint retrospective through a timeboxed agenda and action-item process rather than biological data analysis.",
+      "source_anchor": "## Timeboxed agenda (60 minutes)"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0049",
+  "batch_input_sha256": "1e284a310db41699c8a7adbe3c57e53fff3a74ae3e1daee71bc00f1137af6ff3",
+  "blind_packet_id": "P-83DE806009064F8557",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "03520ec878c2fe0eee3966fe2926fdd2a221c3bcc11e2df26d762639fb1bf171"
+}

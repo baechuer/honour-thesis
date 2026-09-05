@@ -1,31 +1,27 @@
-\documentclass[11pt,a4paper,oneside]{report}
+\documentclass{usydthesis}
 
-\usepackage[margin=1in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{booktabs}
+% University of Sydney Honours thesis template details.
+\newcommand{\memyself}{Jacky Zhang\xspace}
+\def\degree{Bachelor of Advanced Computing (Honours)}
+\def\department{School of Computer Science}
+\title{{\bf\Huge Skill Representation for Scalable Agent Skill Retrieval under Semantic Confusability}}
+\author{\memyself}
+\def\sid{520465817}
+\def\supervisor{Dr Wei Li}
+
+% Packages required by the current thesis content, layered on the supplied
+% usydthesis class rather than replacing its document layout.
 \usepackage{array}
+\usepackage{booktabs}
+\usepackage{float}
 \usepackage{longtable}
+\usepackage{setspace}
+\usepackage{verbatim}
 \usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{url}
-
-\hypersetup{
-  colorlinks=true,
-  linkcolor=black,
-  citecolor=black,
-  urlcolor=blue
-}
-
-\onehalfspacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.75em}
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{2}
+\usepackage{xspace}
+\usepackage[colorlinks=false,plainpages=false,pdfborder={0 0 0},backref=false]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage[numbers,sort&compress]{natbib}
 
 \newcommand{\placeholder}[1]{%
   \par\noindent
@@ -34,33 +30,45 @@
   \end{minipage}}\par
 }
 
+% Supplied-template page geometry and paragraph convention.
+\oddsidemargin=0cm
+\evensidemargin=0cm
+\textwidth=6.2677165in
+\renewcommand{\thepage}{\roman{page}}
+
 \begin{document}
 
-\hypersetup{pageanchor=false}
-\begin{titlepage}
-  \centering
-  \vspace*{2cm}
-  {\Large INFO4990 Honours Thesis Draft\par}
-  \vspace{1.5cm}
-  {\huge\bfseries Skill Representation for Scalable Agent Skill Retrieval under Semantic Confusability\par}
-  \vspace{1.5cm}
-  {\Large Jacky Zhang\par}
-  \vfill
-  {\large The University of Sydney\par}
-  {\large Draft date: \today\par}
-\end{titlepage}
-\clearpage
+% Title page and preliminary matter.
+\maketitle
+\setstretch{1.5}
 
-\pagenumbering{roman}
-\hypersetup{pageanchor=true}
-\input{chapters/00_abstract}
+\cleardoublepage
+\phantomsection
 \input{chapters/00_declaration}
+\cleardoublepage
+\phantomsection
+\input{chapters/00_abstract}
+\cleardoublepage
+\phantomsection
+\input{chapters/00_acknowledgements}
 
+\cleardoublepage
+\setcounter{tocdepth}{2}
 \tableofcontents
-\clearpage
 
-\pagenumbering{arabic}
-\hypersetup{pageanchor=true}
+{\makeatletter
+\renewcommand*\numberline[1]{\hb@xt@\@tempdima{#1 \hfil}\hspace*{1em}}
+\makeatother
+\listoffigures
+\listoftables
+\cleardoublepage
+}
+
+% Main matter.
+\setcounter{page}{1}
+\setcounter{chapter}{0}
+\renewcommand{\thepage}{\arabic{page}}
+\setupParagraphs
 
 \input{chapters/01_introduction}
 \input{chapters/02_literature_review}
@@ -71,9 +79,12 @@
 \input{chapters/07_discussion}
 \input{chapters/08_conclusion}
 
-\clearpage
-\bibliographystyle{IEEEtran}
+\cleardoublepage
+\phantomsection
+{\setstretch{1.25}
+\bibliographystyle{style/mybibstyle}
 \bibliography{../references}
+}
 
 \appendix
 \input{chapters/appendix_a_benchmark_rubric}

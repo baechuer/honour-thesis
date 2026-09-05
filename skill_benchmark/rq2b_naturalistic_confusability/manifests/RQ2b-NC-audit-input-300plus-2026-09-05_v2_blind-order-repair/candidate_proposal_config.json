@@ -1,0 +1,81 @@
+{
+  "config_version": "rq2b_nc_phase4_option1_k6_proposal_v1",
+  "inherited_base_navigation_fields": {
+    "path": "skill_benchmark/rq2b_naturalistic_confusability/review/WHOLE_LIBRARY_POOLED_DISCOVERY_PROTOCOL_2026-08-31.json",
+    "sha256": "57f60ec786c956c97fd4ca7ec51d32084d9a777b1a45a5693cc6f6672b6f1aec",
+    "subtrees": [
+      "normaliser",
+      "channels.N_NAME_DESCRIPTION",
+      "channels.H_HEADINGS",
+      "channels.A_ARTIFACT_PROCESS_ANCHORS",
+      "anchor_classes",
+      "provider_product_tokens_excluded_from_relevance_text"
+    ]
+  },
+  "opaque_tokens": {
+    "algorithm": "SHA256(TOKEN_SALT + NUL + prompt_sha256 + NUL + canonical_source_sha256) truncated to 16 uppercase hexadecimal characters",
+    "collision_policy": "FAIL_CLOSED",
+    "reviewer_visible_main_candidate_order": "candidate_token_ascending",
+    "salt_identifier": "rq2b-nc-phase4-audit-input-token-v1"
+  },
+  "relevance_fields": [
+    "prompt",
+    "relevance_source_name",
+    "relevance_source_description",
+    "relevance_heading_profile"
+  ],
+  "selection": {
+    "all_prompts_exactly_six_source_unique_candidates": true,
+    "nc_legacy_two_member_checkpoint": {
+      "allocation": "2L+2N+H+A",
+      "interpretation_boundary": "The additional N candidate is an outcome-blind navigation/coverage comparator, not a newly asserted third local route or a claim that the legacy cluster passed the source-native all-three-family gate.",
+      "reporting_stratum": "legacy_2member_checkpoint",
+      "required_sensitivity_reporting": "Report this stratum separately and preserve a sensitivity analysis excluding it from the source-native three-member NC population.",
+      "slots_in_order": [
+        "LOCAL_1",
+        "LOCAL_2",
+        "N_EXTERNAL_1",
+        "N_EXTERNAL_2",
+        "H_EXTERNAL",
+        "A_EXTERNAL"
+      ]
+    },
+    "nc_three_member": {
+      "allocation": "3L+N+H+A",
+      "slots_in_order": [
+        "LOCAL_1",
+        "LOCAL_2",
+        "LOCAL_3",
+        "N_EXTERNAL",
+        "H_EXTERNAL",
+        "A_EXTERNAL"
+      ]
+    },
+    "parent_delta": {
+      "allocation": "2N+2H+2A",
+      "slots_in_order": [
+        "N_1",
+        "N_2",
+        "H_1",
+        "H_2",
+        "A_1",
+        "A_2"
+      ]
+    },
+    "selection_invariants": [
+      "Force only the frozen canonical local roster, then select external candidates from the frozen canonical union minus that roster.",
+      "Within each channel use the prospectively frozen score descending then canonical source SHA-256 ascending order.",
+      "Skip every already-selected SHA globally; no SHA may fill more than one main-pool slot.",
+      "When no positive unused candidate remains in a required channel, continue its complete eligible ranking in the same order and tag the chosen row as a zero-score coverage fallback.",
+      "Fail closed for any prompt lacking six distinct eligible main-pool candidates; never shorten the pool, alter K, use a label, or substitute a manual choice."
+    ]
+  },
+  "tail_per_prompt_group": {
+    "group_unit": "one_prompt_id",
+    "maximum": 2,
+    "phrase": "highest positive H-ranked candidate outside main pool",
+    "positive_tail_response": "METHOD_GATE_OPEN",
+    "residual": "first unrepresented reporting role in frozen order, then minimum SHA256(prompt_sha256:candidate_sha256)"
+  },
+  "tie_break": "score_descending_then_canonical_source_sha256_ascending"
+}

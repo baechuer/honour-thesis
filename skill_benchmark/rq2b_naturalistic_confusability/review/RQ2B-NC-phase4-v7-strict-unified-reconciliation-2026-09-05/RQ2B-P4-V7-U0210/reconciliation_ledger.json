@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0210",
+  "blind_packet_id": "P-38E8CD37337038B5FB",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0CCADCB8E4C22F66",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "the transit gateway side of a VPN attachment (transitgateway skill)",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Not for AWS Direct Connect (its own service), Client VPN for individual remote users, the transit gateway side of a VPN attachment (transitgateway skill)"
+    },
+    {
+      "candidate_token": "C-522807255B81C14B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Environment Manager",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Environment Manager"
+    },
+    {
+      "candidate_token": "C-789FF269E5DE3197",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "security prior-art survey",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "It is a research method, not a scanner."
+    },
+    {
+      "candidate_token": "C-791679273697D2D7",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Reach many VPCs over one connection through a Direct Connect gateway",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT use for transit gateway route tables and attachments"
+    },
+    {
+      "candidate_token": "C-9AE1F4E3E8D3F472",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# x402 Protocol Development",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "x402 Protocol Development"
+    },
+    {
+      "candidate_token": "C-BB6922D8B24978E6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# AWS Transit Gateway",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "migrating from a VPC peering mesh"
+    },
+    {
+      "candidate_token": "C-D38E468DBECDE5C9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Language Version Migrator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Language Version Migrator"
+    },
+    {
+      "candidate_token": "C-FAEE1A668068AAE5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "third-party and external system integration",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "third-party and external system integration"
+    }
+  ],
+  "reviewer_A_return_sha256": "edfcb8993b2e133d0618a00c75506673ef5adecaf696cf3a2a26b5c6824f77d5",
+  "reviewer_B_return_sha256": "6c623909ccbd65badda651137b7714db921d7cc0bdf3bca449dc6b71943923b7",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

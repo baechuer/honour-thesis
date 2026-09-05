@@ -224,7 +224,7 @@ def lines_from_section(text: str) -> list[str]:
         if stripped.startswith("#"):
             continue
         cleaned = LIST_MARKER_RE.sub("", stripped).strip()
-        if cleaned and cleaned != "```":
+        if cleaned and cleaned not in {"```", "---", "***", "___"}:
             lines.append(cleaned)
     return lines
 
@@ -281,22 +281,27 @@ def skill_record(path: Path) -> dict[str, object]:
     if not isinstance(metadata, dict):
         metadata = {}
     source_body = ""
+    source_description = ""
+    source_frontmatter: dict[str, object] = {}
     source_sections: dict[str, str] = {}
     source_path = skill_dir / "source" / "SKILL.original.md"
     if family == "public_imported_background" and source_path.exists():
         source_text = source_path.read_text(encoding="utf-8")
-        _, source_body = parse_frontmatter(source_text)
+        source_frontmatter, source_body = parse_frontmatter(source_text)
+        source_description = clean_description(str(source_frontmatter.get("description") or ""))
         source_sections = parse_sections(source_body)
+    description = source_description or clean_description(str(frontmatter.get("description") or ""))
 
     return {
         "name": name,
         "family": family,
         "path": str(path),
         "skill_dir": str(skill_dir),
-        "description": clean_description(str(frontmatter.get("description") or "")),
+        "description": description,
         "metadata": metadata,
         "body": body,
         "sections": sections,
+        "source_frontmatter": source_frontmatter,
         "source_body": source_body,
         "source_sections": source_sections,
         "resources": resource_files(skill_dir),
@@ -327,15 +332,8 @@ def structured_procedural(record: dict[str, object]) -> dict[str, object]:
     sections: dict[str, str] = record["sections"]  # type: ignore[assignment]
     source_sections = record.get("source_sections")
     if isinstance(source_sections, dict) and source_sections:
-        sections = {**sections, **source_sections}
-    body_for_inference = "\n\n".join(
-        part
-        for part in [
-            str(record.get("body", "")),
-            str(record.get("source_body", "")),
-        ]
-        if part
-    )
+        sections = source_sections
+    body_for_inference = str(record.get("source_body") or record.get("body") or "")
     inferred = inferred_fields_from_body(str(record["description"]), body_for_inference)
     use_when = remove_benchmark_artifacts(lines_from_section(sections.get("use_when", "")))
     not_for = remove_benchmark_artifacts(lines_from_section(sections.get("not_for", "")))
@@ -483,6 +481,9 @@ def structured_procedural(record: dict[str, object]) -> dict[str, object]:
 def dependency_aware(record: dict[str, object]) -> dict[str, object]:
     base = structured_procedural(record)
     sections: dict[str, str] = record["sections"]  # type: ignore[assignment]
+    source_sections = record.get("source_sections")
+    if isinstance(source_sections, dict) and source_sections:
+        sections = source_sections
     metadata: dict[str, object] = record["metadata"]  # type: ignore[assignment]
     dependencies = lines_from_section(sections.get("external_dependencies_to_preserve", ""))
     resource_signals = lines_from_section(sections.get("resource_and_structure_signals", ""))

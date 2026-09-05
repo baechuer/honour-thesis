@@ -9,26 +9,30 @@ Method: the script strips long source text where possible, removes local negated
 ## Overall Status
 
 - Step 2 requirement-alignment status: **PASS**
-- Prompts where every alternative is beaten by gold or rejected by its boundary: 79/82 (96.3%)
-- Gold/alternative pairs passing requirement alignment: 311/315 (98.7%)
-- Gold skill ranked first among gold + listed alternatives: 79/82 (96.3%)
+- Prompts where every alternative is beaten by gold or rejected by its boundary: 115/120 (95.8%)
+- Gold/alternative pairs passing requirement alignment: 510/517 (98.6%)
+- Gold skill ranked first among gold + listed alternatives: 98/120 (81.7%)
+- Gold or acceptable equivalent ranked first among listed candidates: 118/120 (98.3%)
 
-Pass rule used here: for each gold/alternative pair, the gold skill must either score above the alternative by the backend-specific margin threshold, or the prompt must strongly activate the alternative's `not_for` boundary. Current thresholds are stored in the JSON report for each pair.
+Pass rule used here: for each gold/alternative pair, the gold skill must either score above the alternative by the backend-specific margin threshold, or the prompt must strongly activate the alternative's `not_for` boundary. Recorded acceptable equivalents are scored separately and do not count as wrong distractors. Current thresholds are stored in the JSON report for each pair.
 
 ## Family Summary
 
-| Family | Prompts | Prompt pass | Gold top-1 |
-|---|---:|---:|---:|
-| public_gold_validation | 82 | 79/82 | 79/82 |
+| Family | Prompts | Prompt pass | Gold top-1 | Gold/acceptable top-1 |
+|---|---:|---:|---:|---:|
+| public_gold_validation | 120 | 115/120 | 98/120 | 118/120 |
 
 ## Weak Requirement Pairs
 
 | Prompt | Gold | Alternative | Margin | Reason |
 |---|---|---|---:|---|
-| `public_gold_p47_figma_generate_library` | `public-openai-figma-generate-library` | `public-openai-figma-create-design-system-rules` | 0.0179 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `public_gold_p65_hf_local_models` | `public-huggingface-huggingface-local-models` | `public-huggingface-transformers-js` | 0.0343 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `public_gold_p81_shopify_automation` | `public-office-shopify-automation` | `public-office-woocommerce-automation` | -0.0291 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `public_gold_p81_shopify_automation` | `public-office-shopify-automation` | `public-office-amazon-seller` | 0.0230 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p81_shopify_automation` | `public-office-shopify-automation` | `public-office-woocommerce-automation` | 0.0010 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p81_shopify_automation` | `public-office-shopify-automation` | `public-office-amazon-seller` | 0.0124 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p92_security_review` | `public-swebench-security-review` | `public-openai-security-best-practices` | -0.0585 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p92_security_review` | `public-swebench-security-review` | `public-addy-agent-security-and-hardening` | -0.1068 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p102_webhook_automation` | `public-office-webhook-automation` | `webhook-contract-planner` | -0.0744 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p109_job_description` | `public-office-job-description` | `public-office-offer-letter` | 0.0185 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_gold_p112_expense_tracker` | `public-office-expense-tracker` | `public-office-expense-report` | -0.0011 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
 
 ## Prompt Detail
 
@@ -52,12 +56,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-office-pdf-ocr`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: The uploaded PDF is a scan of signed forms. Run OCR to recover readable text and mark uncertain recognition regions by page; do not treat it as a normal embedded-text PDF or convert it to Word.
 - Positive-fit instruction after negation cleanup: The uploaded PDF is a scan of signed forms. Run OCR to recover readable text and mark uncertain recognition regions by page; .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `pdf-ocr-cleaner` | 0.7060 | 0.7060 | 0.2962 | pdf, ocr, recover, text, mark, uncertain, region, page | form |
 | `public-office-pdf-ocr` | 0.6318 | 0.6318 | 0.0616 | pdf, form, ocr, text, mark, uncertain, recognition, page | - |
 | `public-office-pdf-converter` | 0.5440 | 0.5440 | 0.0616 | pdf, ocr, text, page | - |
 | `public-openai-pdf` | 0.5101 | 0.5101 | 0.0616 | pdf, ocr, text, page | - |
@@ -68,12 +73,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-office-pdf-form-filler`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Use the reimbursement PDF and the employee data sheet to fill the form fields and report any required blanks still missing. I am not asking for general extraction, conversion, or a reusable document template.
 - Positive-fit instruction after negation cleanup: Use the reimbursement PDF and the employee data sheet to fill the form fields and report any required blanks still missing. I am .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `pdf-form-filler` | 0.5463 | 0.5463 | 0.4886 | pdf, fill, form, field, report, requir, miss | pdf, field, extract, convert |
 | `public-office-pdf-form-filler` | 0.4305 | 0.4305 | -0.0559 | pdf, data, fill, form, field, requir, miss | - |
 | `public-office-template-engine` | 0.3585 | 0.3585 | -0.0559 | data, form, report, requir | - |
 | `public-office-pdf-extraction` | 0.3170 | 0.3170 | -0.0559 | pdf, report | - |
@@ -131,14 +137,17 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-addy-web-accessibility`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Audit the product settings page against WCAG 2.2, focusing on keyboard navigation, labels, focus order, contrast, and screen-reader semantics. Do not broaden this into SEO or performance.
 - Positive-fit instruction after negation cleanup: Audit the product settings page against WCAG 2.2, focusing on keyboard navigation, labels, focus order, contrast, and screen-reader semantics. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `accessibility-interaction-auditor` | 0.5650 | 0.5650 | 0.3836 | audit, page, keyboard, navigation, label, focu, order, contrast | - |
 | `public-addy-web-accessibility` | 0.5139 | 0.5139 | 0.0887 | audit, product, page, against, wcag, keyboard, navigation, label | - |
+| `accessibility-checker` | 0.5060 | 0.5060 | 0.3835 | page, keyboard, label, focu, order, contrast, screen-reader, semantic | - |
 | `public-addy-web-web-quality-audit` | 0.3305 | 0.3305 | 0.0706 | audit, page | - |
+| `public-oh-my-web-accessibility` | 0.3124 | 0.3124 | 0.3244 | page, wcag, keyboard, navigation, label, focu, order, contrast | - |
 | `public-addy-web-core-web-vitals` | 0.2571 | 0.2571 | 0.0887 | page | - |
 | `public-addy-web-best-practices` | 0.1646 | 0.1646 | 0.0887 | audit | - |
 
@@ -162,17 +171,178 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-oh-my-debugging`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: A local feature intermittently returns the wrong result. Use the debugging packet style: freeze the failure definition, build the smallest reproducer, isolate the boundary where behaviour changes, and propose the first evidence-backed fix. Do not review code quality, simplify code, or inspect GitHub CI.
 - Positive-fit instruction after negation cleanup: A local feature intermittently returns the wrong result. Use the debugging packet style: freeze the failure definition, build the smallest reproducer, isolate the boundary where behaviour changes, and propose the first evidence-backed fix. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `public-addy-agent-debugging-and-error-recovery` | 0.3053 | 0.3053 | 0.0079 | debug, failure, build, fix | - |
 | `public-oh-my-debugging` | 0.2746 | 0.2746 | 0.2033 | local, return, debug, failure, isolate, boundary, change, first | failure, first, review |
 | `public-openai-gh-fix-ci` | 0.1695 | 0.1695 | 0.1223 | debug, failure, change, fix | github |
 | `public-oh-my-code-review` | 0.0988 | 0.0988 | 0.1330 | local, return, debug, packet, failure, build, isolate, change | debug, failure |
 | `public-addy-agent-code-simplification` | -0.0040 | -0.0040 | 0.0721 | feature, result, style, build, change, first | code, result |
 | `public-addy-agent-code-review-and-quality` | -0.0376 | -0.0376 | 0.0079 | feature, wrong, style, build, change, first, fix | - |
+
+### `public_gold_p100_teams_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-microsoft-teams`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Microsoft Teams channel messages, meeting coordination, and workflow notifications for a Teams workspace. Do not use Slack, generic calendar scheduling, or Office document MCP operations.
+- Positive-fit instruction after negation cleanup: Automate Microsoft Teams channel messages, meeting coordination, and workflow notifications for a Teams workspace. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-microsoft-teams` | 0.5962 | 0.5962 | 0.0654 | team, automate, microsoft, channel, workflow, workspace | - |
+| `public-office-slack-workflows` | 0.4731 | 0.4731 | 0.0654 | team, channel, message, workflow, notification, workspace | - |
+| `public-office-meeting-notes` | 0.4017 | 0.4017 | 0.0654 | meet, workflow | - |
+| `public-office-calendar-automation` | 0.3758 | 0.3758 | 0.0654 | meet, workflow | - |
+| `public-office-office-mcp` | 0.2361 | 0.2361 | 0.0654 | workflow | - |
+
+### `public_gold_p101_twilio_sms`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-twilio-sms`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Build Twilio SMS automation for two-way text messages, delivery notifications, and voice/SMS workflow triggers. Do not implement WhatsApp, Telegram, Slack, or email drafting.
+- Positive-fit instruction after negation cleanup: Build Twilio SMS automation for two-way text messages, delivery notifications, and voice/SMS workflow triggers. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-twilio-sms` | 0.7003 | 0.7003 | 0.0101 | sms, build, twilio, automation, two-way, message, notification, voice | - |
+| `public-office-telegram-bot` | 0.3914 | 0.3914 | 0.0101 | automation, text, message, notification, voice, workflow, trigger | - |
+| `public-office-whatsapp-automation` | 0.3223 | 0.3223 | 0.0101 | automation, notification, workflow | - |
+| `public-office-slack-workflows` | 0.2575 | 0.2575 | 0.0101 | automation, message, notification, workflow | - |
+| `public-office-email-drafter` | 0.2067 | 0.2067 | 0.0101 | message, workflow | - |
+
+### `public_gold_p102_webhook_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-webhook-automation`
+- Gold rank among listed candidates: 3
+- Instruction used for scoring: Implement a running webhook automation workflow for real-time event ingestion: create receiver endpoints, configure webhook sources, verify signatures, retry failed deliveries, process events, monitor failures, and trigger downstream API actions. Do not only draft an API integration plan, endpoint schema, or static webhook contract.
+- Positive-fit instruction after negation cleanup: Implement a running webhook automation workflow for real-time event ingestion: create receiver endpoints, configure webhook sources, verify signatures, retry failed deliveries, process events, monitor failures, and trigger downstream API actions. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `webhook-contract-planner` | 0.7149 | 0.7149 | 0.3366 | webhook, event, receiver, endpoint, check, signature, retry, fail | endpoint, api, integration |
+| `webhook-integration-planner` | 0.7096 | 0.7096 | 0.3673 | webhook, event, receiver, check, signature, retry, deliverie, failure | endpoint, api, only |
+| `public-office-webhook-automation` | 0.6405 | 0.6405 | -0.0133 | webhook, event, automation, workflow, real-time, api | - |
+| `external-api-integration-planner` | 0.3921 | 0.3921 | 0.5874 | workflow, endpoint, failure, api | webhook, api, receiver, only, contract |
+| `api-integration-planner` | 0.3215 | 0.3215 | 0.0459 | endpoint, failure, api | - |
+
+### `public_gold_p103_mailchimp_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-mailchimp-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Mailchimp audience segmentation, campaign scheduling, email automations, and campaign analytics. Do not only write ad copy, draft one email, or publish social posts.
+- Positive-fit instruction after negation cleanup: Automate Mailchimp audience segmentation, campaign scheduling, email automations, and campaign analytics. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-mailchimp-automation` | 0.6004 | 0.6004 | 0.1770 | campaign, automate, mailchimp, audience, email, automation, analytic | - |
+| `public-office-social-publisher` | 0.3242 | 0.3242 | 0.1770 | schedul, automation, analytic | - |
+| `public-office-ads-copywriter` | 0.2990 | 0.2990 | 0.1770 | email | - |
+| `public-office-email-drafter` | 0.2687 | 0.2687 | 0.1770 | email | - |
+| `public-office-linkedin-automation` | 0.1552 | 0.1552 | 0.1770 | automate, automation | - |
+
+### `public_gold_p104_social_publisher`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-social-publisher`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Schedule and publish coordinated posts across multiple social platforms with tracking metadata and channel-specific copy. Do not automate only LinkedIn, only Twitter/X, only YouTube, or only TikTok.
+- Positive-fit instruction after negation cleanup: Schedule and publish coordinated posts across multiple social platforms with tracking metadata and channel-specific copy. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-social-publisher` | 0.6336 | 0.6336 | 0.0829 | schedule, publish, post, acros, multiple, social, platform, track | - |
+| `public-office-twitter-automation` | 0.4100 | 0.4100 | 0.0829 | schedule, post, social, metadata, copy | - |
+| `public-office-tiktok-marketing` | 0.2857 | 0.2857 | 0.0829 | post, metadata | - |
+| `public-office-linkedin-automation` | 0.2829 | 0.2829 | 0.0829 | publish, post, metadata | - |
+| `public-office-youtube-automation` | 0.2640 | 0.2640 | 0.0829 | publish, metadata | - |
+
+### `public_gold_p105_youtube_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-youtube-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate YouTube channel workflows for video metadata, publishing schedule, analytics summaries, and content management. Do not build TikTok marketing, podcast production, or transcription only.
+- Positive-fit instruction after negation cleanup: Automate YouTube channel workflows for video metadata, publishing schedule, analytics summaries, and content management. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-youtube-automation` | 0.7260 | 0.7260 | 0.0514 | automate, youtube, channel, workflow, video, metadata, publish, analytic | - |
+| `public-office-social-publisher` | 0.4854 | 0.4854 | 0.0514 | youtube, workflow, video, metadata, publish, schedule, analytic, content | - |
+| `public-office-podcast-automation` | 0.4814 | 0.4814 | 0.0514 | automate, workflow, video, metadata, publish, schedule | - |
+| `public-office-tiktok-marketing` | 0.4241 | 0.4241 | 0.0514 | workflow, video, metadata, analytic, content | - |
+| `public-office-transcription-automation` | 0.4089 | 0.4089 | 0.0514 | automate, workflow, video, metadata, content | - |
+
+### `public_gold_p106_google_ads_manager`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-google-ads-manager`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Manage Google Ads campaigns by setting up keywords, bids, campaign structure, performance reporting, and optimization actions. Do not write only ad copy, run SEO, or manage Meta/Facebook ads.
+- Positive-fit instruction after negation cleanup: Manage Google Ads campaigns by setting up keywords, bids, campaign structure, performance reporting, and optimization actions. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-google-ads-manager` | 0.5798 | 0.5798 | 0.2036 | campaign, google, ads, sett, keyword, performance, report, optimization | - |
+| `public-office-facebook-ads` | 0.4529 | 0.4529 | 0.2036 | campaign, ads, sett, performance, optimization | - |
+| `public-office-ads-copywriter` | 0.4281 | 0.4281 | 0.2036 | google, ads, sett | - |
+| `public-office-social-publisher` | 0.3218 | 0.3218 | 0.2036 | google, sett, optimization | - |
+| `public-office-seo-optimizer` | 0.2594 | 0.2594 | 0.2036 | sett, keyword, optimization | - |
+
+### `public_gold_p107_proposal_writer`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-proposal-writer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Write a client-facing business proposal with problem framing, proposed solution, scope, pricing assumptions, timeline, and persuasive win themes. Do not write an investment memo, generic report, or legal contract template.
+- Positive-fit instruction after negation cleanup: Write a client-facing business proposal with problem framing, proposed solution, scope, pricing assumptions, timeline, and persuasive win themes. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-proposal-writer` | 0.5970 | 0.5970 | 0.0784 | write, busines, proposal, solution, pric, timeline, win | - |
+| `public-office-investment-memo` | 0.3191 | 0.3191 | 0.0784 | write | - |
+| `public-office-contract-template` | 0.3163 | 0.3163 | 0.0784 | - | - |
+| `public-office-content-writer` | 0.2572 | 0.2572 | 0.0784 | write | - |
+| `public-office-report-generator` | 0.1982 | 0.1982 | 0.0784 | - | - |
+
+### `public_gold_p108_report_generator`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-report-generator`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Generate a polished data report with charts, tables, executive summary, and recommendations from a spreadsheet export. Do not only analyze the data, design one chart, or make an infographic layout.
+- Positive-fit instruction after negation cleanup: Generate a polished data report with charts, tables, executive summary, and recommendations from a spreadsheet export. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-report-generator` | 0.6871 | 0.6871 | -0.0045 | generate, data, report, chart, table, executive, summary | - |
+| `public-office-chart-designer` | 0.5574 | 0.5574 | -0.0045 | generate, data, report, chart, executive, recommendation | - |
+| `public-office-data-analysis` | 0.5498 | 0.5498 | -0.0045 | generate, data, report, chart, spreadsheet, export | - |
+| `public-office-weekly-report` | 0.4329 | 0.4329 | -0.0045 | generate, report, executive, summary | - |
+| `public-office-infographic` | 0.4269 | 0.4269 | -0.0045 | data, chart, recommendation | - |
+
+### `public_gold_p109_job_description`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-job-description`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Draft an employer-side job description and hiring-page role posting with job title, responsibilities, required qualifications, nice-to-have skills, interview expectations, compensation/context notes, and inclusive hiring language. Do not screen applicants, tailor a resume, write a candidate cover letter, or produce an offer letter.
+- Positive-fit instruction after negation cleanup: Draft an employer-side job description and hiring-page role posting with job title, responsibilities, required qualifications, nice-to-have skills, interview expectations, compensation/context notes, and inclusive hiring language. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-job-description` | 0.5795 | 0.5795 | 0.0459 | job, description, role, title, responsibilitie, qualification, nice-to-have, skill | - |
+| `public-office-offer-letter` | 0.5610 | 0.5610 | 0.0459 | job, title, skill, compensation, context, language | - |
+| `public-office-cover-letter` | 0.5365 | 0.5365 | 0.0459 | job, draft, role, post, skill, context | - |
+| `public-office-applicant-screening` | 0.5033 | 0.5033 | 0.2454 | job, role, title, requir, nice-to-have, skill, context | requir, skill, interview, screen, candidate |
+| `public-office-resume-tailor` | 0.5011 | 0.5011 | 0.0459 | job, description, qualification, skill, context | - |
 
 ### `public_gold_p10_analyze_ci`
 
@@ -185,11 +355,175 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-swebench-analyze-ci` | 0.5935 | 0.5935 | -0.0118 | fail, github, action, analysi, cause | - |
+| `ci-failure-debugger` | 0.5676 | 0.5676 | 0.3905 | fail, github, action, job, logs, identify, likely, cause | fail, new, general |
+| `ci-log-root-cause-debugger` | 0.5267 | 0.5267 | 0.2714 | fail, job, logs, identify, cause | - |
+| `public-openai-gh-fix-ci` | 0.4818 | 0.4818 | 0.5015 | fail, number, github, action, job, logs | github, action |
 | `pr-reviewer` | 0.4622 | 0.4622 | 0.4207 | github, identify | fail, job, debug |
 | `public-swebench-github-actions-templates` | 0.4061 | 0.4061 | -0.0118 | github, action | - |
 | `repo-ops-failure-diagnoser` | 0.3866 | 0.3866 | 0.0742 | fail, action, analysi, logs, identify | identify |
 | `public-addy-agent-ci-cd-and-automation` | 0.3061 | 0.3061 | -0.0118 | fail, github, action, analysi | - |
 | `public-oh-my-debugging` | 0.2702 | 0.2702 | 0.3192 | fail, job, logs, likely | job, logs, design |
+
+### `public_gold_p110_offer_letter`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-offer-letter`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Create a formal employment offer letter with role title, compensation, start date, reporting line, contingencies, and acceptance terms. Do not draft a job posting, NDA, or generic contract template.
+- Positive-fit instruction after negation cleanup: Create a formal employment offer letter with role title, compensation, start date, reporting line, contingencies, and acceptance terms. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-offer-letter` | 0.7316 | 0.7316 | 0.0075 | create, formal, employment, offer, letter, title, compensation, start | - |
+| `public-office-job-description` | 0.5427 | 0.5427 | 0.0075 | employment, role, title | - |
+| `public-office-contract-template` | 0.4423 | 0.4423 | 0.0075 | create, term | - |
+| `public-office-nda-generator` | 0.3669 | 0.3669 | 0.0075 | employment, role, date, term | - |
+| `public-office-hr-automation` | 0.3344 | 0.3344 | 0.0075 | - | - |
+
+### `public_gold_p111_docusign_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-docusign-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate DocuSign envelope creation, signer routing, reminders, and completed-document status tracking. Do not only generate a contract template, NDA, invoice workflow, or generic form.
+- Positive-fit instruction after negation cleanup: Automate DocuSign envelope creation, signer routing, reminders, and completed-document status tracking. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-docusign-automation` | 0.6566 | 0.6566 | 0.0234 | automate, docusign, envelope | - |
+| `public-office-form-builder` | 0.4353 | 0.4353 | 0.0234 | - | - |
+| `public-office-contract-template` | 0.3870 | 0.3870 | 0.0234 | - | - |
+| `public-office-invoice-automation` | 0.3273 | 0.3273 | 0.0234 | automate, creation, track | - |
+| `public-office-nda-generator` | 0.2277 | 0.2277 | 0.0234 | - | - |
+
+### `public_gold_p112_expense_tracker`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-expense-tracker`
+- Gold rank among listed candidates: 2
+- Instruction used for scoring: Maintain an ongoing employee expense tracker/register from receipts through categorization, reimbursement status, approval workflow, monthly spending summaries, and tracker dashboard updates over time. Do not only generate a one-off expense report, organize invoice files, or run QuickBooks accounting automation.
+- Positive-fit instruction after negation cleanup: Maintain an ongoing employee expense tracker/register from receipts through categorization, reimbursement status, approval workflow, monthly spending summaries, and tracker dashboard updates over time. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-expense-report` | 0.6284 | 0.6284 | 0.0034 | expense, receipt, reimbursement, workflow, summary | - |
+| `public-office-expense-tracker` | 0.6273 | 0.6273 | 0.0034 | tracker, expense, receipt, reimbursement, approval, workflow | - |
+| `public-office-invoice-organizer` | 0.5750 | 0.5750 | 0.0034 | expense, receipt, workflow, summary | - |
+| `public-office-quickbooks-automation` | 0.4341 | 0.4341 | 0.0034 | expense, categorization, workflow | - |
+| `public-office-invoice-automation` | 0.4287 | 0.4287 | 0.0034 | workflow | - |
+
+### `public_gold_p113_quickbooks_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-quickbooks-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate QuickBooks accounting workflows for invoices, expenses, bank reconciliation, and financial reporting. Do not build a generic invoice workflow, Stripe payment workflow, or SaaS metric report.
+- Positive-fit instruction after negation cleanup: Automate QuickBooks accounting workflows for invoices, expenses, bank reconciliation, and financial reporting. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-quickbooks-automation` | 0.6933 | 0.6933 | 0.0368 | automate, quickbook, account, workflow, invoice, expense, bank, reconciliation | - |
+| `public-office-invoice-automation` | 0.5641 | 0.5641 | 0.0368 | automate, account, workflow, invoice, reconciliation, financial | - |
+| `public-office-expense-tracker` | 0.4712 | 0.4712 | 0.0368 | automate, account, workflow, expense, financial | - |
+| `public-office-stripe-payments` | 0.3802 | 0.3802 | 0.0368 | automate, account, workflow, financial, report | - |
+| `public-office-saas-metrics` | 0.3712 | 0.3712 | 0.0368 | account, workflow, financial, report | - |
+
+### `public_gold_p114_stripe_payments`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-stripe-payments`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Stripe payment processing, subscription billing events, invoices, and payment-status reporting. Do not automate Shopify orders, QuickBooks accounting, or generic subscription lifecycle playbooks without Stripe payment operations.
+- Positive-fit instruction after negation cleanup: Automate Stripe payment processing, subscription billing events, invoices, and payment-status reporting. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-stripe-payments` | 0.6149 | 0.6149 | 0.0387 | automate, stripe, payment, process, subscription, report | - |
+| `public-office-invoice-automation` | 0.4366 | 0.4366 | 0.0387 | automate, payment, invoice | - |
+| `public-office-subscription-management` | 0.4325 | 0.4325 | 0.0387 | subscription, bill | - |
+| `public-office-quickbooks-automation` | 0.3624 | 0.3624 | 0.0387 | automate, payment, invoice, report | - |
+| `public-office-shopify-automation` | 0.3488 | 0.3488 | 0.0387 | process | - |
+
+### `public_gold_p115_subscription_management`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-subscription-management`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Manage SaaS subscription lifecycle workflows such as upgrades, downgrades, churn-prevention playbooks, renewal alerts, and retention actions. Do not only calculate SaaS metrics or process Stripe payments.
+- Positive-fit instruction after negation cleanup: Manage SaaS subscription lifecycle workflows such as upgrades, downgrades, churn-prevention playbooks, renewal alerts, and retention actions. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-subscription-management` | 0.6371 | 0.6371 | 0.0917 | saas, subscription, lifecycle, workflow, upgrade, downgrade, renewal, retention | - |
+| `public-office-saas-metrics` | 0.4668 | 0.4668 | 0.0917 | saas, workflow | - |
+| `public-office-stripe-payments` | 0.3680 | 0.3680 | 0.0917 | saas, subscription, workflow | - |
+| `public-office-customer-success` | 0.3311 | 0.3311 | 0.0917 | workflow, playbook, retention | - |
+| `public-office-invoice-automation` | 0.2382 | 0.2382 | 0.0917 | workflow | - |
+
+### `public_gold_p116_transcription_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-transcription-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate audio and video transcription with timestamps, speaker labels, subtitle output, and transcript delivery. Do not only create meeting notes, convert documents to Markdown, or run OCR on images.
+- Positive-fit instruction after negation cleanup: Automate audio and video transcription with timestamps, speaker labels, subtitle output, and transcript delivery. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-transcription-automation` | 0.5897 | 0.5897 | 0.0297 | automate, audio, video, transcription, subtitle | - |
+| `public-openai-transcribe` | 0.5435 | 0.5435 | 0.0297 | audio, video, transcription, speaker, label, output | - |
+| `public-office-podcast-automation` | 0.3850 | 0.3850 | 0.0297 | automate, audio, video | - |
+| `public-markitdown` | 0.2533 | 0.2533 | 0.0297 | audio, video, transcription, output | - |
+| `public-office-meeting-notes` | 0.1922 | 0.1922 | 0.0297 | transcript | - |
+| `public-office-smart-ocr` | 0.1439 | 0.1439 | 0.0297 | - | - |
+
+### `public_gold_p117_podcast_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-podcast-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate podcast production from episode recording through editing, show notes, publishing, and distribution workflow. Do not only transcribe audio, manage YouTube videos, or publish social snippets.
+- Positive-fit instruction after negation cleanup: Automate podcast production from episode recording through editing, show notes, publishing, and distribution workflow. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-podcast-automation` | 0.6243 | 0.6243 | 0.0849 | automate, podcast, production, record, edit, publish, distribution, workflow | - |
+| `public-office-transcription-automation` | 0.4320 | 0.4320 | 0.0849 | automate, note, workflow | - |
+| `public-office-youtube-automation` | 0.4143 | 0.4143 | 0.0849 | automate, publish, workflow | - |
+| `public-office-spotify-automation` | 0.3426 | 0.3426 | 0.0849 | automate, workflow | - |
+| `public-office-social-publisher` | 0.3408 | 0.3408 | 0.0849 | publish, workflow | - |
+
+### `public_gold_p118_news_monitor`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-news-monitor`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Set up ongoing news monitoring for a company and create a media digest with coverage trends, alerts, and synthesized current-event updates. Do not run a one-off web search, academic paper search, or deep research report.
+- Positive-fit instruction after negation cleanup: Set up ongoing news monitoring for a company and create a media digest with coverage trends, alerts, and synthesized current-event updates. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-news-monitor` | 0.6470 | 0.6470 | 0.0978 | set, news, monitor, create, media, digest, coverage, trend | - |
+| `tech-news-trend-extractor` | 0.5340 | 0.5340 | 0.4582 | news, trend | trend |
+| `public-office-deep-research` | 0.2656 | 0.2656 | 0.0978 | - | - |
+| `public-office-academic-search` | 0.2430 | 0.2430 | 0.0978 | coverage | - |
+| `public-office-web-search` | 0.2195 | 0.2195 | 0.0978 | - | - |
+
+### `public_gold_p119_data_analysis`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-data-analysis`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Analyze spreadsheet data to identify trends, anomalies, correlations, and business insights, then recommend what follow-up analysis is needed. Do not manipulate Excel cells, design charts only, calculate SaaS metrics only, or generate a polished report artifact.
+- Positive-fit instruction after negation cleanup: Analyze spreadsheet data to identify trends, anomalies, correlations, and business insights, then recommend what follow-up analysis is needed. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-data-analysis` | 0.5375 | 0.5375 | 0.0117 | analysi, spreadsheet, data, trend, correlation, insight | - |
+| `public-office-xlsx-manipulation` | 0.4039 | 0.4039 | 0.0117 | spreadsheet, data | - |
+| `public-office-report-generator` | 0.3636 | 0.3636 | 0.0117 | analysi, data | - |
+| `public-office-saas-metrics` | 0.3284 | 0.3284 | 0.0117 | analysi, busines | - |
+| `public-office-chart-designer` | 0.3129 | 0.3129 | 0.0117 | data, recommend | - |
 
 ### `public_gold_p11_setup_pre_commit`
 
@@ -202,11 +536,29 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-mattpocock-setup-pre-commit` | 0.6750 | 0.6750 | 0.0760 | add, husky, pre-commit, setup, lint-stag, prettier, type, check | - |
+| `psc-repo-guardrail-hook-installer` | 0.4748 | 0.4748 | 0.1886 | husky, pre-commit, check | - |
 | `git-commit-writer` | 0.3953 | 0.3953 | -0.0044 | type, commit | - |
 | `public-swebench-fix` | 0.3768 | 0.3768 | 0.0760 | prettier, type, check, run | - |
+| `public-oh-my-setup-pre-commit` | 0.3241 | 0.3241 | 0.3029 | setup, type, check, commit | setup, test, git |
 | `public-swebench-github-actions-templates` | 0.3182 | 0.3182 | 0.0760 | type, check, test | - |
 | `git-safety-guardrail-installer` | 0.3168 | 0.3168 | 0.2673 | setup, check, commit | - |
 | `public-mattpocock-git-guardrails-claude-code` | 0.2792 | 0.2792 | 0.0760 | add, type | - |
+
+### `public_gold_p120_xlsx_manipulation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-xlsx-manipulation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use openpyxl-style workbook manipulation to create sheets, write formulas, format cells, and save an `.xlsx` file. Do not automate Google Sheets, run analysis only, or solve a SWE-bench xlsx bug.
+- Positive-fit instruction after negation cleanup: Use openpyxl-style workbook manipulation to create sheets, write formulas, format cells, and save an `.xlsx` file. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-xlsx-manipulation` | 0.7134 | 0.7134 | -0.0193 | workbook, manipulation, create, sheet, formula, xlsx, file | - |
+| `public-office-excel-automation` | 0.5093 | 0.5093 | -0.0193 | workbook, create, sheet, formula, format, save, xlsx, file | - |
+| `public-swebench-xlsx` | 0.5058 | 0.5058 | -0.0193 | workbook, manipulation, create, sheet, write, formula, format, cell | - |
+| `public-office-sheets-automation` | 0.3457 | 0.3457 | -0.0193 | workbook, sheet, formula, file | - |
+| `public-office-data-analysis` | 0.2615 | 0.2615 | -0.0193 | create, formula, file | - |
 
 ### `public_gold_p12_git_guardrails`
 
@@ -219,6 +571,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-mattpocock-git-guardrails-claude-code` | 0.6364 | 0.6364 | 0.0316 | git, set, claude, code, guardrail, hook, prevent, dangerou | - |
+| `public-oh-my-git-guardrails-claude-code` | 0.5535 | 0.5535 | 0.6268 | git, claude, code, guardrail | git, hook, claude, general, workflow |
 | `version-control-helper` | 0.4728 | 0.4728 | -0.0255 | git, code, such, branch | ask |
 | `public-openai-yeet` | 0.4051 | 0.4051 | 0.2905 | git, branch, they | code, formatt |
 | `public-addy-agent-git-workflow-and-versioning` | 0.4012 | 0.4012 | 0.0316 | git, code, force-push, branch | - |
@@ -300,6 +653,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-anthropic-mcp-builder` | 0.5901 | 0.5901 | 0.0435 | tool, mcp, server, api, authentication, contract | - |
+| `mcp-server-builder` | 0.5275 | 0.5275 | 0.4167 | tool, mcp, server, expose | design, api |
 | `webhook-integration-planner` | 0.4866 | 0.4866 | 0.5846 | contract | mcp, design, server, api, exist |
 | `public-office-mcp-hub` | 0.4628 | 0.4628 | 0.0435 | tool, mcp, api, authentication, contract | - |
 | `public-openai-chatgpt-apps` | 0.3899 | 0.3899 | 0.4367 | tool, design, mcp, server | tool, mcp |
@@ -364,6 +718,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-huggingface-huggingface-gradio` | 0.6274 | 0.6274 | 0.0626 | create, gradio, demo, python, component, event, listener, layout | - |
+| `gradio-demo-builder` | 0.6167 | 0.6167 | 0.0860 | gradio, demo, component, launch, behavior | - |
 | `public-huggingface-huggingface-tool-builder` | 0.1777 | 0.1777 | 0.0626 | create, python | - |
 | `public-huggingface-transformers-js` | 0.1683 | 0.1683 | 0.0626 | create, browser | - |
 | `public-huggingface-huggingface-zerogpu` | 0.1484 | 0.1484 | 0.0626 | gradio, demo, python | - |
@@ -389,12 +744,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-huggingface-train-sentence-transformers`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Train or fine-tune a SentenceTransformer bi-encoder for retrieval using paired text data and report evaluation settings. Do not build a browser Transformers.js demo or choose a local inference model.
 - Positive-fit instruction after negation cleanup: Train or fine-tune a SentenceTransformer bi-encoder for retrieval using paired text data and report evaluation settings. .js demo or choose a local inference model.
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `sentence-transformer-finetuner` | 0.6624 | 0.6624 | 0.1281 | train, retrieval, pair, data, evaluation, choose, model | build, local |
 | `public-huggingface-train-sentence-transformers` | 0.5281 | 0.5281 | 0.2794 | train, fine-tune, sentencetransformer, bi-encoder, retrieval, pair, demo, model | - |
 | `public-huggingface-transformers-js` | 0.3228 | 0.3228 | 0.0444 | retrieval, text, inference, model | - |
 | `public-huggingface-datasets` | 0.1828 | 0.1828 | 0.0444 | retrieval, text | - |
@@ -428,6 +784,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-office-data-pipeline` | 0.6364 | 0.6364 | -0.0585 | etl, workflow, extract, data, transform, load, analytic, schedule | - |
+| `public-office-etl-pipeline` | 0.5794 | 0.5794 | -0.0585 | design, etl, workflow, extract, data, transform, load, analytic | - |
 | `public-swebench-dbt-transformation-patterns` | 0.4832 | 0.4832 | -0.0585 | workflow, extract, data, load, analytic, pipeline | - |
 | `public-office-database-sync` | 0.4221 | 0.4221 | -0.0585 | workflow, data, transform, analytic, storage, schedule, pipeline | - |
 | `public-office-data-analysis` | 0.3763 | 0.3763 | -0.0585 | workflow, data, pipeline | - |
@@ -460,6 +817,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-office-contract-review` | 0.5893 | 0.5893 | 0.5631 | review, contract, clause, miss, protection, term, recommendation | review, contract, term |
+| `contract-risk-reviewer` | 0.5466 | 0.5466 | 0.0960 | review, contract, risky, clause, obligation, renewal, term, negotiation | miss |
 | `public-office-contract-template` | 0.4072 | 0.4072 | 0.1307 | contract, clause, term | - |
 | `public-office-proposal-writer` | 0.2880 | 0.2880 | 0.1307 | review, term | - |
 | `public-security-threat-model` | 0.2054 | 0.2054 | 0.2483 | review, contract, miss, recommendation | - |
@@ -517,12 +875,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-skill-creator`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Create a new Codex skill for a repeated workflow, including the SKILL.md structure, trigger description, and optional resources/scripts guidance. Do not install an existing skill or migrate settings.
 - Positive-fit instruction after negation cleanup: Create a new Codex skill for a repeated workflow, including the SKILL.md structure, trigger description, and optional resources/scripts guidance. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `skill-creator` | 0.7016 | 0.7016 | 0.5788 | skill, create, new, repeat, workflow, includ, trigger, description | skill, new, install, exist |
 | `public-skill-creator` | 0.6407 | 0.6407 | 0.0157 | skill, create, new, codex, workflow, optional, resource, script | - |
 | `public-openai-migrate-to-codex` | 0.5762 | 0.5762 | 0.0157 | skill, codex, workflow, resource, guidance | - |
 | `public-oh-my-agentic-skills` | 0.5623 | 0.5623 | 0.2526 | skill, workflow, trigger, resource | - |
@@ -540,6 +899,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-security-threat-model` | 0.6254 | 0.6254 | 0.4569 | repository, architecture, note, identify, data, user, service, concrete | repository, generic |
+| `security-threat-modeler` | 0.5688 | 0.5688 | 0.5310 | architecture, identify, data, user, service, likely, scenario, concrete | concrete |
 | `public-openai-security-best-practices` | 0.4534 | 0.4534 | 0.0182 | identify, user | - |
 | `public-openai-security-ownership-map` | 0.3518 | 0.3518 | 0.0182 | sensitive, user | - |
 | `public-swebench-security-review` | 0.1923 | 0.1923 | 0.0182 | sensitive, function, user | - |
@@ -564,12 +924,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-openai-playwright`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Write and run Playwright browser tests for the local checkout, including navigation, form interactions, assertions, and screenshots. I do not need Chrome DevTools MCP inspection or a manual interactive browser session.
 - Positive-fit instruction after negation cleanup: Write and run Playwright browser tests for the local checkout, including navigation, form interactions, assertions, and screenshots. I .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `playwright-flow-debugger` | 0.7261 | 0.7261 | 0.3100 | browser, local, interaction, screenshot | interaction, screenshot |
 | `public-openai-playwright` | 0.6449 | 0.6449 | 0.0155 | playwright, browser, test, navigation, form, interaction, screenshot | - |
 | `public-anthropic-webapp-testing` | 0.5563 | 0.5563 | 0.0155 | write, run, playwright, browser, test, local, interaction, screenshot | - |
 | `public-playwright-interactive` | 0.4829 | 0.4829 | 0.0155 | run, playwright, browser, local, interaction, screenshot | - |
@@ -595,17 +956,17 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-openai-sentry`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Use Sentry issue data to inspect the event, stack trace, release, affected users, and likely regression source. Do not build a generic observability dashboard or inspect distributed traces.
-- Positive-fit instruction after negation cleanup: Use Sentry issue data to inspect the event, stack trace, release, affected users, and likely regression source. .
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use Sentry issue data and the Sentry CLI to inspect the error event, stack frames, release, affected users, and likely regression source. Do not build a generic observability dashboard or inspect distributed tracing spans.
+- Positive-fit instruction after negation cleanup: Use Sentry issue data and the Sentry CLI to inspect the error event, stack frames, release, affected users, and likely regression source. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `distributed-trace-investigator` | 0.4834 | 0.4834 | 0.5132 | data, trace, user | trace, build, dashboard |
-| `public-openai-sentry` | 0.4674 | 0.4674 | 0.0760 | sentry, issue, data, inspect, event, user | - |
-| `metrics-root-cause-diagnoser` | 0.3965 | 0.3965 | 0.4165 | user, likely, regression | - |
-| `public-oh-my-monitoring-observability` | 0.2829 | 0.2829 | 0.4356 | data, stack, trace, release, user, regression | trace, data, release, regression, dashboard |
-| `public-swebench-python-observability` | 0.2310 | 0.2310 | 0.0760 | user | - |
+| `public-openai-sentry` | 0.5426 | 0.5426 | 0.0609 | sentry, issue, data, cli, inspect, error, event, user | - |
+| `distributed-trace-investigator` | 0.4137 | 0.4137 | 0.4543 | data, user | build, dashboard |
+| `metrics-root-cause-diagnoser` | 0.3286 | 0.3286 | 0.3544 | error, user, likely, regression | - |
+| `public-oh-my-monitoring-observability` | 0.2180 | 0.2180 | 0.4173 | data, error, stack, frame, release, user, regression | data, release, regression, dashboard |
+| `public-swebench-python-observability` | 0.2109 | 0.2109 | 0.0609 | user | - |
 
 ### `public_gold_p37_transcribe`
 
@@ -682,6 +1043,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-openai-yeet` | 0.4521 | 0.4521 | 0.3281 | current, change, create, commit, push, branch, open, draft | change |
+| `public-lbussell-creating-pull-requests` | 0.4468 | 0.4468 | 0.0101 | change, create, branch, draft, extract, request | - |
+| `public-addy-agent-git-workflow-and-versioning` | 0.4423 | 0.4423 | 0.0101 | change, commit, branch, request | - |
 | `public-openai-gh-fix-ci` | 0.4101 | 0.4101 | 0.3550 | current, change, create, branch, open, draft, github, extract | github |
 | `public-openai-gh-address-comments` | 0.2717 | 0.2717 | 0.0101 | current, branch, open, github, request | - |
 
@@ -705,12 +1068,14 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-openai-notion-knowledge-capture`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 3
 - Instruction used for scoring: Capture mixed project notes, decisions, links, and loose observations into a durable Notion knowledge base with structured pages, tags, summaries, and backlinks. Do not extract meeting action items or build a research database only.
 - Positive-fit instruction after negation cleanup: Capture mixed project notes, decisions, links, and loose observations into a durable Notion knowledge base with structured pages, tags, summaries, and backlinks. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `notion-research-database-builder` | 0.5880 | 0.5880 | 0.2299 | capture, notion | - |
+| `public-openai-notion-research-documentation` | 0.4820 | 0.4820 | 0.0670 | note, decision, link, notion, structur, page, summary | - |
 | `public-openai-notion-knowledge-capture` | 0.4817 | 0.4817 | 0.0670 | capture, note, decision, link, notion, knowledge, structur, page | - |
 | `public-openai-notion-meeting-intelligence` | 0.3799 | 0.3799 | 0.0670 | capture, project, note, decision, link, notion, page | - |
 | `public-office-notion-automation` | 0.3233 | 0.3233 | 0.0670 | link, notion | - |
@@ -719,30 +1084,33 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-openai-notion-meeting-intelligence`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 3
 - Instruction used for scoring: Turn the meeting transcript into Notion-ready decisions, action items, owners, due dates, and follow-up pages linked to the meeting record. Do not create a general knowledge base or research documentation page.
 - Positive-fit instruction after negation cleanup: Turn the meeting transcript into Notion-ready decisions, action items, owners, due dates, and follow-up pages linked to the meeting record. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `meeting-notes-action-extractor` | 0.6849 | 0.6849 | 0.5973 | meet, transcript, decision, action, item, owner, due, date | meet |
+| `public-office-meeting-notes` | 0.5927 | 0.5927 | 0.0035 | meet, turn, transcript, decision, action, item, link | - |
 | `public-openai-notion-meeting-intelligence` | 0.4039 | 0.4039 | 0.0035 | meet, decision, action, item, owner, date, follow-up, page | - |
+| `public-openai-notion-knowledge-capture` | 0.3940 | 0.3940 | 0.0035 | turn, decision, action, owner, date, follow-up, page, link | - |
 | `public-office-notion-automation` | 0.3504 | 0.3504 | 0.0035 | link, record | - |
 
 ### `public_gold_p45_notion_spec_to_implementation`
 
 - Family: `public_gold_validation`
 - Gold skill: `public-openai-notion-spec-to-implementation`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Convert a Notion product spec into an implementation plan with scoped engineering tasks, dependencies, acceptance criteria, and links back to the source spec. Do not just document research or create generic issues.
-- Positive-fit instruction after negation cleanup: Convert a Notion product spec into an implementation plan with scoped engineering tasks, dependencies, acceptance criteria, and links back to the source spec. .
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Convert a Notion product spec or PRD into a Notion implementation plan with scoped engineering tasks, dependencies, acceptance criteria, progress tracking, and links back to the source spec. Do not just document research or create generic issues.
+- Positive-fit instruction after negation cleanup: Convert a Notion product spec or PRD into a Notion implementation plan with scoped engineering tasks, dependencies, acceptance criteria, progress tracking, and links back to the source spec. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-addy-agent-spec-driven-development` | 0.4630 | 0.4630 | 0.4471 | spec, implementation, plan, task, dependencie, acceptance, criteria, link | spec, document |
-| `public-openai-notion-spec-to-implementation` | 0.4435 | 0.4435 | -0.0381 | spec, notion, implementation, plan, task, dependencie, acceptance, criteria | - |
-| `public-openai-notion-knowledge-capture` | 0.3479 | 0.3479 | -0.0381 | spec, notion, task, link | - |
-| `public-openai-linear` | 0.3006 | 0.3006 | -0.0381 | task, link | - |
-| `public-lbussell-creating-issues` | 0.1448 | 0.1448 | -0.0381 | task, link | - |
+| `public-openai-notion-spec-to-implementation` | 0.5054 | 0.5054 | -0.0486 | notion, spec, implementation, plan, task, dependencie, acceptance, criteria | - |
+| `public-addy-agent-spec-driven-development` | 0.4611 | 0.4611 | 0.4294 | spec, implementation, plan, task, dependencie, acceptance, criteria, link | spec, document |
+| `public-openai-notion-knowledge-capture` | 0.3950 | 0.3950 | -0.0486 | notion, spec, task, link | - |
+| `public-openai-linear` | 0.3242 | 0.3242 | -0.0486 | task, progres, link | - |
+| `public-lbussell-creating-issues` | 0.1774 | 0.1774 | -0.0486 | task, link | - |
 
 ### `public_gold_p46_figma_code_connect`
 
@@ -765,15 +1133,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 - Family: `public_gold_validation`
 - Gold skill: `public-openai-figma-generate-library`
 - Gold rank among listed candidates: 1
-- Instruction used for scoring: Generate a reusable component library inside Figma with variants, variables, tokens, and theming foundations from the design-system brief. Do not implement an existing frame in application code, only write design-system rules, or only create Code Connect mappings.
-- Positive-fit instruction after negation cleanup: Generate a reusable component library inside Figma with variants, variables, tokens, and theming foundations from the design-system brief. .
+- Instruction used for scoring: Build or update a reusable component library inside Figma from the codebase and design-system brief, including variables, tokens, variants, light/dark theming foundations, and documented components. Do not implement an existing frame in application code, only write design-system rules, or only create Code Connect mappings.
+- Positive-fit instruction after negation cleanup: Build or update a reusable component library inside Figma from the codebase and design-system brief, including variables, tokens, variants, light/dark theming foundations, and documented components. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-openai-figma-generate-library` | 0.5973 | 0.5973 | 0.0485 | generate, component, library, inside, figma, variant, variable, token | - |
-| `public-openai-figma-create-design-system-rules` | 0.5794 | 0.5794 | 0.0485 | generate, component, library, figma, variant, token, them, design-system | - |
-| `public-openai-figma-implement-design` | 0.5368 | 0.5368 | 0.0485 | generate, reusable, component, library, figma, token, brief | - |
-| `public-openai-figma-code-connect-components` | 0.4654 | 0.4654 | 0.0485 | component, library, figma, brief | - |
+| `public-openai-figma-generate-library` | 0.6038 | 0.6038 | 0.0342 | component, build, update, library, inside, figma, codebase, brief | - |
+| `public-openai-figma-generate-design` | 0.5708 | 0.5708 | 0.0342 | component, build, update, library, inside, figma, brief, variable | - |
+| `public-openai-figma-create-design-system-rules` | 0.5583 | 0.5583 | 0.0342 | component, update, library, figma, codebase, design-system, brief, token | - |
+| `public-openai-figma-implement-design` | 0.5348 | 0.5348 | 0.0342 | component, build, reusable, library, figma, brief, token, document | - |
+| `public-openai-figma-code-connect-components` | 0.4864 | 0.4864 | 0.0342 | component, library, figma, codebase, brief | - |
 
 ### `public_gold_p48_figma_design_system_rules`
 
@@ -795,12 +1164,14 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-addy-web-seo`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 3
 - Instruction used for scoring: Audit the landing page for technical SEO: title, meta description, canonical, structured data, headings, crawlability, and search snippets. Do not focus on accessibility or Core Web Vitals.
 - Positive-fit instruction after negation cleanup: Audit the landing page for technical SEO: title, meta description, canonical, structured data, headings, crawlability, and search snippets. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `seo-metadata-checker` | 0.6063 | 0.6063 | 0.1290 | page, seo, title, meta, description, structur, heading, search | - |
+| `public-office-seo-optimizer` | 0.4726 | 0.4726 | 0.1100 | audit, technical, seo | - |
 | `public-addy-web-seo` | 0.4536 | 0.4536 | 0.3467 | seo, meta, structur, data, search | - |
 | `public-addy-web-core-web-vitals` | 0.3596 | 0.3596 | 0.1100 | page, search | - |
 | `public-addy-web-best-practices` | 0.3126 | 0.3126 | 0.1100 | audit | - |
@@ -849,7 +1220,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-addy-agent-api-and-interface-design` | 0.5437 | 0.5437 | 0.0244 | design, stable, rest, module, boundarie, typ, request, reply | - |
+| `public-oh-my-api-design` | 0.4600 | 0.4600 | 0.5274 | design, stable, rest, boundarie, request, reply, contract, frontend | design, request, build |
 | `external-api-integration-planner` | 0.4566 | 0.4566 | 0.5514 | request, reply, contract, implementation | contract, design, review, openapi |
+| `public-api-design-principles` | 0.4371 | 0.4371 | 0.0244 | design, rest, reply | - |
 | `openapi-contract-reviewer` | 0.4166 | 0.4166 | 0.4683 | request, reply, contract, implementation | design, boundarie, review |
 | `public-openai-cli-creator` | 0.2789 | 0.2789 | 0.0244 | stable, request | - |
 
@@ -921,14 +1294,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-addy-agent-test-driven-development`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Implement the bug fix using a red-green-refactor loop: write the failing test first, make it pass, then clean up. Do not only draft a specification or general testing strategy.
 - Positive-fit instruction after negation cleanup: Implement the bug fix using a red-green-refactor loop: write the failing test first, make it pass, then clean up. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `public-mattpocock-tdd` | 0.3400 | 0.3400 | -0.0382 | fix, red-green-refactor, loop, write, fail, test, first, pass | - |
 | `public-addy-agent-test-driven-development` | 0.3167 | 0.3167 | -0.0382 | implement, bug, fix, write, fail, test, pass | - |
 | `public-oh-my-testing-strategies` | 0.2529 | 0.2529 | 0.3151 | implement, bug, fix, loop, test, first | test, implement, first |
+| `public-swebench-tdd-workflow` | 0.1594 | 0.1594 | -0.0382 | fix, test | - |
 | `public-addy-agent-spec-driven-development` | 0.1157 | 0.1157 | 0.1701 | implement, test, first | implement, first |
 
 ### `public_gold_p58_source_driven_development`
@@ -967,12 +1342,14 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-anthropic-doc-coauthoring`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 3
 - Instruction used for scoring: Co-author the strategy document by preserving the existing argument, improving structure, adding missing sections, and keeping revision notes. Do not only rewrite tone or generate a report from scratch.
 - Positive-fit instruction after negation cleanup: Co-author the strategy document by preserving the existing argument, improving structure, adding missing sections, and keeping revision notes. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `document-rewriter` | 0.4607 | 0.4607 | 0.3130 | document, preserv, exist, structure, keep, note | only, rewrite |
+| `public-mattpocock-edit-article` | 0.4363 | 0.4363 | 0.0421 | improv, section | - |
 | `public-anthropic-doc-coauthoring` | 0.4217 | 0.4217 | 0.0421 | co-author, document, section | - |
 | `public-office-content-writer` | 0.3655 | 0.3655 | 0.0421 | - | - |
 | `public-office-report-generator` | 0.3059 | 0.3059 | 0.0421 | - | - |
@@ -1051,18 +1428,20 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-huggingface-huggingface-local-models`
-- Gold rank among listed candidates: 1
-- Instruction used for scoring: Choose and run a local Hugging Face model for laptop inference with GGUF or llama.cpp-style runtime choices, quantization, memory limits, and local serving options. Do not train a model, deploy a Space, or build browser-side Transformers.js inference.
-- Positive-fit instruction after negation cleanup: Choose and run a local Hugging Face model for laptop inference with GGUF or llama.cpp-style runtime choices, quantization, memory limits, and local serving options. .js inference.
+- Gold rank among listed candidates: 3
+- Instruction used for scoring: Choose and run Hugging Face local models for laptop inference using native local runtimes such as GGUF, llama.cpp, or local serving, with model selection, quantization, and memory-limit tradeoffs. Do not train a model, deploy a Space, or build browser-side Transformers.js/WebGPU inference.
+- Positive-fit instruction after negation cleanup: Choose and run Hugging Face local models for laptop inference using native local runtimes such as GGUF, llama.cpp, or local serving, with model selection, quantization, and memory-limit tradeoffs. .js/WebGPU inference.
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-huggingface-huggingface-local-models` | 0.5136 | 0.5136 | 0.1423 | local, run, model, gguf, llama, serv | - |
-| `public-huggingface-transformers-js` | 0.4793 | 0.4793 | 0.1423 | inference, run, hugg, face, model, runtime, memory | - |
-| `public-huggingface-huggingface-llm-trainer` | 0.4619 | 0.4619 | 0.1423 | local, run, hugg, face, model, gguf, memory | - |
-| `public-huggingface-huggingface-community-evals` | 0.4037 | 0.4037 | 0.1729 | local, run, hugg, face, model | - |
-| `public-huggingface-huggingface-zerogpu` | 0.3104 | 0.3104 | 0.1423 | run, hugg, face, runtime, memory | - |
-| `public-huggingface-huggingface-gradio` | 0.2392 | 0.2392 | 0.1423 | - | - |
+| `implicit-hf-local-model-chooser` | 0.6279 | 0.6279 | 0.1034 | local, model, choose, hugg, face, runtime, gguf, quantization | - |
+| `hf-local-model-selector` | 0.5854 | 0.5854 | 0.2788 | local, model, inference, choose, hugg, face, runtime, gguf | model |
+| `public-huggingface-huggingface-local-models` | 0.5589 | 0.5589 | 0.1034 | local, model, run, gguf, llama, cpp, serv, selection | - |
+| `public-huggingface-transformers-js` | 0.4841 | 0.4841 | 0.1034 | model, inference, run, hugg, face, runtime, webgpu | - |
+| `public-huggingface-huggingface-llm-trainer` | 0.4590 | 0.4590 | 0.1034 | local, model, run, hugg, face, gguf, selection | - |
+| `public-huggingface-huggingface-zerogpu` | 0.4144 | 0.4144 | 0.1034 | run, hugg, face, runtime | - |
+| `public-huggingface-huggingface-community-evals` | 0.4071 | 0.4071 | 0.1755 | local, model, run, hugg, face, selection | - |
+| `public-huggingface-huggingface-gradio` | 0.2130 | 0.2130 | 0.1034 | - | - |
 
 ### `public_gold_p66_hf_trackio`
 
@@ -1102,12 +1481,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-huggingface-huggingface-paper-publisher`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Prepare and publish the model paper artifacts to Hugging Face, including metadata, model links, and paper page details. Do not merely search existing papers or write the academic manuscript.
 - Positive-fit instruction after negation cleanup: Prepare and publish the model paper artifacts to Hugging Face, including metadata, model links, and paper page details. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `public-huggingface-huggingface-papers` | 0.6833 | 0.6833 | 0.1468 | model, paper, artifact, hugg, face, metadata, link, page | - |
 | `public-huggingface-huggingface-paper-publisher` | 0.6801 | 0.6801 | 0.1468 | model, paper, publish, artifact, hugg, face, metadata, link | - |
 | `public-huggingface-hf-cli` | 0.4935 | 0.4935 | 0.1468 | model, paper, artifact, hugg, face, metadata, link | - |
 | `public-oh-my-research-paper-writing` | 0.3820 | 0.3820 | 0.3274 | paper, artifact, metadata, link | academic, manuscript |
@@ -1165,13 +1545,15 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-obsidian-obsidian-cli`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Use the Obsidian CLI to create, update, and query vault notes from the terminal with command-line operations. Do not hand-write a Markdown note, maintain a general vault workflow, or create a canvas file.
 - Positive-fit instruction after negation cleanup: Use the Obsidian CLI to create, update, and query vault notes from the terminal with command-line operations. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `public-mattpocock-obsidian-vault` | 0.6049 | 0.6049 | 0.0258 | obsidian, create, vault, note | - |
 | `public-obsidian-obsidian-cli` | 0.5791 | 0.5791 | 0.0258 | obsidian, cli, create, vault, note, operation | - |
+| `public-oh-my-obsidian-cli` | 0.4656 | 0.4656 | 0.6214 | obsidian, cli, create, query, vault, note, terminal | vault, note, obsidian, cli, terminal, markdown, file |
 | `public-obsidian-obsidian-bases` | 0.4308 | 0.4308 | 0.0747 | obsidian, create, vault, note | create, file |
 | `public-obsidian-json-canvas` | 0.2976 | 0.2976 | 0.0258 | obsidian, create | - |
 
@@ -1186,6 +1568,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-office-excel-automation` | 0.6352 | 0.6352 | -0.0664 | workbook, automate, excel, add, formula, summary | - |
+| `xlsx-formula-model-builder` | 0.6126 | 0.6126 | 0.3051 | workbook, add, formula, output | - |
+| `public-office-xlsx-manipulation` | 0.5960 | 0.5960 | -0.0664 | workbook, excel, add, formula, formatt, summary | - |
 | `public-office-sheets-automation` | 0.4705 | 0.4705 | -0.0664 | workbook, formula | - |
 | `public-office-data-analysis` | 0.3762 | 0.3762 | -0.0664 | excel, formula | - |
 
@@ -1193,13 +1577,15 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-office-sheets-automation`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Automate a Google Sheets workbook with formulas, tabs, formatting, and update steps using the online Sheets workflow. Do not produce a local Excel or XLSX file.
 - Positive-fit instruction after negation cleanup: Automate a Google Sheets workbook with formulas, tabs, formatting, and update steps using the online Sheets workflow. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `public-office-excel-automation` | 0.6058 | 0.6058 | -0.0609 | sheet, automate, workbook, formula, update, workflow | - |
 | `public-office-sheets-automation` | 0.5571 | 0.5571 | -0.0609 | sheet, google, workbook, formula, workflow | - |
+| `public-office-xlsx-manipulation` | 0.5562 | 0.5562 | -0.0609 | sheet, workbook, formula, formatt, workflow | - |
 | `public-office-data-analysis` | 0.3826 | 0.3826 | -0.0609 | formula, workflow | - |
 | `public-office-data-pipeline` | 0.3023 | 0.3023 | -0.0609 | sheet, google, update, workflow | - |
 
@@ -1207,12 +1593,13 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-office-airtable-automation`
-- Gold rank among listed candidates: 1
+- Gold rank among listed candidates: 2
 - Instruction used for scoring: Create an Airtable automation that routes new form submissions, updates linked records, and sends follow-up notifications. Do not build a Notion or CRM workflow.
 - Positive-fit instruction after negation cleanup: Create an Airtable automation that routes new form submissions, updates linked records, and sends follow-up notifications. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
+| `airtable-workflow-automator` | 0.5437 | 0.5437 | 0.2541 | airtable, automation, record | build, notion |
 | `public-office-airtable-automation` | 0.3484 | 0.3484 | 0.0146 | airtable, automation, link, record | - |
 | `public-office-notion-automation` | 0.1969 | 0.1969 | 0.0146 | automation, new, form, link, record | - |
 | `public-office-crm-automation` | 0.1878 | 0.1878 | 0.0146 | automation, link | - |
@@ -1229,6 +1616,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `public-office-invoice-automation` | 0.6369 | 0.6369 | 0.0994 | invoice, automate, workflow, file | - |
+| `public-office-invoice-generator` | 0.5920 | 0.5920 | 0.0994 | invoice, workflow, file, through, rout | - |
 | `public-office-invoice-organizer` | 0.5608 | 0.5608 | 0.0994 | invoice, workflow, file, extract | - |
 | `public-office-quickbooks-automation` | 0.4990 | 0.4990 | 0.0994 | invoice, automate, workflow, file | - |
 | `public-office-expense-report` | 0.3742 | 0.3742 | 0.0994 | workflow, file | - |
@@ -1301,17 +1689,17 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_gold_validation`
 - Gold skill: `public-office-shopify-automation`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Automate Shopify Admin product and order workflows for a Shopify store, including product updates, fulfillment status changes, and customer notifications through Shopify-specific operations. Do not build WooCommerce, Amazon seller, or Stripe payment automation.
-- Positive-fit instruction after negation cleanup: Automate Shopify Admin product and order workflows for a Shopify store, including product updates, fulfillment status changes, and customer notifications through Shopify-specific operations. .
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Shopify e-commerce operations for a Shopify store through the Shopify Admin API, including Shopify inventory management, product updates, order processing, fulfillment status changes, customer workflows, and analytics. Do not build WooCommerce, Amazon seller, marketplace, or Stripe payment automation.
+- Positive-fit instruction after negation cleanup: Automate Shopify e-commerce operations for a Shopify store through the Shopify Admin API, including Shopify inventory management, product updates, order processing, fulfillment status changes, customer workflows, and analytics. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-office-woocommerce-automation` | 0.4977 | 0.4977 | 0.0106 | automate, order, workflow, includ, customer, operation | - |
-| `public-office-shopify-automation` | 0.4686 | 0.4686 | 0.0106 | shopify, order, workflow, customer | - |
-| `public-office-amazon-seller` | 0.4456 | 0.4456 | 0.0106 | product, automate, order, workflow, includ, fulfillment, operation | - |
-| `public-office-invoice-automation` | 0.2393 | 0.2393 | 0.0106 | product, automate, workflow, customer | - |
-| `public-office-stripe-payments` | 0.2029 | 0.2029 | 0.0106 | automate, workflow, customer | - |
+| `public-office-shopify-automation` | 0.5035 | 0.5035 | -0.0103 | shopify, e-commerce, api, inventory, management, order, process, customer | - |
+| `public-office-woocommerce-automation` | 0.5025 | 0.5025 | -0.0103 | automate, e-commerce, operation, includ, inventory, order, customer, workflow | - |
+| `public-office-amazon-seller` | 0.4911 | 0.4911 | -0.0103 | automate, operation, includ, inventory, management, product, order, fulfillment | - |
+| `public-office-invoice-automation` | 0.2534 | 0.2534 | -0.0103 | automate, product, customer, workflow | - |
+| `public-office-stripe-payments` | 0.2432 | 0.2432 | -0.0103 | automate, api, management, process, customer, workflow | - |
 
 ### `public_gold_p82_zendesk_automation`
 
@@ -1329,5 +1717,279 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `public-office-intercom-automation` | 0.3531 | 0.3531 | 0.1404 | automate, triage, support, request | - |
 | `public-office-slack-workflows` | 0.3124 | 0.3124 | 0.1404 | request | - |
 | `public-office-customer-success` | 0.3083 | 0.3083 | 0.1404 | request | - |
+| `public-office-crm-automation` | 0.2908 | 0.2908 | 0.1404 | request | - |
 | `public-office-email-classifier` | 0.2653 | 0.2653 | 0.1404 | request | - |
+
+### `public_gold_p83_web_seo`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-seo`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Improve search visibility for the landing page by fixing metadata, structured data, sitemap/indexability issues, and search-result snippets. Do not turn this into a broad performance, accessibility, or general web-quality audit.
+- Positive-fit instruction after negation cleanup: Improve search visibility for the landing page by fixing metadata, structured data, sitemap/indexability issues, and search-result snippets. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-addy-web-seo` | 0.4696 | 0.4696 | 0.2967 | improve, search, visibility, fix, metadata, structur, data, sitemap | - |
+| `public-addy-web-web-quality-audit` | 0.3919 | 0.3919 | 0.1270 | page, metadata | - |
+| `public-office-seo-optimizer` | 0.3910 | 0.3910 | 0.1295 | metadata | - |
+| `public-addy-web-performance` | 0.3776 | 0.3776 | 0.1295 | improve, land, page, fix, metadata | - |
+| `public-addy-web-best-practices` | 0.2848 | 0.2848 | 0.1295 | metadata | - |
+
+### `public_gold_p84_web_performance`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-performance`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Speed up the web app by profiling load time, bundle weight, render blocking resources, caching, and runtime bottlenecks. Do not limit the task to only LCP/INP/CLS metrics or browser smoke testing.
+- Positive-fit instruction after negation cleanup: Speed up the web app by profiling load time, bundle weight, render blocking resources, caching, and runtime bottlenecks. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-addy-web-performance` | 0.5546 | 0.5546 | 0.0594 | spe, web, app, load, time, weight, render, resource | - |
+| `public-addy-agent-performance-optimization` | 0.4159 | 0.4159 | 0.0594 | web, profil, load, time, resource, bottleneck | - |
+| `public-addy-web-core-web-vitals` | 0.3654 | 0.3654 | 0.0594 | web, load, resource | - |
+| `public-addy-web-web-quality-audit` | 0.3482 | 0.3482 | 0.0848 | web, render, resource | - |
+| `public-addy-agent-browser-testing-with-devtools` | 0.2920 | 0.2920 | 0.3068 | app, load, time, render, resource, runtime, bottleneck | - |
+
+### `public_gold_p85_web_quality_audit`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-web-quality-audit`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Run a combined site review that covers speed, accessibility, search visibility, security/compatibility practices, and a prioritized issue list. Do not focus on just one dimension such as only SEO or only accessibility.
+- Positive-fit instruction after negation cleanup: Run a combined site review that covers speed, accessibility, search visibility, security/compatibility practices, and a prioritized issue list. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-addy-web-web-quality-audit` | 0.5438 | 0.5438 | 0.0159 | run, site, review, cover, accessibility, practice | - |
+| `public-addy-web-accessibility` | 0.4529 | 0.4529 | 0.0453 | accessibility | - |
+| `public-addy-web-best-practices` | 0.3821 | 0.3821 | 0.0453 | site, review, security, compatibility, practice | - |
+| `public-addy-web-seo` | 0.3814 | 0.3814 | 0.3572 | search, visibility | site |
+| `public-addy-web-core-web-vitals` | 0.3808 | 0.3808 | 0.0453 | search | - |
+
+### `public_gold_p86_web_best_practices`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-best-practices`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review the site for modern web best practices: secure defaults, compatibility, maintainable markup, sensible dependency usage, and production readiness. Do not run a metric-specific performance audit or a WCAG-only review.
+- Positive-fit instruction after negation cleanup: Review the site for modern web best practices: secure defaults, compatibility, maintainable markup, sensible dependency usage, and production readiness. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-addy-web-best-practices` | 0.5274 | 0.5274 | 0.0522 | review, site, modern, web, best, practice, default, compatibility | - |
+| `public-addy-web-web-quality-audit` | 0.4959 | 0.4959 | 0.1136 | review, site, web, best, practice | - |
+| `public-openai-security-best-practices` | 0.3685 | 0.3685 | 0.0522 | review, web, best, practice, secure, default | - |
+| `public-addy-web-performance` | 0.3594 | 0.3594 | 0.0522 | site, modern, web, best, practice, default | - |
+| `public-addy-web-accessibility` | 0.2498 | 0.2498 | 0.0522 | web, best, default | - |
+
+### `public_gold_p87_api_design_principles`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-api-design-principles`
+- Gold rank among listed candidates: 2
+- Instruction used for scoring: Design a new REST API contract with clear resources, methods, pagination, errors, versioning, and developer-facing consistency rules before implementation. Do not only review an existing OpenAPI file or generate documentation.
+- Positive-fit instruction after negation cleanup: Design a new REST API contract with clear resources, methods, pagination, errors, versioning, and developer-facing consistency rules before implementation. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `rest-api-contract-designer` | 0.7991 | 0.7991 | 0.4257 | design, new, rest, api, contract, resource, pagination, error | api, exist, documentation |
+| `public-api-design-principles` | 0.5429 | 0.5429 | 0.0021 | design, new, rest, api, resource, pagination, error, version | - |
+| `openapi-contract-reviewer` | 0.5230 | 0.5230 | 0.4624 | api, contract, pagination, error, version, consistency, rule, implementation | design, api, review |
+| `public-addy-agent-api-and-interface-design` | 0.5096 | 0.5096 | 0.0021 | design, new, rest, api, contract, resource, pagination, error | - |
+| `public-oh-my-api-design` | 0.4652 | 0.4652 | 0.5585 | design, new, rest, api, contract, resource, pagination, error | design, api |
+
+### `public_gold_p88_interface_design`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-agent-api-and-interface-design`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use API and interface design guidance to define the exported SDK/public interface for plugin authors, including module boundaries, stable method names, type contracts, expected inputs, returned objects, compatibility guarantees, and deprecation rules. Do not choose backend architecture patterns or write a REST endpoint contract only.
+- Positive-fit instruction after negation cleanup: Use API and interface design guidance to define the exported SDK/public interface for plugin authors, including module boundaries, stable method names, type contracts, expected inputs, returned objects, compatibility guarantees, and deprecation rules. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-addy-agent-api-and-interface-design` | 0.4431 | 0.4431 | 0.0284 | interface, api, design, define, public, module, boundarie, stable | - |
+| `public-architecture-patterns` | 0.3718 | 0.3718 | 0.0284 | design, includ, boundarie, type | - |
+| `rest-api-contract-designer` | 0.3590 | 0.3590 | 0.3492 | api, design, define, contract, return, object | api |
+| `api-design-reviewer` | 0.3100 | 0.3100 | -0.0079 | api, design, type, expect, input | input |
+| `public-api-design-principles` | 0.2716 | 0.2716 | 0.0284 | api, design, type, deprecation | - |
+
+### `public_gold_p89_api_documentation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-oh-my-api-documentation`
+- Gold rank among listed candidates: 2
+- Instruction used for scoring: Write developer-facing API documentation pages, endpoint reference, quickstart examples, authentication notes, parameters, error cases, webhook/SDK examples, and migration notes from existing API behavior. The API contract is already fixed; do not redesign the API, validate an OpenAPI contract, or look up OpenAI product docs.
+- Positive-fit instruction after negation cleanup: Write developer-facing API documentation pages, endpoint reference, quickstart examples, authentication notes, parameters, error cases, webhook/SDK examples, and migration notes from existing API behavior. The API contract is already fixed; .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `api-documentation-writer` | 0.7967 | 0.7967 | 0.4322 | api, example, note, write, developer-fac, documentation, endpoint, quickstart | api |
+| `public-oh-my-api-documentation` | 0.6027 | 0.6027 | 0.5983 | api, example, note, write, developer-fac, documentation, page, endpoint | api, contract, endpoint, migration, behavior, product, docs |
+| `openapi-contract-reviewer` | 0.5721 | 0.5721 | 0.4985 | api, example, documentation, endpoint, error, behavior, contract | api, webhook, behavior |
+| `public-openai-openai-docs` | 0.3640 | 0.3640 | 0.0574 | api, example, documentation, page, reference, authentication, case, sdk | - |
+| `public-api-design-principles` | 0.3619 | 0.3619 | 0.0574 | api, documentation, endpoint, error, behavior, fix | - |
+
+### `public_gold_p90_claude_api`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-anthropic-claude-api`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Debug and optimize a Claude API integration using the Anthropic SDK, including prompt caching behavior, request shape, streaming, and model-specific error handling. Do not switch the task to OpenAI docs, ChatGPT Apps, or an MCP server.
+- Positive-fit instruction after negation cleanup: Debug and optimize a Claude API integration using the Anthropic SDK, including prompt caching behavior, request shape, streaming, and model-specific error handling. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-anthropic-claude-api` | 0.6550 | 0.6550 | 0.1376 | debug, optimize, claude, api, anthropic, sdk, prompt, cach | - |
+| `external-api-integration-planner` | 0.4760 | 0.4760 | 0.4456 | api, integration, cach, behavior, request, shape, error, handl | api |
+| `api-integration-planner` | 0.4563 | 0.4563 | 0.1388 | api, integration, request, handl | - |
+| `public-office-ai-agent-builder` | 0.3504 | 0.3504 | 0.1376 | claude, integration, request | - |
+| `public-anthropic-mcp-builder` | 0.3001 | 0.3001 | 0.1376 | api, sdk, includ, request, error, handl | - |
+| `public-openai-chatgpt-apps` | 0.2885 | 0.2885 | 0.4082 | sdk, behavior, request, stream | behavior, request, stream, error, chatgpt, mcp |
+| `public-openai-openai-docs` | 0.2525 | 0.2525 | 0.1376 | api, sdk, prompt, request | - |
+
+### `public_gold_p91_admin_api_endpoint`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-swebench-add-admin-api-endpoint`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Add a Ghost Admin API endpoint under `ghost/api/admin/**` following the repository's route, controller, permissions, and test patterns. Do not merely design a generic REST contract or add Malli schemas.
+- Positive-fit instruction after negation cleanup: Add a Ghost Admin API endpoint under `ghost/api/admin/**` following the repository's route, controller, permissions, and test patterns. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-swebench-add-admin-api-endpoint` | 0.6233 | 0.6233 | 0.0327 | ghost, admin, api, add, endpoint, route, controller, test | - |
+| `rest-api-contract-designer` | 0.2984 | 0.2984 | 0.2585 | api, endpoint | api |
+| `api-security-threat-reviewer` | 0.2646 | 0.2646 | 0.3949 | api, endpoint | rest, contract |
+| `public-api-design-principles` | 0.2065 | 0.2065 | 0.0327 | api, endpoint, pattern | - |
+| `public-swebench-add-malli-schemas` | 0.1247 | 0.1247 | 0.0327 | api, add, endpoint, pattern | - |
+
+### `public_gold_p92_security_review`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-swebench-security-review`
+- Gold rank among listed candidates: 5
+- Instruction used for scoring: Review the actual repository code diff for authentication, user input, secrets, API endpoints, and payment handling. Return concrete vulnerable lines, exploit paths, severity, and patch suggestions tied to implementation behavior. Do not write a general secure-coding checklist, hardening plan, or threat model diagram.
+- Positive-fit instruction after negation cleanup: Review the actual repository code diff for authentication, user input, secrets, API endpoints, and payment handling. Return concrete vulnerable lines, exploit paths, severity, and patch suggestions tied to implementation behavior. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `security-code-reviewer` | 0.6545 | 0.6545 | 0.4866 | review, code, diff, authentication, user, input, secret, handl | review, code, secret, general, threat, model |
+| `api-security-threat-reviewer` | 0.6067 | 0.6067 | 0.4452 | review, authentication, user, input, api, endpoint, return | - |
+| `public-addy-agent-security-and-hardening` | 0.3764 | 0.3764 | 0.3175 | code, diff, authentication, user, input, secret, api, endpoint | code, path, patch |
+| `public-openai-security-best-practices` | 0.3281 | 0.3281 | 0.0369 | review, code, user, severity | - |
+| `public-swebench-security-review` | 0.2696 | 0.2696 | 0.0369 | review, authentication, user, input, secret, api, endpoint, payment | - |
+
+### `public_gold_p93_security_best_practices`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-openai-security-best-practices`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Provide language- and framework-specific security best-practice improvements for a service, focusing on defaults, input handling, dependency hygiene, and secure configuration. Do not inspect a particular diff for concrete vulnerabilities only.
+- Positive-fit instruction after negation cleanup: Provide language- and framework-specific security best-practice improvements for a service, focusing on defaults, input handling, dependency hygiene, and secure configuration. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-openai-security-best-practices` | 0.5826 | 0.5826 | 0.0805 | language, security, best-practice, improvement, default, secure | - |
+| `security-code-reviewer` | 0.5721 | 0.5721 | 0.5463 | provide, security, focus, default, input, handl, dependency | security, dependency, only |
+| `public-addy-agent-security-and-hardening` | 0.5590 | 0.5590 | 0.1809 | security, service, default, input, handl, secure, configuration | dependency |
+| `public-oh-my-security-best-practices` | 0.4667 | 0.4667 | 0.4691 | security, default, input, handl, secure | security, diff, concrete |
+| `public-swebench-security-review` | 0.3047 | 0.3047 | 0.0805 | provide, security, input, handl | - |
+
+### `public_gold_p94_security_ownership_map`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-openai-security-ownership-map`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Analyze the git repository to build a security ownership topology: people-to-file ownership, sensitive-code areas, bus-factor risks, and CSV/JSON exports. Do not produce a threat model or monitor runtime alerts.
+- Positive-fit instruction after negation cleanup: Analyze the git repository to build a security ownership topology: people-to-file ownership, sensitive-code areas, bus-factor risks, and CSV/JSON exports. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-openai-security-ownership-map` | 0.6582 | 0.6582 | 0.0772 | ownership, analysi, git, build, security, topology, people-to-file, sensitive-code | - |
+| `public-security-threat-model` | 0.4776 | 0.4776 | 0.4148 | repository, build, risk, json | repository, threat, model |
+| `security-threat-modeler` | 0.3931 | 0.3931 | 0.4912 | analysi, build, security, risk | risk |
+| `repo-code-reviewer` | 0.3927 | 0.3927 | 0.2119 | repository, risk | - |
+| `public-office-security-monitoring` | 0.3466 | 0.3466 | 0.0772 | analysi, security, risk, json | - |
+
+### `public_gold_p95_security_monitoring`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-security-monitoring`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Set up an operational security monitoring workflow for alerts, threat detection, incident response, and compliance reporting. Do not map code ownership or design a static threat model.
+- Positive-fit instruction after negation cleanup: Set up an operational security monitoring workflow for alerts, threat detection, incident response, and compliance reporting. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-security-monitoring` | 0.5905 | 0.5905 | 0.0254 | security, monitor, workflow, alert, threat, detection, incident, reply | - |
+| `public-security-threat-model` | 0.4728 | 0.4728 | 0.4155 | set, threat, report | threat, model |
+| `public-office-devops-automation` | 0.4407 | 0.4407 | 0.0254 | set, monitor, workflow, alert, detection, incident, reply | - |
+| `public-swebench-distributed-tracing` | 0.3445 | 0.3445 | 0.0254 | workflow, reply | - |
+| `public-openai-security-ownership-map` | 0.2671 | 0.2671 | 0.0254 | security, workflow, threat, detection | - |
+
+### `public_gold_p96_jira_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-jira-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Jira sprint issue creation, status transitions, project reports, and backlog rules for a Jira project. Do not build the same workflow in Linear, Trello, or Monday.com.
+- Positive-fit instruction after negation cleanup: Automate Jira sprint issue creation, status transitions, project reports, and backlog rules for a Jira project. .com.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-jira-automation` | 0.5614 | 0.5614 | 0.0963 | jira, project, automate, sprint, issue, report, backlog | - |
+| `public-openai-linear` | 0.3606 | 0.3606 | 0.0963 | project, issue | - |
+| `public-office-monday-automation` | 0.3240 | 0.3240 | 0.0963 | automate, com | - |
+| `public-office-trello-automation` | 0.2930 | 0.2930 | 0.0963 | automate | - |
+| `public-office-linear-automation` | 0.2674 | 0.2674 | 0.0963 | automate, issue, backlog | - |
+
+### `public_gold_p97_linear_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-linear-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Linear issue tracking, cycles, roadmap updates, and engineering workflow reports across a Linear workspace. Do not use Jira, Trello, or ClickUp.
+- Positive-fit instruction after negation cleanup: Automate Linear issue tracking, cycles, roadmap updates, and engineering workflow reports across a Linear workspace. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-linear-automation` | 0.5799 | 0.5799 | 0.0794 | linear, automate, issue, track, cycle, roadmap, engineer, workflow | - |
+| `public-openai-linear` | 0.5377 | 0.5377 | 0.0794 | linear, issue, update, workflow, workspace | - |
+| `public-office-jira-automation` | 0.4134 | 0.4134 | 0.0794 | automate, issue, track, workflow, report, workspace | - |
+| `public-office-clickup-automation` | 0.3915 | 0.3915 | 0.0794 | automate, track, workflow, workspace | - |
+| `public-office-trello-automation` | 0.3913 | 0.3913 | 0.0794 | automate, workflow | - |
+
+### `public_gold_p98_trello_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-trello-automation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Automate Trello board card movement, labels, due-date reminders, and team collaboration rules. Do not implement this in Jira, Linear, Monday.com, or Asana.
+- Positive-fit instruction after negation cleanup: Automate Trello board card movement, labels, due-date reminders, and team collaboration rules. .com, or Asana.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-trello-automation` | 0.4082 | 0.4082 | 0.1568 | automate, trello, board, card, team, collaboration | - |
+| `public-office-asana-automation` | 0.2463 | 0.2463 | 0.1568 | automate, team, collaboration, asana | - |
+| `public-office-jira-automation` | 0.2195 | 0.2195 | 0.1568 | automate | - |
+| `public-office-linear-automation` | 0.2186 | 0.2186 | 0.1568 | automate | - |
+
+### `public_gold_p99_slack_workflows`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-slack-workflows`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Create Slack workflow automations for standup reminders, approval flows, channel notifications, and cross-platform handoffs. Do not build Microsoft Teams, SMS, WhatsApp, or Telegram automation.
+- Positive-fit instruction after negation cleanup: Create Slack workflow automations for standup reminders, approval flows, channel notifications, and cross-platform handoffs. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `public-office-slack-workflows` | 0.6553 | 0.6553 | 0.0684 | slack, workflow, automation, standup, reminder, approval, flow, channel | - |
+| `public-office-telegram-bot` | 0.4401 | 0.4401 | 0.0684 | workflow, automation, notification | - |
+| `public-office-microsoft-teams` | 0.3932 | 0.3932 | 0.0684 | workflow, automation, channel | - |
+| `public-office-twilio-sms` | 0.3772 | 0.3772 | 0.0684 | workflow, automation, flow, notification | - |
+| `public-office-whatsapp-automation` | 0.3676 | 0.3676 | 0.0684 | workflow, automation, notification | - |
 

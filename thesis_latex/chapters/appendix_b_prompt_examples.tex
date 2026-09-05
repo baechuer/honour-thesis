@@ -10,7 +10,7 @@ This appendix gives representative examples of the intended benchmark pressure. 
 
 \textbf{Plausible alternatives:} PDF question answerer, PDF OCR cleaner, document field extractor, PDF-to-DOCX converter.
 
-\textbf{Procedural distinction:} the gold skill must inspect layout and reconstruct table structure. A PDF question-answering skill may ground answers in pages but not reconstruct tables. OCR cleaning handles scanned text uncertainty. Conversion changes format but is not optimized for table reconstruction.
+\textbf{Procedural distinction:} the gold skill must inspect layout and reconstruct table structure. A PDF question-answering skill may ground answers in pages but not reconstruct tables. OCR cleaning handles scanned text uncertainty. Conversion changes format but is not optimised for table reconstruction.
 
 \section{GitHub CI Root Cause}
 
@@ -30,7 +30,7 @@ This appendix gives representative examples of the intended benchmark pressure. 
 
 \textbf{Plausible alternatives:} latency anomaly detector, SLO breach checker, service dependency mapper, metrics overview.
 
-\textbf{Procedural distinction:} trace diagnosis follows spans and service boundaries. A metrics overview summarizes signals, and a dependency mapper describes architecture, but neither necessarily reconstructs a trace path.
+\textbf{Procedural distinction:} trace diagnosis follows spans and service boundaries. A metrics overview summarises signals, and a dependency mapper describes architecture, but neither necessarily reconstructs a trace path.
 
 \section{Public-Gold Example: Figma Implementation}
 
@@ -45,3 +45,53 @@ This appendix gives representative examples of the intended benchmark pressure. 
 \section{Public-Gold Ambiguity Example}
 
 Some public-gold prompts are not stable strict targets. For example, a public OCR skill may be valid for scanned PDF OCR, but a controlled OCR-cleaning skill may be better if the prompt asks for uncertain recognition regions and page anchors. These cases are either revised, excluded, or marked with acceptable alternatives before final reporting.
+
+\section{Public-Document Field-Presence Review}
+
+The descriptive review of 29,292 public primary skill documents was completed in 31 batches by a Codex \texttt{gpt-5.6-terra} agent using \texttt{xhigh} reasoning. The operational instruction was:
+
+\begin{quote}
+For each candidate information type, record 1 only when that information is expressed somewhere in the complete primary skill document, and otherwise record 0. Read the YAML name and description together with every Markdown section, table, and example. Do not inspect attached scripts, references, or other auxiliary files. Judge presence only; do not judge document quality, routing usefulness, or whether the field is required by every skill.
+\end{quote}
+
+This is a reconstruction of the recorded decision rule, not a verbatim preserved batch prompt. The retained evidence contains the aggregate summary and 31 batch totals, but not the 29,292 row-level model decisions. The prevalence result is therefore used only to show that the candidate information types recur in the sampled public documents.
+
+\section{RQ1 Intervention Examples}
+\label{app:rq1-intervention-examples}
+
+\begin{singlespace}
+These examples show the exact type of change made by each RQ1 experiment. They are included for interpretability and auditability, not as additional evidence. To avoid choosing unusually favourable outcomes, the controlled example is the first row in the approved controlled-review ledger. The public example is the approved use-condition transformation with the fewest blanked non-empty lines; it was selected before inspecting its retrieval scores.
+
+\newpage
+\subsection{Controlled field addition}
+
+Controlled unit \texttt{uc01\_api\_contract\_review} contains three API-work skills. Its paraphrased request is:
+
+\begin{quote}\small
+Check the already-written endpoint specification for compatibility and contract-quality concerns.
+\end{quote}
+
+When the target field is hidden, all three candidates receive exactly the same serialised shared context. This includes the same broad description, input, output, workflow, success, boundary, dependency, and generic use-condition text. The candidate documents are therefore tied by construction. When the field is shown, one candidate-specific line is appended to each otherwise identical representation:
+
+\begin{description}
+  \item[Gold skill.] \texttt{Use Condition:} Use when the user needs review of an existing API contract or endpoint specification.
+  \item[Alternative 1.] \texttt{Use Condition:} Use when the user needs planning for a new external API integration.
+  \item[Alternative 2.] \texttt{Use Condition:} Use when the user needs design of a new webhook receiver workflow.
+\end{description}
+
+Across the direct and paraphrased requests for this frozen cluster, tie-aware Top-1 is .333 for both BM25 and Qwen while the field is hidden, and 1.000 for both after the field is shown. The complete result uses all 50 use-condition clusters rather than this single example.
+
+\subsection{Public information removal}
+
+Public composition \texttt{OR82-055} contains three naturally authored onboarding skills: a customer-account onboarding plan, an in-product user-activation flow, and an employee 30/60/90-day onboarding plan. For public-gold case \texttt{P-0129}, the in-product activation skill is the reviewed gold. Its direct request asks for a redesign of the self-serve journey between signup and the action that predicts retention, including drop-off analysis, in-product guidance, follow-up messages, measurement, and experiments.
+
+In the intact gold document, the frontmatter description begins:
+
+\begin{quote}
+When the user needs to design, improve, or audit a post-signup activation flow to get new users to their first value moment.
+\end{quote}
+
+Under \texttt{REMOVE\_USE\_CONDITION\_R3}, that description and the cited lines in the document's \texttt{When to Use} section are replaced with blank lines. No remaining text is rewritten. The same rule is applied to all three candidates: four, three, and five non-empty lines respectively are blanked, while document identity, line count, prompt, candidate order, and gold label stay fixed.
+
+For the direct request, BM25 still selects the gold after removal, but its native gold-versus-best-alternative score gap falls from 17.444 to 14.313. Qwen also keeps the gold at rank one, while its cosine gap changes from .158 to .167. The two score scales are not comparable. This single case deliberately illustrates that removal can weaken one retriever without changing Top-1 and need not move every retriever in the same direction; the RQ1 conclusion comes from the paired aggregate over all eligible groups.
+\end{singlespace}

@@ -9,67 +9,55 @@ Method: the script strips long source text where possible, removes local negated
 ## Overall Status
 
 - Step 2 requirement-alignment status: **PASS**
-- Prompts where every alternative is beaten by gold or rejected by its boundary: 182/201 (90.5%)
-- Gold/alternative pairs passing requirement alignment: 618/641 (96.4%)
-- Gold skill ranked first among gold + listed alternatives: 183/201 (91.0%)
+- Prompts where every alternative is beaten by gold or rejected by its boundary: 238/245 (97.1%)
+- Gold/alternative pairs passing requirement alignment: 835/843 (99.1%)
+- Gold skill ranked first among gold + listed alternatives: 236/245 (96.3%)
+- Gold or acceptable equivalent ranked first among listed candidates: 241/245 (98.4%)
 
-Pass rule used here: for each gold/alternative pair, the gold skill must either score above the alternative by the backend-specific margin threshold, or the prompt must strongly activate the alternative's `not_for` boundary. Current thresholds are stored in the JSON report for each pair.
+Pass rule used here: for each gold/alternative pair, the gold skill must either score above the alternative by the backend-specific margin threshold, or the prompt must strongly activate the alternative's `not_for` boundary. Recorded acceptable equivalents are scored separately and do not count as wrong distractors. Current thresholds are stored in the JSON report for each pair.
 
 ## Family Summary
 
-| Family | Prompts | Prompt pass | Gold top-1 |
-|---|---:|---:|---:|
-| api_backend_design | 6 | 6/6 | 6/6 |
-| api_mcp_tooling | 6 | 5/6 | 6/6 |
-| browser_web_automation | 6 | 6/6 | 6/6 |
-| code_github_workflow | 6 | 6/6 | 6/6 |
-| data_spreadsheet | 7 | 7/7 | 6/7 |
-| deployment_browser_qa | 6 | 5/6 | 5/6 |
-| documents_files | 7 | 7/7 | 7/7 |
-| github_ci_maintenance | 6 | 6/6 | 6/6 |
-| huggingface_ml_workflows | 6 | 5/6 | 5/6 |
-| implicit_field_stress | 10 | 3/10 | 4/10 |
-| metrics_observability | 6 | 6/6 | 5/6 |
-| news_monitoring | 5 | 5/5 | 5/5 |
-| observability_reliability | 6 | 6/6 | 6/6 |
-| office_artifact_workflows | 6 | 5/6 | 5/6 |
-| office_business_automation | 6 | 6/6 | 6/6 |
-| pdf_document_operations | 6 | 5/6 | 6/6 |
-| planning_meetings | 5 | 5/5 | 4/5 |
-| public_style_controlled | 64 | 60/64 | 60/64 |
-| reading_research | 8 | 8/8 | 8/8 |
-| reply_messaging | 5 | 5/5 | 5/5 |
-| security_appsec | 6 | 5/6 | 4/6 |
-| skill_lifecycle | 6 | 5/6 | 6/6 |
-| skill_representation_analysis | 6 | 5/6 | 6/6 |
+| Family | Prompts | Prompt pass | Gold top-1 | Gold/acceptable top-1 |
+|---|---:|---:|---:|---:|
+| api_backend_design | 6 | 6/6 | 6/6 | 6/6 |
+| api_mcp_tooling | 6 | 5/6 | 5/6 | 5/6 |
+| browser_web_automation | 6 | 6/6 | 6/6 | 6/6 |
+| code_github_workflow | 6 | 6/6 | 6/6 | 6/6 |
+| controlled_expansion_clear | 20 | 18/20 | 19/20 | 19/20 |
+| data_spreadsheet | 7 | 7/7 | 7/7 | 7/7 |
+| deployment_browser_qa | 6 | 6/6 | 6/6 | 6/6 |
+| documents_files | 7 | 7/7 | 7/7 | 7/7 |
+| github_ci_maintenance | 6 | 6/6 | 6/6 | 6/6 |
+| huggingface_ml_workflows | 6 | 6/6 | 6/6 | 6/6 |
+| implicit_field_stress | 10 | 10/10 | 5/10 | 10/10 |
+| metrics_observability | 6 | 6/6 | 6/6 | 6/6 |
+| news_monitoring | 5 | 5/5 | 5/5 | 5/5 |
+| observability_reliability | 6 | 6/6 | 6/6 | 6/6 |
+| office_artifact_workflows | 6 | 6/6 | 6/6 | 6/6 |
+| office_business_automation | 6 | 6/6 | 6/6 | 6/6 |
+| pdf_document_operations | 6 | 6/6 | 6/6 | 6/6 |
+| planning_meetings | 5 | 5/5 | 5/5 | 5/5 |
+| public_like_extra_controlled | 24 | 21/24 | 23/24 | 23/24 |
+| public_style_controlled | 64 | 64/64 | 64/64 | 64/64 |
+| reading_research | 8 | 8/8 | 8/8 | 8/8 |
+| reply_messaging | 5 | 5/5 | 5/5 | 5/5 |
+| security_appsec | 6 | 6/6 | 6/6 | 6/6 |
+| skill_lifecycle | 6 | 5/6 | 5/6 | 5/6 |
+| skill_representation_analysis | 6 | 6/6 | 6/6 | 6/6 |
 
 ## Weak Requirement Pairs
 
 | Prompt | Gold | Alternative | Margin | Reason |
 |---|---|---|---:|---|
-| `api_mcp_tooling_p3_webhook_integration_planner` | `webhook-integration-planner` | `webhook-contract-planner` | 0.0376 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `deploy_p5_release_verification` | `deployment-release-verifier` | `public-netlify-deploy` | -0.1526 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `huggingface_ml_workflows_p2_hf_local_model_selector` | `hf-local-model-selector` | `public-huggingface-huggingface-local-models` | -0.0025 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p1_pdf_answer` | `implicit-pdf-evidence-answerer` | `implicit-pdf-table-reconstructor` | 0.0277 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p4_visual_diff` | `implicit-visual-diff-reviewer` | `visual-regression-checker` | -0.0328 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p6_review_comments` | `implicit-review-comment-planner` | `pr-review-comment-resolver` | -0.0650 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p7_hf_dataset` | `implicit-hf-dataset-inspector` | `hf-dataset-viewer-inspector` | -0.0768 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p8_hf_model` | `implicit-hf-local-model-chooser` | `hf-local-model-selector` | -0.1217 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p9_alert_rule` | `implicit-slo-alert-author` | `prometheus-alert-rule-writer` | 0.0134 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `implicit_p10_trace_path` | `implicit-trace-path-diagnoser` | `distributed-trace-investigator` | -0.1079 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `office_p4_formula_audit` | `spreadsheet-formula-auditor` | `public-xlsx` | 0.0108 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `office_p4_formula_audit` | `spreadsheet-formula-auditor` | `public-office-xlsx-manipulation` | -0.0328 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `pdf_document_operations_p1_pdf_question_answerer` | `pdf-question-answerer` | `pdf-redaction-reviewer` | 0.0354 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `psc_pdf_document_work_p03_1_psc_pdf_evidence_qa` | `psc-pdf-evidence-qa` | `psc-pdf-redaction-pass` | 0.0073 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `psc_browser_quality_p02_1_psc_playwright_regression_suite` | `psc-playwright-regression-suite` | `psc-devtools-runtime-diagnoser` | -0.0686 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `psc_browser_quality_p02_1_psc_playwright_regression_suite` | `psc-playwright-regression-suite` | `psc-visual-screenshot-reviewer` | 0.0245 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `psc_browser_quality_p02_1_psc_playwright_regression_suite` | `psc-playwright-regression-suite` | `psc-accessibility-interaction-auditor` | 0.0146 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `psc_security_appsec_p01_1_psc_feature_threat_modeler` | `psc-feature-threat-modeler` | `psc-privacy-telemetry-reviewer` | -0.0036 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `psc_skill_representation_p03_2_psc_skill_routing_budget_planner` | `psc-skill-routing-budget-planner` | `psc-retrieval-result-adjudicator` | -0.0112 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `sec_p1_threat_model` | `security-threat-modeler` | `auth-flow-reviewer` | -0.0236 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `sec_p1_threat_model` | `security-threat-modeler` | `privacy-risk-reviewer` | -0.1471 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `skill_p2_install_existing` | `skill-installer` | `skill-packager` | 0.0166 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
-| `skill_representation_analysis_p2_skill_authoring_guide` | `skill-authoring-guide` | `skill-installer-wrapper` | 0.0294 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `api_mcp_tooling_p3_webhook_integration_planner` | `webhook-integration-planner` | `webhook-contract-planner` | -0.0180 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `clear_exp_p11_ci_first_error_triage` | `ci-log-root-cause-debugger` | `github-issue-triager` | 0.0105 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `clear_exp_p20_skill_router_policy` | `skill-router-policy-designer` | `skill-field-auditor` | -0.0136 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `clear_exp_p20_skill_router_policy` | `skill-router-policy-designer` | `skill-benchmark-evaluator` | -0.0110 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_like_extra_p03_pdf_claim_answer` | `psc-pdf-evidence-qa` | `psc-pdf-redaction-pass` | 0.0231 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_like_extra_p08_source_fact_table` | `psc-source-field-table-extractor` | `psc-paper-method-mapper` | 0.0132 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `public_like_extra_p18_local_model_constraints` | `psc-local-model-fit-selector` | `psc-sentence-embedding-trainer` | -0.0363 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
+| `skill_p2_install_existing` | `skill-installer` | `skill-packager` | -0.0154 | gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated |
 
 ## Prompt Detail
 
@@ -145,7 +133,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `database-migration-risk-assessor` | 0.7223 | 0.7223 | 0.3295 | sql, production, rollout, lock, risk, backfill, plan, compatibility | plan |
+| `deployment-rollback-planner` | 0.4324 | 0.4324 | -0.1097 | plan, compatibility, rollback, verification | - |
 | `architecture-boundary-reviewer` | 0.3517 | 0.3517 | 0.5741 | risk, verification | rollout, risk, plan |
+| `database-backup-planner` | 0.3214 | 0.3214 | -0.1097 | plan, verification | - |
 | `public-office-database-sync` | 0.3074 | 0.3074 | 0.0488 | sql, production, path | - |
 | `service-dependency-mapper` | 0.2691 | 0.2691 | 0.4160 | risk, plan, path | - |
 | `public-architecture-patterns` | 0.2170 | 0.2170 | 0.0488 | - | - |
@@ -202,17 +192,17 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `api_mcp_tooling`
 - Gold skill: `webhook-integration-planner`
-- Gold rank among listed candidates: 1
-- Instruction used for scoring: Plan webhook handling for payment events: accepted event types, signature checks, idempotency, retry behavior, ordering, and dead-letter storage.
-- Positive-fit instruction after negation cleanup: Plan webhook handling for payment events: accepted event types, signature checks, idempotency, retry behavior, ordering, and dead-letter storage.
+- Gold rank among listed candidates: 2
+- Instruction used for scoring: Plan an operational webhook integration workflow for payment events, including subscription setup, accepted event types, signature checks, idempotency, retry behavior, event ordering, downstream action triggers, dead-letter storage, monitoring, and handoff notes. I need an implementation/integration runbook for operating the webhook flow. Do not only design the receiver contract, event schema, payload validation document, contract test list, endpoint schema, or API design review.
+- Positive-fit instruction after negation cleanup: Plan an operational webhook integration workflow for payment events, including subscription setup, accepted event types, signature checks, idempotency, retry behavior, event ordering, downstream action triggers, dead-letter storage, monitoring, and handoff notes. I need an implementation/integration runbook for operating the webhook flow. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `webhook-integration-planner` | 0.8204 | 0.8204 | 0.3518 | event, plan, webhook, handl, type, signature, check, idempotency | - |
-| `webhook-contract-planner` | 0.7828 | 0.7828 | 0.2820 | event, plan, webhook, handl, type, signature, check, idempotency | - |
-| `public-office-webhook-automation` | 0.5596 | 0.5596 | 0.1009 | event, webhook, type | - |
-| `rest-api-contract-designer` | 0.3110 | 0.3110 | 0.5551 | behavior | plan, webhook |
-| `mcp-server-builder` | 0.1133 | 0.1133 | 0.5553 | - | plan, webhook |
+| `webhook-contract-planner` | 0.6702 | 0.6702 | 0.3228 | event, webhook, plan, type, signature, check, idempotency, retry | integration, endpoint, api, review |
+| `webhook-integration-planner` | 0.6522 | 0.6522 | 0.3404 | event, webhook, plan, subscription, type, signature, check, idempotency | design, only, document, endpoint, api |
+| `public-office-webhook-automation` | 0.6117 | 0.6117 | 0.0444 | event, webhook, integration, workflow, type | - |
+| `rest-api-contract-designer` | 0.2623 | 0.2623 | 0.5730 | behavior, implementation | webhook, plan, api |
+| `mcp-server-builder` | 0.1772 | 0.1772 | 0.5459 | - | webhook, design, plan, api |
 
 ### `api_mcp_tooling_p4_auth_flow_integrator`
 
@@ -257,7 +247,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `api-security-threat-reviewer` | 0.7048 | 0.7048 | 0.3573 | api, authorization, sensitive, data, exposure, rate-limit, abuse, check | security, docs |
+| `privacy-risk-reviewer` | 0.5501 | 0.5501 | 0.5191 | sensitive, data, exposure, check, risk, security, finding | data, abuse, risk, security |
 | `security-threat-modeler` | 0.4391 | 0.4391 | 0.5474 | data, abuse, check, risk, security | check, risk |
+| `api-ops-risk-reviewer` | 0.4349 | 0.4349 | 0.0583 | api, risk, security, finding | - |
 | `public-security-threat-model` | 0.3412 | 0.3412 | 0.3037 | data, exposure, abuse, check, risk | - |
 | `public-openai-security-best-practices` | 0.3015 | 0.3015 | 0.1021 | check, risk, security | - |
 | `rest-api-contract-designer` | 0.2569 | 0.2569 | 0.3205 | api | api |
@@ -318,6 +310,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `web-data-extractor` | 0.5382 | 0.5382 | 0.2507 | list, page, extract, name, price, label, link, structur | page |
+| `product-ops-field-extractor` | 0.3772 | 0.3772 | 0.0443 | product, extract, structur, table | - |
+| `document-extractor` | 0.2993 | 0.2993 | 0.0733 | extract, structur | - |
 | `web-page-snapshotter` | 0.1500 | 0.1500 | 0.2650 | page, extract, structur | page, extract, structur |
 | `web-ui-tester` | 0.0492 | 0.0492 | 0.1624 | page, extract | page, extract |
 | `frontend-debugger` | -0.0214 | -0.0214 | 0.0562 | page, extract | page |
@@ -333,9 +327,12 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `frontend-debugger` | 0.3154 | 0.3154 | 0.2348 | api, page, open, console, symptom, evidence, inspect, frontend | page, code |
+| `psc-devtools-runtime-diagnoser` | 0.2551 | 0.2551 | 0.0522 | api, page, console, symptom, evidence, state, likely, cause | - |
 | `web-ui-tester` | 0.2291 | 0.2291 | 0.2342 | page, open, console, evidence, state, path | page, frontend, source-level, cause, code, patch |
+| `playwright-flow-debugger` | 0.1971 | 0.1971 | 0.1966 | open, console, evidence, state, path | api, contract |
 | `web-page-snapshotter` | 0.1547 | 0.1547 | 0.3356 | page, open, show, evidence, inspect, state, code | page, frontend, cause |
 | `code-reviewer` | 0.1070 | 0.1070 | 0.1483 | evidence, path, likely, code | - |
+| `web-ops-failure-diagnoser` | 0.0907 | 0.0907 | 0.0634 | page, evidence, state | - |
 
 ### `web_p6_accessibility_check`
 
@@ -442,6 +439,319 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `pr-reviewer` | 0.1370 | 0.1370 | 0.1107 | user-fac, release, note, issue, request | release, note, change |
 | `code-reviewer` | 0.1136 | 0.1136 | 0.1645 | release, note, change, issue, request | change, request |
 
+### `clear_exp_p01_openapi_backward_compatibility`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `openapi-contract-reviewer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review the existing OpenAPI draft for backwards-compatibility risks before client release. I need endpoint-by-endpoint findings about response schemas, status codes, pagination, examples, and error models, not an implementation plan for calling the API.
+- Positive-fit instruction after negation cleanup: Review the existing OpenAPI draft for backwards-compatibility risks before client release. I need endpoint-by-endpoint findings about response schemas, status codes, pagination, examples, and error models, .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `openapi-contract-reviewer` | 0.7780 | 0.7780 | 0.4648 | review, openapi, risk, client, finding, reply, schema, statu | review, plan, api |
+| `external-api-integration-planner` | 0.5254 | 0.5254 | 0.6222 | review, reply, pagination, example, error | review, openapi, api |
+| `architecture-boundary-reviewer` | 0.3927 | 0.3927 | 0.7221 | review, risk, finding | review, openapi, risk, schema, plan, call, api |
+| `webhook-contract-planner` | 0.3394 | 0.3394 | 0.7175 | schema, example, model | review, openapi, risk, api |
+
+### `clear_exp_p02_external_api_rate_limit_plan`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `external-api-integration-planner`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Plan how our app should integrate with a third-party payments API. Map the auth flow, endpoint calls, pagination, rate limits, retries, idempotency keys, required secrets, and verification cases. Do not review our own OpenAPI contract.
+- Positive-fit instruction after negation cleanup: Plan how our app should integrate with a third-party payments API. Map the auth flow, endpoint calls, pagination, rate limits, retries, idempotency keys, required secrets, and verification cases. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `external-api-integration-planner` | 0.6169 | 0.6169 | 0.6032 | plan, third-party, api, map, auth, endpoint, call, pagination | api, review, openapi, contract |
+| `openapi-contract-reviewer` | 0.4202 | 0.4202 | 0.4821 | api, auth, endpoint, pagination | plan, third-party, api, review |
+| `webhook-contract-planner` | 0.3725 | 0.3725 | 0.6162 | plan, map, auth, endpoint, retrie, idempotency, keys, secret | third-party, api, endpoint, review, openapi |
+| `service-dependency-mapper` | 0.2859 | 0.2859 | 0.4598 | plan, map, call | review, openapi, contract |
+
+### `clear_exp_p03_webhook_retry_contract`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `webhook-contract-planner`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Design the contract for receiving subscription webhooks: event types, signature verification, idempotency keys, retry behavior, replay protection, and dead-letter handling. I am not asking for general API integration planning.
+- Positive-fit instruction after negation cleanup: Design the contract for receiving subscription webhooks: event types, signature verification, idempotency keys, retry behavior, replay protection, and dead-letter handling. I am .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `webhook-contract-planner` | 0.7914 | 0.7914 | 0.4098 | design, contract, webhook, event, type, signature, verification, idempotency | general, api, integration |
+| `webhook-integration-planner` | 0.7318 | 0.7318 | 0.4970 | contract, subscription, webhook, event, type, signature, verification, idempotency | design, api |
+| `webhook-setup-planner` | 0.5309 | 0.5309 | 0.0311 | design, webhook, event, type, signature, verification, idempotency, retry | ask |
+| `public-office-webhook-automation` | 0.4934 | 0.4934 | 0.0811 | webhook, event, type | - |
+| `external-api-integration-planner` | 0.4229 | 0.4229 | 0.6872 | contract, verification, idempotency, behavior, handl | design, contract, webhook, api |
+| `openapi-contract-reviewer` | 0.3997 | 0.3997 | 0.6927 | contract, behavior | design, webhook, retry, behavior, api, integration, plan |
+| `architecture-boundary-reviewer` | 0.2208 | 0.2208 | 0.3983 | contract, verification | api, plan |
+
+### `clear_exp_p04_visual_snapshot_only`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `web-page-snapshotter`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Capture the current dashboard page state after login with screenshots and a short DOM/state summary for visual review. Do not submit forms, test pass/fail behavior, or debug source code.
+- Positive-fit instruction after negation cleanup: Capture the current dashboard page state after login with screenshots and a short DOM/state summary for visual review. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `web-page-snapshotter` | 0.5122 | 0.5122 | 0.3478 | state, capture, page, screenshot, review | page, form, test |
+| `frontend-debugger` | 0.3625 | 0.3625 | 0.5192 | state, page, dom, review | page, review, form, test, pass, fail, debug, code |
+| `web-ui-tester` | 0.3571 | 0.3571 | 0.4138 | state, page, review | page, form, code |
+| `web-data-extractor` | 0.2416 | 0.2416 | 0.5010 | page, screenshot, review | page, form, test, debug, code |
+
+### `clear_exp_p05_form_submission_delegate`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `web-form-filler`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use the supplied contact details to complete the vendor onboarding form and submit it once the values are verified. This is a delegated form-filling task, not a regression test or page snapshot.
+- Positive-fit instruction after negation cleanup: Use the supplied contact details to complete the vendor onboarding form and submit it once the values are verified. This is a delegated form-filling task, .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `web-form-filler` | 0.2788 | 0.2788 | 0.3387 | form, submit, value, task | task, test, page |
+| `web-data-extractor` | 0.1198 | 0.1198 | 0.3610 | value, task | form, regression, test, page |
+| `web-ui-tester` | 0.0963 | 0.0963 | 0.2875 | submit, task | form, task, page |
+| `web-page-snapshotter` | 0.0237 | 0.0237 | 0.3292 | form, task | form, task, test, page |
+
+### `clear_exp_p06_ui_regression_pass_fail`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `web-ui-tester`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Run the checkout flow with test credentials and report whether validation, navigation, totals, and confirmation behavior match the expected user story. Provide reproduction steps and evidence, but do not fix the frontend code.
+- Positive-fit instruction after negation cleanup: Run the checkout flow with test credentials and report whether validation, navigation, totals, and confirmation behavior match the expected user story. Provide reproduction steps and evidence, but .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `web-ui-tester` | 0.4217 | 0.4217 | 0.1996 | flow, test, report, whether, check, navigation, behavior, expect | frontend, code |
+| `web-form-filler` | 0.3763 | 0.3763 | 0.3308 | checkout, flow, test, credential, report, whether, check, confirmation | flow, test, whether, frontend, code |
+| `web-page-snapshotter` | 0.2969 | 0.2969 | 0.2348 | flow, test, report, whether, behavior, user, evidence | test, frontend |
+| `frontend-debugger` | 0.2596 | 0.2596 | 0.3489 | flow, test, report, whether, check, behavior, user, evidence | test, user, code |
+
+### `clear_exp_p07_data_trust_audit`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `data-analysis-with-validation`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Before anyone interprets this spreadsheet, check whether the data is trustworthy: missing values, duplicate rows, inconsistent categories, impossible dates, formula errors, and suspicious joins. Return a data-quality report, not a business summary.
+- Positive-fit instruction after negation cleanup: Before anyone interprets this spreadsheet, check whether the data is trustworthy: missing values, duplicate rows, inconsistent categories, impossible dates, formula errors, and suspicious joins. Return a data-quality report, .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `data-analysis-with-validation` | 0.5756 | 0.5756 | 0.2799 | spreadsheet, check, whether, data, miss, value, inconsistent, join | report |
+| `data-analysis-for-reporting` | 0.4008 | 0.4008 | 0.3834 | spreadsheet, check, data, return, report | spreadsheet |
+| `data-analysis-overview` | 0.3902 | 0.3902 | 0.3859 | spreadsheet, check, data, miss, value, rows, return, report | whether, data, report |
+| `data-analysis-with-anomaly-focus` | 0.3749 | 0.3749 | 0.5176 | spreadsheet, check, data, value, return, report | check, data, report |
+
+### `clear_exp_p08_anomaly_watchlist_only`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `data-analysis-with-anomaly-focus`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Create a compact anomaly watchlist from the monthly KPI sheet: spikes, drops, breakpoints, and outliers by region and product. Do not diagnose causes yet; just surface unusual patterns with evidence.
+- Positive-fit instruction after negation cleanup: Create a compact anomaly watchlist from the monthly KPI sheet: spikes, drops, breakpoints, and outliers by region and product. ; just surface unusual patterns with evidence.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `data-analysis-with-anomaly-focus` | 0.5997 | 0.5997 | 0.4417 | compact, anomaly, watchlist, spike, drop, breakpoint, outlier, unusual | anomaly, cause, pattern |
+| `data-analysis-for-root-cause-diagnosis` | 0.3230 | 0.3230 | 0.2986 | compact, anomaly, pattern, evidence | unusual |
+| `data-analysis-for-reporting` | 0.2928 | 0.2928 | 0.2652 | anomaly, evidence | cause |
+| `data-analysis-with-validation` | 0.1639 | 0.1639 | 0.3129 | compact, anomaly, surface | cause |
+
+### `clear_exp_p09_targeted_document_fields`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `document-field-extractor`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: From this supplier agreement, extract only the renewal date, termination notice period, governing law, liability cap, data-processing clause, and named parties into a table. Do not summarize the whole contract.
+- Positive-fit instruction after negation cleanup: From this supplier agreement, extract only the renewal date, termination notice period, governing law, liability cap, data-processing clause, and named parties into a table. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `document-field-extractor` | 0.3813 | 0.3813 | 0.2528 | extract, only, date, clause | summary |
+| `document-summariser` | 0.2958 | 0.2958 | 0.3315 | extract, only | extract, date, clause |
+| `document-normaliser` | 0.2399 | 0.2399 | 0.2551 | extract, only | extract, only, summary |
+| `multi-document-comparison-preparer` | 0.1893 | 0.1893 | 0.2800 | extract, only, clause | extract, summary |
+
+### `clear_exp_p10_multi_doc_comparison_matrix`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `multi-document-comparison-preparer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Prepare a comparison matrix across the three vendor proposals showing pricing model, contract length, implementation timeline, support obligations, and unresolved assumptions. The output should help compare documents side by side.
+- Positive-fit instruction after negation cleanup: Prepare a comparison matrix across the three vendor proposals showing pricing model, contract length, implementation timeline, support obligations, and unresolved assumptions. The output should help compare documents side by side.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `multi-document-comparison-preparer` | 0.5104 | 0.5104 | 0.3610 | compare, prepare, document | document |
+| `document-summariser` | 0.3660 | 0.3660 | 0.2762 | compare, contract, support, obligation, unresolv, document | compare, side, document |
+| `document-field-extractor` | 0.2691 | 0.2691 | 0.2765 | compare, obligation, output, document | compare, document |
+| `document-normaliser` | 0.2568 | 0.2568 | 0.2004 | compare, output, document | document |
+
+### `clear_exp_p11_ci_first_error_triage`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `ci-log-root-cause-debugger`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Inspect the failed GitHub Actions log and identify the first meaningful error, likely root cause, smallest fix path, and which job to rerun. This is not a general code review or issue triage task.
+- Positive-fit instruction after negation cleanup: Inspect the failed GitHub Actions log and identify the first meaningful error, likely root cause, smallest fix path, and which job to rerun. This is .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `ci-log-root-cause-debugger` | 0.3355 | 0.3355 | 0.1767 | fail, log, identify, first, meaningful, error, root, cause | code, review, issue, triage |
+| `github-issue-triager` | 0.3250 | 0.3250 | 0.1242 | github, action, identify, root, cause | code, review |
+| `repo-code-reviewer` | 0.2097 | 0.2097 | 0.2374 | inspect, identify, fix | review |
+| `pr-review-comment-resolver` | 0.1845 | 0.1845 | 0.4321 | action, identify | root, cause |
+
+### `clear_exp_p12_review_comment_resolution_plan`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `pr-review-comment-resolver`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use the unresolved pull-request review comments to plan the exact code edits needed, mark which comments are addressed, and avoid unrelated refactors. The main input is reviewer feedback, not failing CI output.
+- Positive-fit instruction after negation cleanup: Use the unresolved pull-request review comments to plan the exact code edits needed, mark which comments are addressed, and avoid unrelated refactors. The main input is reviewer feedback, .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `pr-review-comment-resolver` | 0.7234 | 0.7234 | 0.4232 | comment, unresolv, review, plan, code, reviewer | - |
+| `repo-code-reviewer` | 0.5124 | 0.5124 | 0.6849 | comment, review, avoid | comment, review |
+| `release-changelog-generator` | 0.3074 | 0.3074 | 0.5400 | mark | review, code |
+| `ci-log-root-cause-debugger` | 0.1958 | 0.1958 | 0.5771 | - | review, code |
+
+### `clear_exp_p13_hf_dataset_viewer_schema`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `hf-dataset-viewer-inspector`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Using the Hugging Face Dataset Viewer metadata, inspect the dataset splits, feature schema, sample rows, and size before I build a loader. Do not choose a local model or fine-tune embeddings.
+- Positive-fit instruction after negation cleanup: Using the Hugging Face Dataset Viewer metadata, inspect the dataset splits, feature schema, sample rows, and size before I build a loader. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `hf-dataset-viewer-inspector` | 0.6241 | 0.6241 | 0.2164 | dataset, hugg, face, metadata, inspect, split, schema | build, local, model |
+| `hf-community-eval-runner` | 0.4639 | 0.4639 | 0.4424 | dataset, hugg, face, split | dataset, inspect, rows, build |
+| `hf-local-model-selector` | 0.2496 | 0.2496 | 0.5350 | hugg, face, size | dataset, inspect, rows, model |
+| `sentence-transformer-finetuner` | 0.2166 | 0.2166 | 0.3410 | split | dataset, inspect, build, local |
+
+### `clear_exp_p14_sentence_embedding_finetune`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `sentence-transformer-finetuner`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Prepare a sentence-transformer fine-tuning run for retrieval pairs: dataset format, loss choice, validation split, training command, and evaluation metric. This is not just browsing a dataset card.
+- Positive-fit instruction after negation cleanup: Prepare a sentence-transformer fine-tuning run for retrieval pairs: dataset format, loss choice, validation split, training command, and evaluation metric. This is .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `sentence-transformer-finetuner` | 0.8557 | 0.8557 | 0.2767 | sentence-transformer, fine-tun, retrieval, pair, loss, check, split, train | dataset |
+| `public-huggingface-train-sentence-transformers` | 0.6649 | 0.6649 | 0.4128 | sentence-transformer, retrieval, pair, loss, train | - |
+| `psc-sentence-embedding-trainer` | 0.6565 | 0.6565 | 0.0710 | sentence-transformer, fine-tun, retrieval, pair, dataset, format, loss, choice | - |
+| `psc-retrieval-result-adjudicator` | 0.5079 | 0.5079 | 0.2280 | retrieval, evaluation, metric | - |
+| `hf-dataset-viewer-inspector` | 0.3510 | 0.3510 | 0.4510 | dataset, check, split | train |
+| `hf-community-eval-runner` | 0.3178 | 0.3178 | 0.3212 | prepare, run, dataset, split, command, evaluation, metric | dataset |
+| `hf-local-model-selector` | 0.1819 | 0.1819 | 0.4594 | check, train | dataset, fine-tun |
+
+### `clear_exp_p15_pdf_redaction_safety_review`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `pdf-redaction-reviewer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review the redacted PDF before external sharing. Check whether sensitive text, hidden layers, comments, metadata, or visually recoverable regions remain. Do not answer content questions from the PDF.
+- Positive-fit instruction after negation cleanup: Review the redacted PDF before external sharing. Check whether sensitive text, hidden layers, comments, metadata, or visually recoverable regions remain. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `pdf-redaction-reviewer` | 0.6793 | 0.6793 | 0.3315 | review, pdf, shar, sensitive, text | pdf |
+| `psc-pdf-evidence-qa` | 0.5109 | 0.5109 | 0.4380 | pdf, external, shar, text | pdf, answer, question |
+| `public-office-chat-with-pdf` | 0.5102 | 0.5102 | 0.0102 | pdf, external, text, metadata | - |
+| `pdf-question-answerer` | 0.4581 | 0.4581 | 0.3875 | pdf, text | pdf |
+| `pdf-ocr-cleaner` | 0.4359 | 0.4359 | 0.3703 | pdf, check, text, region | review |
+| `privacy-risk-reviewer` | 0.3907 | 0.3907 | 0.2902 | review, shar, check, whether, sensitive, metadata | review, external |
+| `pdf-layout-table-extractor` | 0.3582 | 0.3582 | 0.4530 | pdf, check | pdf, answer, question |
+
+### `clear_exp_p16_pdf_form_completion`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `pdf-form-filler`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Fill the grant application PDF form using the applicant spreadsheet, preserve the PDF form structure, and list fields that could not be completed. Do not convert it to DOCX or merely extract the blank fields.
+- Positive-fit instruction after negation cleanup: Fill the grant application PDF form using the applicant spreadsheet, preserve the PDF form structure, and list fields that could . .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `pdf-form-filler` | 0.5444 | 0.5444 | 0.5292 | pdf, form, fill, field | pdf, field, convert, docx, extract |
+| `pdf-layout-table-extractor` | 0.4178 | 0.4178 | 0.3364 | pdf, form, preserve, field | pdf |
+| `pdf-question-answerer` | 0.3364 | 0.3364 | 0.5276 | pdf | pdf, form, field, fill, convert, docx, extract |
+| `document-field-extractor` | 0.2921 | 0.2921 | 0.1963 | form, preserve, field | convert |
+| `implicit-pdf-evidence-answerer` | 0.2885 | 0.2885 | 0.2501 | pdf, form | form |
+| `pdf-to-docx-converter` | 0.2751 | 0.2751 | 0.3335 | pdf, preserve, structure | pdf, form, fill |
+
+### `clear_exp_p17_claim_support_audit`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `citation-grounding-helper`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Check whether each claim in this paragraph is actually supported by the cited paper. Flag overclaims, missing caveats, and safer wording with source evidence. Do not summarize the whole paper.
+- Positive-fit instruction after negation cleanup: Check whether each claim in this paragraph is actually supported by the cited paper. Flag overclaims, missing caveats, and safer wording with source evidence. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `citation-grounding-helper` | 0.4318 | 0.4318 | 0.2523 | check, whether, claim, support, paper, miss, safer, word | paper, summary |
+| `identity-ops-evidence-grounder` | 0.3473 | 0.3473 | 0.1234 | check, claim, support, caveat, evidence | miss |
+| `contract-ops-evidence-grounder` | 0.3209 | 0.3209 | 0.1234 | check, claim, support, caveat, evidence | miss |
+| `citation-note-extractor` | 0.2766 | 0.2766 | 0.3338 | claim, support, paper | paper, check, claim, support, summary |
+| `paper-summariser` | 0.2569 | 0.2569 | 0.3152 | claim, paper, caveat | check, whether, claim |
+| `related-work-synthesiser` | 0.1331 | 0.1331 | 0.4283 | each, claim, support, paper | check, support, summary |
+
+### `clear_exp_p18_related_work_synthesis`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `related-work-synthesiser`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use these eight papers to draft a related-work synthesis around skill retrieval, retrieval-augmented agents, and scaling pressure. Group approaches by theme and identify the gap; do not produce isolated paper summaries.
+- Positive-fit instruction after negation cleanup: Use these eight papers to draft a related-work synthesis around skill retrieval, retrieval-augmented agents, and scaling pressure. Group approaches by theme and identify the gap; .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `related-work-synthesiser` | 0.4138 | 0.4138 | 0.1982 | paper, related-work, synthesi, group, approache, theme, identify, gap | summary |
+| `paper-summariser` | 0.3001 | 0.3001 | 0.3570 | paper, synthesi, identify | related-work |
+| `multi-source-comparison-builder` | 0.2944 | 0.2944 | 0.4396 | paper, synthesi, identify | paper, related-work, summary |
+| `citation-note-extractor` | 0.2735 | 0.2735 | 0.4418 | paper, synthesi, identify | paper, related-work, summary |
+
+### `clear_exp_p19_auth_flow_review`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `auth-flow-reviewer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review the login, refresh-token, password reset, and session-expiry flow for security weaknesses. Focus on auth state transitions and token handling, not a general architecture threat model.
+- Positive-fit instruction after negation cleanup: Review the login, refresh-token, password reset, and session-expiry flow for security weaknesses. Focus on auth state transitions and token handling, .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `auth-flow-reviewer` | 0.7320 | 0.7320 | 0.5412 | review, login, password, reset, flow, security, auth, transition | review, security, auth, general, architecture, threat, model |
+| `security-code-reviewer` | 0.4000 | 0.4000 | 0.4226 | review, flow, security, auth, state, handl | review, security, general, threat, model |
+| `privacy-risk-reviewer` | 0.3925 | 0.3925 | 0.4218 | review, flow, security, auth, handl | review, security, handl, general |
+| `security-threat-modeler` | 0.3745 | 0.3745 | 0.3571 | review, flow, security, auth, state | review |
+
+### `clear_exp_p20_skill_router_policy`
+
+- Family: `controlled_expansion_clear`
+- Gold skill: `skill-router-policy-designer`
+- Gold rank among listed candidates: 3
+- Instruction used for scoring: Specify when the system should reveal full procedural documents after candidate retrieval. Include candidate limits, confidence thresholds, fallback behavior, and the evidence used to decide whether a candidate deserves full-document exposure.
+- Positive-fit instruction after negation cleanup: Specify when the system should reveal full procedural documents after candidate retrieval. Include candidate limits, confidence thresholds, fallback behavior, and the evidence used to decide whether a candidate deserves full-document exposure.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `skill-field-auditor` | 0.3605 | 0.3605 | 0.4076 | confidence, evidence | retrieval |
+| `skill-benchmark-evaluator` | 0.3579 | 0.3579 | 0.2552 | retrieval | - |
+| `skill-router-policy-designer` | 0.3469 | 0.3469 | 0.2312 | candidate, specify, retrieval, fallback, behavior | - |
+| `skill-authoring-guide` | 0.2815 | 0.2815 | 0.2485 | procedural | - |
+
 ### `data_p1_overview`
 
 - Family: `data_spreadsheet`
@@ -476,16 +786,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `data_spreadsheet`
 - Gold skill: `data-analysis-with-validation`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Please read channel_performance_weekly.csv. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is.
-- Positive-fit instruction after negation cleanup: Please read channel_performance_weekly.csv. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Please read channel_performance_weekly.csv. Before I react to it, do a data-quality validation audit: check missing values, inconsistent rows, suspicious outliers, denominator issues, and measurement artifacts that could make a genuine problem look worse than it is. I need trustworthiness checks, not an anomaly-focused business diagnosis.
+- Positive-fit instruction after negation cleanup: Please read channel_performance_weekly.csv. Before I react to it, do a data-quality validation audit: check missing values, inconsistent rows, suspicious outliers, denominator issues, and measurement artifacts that could make a genuine problem look worse than it is. I need trustworthiness checks, .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `data-analysis-with-anomaly-focus` | 0.3491 | 0.3491 | 0.4401 | csv, check, value, outlier, issue, look, than | check |
-| `data-analysis-with-validation` | 0.3473 | 0.3473 | 0.2153 | csv, whether, check, miss, value, inconsistent, issue, problem | - |
-| `data-analysis-overview` | 0.2926 | 0.2926 | 0.4180 | csv, check, miss, value, rows | whether |
-| `data-analysis-for-root-cause-diagnosis` | 0.2892 | 0.2892 | 0.3696 | csv, check, issue, problem, look, than | whether, look |
+| `data-analysis-with-validation` | 0.4830 | 0.4830 | 0.3060 | check, csv, miss, value, inconsistent, issue, problem | - |
+| `data-analysis-with-anomaly-focus` | 0.3667 | 0.3667 | 0.6108 | check, csv, value, outlier, issue, look, than | check, trustworthines |
+| `data-analysis-for-root-cause-diagnosis` | 0.3214 | 0.3214 | 0.4971 | check, csv, issue, problem, look, than | look |
+| `data-analysis-overview` | 0.3083 | 0.3083 | 0.5434 | check, csv, miss, value, rows | - |
 
 ### `data_p4_root_cause`
 
@@ -574,6 +884,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `visual-regression-checker` | 0.6520 | 0.6520 | 0.0783 | compare, baseline, current, screenshot, visual, regression, clipp, spac | - |
+| `implicit-visual-diff-reviewer` | 0.5880 | 0.5880 | 0.1069 | compare, current, screenshot, visual, regression, clipp, spac, text | - |
+| `psc-visual-screenshot-reviewer` | 0.5862 | 0.5862 | 0.1975 | compare, baseline, current, screenshot, visual, regression, clipp, spac | screenshot |
 | `accessibility-interaction-auditor` | 0.2576 | 0.2576 | 0.5062 | visual, contrast, change | compare, visual, regression |
 | `public-openai-screenshot` | 0.2387 | 0.2387 | 0.1069 | compare, screenshot, visual | - |
 | `playwright-flow-debugger` | 0.2006 | 0.2006 | 0.4653 | screenshot, visual | compare, screenshot, visual |
@@ -590,6 +902,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `accessibility-interaction-auditor` | 0.6121 | 0.6121 | 0.1641 | focu, audit, modal, keyboard, screen-reader, interaction, order, accessible | - |
+| `accessibility-checker` | 0.5215 | 0.5215 | 0.4395 | focu, keyboard, screen-reader, interaction, order, accessible, whether | form |
+| `public-addy-web-accessibility` | 0.4357 | 0.4357 | 0.0888 | focu, audit, modal, keyboard, tab, order, accessible, name | - |
 | `playwright-flow-debugger` | 0.3668 | 0.3668 | 0.2476 | interaction, state, whether | interaction |
 | `visual-regression-checker` | 0.3613 | 0.3613 | 0.2833 | name, state | audit |
 | `web-ui-tester` | 0.2756 | 0.2756 | 0.3633 | interaction, state, whether, error | form |
@@ -614,17 +928,17 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `deployment_browser_qa`
 - Gold skill: `deployment-release-verifier`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: The production deploy is live at `https://example-release.netlify.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, and rollback notes.
-- Positive-fit instruction after negation cleanup: The production deploy is live at `https://example-release.netlify.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, and rollback notes.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: The production deploy is already live at `https://example-release.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, rollback notes, and a go/no-go summary. Do not create, publish, or configure a new Netlify/Vercel deployment.
+- Positive-fit instruction after negation cleanup: The production deploy is already live at `https://example-release.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, rollback notes, and a go/no-go summary. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-netlify-deploy` | 0.6129 | 0.6129 | 0.0880 | check, production, deploy, live, http, netlify, app, url | - |
-| `deployment-release-verifier` | 0.4603 | 0.4603 | 0.3178 | check, deploy, release, readines, url, smoke, version, evidence | - |
-| `deployment-build-triager` | 0.3946 | 0.3946 | 0.3727 | check, deploy, release, version, evidence, environment | check, deploy, url |
-| `public-openai-vercel-deploy` | 0.2851 | 0.2851 | 0.0880 | check, deploy, live, app, url, environment | - |
-| `visual-regression-checker` | 0.1219 | 0.1219 | 0.3511 | check, evidence | smoke |
+| `deployment-release-verifier` | 0.5823 | 0.5823 | 0.2538 | check, deploy, release, readines, url, smoke, version, evidence | - |
+| `deployment-build-triager` | 0.4186 | 0.4186 | 0.3284 | check, deploy, release, version, evidence, environment | check, deploy, url |
+| `public-openai-vercel-deploy` | 0.3185 | 0.3185 | 0.1092 | check, deploy, live, app, url, environment | - |
+| `public-netlify-deploy` | 0.3115 | 0.3115 | 0.1092 | check, production, deploy, already, live, http, app, url | - |
+| `visual-regression-checker` | 0.1245 | 0.1245 | 0.3144 | check, evidence | smoke, deployment |
 
 ### `deploy_p6_performance_budget`
 
@@ -837,7 +1151,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `git-safety-guardrail-installer` | 0.7483 | 0.7483 | 0.2277 | repository, guardrail, block, git, secret, commit, hook, config | issue |
+| `psc-repo-guardrail-hook-installer` | 0.7025 | 0.7025 | 0.1595 | repository, guardrail, block, git, secret, hook, config, verification | - |
 | `public-mattpocock-git-guardrails-claude-code` | 0.5411 | 0.5411 | 0.0369 | guardrail, block, git, push, reset, hard, hook | - |
+| `public-oh-my-git-guardrails-claude-code` | 0.4774 | 0.4774 | 0.3980 | guardrail, git, step | git, hook |
 | `pr-review-comment-resolver` | 0.3844 | 0.3844 | 0.4119 | step, verification | git, hook |
 | `public-mattpocock-setup-pre-commit` | 0.3828 | 0.3828 | 0.0369 | commit, hook | - |
 | `ci-log-root-cause-debugger` | 0.2145 | 0.2145 | 0.2573 | repository | issue, triage |
@@ -862,17 +1178,17 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `huggingface_ml_workflows`
 - Gold skill: `hf-local-model-selector`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options; do not design a dataset audit.
-- Positive-fit instruction after negation cleanup: I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options; .
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options for local inference; do not design a dataset audit, browser-side Transformers.js demo, or training workflow.
+- Positive-fit instruction after negation cleanup: I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options for local inference; .js demo, or training workflow.
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-huggingface-huggingface-local-models` | 0.4486 | 0.4486 | 0.1427 | local, model, mac, realistic, gguf | - |
-| `hf-local-model-selector` | 0.4461 | 0.4461 | 0.2917 | local, model, choose, hugg, face, gguf, candidate, quantization | model, dataset |
-| `hf-dataset-viewer-inspector` | 0.2853 | 0.2853 | 0.3137 | model, hugg, face | local, model |
-| `public-huggingface-huggingface-best` | 0.2126 | 0.2126 | 0.1427 | realistic | - |
-| `sentence-transformer-finetuner` | 0.1727 | 0.1727 | 0.2747 | model, choose | local, dataset |
+| `hf-local-model-selector` | 0.5413 | 0.5413 | 0.2978 | local, model, choose, hugg, face, gguf, candidate, quantization | model, dataset |
+| `public-huggingface-huggingface-local-models` | 0.4893 | 0.4893 | 0.1210 | local, model, mac, realistic, gguf, workflow | - |
+| `hf-dataset-viewer-inspector` | 0.2781 | 0.2781 | 0.4013 | model, hugg, face | local, model, transformer, demo, train |
+| `public-huggingface-huggingface-best` | 0.2322 | 0.2322 | 0.1210 | realistic, workflow | - |
+| `sentence-transformer-finetuner` | 0.1980 | 0.1980 | 0.2731 | model, choose, train | local, dataset |
 
 ### `huggingface_ml_workflows_p3_sentence_transformer_finetuner`
 
@@ -885,7 +1201,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `sentence-transformer-finetuner` | 0.6528 | 0.6528 | 0.1694 | pair, hard, negative, plan, sentence-transformer, fine-tun, losse, split | - |
+| `psc-sentence-embedding-trainer` | 0.5217 | 0.5217 | 0.1222 | labell, skill-query, pair, hard, negative, plan, sentence-transformer, fine-tun | - |
 | `public-huggingface-train-sentence-transformers` | 0.5184 | 0.5184 | 0.3599 | pair, skill, sentence-transformer, retrieval | skill |
+| `psc-retrieval-result-adjudicator` | 0.5053 | 0.5053 | 0.4392 | skill, rout, retrieval, metric | skill |
 | `public-swebench-similarity-search-patterns` | 0.4131 | 0.4131 | 0.0702 | skill, retrieval | - |
 | `hf-dataset-viewer-inspector` | 0.1953 | 0.1953 | 0.4274 | split | - |
 | `hf-local-model-selector` | 0.1597 | 0.1597 | 0.3288 | setup | fine-tun |
@@ -958,30 +1276,30 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 - Family: `implicit_field_stress`
 - Gold skill: `implicit-pdf-evidence-answerer`
 - Gold rank among listed candidates: 1
-- Instruction used for scoring: Read the PDF packet and answer whether travel meals after a delay are reimbursable. I need the answer and page evidence, not a reconstructed table.
-- Positive-fit instruction after negation cleanup: Read the PDF packet and answer whether travel meals after a delay are reimbursable. I need the answer and page evidence, .
+- Instruction used for scoring: Read the PDF packet and answer the policy question: are travel meals after a delay reimbursable? I need a concise answer with page evidence, not table reconstruction, field extraction, redaction review, or layout inspection.
+- Positive-fit instruction after negation cleanup: Read the PDF packet and answer the policy question: are travel meals after a delay reimbursable? I need a concise answer with page evidence, .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `implicit-pdf-evidence-answerer` | 0.2379 | 0.2379 | 0.1960 | answer, read, pdf, packet, page, evidence | table |
-| `implicit-pdf-table-reconstructor` | 0.2102 | 0.2102 | -0.0105 | pdf, packet, page | - |
-| `pdf-question-answerer` | 0.1678 | 0.1678 | 0.2228 | answer, pdf, page, evidence | pdf, table |
-| `pdf-layout-table-extractor` | 0.0984 | 0.0984 | 0.1328 | pdf, page, evidence | answer, pdf |
+| `implicit-pdf-evidence-answerer` | 0.2216 | 0.2216 | 0.2284 | answer, read, pdf, packet, question, page, evidence | table |
+| `implicit-pdf-table-reconstructor` | 0.1600 | 0.1600 | -0.0004 | pdf, packet, question, page | question |
+| `pdf-question-answerer` | 0.1487 | 0.1487 | 0.2239 | answer, pdf, question, page, evidence | pdf, table, field, extract |
+| `pdf-layout-table-extractor` | 0.0519 | 0.0519 | 0.1929 | pdf, page, evidence | answer, pdf, question |
 
 ### `implicit_p2_pdf_table`
 
 - Family: `implicit_field_stress`
 - Gold skill: `implicit-pdf-table-reconstructor`
 - Gold rank among listed candidates: 2
-- Instruction used for scoring: Pull the invoice rows from the PDF with page and row anchors. Keep it as structured data rather than a prose answer.
-- Positive-fit instruction after negation cleanup: Pull the invoice rows from the PDF with page and row anchors. Keep it as structured data .
+- Instruction used for scoring: Pull the invoice rows from the PDF with page and row anchors. Keep it as structured row data with columns and values, rather than a prose policy answer or summary.
+- Positive-fit instruction after negation cleanup: Pull the invoice rows from the PDF with page and row anchors. Keep it as structured row data with columns and values, .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `pdf-layout-table-extractor` | 0.6566 | 0.6566 | 0.5082 | extract, invoice, rows, pdf, page, row, anchor, structur | pdf, prose, answer |
-| `implicit-pdf-table-reconstructor` | 0.5743 | 0.5743 | 0.0913 | rows, pdf, page, row, structur, data | - |
-| `pdf-question-answerer` | 0.4879 | 0.4879 | 0.6056 | extract, pdf, page, anchor, keep | extract, pdf |
-| `implicit-pdf-evidence-answerer` | 0.4543 | 0.4543 | 0.1973 | extract, pdf, page, anchor | - |
+| `pdf-layout-table-extractor` | 0.6452 | 0.6452 | 0.4847 | row, extract, invoice, rows, pdf, page, anchor, structur | pdf, prose, answer |
+| `implicit-pdf-table-reconstructor` | 0.5633 | 0.5633 | 0.0577 | row, rows, pdf, page, structur, data, column | - |
+| `pdf-question-answerer` | 0.4638 | 0.4638 | 0.5866 | extract, pdf, page, anchor, keep | extract, pdf |
+| `implicit-pdf-evidence-answerer` | 0.4249 | 0.4249 | 0.1745 | extract, pdf, page, anchor | - |
 
 ### `implicit_p3_browser_flow`
 
@@ -1024,7 +1342,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `implicit-ci-failure-reader` | 0.7248 | 0.7248 | 0.0197 | look, log, first, meaningful, error, smallest, fix, rerun | - |
+| `psc-ci-log-first-failure-reader` | 0.5546 | 0.5546 | 0.4052 | log, find, first, meaningful, error, fix, rerun, sequence | - |
 | `ci-log-root-cause-debugger` | 0.5333 | 0.5333 | 0.2634 | log, find, first, meaningful, error, smallest, fix, rerun | - |
+| `ci-failure-debugger` | 0.5221 | 0.5221 | 0.3504 | first, meaningful, error, smallest, fix | - |
 | `repo-code-reviewer` | 0.1726 | 0.1726 | 0.4460 | find, fix | - |
 | `implicit-review-comment-planner` | 0.0832 | 0.0832 | 0.2256 | - | - |
 
@@ -1033,45 +1353,45 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 - Family: `implicit_field_stress`
 - Gold skill: `implicit-review-comment-planner`
 - Gold rank among listed candidates: 3
-- Instruction used for scoring: Use the existing reviewer feedback to group required fixes, note any questions, and prepare responses for each thread; do not do a fresh code review.
-- Positive-fit instruction after negation cleanup: Use the existing reviewer feedback to group required fixes, note any questions, and prepare responses for each thread; .
+- Instruction used for scoring: Use the existing PR reviewer feedback to group required fixes, note any reviewer questions, and prepare response text for each review thread; do not do a fresh code review or inspect CI logs.
+- Positive-fit instruction after negation cleanup: Use the existing PR reviewer feedback to group required fixes, note any reviewer questions, and prepare response text for each review thread; .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `pr-review-comment-resolver` | 0.5098 | 0.5098 | 0.2591 | reviewer, group, requir, question, prepare, reply, each | - |
-| `repo-code-reviewer` | 0.4677 | 0.4677 | 0.4323 | - | exist, note, review |
-| `implicit-review-comment-planner` | 0.4448 | 0.4448 | 0.4681 | exist, reviewer, feedback, group, requir, question, prepare, reply | fresh, code, review |
-| `implicit-ci-failure-reader` | 0.1662 | 0.1662 | 0.0783 | - | - |
+| `pr-review-comment-resolver` | 0.6367 | 0.6367 | 0.4771 | reviewer, group, requir, question, prepare, reply, each, review | - |
+| `repo-code-reviewer` | 0.4899 | 0.4899 | 0.6533 | review | review, exist, note, logs |
+| `implicit-review-comment-planner` | 0.4652 | 0.4652 | 0.3772 | reviewer, exist, feedback, group, requir, question, prepare, reply | review, fresh, code |
+| `implicit-ci-failure-reader` | 0.2089 | 0.2089 | 0.0207 | - | - |
 
 ### `implicit_p7_hf_dataset`
 
 - Family: `implicit_field_stress`
 - Gold skill: `implicit-hf-dataset-inspector`
 - Gold rank among listed candidates: 2
-- Instruction used for scoring: Before modelling, inspect the dataset splits, columns, row examples, labels, and schema caveats.
-- Positive-fit instruction after negation cleanup: Before modelling, inspect the dataset splits, columns, row examples, labels, and schema caveats.
+- Instruction used for scoring: Before modelling, inspect the Hugging Face dataset splits, columns, row examples, labels, and schema caveats. Do not choose a local model or train embeddings.
+- Positive-fit instruction after negation cleanup: Before modelling, inspect the Hugging Face dataset splits, columns, row examples, labels, and schema caveats. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `hf-dataset-viewer-inspector` | 0.7485 | 0.7485 | 0.2541 | inspect, dataset, split, column, row, example, schema, caveat | - |
-| `implicit-hf-dataset-inspector` | 0.6717 | 0.6717 | 0.2575 | modell, inspect, dataset, split, column, example, label, schema | - |
-| `hf-local-model-selector` | 0.2916 | 0.2916 | 0.6049 | - | inspect, dataset |
-| `implicit-hf-local-model-chooser` | 0.2579 | 0.2579 | 0.0006 | - | - |
+| `hf-dataset-viewer-inspector` | 0.6730 | 0.6730 | 0.2952 | inspect, hugg, face, dataset, split, column, row, example | local, model, train |
+| `implicit-hf-dataset-inspector` | 0.5515 | 0.5515 | 0.2535 | modell, inspect, dataset, split, column, example, label, schema | model |
+| `implicit-hf-local-model-chooser` | 0.4254 | 0.4254 | 0.0745 | hugg, face | - |
+| `hf-local-model-selector` | 0.2864 | 0.2864 | 0.5532 | hugg, face | inspect, dataset, model |
 
 ### `implicit_p8_hf_model`
 
 - Family: `implicit_field_stress`
 - Gold skill: `implicit-hf-local-model-chooser`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Choose a local model and quantization that can run on an 8 GB laptop for ticket classification.
-- Positive-fit instruction after negation cleanup: Choose a local model and quantization that can run on an 8 GB laptop for ticket classification.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Pick a Hugging Face/GGUF candidate plus quantization and runtime configuration that can run offline on an 8 GB laptop for ticket classification. Do not inspect a dataset or train embeddings.
+- Positive-fit instruction after negation cleanup: Pick a Hugging Face/GGUF candidate plus quantization and runtime configuration that can run offline on an 8 GB laptop for ticket classification. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `hf-local-model-selector` | 0.4435 | 0.4435 | 0.2666 | choose, local, model, quantization | model |
-| `implicit-hf-local-model-chooser` | 0.3218 | 0.3218 | 0.0712 | choose, local, model, quantization | - |
-| `implicit-hf-dataset-inspector` | 0.3012 | 0.3012 | 0.5248 | model, quantization, laptop | model, quantization, laptop |
-| `hf-dataset-viewer-inspector` | 0.2358 | 0.2358 | 0.3798 | model | local, model |
+| `implicit-hf-local-model-chooser` | 0.4274 | 0.4274 | 0.1296 | hugg, face, gguf, candidate, quantization, runtime | - |
+| `hf-local-model-selector` | 0.4163 | 0.4163 | 0.3983 | hugg, face, gguf, candidate, quantization, runtime | inspect, dataset |
+| `hf-dataset-viewer-inspector` | 0.2750 | 0.2750 | 0.3737 | hugg, face | train |
+| `implicit-hf-dataset-inspector` | 0.2646 | 0.2646 | 0.3321 | quantization, laptop | quantization, laptop |
 
 ### `implicit_p9_alert_rule`
 
@@ -1114,9 +1434,12 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `latency-anomaly-detector` | 0.6334 | 0.6334 | 0.2978 | anomaly-focus, service, snapshot, identify, unusual, performance, behavior, spike | broad, only, overview |
+| `public-swebench-distributed-tracing` | 0.5197 | 0.5197 | 0.0981 | service, identify, performance, request | - |
 | `metrics-overview` | 0.5063 | 0.5063 | 0.3527 | readout, service, snapshot, identify, whether | whether |
+| `web-performance-budget-checker` | 0.4832 | 0.4832 | 0.2187 | identify, performance, broad | - |
 | `slo-breach-checker` | 0.4158 | 0.4158 | 0.3295 | service, snapshot, identify, whether | - |
 | `metrics-root-cause-diagnoser` | 0.3750 | 0.3750 | 0.3660 | service, identify, performance, whether | only |
+| `public-swebench-service-mesh-observability` | 0.3425 | 0.3425 | 0.0981 | service, request | - |
 
 ### `obs_p3_slo_breach`
 
@@ -1146,22 +1469,27 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `capacity-risk-forecaster` | 0.6418 | 0.6418 | 0.3968 | risk, forecast, capacity, service, pattern, focu, future, pressure | current, slo, breach, root, cause |
 | `metrics-overview` | 0.3751 | 0.3751 | 0.6417 | forecast, service, snapshot, keep, focu, saturation, queue, operational | risk, forecast, capacity, future, slo, breach, root, cause |
 | `slo-breach-checker` | 0.3352 | 0.3352 | 0.3806 | risk, forecast, service, snapshot, operational | risk, forecast, capacity, root, cause |
+| `cloud-ops-scenario-planner` | 0.3008 | 0.3008 | 0.0508 | risk, keep | - |
 | `metrics-root-cause-diagnoser` | 0.2779 | 0.2779 | 0.5609 | forecast, service, saturation, likely, operational, problem | risk, forecast, capacity, future, slo |
+| `slo-breach-narrative-writer` | 0.2617 | 0.2617 | 0.2351 | keep | - |
+| `public-swebench-slo-implementation` | 0.2120 | 0.2120 | 0.1199 | service | - |
 
 ### `obs_p5_root_cause`
 
 - Family: `metrics_observability`
 - Gold skill: `metrics-root-cause-diagnoser`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. Snapshot data
-- Positive-fit instruction after negation cleanup: Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. Snapshot data
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. I need a causal explanation, not merely a latency-anomaly flag, future capacity forecast, or incident status update. Snapshot data
+- Positive-fit instruction after negation cleanup: Do a root-cause diagnosis for this service snapshot. Compare hypotheses such as downstream dependency latency, queue buildup, CPU pressure, and request mix; identify the most plausible driver of the degradation; and tie the diagnosis to evidence. I need a causal explanation, . Snapshot data
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `latency-anomaly-detector` | 0.5137 | 0.5137 | 0.5233 | snapshot, service, compare, latency, identify, driver, evidence | compare, hypothese, most, plausible, driver, degradation |
-| `metrics-root-cause-diagnoser` | 0.4798 | 0.4798 | 0.3156 | diagnosi, service, compare, hypothese, dependency, latency, identify, most | - |
-| `capacity-risk-forecaster` | 0.4369 | 0.4369 | 0.3794 | service, queue, buildup, cpu, pressure, identify, most, plausible | compare, hypothese, driver, degradation, evidence |
-| `incident-summary-writer` | 0.3761 | 0.3761 | 0.4076 | diagnosi, service, identify, most, degradation | root-cause |
+| `metrics-root-cause-diagnoser` | 0.5222 | 0.5222 | 0.4205 | diagnosi, service, compare, hypothese, dependency, latency, identify, most | future, capacity, forecast, incident |
+| `latency-anomaly-detector` | 0.5113 | 0.5113 | 0.5441 | snapshot, service, compare, latency, identify, driver, evidence, causal | compare, hypothese, most, plausible, driver, degradation, incident |
+| `service-mesh-traffic-debugger` | 0.4339 | 0.4339 | 0.3056 | service, identify, evidence | incident |
+| `capacity-risk-forecaster` | 0.4219 | 0.4219 | 0.4402 | service, queue, buildup, cpu, pressure, identify, most, plausible | compare, hypothese, driver, degradation, evidence, causal, incident, update |
+| `incident-summary-writer` | 0.3942 | 0.3942 | 0.4991 | diagnosi, service, identify, most, degradation | root-cause, capacity, forecast |
+| `cloud-ops-failure-diagnoser` | 0.3807 | 0.3807 | 0.1100 | root-cause, identify, evidence, data | identify |
 
 ### `obs_p6_incident_summary`
 
@@ -1176,6 +1504,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `incident-summary-writer` | 0.4794 | 0.4794 | 0.2551 | turn, service, incident, quickly | - |
 | `slo-breach-checker` | 0.4150 | 0.4150 | 0.1934 | service, snapshot, incident | incident |
 | `metrics-overview` | 0.3657 | 0.3657 | 0.2714 | service, snapshot, incident | incident, update |
+| `incident-ops-summary-writer` | 0.3165 | 0.3165 | 0.1489 | service, incident | - |
 | `metrics-root-cause-diagnoser` | 0.2666 | 0.2666 | 0.3094 | service, incident | incident |
 
 ### `news_p1_plain_summary`
@@ -1277,6 +1606,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `grafana-dashboard-builder` | 0.8023 | 0.8023 | 0.3382 | design, grafana, dashboard, service, panel, variable, querie, threshold | - |
 | `public-swebench-grafana-dashboards` | 0.5567 | 0.5567 | 0.1303 | grafana, dashboard | - |
 | `metrics-overview` | 0.4246 | 0.4246 | 0.2033 | dashboard, service, health, threshold | - |
+| `dashboard-ops-monitoring-plan-builder` | 0.3829 | 0.3829 | 0.1086 | design, dashboard, threshold | - |
+| `dashboard-ops-quality-auditor` | 0.3723 | 0.3723 | 0.1086 | dashboard, threshold | - |
 | `prometheus-alert-rule-writer` | 0.2977 | 0.2977 | 0.5720 | threshold | grafana, dashboard |
 | `public-swebench-python-observability` | 0.1388 | 0.1388 | 0.1303 | - | - |
 
@@ -1292,6 +1623,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 |---|---:|---:|---:|---|---|
 | `distributed-trace-investigator` | 0.6105 | 0.6105 | 0.2966 | latency, acros, service, diagnosi | dashboard |
 | `public-swebench-distributed-tracing` | 0.4601 | 0.4601 | -0.0055 | json, latency, acros, service | - |
+| `latency-anomaly-detector` | 0.4399 | 0.4399 | 0.1950 | latency, service | - |
+| `service-mesh-traffic-debugger` | 0.3994 | 0.3994 | 0.2649 | service | - |
 | `prometheus-alert-rule-writer` | 0.3418 | 0.3418 | 0.2319 | - | dashboard |
 | `metrics-root-cause-diagnoser` | 0.2799 | 0.2799 | 0.2022 | latency, acros, service, diagnosi | - |
 | `public-swebench-python-observability` | 0.2536 | 0.2536 | -0.0055 | json | - |
@@ -1324,7 +1657,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 |---|---:|---:|---:|---|---|
 | `resilience-pattern-reviewer` | 0.4858 | 0.4858 | 0.0858 | review, timeout, backoff, fallback, cascading-failure, risk | - |
 | `public-swebench-python-resilience` | 0.3926 | 0.3926 | 0.0796 | retry, timeout, backoff | - |
+| `api-security-threat-reviewer` | 0.3925 | 0.3925 | 0.2467 | review, risk | - |
 | `dependency-risk-auditor` | 0.3210 | 0.3210 | 0.2385 | review, risk | review, risk |
+| `contract-risk-reviewer` | 0.2695 | 0.2695 | 0.0968 | review, risk | - |
 | `prometheus-alert-rule-writer` | 0.2353 | 0.2353 | 0.1446 | risk | - |
 | `grafana-dashboard-builder` | 0.1043 | 0.1043 | 0.2029 | - | - |
 
@@ -1342,7 +1677,9 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `public-swebench-service-mesh-observability` | 0.4253 | 0.4253 | 0.0392 | debug | - |
 | `public-swebench-istio-traffic-management` | 0.3688 | 0.3688 | 0.0392 | rout, traffic | - |
 | `public-swebench-linkerd-patterns` | 0.3385 | 0.3385 | 0.0392 | traffic | - |
+| `service-dependency-mapper` | 0.2990 | 0.2990 | 0.2553 | note | - |
 | `prometheus-alert-rule-writer` | 0.2596 | 0.2596 | 0.1269 | rout, rule | - |
+| `resilience-pattern-reviewer` | 0.2475 | 0.2475 | 0.2221 | note, retrie | - |
 
 ### `office_p1_pdf_layout_review`
 
@@ -1355,8 +1692,10 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `pdf-layout-reviewer` | 0.5759 | 0.5759 | 0.3877 | pdf, inspect, render, layout, issue, cropp, table, header | table, extract, field |
+| `pdf-layout-table-extractor` | 0.4775 | 0.4775 | 0.4147 | pdf, inspect, layout, table, form | pdf |
 | `public-pdf` | 0.4240 | 0.4240 | 0.0338 | pdf, render, layout, table, anyth, form, read | - |
 | `public-office-pdf-extraction` | 0.4212 | 0.4212 | 0.0338 | pdf, render, layout, table | - |
+| `implicit-pdf-table-reconstructor` | 0.4005 | 0.4005 | 0.0978 | pdf, table | - |
 | `pdf-ocr-extractor` | 0.3779 | 0.3779 | 0.4871 | pdf, area | pdf, render, layout |
 | `office-to-markdown-converter` | 0.3244 | 0.3244 | 0.3774 | layout, table | pdf, render |
 
@@ -1395,17 +1734,18 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `office_artifact_workflows`
 - Gold skill: `spreadsheet-formula-auditor`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Please check pricing_model.xlsx for calculation and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly.
-- Positive-fit instruction after negation cleanup: Please check pricing_model.xlsx for calculation and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Please audit pricing_model.xlsx for formula and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly. Do not edit or generate workbook sheets, and do not run a general data-quality validation.
+- Positive-fit instruction after negation cleanup: Please audit pricing_model.xlsx for formula and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `public-office-xlsx-manipulation` | 0.5167 | 0.5167 | 0.0162 | xlsx, link, summary | - |
-| `spreadsheet-formula-auditor` | 0.4839 | 0.4839 | 0.3395 | check, calculation, assumption, risk, cell, link, range, whether | summary |
-| `public-xlsx` | 0.4731 | 0.4731 | 0.0162 | check, xlsx, calculation, assumption, wrong, cell, link, range | - |
-| `data-analysis-with-validation` | 0.3147 | 0.3147 | 0.1451 | check, assumption, whether, summary | - |
-| `office-to-markdown-converter` | 0.1919 | 0.1919 | 0.3148 | embedd, summary | check |
+| `spreadsheet-formula-auditor` | 0.6332 | 0.6332 | 0.4196 | audit, formula, assumption, risk, cell, link, range, whether | summary |
+| `psc-data-trust-auditor` | 0.5290 | 0.5290 | 0.2218 | audit, formula, assumption, range, whether | - |
+| `public-office-xlsx-manipulation` | 0.5109 | 0.5109 | 0.0447 | xlsx, formula, link, summary | - |
+| `public-xlsx` | 0.5038 | 0.5038 | 0.0447 | xlsx, formula, assumption, wrong, cell, link, range, correctly | - |
+| `data-analysis-with-validation` | 0.4140 | 0.4140 | 0.2550 | assumption, whether, summary | - |
+| `office-to-markdown-converter` | 0.2646 | 0.2646 | 0.4367 | embedd, summary | audit, formula, check |
 
 ### `office_p5_slide_visual_audit`
 
@@ -1449,10 +1789,12 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
 | `xlsx-formula-model-builder` | 0.6169 | 0.6169 | 0.2764 | formula, check, build, spreadsheet, model | airtable |
+| `spreadsheet-formula-auditor` | 0.5180 | 0.5180 | 0.3377 | formula, check, spreadsheet | spreadsheet |
 | `public-office-xlsx-manipulation` | 0.3204 | 0.3204 | 0.0452 | formula, spreadsheet | - |
 | `airtable-workflow-automator` | 0.3103 | 0.3103 | 0.4232 | formula, spreadsheet | formula, build |
 | `public-swebench-xlsx` | 0.2584 | 0.2584 | 0.0452 | formula, check, build, spreadsheet, model, revenue | - |
 | `public-office-data-analysis` | 0.2272 | 0.2272 | 0.0452 | formula, build, spreadsheet, model, revenue | - |
+| `public-office-airtable-automation` | 0.1901 | 0.1901 | 0.0452 | - | - |
 
 ### `office_business_automation_p2_airtable_workflow_automator`
 
@@ -1531,6 +1873,8 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `email-classification-router` | 0.7729 | 0.7729 | 0.4198 | classify, email, category, priority, rout, destination, escalation, risk | email |
 | `public-office-email-classifier` | 0.5560 | 0.5560 | 0.0806 | classify, email, category, priority | - |
 | `public-office-suspicious-email` | 0.5258 | 0.5258 | 0.0806 | email, risk | - |
+| `email-ops-priority-ranker` | 0.4708 | 0.4708 | 0.0871 | email, priority | - |
+| `email-action-extractor` | 0.3891 | 0.3891 | 0.4123 | email | email |
 | `public-office-gmail-workflows` | 0.2993 | 0.2993 | 0.0806 | email, priority | - |
 | `xlsx-formula-model-builder` | 0.1414 | 0.1414 | 0.4945 | - | classify, email |
 
@@ -1539,16 +1883,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 - Family: `pdf_document_operations`
 - Gold skill: `pdf-question-answerer`
 - Gold rank among listed candidates: 1
-- Instruction used for scoring: Please answer this from sample_packet.pdf: what evidence does the policy give for reimbursing delayed travel meals? Cite the page or section evidence rather than converting the whole document.
-- Positive-fit instruction after negation cleanup: Please answer this from sample_packet.pdf: what evidence does the policy give for reimbursing delayed travel meals? Cite the page or section evidence .
+- Instruction used for scoring: Using sample_packet.pdf, answer what evidence the policy gives for reimbursing delayed travel meals. Cite the page or section evidence and provide a concise answer. Do not convert the whole document, extract tables, fill forms, run OCR, or do redaction/privacy review; there are no sensitive fields to mark.
+- Positive-fit instruction after negation cleanup: Using sample_packet.pdf, answer what evidence the policy gives for reimbursing delayed travel meals. Cite the page or section evidence and provide a concise answer. ; there are no sensitive fields to mark.
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `pdf-question-answerer` | 0.1727 | 0.1727 | 0.1176 | evidence, answer, pdf, page, section | pdf, convert |
-| `pdf-redaction-reviewer` | 0.1373 | 0.1373 | -0.0043 | evidence, pdf, page, section | pdf, document |
-| `pdf-layout-table-extractor` | 0.0758 | 0.0758 | 0.1072 | evidence, pdf, page | answer, pdf |
-| `pdf-form-filler` | 0.0704 | 0.0704 | 0.0962 | pdf | answer, pdf, convert |
-| `pdf-ocr-cleaner` | 0.0110 | 0.0110 | 0.1255 | pdf, page | - |
+| `pdf-question-answerer` | 0.3178 | 0.3178 | 0.3289 | answer, evidence, pdf, page, section | pdf, convert, extract, table, fill, form, field |
+| `pdf-redaction-reviewer` | 0.2452 | 0.2452 | 0.1928 | evidence, pdf, page, section, sensitive | pdf, document, extract, fill, form, field |
+| `pdf-layout-table-extractor` | 0.1760 | 0.1760 | 0.3356 | evidence, pdf, page, field, mark | answer, pdf, ocr |
+| `pdf-form-filler` | 0.1759 | 0.1759 | 0.2980 | pdf, field | answer, pdf, convert, extract, field |
+| `pdf-ocr-cleaner` | 0.1065 | 0.1065 | 0.3179 | pdf, page, mark | extract, table, fill, form, redaction, review, field |
 
 ### `pdf_document_operations_p2_pdf_layout_table_extractor`
 
@@ -1611,6 +1955,7 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `pdf-redaction-reviewer` | 0.5974 | 0.5974 | 0.3005 | pdf, identify, redaction, target, ids, addresse, confidential, clause | pdf |
 | `public-office-contract-review` | 0.4397 | 0.4397 | 0.4188 | pdf, external, addresse, clause | pdf, identify |
 | `pdf-question-answerer` | 0.4297 | 0.4297 | 0.3465 | pdf, identify | pdf |
+| `pdf-layout-reviewer` | 0.4275 | 0.4275 | 0.2996 | pdf | - |
 | `public-openai-pdf` | 0.4058 | 0.4058 | 0.0156 | pdf, external, such | - |
 | `privacy-risk-reviewer` | 0.2568 | 0.2568 | 0.2861 | identify | external |
 
@@ -1662,15 +2007,15 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `planning_meetings`
 - Gold skill: `meeting-followup-extractor`
-- Gold rank among listed candidates: 3
-- Instruction used for scoring: I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention
-- Positive-fit instruction after negation cleanup: I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Extract the meeting follow-up items from these notes
+- Positive-fit instruction after negation cleanup: Extract the meeting follow-up items from these notes
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `meeting-summary-writer` | 0.6229 | 0.6229 | 0.6083 | meet, note, happen | meet, note |
-| `task-extractor` | 0.5398 | 0.5398 | 0.4393 | meet, note | meet |
-| `meeting-followup-extractor` | 0.5147 | 0.5147 | 0.5903 | meet, note, happen, next | meet, note |
+| `meeting-followup-extractor` | 0.6218 | 0.6218 | 0.4917 | extract, meet, follow-up, item, note | extract, meet, note |
+| `task-extractor` | 0.5487 | 0.5487 | 0.4756 | extract, meet, note | extract, meet, follow-up, item |
+| `meeting-summary-writer` | 0.5037 | 0.5037 | 0.6678 | extract, meet, note | extract, meet, follow-up, note |
 
 ### `plan_p4_task_extractor`
 
@@ -1699,6 +2044,366 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 | `weekly-planner` | 0.6978 | 0.6978 | 0.3683 | plan, time, realistic, week-level, sequenc, buffer, meet | meet, summary, extract, task, agenda |
 | `meeting-agenda-builder` | 0.4904 | 0.4904 | 0.4909 | plan, time, week-level, prompt, meet, summary | plan, meet, summary, extract, task |
 | `task-extractor` | 0.3988 | 0.3988 | 0.5863 | plan, week-level, meet, summary | plan, meet, week-level, summary, extract, agenda |
+
+### `public_like_extra_p01_pdf_invoice_rows`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-pdf-native-extraction-pack`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: The procurement PDF opens with selectable text. Please pull the vendor names, invoice IDs, totals, and page anchors into a JSON table for downstream indexing.
+- Positive-fit instruction after negation cleanup: The procurement PDF opens with selectable text. Please pull the vendor names, invoice IDs, totals, and page anchors into a JSON table for downstream indexing.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-pdf-native-extraction-pack` | 0.4784 | 0.4784 | 0.3853 | pdf, selectable, text, extract, page, anchor, json, table | pdf |
+| `psc-pdf-redaction-pass` | 0.4022 | 0.4022 | 0.1670 | pdf, text, extract, name, invoice, ids, page, anchor | extract, table |
+| `psc-pdf-evidence-qa` | 0.3596 | 0.3596 | 0.4092 | pdf, text, extract, page, anchor | pdf, extract, table |
+| `psc-pdf-scan-ocr-recovery` | 0.3504 | 0.3504 | 0.2938 | pdf, selectable, text, extract, page, anchor | text, extract, table |
+
+### `public_like_extra_p02_scanned_appendix_recovery`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-pdf-scan-ocr-recovery`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Several appendix pages are photographed scans and the copy operation returns gibberish. Recover the readable text, mark low-confidence regions, and preserve page numbers.
+- Positive-fit instruction after negation cleanup: Several appendix pages are photographed scans and the copy operation returns gibberish. Recover the readable text, mark low-confidence regions, and preserve page numbers.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-pdf-scan-ocr-recovery` | 0.5698 | 0.5698 | 0.2472 | page, photograph, recover, text, mark, low-confidence, region | text |
+| `psc-pdf-native-extraction-pack` | 0.3959 | 0.3959 | 0.5185 | page, return, text | - |
+| `psc-pdf-redaction-pass` | 0.3869 | 0.3869 | 0.1811 | page, scan, return, text | - |
+| `psc-pdf-evidence-qa` | 0.3779 | 0.3779 | 0.3795 | page, readable, text | - |
+
+### `public_like_extra_p03_pdf_claim_answer`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-pdf-evidence-qa`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Answer whether the supplier warranty covers software updates, and cite the exact PDF pages or clauses that support the answer. I do not need a full document extraction.
+- Positive-fit instruction after negation cleanup: Answer whether the supplier warranty covers software updates, and cite the exact PDF pages or clauses that support the answer. I .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-pdf-evidence-qa` | 0.3045 | 0.3045 | 0.3374 | answer, pdf, page, support | answer, pdf, full, extract |
+| `psc-pdf-redaction-pass` | 0.2814 | 0.2814 | 0.2745 | answer, pdf, page, clause | answer, extract |
+| `psc-pdf-scan-ocr-recovery` | 0.2332 | 0.2332 | 0.2769 | answer, pdf, page | extract |
+| `psc-pdf-native-extraction-pack` | 0.2231 | 0.2231 | 0.3644 | answer, whether, pdf, page | answer, pdf |
+
+### `public_like_extra_p04_pdf_hidden_redaction_check`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-pdf-redaction-pass`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Before sharing the marked-up PDF externally, check whether black boxes, metadata, comments, or copyable hidden text still expose personal information.
+- Positive-fit instruction after negation cleanup: Before sharing the marked-up PDF externally, check whether black boxes, metadata, comments, or copyable hidden text still expose personal information.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-pdf-redaction-pass` | 0.5300 | 0.5300 | 0.3717 | shar, pdf, text | - |
+| `psc-pdf-evidence-qa` | 0.4205 | 0.4205 | 0.3557 | shar, pdf, text | pdf |
+| `psc-pdf-scan-ocr-recovery` | 0.4073 | 0.4073 | 0.2709 | shar, pdf, text | text |
+| `psc-pdf-native-extraction-pack` | 0.3968 | 0.3968 | 0.4238 | shar, pdf, check, whether, metadata, text | pdf |
+
+### `public_like_extra_p05_source_claim_table`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-citation-claim-support-auditor`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: For each sentence in this draft paragraph, check whether the cited source actually supports it, flag unsupported claims, and suggest safer wording.
+- Positive-fit instruction after negation cleanup: For each sentence in this draft paragraph, check whether the cited source actually supports it, flag unsupported claims, and suggest safer wording.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-citation-claim-support-auditor` | 0.5468 | 0.5468 | 0.2799 | draft, check, whether, support, claim, safer, word | - |
+| `psc-paper-method-mapper` | 0.3088 | 0.3088 | 0.4390 | claim | support |
+| `psc-source-field-table-extractor` | 0.2962 | 0.2962 | 0.4033 | claim | support |
+| `psc-related-work-synthesizer` | 0.2800 | 0.2800 | 0.4866 | claim | check |
+
+### `public_like_extra_p06_method_design_map`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-paper-method-mapper`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Map the experiment design of this paper into task, dataset, model, baseline, metrics, ablations, and limitations. Do not write a literature-review paragraph.
+- Positive-fit instruction after negation cleanup: Map the experiment design of this paper into task, dataset, model, baseline, metrics, ablations, and limitations. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-paper-method-mapper` | 0.3680 | 0.3680 | 0.1934 | map, experiment, design, paper, baseline, metric, limitation | - |
+| `psc-related-work-synthesizer` | 0.1904 | 0.1904 | 0.0597 | paper | - |
+| `psc-source-field-table-extractor` | 0.1644 | 0.1644 | 0.1486 | paper | - |
+| `psc-citation-claim-support-auditor` | 0.0774 | 0.0774 | 0.2201 | paper | paper |
+
+### `public_like_extra_p07_related_work_theme_draft`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-related-work-synthesizer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Turn these notes from ten papers into a related-work section organized by retrieval, tool use, and skill reuse. Highlight the remaining gap.
+- Positive-fit instruction after negation cleanup: Turn these notes from ten papers into a related-work section organized by retrieval, tool use, and skill reuse. Highlight the remaining gap.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-related-work-synthesizer` | 0.5180 | 0.5180 | 0.2919 | note, paper, related-work, gap | - |
+| `psc-source-field-table-extractor` | 0.4673 | 0.4673 | 0.2551 | note, paper | - |
+| `psc-paper-method-mapper` | 0.3939 | 0.3939 | 0.3403 | paper | - |
+| `psc-citation-claim-support-auditor` | 0.3091 | 0.3091 | 0.3826 | paper | paper |
+
+### `public_like_extra_p08_source_fact_table`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-source-field-table-extractor`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Extract the dataset names, model names, evaluation metrics, and reported scores from these papers into a spreadsheet-ready table. Do not synthesize prose yet.
+- Positive-fit instruction after negation cleanup: Extract the dataset names, model names, evaluation metrics, and reported scores from these papers into a spreadsheet-ready table. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-source-field-table-extractor` | 0.4077 | 0.4077 | 0.2409 | extract, paper, table | - |
+| `psc-paper-method-mapper` | 0.3945 | 0.3945 | 0.3269 | extract, evaluation, metric, report, paper | - |
+| `psc-citation-claim-support-auditor` | 0.2299 | 0.2299 | 0.3993 | paper | extract, paper |
+| `psc-related-work-synthesizer` | 0.1958 | 0.1958 | 0.2313 | paper | extract |
+
+### `public_like_extra_p09_data_quality_gate`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-data-trust-auditor`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Before I use this KPI export, check duplicates, missing values, inconsistent region labels, impossible dates, and formula-like errors. Give me a trust report, not a trend story.
+- Positive-fit instruction after negation cleanup: Before I use this KPI export, check duplicates, missing values, inconsistent region labels, impossible dates, and formula-like errors. Give me a trust report, .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-data-trust-auditor` | 0.4292 | 0.4292 | 0.1515 | check, duplicate, miss, value, trust, report | trust |
+| `psc-anomaly-watchlist-builder` | 0.3258 | 0.3258 | 0.2798 | check, value, report | trust |
+| `psc-decision-ranking-analyst` | 0.2614 | 0.2614 | 0.2548 | report | check |
+| `psc-executive-metric-narrator` | 0.2603 | 0.2603 | 0.2425 | report | - |
+
+### `public_like_extra_p10_anomaly_watchlist_export`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-anomaly-watchlist-builder`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Find the weirdest changes in the weekly operations export: spikes, sudden drops, and concentrated outliers. Return a watchlist with evidence and no executive narrative.
+- Positive-fit instruction after negation cleanup: Find the weirdest changes in the weekly operations export: spikes, sudden drops, and concentrated outliers. Return a watchlist with evidence and no executive narrative.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-anomaly-watchlist-builder` | 0.5331 | 0.5331 | 0.2634 | find, change, spike, drop, outlier, watchlist, evidence | executive, narrative |
+| `psc-executive-metric-narrator` | 0.3574 | 0.3574 | 0.3208 | executive, narrative | - |
+| `psc-data-trust-auditor` | 0.3144 | 0.3144 | 0.2081 | return | executive |
+| `psc-decision-ranking-analyst` | 0.2411 | 0.2411 | 0.1683 | evidence | - |
+
+### `public_like_extra_p11_vendor_decision_ranking`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-decision-ranking-analyst`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Score the vendor options using cost, implementation risk, support burden, and expected value. Produce a ranked recommendation with the criteria weights visible.
+- Positive-fit instruction after negation cleanup: Score the vendor options using cost, implementation risk, support burden, and expected value. Produce a ranked recommendation with the criteria weights visible.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-decision-ranking-analyst` | 0.5354 | 0.5354 | 0.1628 | score, option, rank, recommendation, criteria | - |
+| `psc-executive-metric-narrator` | 0.3035 | 0.3035 | 0.3146 | risk, rank | option, rank |
+| `psc-data-trust-auditor` | 0.2696 | 0.2696 | 0.3749 | expect, value, rank | option, rank |
+| `psc-anomaly-watchlist-builder` | 0.2613 | 0.2613 | 0.1078 | value, rank | - |
+
+### `public_like_extra_p12_board_metric_story`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-executive-metric-narrator`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Turn the final KPI table into a board-ready narrative: what changed, why it matters, and what management should watch next. Keep the tone executive-facing.
+- Positive-fit instruction after negation cleanup: Turn the final KPI table into a board-ready narrative: what changed, why it matters, and what management should watch next. Keep the tone executive-facing.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-executive-metric-narrator` | 0.4967 | 0.4967 | 0.0806 | turn, table, narrative, next | - |
+| `psc-decision-ranking-analyst` | 0.2884 | 0.2884 | 0.0813 | table | - |
+| `psc-data-trust-auditor` | 0.2846 | 0.2846 | 0.3198 | - | - |
+| `psc-anomaly-watchlist-builder` | 0.2751 | 0.2751 | 0.3764 | final, table, next | final, narrative |
+
+### `public_like_extra_p13_ci_failure_first_cause`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-ci-log-first-failure-reader`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: The CI job stopped after a long cascade. Locate the earliest meaningful error, explain the likely cause, and give me the smallest repair plus rerun path.
+- Positive-fit instruction after negation cleanup: The CI job stopped after a long cascade. Locate the earliest meaningful error, explain the likely cause, and give me the smallest repair plus rerun path.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-ci-log-first-failure-reader` | 0.5987 | 0.5987 | 0.3107 | job, meaningful, error, likely, cause, rerun, path | - |
+| `psc-pr-thread-fix-planner` | 0.2676 | 0.2676 | 0.3794 | - | - |
+| `psc-repo-guardrail-hook-installer` | 0.1734 | 0.1734 | 0.3584 | - | - |
+| `psc-release-communication-packager` | 0.1314 | 0.1314 | 0.3397 | - | - |
+
+### `public_like_extra_p14_review_thread_patch_plan`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-pr-thread-fix-planner`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Use the unresolved PR comments to create an edit plan, link each requested change to a file, and avoid touching unrelated parts of the repo.
+- Positive-fit instruction after negation cleanup: Use the unresolved PR comments to create an edit plan, link each requested change to a file, and avoid touching unrelated parts of the repo.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-pr-thread-fix-planner` | 0.5574 | 0.5574 | 0.1867 | comment, plan, each, request, change | comment, request |
+| `psc-release-communication-packager` | 0.4794 | 0.4794 | 0.1676 | request, change | - |
+| `psc-repo-guardrail-hook-installer` | 0.4332 | 0.4332 | 0.2278 | plan, request | - |
+| `psc-ci-log-first-failure-reader` | 0.3449 | 0.3449 | 0.4065 | plan, request | - |
+
+### `public_like_extra_p15_repo_hook_guardrail`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-repo-guardrail-hook-installer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Set up a lightweight pre-commit guardrail so accidental secrets and unsafe generated files do not get committed. Include the config and a verification command.
+- Positive-fit instruction after negation cleanup: Set up a lightweight pre-commit guardrail so accidental secrets and unsafe generated files . Include the config and a verification command.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-repo-guardrail-hook-installer` | 0.5901 | 0.5901 | 0.2534 | set, pre-commit, guardrail, secret, config, verification, command | - |
+| `psc-release-communication-packager` | 0.3537 | 0.3537 | 0.1988 | verification | - |
+| `psc-pr-thread-fix-planner` | 0.3113 | 0.3113 | 0.1821 | verification | - |
+| `psc-ci-log-first-failure-reader` | 0.2681 | 0.2681 | 0.2546 | config, verification | - |
+
+### `public_like_extra_p16_release_note_packaging`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-release-communication-packager`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Package the merged changes into release notes for users and an internal changelog section for support. Do not inspect CI unless a release blocker is mentioned.
+- Positive-fit instruction after negation cleanup: Package the merged changes into release notes for users and an internal changelog section for support. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-release-communication-packager` | 0.7161 | 0.7161 | 0.3448 | merg, change, release, note, user, changelog, section | - |
+| `psc-pr-thread-fix-planner` | 0.4388 | 0.4388 | 0.3949 | change, release, note | unles |
+| `psc-repo-guardrail-hook-installer` | 0.3343 | 0.3343 | 0.5749 | release, note | release, note |
+| `psc-ci-log-first-failure-reader` | 0.2947 | 0.2947 | 0.4173 | release | changelog |
+
+### `public_like_extra_p17_hf_dataset_card_check`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-hf-dataset-card-inspector`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Check the dataset card and viewer metadata for splits, feature columns, license notes, and sample row shape before I use it in a retrieval experiment.
+- Positive-fit instruction after negation cleanup: Check the dataset card and viewer metadata for splits, feature columns, license notes, and sample row shape before I use it in a retrieval experiment.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-hf-dataset-card-inspector` | 0.5491 | 0.5491 | 0.2102 | check, dataset, card, viewer, metadata, split, feature, column | - |
+| `psc-sentence-embedding-trainer` | 0.3320 | 0.3320 | 0.1336 | dataset, split, note, retrieval | - |
+| `psc-hf-space-deployment-preparer` | 0.2646 | 0.2646 | 0.3555 | check, dataset | dataset |
+| `psc-local-model-fit-selector` | 0.2318 | 0.2318 | 0.4985 | check, dataset | dataset |
+
+### `public_like_extra_p18_local_model_constraints`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-local-model-fit-selector`
+- Gold rank among listed candidates: 2
+- Instruction used for scoring: Choose a text-embedding model that can run on an 8GB laptop for offline benchmark checks. Compare memory, speed, quality, and fallback options.
+- Positive-fit instruction after negation cleanup: Choose a text-embedding model that can run on an 8GB laptop for offline benchmark checks. Compare memory, speed, quality, and fallback options.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-sentence-embedding-trainer` | 0.3717 | 0.3717 | 0.2976 | choose, model | - |
+| `psc-local-model-fit-selector` | 0.3354 | 0.3354 | 0.2223 | choose, model, check, compare, memory, quality, fallback, option | - |
+| `psc-hf-space-deployment-preparer` | 0.2783 | 0.2783 | 0.1627 | model, check | model |
+| `psc-hf-dataset-card-inspector` | 0.2314 | 0.2314 | 0.2008 | model, check | model |
+
+### `public_like_extra_p19_embedding_training_run`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-sentence-embedding-trainer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Create the training plan for a sentence-embedding reranker using query-positive-negative triples, including loss function, validation split, and retrieval metrics.
+- Positive-fit instruction after negation cleanup: Create the training plan for a sentence-embedding reranker using query-positive-negative triples, including loss function, validation split, and retrieval metrics.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-sentence-embedding-trainer` | 0.6089 | 0.6089 | 0.0478 | train, plan, loss, split, retrieval, metric | - |
+| `psc-hf-dataset-card-inspector` | 0.1429 | 0.1429 | 0.0410 | train, check, split | - |
+| `psc-hf-space-deployment-preparer` | 0.0983 | 0.0983 | 0.0790 | train, plan, check | train |
+| `psc-local-model-fit-selector` | 0.0905 | 0.0905 | 0.1033 | train, check | plan |
+
+### `public_like_extra_p20_space_deploy_readiness`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-hf-space-deployment-preparer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Prepare the Gradio demo for deployment as a Hugging Face Space: files, dependency pins, secrets, hardware assumptions, and smoke-test steps.
+- Positive-fit instruction after negation cleanup: Prepare the Gradio demo for deployment as a Hugging Face Space: files, dependency pins, secrets, hardware assumptions, and smoke-test steps.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-hf-space-deployment-preparer` | 0.4664 | 0.4664 | -0.0164 | prepare, gradio, demo, deployment, hugg, face, space, file | - |
+| `psc-hf-dataset-card-inspector` | 0.2437 | 0.2437 | 0.3977 | demo, deployment, hugg, face, space | gradio, deployment, space |
+| `psc-local-model-fit-selector` | 0.1686 | 0.1686 | 0.2127 | demo, deployment, hugg, face, space, hardware | demo, deployment |
+| `psc-sentence-embedding-trainer` | 0.0607 | 0.0607 | 0.3261 | demo, deployment, hugg, face, space | demo |
+
+### `public_like_extra_p21_feature_threat_model`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-feature-threat-modeler`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Threat-model the new invite-link feature: assets, attackers, abuse paths, privilege boundaries, mitigations, and residual risks. Do not review a dependency list.
+- Positive-fit instruction after negation cleanup: Threat-model the new invite-link feature: assets, attackers, abuse paths, privilege boundaries, mitigations, and residual risks. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-feature-threat-modeler` | 0.5457 | 0.5457 | 0.3289 | threat-model, feature, asset, abuse, boundarie, mitigation, risk | risk, review, dependency |
+| `psc-handler-vulnerability-reviewer` | 0.3718 | 0.3718 | 0.4263 | feature, path, mitigation, risk | review |
+| `psc-privacy-telemetry-reviewer` | 0.3177 | 0.3177 | 0.5921 | feature, boundarie, mitigation, risk | risk, dependency |
+| `psc-dependency-supply-chain-auditor` | 0.3120 | 0.3120 | 0.2519 | feature, mitigation, risk | review |
+
+### `public_like_extra_p22_privacy_telemetry_review`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-privacy-telemetry-reviewer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review the analytics events for whether they collect personal data, sensitive paths, or unnecessary identifiers. Recommend minimization and consent notes.
+- Positive-fit instruction after negation cleanup: Review the analytics events for whether they collect personal data, sensitive paths, or unnecessary identifiers. Recommend minimization and consent notes.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-privacy-telemetry-reviewer` | 0.5561 | 0.5561 | 0.2098 | review, collect, personal, data, recommend, minimization, consent, note | - |
+| `psc-feature-threat-modeler` | 0.3116 | 0.3116 | 0.2746 | data, note | review |
+| `psc-handler-vulnerability-reviewer` | 0.3102 | 0.3102 | 0.3955 | review, data, path | review |
+| `psc-dependency-supply-chain-auditor` | 0.2299 | 0.2299 | 0.4264 | data | review, data |
+
+### `public_like_extra_p23_supply_chain_audit`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-dependency-supply-chain-auditor`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Audit the dependency changes in this release for abandoned packages, risky install scripts, vulnerable versions, and license surprises. Do not threat-model the product feature.
+- Positive-fit instruction after negation cleanup: Audit the dependency changes in this release for abandoned packages, risky install scripts, vulnerable versions, and license surprises. .
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-dependency-supply-chain-auditor` | 0.6105 | 0.6105 | 0.2025 | dependency, package, install, script, version | - |
+| `psc-handler-vulnerability-reviewer` | 0.3861 | 0.3861 | 0.3690 | - | - |
+| `psc-feature-threat-modeler` | 0.2708 | 0.2708 | 0.4956 | - | dependency |
+| `psc-privacy-telemetry-reviewer` | 0.2000 | 0.2000 | 0.5088 | - | dependency |
+
+### `public_like_extra_p24_handler_vulnerability_review`
+
+- Family: `public_like_extra_controlled`
+- Gold skill: `psc-handler-vulnerability-reviewer`
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review this upload handler for path traversal, content-type spoofing, file size abuse, unsafe temp paths, and missing authorization checks.
+- Positive-fit instruction after negation cleanup: Review this upload handler for path traversal, content-type spoofing, file size abuse, unsafe temp paths, and missing authorization checks.
+
+| Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
+|---|---:|---:|---:|---|---|
+| `psc-handler-vulnerability-reviewer` | 0.3689 | 0.3689 | 0.1713 | path, review, handler, check | review |
+| `psc-privacy-telemetry-reviewer` | 0.1959 | 0.1959 | 0.1890 | review, check | - |
+| `psc-feature-threat-modeler` | 0.1876 | 0.1876 | 0.1741 | abuse, check | review, handler |
+| `psc-dependency-supply-chain-auditor` | 0.1553 | 0.1553 | 0.1954 | check | review |
 
 ### `psc_browser_quality_p01_1_psc_devtools_runtime_diagnoser`
 
@@ -1734,16 +2439,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_style_controlled`
 - Gold skill: `psc-playwright-regression-suite`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Build a repeatable browser regression check for the checkout form: navigate, fill fields, apply the coupon, assert the discount message, and capture failure evidence.
-- Positive-fit instruction after negation cleanup: Build a repeatable browser regression check for the checkout form: navigate, fill fields, apply the coupon, assert the discount message, and capture failure evidence.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Build a repeatable Playwright browser regression test for the checkout form: navigate, fill fields, apply the coupon, assert the discount message, and capture failure evidence. Do not only inspect runtime console errors, review screenshots, or audit accessibility.
+- Positive-fit instruction after negation cleanup: Build a repeatable Playwright browser regression test for the checkout form: navigate, fill fields, apply the coupon, assert the discount message, and capture failure evidence. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `psc-devtools-runtime-diagnoser` | 0.3257 | 0.3257 | 0.2590 | browser, regression, check, failure, evidence | regression, capture |
-| `psc-playwright-regression-suite` | 0.2571 | 0.2571 | 0.1280 | browser, regression, check, form, capture, failure, evidence | - |
-| `psc-accessibility-interaction-auditor` | 0.2425 | 0.2425 | 0.1606 | browser, regression, check, evidence | - |
-| `psc-visual-screenshot-reviewer` | 0.2326 | 0.2326 | 0.2106 | browser, regression, check, evidence | browser |
+| `psc-playwright-regression-suite` | 0.5712 | 0.5712 | 0.2908 | playwright, browser, regression, test, form, capture, failure, evidence | review, audit |
+| `psc-devtools-runtime-diagnoser` | 0.3755 | 0.3755 | 0.3801 | browser, regression, failure, evidence | regression, capture, review, screenshot, accessibility |
+| `psc-visual-screenshot-reviewer` | 0.3079 | 0.3079 | 0.3315 | browser, regression, evidence | browser, test, screenshot |
+| `psc-accessibility-interaction-auditor` | 0.3008 | 0.3008 | 0.2658 | browser, regression, evidence | test, only, screenshot |
 
 ### `psc_browser_quality_p02_2_psc_playwright_regression_suite`
 
@@ -2245,15 +2950,15 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 - Family: `public_style_controlled`
 - Gold skill: `psc-pdf-evidence-qa`
 - Gold rank among listed candidates: 1
-- Instruction used for scoring: From the policy PDF, tell me whether delayed-travel meals are reimbursable and point to the page evidence that supports the answer.
-- Positive-fit instruction after negation cleanup: From the policy PDF, tell me whether delayed-travel meals are reimbursable and point to the page evidence that supports the answer.
+- Instruction used for scoring: Using the policy PDF, answer whether delayed-travel meals are reimbursable and point to the supporting page evidence. Provide a concise evidence-grounded answer only. Do not extract tables, OCR a scan, convert the document, or perform a document-safety pass.
+- Positive-fit instruction after negation cleanup: Using the policy PDF, answer whether delayed-travel meals are reimbursable and point to the supporting page evidence. Provide a concise evidence-grounded answer only. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `psc-pdf-evidence-qa` | 0.1705 | 0.1705 | 0.0477 | pdf, point, page, evidence, support, answer | pdf, answer |
-| `psc-pdf-redaction-pass` | 0.1632 | 0.1632 | 0.1834 | pdf, page, evidence, answer | policy, answer |
-| `psc-pdf-native-extraction-pack` | 0.1041 | 0.1041 | 0.0614 | pdf, whether, page, evidence, answer | pdf, answer |
-| `psc-pdf-scan-ocr-recovery` | 0.0712 | 0.0712 | 0.1550 | pdf, page, evidence, answer | - |
+| `psc-pdf-evidence-qa` | 0.2853 | 0.2853 | 0.3215 | answer, pdf, point, support, page, evidence | answer, pdf, extract, table, ocr, convert, perform |
+| `psc-pdf-redaction-pass` | 0.2343 | 0.2343 | 0.3886 | answer, pdf, page, evidence | answer, policy, extract, table |
+| `psc-pdf-native-extraction-pack` | 0.1354 | 0.1354 | 0.3091 | answer, pdf, whether, page, evidence | answer, pdf, ocr |
+| `psc-pdf-scan-ocr-recovery` | 0.1053 | 0.1053 | 0.3527 | answer, pdf, page, evidence | extract, table |
 
 ### `psc_pdf_document_work_p03_2_psc_pdf_evidence_qa`
 
@@ -2394,16 +3099,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_style_controlled`
 - Gold skill: `psc-source-field-table-extractor`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Extract each paper's dataset, task, model, baseline, metric, result, and limitation into a comparison table with source evidence.
-- Positive-fit instruction after negation cleanup: Extract each paper's dataset, task, model, baseline, metric, result, and limitation into a comparison table with source evidence.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Extract each paper's dataset, task, model, baseline, metric, result, and limitation into a field-value comparison table with source evidence. Do not map only method sections, audit citations, or synthesize a related-work narrative.
+- Positive-fit instruction after negation cleanup: Extract each paper's dataset, task, model, baseline, metric, result, and limitation into a field-value comparison table with source evidence. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `psc-paper-method-mapper` | 0.5496 | 0.5496 | 0.4380 | extract, paper', baseline, metric, result, limitation, compare, evidence | - |
-| `psc-source-field-table-extractor` | 0.5409 | 0.5409 | 0.3052 | extract, compare, table, evidence | - |
-| `psc-citation-claim-support-auditor` | 0.4619 | 0.4619 | 0.4758 | compare, evidence | extract |
-| `psc-related-work-synthesizer` | 0.4321 | 0.4321 | 0.4181 | compare, evidence | extract |
+| `psc-source-field-table-extractor` | 0.6213 | 0.6213 | 0.4009 | extract, field-value, compare, table, evidence | citation |
+| `psc-paper-method-mapper` | 0.5209 | 0.5209 | 0.5080 | extract, paper', baseline, metric, result, limitation, compare, evidence | audit, citation |
+| `psc-citation-claim-support-auditor` | 0.4600 | 0.4600 | 0.4520 | compare, evidence | extract, method |
+| `psc-related-work-synthesizer` | 0.4168 | 0.4168 | 0.4650 | compare, evidence | extract, method, citation |
 
 ### `psc_research_reading_p04_2_psc_source_field_table_extractor`
 
@@ -2424,16 +3129,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_style_controlled`
 - Gold skill: `psc-feature-threat-modeler`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Before building invite-by-link file sharing, map what needs protection, who can interact with it, where control changes hands, how it could be abused, and what safeguards we should add.
-- Positive-fit instruction after negation cleanup: Before building invite-by-link file sharing, map what needs protection, who can interact with it, where control changes hands, how it could be abused, and what safeguards we should add.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Before building invite-by-link file sharing, create a feature threat model: protected assets, actors, trust boundaries, abuse scenarios, safeguards, detection ideas, and residual risk. Do not focus only on telemetry/privacy review or handler-level vulnerability fixes.
+- Positive-fit instruction after negation cleanup: Before building invite-by-link file sharing, create a feature threat model: protected assets, actors, trust boundaries, abuse scenarios, safeguards, detection ideas, and residual risk. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `psc-privacy-telemetry-reviewer` | 0.3759 | 0.3759 | 0.2745 | shar | - |
-| `psc-feature-threat-modeler` | 0.3723 | 0.3723 | 0.2570 | - | - |
-| `psc-handler-vulnerability-reviewer` | 0.3208 | 0.3208 | 0.2830 | - | - |
-| `psc-dependency-supply-chain-auditor` | 0.2988 | 0.2988 | 0.3228 | add | - |
+| `psc-feature-threat-modeler` | 0.5908 | 0.5908 | 0.2677 | feature, threat, model, asset, actor, trust, boundarie, abuse | risk, review |
+| `psc-privacy-telemetry-reviewer` | 0.3705 | 0.3705 | 0.4410 | shar, feature, boundarie, risk | threat, model, risk |
+| `psc-dependency-supply-chain-auditor` | 0.3611 | 0.3611 | 0.3083 | feature, risk | privacy, review |
+| `psc-handler-vulnerability-reviewer` | 0.3409 | 0.3409 | 0.4014 | feature, risk | threat, model, privacy, review |
 
 ### `psc_security_appsec_p01_2_psc_feature_threat_modeler`
 
@@ -2619,16 +3324,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `public_style_controlled`
 - Gold skill: `psc-skill-routing-budget-planner`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Specify a candidate-subsetting architecture for skill retrieval with top-k budgets, field-aware reranking, fallback, and evaluation metrics.
-- Positive-fit instruction after negation cleanup: Specify a candidate-subsetting architecture for skill retrieval with top-k budgets, field-aware reranking, fallback, and evaluation metrics.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Design a candidate-subsetting architecture for skill retrieval with top-k budgets, staged candidate generation, field-aware reranking, fallback behavior, cost controls, and evaluation metrics. The output should be a routing/budget plan for the retrieval system, not adjudication of one retrieval result, not extraction of fields from a messy skill, and not atomization of a public skill.
+- Positive-fit instruction after negation cleanup: Design a candidate-subsetting architecture for skill retrieval with top-k budgets, staged candidate generation, field-aware reranking, fallback behavior, cost controls, and evaluation metrics. The output should be a routing/budget plan for the retrieval system, .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `psc-retrieval-result-adjudicator` | 0.5955 | 0.5955 | 0.3141 | skill, retrieval, top-k, evaluation, metric | skill |
-| `psc-skill-routing-budget-planner` | 0.5843 | 0.5843 | 0.4498 | specify, skill, retrieval, budget, rerank, fallback, evaluation, metric | skill |
-| `psc-messy-skill-field-extractor` | 0.5346 | 0.5346 | 0.5282 | skill, evaluation | skill, retrieval |
-| `psc-public-skill-atomizer` | 0.4469 | 0.4469 | 0.4625 | skill, evaluation | - |
+| `psc-skill-routing-budget-planner` | 0.6851 | 0.6851 | 0.4742 | retrieval, budget, design, skill, candidate, rerank, fallback, cost | skill, field |
+| `psc-retrieval-result-adjudicator` | 0.5938 | 0.5938 | 0.4146 | retrieval, skill, top-k, candidate, evaluation, metric, output, rout | skill, design, extract, field |
+| `psc-messy-skill-field-extractor` | 0.5235 | 0.5235 | 0.5322 | skill, candidate, evaluation, output, rout | skill, retrieval, result |
+| `psc-public-skill-atomizer` | 0.4810 | 0.4810 | 0.5090 | skill, candidate, evaluation, rout | extract, field |
 
 ### `psc_skill_representation_p04_1_psc_retrieval_result_adjudicator`
 
@@ -2854,31 +3559,31 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `security_appsec`
 - Gold skill: `security-threat-modeler`
-- Gold rank among listed candidates: 3
-- Instruction used for scoring: We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk.
-- Positive-fit instruction after negation cleanup: We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, create a full threat model across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk. Do not limit the review to privacy compliance or auth-flow mechanics.
+- Positive-fit instruction after negation cleanup: We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, create a full threat model across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `privacy-risk-reviewer` | 0.5518 | 0.5518 | 0.4195 | design, feature, user, security, mitigation, risk | design, acros, protect, asset, external, actor, component, boundarie |
-| `auth-flow-reviewer` | 0.4283 | 0.4283 | 0.4183 | design, feature, user, acces, protect, actor, boundarie, scenario | design, acces, implementation, acros, protect, asset, external, actor |
-| `security-threat-modeler` | 0.4047 | 0.4047 | 0.2787 | design, feature, user, implementation, reason, asset, external, actor | risk |
-| `security-code-reviewer` | 0.3822 | 0.3822 | 0.4235 | design, feature, user, implementation, boundarie, security, risk | design, reason, acros, protect, asset, external, actor, component |
+| `security-threat-modeler` | 0.5571 | 0.5571 | 0.3457 | design, feature, user, implementation, threat, model, asset, external | risk, review, privacy, compliance |
+| `privacy-risk-reviewer` | 0.5537 | 0.5537 | 0.4847 | design, feature, user, threat, model, security, mitigation, risk | design, acros, protect, asset, external, actor, component, boundarie |
+| `auth-flow-reviewer` | 0.4442 | 0.4442 | 0.4969 | design, feature, user, acces, threat, model, protect, actor | design, acces, implementation, threat, model, acros, protect, asset |
+| `security-code-reviewer` | 0.4163 | 0.4163 | 0.4986 | design, feature, user, implementation, threat, model, boundarie, security | design, threat, model, acros, protect, asset, external, actor |
 
 ### `sec_p2_security_code_review`
 
 - Family: `security_appsec`
 - Gold skill: `security-code-reviewer`
-- Gold rank among listed candidates: 2
-- Instruction used for scoring: Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function.
-- Positive-fit instruction after negation cleanup: Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function.
+- Gold rank among listed candidates: 1
+- Instruction used for scoring: Review this single API handler implementation for concrete code-level security vulnerabilities and focused fixes. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level exploit paths such as open redirects, unsafe validation, authorization bypass, and incorrect access checks in this function. Do not produce an auth-flow architecture review, privacy review, or general threat model.
+- Positive-fit instruction after negation cleanup: Review this single API handler implementation for concrete code-level security vulnerabilities and focused fixes. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level exploit paths such as open redirects, unsafe validation, authorization bypass, and incorrect access checks in this function. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `auth-flow-reviewer` | 0.4784 | 0.4784 | 0.5530 | check, review, handler, security, user, open, acces | check, redirect, review, api, handler, concrete, code-level, security |
-| `security-code-reviewer` | 0.4722 | 0.4722 | 0.1849 | check, redirect, review, handler, concrete, code-level, security, vulnerabilitie | review, security |
-| `security-threat-modeler` | 0.3758 | 0.3758 | 0.2879 | check, review, concrete, code-level, security, implementation, user, open | check, review, concrete, vulnerabilitie |
-| `code-reviewer` | 0.1449 | 0.1449 | 0.2401 | check, review, fixe, implementation, request, user | check, review, request |
+| `security-code-reviewer` | 0.5256 | 0.5256 | 0.2920 | check, redirect, review, handler, implementation, concrete, code-level, security | review, security, general, threat, model |
+| `auth-flow-reviewer` | 0.5206 | 0.5206 | 0.6602 | check, review, handler, security, user, path, open, authorization | review, check, redirect, api, handler, implementation, concrete, code-level |
+| `security-threat-modeler` | 0.4331 | 0.4331 | 0.3661 | check, review, implementation, concrete, code-level, security, user, path | review, check, concrete, vulnerabilitie, privacy |
+| `code-reviewer` | 0.1536 | 0.1536 | 0.2993 | check, review, implementation, fixe, request, user, path | review, check, request |
 
 ### `sec_p3_dependency_risk`
 
@@ -2959,16 +3664,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 
 - Family: `skill_lifecycle`
 - Gold skill: `skill-installer`
-- Gold rank among listed candidates: 1
-- Instruction used for scoring: I found an existing spreadsheet-analysis capability in a public catalog and want it added to my active local library. Please fetch or prepare the package, verify the expected files, and report the source, local path, setup result, and any activation caveats.
-- Positive-fit instruction after negation cleanup: I found an existing spreadsheet-analysis capability in a public catalog and want it added to my active local library. Please fetch or prepare the package, verify the expected files, and report the source, local path, setup result, and any activation caveats.
+- Gold rank among listed candidates: 2
+- Instruction used for scoring: I found an existing spreadsheet-analysis capability package in a public catalog and want it fetched, enabled, and prepared for use in my active local library. Please verify the expected files, report the source, local path, setup result, restart needs, and activation caveats. Do not author a new capability, share it, publish it, export it, package it, or prepare it for distribution.
+- Positive-fit instruction after negation cleanup: I found an existing spreadsheet-analysis capability package in a public catalog and want it fetched, enabled, and prepared for use in my active local library. Please verify the expected files, report the source, local path, setup result, restart needs, and activation caveats. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `skill-installer` | 0.2828 | 0.2828 | 0.2024 | local, exist, public, catalog, active, library, fetch, prepare | - |
-| `skill-packager` | 0.2662 | 0.2662 | 0.3362 | exist, public, library, prepare, package, check, file, report | local, capability, public, catalog, active, library, fetch, package |
-| `skill-finder` | 0.2253 | 0.2253 | 0.1062 | exist, public, library, package | exist |
-| `skill-creator` | 0.1193 | 0.1193 | 0.1846 | exist, capability, public, add, library, package, check, expect | exist, capability |
+| `skill-packager` | 0.3351 | 0.3351 | 0.3334 | exist, package, public, library, check, file, report, path | capability, package, local, public, catalog, fetch, prepar, active |
+| `skill-installer` | 0.3197 | 0.3197 | 0.2429 | local, exist, package, public, catalog, fetch, active, library | new |
+| `skill-finder` | 0.2385 | 0.2385 | 0.1192 | exist, package, public, library | exist, new |
+| `skill-creator` | 0.1544 | 0.1544 | 0.2372 | exist, capability, package, public, library, check, expect | capability, exist, new |
 
 ### `skill_p3_create_new`
 
@@ -3051,16 +3756,16 @@ Pass rule used here: for each gold/alternative pair, the gold skill must either 
 - Family: `skill_representation_analysis`
 - Gold skill: `skill-authoring-guide`
 - Gold rank among listed candidates: 1
-- Instruction used for scoring: Draft a new atomic skill for reviewing database migrations, including triggers, boundaries, workflow, dependencies, and examples. Do not just audit an existing skill.
-- Positive-fit instruction after negation cleanup: Draft a new atomic skill for reviewing database migrations, including triggers, boundaries, workflow, dependencies, and examples. .
+- Instruction used for scoring: Draft a new atomic SKILL.md for reviewing database migrations, including triggers, boundaries, workflow, dependencies, examples, and authoring guidance. Do not audit, install, or wrap an existing skill.
+- Positive-fit instruction after negation cleanup: Draft a new atomic SKILL.md for reviewing database migrations, including triggers, boundaries, workflow, dependencies, examples, and authoring guidance. .
 
 | Candidate | Fit score | Positive | Boundary | Shared positive terms | Shared boundary terms |
 |---|---:|---:|---:|---|---|
-| `skill-authoring-guide` | 0.4653 | 0.4653 | 0.5304 | draft, atomic, skill, trigger, boundarie, workflow, example | skill, audit, exist |
-| `skill-installer-wrapper` | 0.4359 | 0.4359 | 0.3088 | skill, dependencie | audit |
-| `skill-field-auditor` | 0.4164 | 0.4164 | 0.4861 | skill, includ, trigger, workflow, dependencie, example | skill, new |
-| `skill-hierarchy-flattener` | 0.3848 | 0.3848 | 0.5625 | atomic, skill, boundarie | skill, new |
-| `skill-router-policy-designer` | 0.3586 | 0.3586 | 0.4443 | skill | skill |
+| `skill-authoring-guide` | 0.5056 | 0.5056 | 0.4669 | draft, atomic, skill, trigger, boundarie, workflow, example | skill, audit, install, exist |
+| `skill-installer-wrapper` | 0.4586 | 0.4586 | 0.2144 | skill, dependencie | audit, install |
+| `skill-field-auditor` | 0.4283 | 0.4283 | 0.4691 | skill, includ, trigger, workflow, dependencie, example | skill, new, install |
+| `skill-hierarchy-flattener` | 0.4207 | 0.4207 | 0.5550 | atomic, skill, boundarie | skill, new, install |
+| `skill-router-policy-designer` | 0.3684 | 0.3684 | 0.5029 | skill | skill, install |
 
 ### `skill_representation_analysis_p3_skill_router_policy_designer`
 

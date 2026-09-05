@@ -8,7 +8,7 @@
       "pdf-question-answerer",
       "pdf-layout-table-extractor"
     ],
-    "prompt": "Read the PDF packet and answer whether travel meals after a delay are reimbursable. I need the answer and page evidence, not a reconstructed table."
+    "prompt": "Read the PDF packet and answer the policy question: are travel meals after a delay reimbursable? I need a concise answer with page evidence, not table reconstruction, field extraction, redaction review, or layout inspection."
   },
   {
     "id": "implicit_p2_pdf_table",
@@ -19,7 +19,10 @@
       "pdf-layout-table-extractor",
       "pdf-question-answerer"
     ],
-    "prompt": "Pull the invoice rows from the PDF with page and row anchors. Keep it as structured data rather than a prose answer."
+    "prompt": "Pull the invoice rows from the PDF with page and row anchors. Keep it as structured row data with columns and values, rather than a prose policy answer or summary.",
+    "acceptable_alternatives": [
+      "pdf-layout-table-extractor"
+    ]
   },
   {
     "id": "implicit_p3_browser_flow",
@@ -41,7 +44,10 @@
       "visual-regression-checker",
       "playwright-flow-debugger"
     ],
-    "prompt": "Compare the baseline and new screenshots for layout shifts, clipping, spacing, and text overflow across desktop and mobile."
+    "prompt": "Compare the baseline and new screenshots for layout shifts, clipping, spacing, and text overflow across desktop and mobile.",
+    "acceptable_alternatives": [
+      "visual-regression-checker"
+    ]
   },
   {
     "id": "implicit_p5_ci_failure",
@@ -50,7 +56,9 @@
     "closest_alternatives": [
       "implicit-review-comment-planner",
       "ci-log-root-cause-debugger",
-      "repo-code-reviewer"
+      "repo-code-reviewer",
+      "ci-failure-debugger",
+      "psc-ci-log-first-failure-reader"
     ],
     "prompt": "Look at the CI log and find the first meaningful error plus the smallest fix and rerun sequence."
   },
@@ -63,7 +71,10 @@
       "pr-review-comment-resolver",
       "repo-code-reviewer"
     ],
-    "prompt": "Use the existing reviewer feedback to group required fixes, note any questions, and prepare responses for each thread; do not do a fresh code review."
+    "prompt": "Use the existing PR reviewer feedback to group required fixes, note any reviewer questions, and prepare response text for each review thread; do not do a fresh code review or inspect CI logs.",
+    "acceptable_alternatives": [
+      "pr-review-comment-resolver"
+    ]
   },
   {
     "id": "implicit_p7_hf_dataset",
@@ -74,7 +85,10 @@
       "hf-dataset-viewer-inspector",
       "hf-local-model-selector"
     ],
-    "prompt": "Before modelling, inspect the dataset splits, columns, row examples, labels, and schema caveats."
+    "prompt": "Before modelling, inspect the Hugging Face dataset splits, columns, row examples, labels, and schema caveats. Do not choose a local model or train embeddings.",
+    "acceptable_alternatives": [
+      "hf-dataset-viewer-inspector"
+    ]
   },
   {
     "id": "implicit_p8_hf_model",
@@ -85,7 +99,10 @@
       "hf-local-model-selector",
       "hf-dataset-viewer-inspector"
     ],
-    "prompt": "Choose a local model and quantization that can run on an 8 GB laptop for ticket classification."
+    "prompt": "Pick a Hugging Face/GGUF candidate plus quantization and runtime configuration that can run offline on an 8 GB laptop for ticket classification. Do not inspect a dataset or train embeddings.",
+    "acceptable_alternatives": [
+      "hf-local-model-selector"
+    ]
   },
   {
     "id": "implicit_p9_alert_rule",
@@ -96,7 +113,10 @@
       "prometheus-alert-rule-writer",
       "distributed-trace-investigator"
     ],
-    "prompt": "Create alert rules from these checkout SLO metrics with windows, severity labels, and verification queries."
+    "prompt": "Create alert rules from these checkout SLO metrics with windows, severity labels, and verification queries.",
+    "acceptable_alternatives": [
+      "prometheus-alert-rule-writer"
+    ]
   },
   {
     "id": "implicit_p10_trace_path",
@@ -107,6 +127,9 @@
       "distributed-trace-investigator",
       "prometheus-alert-rule-writer"
     ],
-    "prompt": "Use these distributed trace spans to locate where checkout latency is introduced across services."
+    "prompt": "Use these distributed trace spans to locate where checkout latency is introduced across services.",
+    "acceptable_alternatives": [
+      "distributed-trace-investigator"
+    ]
   }
 ]

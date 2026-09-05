@@ -1,0 +1,779 @@
+[
+  {
+    "id": "public_gold_exp_p121_calendar_conflict_workflow",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-calendar-automation",
+    "closest_alternatives": [
+      "public-office-meeting-notes",
+      "public-office-microsoft-teams",
+      "public-office-slack-workflows",
+      "public-office-sheets-automation"
+    ],
+    "prompt": "Automate a Google Calendar/Outlook scheduling workflow that finds free slots across the team, creates time blocks, sends meeting invites, and records the scheduled sessions in a tracking sheet. Do not summarize meeting notes.",
+    "source_family": "public-office-productivity",
+    "field_axes": [
+      "dependency_or_tool",
+      "side_effect_or_action",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The public calendar automation skill targets scheduling/time-blocking workflows, not meeting note summarization or chat workflow routing.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "side_effect_or_action",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, side_effect_or_action, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_exp_p122_asana_project_update",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-asana-automation",
+    "closest_alternatives": [
+      "public-office-clickup-automation",
+      "public-office-trello-automation",
+      "public-office-jira-automation",
+      "public-office-monday-automation"
+    ],
+    "prompt": "Use the Asana workspace to create project sections, assign tasks to owners, update due dates, and produce a status report from task completion fields. This should not be done in ClickUp or Jira.",
+    "source_family": "public-office-project-management",
+    "field_axes": [
+      "dependency_or_tool",
+      "side_effect_or_action",
+      "output_artifact"
+    ],
+    "gold_rationale": "The provider and workflow point to Asana task/project automation rather than another project management platform.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "side_effect_or_action",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, side_effect_or_action, output_artifact."
+  },
+  {
+    "id": "public_gold_exp_p123_clickup_time_tracking",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-clickup-automation",
+    "closest_alternatives": [
+      "public-office-asana-automation",
+      "public-office-n8n-workflow",
+      "public-office-jira-automation",
+      "public-office-linear-automation"
+    ],
+    "prompt": "Automate ClickUp task updates by moving overdue items, adding time-tracking summaries, and producing a team productivity report from the workspace. Do not treat this as an Asana board.",
+    "source_family": "public-office-project-management",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The prompt depends on ClickUp workspace management, including task movement and time tracking.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_exp_p124_airtable_view_trigger",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-airtable-automation",
+    "closest_alternatives": [
+      "public-office-database-sync",
+      "public-office-sheets-automation",
+      "public-office-data-pipeline",
+      "public-office-n8n-workflow"
+    ],
+    "prompt": "Build an Airtable automation that watches a view, updates records when a status changes, and triggers a notification when required fields are missing. I need Airtable views and automations, not a generic database sync.",
+    "source_family": "public-office-database-automation",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "side_effect_or_action"
+    ],
+    "gold_rationale": "The task is Airtable-specific and uses views/automations as procedural constraints.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "side_effect_or_action"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, side_effect_or_action."
+  },
+  {
+    "id": "public_gold_exp_p125_sheets_formula_dashboard",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-sheets-automation",
+    "closest_alternatives": [
+      "public-office-excel-automation",
+      "public-office-xlsx-manipulation",
+      "public-office-data-analysis",
+      "public-office-report-generator"
+    ],
+    "prompt": "In Google Sheets, create formulas and a refreshed dashboard tab that summarizes campaign spend by week and flags missing rows. Keep it in Sheets; do not produce an Excel workbook or standalone report.",
+    "source_family": "public-office-spreadsheet",
+    "field_axes": [
+      "dependency_or_tool",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The artifact and dependency are explicitly Google Sheets automation rather than Excel/XLSX manipulation.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p126_excel_macro_cleanup",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-excel-automation",
+    "closest_alternatives": [
+      "public-office-sheets-automation",
+      "public-office-xlsx-manipulation",
+      "public-office-data-analysis",
+      "spreadsheet-formula-auditor"
+    ],
+    "prompt": "Automate the Excel workbook cleanup: refresh pivots, normalize worksheet names, add formulas, and export the final .xlsx. This must stay in Excel rather than Google Sheets.",
+    "source_family": "public-office-spreadsheet",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The request focuses on Excel automation and .xlsx workflow behavior.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_exp_p127_contract_risk_review",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-contract-review",
+    "closest_alternatives": [
+      "public-office-nda-generator",
+      "public-office-contract-template",
+      "public-office-doc-parser",
+      "document-field-extractor",
+      "terms-of-service-drafter",
+      "clause-obligation-extractor",
+      "contract-ops-risk-reviewer"
+    ],
+    "prompt": "Review this service agreement for risky clauses, missing protections, unusual liability terms, renewal traps, and negotiation recommendations. Do not generate a new template or simply extract fields.",
+    "source_family": "public-office-legal-documents",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The skill is for contract risk/completeness review, not drafting templates or extracting fields.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p128_nda_generation",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-nda-generator",
+    "closest_alternatives": [
+      "public-office-contract-review",
+      "public-office-contract-template",
+      "public-office-proposal-writer",
+      "public-office-docx-manipulation"
+    ],
+    "prompt": "Generate a mutual NDA draft from the party names, jurisdiction, confidentiality period, excluded information, and signature blocks. I am not asking you to review an existing contract.",
+    "source_family": "public-office-legal-documents",
+    "field_axes": [
+      "output_artifact",
+      "input_or_precondition",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The task is NDA drafting/generation from supplied fields rather than reviewing an existing agreement.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "input_or_precondition",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, input_or_precondition, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p129_resume_tailor_job_post",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-resume-tailor",
+    "closest_alternatives": [
+      "public-office-cv-builder",
+      "public-office-cover-letter",
+      "public-office-applicant-screening",
+      "public-office-job-description"
+    ],
+    "prompt": "Tailor my existing resume to this job posting by reordering bullets, emphasizing matching experience, and preserving factual accuracy. Do not screen applicants or write a cover letter.",
+    "source_family": "public-office-hiring-career",
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The skill adapts an existing resume to a job description, unlike CV creation, cover-letter writing, or applicant screening.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, workflow_or_procedure, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p130_applicant_screening_matrix",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-applicant-screening",
+    "closest_alternatives": [
+      "public-office-resume-tailor",
+      "public-office-cv-builder",
+      "public-office-job-description",
+      "public-office-hr-automation"
+    ],
+    "prompt": "Screen these applicant resumes against the role requirements, score must-have and nice-to-have criteria, and return a shortlist with concerns. Do not rewrite any candidate's resume.",
+    "source_family": "public-office-hiring-career",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The task evaluates multiple applicants against a role, rather than tailoring one resume.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_exp_p131_invoice_organizer",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-invoice-organizer",
+    "closest_alternatives": [
+      "public-office-invoice-automation",
+      "public-office-invoice-generator",
+      "public-office-expense-report",
+      "public-office-file-organizer"
+    ],
+    "prompt": "Organize a folder of invoices and receipts by vendor, date, amount, payment status, and category. Produce a tracking table and flag duplicates; do not generate new invoices.",
+    "source_family": "public-office-finance-ops",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The task organizes existing invoices/receipts and flags duplicates, not creation or payment automation.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p132_invoice_generation",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-invoice-generator",
+    "closest_alternatives": [
+      "public-office-invoice-organizer",
+      "public-office-invoice-template",
+      "public-office-expense-report",
+      "public-office-quickbooks-automation"
+    ],
+    "prompt": "Create a client invoice from the project hours, rates, tax rules, payment terms, and company details. I need a generated invoice document, not an organizer for existing receipts.",
+    "source_family": "public-office-finance-ops",
+    "field_axes": [
+      "output_artifact",
+      "input_or_precondition",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The request generates a new invoice document from billing inputs.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "input_or_precondition",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, input_or_precondition, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p133_linkedin_outreach_sequence",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-linkedin-automation",
+    "closest_alternatives": [
+      "public-office-twitter-automation",
+      "public-office-social-publisher",
+      "public-office-lead-research",
+      "public-office-email-marketing"
+    ],
+    "prompt": "Prepare a LinkedIn outreach workflow that researches leads, sends connection messages, tracks replies, and logs follow-up status. Do not schedule Twitter posts or write email newsletters.",
+    "source_family": "public-office-social-sales",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "side_effect_or_action"
+    ],
+    "gold_rationale": "The dependency and side effects are LinkedIn-specific outreach automation.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "side_effect_or_action"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, side_effect_or_action."
+  },
+  {
+    "id": "public_gold_exp_p134_twitter_content_schedule",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-twitter-automation",
+    "closest_alternatives": [
+      "public-office-linkedin-automation",
+      "public-office-social-publisher",
+      "public-office-tiktok-marketing",
+      "public-office-content-writer"
+    ],
+    "prompt": "Schedule a week of Twitter/X posts from the launch notes, include thread structure, posting times, and engagement tracking. Do not convert this into LinkedIn outreach.",
+    "source_family": "public-office-social-sales",
+    "field_axes": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The platform and workflow are Twitter/X post scheduling and tracking.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, workflow_or_procedure."
+  },
+  {
+    "id": "public_gold_exp_p135_facebook_ads_campaign",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-facebook-ads",
+    "closest_alternatives": [
+      "public-office-google-ads-manager",
+      "public-office-ads-copywriter",
+      "public-office-tiktok-marketing",
+      "public-office-seo-optimizer"
+    ],
+    "prompt": "Set up a Facebook Ads campaign plan with audience segments, creatives, budget split, tracking events, and optimization checks. This is not just generic ad copywriting.",
+    "source_family": "public-office-marketing",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The request targets Facebook Ads campaign setup and optimization, not generic copy or other channels.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_exp_p136_tiktok_marketing_calendar",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-tiktok-marketing",
+    "closest_alternatives": [
+      "public-office-facebook-ads",
+      "public-office-social-publisher",
+      "public-office-content-writer",
+      "public-office-youtube-automation",
+      "marketing-ops-scenario-planner",
+      "social-post-planner",
+      "public-office-twitter-automation"
+    ],
+    "prompt": "Create a TikTok marketing plan with short-form video concepts, posting cadence, trend hooks, creator notes, and performance measures. Do not build a Facebook Ads campaign.",
+    "source_family": "public-office-marketing",
+    "field_axes": [
+      "dependency_or_tool",
+      "output_artifact",
+      "audience_or_context"
+    ],
+    "gold_rationale": "The platform and artifact are TikTok-specific marketing calendar and video concepts.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "output_artifact",
+      "audience_or_context"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, output_artifact, audience_or_context."
+  },
+  {
+    "id": "public_gold_exp_p137_meeting_notes_action_items",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-meeting-notes",
+    "closest_alternatives": [
+      "public-office-transcription-automation",
+      "public-office-calendar-automation",
+      "public-office-weekly-report",
+      "meeting-summary-writer"
+    ],
+    "prompt": "Turn the meeting transcript into concise notes with decisions, action items, owners, and due dates. Do not schedule the next meeting or perform raw transcription only.",
+    "source_family": "public-office-meetings",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The task transforms an existing transcript into structured meeting notes, not scheduling or transcription.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p138_transcription_cleanup",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-transcription-automation",
+    "closest_alternatives": [
+      "public-office-meeting-notes",
+      "public-office-podcast-automation",
+      "public-office-microsoft-teams",
+      "public-office-calendar-automation"
+    ],
+    "prompt": "Transcribe the call recording, clean speaker labels, and return a timestamped transcript. Do not summarize action items or schedule follow-ups.",
+    "source_family": "public-office-meetings",
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The core operation is audio transcription and transcript cleanup.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, output_artifact, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p139_pipedrive_lead_update",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-pipedrive-automation",
+    "closest_alternatives": [
+      "public-office-crm-automation",
+      "public-office-lead-routing",
+      "public-office-lead-qualification",
+      "public-office-lead-research",
+      "public-office-data-pipeline",
+      "public-office-etl-pipeline",
+      "public-office-linear-automation"
+    ],
+    "prompt": "Update Pipedrive deals from the inbound lead sheet, move qualified leads to the next stage, add activity reminders, and export the changed records. Do not treat this as generic CRM advice.",
+    "source_family": "public-office-crm-sales",
+    "field_axes": [
+      "dependency_or_tool",
+      "side_effect_or_action",
+      "output_artifact"
+    ],
+    "gold_rationale": "The workflow is explicitly Pipedrive deal/stage automation.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "side_effect_or_action",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, side_effect_or_action, output_artifact."
+  },
+  {
+    "id": "public_gold_exp_p140_lead_qualification",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-lead-qualification",
+    "closest_alternatives": [
+      "public-office-lead-research",
+      "public-office-lead-routing",
+      "public-office-crm-automation",
+      "public-office-pipedrive-automation"
+    ],
+    "prompt": "Score the inbound leads by fit, budget signal, company size, and urgency, then mark which leads should move to sales review. Do not update a specific CRM system yet.",
+    "source_family": "public-office-crm-sales",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The task qualifies/scored leads rather than routing or mutating CRM records.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p141_pdf_table_extraction_public",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-table-extractor",
+    "closest_alternatives": [
+      "public-office-pdf-extraction",
+      "public-office-data-extractor",
+      "public-office-smart-ocr",
+      "pdf-layout-table-extractor"
+    ],
+    "prompt": "Extract the tables from this annual report PDF into clean CSV files with page numbers and header normalization. I do not need all document text or a chat answer about the PDF.",
+    "source_family": "public-office-document-data",
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The desired artifact is table extraction to CSV, narrower than full PDF extraction or OCR.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: output_artifact, workflow_or_procedure, constraint_or_not_for."
+  },
+  {
+    "id": "public_gold_exp_p142_smart_ocr_receipts",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-smart-ocr",
+    "closest_alternatives": [
+      "public-office-pdf-ocr",
+      "public-office-table-extractor",
+      "public-office-data-extractor",
+      "public-office-invoice-organizer"
+    ],
+    "prompt": "Run OCR on photographed receipts, identify merchant, date, subtotal, tax, and total, and mark low-confidence fields. This is not native PDF table extraction.",
+    "source_family": "public-office-document-data",
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The prompt requires OCR plus structured field extraction from images/receipts.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: input_or_precondition, workflow_or_procedure, output_artifact."
+  },
+  {
+    "id": "public_gold_exp_p143_slack_workflow_digest",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-slack-workflows",
+    "closest_alternatives": [
+      "public-office-microsoft-teams",
+      "public-office-email-classifier",
+      "public-office-calendar-automation",
+      "public-office-weekly-report"
+    ],
+    "prompt": "Build a Slack workflow that watches a project channel, collects unresolved questions, posts a daily digest, and routes urgent blockers to the right owner. Do not send this as an email workflow.",
+    "source_family": "public-office-communication",
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "side_effect_or_action"
+    ],
+    "gold_rationale": "The task is Slack-specific workflow automation and routing.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_explicit",
+    "prompt_information_level": "provider_explicit_with_procedural_requirements",
+    "gold_label_basis": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "side_effect_or_action"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: dependency_or_tool, workflow_or_procedure, side_effect_or_action."
+  },
+  {
+    "id": "public_gold_exp_p144_email_classification_triage",
+    "family": "public_gold_expansion",
+    "gold_skill": "public-office-email-classifier",
+    "closest_alternatives": [
+      "public-office-email-drafter",
+      "public-office-gmail-workflows",
+      "public-office-suspicious-email",
+      "email-classification-router"
+    ],
+    "prompt": "Classify incoming emails into support, sales, finance, hiring, and suspicious categories, then produce routing labels with confidence. Do not draft replies yet.",
+    "source_family": "public-office-communication",
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The task classifies and routes emails, rather than writing replies or running Gmail-specific automation.",
+    "atomization_status": "atomic",
+    "rejection_rationale": "Listed alternatives are semantically plausible but differ in platform, artifact, workflow, or success criterion.",
+    "acceptable_alternatives": [],
+    "validation_status": "cleaned_public_gold_with_caveats",
+    "label_status": "stable_strict_public_gold",
+    "provider_cue_status": "provider_or_tool_implicit_or_generic",
+    "prompt_information_level": "provider_implicit_or_generic_with_procedural_requirements",
+    "gold_label_basis": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_label_cleanup_note": "Gold skill is currently treated as strict public-gold. Provider/tool names, if present, are retained as dependency cues rather than leakage. Procedural axes: workflow_or_procedure, output_artifact, constraint_or_not_for."
+  }
+]

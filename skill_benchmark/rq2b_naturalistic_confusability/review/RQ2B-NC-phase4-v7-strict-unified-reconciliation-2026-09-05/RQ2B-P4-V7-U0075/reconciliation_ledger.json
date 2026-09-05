@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0075",
+  "blind_packet_id": "P-81EBD9E6A228FCCD71",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-18A4B779DC8F8F91",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "daily river-discharge data",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Open-Meteo Flood Fetch"
+    },
+    {
+      "candidate_token": "C-33099BDA18888BDF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Fetch Open-Meteo Air Quality API hourly background fields",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "PM, gases, dust, UV, pollen, or AQI background conditions beyond station coverage."
+    },
+    {
+      "candidate_token": "C-4AA2C2ABF76C2C6C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-9C14A062D5BEBA7A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "weather and shallow-soil variables",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Open-Meteo Historical Fetch"
+    },
+    {
+      "candidate_token": "C-D3B01D527AD962A2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "UI-pattern vocabulary map",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "candidate_token": "C-DB04205D09C8BF69",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Summarises a document into a clear and compact recap.",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Document Summariser"
+    },
+    {
+      "candidate_token": "C-E4E60B09CEB32146",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Route LangSmith work into one workflow packet",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# LangSmith"
+    },
+    {
+      "candidate_token": "C-FAEC5290AA587A6E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Route repeated pattern, rule, and anomaly work into one detection packet",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Pattern Detection"
+    }
+  ],
+  "reviewer_A_return_sha256": "a9208288f43f3e7cc3d07b756eb6ebed7079b1ccf1f7f5f49dbd62d852238b8c",
+  "reviewer_B_return_sha256": "53aa37f6e5b4304e77773baf8510e0fbdbc00fbc78d262d3c138c25b943c6529",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

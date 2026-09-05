@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0002",
+  "blind_packet_id": "P-E7445A84079EEBD8F0",
+  "batch_input_sha256": "345763010ebbbf44da9c4260ef4eb259a4b76d25e618e86406fd2a87ec3dc76f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0B885065910BC02F","adequacy":"INADEQUATE","source_anchor":"# scrapling - routing-first adaptive web scraping","rationale":"This routes web-scraping methods and does not select a product-team coordination cadence or provide blocker escalation handling.","missing_material_requirement_or_null":"A lightweight recurring coordination cadence with blocker escalation."},
+    {"candidate_token":"C-7D42539AE1CBFD55","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Status Page Update","rationale":"It provides a recurring communication cadence and escalation routing for customer incidents, but not a lightweight internal coordination cadence for distributed product-team blockers.","missing_material_requirement_or_null":"An internal team cadence decision and blocker escalation path for ordinary delivery work."},
+    {"candidate_token":"C-8ED94D3DF20CFC3B","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Standup Meeting","rationale":"It explicitly selects the lightest daily, hybrid, less-frequent, or no-recurring coordination cadence and specifies blocker-first handling with immediate escalation and follow-up huddles.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-B8B8B034DD41C31B","adequacy":"INADEQUATE","source_anchor":"# audit-my-assumptions","rationale":"This audits assumptions in analytical inputs and does not address team coordination cadence or blocker escalation.","missing_material_requirement_or_null":"A recurring coordination design for distributed product work."},
+    {"candidate_token":"C-C27D38A36B554168","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Meeting Agenda Builder","rationale":"It reduces status-only meetings and can structure a focused recurring sync, but it does not decide the lightest coordination cadence or define operational blocker escalation.","missing_material_requirement_or_null":"A cadence selection rule and explicit blocker escalation workflow."},
+    {"candidate_token":"C-C671E448B6E06C87","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"It can surface systemic blockers and assign escalation after a sprint, but it is a retrospective process rather than a lightweight recurring coordination cadence for blockers that need prompt handling.","missing_material_requirement_or_null":"A current-work coordination cadence with immediate blocker escalation."},
+    {"candidate_token":"C-E182CA3647F6CF9A","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Sprint Retrospective","rationale":"It identifies process themes and escalation actions after completed work, but it explicitly routes daily coordination to another skill and does not provide the requested ongoing cadence.","missing_material_requirement_or_null":"A lightweight recurring daily or hybrid coordination cadence with blocker routing."},
+    {"candidate_token":"C-EDFD1BBE194BE12F","adequacy":"INADEQUATE","source_anchor":"# Web quality audit","rationale":"This audits web performance, accessibility, SEO, and best practices, with no product-team coordination or blocker escalation function.","missing_material_requirement_or_null":"A coordination cadence decision and blocker escalation path."}
+  ],
+  "reviewer_output_sha256":"e90b769eb8abc347450defa3e9c4a9eb1ec25c8b2e537ad62f3dfa8851c6f7b8"
+}

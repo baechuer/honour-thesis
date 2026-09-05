@@ -1,0 +1,88 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/i3c_extraction/identity_manifest.jsonl": "e1bc91fff03998ef147222134a967334df3087c066b972378d251219c36c02a8",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/candidate_source_union_for_phase4.jsonl": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/nc_cluster_manifest_for_phase4.jsonl": "134197c40ef6335e22a76e74a93fa40b6eac8f3fdeba3df61e3a1f9a02b5d70a",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/nc_prompt_manifest_for_phase4.jsonl": "dd4e05ee8cfed334e74676aa493cd082ee97b151c6138315ff2561c6ddfd2e05",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/parent_prompt_manifest_for_phase5.jsonl": "9bf8f70a60fac0f50c70858f67d1c6f94842aa139c8e1dfd8c17be894beb8ced",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/summary.json": "469363a5ef69c5d1a35b8724967f98d485cb4d4ac0ddae3778b2a43454d2238a",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase4_navigation_profiles_2026-09-05/navigation_profiles.jsonl": "4cdb10551cdd2fb21d52cedae71d8f310552e4852f6c5ec077e87b4bf8ca0f0f",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase4_navigation_profiles_2026-09-05/source_path_resolution_ledger.jsonl": "caeee4852899f58136d1ab1788c6856b43fca675cbe9802061090b600d78362f",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase4_navigation_profiles_2026-09-05/summary.json": "00bceae484d3265d8e98725b7b30b29eb4914870f74540904e06f8e52b87bda7",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_PHASE4_OPTION1_LEGACY_AMENDMENT_2026-09-05.json": "16bf1c2b0b12002a169144efff9e3704b63f4f7b586d100061423fa07b4c59bd",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/WHOLE_LIBRARY_POOLED_DISCOVERY_PROTOCOL_2026-08-31.json": "57f60ec786c956c97fd4ca7ec51d32084d9a777b1a45a5693cc6f6672b6f1aec"
+  },
+  "claim_boundary": "This is a frozen prospective audit input, not an acceptable-set result, a retrieval metric, a reranking result, or a final benchmark.",
+  "counts": {
+    "main_pool_pairs_exact_k6": 7356,
+    "main_review_packets": 1226,
+    "pairs_by_lane": {
+      "A_PARENT_DELTA": 2976,
+      "B_NC_FULL_UNION": 6832
+    },
+    "pairs_by_reporting_stratum": {
+      "controlled": 241,
+      "legacy_2member_checkpoint": 74,
+      "public_gold": 131,
+      "source_native_three_member": 780
+    },
+    "prompt_queues": 1226,
+    "source_visible_review_pairs": 9808,
+    "tail_review_packets": 2452,
+    "tails": {
+      "phrase": 1226,
+      "residual": 1226
+    },
+    "zero_score_coverage_fallback_main_slots": 1192
+  },
+  "implementation": {
+    "path": "skill_benchmark/scripts/materialize_rq2b_nc_phase4_option1_k6_audit_input_2026_09_05.py",
+    "python": "3.13.2 (main, Mar 25 2025, 05:38:46) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "sha256": "ce7bd463b12cf0a52401e860ea7781d956d353ff63abc123e2c8afbaddd4ce84"
+  },
+  "outcome_blind_firewall": {
+    "fields_not_read_for_scores": [
+      "historical_gold",
+      "target",
+      "local_label",
+      "acceptable_set",
+      "origin",
+      "repository",
+      "provider",
+      "path",
+      "licence",
+      "retrieval",
+      "reranking",
+      "provider_output",
+      "metric"
+    ],
+    "fields_read_for_scores": [
+      "prompt",
+      "relevance_source_name",
+      "relevance_source_description",
+      "relevance_heading_profile"
+    ],
+    "reviewer_packets_exclude": [
+      "lane_id",
+      "reporting_stratum",
+      "reporting_group",
+      "allocation_slot",
+      "selection_channel",
+      "rank_position",
+      "channel_score",
+      "canonical_source_sha256",
+      "target",
+      "label"
+    ]
+  },
+  "outputs": {
+    "candidate_proposal_config.json": "4d0c3351c2c923e87cc3d13b9f60e2d890ddfa76fa939c4f546a4f537b1f67aa",
+    "main_blind_review_packets.jsonl": "283f645fc381535f3bf414b17f731707edca26060740a86c6241119e3b47ca78",
+    "opaque_token_join.jsonl": "504283c7a831306724ef38193a0640a819e2347e0d9c01c52754422aa84d8be9",
+    "prompt_k6_allocation_ledger.jsonl": "f65a3340a80545c50462eec43dd8ed9d7b89d9735f9f2c59ba4d3ed952ee7127",
+    "source_visible_review_pairs.jsonl": "e727c0e7a39fc8066fada918140ff9eb4af22455ec4518c54462f7e2225428be",
+    "tail_blind_review_packets.jsonl": "8bdd602f4ddae2a2d9cad3ba81d126ed5dea06d2824411267f61c1102fde6b57"
+  },
+  "status": "PASS_PHASE4_K6_OUTCOME_BLIND_AUDIT_INPUT_MATERIALISED_PENDING_BLIND_REVIEWS"
+}

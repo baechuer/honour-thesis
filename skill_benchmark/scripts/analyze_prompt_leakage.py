@@ -135,6 +135,52 @@ GENERIC_TITLE_TOKENS = {
 }
 
 
+PROVIDER_OR_TOOL_TOKENS = {
+    "airtable",
+    "amazon",
+    "anthropic",
+    "api",
+    "bases",
+    "base",
+    "canvas",
+    "canva",
+    "chatgpt",
+    "chrome",
+    "claude",
+    "cloudflare",
+    "devtool",
+    "docs",
+    "doc",
+    "figma",
+    "github",
+    "gradio",
+    "hugging",
+    "husky",
+    "jupyter",
+    "json",
+    "linear",
+    "cli",
+    "lint",
+    "markitdown",
+    "mcp",
+    "mysql",
+    "netlify",
+    "notion",
+    "obsidian",
+    "openai",
+    "pdfplumber",
+    "playwright",
+    "postgresql",
+    "render",
+    "sentry",
+    "shopify",
+    "slack",
+    "transformers",
+    "wrangler",
+    "zendesk",
+}
+
+
 ALIASES = {
     "summarise": "summary",
     "summarises": "summary",
@@ -400,6 +446,17 @@ def analyze_prompt(prompt: dict[str, Any], skills: dict[str, dict[str, Any]]) ->
     else:
         risk_level = "low"
 
+    provider_cue_status = prompt.get("provider_cue_status", "not_recorded")
+    provider_dependency_cue = (
+        provider_cue_status == "provider_or_tool_explicit"
+        and risk_level == "medium"
+        and not gold_exact
+        and all(token in PROVIDER_OR_TOOL_TOKENS for token in gold_title_hits)
+    )
+    if provider_dependency_cue:
+        risk_level = "low"
+        risk_flags.append("provider_tool_dependency_cue")
+
     return {
         "id": prompt["id"],
         "family": prompt["family"],
@@ -408,6 +465,9 @@ def analyze_prompt(prompt: dict[str, Any], skills: dict[str, dict[str, Any]]) ->
         "instruction_text": instruction,
         "risk_level": risk_level,
         "risk_flags": risk_flags,
+        "provider_cue_status": provider_cue_status,
+        "prompt_information_level": prompt.get("prompt_information_level", "not_recorded"),
+        "provider_dependency_cue": provider_dependency_cue,
         "gold_exact_name_leaks": gold_exact,
         "gold_title_recall": round(gold_title_recall, 4),
         "gold_title_tokens": gold_title_tokens,
@@ -424,6 +484,8 @@ def analyze_prompt(prompt: dict[str, Any], skills: dict[str, dict[str, Any]]) ->
 
 def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
     counts = Counter(row["risk_level"] for row in rows)
+    provider_dependency_count = sum(1 for row in rows if row.get("provider_dependency_cue"))
+    provider_cue_counts = Counter(row.get("provider_cue_status", "not_recorded") for row in rows)
     family_counts: dict[str, Counter[str]] = defaultdict(Counter)
     for row in rows:
         family_counts[row["family"]][row["risk_level"]] += 1
@@ -439,6 +501,8 @@ def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
         "pass_prompt_leakage": pass_prompt_leakage,
         "total_prompts": len(rows),
         "risk_counts": dict(counts),
+        "provider_dependency_cue_count": provider_dependency_count,
+        "provider_cue_counts": dict(provider_cue_counts),
         "critical_count": len(critical),
         "high_count": len(high),
         "family_counts": {family: dict(counter) for family, counter in sorted(family_counts.items())},
@@ -460,11 +524,18 @@ def render_markdown(summary: dict[str, Any], rows: list[dict[str, Any]]) -> str:
     lines.append(f"- Total prompts: {summary['total_prompts']}")
     lines.append(f"- Critical exact-name leaks: {summary['critical_count']}")
     lines.append(f"- High-risk title/phrase leaks: {summary['high_count']}")
+    lines.append(f"- Provider/tool dependency cues reclassified as low risk: {summary['provider_dependency_cue_count']}")
+    if summary.get("provider_cue_counts"):
+        cue_parts = [f"{name}: {count}" for name, count in sorted(summary["provider_cue_counts"].items())]
+        lines.append(f"- Provider cue status: {', '.join(cue_parts)}")
     for level in ["critical", "high", "medium", "low"]:
         lines.append(f"- {level.title()} risk prompts: {summary['risk_counts'].get(level, 0)}")
     lines.append("")
     lines.append(
         "Interpretation: critical leaks are exact gold skill-name leaks. High-risk cases usually contain distinctive gold title words or copied gold-card phrases that may make lexical selectors look better than they really are."
+    )
+    lines.append(
+        "Provider/tool names are treated separately: when a public skill is provider-specific, terms such as OpenAI, Claude, Obsidian, GitHub, or Playwright are valid dependency cues unless the prompt names the exact skill or lacks procedural support."
     )
     lines.append("")
     lines.append("## Family Summary")
@@ -503,6 +574,8 @@ def render_markdown(summary: dict[str, Any], rows: list[dict[str, Any]]) -> str:
         lines.append(f"- Gold skill: `{row['gold_skill']}`")
         lines.append(f"- Risk level: **{row['risk_level']}**")
         lines.append(f"- Risk flags: {', '.join(row['risk_flags']) or '-'}")
+        lines.append(f"- Provider cue status: {row['provider_cue_status']}")
+        lines.append(f"- Prompt information level: {row['prompt_information_level']}")
         lines.append(f"- Instruction used for scoring: {row['instruction_text']}")
         lines.append(
             f"- Gold title overlap: {row['gold_title_recall']:.2f}; max alternative title overlap: {row['max_alternative_title_recall']:.2f}; advantage: {row['title_recall_advantage']:.2f}"

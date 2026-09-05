@@ -8,7 +8,8 @@ Evaluation rule: a cluster is useful when a compressed selector could plausibly 
 
 Status summary:
 
-- Controlled clusters audited: 22/22.
+- Original controlled clusters audited: 22/22.
+- Public-style controlled clusters audited after expansion: 8/8.
 - Public-gold source families triaged: 34/34.
 - Overall decision: the benchmark is valid enough to continue experiments, but the next expansion should be targeted rather than broad.
 - Highest-priority expansion targets: implicit-field stress, PDF/document operations, browser/deployment QA, Hugging Face workflows, skill representation analysis, API/tooling, GitHub/CI, and public-authored workflow clusters.
@@ -71,6 +72,40 @@ Freeze or revise before expansion:
 - `news_monitoring`: revise with stronger grounding, trend, and multi-source evidence tasks.
 - `office_business_automation`: platform-name cues are strong; add cross-platform ambiguity before expansion.
 - `skill_lifecycle`: central but verb cues are strong; add less explicit prompts and acceptable alternatives.
+
+## Post-Expansion Audit: Public-Style Controlled Clusters
+
+This section audits the 8 clusters added by `skill_benchmark/scripts/generate_public_style_controlled_expansion.py` after the first Step 4b audit. These clusters are intentionally different from the original schema-authored controlled skills: raw `SKILL.md` files are more prose-like, include resource notes, and require the representation layer to extract operational fields.
+
+Automated validation after this expansion:
+
+- Step 1 integrity: PASS, 201 prompts and 2433 skills resolve.
+- Step 2 procedural distinctness: PASS, 201/201 prompts and 641/641 gold/alternative pairs.
+- Step 2 prompt-specific requirement alignment: PASS with audit targets, 182/201 prompts and 618/641 pairs.
+- Step 3 semantic confusability: PASS, 180/201 prompts overall; public-style controlled stratum passes 64/64.
+- Step 4 leakage: PASS, 0 critical exact-name leaks and 0 high-risk leaks.
+
+| Cluster | Skills in cluster | Main confusion source | Primary procedural axes | Manual judgment | Risk / action |
+|---|---|---|---|---|---|
+| `psc_pdf_document_work` | `psc-pdf-native-extraction-pack`, `psc-pdf-scan-ocr-recovery`, `psc-pdf-evidence-qa`, `psc-pdf-redaction-pass` | All mention PDFs, extraction, document evidence, page anchors, and external handling. | Input state, output artifact, evidence type, safety boundary, workflow. | Strong. This is one of the best thesis examples: the same PDF domain can require extraction, OCR recovery, question answering, or redaction. | Keep. One weak alignment prompt, `psc_pdf_document_work_p03_1_psc_pdf_evidence_qa`, should be manually checked because evidence QA and redaction both use page-level sensitive/evidence language. |
+| `psc_browser_quality` | `psc-devtools-runtime-diagnoser`, `psc-playwright-regression-suite`, `psc-visual-screenshot-reviewer`, `psc-accessibility-interaction-auditor` | Browser tasks share interaction, screenshots, runtime evidence, and quality vocabulary. | Desired artifact, tool dependency, evidence source, success criterion, side effects. | Strong but difficult. Good benchmark pressure because screenshots, tests, DevTools diagnosis, and accessibility audits are genuinely close. | Keep and report separately. `psc-playwright-regression-suite` has weak alignment against the other three; this is a useful hard case, but final examples should show why reusable test artifact is the gold. |
+| `psc_huggingface_workflow` | `psc-hf-dataset-card-inspector`, `psc-local-model-fit-selector`, `psc-sentence-embedding-trainer`, `psc-hf-space-deployment-preparer` | Hugging Face/model/dataset/deployment vocabulary overlaps heavily. | Artifact type, resource constraint, workflow stage, dependency/tool, output. | Strong. This directly supports dependency/resource-aware representation because dataset inspection, local model choice, training, and Spaces deployment differ operationally. | Keep. Watch provider-name bias; provider names are valid dependency evidence but should be stratified as provider-explicit versus provider-implicit. |
+| `psc_github_maintenance` | `psc-ci-log-first-failure-reader`, `psc-pr-thread-fix-planner`, `psc-repo-guardrail-hook-installer`, `psc-release-communication-packager` | All involve GitHub repositories, PRs, CI, changed code, and verification. | Input/precondition, side effect, output audience, workflow stage. | Strong. Gold labels are defensible because reading logs, resolving review threads, installing hooks, and writing release notes produce different artifacts. | Keep. It overlaps with earlier GitHub clusters; use as a public-style stratum rather than counting it as a wholly independent domain. |
+| `psc_security_appsec` | `psc-feature-threat-modeler`, `psc-handler-vulnerability-reviewer`, `psc-dependency-supply-chain-auditor`, `psc-privacy-telemetry-reviewer` | All use security/risk/mitigation vocabulary and can refer to code or planned features. | Threat scope, input artifact, workflow, dependency profile, privacy boundary, output artifact. | Strong but high-value hard case. Wrong selections are plausible and materially different. | Keep with caution. `psc-feature-threat-modeler` weakly aligns against privacy review; final prompts should ensure planned feature threat modeling is distinct from telemetry/privacy policy review. |
+| `psc_research_reading` | `psc-paper-method-mapper`, `psc-citation-claim-support-auditor`, `psc-related-work-synthesizer`, `psc-source-field-table-extractor` | All are research-reading tasks using papers, claims, methods, evidence, comparison, and thesis-writing vocabulary. | Analytical lens, number of sources, evidence use, output format, success criterion. | Strong and thesis-relevant. It is a good example of procedural distinction beyond tools: method extraction, claim support, related-work synthesis, and table extraction use similar sources differently. | Keep. Useful for thesis examples because gold rationales are easy to explain to supervisors/readers. |
+| `psc_skill_representation` | `psc-messy-skill-field-extractor`, `psc-public-skill-atomizer`, `psc-skill-routing-budget-planner`, `psc-retrieval-result-adjudicator` | All are about skills, fields, routing, candidates, atomization, and evaluation. | Operation stage, output artifact, evaluation target, hierarchy handling, budget objective. | Important but co-adaptation risk remains high. It tests the thesis topic directly, so it can accidentally privilege our own vocabulary. | Keep as diagnostic, not sole headline evidence. `psc-skill-routing-budget-planner` weakly aligns against retrieval adjudication; final claims should not rely only on this cluster. |
+| `psc_data_analysis_intent` | `psc-data-trust-auditor`, `psc-anomaly-watchlist-builder`, `psc-decision-ranking-analyst`, `psc-executive-metric-narrator` | Same tabular data can support data quality audit, anomaly detection, decision ranking, or executive narration. | Analytical goal, output audience, workflow, success criterion, decision use. | Strong. This extends the earlier spreadsheet/data cluster with more intent-level distinctions and fewer tool-specific cues. | Keep. Good for showing that output intent and success criterion matter, not only file type or provider name. |
+
+Overall post-expansion decision:
+
+- The public-style controlled expansion is valid enough for local selector experiments and for thesis discussion.
+- It should be reported as its own stratum before being merged with the original controlled benchmark.
+- The four public-style weak alignment prompts should be treated as manual-audit targets, not automatic failures:
+  - `psc_pdf_document_work_p03_1_psc_pdf_evidence_qa`
+  - `psc_browser_quality_p02_1_psc_playwright_regression_suite`
+  - `psc_security_appsec_p01_1_psc_feature_threat_modeler`
+  - `psc_skill_representation_p03_2_psc_skill_routing_budget_planner`
+- The expansion reduces co-adaptation risk, but does not remove it: the skills are still generated under our research design. The next realism improvement should either use more public-gold cases or public-style skills derived more directly from public artifacts.
 
 ## Public-Gold Source-Family Triage
 
@@ -136,4 +171,3 @@ This audit supports the benchmark design claim, with caveats:
 - The strongest evidence clusters are those where the same high-level domain and often the same input artifact can lead to different correct skills depending on requested output, workflow, evidence type, or success criterion.
 - Public skills improve external validity, but public-gold cases must be separated because public skills are often broad, duplicated, platform-specific, or hierarchical.
 - Future expansion should increase confusability quality, not just prompt count.
-

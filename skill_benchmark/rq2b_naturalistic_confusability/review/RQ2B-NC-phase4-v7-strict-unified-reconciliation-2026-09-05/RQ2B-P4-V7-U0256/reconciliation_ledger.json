@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0256",
+  "blind_packet_id": "P-B1FA5F51598389695F",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-001E38871292E005",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Payment Service: Error rate exceeded 5%",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# PagerDuty"
+    },
+    {
+      "candidate_token": "C-301A95F065E298DD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# On-Call Handoff",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Deliverable"
+    },
+    {
+      "candidate_token": "C-3FB5DF2AD2D75328",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Payment Service: Error rate exceeded 5%",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Best Practices"
+    },
+    {
+      "candidate_token": "C-752664D3A620D230",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Azure Landing Zone Setup",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Azure Landing Zone Setup"
+    },
+    {
+      "candidate_token": "C-7E63FD186B43061C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "## Prometheus Alerting",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Alerting & On-Call"
+    },
+    {
+      "candidate_token": "C-8599DD3DEDA07911",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## Overview"
+    },
+    {
+      "candidate_token": "C-8860DBFB9E2661CD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# HTML Slides Skill",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# HTML Slides Skill"
+    },
+    {
+      "candidate_token": "C-C2A5BC10CF6A1719",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# PDF Merge & Split",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# PDF Merge & Split"
+    }
+  ],
+  "reviewer_A_return_sha256": "4e10363cf9c89ddf096376bbb4fb471e2c59914ed8b1e0d72b7bd7840cb29957",
+  "reviewer_B_return_sha256": "107a9682635bd96a8475a98e9dc99dfbc880f439c101500ec5b982417f5fee2f",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

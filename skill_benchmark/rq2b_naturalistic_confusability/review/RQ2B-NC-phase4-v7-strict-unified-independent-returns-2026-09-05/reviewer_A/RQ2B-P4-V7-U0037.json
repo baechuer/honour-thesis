@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-08A2E7CE3A1D993D",
+      "missing_material_requirement_or_null": "Service-observability analysis that interprets latency percentiles, errors, queues, and request-segment concentration.",
+      "rationale": "It conducts pre-build security prior-art research rather than interpreting latency, errors, queues, or request-slice behavior.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-363DD1C7B9925D95",
+      "missing_material_requirement_or_null": "A telemetry-analysis workflow for comparing percentile divergence and segmenting the affected request population.",
+      "rationale": "Slow downstream response is relevant and it proposes isolation, timeouts, and instrumentation, but it neither produces the requested anomaly readout nor determines whether tail impact is broad or concentrated.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-60BE5B397EE0D495",
+      "missing_material_requirement_or_null": "Service-observability analysis of latency distributions, errors, queues, and affected request segments.",
+      "rationale": "It creates a personal sleep protocol and has no capability for interpreting a degraded service snapshot.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-63FE47A3C8795D6F",
+      "missing_material_requirement_or_null": "Anomaly analysis for production-service latency, errors, queueing, and request-population concentration.",
+      "rationale": "It maps legal obligations and compliance gaps rather than analyzing runtime performance telemetry.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-71B5A71F0C4CA3F8",
+      "missing_material_requirement_or_null": "Production telemetry analysis that identifies tail-latency outliers and scopes their affected request slice.",
+      "rationale": "It builds Slack integrations and does not analyze service performance data.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AEC7A65BDDA7E874",
+      "missing_material_requirement_or_null": "Analysis of an existing degraded service snapshot, including percentile divergence and request-slice concentration.",
+      "rationale": "It designs fault-injection experiments and game days rather than interpreting an already observed performance anomaly.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B5835642FB20F65C",
+      "missing_material_requirement_or_null": "A current-state telemetry-analysis workflow that compares p99 and p95 with median latency and determines whether degradation is broad or concentrated.",
+      "rationale": "It covers alerting and incident response, including p95 and error-rate signals, but it does not produce the requested current-state tail-latency and request-slice analysis.",
+      "source_anchor": "## Prometheus Alerting"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DF86F2954E01E554",
+      "missing_material_requirement_or_null": "Production-service anomaly analysis of latency tails, errors, queues, and affected request segments.",
+      "rationale": "It facilitates sprint retrospectives and does not assess runtime service telemetry.",
+      "source_anchor": "## Timeboxed agenda (60 minutes)"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0037",
+  "batch_input_sha256": "11ee8e3da87a879555e4544b5c175e6dc83bef832499302ba521317847ffb192",
+  "blind_packet_id": "P-75970C216775516460",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c5c2dfbf97737fa42739ee37ece4ff096c3a8051be6092d969636049434e6ed9"
+}

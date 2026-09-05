@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0168",
+  "blind_packet_id": "P-4D2E5AA82273398254",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-45B54C863DEB61E9",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "C/C++ code",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# libFuzzer"
+    },
+    {
+      "candidate_token": "C-821C59B7AB5C6B8D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Fuzzing Pure Python Code",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Atheris"
+    },
+    {
+      "candidate_token": "C-91EF3C1B68CE3EC8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "city-level keyword rank tracking",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Local + Google Business Profile visibility"
+    },
+    {
+      "candidate_token": "C-A635679368C52076",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "commercial print",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Print Layout"
+    },
+    {
+      "candidate_token": "C-ADB5949C9E440A48",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Local Testing",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Local Testing"
+    },
+    {
+      "candidate_token": "C-C0AF6E2EC6EA4B88",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Fuzzing Pure Ruby Code",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "## Running Campaigns"
+    },
+    {
+      "candidate_token": "C-DA99FB9D783F43A4",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "published findings",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    },
+    {
+      "candidate_token": "C-DE5E2BAA4C11AE19",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Build the inputs that break code",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Test Data Builder"
+    }
+  ],
+  "reviewer_A_return_sha256": "a1abcb55ca7e26c8d95b37cc96088f6b33a7a59ec95d6bc9bd84752d6d76a14d",
+  "reviewer_B_return_sha256": "a273b7fb406d281674588130c3d328441e93c6cbb23d5045a667a10613e8653b",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

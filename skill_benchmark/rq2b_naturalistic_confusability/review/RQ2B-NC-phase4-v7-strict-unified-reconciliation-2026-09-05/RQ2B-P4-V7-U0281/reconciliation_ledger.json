@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0281",
+  "blind_packet_id": "P-8CD90A2956497C0F92",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0264B1A2C952E2B9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Used for generating synthetic CT volumes and masks with NV-Generate-CTMR rflow-ct.",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Used for generating synthetic CT volumes and masks"
+    },
+    {
+      "candidate_token": "C-2A727B921AD470DB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Audits nv_segment_ct evidence packs for label-map readability",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Audits `nv_segment_ct` evidence packs"
+    },
+    {
+      "candidate_token": "C-698E1D90020838D1",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Audits `nv_generate_ct_rflow` evidence packs",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Audits `nv_generate_ct_rflow` evidence packs"
+    },
+    {
+      "candidate_token": "C-6E16FF37C708C1A6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "SlideCraft — Two-Layer Presentation Generator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "SlideCraft — Two-Layer Presentation Generator"
+    },
+    {
+      "candidate_token": "C-7AD4ADF562CF0A32",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Audits `nv_segment_ct_finetune` evidence packs",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Audits `nv_segment_ct_finetune` evidence packs"
+    },
+    {
+      "candidate_token": "C-A4C525E6BEE10E86",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Diagnoses and fixes Core Web Vitals",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Diagnoses and fixes Core Web Vitals"
+    },
+    {
+      "candidate_token": "C-A6FE086A5DF84897",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GO and KEGG enrichment from a gene list",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "GO and KEGG enrichment"
+    },
+    {
+      "candidate_token": "C-BA1F3050D94E3160",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Slidegen — AI Image Presentation Generator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Generate AI image presentations from slide outlines"
+    }
+  ],
+  "reviewer_A_return_sha256": "a224a8a8e4819ecb402122c766b5146ad4a01ec05dcfb8000c4e1b2c741e5ca8",
+  "reviewer_B_return_sha256": "fdebeb7ec154343360a64dc86e458999ec70c220f7839799461abe8a67e0bf55",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

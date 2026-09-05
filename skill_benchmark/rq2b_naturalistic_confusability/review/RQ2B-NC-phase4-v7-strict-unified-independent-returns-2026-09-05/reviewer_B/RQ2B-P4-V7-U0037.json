@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-08A2E7CE3A1D993D",
+      "missing_material_requirement_or_null": "An anomaly-focused analysis of the supplied service metrics.",
+      "rationale": "This is a security prior-art research workflow, not a service-observability readout, so it cannot interpret the latency distribution, errors, queueing, or affected request slice.",
+      "source_anchor": "When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-363DD1C7B9925D95",
+      "missing_material_requirement_or_null": "A diagnostic readout that distinguishes tail-latency behavior from median behavior and identifies whether the affected requests are a concentrated slice.",
+      "rationale": "It addresses slow downstream dependencies, timeouts, and emitted metrics, which is relevant to mitigation, but its deliverable is a resilience-wrapper configuration rather than analysis of this snapshot.",
+      "source_anchor": "Circuit Breaker Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-60BE5B397EE0D495",
+      "missing_material_requirement_or_null": "An anomaly-focused analysis of the supplied service metrics.",
+      "rationale": "This skill produces a personal sleep protocol and has no procedure for interpreting service latency distributions, error rates, queue depth, or dependency behavior.",
+      "source_anchor": "Sleep Optimizer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-63FE47A3C8795D6F",
+      "missing_material_requirement_or_null": "An anomaly-focused analysis of the supplied service metrics.",
+      "rationale": "This is a regulatory-compliance mapping workflow, so it cannot provide the requested operational diagnosis of tail latency, outliers, or request-slice concentration.",
+      "source_anchor": "Regulatory Scanner"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-71B5A71F0C4CA3F8",
+      "missing_material_requirement_or_null": "An anomaly-focused analysis of the supplied service metrics.",
+      "rationale": "It builds Slack integrations and may send notifications, but it provides no method for interpreting the supplied performance snapshot.",
+      "source_anchor": "Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AEC7A65BDDA7E874",
+      "missing_material_requirement_or_null": "An anomaly-focused diagnostic readout of the current service snapshot.",
+      "rationale": "The workflow designs controlled failure experiments and rollbacks; it does not analyze an existing snapshot to characterize the tail-latency pattern or scope of degradation.",
+      "source_anchor": "Core Workflow"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B5835642FB20F65C",
+      "missing_material_requirement_or_null": "A diagnostic readout that analyzes p95 versus p99 and median behavior, identifies outliers, and determines whether the anomaly is concentrated in a request slice.",
+      "rationale": "It covers performance and error-rate alerting plus an investigation runbook, but it is for configuring alerting and on-call workflows rather than performing the requested anomaly analysis.",
+      "source_anchor": "Alerting & On-Call"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DF86F2954E01E554",
+      "missing_material_requirement_or_null": "An anomaly-focused analysis of the supplied service metrics.",
+      "rationale": "This facilitates team sprint retrospectives and does not provide telemetry analysis for latency distributions, error changes, queueing, or dependency degradation.",
+      "source_anchor": "Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0037",
+  "batch_input_sha256": "11ee8e3da87a879555e4544b5c175e6dc83bef832499302ba521317847ffb192",
+  "blind_packet_id": "P-75970C216775516460",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "a102953746321db2dff40df543cf789581d7d0c5813a1423ea5b7c4dca78a750"
+}

@@ -14,17 +14,19 @@ The problem addressed in this thesis is semantic confusion in large agent skill 
 
 This failure mode is different from ordinary retrieval failure. The wrong result is often not unrelated. It is close enough to be tempting. For example, a request to ``extract information from this PDF'' may plausibly match document review, document summarisation, citation grounding, field extraction, or layout-preserving conversion. These skills may all mention documents, extraction, or PDFs, but they require different procedures and produce different outputs. A flat description may not preserve the procedural distinctions required for correct selection.
 
-The scalability issue makes this worse. In a small library, the main agent may be able to inspect all skill names and short descriptions in context. In a larger library, even this metadata can become too large or noisy. The system then needs a candidate-subsetting stage before the main agent loads any full skill document. This makes the selection representation critical: the correct skill must be surfaced before the full artifact can be inspected.
+The scalability issue makes this worse. In a small library, the main agent may be able to inspect all skill names and short descriptions in context. In a larger library, even this metadata can become too large or noisy. The system then needs a candidate-subsetting stage before the main agent loads any full skill document. This makes the skill representation critical: the correct skill must be surfaced before the full artifact can be inspected.
 
 \section{Research Questions}
 
 This thesis uses the following working research questions:
 
-\textbf{RQ1:} What information must agent skill representations preserve to distinguish semantically similar but procedurally distinct skills at scale?
+\textbf{RQ1:} Which operational information types help distinguish semantically similar but procedurally distinct agent skills?
 
-\textbf{RQ2:} How do retrieval strategies that use flat text, dense embeddings, structured procedural fields, tree or graph structure, or hybrid reranking differ in accuracy, efficiency, and failure modes when applied to scalable skill libraries?
+\textbf{RQ2:} How do skill representation and retrieval-pipeline choices affect the preservation and use of the routing-relevant operational information identified in RQ1 under semantic confusability, and what accuracy, candidate-recall, and retrieval-cost trade-offs result?
 
-These questions revise an earlier framing that asked more generally how structure-aware representations improve over flat description-based retrieval. The revised framing keeps retrieval strategies in scope, but makes representation quality the central research object. The thesis therefore asks not only which method performs best, but what kinds of information are being preserved, lost, or exploited by each method.
+These questions deliberately narrow the thesis from a broad comparison of ``flat'' and ``structured'' skill representation and retrieval to a diagnostic study of routing-relevant information. RQ1 asks which kinds of operational information actually make near-neighbour skills distinguishable. RQ2 separates a matched-content mechanism study from a full-library validation stage. RQ2a fixes the query, three sibling candidates, reviewed operational propositions, and selector while varying how the same facts are organised, flattened, expressed as prose, diluted, or explicitly scored field by field. RQ2b then evaluates four source-grounded representations---I1 native name--description metadata, I2 complete skill bodies, I3-flat extracted evidence, and field-labelled I3C---over a 2,433-skill library and 381 strict-gold prompts. It separates three first-stage retrievers from two fixed-Top-20 rerankers, so candidate inclusion, final ranking, and measured selector cost remain distinguishable.
+
+This framing also limits the novelty claim. The thesis does not propose a new universal schema for agent skills. Recent structured skill representations such as Scheduling-Structural-Logical (SSL) already decompose skill artifacts into invocation-level signals, execution structure, and action/resource evidence. The contribution here is diagnostic and empirical: given semantically similar candidate skills, it tests which operational fields make the correct skill distinguishable and which skill retrieval methods can use those fields reliably.
 
 \section{Scope}
 
@@ -34,15 +36,18 @@ The evaluation focuses on skill libraries where some skills are intentionally co
 
 \section{Contributions}
 
-This thesis aims to make four contributions:
+This thesis makes five contributions:
 
 \begin{enumerate}
-  \item A conceptual framework that separates skill artifacts, selection representations, and retrieval policies.
-  \item A benchmark design for scalable skill retrieval under semantic confusability and procedural distinctness.
-  \item An empirical comparison of flat metadata, full skill artifacts, structured procedural representations, hybrid retrieval-reranking methods, and planned tree/graph structure-aware architectures.
-  \item A failure-mode analysis identifying what information is needed for robust skill selection, including inputs, outputs, preconditions, workflow constraints, dependencies, resources, negative boundaries, and meta-level task roles.
+  \item A field-isolated benchmark design for skill retrieval under semantic confusability and procedural distinctness, with controlled near-neighbour clusters that vary one operational signal at a time.
+  \item Empirical evidence about which operational information types act as routing signals, distinguishing strong positive routing signals, conditional or tie-breaker signals, and information that mainly supports execution after selection.
+  \item A matched-content RQ2a comparison that separates operational-fact content, explicit field organisation, prose form, information dilution, and selector behaviour under lexical, single-vector semantic, cross-encoder, and semantic field-aware selection.
+  \item A source-grounded RQ2b full-library validation over 2,433 skills and 381 strict-gold prompts, comparing I1, I2, I3-flat, and I3C under lexical, Qwen, and SkillRouter first-stage retrieval plus two fixed-Top-20 rerankers; it reports an accuracy--compression trade-off rather than a universal I3C gain.
+  \item A failure-mode and efficiency analysis of when routing-relevant information is absent, diluted, implicit, misleading, or present but not exploited, while treating tree/graph architectures and downstream execution as future work.
 \end{enumerate}
+
+The contribution is therefore positioned as a controlled analysis of discriminative skill information, not as the first proposal of structured skill representation.
 
 \section{Thesis Structure}
 
-Chapter 2 reviews the literature on retrieval-augmented language models, tool use, agent skills, skill-library scaling, and structure-aware retrieval. Chapter 3 defines the conceptual framework used throughout the thesis. Chapter 4 describes the benchmark design. Chapter 5 explains the methodology and evaluation metrics. Chapter 6 reports current and planned results. Chapter 7 discusses implications and failure modes. Chapter 8 concludes the thesis and outlines future work.
+Chapter 2 reviews the literature on retrieval-augmented language models, tool use, agent skills, skill-library scaling, and structure-aware retrieval. Chapter 3 defines the vocabulary and layer distinctions used throughout the thesis. Chapter 4 describes the benchmark design. Chapter 5 explains the methodology and evaluation metrics. Chapter 6 reports the results. Chapter 7 discusses implications and failure modes. Chapter 8 concludes the thesis and outlines future work.

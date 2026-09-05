@@ -366,7 +366,13 @@ def overlap_terms(prompt_terms: list[str], skill_terms: list[str], limit: int = 
 
 
 def evaluate_prompt(prompt: dict[str, Any], rows_by_skill: dict[str, dict[str, Any]], scorer: SimilarityScorer) -> dict[str, Any]:
-    candidate_ids = [prompt["gold_skill"], *prompt.get("closest_alternatives", [])]
+    acceptable_alternatives = list(prompt.get("acceptable_alternatives", []))
+    candidate_ids = [
+        prompt["gold_skill"],
+        *prompt.get("closest_alternatives", []),
+        *acceptable_alternatives,
+    ]
+    candidate_ids = list(dict.fromkeys(candidate_ids))
     candidates = [rows_by_skill[skill_id] for skill_id in candidate_ids]
     instruction = instruction_text(prompt["prompt"])
     positive_instruction = positive_requirement_text(instruction)
@@ -403,6 +409,12 @@ def evaluate_prompt(prompt: dict[str, Any], rows_by_skill: dict[str, dict[str, A
         }
 
     sorted_candidates = sorted(candidate_ids, key=lambda skill_id: scores[skill_id]["net"], reverse=True)
+    gold_or_acceptable = [prompt["gold_skill"], *acceptable_alternatives]
+    gold_or_acceptable_rank = min(
+        sorted_candidates.index(skill_id) + 1
+        for skill_id in gold_or_acceptable
+        if skill_id in sorted_candidates
+    )
     gold_score = scores[prompt["gold_skill"]]["net"]
     margin_threshold = 0.04 if scorer.backend == "embedding" else 0.02
     boundary_threshold = 0.42 if scorer.backend == "embedding" else 0.08
@@ -411,10 +423,12 @@ def evaluate_prompt(prompt: dict[str, Any], rows_by_skill: dict[str, dict[str, A
         alt_score = scores[alternative]["net"]
         margin = gold_score - alt_score
         alt_boundary = scores[alternative]["alternative_boundary"]
-        pair_pass = margin >= margin_threshold or alt_boundary >= boundary_threshold
+        acceptable_equivalent = alternative in set(acceptable_alternatives)
+        pair_pass = acceptable_equivalent or margin >= margin_threshold or alt_boundary >= boundary_threshold
         pair_results.append(
             {
                 "alternative_skill": alternative,
+                "acceptable_equivalent": acceptable_equivalent,
                 "gold_net": round(gold_score, 4),
                 "alternative_net": round(alt_score, 4),
                 "margin": round(margin, 4),
@@ -422,7 +436,28 @@ def evaluate_prompt(prompt: dict[str, Any], rows_by_skill: dict[str, dict[str, A
                 "margin_threshold": margin_threshold,
                 "boundary_threshold": boundary_threshold,
                 "pass_requirement_alignment": pair_pass,
-                "review_reason": "" if pair_pass else "gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated",
+                "review_reason": (
+                    "acceptable equivalent recorded; not counted as a wrong distractor"
+                    if acceptable_equivalent
+                    else "" if pair_pass else "gold does not clearly outrank alternative and alternative not-for boundary is not strongly activated"
+                ),
+            }
+        )
+    for alternative in acceptable_alternatives:
+        alt_score = scores[alternative]["net"]
+        margin = gold_score - alt_score
+        pair_results.append(
+            {
+                "alternative_skill": alternative,
+                "acceptable_equivalent": True,
+                "gold_net": round(gold_score, 4),
+                "alternative_net": round(alt_score, 4),
+                "margin": round(margin, 4),
+                "alternative_boundary": round(scores[alternative]["alternative_boundary"], 4),
+                "margin_threshold": margin_threshold,
+                "boundary_threshold": boundary_threshold,
+                "pass_requirement_alignment": True,
+                "review_reason": "acceptable equivalent recorded; not counted as a wrong distractor",
             }
         )
 
@@ -436,9 +471,15 @@ def evaluate_prompt(prompt: dict[str, Any], rows_by_skill: dict[str, dict[str, A
         "positive_instruction_text": positive_instruction,
         "candidate_rank": sorted_candidates,
         "gold_rank": sorted_candidates.index(prompt["gold_skill"]) + 1,
+        "gold_or_acceptable_rank": gold_or_acceptable_rank,
+        "acceptable_alternatives": acceptable_alternatives,
         "scores": scores,
         "pairs": pair_results,
-        "pass_requirement_alignment": all(pair["pass_requirement_alignment"] for pair in pair_results),
+        "pass_requirement_alignment": all(
+            pair["pass_requirement_alignment"]
+            for pair in pair_results
+            if not pair.get("acceptable_equivalent")
+        ),
     }
 
 
@@ -464,6 +505,9 @@ def write_markdown(results: list[dict[str, Any]], path: Path, scorer: Similarity
     prompt_pass = sum(1 for row in results if row["pass_requirement_alignment"])
     pair_pass = sum(1 for row in results for pair in row["pairs"] if pair["pass_requirement_alignment"])
     gold_top1 = sum(1 for row in results if row["gold_rank"] == 1)
+    gold_or_acceptable_top1 = sum(
+        1 for row in results if row.get("gold_or_acceptable_rank", row["gold_rank"]) == 1
+    )
     by_family: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in results:
         by_family[row["family"]].append(row)
@@ -472,7 +516,7 @@ def write_markdown(results: list[dict[str, Any]], path: Path, scorer: Similarity
         (row, pair)
         for row in results
         for pair in row["pairs"]
-        if not pair["pass_requirement_alignment"]
+        if not pair["pass_requirement_alignment"] and not pair.get("acceptable_equivalent")
     ]
 
     lines = [
@@ -491,20 +535,22 @@ def write_markdown(results: list[dict[str, Any]], path: Path, scorer: Similarity
         f"- Prompts where every alternative is beaten by gold or rejected by its boundary: {pct(prompt_pass, prompt_total)}",
         f"- Gold/alternative pairs passing requirement alignment: {pct(pair_pass, pair_total)}",
         f"- Gold skill ranked first among gold + listed alternatives: {pct(gold_top1, prompt_total)}",
+        f"- Gold or acceptable equivalent ranked first among listed candidates: {pct(gold_or_acceptable_top1, prompt_total)}",
         "",
-        "Pass rule used here: for each gold/alternative pair, the gold skill must either score above the alternative by the backend-specific margin threshold, or the prompt must strongly activate the alternative's `not_for` boundary. Current thresholds are stored in the JSON report for each pair.",
+        "Pass rule used here: for each gold/alternative pair, the gold skill must either score above the alternative by the backend-specific margin threshold, or the prompt must strongly activate the alternative's `not_for` boundary. Recorded acceptable equivalents are scored separately and do not count as wrong distractors. Current thresholds are stored in the JSON report for each pair.",
         "",
         "## Family Summary",
         "",
-        "| Family | Prompts | Prompt pass | Gold top-1 |",
-        "|---|---:|---:|---:|",
+        "| Family | Prompts | Prompt pass | Gold top-1 | Gold/acceptable top-1 |",
+        "|---|---:|---:|---:|---:|",
     ]
     for family in sorted(by_family):
         family_rows = by_family[family]
         lines.append(
             f"| {family} | {len(family_rows)} | "
             f"{sum(1 for row in family_rows if row['pass_requirement_alignment'])}/{len(family_rows)} | "
-            f"{sum(1 for row in family_rows if row['gold_rank'] == 1)}/{len(family_rows)} |"
+            f"{sum(1 for row in family_rows if row['gold_rank'] == 1)}/{len(family_rows)} | "
+            f"{sum(1 for row in family_rows if row.get('gold_or_acceptable_rank', row['gold_rank']) == 1)}/{len(family_rows)} |"
         )
 
     lines.extend(["", "## Weak Requirement Pairs", ""])
@@ -600,11 +646,15 @@ def main() -> int:
 
     prompt_pass = sum(1 for row in results if row["pass_requirement_alignment"])
     gold_top1 = sum(1 for row in results if row["gold_rank"] == 1)
+    gold_or_acceptable_top1 = sum(
+        1 for row in results if row.get("gold_or_acceptable_rank", row["gold_rank"]) == 1
+    )
     print(f"Wrote {args.markdown_output}")
     print(f"Wrote {args.json_output}")
     print(f"Similarity backend: {scorer.backend}")
     print(f"Prompt pass: {prompt_pass}/{len(results)}")
     print(f"Gold top-1 among listed candidates: {gold_top1}/{len(results)}")
+    print(f"Gold-or-acceptable top-1 among listed candidates: {gold_or_acceptable_top1}/{len(results)}")
     return 0
 
 

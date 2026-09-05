@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0280",
+  "blind_packet_id": "P-52E036C9980B37BF26",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-2A39E212EABFCF08",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Table Extractor Skill",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "This skill enables precise extraction of tables from PDF documents"
+    },
+    {
+      "candidate_token": "C-3962F6E61E9F1B4E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Convert Word to Markdown",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "This skill only supports `.docx`."
+    },
+    {
+      "candidate_token": "C-54348153FD4D3BD3",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Use when surveying the DOCUMENTED visual and interaction conventions",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Use when surveying the DOCUMENTED visual and interaction conventions of a product's domain"
+    },
+    {
+      "candidate_token": "C-9A5C76E8952D865E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Chat with PDF",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Answer questions about PDF content, summarize, and extract information"
+    },
+    {
+      "candidate_token": "C-A3AACD1F21159058",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Threat Model Source Code Repo",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Trigger only when the user explicitly asks to threat model a codebase or path"
+    },
+    {
+      "candidate_token": "C-BE2ED82EB2B03DD5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "each sheet as its own `## <SheetName>` Markdown table",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "MarkItDown's XLSX converter renders each sheet as its own `## <SheetName>` Markdown table"
+    },
+    {
+      "candidate_token": "C-C0C7D4F967C1DAD2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Create, edit, and manipulate Excel spreadsheets programmatically using openpyxl",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Create, edit, and manipulate Excel spreadsheets programmatically using openpyxl"
+    },
+    {
+      "candidate_token": "C-F5658BA50292C9C2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Convert PDF to Markdown",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Convert PDF to Markdown"
+    }
+  ],
+  "reviewer_A_return_sha256": "f8e7616fcb9ecbb350948653542433ffcbc0d1cfc6063757bfca8f4a1f1ccbb3",
+  "reviewer_B_return_sha256": "90a01dad3a7298c3b0cb8cea775f2b092b4cb97e4048f8bc366e39724c722b3f",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

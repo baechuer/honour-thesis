@@ -1,0 +1,415 @@
+[
+  {
+    "id": "clear_exp_p01_openapi_backward_compatibility",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "api_backend_design",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "openapi-contract-reviewer",
+    "closest_alternatives": [
+      "external-api-integration-planner",
+      "webhook-contract-planner",
+      "architecture-boundary-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The request asks to review an existing API contract for schema/status/error compatibility issues rather than planning implementation or webhooks.",
+    "prompt": "Review the existing OpenAPI draft for backwards-compatibility risks before client release. I need endpoint-by-endpoint findings about response schemas, status codes, pagination, examples, and error models, not an implementation plan for calling the API."
+  },
+  {
+    "id": "clear_exp_p02_external_api_rate_limit_plan",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "api_backend_design",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "external-api-integration-planner",
+    "closest_alternatives": [
+      "openapi-contract-reviewer",
+      "webhook-contract-planner",
+      "service-dependency-mapper"
+    ],
+    "field_axes": [
+      "dependency_or_tool",
+      "workflow_or_procedure",
+      "input_or_precondition"
+    ],
+    "gold_rationale": "The request is about planning a third-party API integration with auth, rate limits, retries, and verification cases.",
+    "prompt": "Plan how our app should integrate with a third-party payments API. Map the auth flow, endpoint calls, pagination, rate limits, retries, idempotency keys, required secrets, and verification cases. Do not review our own OpenAPI contract."
+  },
+  {
+    "id": "clear_exp_p03_webhook_retry_contract",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "api_backend_design",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "webhook-contract-planner",
+    "closest_alternatives": [
+      "external-api-integration-planner",
+      "openapi-contract-reviewer",
+      "architecture-boundary-reviewer",
+      "webhook-integration-planner",
+      "webhook-setup-planner",
+      "public-office-webhook-automation"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The request centers on webhook receiver semantics: event contracts, verification, idempotency, retries, and replay handling.",
+    "prompt": "Design the contract for receiving subscription webhooks: event types, signature verification, idempotency keys, retry behavior, replay protection, and dead-letter handling. I am not asking for general API integration planning."
+  },
+  {
+    "id": "clear_exp_p04_visual_snapshot_only",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "browser_web_automation",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "web-page-snapshotter",
+    "closest_alternatives": [
+      "web-ui-tester",
+      "web-data-extractor",
+      "frontend-debugger"
+    ],
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The desired output is visual/page-state evidence, not interaction testing, data extraction, or debugging.",
+    "prompt": "Capture the current dashboard page state after login with screenshots and a short DOM/state summary for visual review. Do not submit forms, test pass/fail behavior, or debug source code."
+  },
+  {
+    "id": "clear_exp_p05_form_submission_delegate",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "browser_web_automation",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "web-form-filler",
+    "closest_alternatives": [
+      "web-ui-tester",
+      "web-page-snapshotter",
+      "web-data-extractor"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "side_effect_or_action",
+      "input_or_precondition"
+    ],
+    "gold_rationale": "The request asks the agent to fill and submit a real form using provided values, not test the UI or extract data.",
+    "prompt": "Use the supplied contact details to complete the vendor onboarding form and submit it once the values are verified. This is a delegated form-filling task, not a regression test or page snapshot."
+  },
+  {
+    "id": "clear_exp_p06_ui_regression_pass_fail",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "browser_web_automation",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "web-ui-tester",
+    "closest_alternatives": [
+      "web-form-filler",
+      "web-page-snapshotter",
+      "frontend-debugger"
+    ],
+    "field_axes": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The task requires exercising a user flow and reporting observed pass/fail behavior, not filling a real form or patching code.",
+    "prompt": "Run the checkout flow with test credentials and report whether validation, navigation, totals, and confirmation behavior match the expected user story. Provide reproduction steps and evidence, but do not fix the frontend code."
+  },
+  {
+    "id": "clear_exp_p07_data_trust_audit",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "data_spreadsheet",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "data-analysis-with-validation",
+    "closest_alternatives": [
+      "data-analysis-with-anomaly-focus",
+      "data-analysis-overview",
+      "data-analysis-for-reporting"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "output_artifact"
+    ],
+    "gold_rationale": "The request asks for validation checks and data-quality issues rather than anomaly watchlists or narrative reporting.",
+    "prompt": "Before anyone interprets this spreadsheet, check whether the data is trustworthy: missing values, duplicate rows, inconsistent categories, impossible dates, formula errors, and suspicious joins. Return a data-quality report, not a business summary."
+  },
+  {
+    "id": "clear_exp_p08_anomaly_watchlist_only",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "data_spreadsheet",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "data-analysis-with-anomaly-focus",
+    "closest_alternatives": [
+      "data-analysis-with-validation",
+      "data-analysis-for-root-cause-diagnosis",
+      "data-analysis-for-reporting"
+    ],
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The desired output is a ranked anomaly watchlist, not validation, root-cause explanation, or reporting prose.",
+    "prompt": "Create a compact anomaly watchlist from the monthly KPI sheet: spikes, drops, breakpoints, and outliers by region and product. Do not diagnose causes yet; just surface unusual patterns with evidence."
+  },
+  {
+    "id": "clear_exp_p09_targeted_document_fields",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "documents_files",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "document-field-extractor",
+    "closest_alternatives": [
+      "document-summariser",
+      "document-normaliser",
+      "multi-document-comparison-preparer"
+    ],
+    "field_axes": [
+      "output_artifact",
+      "workflow_or_procedure",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The request asks for targeted structured extraction of explicit fields rather than narrative summary or normalization.",
+    "prompt": "From this supplier agreement, extract only the renewal date, termination notice period, governing law, liability cap, data-processing clause, and named parties into a table. Do not summarize the whole contract."
+  },
+  {
+    "id": "clear_exp_p10_multi_doc_comparison_matrix",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "documents_files",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "multi-document-comparison-preparer",
+    "closest_alternatives": [
+      "document-field-extractor",
+      "document-summariser",
+      "document-normaliser"
+    ],
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The request requires aligning multiple documents into a comparison matrix, not extracting fields from one document.",
+    "prompt": "Prepare a comparison matrix across the three vendor proposals showing pricing model, contract length, implementation timeline, support obligations, and unresolved assumptions. The output should help compare documents side by side."
+  },
+  {
+    "id": "clear_exp_p11_ci_first_error_triage",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "github_ci_maintenance",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "ci-log-root-cause-debugger",
+    "closest_alternatives": [
+      "repo-code-reviewer",
+      "pr-review-comment-resolver",
+      "github-issue-triager"
+    ],
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The input is CI log output and the desired result is the first meaningful failure/root cause path.",
+    "prompt": "Inspect the failed GitHub Actions log and identify the first meaningful error, likely root cause, smallest fix path, and which job to rerun. This is not a general code review or issue triage task."
+  },
+  {
+    "id": "clear_exp_p12_review_comment_resolution_plan",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "github_ci_maintenance",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "pr-review-comment-resolver",
+    "closest_alternatives": [
+      "repo-code-reviewer",
+      "ci-log-root-cause-debugger",
+      "release-changelog-generator"
+    ],
+    "field_axes": [
+      "input_or_precondition",
+      "workflow_or_procedure",
+      "success_criterion"
+    ],
+    "gold_rationale": "The task is to address specific PR review comments, not perform a broad repo review or debug CI.",
+    "prompt": "Use the unresolved pull-request review comments to plan the exact code edits needed, mark which comments are addressed, and avoid unrelated refactors. The main input is reviewer feedback, not failing CI output."
+  },
+  {
+    "id": "clear_exp_p13_hf_dataset_viewer_schema",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "huggingface_ml_workflows",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "hf-dataset-viewer-inspector",
+    "closest_alternatives": [
+      "hf-local-model-selector",
+      "sentence-transformer-finetuner",
+      "hf-community-eval-runner"
+    ],
+    "field_axes": [
+      "dependency_or_tool",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The request specifically uses the Hugging Face Dataset Viewer to inspect splits/features/examples, not select or train a model.",
+    "prompt": "Using the Hugging Face Dataset Viewer metadata, inspect the dataset splits, feature schema, sample rows, and size before I build a loader. Do not choose a local model or fine-tune embeddings."
+  },
+  {
+    "id": "clear_exp_p14_sentence_embedding_finetune",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "huggingface_ml_workflows",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "sentence-transformer-finetuner",
+    "closest_alternatives": [
+      "hf-dataset-viewer-inspector",
+      "hf-local-model-selector",
+      "hf-community-eval-runner",
+      "psc-sentence-embedding-trainer",
+      "public-huggingface-train-sentence-transformers",
+      "psc-retrieval-result-adjudicator"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "dependency_or_tool",
+      "output_artifact"
+    ],
+    "gold_rationale": "The request asks for a sentence-transformer training workflow, not dataset inspection or generic model selection.",
+    "prompt": "Prepare a sentence-transformer fine-tuning run for retrieval pairs: dataset format, loss choice, validation split, training command, and evaluation metric. This is not just browsing a dataset card."
+  },
+  {
+    "id": "clear_exp_p15_pdf_redaction_safety_review",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "pdf_document_operations",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "pdf-redaction-reviewer",
+    "closest_alternatives": [
+      "pdf-layout-table-extractor",
+      "pdf-question-answerer",
+      "pdf-ocr-cleaner",
+      "privacy-risk-reviewer",
+      "public-office-chat-with-pdf",
+      "psc-pdf-evidence-qa"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "success_criterion",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The request is about checking whether redaction is safe/complete, not answering questions or extracting table data.",
+    "prompt": "Review the redacted PDF before external sharing. Check whether sensitive text, hidden layers, comments, metadata, or visually recoverable regions remain. Do not answer content questions from the PDF."
+  },
+  {
+    "id": "clear_exp_p16_pdf_form_completion",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "pdf_document_operations",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "pdf-form-filler",
+    "closest_alternatives": [
+      "document-field-extractor",
+      "pdf-layout-table-extractor",
+      "pdf-to-docx-converter",
+      "pdf-question-answerer",
+      "implicit-pdf-evidence-answerer"
+    ],
+    "field_axes": [
+      "input_or_precondition",
+      "side_effect_or_action",
+      "output_artifact"
+    ],
+    "gold_rationale": "The task is to populate PDF form fields from source data and report blanks, not extract fields or convert the PDF.",
+    "prompt": "Fill the grant application PDF form using the applicant spreadsheet, preserve the PDF form structure, and list fields that could not be completed. Do not convert it to DOCX or merely extract the blank fields."
+  },
+  {
+    "id": "clear_exp_p17_claim_support_audit",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "reading_research",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "citation-grounding-helper",
+    "closest_alternatives": [
+      "citation-note-extractor",
+      "paper-summariser",
+      "related-work-synthesiser",
+      "identity-ops-evidence-grounder",
+      "contract-ops-evidence-grounder"
+    ],
+    "field_axes": [
+      "success_criterion",
+      "workflow_or_procedure",
+      "output_artifact"
+    ],
+    "gold_rationale": "The request is to verify whether specific claims are supported by cited sources, not summarize papers or collect citation notes broadly.",
+    "prompt": "Check whether each claim in this paragraph is actually supported by the cited paper. Flag overclaims, missing caveats, and safer wording with source evidence. Do not summarize the whole paper."
+  },
+  {
+    "id": "clear_exp_p18_related_work_synthesis",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "reading_research",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "related-work-synthesiser",
+    "closest_alternatives": [
+      "paper-summariser",
+      "multi-source-comparison-builder",
+      "citation-note-extractor"
+    ],
+    "field_axes": [
+      "input_or_precondition",
+      "output_artifact",
+      "workflow_or_procedure"
+    ],
+    "gold_rationale": "The task requires synthesizing a related-work narrative across papers rather than summarizing one paper or preparing a comparison table only.",
+    "prompt": "Use these eight papers to draft a related-work synthesis around skill retrieval, retrieval-augmented agents, and scaling pressure. Group approaches by theme and identify the gap; do not produce isolated paper summaries."
+  },
+  {
+    "id": "clear_exp_p19_auth_flow_review",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "security_appsec",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "auth-flow-reviewer",
+    "closest_alternatives": [
+      "security-threat-modeler",
+      "security-code-reviewer",
+      "privacy-risk-reviewer"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "constraint_or_not_for",
+      "input_or_precondition"
+    ],
+    "gold_rationale": "The request focuses on authentication/session behavior, not general threat modelling, code review, or privacy compliance.",
+    "prompt": "Review the login, refresh-token, password reset, and session-expiry flow for security weaknesses. Focus on auth state transitions and token handling, not a general architecture threat model."
+  },
+  {
+    "id": "clear_exp_p20_skill_router_policy",
+    "family": "controlled_expansion_clear",
+    "cluster_id": "skill_representation_analysis",
+    "source_style": "clear_controlled_expansion",
+    "prompt_information_level": "L3_explicit_procedural",
+    "gold_skill": "skill-router-policy-designer",
+    "closest_alternatives": [
+      "skill-field-auditor",
+      "skill-benchmark-evaluator",
+      "skill-authoring-guide"
+    ],
+    "field_axes": [
+      "workflow_or_procedure",
+      "output_artifact",
+      "constraint_or_not_for"
+    ],
+    "gold_rationale": "The desired artifact is a routing policy that decides when to expose/retrieve skills, not an audit of a skill document or authoring guide.",
+    "prompt": "Specify when the system should reveal full procedural documents after candidate retrieval. Include candidate limits, confidence thresholds, fallback behavior, and the evidence used to decide whether a candidate deserves full-document exposure."
+  }
+]

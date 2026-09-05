@@ -5,10 +5,10 @@ This report implements Step 1 of the benchmark rubric: prompt references, skill 
 ## Overall Status
 
 - Step 1 integrity status: **PASS**
-- Prompt files: 1
-- Prompts: 82
-- Skills: 2401
-- Main evaluated skills: 137
+- Prompt files: 2
+- Prompts: 144
+- Skills: 2433
+- Main evaluated skills: 169
 - Background/public/support skills: 2264
 - Duplicate prompt IDs: 0
 - Duplicate skill names: 0
@@ -39,6 +39,7 @@ This report implements Step 1 of the benchmark rubric: prompt references, skill 
 | `pdf_document_operations` | 6 |
 | `planning_meetings` | 5 |
 | `public_imported_background` | 460 |
+| `public_style_controlled` | 32 |
 | `reading_research` | 8 |
 | `reply_messaging` | 5 |
 | `security_appsec` | 6 |
@@ -49,7 +50,8 @@ This report implements Step 1 of the benchmark rubric: prompt references, skill 
 
 | Family | Prompts |
 |---|---:|
-| `public_gold_validation` | 82 |
+| `public_gold_expansion` | 24 |
+| `public_gold_validation` | 120 |
 
 ## Public Imports
 

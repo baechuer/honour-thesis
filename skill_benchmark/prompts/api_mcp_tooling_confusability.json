@@ -33,7 +33,7 @@
       "rest-api-contract-designer",
       "mcp-server-builder"
     ],
-    "prompt": "Plan webhook handling for payment events: accepted event types, signature checks, idempotency, retry behavior, ordering, and dead-letter storage."
+    "prompt": "Plan an operational webhook integration workflow for payment events, including subscription setup, accepted event types, signature checks, idempotency, retry behavior, event ordering, downstream action triggers, dead-letter storage, monitoring, and handoff notes. I need an implementation/integration runbook for operating the webhook flow. Do not only design the receiver contract, event schema, payload validation document, contract test list, endpoint schema, or API design review."
   },
   {
     "id": "api_mcp_tooling_p4_auth_flow_integrator",
@@ -67,7 +67,9 @@
       "public-security-threat-model",
       "public-openai-security-best-practices",
       "security-threat-modeler",
-      "rest-api-contract-designer"
+      "rest-api-contract-designer",
+      "api-ops-risk-reviewer",
+      "privacy-risk-reviewer"
     ],
     "prompt": "Threat-review the billing API for authorization gaps, sensitive data exposure, rate-limit abuse, and validation risks. I need security findings, not user-facing docs."
   }

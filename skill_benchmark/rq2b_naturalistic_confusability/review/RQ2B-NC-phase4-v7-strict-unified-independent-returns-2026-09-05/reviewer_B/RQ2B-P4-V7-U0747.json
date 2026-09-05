@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy": "INADEQUATE", "candidate_token": "C-04D2964A0539208A", "missing_material_requirement_or_null": "Release-note transformation grouped by features, fixes, and breaking changes.", "rationale": "App-press outreach guidance does not transform merged PRs into the requested release notes.", "source_anchor": "# Press & PR for Apps"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-04F3612391D93808", "missing_material_requirement_or_null": "Release-note transformation grouped by features, fixes, and breaking changes.", "rationale": "Dependency upgrade auditing does not transform merged PRs into the requested release notes.", "source_anchor": "# Dependency Updater"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-217F59298F286CE7", "missing_material_requirement_or_null": "Release-note transformation grouped by features, fixes, and breaking changes.", "rationale": "Gene-set enrichment analysis does not transform merged PRs into the requested release notes.", "source_anchor": "## Scope"},
+    {"adequacy": "FULLY_ACCEPTABLE", "candidate_token": "C-324CDB161372ED5C", "missing_material_requirement_or_null": null, "rationale": "Uses merged-PR metadata and explicitly covers major features, breaking changes, and bug fixes without requiring code review.", "source_anchor": "Create featured sections for major features and breaking changes"},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-660F8F2325D52B41", "missing_material_requirement_or_null": "A dedicated Breaking Changes group.", "rationale": "Transforms raw PR titles into a user-facing changelog, but makes Changed/Deprecated optional rather than requiring a breaking-changes group.", "source_anchor": "(Optionally **Changed/Deprecated** when behavior shifts or something's going away.)"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-77C6E75C1A65C8E0", "missing_material_requirement_or_null": "Release-note transformation grouped by features, fixes, and breaking changes.", "rationale": "R package CRAN-release checking does not transform merged PRs into the requested release notes.", "source_anchor": "# `/r-package-check` — R Package Release Gate"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-C984EBD6C48CA83C", "missing_material_requirement_or_null": "Release-note transformation grouped by features, fixes, and breaking changes.", "rationale": "Synthetic CT generation does not transform merged PRs into the requested release notes.", "source_anchor": "# NV-Generate-CT (rflow-ct)"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-D917A730FBDE5A83", "missing_material_requirement_or_null": "Release-note transformation grouped by features, fixes, and breaking changes.", "rationale": "Dependency security auditing does not transform merged PRs into the requested release notes.", "source_anchor": "# Dependency Auditor"}
+  ],
+  "batch_id": "RQ2B-P4-V7-U0747",
+  "batch_input_sha256": "338954f93b4be1e5c124a7948895bcc4ec11b0dc9355f6c595d77f5428dbc7d1",
+  "blind_packet_id": "P-A11CE262DF79FFB70B",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "488678f9d7f4bd4f9a9ffeb475e835e4774b1f82484137711f5b8e9d604619b4"
+}

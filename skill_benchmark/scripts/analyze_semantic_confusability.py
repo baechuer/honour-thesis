@@ -324,19 +324,27 @@ def evaluate(prompts: list[dict[str, Any]], skills: list[dict[str, Any]], scorer
         gold_score = all_scores[gold]
         pair_results = []
         plausible_count = 0
-        for alternative in prompt.get("closest_alternatives", []):
+        alternatives = [
+            *prompt.get("closest_alternatives", []),
+            *prompt.get("acceptable_alternatives", []),
+        ]
+        alternatives = list(dict.fromkeys(alternatives))
+        acceptable_set = set(prompt.get("acceptable_alternatives", []))
+        for alternative in alternatives:
             prompt_alt_score = all_scores[alternative]
             skill_skill_score = float(skill_skill_matrix[skill_index[gold]][skill_index[alternative]])
             near_gold = prompt_alt_score >= max(0.01, gold_score - near_margin) or (
                 gold_score > 0 and prompt_alt_score / gold_score >= near_ratio
             )
             similar_skill_card = skill_skill_score >= skill_threshold
-            plausible = near_gold or similar_skill_card
+            acceptable_equivalent = alternative in acceptable_set
+            plausible = near_gold or similar_skill_card or acceptable_equivalent
             if plausible:
                 plausible_count += 1
             pair_results.append(
                 {
                     "alternative_skill": alternative,
+                    "acceptable_equivalent": acceptable_equivalent,
                     "prompt_gold_score": round(gold_score, 4),
                     "prompt_alternative_score": round(prompt_alt_score, 4),
                     "skill_card_similarity": round(skill_skill_score, 4),
@@ -361,7 +369,7 @@ def evaluate(prompts: list[dict[str, Any]], skills: list[dict[str, Any]], scorer
                     for skill in ranked_all[:10]
                 ],
                 "plausible_alternative_count": plausible_count,
-                "pass_semantic_confusability": plausible_count >= min(2, len(prompt.get("closest_alternatives", []))),
+                "pass_semantic_confusability": plausible_count >= min(2, len(alternatives)),
                 "pairs": pair_results,
             }
         )
@@ -398,7 +406,7 @@ def write_markdown(results: list[dict[str, Any]], path: Path, scorer: Similarity
     lines = [
         "# Semantic Confusability Report",
         "",
-        "This report implements Step 3 of the benchmark rubric: listed alternatives should be semantically plausible neighbours, not random unrelated distractors.",
+        "This report implements Step 3 of the benchmark rubric: listed alternatives and recorded acceptable equivalents should be semantically plausible neighbours, not random unrelated distractors.",
         "",
         f"Similarity backend: **{scorer.backend}**"
         + (f" using `{scorer.model_name}`." if scorer.backend == "embedding" else "."),
@@ -412,7 +420,7 @@ def write_markdown(results: list[dict[str, Any]], path: Path, scorer: Similarity
         f"- Gold/alternative pairs marked plausible: {pct(plausible_pairs, pair_total)}",
         f"- Gold skill ranked top-1 among all skills by this backend: {pct(gold_top1, prompt_total)}",
         "",
-        "Pass rule used here: each prompt should have at least two alternatives whose description-card score is close to the gold prompt score, or whose skill card is similar to the gold skill card.",
+        "Pass rule used here: each prompt should have at least two alternatives whose description-card score is close to the gold prompt score, whose skill card is similar to the gold skill card, or whose acceptable-equivalent status has already been manually recorded.",
         "",
         "## Family Summary",
         "",
@@ -449,15 +457,16 @@ def write_markdown(results: list[dict[str, Any]], path: Path, scorer: Similarity
                 f"- Plausible listed alternatives: {row['plausible_alternative_count']}",
                 f"- Gold rank among all skills by similarity backend: {row['gold_rank_all_skills']}",
                 "",
-                "| Alternative | Prompt-gold | Prompt-alt | Gold-alt skill-card | Plausible? | Shared prompt/alt terms | Shared gold/alt terms |",
-                "|---|---:|---:|---:|---|---|---|",
+                "| Alternative | Acceptable? | Prompt-gold | Prompt-alt | Gold-alt skill-card | Plausible? | Shared prompt/alt terms | Shared gold/alt terms |",
+                "|---|---|---:|---:|---:|---|---|---|",
             ]
         )
         for pair in row["pairs"]:
             prompt_terms = ", ".join(pair["shared_prompt_alt_terms"]) or "-"
             skill_terms = ", ".join(pair["shared_gold_alt_terms"]) or "-"
             lines.append(
-                f"| `{pair['alternative_skill']}` | {pair['prompt_gold_score']:.4f} | "
+                f"| `{pair['alternative_skill']}` | {'yes' if pair.get('acceptable_equivalent') else 'no'} | "
+                f"{pair['prompt_gold_score']:.4f} | "
                 f"{pair['prompt_alternative_score']:.4f} | {pair['skill_card_similarity']:.4f} | "
                 f"{'yes' if pair['plausible_confusion'] else 'no'} | {prompt_terms} | {skill_terms} |"
             )

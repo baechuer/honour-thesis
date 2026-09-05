@@ -1,0 +1,5 @@
+# Markdown hard line breaks and verbatim third-party LaTex styles preserve
+# trailing spaces by design; do not reject them in repository diff checks.
+*.md whitespace=-trailing-space,-blank-at-eof
+*.sty whitespace=-trailing-space,-blank-at-eof
+*.bst whitespace=-trailing-space,-blank-at-eof

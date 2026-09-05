@@ -6,7 +6,7 @@ Purpose: draft public imported skills as candidate gold-label retrieval targets 
 
 ## Summary
 
-- Draft prompts: 82
+- Draft prompts: 120
 - Missing references: 0
 - Status: draft pending manual adjudication
 
@@ -96,6 +96,44 @@ Purpose: draft public imported skills as candidate gold-label retrieval targets 
 | `public_gold_p80_dcf_valuation` | `public-office-dcf-valuation` | `finance-analytics` | output_artifact, workflow_or_procedure, success_criterion | - |
 | `public_gold_p81_shopify_automation` | `public-office-shopify-automation` | `commerce-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
 | `public_gold_p82_zendesk_automation` | `public-office-zendesk-automation` | `support-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p83_web_seo` | `public-addy-web-seo` | `web-quality` | success_criterion, workflow_or_procedure, boundary_signal | public-office-seo-optimizer |
+| `public_gold_p84_web_performance` | `public-addy-web-performance` | `web-quality` | workflow_or_procedure, success_criterion, boundary_signal | - |
+| `public_gold_p85_web_quality_audit` | `public-addy-web-web-quality-audit` | `web-quality` | workflow_or_procedure, output_artifact, success_criterion | - |
+| `public_gold_p86_web_best_practices` | `public-addy-web-best-practices` | `web-quality` | success_criterion, workflow_or_procedure, boundary_signal | public-addy-web-web-quality-audit |
+| `public_gold_p87_api_design_principles` | `public-api-design-principles` | `api-design` | output_artifact, workflow_or_procedure, boundary_signal | public-oh-my-api-design, rest-api-contract-designer, public-addy-agent-api-and-interface-design |
+| `public_gold_p88_interface_design` | `public-addy-agent-api-and-interface-design` | `software-design` | output_artifact, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p89_api_documentation` | `public-oh-my-api-documentation` | `api-docs` | input_or_precondition, output_artifact, boundary_signal | api-documentation-writer |
+| `public_gold_p90_claude_api` | `public-anthropic-claude-api` | `api-provider` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p91_admin_api_endpoint` | `public-swebench-add-admin-api-endpoint` | `api-implementation` | input_or_precondition, dependency_or_tool, workflow_or_procedure | - |
+| `public_gold_p92_security_review` | `public-swebench-security-review` | `security` | input_or_precondition, workflow_or_procedure, output_artifact | security-code-reviewer |
+| `public_gold_p93_security_best_practices` | `public-openai-security-best-practices` | `security` | success_criterion, workflow_or_procedure, boundary_signal | public-oh-my-security-best-practices, public-addy-agent-security-and-hardening |
+| `public_gold_p94_security_ownership_map` | `public-openai-security-ownership-map` | `security` | input_or_precondition, output_artifact, workflow_or_procedure | - |
+| `public_gold_p95_security_monitoring` | `public-office-security-monitoring` | `security-ops` | workflow_or_procedure, output_artifact, boundary_signal | - |
+| `public_gold_p96_jira_automation` | `public-office-jira-automation` | `project-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p97_linear_automation` | `public-office-linear-automation` | `project-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | public-openai-linear |
+| `public_gold_p98_trello_automation` | `public-office-trello-automation` | `project-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p99_slack_workflows` | `public-office-slack-workflows` | `communication-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p100_teams_automation` | `public-office-microsoft-teams` | `communication-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p101_twilio_sms` | `public-office-twilio-sms` | `communication-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p102_webhook_automation` | `public-office-webhook-automation` | `api-automation` | input_or_precondition, workflow_or_procedure, output_artifact | webhook-integration-planner |
+| `public_gold_p103_mailchimp_automation` | `public-office-mailchimp-automation` | `marketing-automation` | dependency_or_tool, workflow_or_procedure, output_artifact | - |
+| `public_gold_p104_social_publisher` | `public-office-social-publisher` | `marketing-automation` | workflow_or_procedure, dependency_or_tool, success_criterion | - |
+| `public_gold_p105_youtube_automation` | `public-office-youtube-automation` | `media-automation` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p106_google_ads_manager` | `public-office-google-ads-manager` | `marketing-automation` | dependency_or_tool, workflow_or_procedure, success_criterion | - |
+| `public_gold_p107_proposal_writer` | `public-office-proposal-writer` | `business-writing` | output_artifact, success_criterion, boundary_signal | - |
+| `public_gold_p108_report_generator` | `public-office-report-generator` | `business-reporting` | input_or_precondition, output_artifact, workflow_or_procedure | - |
+| `public_gold_p109_job_description` | `public-office-job-description` | `hr-writing` | output_artifact, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p110_offer_letter` | `public-office-offer-letter` | `hr-writing` | output_artifact, input_or_precondition, boundary_signal | - |
+| `public_gold_p111_docusign_automation` | `public-office-docusign-automation` | `document-automation` | dependency_or_tool, workflow_or_procedure, output_artifact | - |
+| `public_gold_p112_expense_tracker` | `public-office-expense-tracker` | `finance-ops` | workflow_or_procedure, input_or_precondition, output_artifact | - |
+| `public_gold_p113_quickbooks_automation` | `public-office-quickbooks-automation` | `finance-ops` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p114_stripe_payments` | `public-office-stripe-payments` | `finance-ops` | dependency_or_tool, workflow_or_procedure, boundary_signal | - |
+| `public_gold_p115_subscription_management` | `public-office-subscription-management` | `finance-ops` | workflow_or_procedure, success_criterion, boundary_signal | - |
+| `public_gold_p116_transcription_automation` | `public-office-transcription-automation` | `media-automation` | input_or_precondition, output_artifact, workflow_or_procedure | - |
+| `public_gold_p117_podcast_automation` | `public-office-podcast-automation` | `media-automation` | workflow_or_procedure, output_artifact, boundary_signal | - |
+| `public_gold_p118_news_monitor` | `public-office-news-monitor` | `research-monitoring` | workflow_or_procedure, output_artifact, boundary_signal | - |
+| `public_gold_p119_data_analysis` | `public-office-data-analysis` | `data-analysis` | input_or_precondition, workflow_or_procedure, success_criterion | - |
+| `public_gold_p120_xlsx_manipulation` | `public-office-xlsx-manipulation` | `data-office` | dependency_or_tool, output_artifact, workflow_or_procedure | public-office-excel-automation |
 
 ## Manual Adjudication Checklist
 

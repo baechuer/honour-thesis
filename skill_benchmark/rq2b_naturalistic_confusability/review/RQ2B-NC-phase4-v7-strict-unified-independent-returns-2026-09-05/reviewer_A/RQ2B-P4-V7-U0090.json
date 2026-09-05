@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4CD98900D9DEEA1A",
+      "missing_material_requirement_or_null": "A repeatable hosted-model evaluation program covering the requested mixed test types, isolated execution, monitoring, and experiment tracking.",
+      "rationale": "This is a causal-identification analysis procedure, not a route to configure or run model evaluations.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-54FAF7C1791C1308",
+      "missing_material_requirement_or_null": "Containerized isolated execution, job monitoring, and experiment-tracker export for the requested mixed hosted-model test program.",
+      "rationale": "It gives repeatable benchmark configurations, small subsets, and local outputs, but does not provide the requested isolated-job, monitoring, and tracker workflow across the mixed test types.",
+      "source_anchor": "# lm-evaluation-harness - LLM Benchmarking"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-603489B4CE16C461",
+      "missing_material_requirement_or_null": "A repeatable evaluation program for hosted language, safety, multimodal, and tool-use model tests.",
+      "rationale": "This sets personal nutrition targets and contains no model-evaluation route.",
+      "source_anchor": "# Nutrition Planner"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-6289BFB67AF8DBFE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It specifies endpoint and task configurations, sample-limited smoke runs, containerized multi-backend execution, status monitoring, local result artifacts, and MLflow or Weights & Biases export across language, safety, vision-language, and function-calling evaluation support.",
+      "source_anchor": "# NeMo Evaluator SDK - Enterprise LLM Benchmarking"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7A6ABE2AC0ACD425",
+      "missing_material_requirement_or_null": "A repeatable hosted-model evaluation program with mixed tests, isolated execution, monitoring, and result tracking.",
+      "rationale": "This designs product authentication setup rather than model evaluation.",
+      "source_anchor": "# Authentication Setup"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8BE9442BF8D1722E",
+      "missing_material_requirement_or_null": "A test-program design and execution workflow for hosted models and the requested evaluation categories.",
+      "rationale": "This delegates software-development tasks to a coding agent and does not evaluate hosted models.",
+      "source_anchor": "# Codex CLI"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D1A1DD430C05113B",
+      "missing_material_requirement_or_null": "Mixed language, safety, multimodal, and tool-use evaluation of hosted models with experiment tracking.",
+      "rationale": "This is a code-generation benchmark harness, so it does not provide the requested mixed hosted-model test program.",
+      "source_anchor": "# BigCode Evaluation Harness - Code Model Benchmarking"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FE6A65E16D357BC9",
+      "missing_material_requirement_or_null": "A repeatable technical evaluation workflow for hosted models, including test execution and result tracking.",
+      "rationale": "This surveys published user-research evidence and does not run model evaluations.",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0090",
+  "batch_input_sha256": "945b387fe23a7379399f4c981768e7293647420869cc4f6fca4b2d04111a6c15",
+  "blind_packet_id": "P-D521D11164B64868DA",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "23714b26a9cf4d08e4ed8ae1bacd5fc29e2c39fb365f35d46a45e8390915d105"
+}

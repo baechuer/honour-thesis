@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0036",
+  "blind_packet_id": "P-4C9F149E3ED35909CA",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0B352DFE88634700",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# `/r-package-check` — R Package Release Gate",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "### Phase 3: Check (`--as-cran`)"
+    },
+    {
+      "candidate_token": "C-27012B9628418255",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Inputs to collect",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## Operating procedure"
+    },
+    {
+      "candidate_token": "C-6AD56BC602DA4B53",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Security Agent Remediation",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Security Agent Remediation"
+    },
+    {
+      "candidate_token": "C-AEF0463F340D087C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# WAS Cluster",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# WAS Cluster"
+    },
+    {
+      "candidate_token": "C-C4F2CE7419CD1767",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# CRAN Extra Checks",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Standard CRAN Preparation Checklist"
+    },
+    {
+      "candidate_token": "C-CAADDBF3947FA24B",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Create an R Package Release Checklist",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "### Step 1: Validation"
+    },
+    {
+      "candidate_token": "C-D74F670283E79E89",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# SERP Gap Analyzer",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# SERP Gap Analyzer"
+    },
+    {
+      "candidate_token": "C-F2C4B581142BDE45",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "### Procedure 2 — execute one search angle"
+    }
+  ],
+  "reviewer_A_return_sha256": "e1103ac71a5f8a343a2d84a6d93e815f24ec65f3d9817d0d7c95be3f14990603",
+  "reviewer_B_return_sha256": "0f45298e7caaa951828f8f22f97a5198f60ad12f4e05ae9b1e4348a341f65fc3",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

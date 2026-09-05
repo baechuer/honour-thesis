@@ -19,7 +19,9 @@
       "public-swebench-grafana-dashboards",
       "public-swebench-python-observability",
       "metrics-overview",
-      "prometheus-alert-rule-writer"
+      "prometheus-alert-rule-writer",
+      "dashboard-ops-quality-auditor",
+      "dashboard-ops-monitoring-plan-builder"
     ],
     "prompt": "Design a Grafana dashboard for checkout service health with panels, variables, queries, thresholds, and operator layout. This is not an alert-rule task."
   },
@@ -31,7 +33,9 @@
       "public-swebench-distributed-tracing",
       "public-swebench-python-observability",
       "metrics-root-cause-diagnoser",
-      "prometheus-alert-rule-writer"
+      "prometheus-alert-rule-writer",
+      "service-mesh-traffic-debugger",
+      "latency-anomaly-detector"
     ],
     "prompt": "Use `/workspace/fixtures/observability_reliability/checkout_trace.json` to find where checkout latency is introduced across services. I need trace-based diagnosis, not a dashboard."
   },
@@ -55,7 +59,9 @@
       "public-swebench-python-resilience",
       "dependency-risk-auditor",
       "prometheus-alert-rule-writer",
-      "grafana-dashboard-builder"
+      "grafana-dashboard-builder",
+      "api-security-threat-reviewer",
+      "contract-risk-reviewer"
     ],
     "prompt": "Review `/workspace/fixtures/observability_reliability/payment_client.py` for retry, timeout, backoff, fallback, and cascading-failure risks."
   },
@@ -67,7 +73,9 @@
       "public-swebench-service-mesh-observability",
       "public-swebench-istio-traffic-management",
       "public-swebench-linkerd-patterns",
-      "prometheus-alert-rule-writer"
+      "prometheus-alert-rule-writer",
+      "service-dependency-mapper",
+      "resilience-pattern-reviewer"
     ],
     "prompt": "Debug the service-mesh routing notes in `/workspace/fixtures/observability_reliability/mesh_config.yaml`, focusing on traffic split, mTLS, retries, and destination rules."
   }

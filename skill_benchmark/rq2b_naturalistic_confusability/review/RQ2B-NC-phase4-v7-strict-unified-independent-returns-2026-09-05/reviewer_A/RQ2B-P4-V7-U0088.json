@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-022EBA23D7DA0739",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides a defensive, evidence-based review across IAM, network exposure, secrets, containers, pipelines, and cloud/IaC configuration, with prioritized findings and remediation plans.",
+      "source_anchor": "Identify security risks and infrastructure misconfigurations"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2C82B55FDCB073F6",
+      "missing_material_requirement_or_null": "Cross-layer review of container and pipeline settings.",
+      "rationale": "Covers Terraform infrastructure, including IAM, network, secrets, and configuration risks, but its review scope does not cover container or CI/CD pipeline settings.",
+      "source_anchor": "## Review checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-83284DC12FDB1056",
+      "missing_material_requirement_or_null": "Identity, network, container, and infrastructure-configuration review beyond CI/CD pipelines.",
+      "rationale": "Provides evidence-based CI/CD security review for pipeline settings and secrets, but does not assess the requested non-pipeline deployment configuration layers.",
+      "source_anchor": "Review CI/CD pipelines"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9E91495F27736A6B",
+      "missing_material_requirement_or_null": "A concrete evidence-based security assessment of the specified deployment configuration layers with ranked defensive findings.",
+      "rationale": "Supplies pre-release workflow gates such as code review, CI checks, deployment, and monitoring, but delegates rather than performs the requested security configuration assessment.",
+      "source_anchor": "## Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A4302AA7B41B4FC0",
+      "missing_material_requirement_or_null": "A deployment security review that assesses and ranks identity, network, secrets, container, pipeline, and infrastructure risks with evidence and defensive fixes.",
+      "rationale": "Teaches defensive Bash authoring patterns rather than reviewing a deployment configuration or producing security findings.",
+      "source_anchor": "## Core Defensive Principles"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E7637289ED5FB01F",
+      "missing_material_requirement_or_null": "An evidence-based, ranked review of the specific deployment configuration, including container and infrastructure settings.",
+      "rationale": "Provides relevant security requirements for authentication, secrets, configuration, and pipeline testing, but is a development policy rather than the requested cross-layer deployment assessment.",
+      "source_anchor": "## Secure Configuration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EF62A27368CD31BB",
+      "missing_material_requirement_or_null": "A deployment security review that assesses and ranks identity, network, secrets, container, pipeline, and infrastructure risks with evidence and defensive fixes.",
+      "rationale": "Runs gene-set enrichment analysis and has no capability relevant to reviewing a deployment configuration for security weaknesses.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4925EEDF4EA745E",
+      "missing_material_requirement_or_null": "A deployment security review that assesses and ranks identity, network, secrets, container, pipeline, and infrastructure risks with evidence and defensive fixes.",
+      "rationale": "Targets cloud cost optimization; its IaC discussion does not provide the requested security assessment or defensive risk ranking.",
+      "source_anchor": "## Review checklist"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0088",
+  "batch_input_sha256": "f673e8af60e29309c94d8ffc35024b2018af654e1e9ae28030c2fdef3da391f9",
+  "blind_packet_id": "P-B651D019F732D263A7",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "39729feff82a421bc2eec229285f712bb83cd1a49f7a5ad6b6afe2ebbe2c02a6"
+}

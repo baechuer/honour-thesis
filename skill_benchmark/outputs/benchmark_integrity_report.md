@@ -5,8 +5,8 @@ This report implements Step 1 of the benchmark rubric: prompt references, skill 
 ## Overall Status
 
 - Step 1 integrity status: **PASS**
-- Prompt files: 23
-- Prompts: 201
+- Prompt files: 25
+- Prompts: 245
 - Skills: 2433
 - Main evaluated skills: 169
 - Background/public/support skills: 2264
@@ -54,6 +54,7 @@ This report implements Step 1 of the benchmark rubric: prompt references, skill 
 | `api_mcp_tooling` | 6 |
 | `browser_web_automation` | 6 |
 | `code_github_workflow` | 6 |
+| `controlled_expansion_clear` | 20 |
 | `data_spreadsheet` | 7 |
 | `deployment_browser_qa` | 6 |
 | `documents_files` | 7 |
@@ -67,6 +68,7 @@ This report implements Step 1 of the benchmark rubric: prompt references, skill 
 | `office_business_automation` | 6 |
 | `pdf_document_operations` | 6 |
 | `planning_meetings` | 5 |
+| `public_like_extra_controlled` | 24 |
 | `public_style_controlled` | 64 |
 | `reading_research` | 8 |
 | `reply_messaging` | 5 |

@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0214",
+  "blind_packet_id": "P-FD2F942EBE08CB25EC",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-121A04DD5E712734",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Use a constrained spacing scale, not arbitrary values.",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Use a constrained spacing scale, not arbitrary values."
+    },
+    {
+      "candidate_token": "C-18F139269565B994",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "system-level token governance",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "system-level token governance"
+    },
+    {
+      "candidate_token": "C-331B9734E2859605",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Drift report.",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Drift report."
+    },
+    {
+      "candidate_token": "C-33923D724529E26A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Run a systematic multi-pass code review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Review the change, not the whole codebase"
+    },
+    {
+      "candidate_token": "C-588D764AE4B7CBDD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Push design tokens from code INTO Figma as variables",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Push design tokens from code INTO Figma as variables"
+    },
+    {
+      "candidate_token": "C-C556880B8504D6B0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "local-first design artifact generation",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Route design-generation work into the right Open Design workflow mode"
+    },
+    {
+      "candidate_token": "C-DFFE2B73A348CE58",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Run GSEA on a ranked gene list",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "candidate_token": "C-E08A87C87D90FD1B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Figma variables → design tokens",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Figma variables → design tokens"
+    }
+  ],
+  "reviewer_A_return_sha256": "64f27c0a027dde3f1e5f609f121f882edfa2de46806c176362160763230fb1bf",
+  "reviewer_B_return_sha256": "c2967b937d91a4717a470545e86dd5cfd87c2144122958d9a7af1050aa2e33e4",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

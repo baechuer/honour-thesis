@@ -11,13 +11,15 @@ This appendix summarises the benchmark validation loop used in the project. The 
   \item \textbf{Gold-label stability and leakage.} Prompts should not reveal the answer through exact skill names, copied phrases, or hidden assumptions.
   \item \textbf{Scale regime.} The benchmark should include enough skills to create retrieval pressure and context pressure.
   \item \textbf{Public-skill field audit.} Public skills should be checked for observed, extractable, and proposed representation fields.
-  \item \textbf{Public-gold validation.} Public skills can be used as gold targets only after atomization, leakage checks, semantic alternatives, and manual adjudication.
+  \item \textbf{Public-gold validation.} Public skills can be used as gold targets only after atomisation, leakage checks, semantic alternatives, and manual adjudication.
   \item \textbf{Offline selector evaluation.} Methods should be compared on top-1, top-k, MRR, non-core false positives, and candidate budget.
   \item \textbf{Progressive-disclosure baseline.} The normal main-agent skill-selection pattern should be evaluated where feasible.
   \item \textbf{Downstream validation.} A smaller sample should test whether retrieval differences affect final task artifacts.
 \end{enumerate}
 
-\section{Current Pass/Warning Summary}
+\section{Historical Frozen-v0.4 Pass/Warning Summary}
+
+This table records the historical frozen-v0.4 validation state. Its 245/144 prompt counts and acceptable-alternative status are not the thesis-facing V3 RQ2b strict-only endpoint.
 
 \begin{table}[h]
 \centering
@@ -25,16 +27,16 @@ This appendix summarises the benchmark validation loop used in the project. The 
 \toprule
 Step & Current status \\
 \midrule
-Integrity & PASS: 137 prompts and 2401 skills resolve. \\
-Procedural distinctness & PASS: 137/137 prompts and 449/449 pairs pass. \\
-Prompt-specific alignment & PASS with caveat: 122/137 prompts pass MiniLM alignment. \\
-Semantic confusability & WARN/near-pass: 116/137 prompts pass. \\
-Prompt leakage & PASS: 0 critical and 0 high-risk leaks. \\
-Scale & PASS: 2401 skills; R1 approximately 123k visible tokens. \\
-Public field audit & Mostly done: 460/460 public skills audited. \\
-Public-gold & Manually adjudicated; cleanup required. \\
+Integrity & PASS: 245 controlled prompts, 144 public-gold prompts, and 2433 skills resolve. \\
+Procedural distinctness & PASS: controlled 245/245 prompts and 830/830 pairs; public-gold 144/144 prompts and 575/575 pairs. \\
+Prompt-specific alignment & PASS with caveats: controlled 238/245 prompts; public-gold 131/144 prompts. \\
+Semantic confusability & PASS: controlled 243/245 prompts; public-gold 144/144 prompts. \\
+Prompt leakage & PASS: 0 critical and 0 high-risk leaks in both main strata. \\
+Scale & PASS: 2433 skills; R1 approximately 333k visible tokens. \\
+Public field audit & Historical frozen-v0.4 status: 460/460 imported public skills audited. The current prevalence evidence is a separate 29,292-document full-primary-document census. \\
+Public-gold & Historical frozen-v0.4 PASS with separate strict and acceptable-alternative scoring; not used for V3 strict-only results. \\
 Downstream validation & Planned but not executed. \\
 \bottomrule
 \end{tabular}
-\caption{Current validation summary.}
+\caption{Historical frozen-v0.4 validation summary.}
 \end{table}

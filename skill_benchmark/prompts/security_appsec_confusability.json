@@ -8,7 +8,7 @@
       "auth-flow-reviewer",
       "privacy-risk-reviewer"
     ],
-    "prompt": "We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, reason across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk."
+    "prompt": "We are designing a new file-sharing feature where users can invite collaborators by email, generate public links, and revoke access later. Before implementation, create a full threat model across protected assets, external actors, component boundaries, abuse scenarios, security assumptions, mitigations, detection ideas, and residual risk. Do not limit the review to privacy compliance or auth-flow mechanics."
   },
   {
     "id": "sec_p2_security_code_review",
@@ -19,7 +19,7 @@
       "auth-flow-reviewer",
       "security-threat-modeler"
     ],
-    "prompt": "Review this single API handler for concrete code-level security vulnerabilities and fixes tied to the implementation. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level flaws such as open redirects, unsafe validation, and incorrect access checks in this function."
+    "prompt": "Review this single API handler implementation for concrete code-level security vulnerabilities and focused fixes. It accepts `redirectUrl` from the request body, checks the current user, updates the user's profile, and redirects. Focus on handler-level exploit paths such as open redirects, unsafe validation, authorization bypass, and incorrect access checks in this function. Do not produce an auth-flow architecture review, privacy review, or general threat model."
   },
   {
     "id": "sec_p3_dependency_risk",

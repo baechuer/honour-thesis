@@ -1,274 +1,1134 @@
 \chapter{Results}
 
-\section{Benchmark Validation Results}
+\section{Current Result Scope}
 
-The active benchmark contains 2401 skills and 137 controlled evaluated prompts. Table \ref{tab:validation-status} summarises the current validation state.
+The current result set answers two research questions through four completed experiments, alongside a set of historical exploratory records. RQ1 uses two complementary interventions: seven AI-assisted, researcher-directed and researcher-reviewed controlled near-neighbour suites, each with 50 clusters and field-specific prompt variants; and a source-grounded public-document intervention that removes cited information from exact original documents. RQ2a is a matched-content fixed-candidate mechanism study. RQ2b is a source-grounded, strict-gold full-library study over 2,433 skills and 381 prompts (243 controlled and 138 public-gold). Historical representation and retrieval matrices based on frozen benchmark version \texttt{benchmark-v0.4-2026-06-16} are retained separately for provenance and portability context.
 
-\begin{table}[h]
+Section \ref{sec:rq1-results-field-isolation} reports the completed RQ1 controlled and public-artifact evidence. Section \ref{sec:rq2a-confirmatory-results} reports the completed matched-content RQ2a confirmatory study over 280 untouched clusters, 600 prompts, 22 conditions, and 13,200 aligned decisions. Section \ref{sec:rq2b-full-library-results} reports the completed full-library RQ2b validation, including first-stage candidate retrieval, fixed-Top-20 reranking, failure decomposition, and recorded cost. Later frozen-v0.4, M6, and external SkillRouter sections are retained as exploratory, diagnostic, feasibility, or portability evidence; they must not be read as the final RQ2a or RQ2b answer. Graph/tree retrieval and downstream execution remain outside the active scope.
+
+\section{RQ1 Results: Controlled and Public-Artifact Evidence}
+\label{sec:rq1-results-field-isolation}
+
+\subsection{Public-Skill Primary-Document Prevalence}
+
+Before testing whether a field changes routing, we checked whether the proposed information types actually recur in public skill artifacts. A frozen source frame of 29,292 canonical public primary skill documents was reviewed in 31 batches by a Codex \texttt{gpt-5.6-terra} agent using \texttt{xhigh} reasoning. The agent used a simple binary rule: a field received 1 when it was expressed anywhere in the complete primary document and 0 otherwise. The review included YAML frontmatter, including \texttt{name} and \texttt{description}, and every Markdown section, table, and example; it did not inspect attached scripts, references, or other auxiliary files. Thus the census measures information present in the agent-visible primary skill document, not only information stated in the Markdown body.
+
+\begin{table}[H]
 \centering
-\begin{tabular}{p{0.30\textwidth}p{0.58\textwidth}}
+\small
+\begin{tabular}{lrr}
 \toprule
-Check & Current result \\
+Candidate information field & Documents present & Share of 29,292 \\
 \midrule
-Integrity & PASS: 137 prompts and 2401 skills resolve. \\
-Procedural distinctness & PASS: 137/137 prompts and 449/449 gold/alternative pairs pass field-audit criteria. \\
-Prompt-specific alignment & PASS with caveat: 122/137 prompts pass MiniLM alignment. \\
-Semantic confusability & WARN/near-pass: 116/137 prompts, or 84.7\%, have at least two plausible alternatives. \\
-Prompt leakage & PASS: 0 critical exact-name leaks and 0 high-risk leaks. \\
-Scale regime & PASS: R1 flat metadata is approximately 123k visible tokens; full skill artifacts exceed 1M visible tokens. \\
-Public field audit & Mostly complete: 460/460 public skills audited heuristically and with DeepSeek model-assisted verification. \\
-Public-gold validation & Manually adjudicated: 21 strict keep, 7 keep with acceptable alternatives, 4 revise/exclude. \\
+Use condition & 23,634 & 80.68\% \\
+Input / precondition & 20,618 & 70.39\% \\
+Output / artifact & 23,363 & 79.76\% \\
+Workflow / procedure & 24,412 & 83.34\% \\
+Success / verification & 20,968 & 71.58\% \\
+Boundary / not-for & 19,543 & 66.72\% \\
+Dependency / resource & 22,064 & 75.32\% \\
+Few-shot example & 19,013 & 64.91\% \\
 \bottomrule
 \end{tabular}
-\caption{Current benchmark validation status.}
-\label{tab:validation-status}
+\caption{Model-assisted binary review of the complete primary document for 29,292 frozen public skills. Metadata and Markdown body are both in scope; auxiliary files are not.}
+\label{tab:rq1-public-field-prevalence}
 \end{table}
 
-These results indicate that the benchmark is valid enough for retrieval-method comparison, but not final enough for unrestricted claims. The main remaining risks are public-gold cleanup, non-core winner adjudication, and downstream validation.
+The census supplies descriptive support for field selection: the categories motivated by the literature also recur in independently authored public skill documents, at different but substantial frequencies. It does not show that every field occurs in every skill, that a field originates specifically in metadata or body text, or that field presence improves retrieval. Those usefulness claims remain for the controlled field-isolation and public original-document removal experiments below. The review is model-assisted rather than independent human annotation and was completed in 31 recorded batches, so it is used as descriptive context rather than as a public annotation dataset or quality certification.
 
-\section{Local Selector Results}
+\subsection{Controlled Field-Isolation Results}
 
-Table \ref{tab:local-2401} summarises the current deterministic local selectors on the 2401-skill library.
+The clearest current RQ1 results are the completed field-isolation suites for use condition, input/precondition, output/artifact, dependency/resource, boundary/not-for, success/verification, and workflow/procedure. These results are reported before the broader retrieval matrix because they answer the thesis-first question directly: whether one operational field helps separate semantically similar skills when non-target information is controlled.
 
-\begin{table}[h]
+Each suite contains 50 near-neighbour clusters. Most suites use one direct and one paraphrased prompt per cluster; dependency/resource replaces the paraphrase with a contextual variant, and boundary/not-for adds an implicit-authority variant. Within each cluster, the three sibling skills share all non-target fields. The hidden condition exposes only their shared context, so they are intentionally tied. The exposed condition presents the same context plus one candidate-specific field value. Top-1 and MRR use tie-aware scoring. BM25 and Qwen \texttt{text-embedding-v4} are the primary retrievers; DeepSeek and Codex selectors are secondary reasoning checks. The suites were created with AI assistance under a researcher-defined rubric and mechanically checked. The researcher then reviewed and approved all 350 rows with the labels visible; this was not an independent blinded review.
+
+For both retrievers, Top-1 improves after the target field is shown in all seven suites. The suites are separate authored test sets, however, and are not used to rank fields against one another. Input/precondition remains robust under paraphrase, reaching 91.0\% BM25 and 94.0\% Qwen Top-1. Output/artifact shows a clear retriever difference: its paraphrased rows reach 53.3\% with BM25 and 92.0\% with Qwen. Use condition is also less robust under paraphrase than under direct trigger wording. Dependency/resource is highly effective when it names a concrete capability such as a required tool, platform, credential, runtime, or version; this claim does not extend to generic installation commands.
+
+The more conditional fields remain informative but harder to match. Boundary/not-for falls to 62.0\% BM25 and 58.0\% Qwen under implicit-authority prompts. Paraphrased success/verification rows reach 48.0\% for both retrievers, and workflow/procedure reaches 56.0\% BM25 and 50.0\% Qwen under paraphrase. These values show sensitivity to how the request expresses scope, acceptance gates, and procedure order. Full prompt-subset Top-1 and MRR tables are retained in the experiment artifacts; Table~\ref{tab:rq1a-cluster-bootstrap} provides the main controlled summary.
+
+The target-field values were not forced to equal length. In particular, gold boundary and dependency values are often longer or more detailed than their alternatives. This does not undo the paired result that exposing candidate-specific information changes routing, but the controlled effect should be read as the value of the field content as written, not as a length-normalised estimate of field meaning alone.
+
+\iffalse
+
+Table \ref{tab:rq1-example-patterns} illustrates the design logic. The shared context keeps the broad skill family visible, while the target field carries the reason one sibling is correct and another is only superficially relevant.
+\begin{table}[H]
 \centering
-\begin{tabular}{lrrrr}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.24\textwidth}}
 \toprule
-Method & Top-1 & Top-5 & MRR & Non-core top-1 \\
+Target field & Shared context & Differing field value & Why the wrong sibling matters \\
 \midrule
-M1 BM25 flat & 67.9\% & 88.3\% & 0.771 & 10.9\% \\
-M1 TF-IDF flat & 60.6\% & 83.9\% & 0.713 & 19.0\% \\
-M3 TF-IDF schema & 71.5\% & 94.9\% & 0.823 & 7.3\% \\
-M6-v0 BM25 to schema rerank & 72.3\% & 93.4\% & 0.817 & 3.6\% \\
-M6-v0 TF-IDF to schema rerank & 73.0\% & 89.8\% & 0.808 & 8.0\% \\
+Input/precondition & Extract structured information from PDF documents. & Scanned or image-based PDF requiring OCR versus native PDF with selectable text. & The wrong skill applies the wrong extraction path before any output can be trusted. \\
+Output/artifact & Analyse the same document or dataset source. & Machine-readable table/JSON artifact versus prose summary or narrative report. & The user receives the wrong deliverable even if the topic is relevant. \\
+Dependency/resource & Run the same broad automation or analysis task. & Chrome DevTools MCP, GitHub token, Node.js 20+, React 18, or Hugging Face Jobs compatibility. & The selected skill may be impossible or unsafe to run in the available environment. \\
+Boundary/not-for & Review the same compliance, policy, or risk material. & Internal triage/evidence note only versus advice, approval, or production action. & The wrong skill crosses an authority or scope boundary despite matching the topic. \\
 \bottomrule
 \end{tabular}
-\caption{Local selector results on the active 2401-skill benchmark.}
-\label{tab:local-2401}
+\caption{Representative RQ1 field-isolation patterns. These examples show why RQ1 tests skill-side operational evidence rather than vague user prompts or broad topical relevance.}
+\label{tab:rq1-example-patterns}
 \end{table}
 
-The local results show that structured representations and schema reranking reduce some scale-related errors. Compared with flat TF-IDF, TF-IDF schema retrieval improves top-1 from 60.6\% to 71.5\% and reduces non-core top-1 from 19.0\% to 7.3\%. However, these are lexical/schema baselines, not a final proof that structure-aware retrieval is solved.
-
-\section{Field Ablation Results}
-
-Field ablations test which representation fields contribute to retrieval performance. Table \ref{tab:field-ablation} shows selected full-scale cumulative ablations.
-
-\begin{table}[h]
+\begin{table}[H]
 \centering
-\begin{tabular}{lrrrr}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.24\textwidth}}
 \toprule
-Field set & Scorer & Top-1 & Top-5 & Visible tokens \\
+Tier & Fields & Evidence pattern & Claim boundary \\
 \midrule
-Description only & TF-IDF & 61.3\% & 83.9\% & 98,433 \\
-Description + use conditions & TF-IDF & 70.1\% & 91.2\% & 272,829 \\
-+ input/preconditions & TF-IDF & 67.2\% & 89.0\% & 468,875 \\
-+ output artifacts & TF-IDF & 69.3\% & 91.2\% & 507,087 \\
-+ workflow/procedure & TF-IDF & 73.7\% & 94.2\% & 665,434 \\
-+ constraints/not-for & TF-IDF & 73.7\% & 94.2\% & 706,385 \\
-+ dependencies/resources & TF-IDF & 73.7\% & 94.9\% & 885,767 \\
-Description only & BM25 & 66.4\% & 91.2\% & 98,433 \\
-Description + use conditions & BM25 & 79.6\% & 94.9\% & 272,829 \\
-+ output artifacts & BM25 & 81.0\% & 97.8\% & 507,087 \\
-+ workflow/procedure & BM25 & 80.3\% & 98.5\% & 665,434 \\
+Strong first-pass signals & Input/precondition; use condition; output/artifact under semantic retrieval & Large hidden-to-exposed lifts, including strong paraphrase rows for input and semantic output retrieval. & These fields are strong when the request contains a stable operational requirement and the skill-side representation exposes the matching value. \\
+Strong but contextual & Dependency/resource & Near-perfect exposed-field results when dependency is framed as platform, tool, API, runtime, version, credential, or resource compatibility. & Do not generalise to raw setup text. The routing context may need to come from project files, available tools, credentials, or runtime state. \\
+Conditional or reasoning-heavy & Boundary/not-for; success/verification; workflow/procedure & Positive exposed-field lifts, but weaker under implicit authority, paraphrased acceptance gates, or fine-grained procedure differences. & Treat as scope, guardrail, completion-gate, or operation-order evidence rather than simple positive keyword evidence. \\
+Support or negative-control information & Examples/tests & Generic examples do not improve routing; rare exact example matches attract all methods. & Useful for execution, validation, onboarding, and edge cases after selection, but not a stable independent capability distinction. \\
 \bottomrule
 \end{tabular}
-\caption{Selected cumulative field ablations on the full 2401-skill condition.}
-\label{tab:field-ablation}
+\caption{RQ1 synthesis: operational fields do not have equal routing value. The controlled evidence is field-tiered rather than ``more structure always wins''.}
+\label{tab:rq1-field-tier-synthesis}
 \end{table}
 
-The ablations support the current field taxonomy. Use conditions provide a large early gain. Output artifacts and workflow/procedure fields provide further procedural discrimination. Constraint, dependency, and resource fields do not behave like simple positive text: they may add cost and noise unless handled conditionally.
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.14\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 98.0\% & +64.7pp & 0.987 \\
+BM25 & Paraphrase & 33.3\% & 71.0\% & +37.7pp & 0.820 \\
+BM25 & Combined & 33.3\% & 84.5\% & +51.2pp & 0.903 \\
+Qwen embedding & Direct & 33.3\% & 98.0\% & +64.7pp & 0.990 \\
+Qwen embedding & Paraphrase & 33.3\% & 84.0\% & +50.7pp & 0.920 \\
+Qwen embedding & Combined & 33.3\% & 91.0\% & +57.7pp & 0.955 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{use\_condition} field-isolation result on 50 controlled near-neighbour clusters and 100 prompt variants. Hidden-field and +field columns report tie-aware top-1 for \texttt{shared\_context\_only} versus \texttt{shared\_context\_plus\_field}.}
+\label{tab:rq1a-use-condition-isolation}
+\end{table}
 
-\section{Representation-by-Architecture Coverage}
+The use-condition result shows that task-trigger information is a strong routing signal, but it should be interpreted as a partly direct intent hint. Direct prompts are almost solved by both BM25 and Qwen embedding, reaching 98.0\% top-1 after the field is exposed. The paraphrase rows are weaker, especially for BM25, which falls to 71.0\%. Qwen embedding retains 84.0\% under paraphrase, suggesting that semantic retrieval can recover some intent matches that lexical retrieval misses. The field is therefore discriminative, but less robust under paraphrase than a purely direct-hint reading would imply; some use-condition matches require interpretation of task intent rather than only surface overlap. The reasoning-selector diagnostic is consistent with this interpretation: DeepSeek and Codex subagents both reached 100.0\% exposed-field accuracy for use condition.
 
-The main experimental object is the interaction between representation layer and retrieval architecture. Table \ref{tab:representation-architecture-coverage} summarises which cells have been evaluated on the current or near-current scale. This table is important because some earlier comparisons mixed representation effects with model effects. For example, Qwen reranking over R2 structured cards should not be compared directly with SkillRouter reranking over full skill artifacts as if only the model changed.
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.14\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+BM25 & Paraphrase & 33.3\% & 91.0\% & +57.7pp & 0.953 \\
+BM25 & Combined & 33.3\% & 95.5\% & +62.2pp & 0.977 \\
+Qwen embedding & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+Qwen embedding & Paraphrase & 33.3\% & 94.0\% & +60.7pp & 0.970 \\
+Qwen embedding & Combined & 33.3\% & 97.0\% & +63.7pp & 0.985 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{input\_precondition} field-isolation result on 50 controlled near-neighbour clusters and 100 prompt variants. Hidden-field and +field columns report tie-aware top-1 for \texttt{shared\_context\_only} versus \texttt{shared\_context\_plus\_field}. Lift is percentage-point lift over the hidden-field condition. Qwen embedding uses \texttt{text-embedding-v4}; BM25 is local lexical retrieval.}
+\label{tab:rq1a-input-precondition-isolation}
+\end{table}
+
+The result is strong evidence that input/precondition is a key routing signal in controlled near-neighbour settings. When the field is hidden, the expected top-1 is chance level for three siblings. Adding the input/precondition field raises top-1 to 95.5\% for BM25 and 97.0\% for Qwen embedding. The paraphrase-safe prompts remain high, 91.0\% for BM25 and 94.0\% for Qwen embedding, which reduces the concern that the result is only exact keyword matching. DeepSeek and Codex subagents both reached 100.0\% exposed-field accuracy, supporting the claim that the field itself is understandable once visible.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.14\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+BM25 & Paraphrase & 33.3\% & 53.3\% & +20.0pp & 0.723 \\
+BM25 & Combined & 33.3\% & 76.7\% & +43.3pp & 0.861 \\
+Qwen embedding & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+Qwen embedding & Paraphrase & 33.3\% & 92.0\% & +58.7pp & 0.957 \\
+Qwen embedding & Combined & 33.3\% & 96.0\% & +62.7pp & 0.978 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{output\_artifact} field-isolation result on 50 controlled near-neighbour clusters and 100 prompt variants. Hidden-field and +field columns report tie-aware top-1 for \texttt{shared\_context\_only} versus \texttt{shared\_context\_plus\_field}.}
+\label{tab:rq1a-output-artifact-isolation}
+\end{table}
+
+The output/artifact result is also positive, but it separates lexical and semantic retrieval more sharply. Direct prompts are solved by both retrievers, but paraphrase-safe prompts fall to 53.3\% top-1 for BM25 while Qwen embedding remains at 92.0\%. This suggests that output/artifact information is a strong routing signal, but lexical matching is much more sensitive to wording when the requested deliverable is paraphrased. DeepSeek and Codex subagents both reached 100.0\% exposed-field accuracy, so the BM25 paraphrase drop is better read as retriever wording sensitivity than as an unclear output field.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.14\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+BM25 & Contextual & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+BM25 & Combined & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+Qwen embedding & Direct & 33.3\% & 98.0\% & +64.7pp & 0.990 \\
+Qwen embedding & Contextual & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+Qwen embedding & Combined & 33.3\% & 99.0\% & +65.7pp & 0.995 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{dependency\_resource} field-isolation result on 50 controlled near-neighbour clusters and 100 prompt variants. The contextual subset tests cases where the task prompt is natural but routing context supplies the required capability, such as a package manifest, available MCP server, credential, runtime, provider configuration, or resource.}
+\label{tab:rq1a-dependency-resource-isolation}
+\end{table}
+
+The dependency/resource result is strong, but its claim boundary is important. In this suite, dependency/resource means external capability compatibility: required platforms, tools, APIs, runtimes, permissions, versions, or resources. When the field is hidden, all siblings are tied at 33.3\%. When exposed, BM25 reaches 100.0\% top-1 across direct and contextual prompts, and Qwen embedding reaches 99.0\% combined top-1. The added version-specific clusters make the suite harder: version rows are solved by BM25 and by Qwen contextual retrieval, but Qwen direct version rows fall to 88.9\% because one React 18 prompt ranks a React 17 sibling slightly higher. This is useful evidence that version compatibility can be semantically subtle, and that project context such as \texttt{package.json}, \texttt{.nvmrc}, or dependency metadata can clarify the route.
+
+This result should not be generalised to raw dependency/setup text. In the public source artifacts used to build the public-document intervention, concrete constraints such as Chrome DevTools MCP, Firebase CLI, GitHub authentication, Node or React versions, and package manifests commonly coexist with lower-value setup text such as \texttt{npm install}, \texttt{pip install}, or \texttt{npm ci}. The distinction is functional: an installation command normally describes preparation after a skill has been chosen, whereas ``Requires the Chrome DevTools MCP server'', \texttt{GH\_TOKEN}, or ``Node.js 20+'' can rule skills in or out before selection because they describe a required external capability. The thesis-facing claim is therefore conditional: capability compatibility is a strong routing signal when sufficient capability context is visible to the selector. That context can be stated in the user request, but it may also need to be supplied by the routing system from project files, configured tools, available credentials, package metadata, or runtime state. DeepSeek and Codex subagents both reached 100.0\% exposed-field accuracy for dependency/resource, which supports this narrower capability-compatibility framing.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.18\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 98.0\% & +64.7pp & 0.990 \\
+BM25 & Paraphrase & 33.3\% & 90.0\% & +56.7pp & 0.943 \\
+BM25 & Implicit authority & 33.3\% & 62.0\% & +28.7pp & 0.800 \\
+BM25 & Combined & 33.3\% & 83.3\% & +50.0pp & 0.911 \\
+Qwen embedding & Direct & 33.3\% & 84.0\% & +50.7pp & 0.917 \\
+Qwen embedding & Paraphrase & 33.3\% & 82.0\% & +48.7pp & 0.907 \\
+Qwen embedding & Implicit authority & 33.3\% & 58.0\% & +24.7pp & 0.777 \\
+Qwen embedding & Combined & 33.3\% & 74.7\% & +41.3pp & 0.867 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{boundary\_not\_for} field-isolation result on 50 controlled near-neighbour clusters and 150 prompt variants. The implicit-authority subset tests prompts that imply scope or authority through the requested role rather than explicit negation. Hidden-field and +field columns report tie-aware top-1 for \texttt{shared\_context\_only} versus \texttt{shared\_context\_plus\_field}.}
+\label{tab:rq1a-boundary-not-for-isolation}
+\end{table}
+
+The boundary/not-for result is positive but conditional. When prompts explicitly state the exclusion or guardrail, the field is strong: BM25 reaches 98.0\% direct and 90.0\% paraphrase top-1, while Qwen embedding reaches 84.0\% and 82.0\%. Under implicit-authority prompts, however, the lift is much smaller: BM25 rises from 33.3\% to 62.0\%, and Qwen embedding rises from 33.3\% to 58.0\%. The reasoning selectors show the same caveat in a milder form. DeepSeek reached 88.0\% exposed-field accuracy overall, with direct 100.0\%, paraphrase 98.0\%, and implicit-authority 66.0\%. Codex subagents reached 96.7\% overall, with direct and paraphrase 100.0\%, but implicit-authority still lower at 90.0\%. Boundary/not-for should therefore be treated as a scope, authority, compatibility, or guardrail signal rather than as a simple positive matching field like input/precondition or output/artifact.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.14\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+BM25 & Paraphrase & 33.3\% & 48.0\% & +14.7pp & 0.703 \\
+BM25 & Combined & 33.3\% & 74.0\% & +40.7pp & 0.852 \\
+Qwen embedding & Direct & 33.3\% & 70.0\% & +36.7pp & 0.833 \\
+Qwen embedding & Paraphrase & 33.3\% & 48.0\% & +14.7pp & 0.707 \\
+Qwen embedding & Combined & 33.3\% & 59.0\% & +25.7pp & 0.770 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{success\_verification} field-isolation result on 50 controlled near-neighbour clusters and 100 prompt variants. The suite uses concrete acceptance gates such as schema validation, threshold checks, evidence anchoring, unresolved finding state, rollback proof, reproducible failure, and smoke checks. Hidden-field and +field columns report tie-aware top-1 for \texttt{shared\_context\_only} versus \texttt{shared\_context\_plus\_field}.}
+\label{tab:rq1a-success-verification-isolation}
+\end{table}
+
+The success/verification result is positive but weaker than the strongest fields. Direct BM25 reaches 100.0\% because exact acceptance-gate wording is highly matchable. Under paraphrase, however, both BM25 and Qwen embedding fall to 48.0\% top-1, only 14.7 percentage points above the hidden-field tie baseline. Qwen embedding also reaches only 70.0\% on direct prompts. DeepSeek and Codex subagents both reached 100.0\% exposed-field accuracy, so the field is understandable to reasoning selectors even when embedding retrieval struggles. This suggests that success/verification criteria are semantically close to one another and often behave more like late-stage acceptance or completion gates than robust first-pass retrieval discriminators.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.20\textwidth}p{0.14\textwidth}rrrr}
+\toprule
+Method & Prompt subset & Hidden field & + field & Lift & MRR + field \\
+\midrule
+BM25 & Direct & 33.3\% & 100.0\% & +66.7pp & 1.000 \\
+BM25 & Paraphrase & 33.3\% & 56.0\% & +22.7pp & 0.750 \\
+BM25 & Combined & 33.3\% & 78.0\% & +44.7pp & 0.875 \\
+Qwen embedding & Direct & 33.3\% & 74.0\% & +40.7pp & 0.870 \\
+Qwen embedding & Paraphrase & 33.3\% & 50.0\% & +16.7pp & 0.720 \\
+Qwen embedding & Combined & 33.3\% & 62.0\% & +28.7pp & 0.795 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled RQ1 \texttt{workflow\_procedure} field-isolation result on 50 controlled near-neighbour clusters and 100 prompt variants. The suite includes wrong-order, swapped-step, missing-prerequisite, missing-branch, missing-verification, evidence-timing, validate-before-modify, and substitute-method cases.}
+\label{tab:rq1a-workflow-procedure-isolation}
+\end{table}
+
+The workflow/procedure result is positive but heterogeneous. BM25 solves direct workflow prompts, but falls under paraphrase; Qwen embedding is weaker overall, especially where two procedures differ by fine-grained order, missing checks, or evidence timing rather than by obvious object words. Aspect analysis shows that wrong-order, swapped-step, validate-before-modify, and missing-prerequisite cases are the strongest workflow evidence, while missing-branch, missing-verification, evidence-timing, and substitute-method cases are more retriever-sensitive. DeepSeek reached 100.0\% exposed-field accuracy for workflow/procedure, while Codex subagents reached 98.0\% after marking two \texttt{wp10\_compute\_project} rows ambiguous. This supports the interpretation that workflow evidence is often selector-usable once visible, but some procedural alternatives remain genuinely close. These seven suites are the controlled RQ1 evidence for seven fields, not yet a complete all-field or RQ2 strategy comparison.
+
+\fi
+
+\subsection{Controlled Result Summary and Uncertainty}
+
+Prompt variants are paired within a cluster. The analysis therefore averages variants within each of the 50 clusters and uses 10,000 cluster-bootstrap resamples of the change in Top-1 accuracy between the field-hidden and field-shown conditions. Table \ref{tab:rq1a-cluster-bootstrap} shows a positive 95\% cluster interval for every field/retriever row. These intervals describe variation across each frozen 50-cluster suite; they do not rank the seven fields or establish effects for arbitrary public skills.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.19\textwidth}rp{0.22\textwidth}rp{0.22\textwidth}}
+\toprule
+Field & BM25 with field & BM25 improvement, 95\% CI & Qwen with field & Qwen improvement, 95\% CI \\
+\midrule
+Use condition & .845 & $+.512$ $[+.447,+.572]$ & .910 & $+.577$ $[+.517,+.627]$ \\
+Input/precondition & .955 & $+.622$ $[+.582,+.657]$ & .970 & $+.637$ $[+.597,+.667]$ \\
+Output/artifact & .767 & $+.433$ $[+.373,+.493]$ & .960 & $+.627$ $[+.587,+.657]$ \\
+Dependency/resource & 1.000 & $+.667$ $[+.667,+.667]$ & .990 & $+.657$ $[+.637,+.667]$ \\
+Boundary/not-for & .833 & $+.500$ $[+.440,+.553]$ & .747 & $+.413$ $[+.327,+.493]$ \\
+Success/verification & .740 & $+.407$ $[+.337,+.477]$ & .590 & $+.257$ $[+.137,+.377]$ \\
+Workflow/procedure & .780 & $+.447$ $[+.377,+.517]$ & .620 & $+.287$ $[+.187,+.377]$ \\
+\bottomrule
+\end{tabular}
+\caption{Controlled-RQ1 Top-1 accuracy after the target field is shown, and improvement over the tie-aware field-hidden baseline of .333. Intervals are 95\% cluster-bootstrap intervals for the improvement. Each field has its own 50-cluster suite, so rows should be read within field rather than as a formal cross-field ranking.}
+\label{tab:rq1a-cluster-bootstrap}
+\end{table}
+
+We also measured the score gap between the gold skill and the highest-scoring alternative. This gap increased in all fourteen field--retriever rows, and every 95\% cluster-bootstrap interval was above zero. In other words, showing the field usually moved the gold skill farther ahead of its strongest competitor; the Top-1 result was not produced only by a deterministic tie break. This does not identify an objectively closest alternative: both alternatives were authored as plausible siblings, but the units do not claim that one is semantically closer than the other.
+
+The reasoning-selector checks support the same limited conclusion: once the field is visible, DeepSeek selects the gold skill in 88--100\% of cases across the seven suites and Codex in 96.7--100\%. These are supporting checks of whether the distinctions are understandable, not the primary retrieval result.
+
+\iffalse
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.22\textwidth}p{0.18\textwidth}p{0.18\textwidth}p{0.34\textwidth}}
+\toprule
+Field & DeepSeek selector & Codex subagent & Reading \\
+\midrule
+Use condition & 100.0\% & 100.0\% & Field is directly understandable once visible. \\
+Input/precondition & 100.0\% & 100.0\% & Reasoning selectors resolve the sibling tie when the input state is exposed. \\
+Output/artifact & 100.0\% & 100.0\% & Reasoning selectors are not confused by output paraphrase when field evidence is visible. \\
+Dependency/resource & 100.0\% & 100.0\% & Capability compatibility is clear when visible as a required external capability. \\
+Boundary/not-for & 88.0\% & 96.7\% & Implicit-authority prompts remain harder than direct or paraphrased exclusions. \\
+Success/verification & 100.0\% & 100.0\% & Acceptance gates are understandable to reasoning selectors even when retrieval models struggle. \\
+Workflow/procedure & 100.0\% & 98.0\% & Procedure evidence is generally selector-usable, but a small number of rows remain genuinely close. \\
+\bottomrule
+\end{tabular}
+\caption{RQ1 reasoning-selector diagnostic over the same sibling candidates. Hidden-field rows were intentionally ambiguous, so the table reports exposed-field selection accuracy rather than retrieval MRR. These rows test whether the field distinction is intelligible to a reasoning selector once visible.}
+\label{tab:rq1-reasoning-selector-diagnostic}
+\end{table}
+\fi
+
+An additional negative-control suite tests \texttt{examples/tests}. It is not counted as an eighth operational field. In that suite, all operational fields are shared by sibling skills and only the examples/tests section differs. Generic prompts have no true operational gold because all siblings can perform the task; they test whether examples create arbitrary attraction. Rare exact-match prompts deliberately resemble one stored example and estimate the upper bound of example attraction. The corrected multi-method result supports treating examples/tests as workflow-support context rather than a primary routing signal. On generic prompts, exposing examples does not improve retrieval: BM25 moves from 33.3\% hidden to 22.7\%, TF-IDF remains approximately tied at 33.0\%, and Qwen embedding moves from 33.3\% to 28.0\%. DeepSeek and Codex subagent selectors both mark generic rows as ambiguous when examples are visible. On rare exact-match prompts, all methods reach 100.0\% selection of the example-matching candidate. This shows that examples can strongly steer routing when the request copies or closely resembles a stored example, but that effect is better described as example-attraction or possible misguidance than as proof of a distinct skill capability.
+
+\subsection{Public Original-Document Removal}
+
+The second RQ1 experiment applies the same question to preserved public skill documents. A source-tracked pool of 1,099 documents supplies 82 candidate groups. Before scoring, the sources, near-neighbour groups, cited field lines, prompts, and gold skills were checked. For each group and field, the selector sees either the intact documents or the same documents after every cited line carrying that field has been removed from all candidates. The implementation blanks those line contents and leaves the remaining text unchanged. The candidates, prompt, source hashes, and gold skill remain fixed. An edited skill may be incomplete or non-executable because this experiment tests routing after information removal, not execution after editing. The researcher approved all 194 scored gold-label cases and all 402 scored removals with the labels and document edits visible; this was not an independent blinded review. Appendix~\ref{app:rq1-intervention-examples} gives concrete examples of both RQ1 interventions; those examples were selected without using their retrieval outcomes.
+
+The final scoring set contains 1,078 field-specific cases, 2,156 direct/paraphrased requests, and 4,312 ranking rows per retriever. Each field has 49--69 eligible candidate groups. Requests that belong to the same group are averaged first, and 10,000 paired bootstrap samples estimate the uncertainty in the difference between the intact and field-removed documents. Qwen uses cached \texttt{text-embedding-v4} document/query vectors and BM25 uses local lexical scores; their score margins use different scales and are therefore reported separately.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.22\textwidth}rp{0.25\textwidth}p{0.25\textwidth}}
+\toprule
+Field & Source compositions & BM25 Full-minus-removed Hit@1, 95\% CI & Qwen Full-minus-removed Hit@1, 95\% CI \\
+\midrule
+Use condition & 57 & $+.114$ $[+.067,+.167]$ & $+.058$ $[+.031,+.092]$ \\
+Input/precondition & 53 & $+.098$ $[+.051,+.149]$ & $+.016$ $[-.017,+.052]$ \\
+Output/artifact & 49 & $+.122$ $[+.065,+.187]$ & $+.003$ $[-.036,+.036]$ \\
+Workflow/procedure & 63 & $+.151$ $[+.086,+.215]$ & $+.040$ $[-.024,+.100]$ \\
+Success/verification & 59 & $+.117$ $[+.059,+.182]$ & $+.027$ $[+.005,+.054]$ \\
+Boundary/not-for & 69 & $+.024$ $[-.014,+.064]$ & $-.022$ $[-.054,+.008]$ \\
+Dependency/resource & 52 & $+.091$ $[+.046,+.139]$ & $+.013$ $[-.048,+.067]$ \\
+\bottomrule
+\end{tabular}
+\caption{Public original-document single-field removal. Positive Full-minus-removed values mean that removing the cited field lowers strict Hit@1. Each field has a separate clean-only source-composition denominator.}
+\label{tab:rq1-public-original-single-field}
+\end{table}
+
+Use condition and success/verification have a stable positive strict Hit@1 effect in both retrievers. Input/precondition, output/artifact, workflow/procedure, and dependency/resource have stable positive effects under BM25 but not under Qwen; they are therefore retriever-conditional in this public-document population. Boundary/not-for has no stable positive strict Top-1 effect in either retriever. These results do not say that a field is the sole human rationale for choosing a skill. Natural documents can express one operational fact across titles, descriptions, procedures, examples, and resource requirements. They show the more limited result that removing the cited field lines can weaken agreement with the frozen strict label.
+
+We also removed three predefined groups of fields by deleting all cited lines belonging to any field in the group. These supporting tests show the effect of removing the combined information; they cannot assign that effect to one member field or show that individual effects add together.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.26\textwidth}p{0.14\textwidth}p{0.26\textwidth}p{0.26\textwidth}}
+\toprule
+Removed group & Families / compositions & BM25 Full-minus-removed Hit@1, 95\% CI & Qwen Full-minus-removed Hit@1, 95\% CI \\
+\midrule
+Task specification: use + input + output & 99 / 37 & $+.266$ $[+.196,+.336]$ & $+.088$ $[+.005,+.162]$ \\
+Execution/verification: workflow + success & 138 / 51 & $+.176$ $[+.094,+.262]$ & $+.074$ $[+.007,+.141]$ \\
+Applicability/capability: boundary + dependency & 132 / 50 & $+.136$ $[+.087,+.186]$ & $+.014$ $[-.043,+.062]$ \\
+\bottomrule
+\end{tabular}
+\caption{Public original-document joint-group removal. The groups delete the exact union of their member field lines, so their effects cannot be assigned to a single field.}
+\label{tab:rq1-public-original-joint-removal}
+\end{table}
+
+Task specification and execution/verification show a stable loss after removal under both retrievers. Applicability/capability does so only under BM25. The two experiments therefore answer different parts of RQ1. The controlled experiment shows that each tested field can distinguish near-neighbour skills when it is the only candidate difference. The public experiment shows which fields and field groups still matter when the same information is scattered through natural documents. The earlier field-card experiment is kept only as a historical sensitivity check and is not combined with these results. RQ2 next asks how different representations and retrievers use the available information.
+
+\section{RQ2a Confirmatory Matched-Content Results}
+\label{sec:rq2a-confirmatory-results}
+
+RQ2a is complete through the reviewed-fact build, 70-cluster development split, frozen field-aware aggregation choice, untouched 280-cluster confirmatory split, paired statistical analysis, and cost ledger. The confirmatory split contains 600 prompt variants. Every condition uses the same query, the same three sibling candidates, and the same reviewed operational propositions; only representation form or scoring mechanism changes. The full matrix contains 22 conditions and 13,200 unique aligned condition--prompt decisions.
+
+\subsection{Full Condition Matrix}
+
+Table \ref{tab:rq2a-full-condition-matrix} reports cluster-weighted tie-adjusted top-1, MRR, strict near-neighbour confusion, and top-tie rate. The \texttt{shared-only} negative control intentionally gives all three siblings byte-identical text. Its top-1 of $1/3$ and MRR of $(1+1/2+1/3)/3=0.611$ therefore verify unbiased tie handling rather than model failure.
+
+{\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{0.27\textwidth}p{0.24\textwidth}rrrr@{}}
+\caption{Complete RQ2a confirmatory condition matrix. All rows contain the same 600 prompts and fixed three-candidate decisions unless the selector has fewer preregistered diagnostic representations.}
+\label{tab:rq2a-full-condition-matrix}\\
+\toprule
+Selector & Representation & Top-1 & MRR & Confusion & Tie rate \\
+\midrule
+\endfirsthead
+\toprule
+Selector & Representation & Top-1 & MRR & Confusion & Tie rate \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+BM25 & diluted 1x & 0.864 & 0.920 & 0.127 & 0.023 \\
+BM25 & diluted 2x & 0.863 & 0.919 & 0.128 & 0.023 \\
+BM25 & diluted 4x & 0.864 & 0.920 & 0.127 & 0.023 \\
+BM25 & fielded & 0.864 & 0.921 & 0.127 & 0.023 \\
+BM25 & flat & 0.843 & 0.911 & 0.147 & 0.023 \\
+BM25 & order-controlled & 0.864 & 0.921 & 0.127 & 0.023 \\
+BM25 & prose & 0.840 & 0.908 & 0.152 & 0.023 \\
+BM25 & shared-only & 0.333 & 0.611 & 0.000 & 1.000 \\
+Qwen field-aware, uniform top two & fielded & 0.823 & 0.901 & 0.145 & 0.057 \\
+Qwen single-vector & diluted 1x & 0.778 & 0.876 & 0.228 & 0.000 \\
+Qwen single-vector & diluted 2x & 0.778 & 0.872 & 0.232 & 0.000 \\
+Qwen single-vector & diluted 4x & 0.763 & 0.867 & 0.247 & 0.000 \\
+Qwen single-vector & fielded & 0.757 & 0.863 & 0.252 & 0.000 \\
+Qwen single-vector & flat & 0.824 & 0.902 & 0.185 & 0.000 \\
+Qwen single-vector & order-controlled & 0.790 & 0.880 & 0.223 & 0.000 \\
+Qwen single-vector & prose & 0.782 & 0.873 & 0.233 & 0.000 \\
+Qwen single-vector & shared-only & 0.333 & 0.611 & 0.000 & 1.000 \\
+SkillRouter cross-encoder & diluted 2x & 0.942 & 0.967 & 0.063 & 0.000 \\
+SkillRouter cross-encoder & fielded & 0.951 & 0.973 & 0.053 & 0.000 \\
+SkillRouter cross-encoder & flat & 0.955 & 0.975 & 0.048 & 0.000 \\
+SkillRouter cross-encoder & prose & 0.946 & 0.969 & 0.058 & 0.000 \\
+SkillRouter cross-encoder & shared-only & 0.333 & 0.611 & 0.000 & 1.000 \\
+\end{longtable}
+}
+
+The content positive controls are large for all three selector families. Relative to \texttt{shared-only}, fielded top-1 rises by 42.4 percentage points for Qwen, 53.1 points for BM25, and 61.8 points for SkillRouter. Candidate-specific operational facts are therefore necessary for resolving these controlled near-neighbour decisions.
+
+\subsection{Preregistered Paired Contrasts}
+
+Table \ref{tab:rq2a-preregistered-contrasts} reports the frozen top-1 contrasts. Prompt-level differences are paired within cluster, and inference uses 10,000 cluster bootstraps plus 10,000 paired cluster sign flips. The eight secondary rows receive Holm correction. Practical support requires a gain of at least three percentage points and a 95\% interval excluding zero.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.34\textwidth}rp{0.20\textwidth}rr}
+\toprule
+Contrast & $\Delta$ Top-1 & 95\% cluster CI & Holm $p$ & Practical \\
+\midrule
+Primary: Qwen fielded $-$ flat & $-0.067$ & $[-0.099,-0.036]$ & -- & No \\
+BM25 fielded $-$ flat & $+0.021$ & $[+0.010,+0.033]$ & 0.0040 & No \\
+SkillRouter fielded $-$ flat & $-0.004$ & $[-0.014,+0.006]$ & 0.5240 & No \\
+Qwen fielded $-$ prose & $-0.025$ & $[-0.060,+0.010]$ & 0.3188 & No \\
+Field-aware $-$ Qwen fielded & $+0.066$ & $[+0.021,+0.111]$ & 0.0204 & Yes \\
+Qwen fielded $-$ diluted 2x & $-0.021$ & $[-0.036,-0.006]$ & 0.0303 & No \\
+Qwen fielded $-$ shared-only & $+0.424$ & $[+0.380,+0.467]$ & 0.0008 & Yes \\
+BM25 fielded $-$ shared-only & $+0.531$ & $[+0.506,+0.555]$ & 0.0008 & Yes \\
+SkillRouter fielded $-$ shared-only & $+0.618$ & $[+0.599,+0.635]$ & 0.0008 & Yes \\
+\bottomrule
+\end{tabular}
+\caption{Preregistered RQ2a top-1 contrasts. The primary contrast has raw paired sign-flip $p=0.0002$ and was not included in the secondary Holm family. ``Practical'' applies the frozen positive three-percentage-point threshold.}
+\label{tab:rq2a-preregistered-contrasts}
+\end{table}
+
+The primary positive organisation hypothesis is rejected. With exactly the same reviewed propositions, Qwen single-vector selection performs 6.7 points worse on fielded text than on flat text. BM25 gains 2.1 points from the headings, but the effect is below the frozen practical threshold. SkillRouter is effectively insensitive to fielded versus flat form in this matrix. Explicit field headings are therefore not an independent or universal source of routing accuracy.
+
+The frozen Qwen field-aware rule gains 6.6 points over Qwen fielded single-vector selection and satisfies both inferential and practical criteria. Its top-1 of 0.823 is nevertheless almost identical to Qwen flat at 0.824. Field-wise scoring recovers the penalty created when fielded text is pooled into one vector; it does not establish superiority over the strongest matched Qwen serialisation.
+
+\subsection{Field Heterogeneity}
+
+The aggregate recovery is not uniform across fields. Table \ref{tab:rq2a-field-slices} reports descriptive slices; they were not separately multiplicity-tested and are not seven additional confirmatory claims.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.27\textwidth}rrrr}
+\toprule
+Field & Qwen flat & Qwen fielded & Field-aware & FA $-$ fielded \\
+\midrule
+Use condition & 0.925 & 0.888 & 0.938 & $+0.050$ \\
+Input/precondition & 0.913 & 0.888 & 0.900 & $+0.013$ \\
+Output/artifact & 0.963 & 0.950 & 0.917 & $-0.033$ \\
+Workflow/procedure & 0.638 & 0.600 & 0.658 & $+0.058$ \\
+Dependency/resource & 0.963 & 0.963 & 0.771 & $-0.192$ \\
+Boundary/not-for & 0.683 & 0.625 & 0.739 & $+0.114$ \\
+Success/verification & 0.688 & 0.388 & 0.838 & $+0.450$ \\
+\bottomrule
+\end{tabular}
+\caption{Descriptive RQ2a field-level top-1 slices for Qwen. Uniform-top-two field scoring especially recovers success/verification and boundary cases, but harms dependency/resource and output/artifact cases.}
+\label{tab:rq2a-field-slices}
+\end{table}
+
+This heterogeneity explains why one global field aggregation rule is not universally optimal. Uniform top two helps where the decisive evidence is conditional or distributed, especially success/verification, boundary, workflow, and use-condition cases. It can suppress a single already-strong signal, as in dependency/resource and output/artifact. Field-adaptive policies are therefore a future hypothesis rather than a conclusion from the frozen confirmatory design.
+
+\subsection{Cost and Latency}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.25\textwidth}rrrrr}
+\toprule
+Primary run & API calls & Provider tokens & Construction & Online/prompt & Total wall \\
+\midrule
+BM25 & 0 & 0 & 0.000 s & 0.001100 s & 0.945 s \\
+Qwen single-vector & 590 & 1,175,784 & 1,085.293 s & 0.002869 s & 1,087.359 s \\
+Qwen field-aware & 77 & 13,583 & 203.259 s & 0.002398 s & 204.760 s \\
+SkillRouter cross-encoder & 0 & 0 & 0.000 s & 11.099921 s & 6,666.917 s \\
+\bottomrule
+\end{tabular}
+\caption{RQ2a primary construction and online costs. Qwen construction is amortisable because exact candidate vectors persist. SkillRouter reports novel pair inference, not a warm score-cache lookup.}
+\label{tab:rq2a-cost}
+\end{table}
+
+All 600 query embeddings were exact cache hits, so confirmatory execution sent no query text. The two Qwen conditions made 667 successful calls for 6,661 new candidate or field-component texts and 1,189,367 provider tokens. The dated standard-list-price estimate is USD 0.0833. Warm verification made zero provider calls and zero new SkillRouter forward passes.
+
+The accuracy--cost result is therefore architectural. Qwen independently encodes documents once and performs millisecond cosine comparisons at query time. SkillRouter jointly re-encodes every novel query--candidate pair and reaches the strongest fixed-candidate accuracy, 0.955 on flat text, but requires about 11.10 seconds per prompt in this environment. The result does not establish a universal winner: it quantifies the trade-off within a fixed three-candidate setting.
+
+\section{RQ2b Full-Library Retrieval And Reranking Results}
+\label{sec:rq2b-full-library-results}
+
+RQ2b evaluates the frozen V3 library of 2,433 source-grounded skills against 381 strict-gold prompts. It uses 243 controlled prompts in 25 semantic clusters and 138 public-gold prompts in 61 semantic clusters. Each result is strict agreement with the frozen intended gold label. The full-library metric therefore measures retrieval behaviour under this benchmark endpoint, not unique task correctness or downstream task success.
+
+\subsection{First-Stage Retrieval}
+
+Table \ref{tab:rq2b-b1-h1} gives the complete B1 cluster-macro Hit@1 matrix. I1 uses the native name and description, I2 uses the original full body, I3-flat uses retained I3 evidence without headings, and I3C uses the same retained evidence with operational-field headings. The three retrievers see exactly the same source library and prompts for each representation.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrr}
+\toprule
+Stratum & B1 retriever & I1 & I2 & I3-flat & I3C \\
+\midrule
+Controlled & BM25 & 0.559 & 0.535 & 0.452 & 0.453 \\
+Controlled & Qwen & 0.351 & 0.367 & 0.358 & 0.361 \\
+Controlled & SkillRouter & 0.700 & 0.656 & 0.679 & 0.682 \\
+\midrule
+Public-gold & BM25 & 0.597 & 0.644 & 0.512 & 0.504 \\
+Public-gold & Qwen & 0.612 & 0.686 & 0.560 & 0.538 \\
+Public-gold & SkillRouter & 0.761 & 0.806 & 0.752 & 0.746 \\
+\bottomrule
+\end{tabular}
+\caption{RQ2b V3 B1 strict Hit@1, aggregated equally by semantic cluster. Qwen is maximum cosine over document chunks; SkillRouter is its native bi-encoder first stage.}
+\label{tab:rq2b-b1-h1}
+\end{table}
+
+The main result is not a universal I3C accuracy gain. On the public-gold stratum, I2 exceeds I3C under every first-stage retriever: by 14.0 percentage points for BM25, 14.8 points for Qwen, and 5.9 points for SkillRouter. The corresponding post-hoc paired cluster-bootstrap intervals for I3C minus I2 are $[-0.247,-0.033]$, $[-0.224,-0.080]$, and $[-0.140,+0.021]$. These intervals describe the fixed benchmark; no p-value or significance threshold is used as a thesis claim gate. On controlled prompts the pattern is mixed: I1 is strongest for BM25 and SkillRouter, while I2 is narrowly strongest for Qwen.
+
+Candidate recall shows why later reranking cannot be treated as a general repair. Table \ref{tab:rq2b-b1-recall} compares I2 and I3C Recall@20 before any reranker acts. I2 has higher Recall@20 in all six reported B1 rows. A reranker receives only the already-retrieved Top-20 candidates, so it cannot recover a strict gold that is absent from that list.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrr}
+\toprule
+Stratum & B1 retriever & I2 Recall@20 & I3C Recall@20 & I3C $-$ I2 \\
+\midrule
+Controlled & BM25 & 0.929 & 0.880 & -0.049 \\
+Controlled & Qwen & 0.773 & 0.715 & -0.058 \\
+Controlled & SkillRouter & 0.980 & 0.974 & -0.006 \\
+\midrule
+Public-gold & BM25 & 0.984 & 0.865 & -0.119 \\
+Public-gold & Qwen & 1.000 & 0.921 & -0.079 \\
+Public-gold & SkillRouter & 0.992 & 0.975 & -0.017 \\
+\bottomrule
+\end{tabular}
+\caption{RQ2b B1 strict Recall@20 for I2 and I3C. Recall@20 is candidate inclusion before B2, not a final reranked score.}
+\label{tab:rq2b-b1-recall}
+\end{table}
+
+\subsection{Fixed-Top-20 Reranking}
+
+For each per-retriever matrix of 1,524 B1 conditions (4,572 conditions across all three B1 retrievers), B2 reorders the same persisted Top-20 candidate identities with Qwen \texttt{qwen3-rerank} or the SkillRouter cross-encoder. Each reranker therefore produces 4,572 rows, or 9,144 B2 rows in total. Table \ref{tab:rq2b-b2-h1} reports all 24 reranked cluster-macro Hit@1 cells. The table is conditional on B1 candidate generation: it compares final order under a fixed candidate set rather than an end-to-end method that can independently change recall.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lllrrrr}
+\toprule
+Stratum & B1 retriever & B2 reranker & I1 & I2 & I3-flat & I3C \\
+\midrule
+Controlled & BM25 & Qwen & 0.741 & 0.685 & 0.712 & 0.713 \\
+Controlled & Qwen & Qwen & 0.588 & 0.553 & 0.577 & 0.592 \\
+Controlled & SkillRouter & Qwen & 0.785 & 0.723 & 0.765 & 0.777 \\
+Controlled & BM25 & SkillRouter & 0.689 & 0.682 & 0.673 & 0.689 \\
+Controlled & Qwen & SkillRouter & 0.561 & 0.570 & 0.538 & 0.560 \\
+Controlled & SkillRouter & SkillRouter & 0.717 & 0.714 & 0.725 & 0.737 \\
+\midrule
+Public-gold & BM25 & Qwen & 0.771 & 0.812 & 0.718 & 0.718 \\
+Public-gold & Qwen & Qwen & 0.812 & 0.842 & 0.734 & 0.758 \\
+Public-gold & SkillRouter & Qwen & 0.845 & 0.834 & 0.785 & 0.785 \\
+Public-gold & BM25 & SkillRouter & 0.734 & 0.779 & 0.715 & 0.712 \\
+Public-gold & Qwen & SkillRouter & 0.772 & 0.796 & 0.747 & 0.752 \\
+Public-gold & SkillRouter & SkillRouter & 0.772 & 0.771 & 0.790 & 0.785 \\
+\bottomrule
+\end{tabular}
+\caption{RQ2b V3 B2 strict Hit@1 after fixed-Top-20 reranking. Each reranker reorders the corresponding B1 candidate list only.}
+\label{tab:rq2b-b2-h1}
+\end{table}
+
+Reranking changes order but does not remove the representation trade-off. On public-gold, I3C remains below I2 in five of the six retriever--reranker combinations. The one exception is SkillRouter reranking after SkillRouter B1, where I3C is 0.785 and I2 is 0.771. The descriptive failure decomposition is consistent with the Recall@20 result: I3C-minus-I2 candidate-miss rates are non-negative in every comparison. This is compatible with I2 retaining candidate-inclusion detail that I3C omits, but does not identify a particular omitted span as the cause of an individual miss.
+
+\subsection{Representation Cost And Availability}
+
+Table \ref{tab:rq2b-cost} reports the measured B1 representation and document/index burden for I2 and I3C. I3C consistently reduces the selector-visible corpus by 72--76\% and recorded document/index time by 64--79\%. The observed gains are meaningful for a maintained library, but they do not include the full one-time extraction cost: the V3 archive records source rows, chunks, and proxy tokens but lacks a durable comparable extraction wall-time or provider invoice. No total I3C cost or break-even query volume is claimed.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
+\toprule
+B1 retriever & I2 tokens & I3C tokens & Token reduction & I2 doc/index s & I3C doc/index s \\
+\midrule
+BM25 & 825269 & 228222 & 72.3\% & 0.233 & 0.083 \\
+Qwen & 1455632 & 349639 & 76.0\% & 966.577 & 324.292 \\
+SkillRouter & 1458065 & 352072 & 75.9\% & 80.286 & 16.967 \\
+\bottomrule
+\end{tabular}
+\caption{Measured RQ2b B1 cost frontier for I2 and I3C. Tokens are selector-visible corpus tokens; document/index time is one-time work for the measured run.}
+\label{tab:rq2b-cost}
+\end{table}
+
+B4 tests a possible explanation for I1's competitive results without changing any retrieval row. It classifies a retained I3 item as description-visible only when its original source text, after whitespace folding, appears in the frozen I1 metadata description. Only 75 of 19,394 retained items (0.4\%) are description-visible across the full corpus. Among the 381 strict-gold prompt records, only 4 of 755 retained items (0.5\%) are description-visible; controlled records have 0 of 639 and public-gold records have 4 of 116. Thus, the result does not support the simple explanation that I1 succeeds because it already duplicates the retained I3 operational content. It remains possible that I1 carries coarse task/category cues or that fixed benchmark and extraction/formatting properties affect matching, but B4 does not causally distinguish these alternatives.
+
+The bounded RQ2b answer is therefore an accuracy--compression trade-off. I3C reduces the first-stage selector surface and document/index burden relative to I2, but does not improve strict-label accuracy universally under the tested flat first-stage retrievers or fixed-list rerankers. RQ1 establishes that the operational fields can be discriminative in controlled near-neighbour cases; RQ2b shows that extracting and serialising those fields alone is not sufficient to guarantee a better full-library selector.
+
+\section{Historical Frozen-v0.4 Benchmark Validation}
+
+Table \ref{tab:validation-status-v04} summarises the frozen-v0.4 benchmark validation status.
 
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{p{0.18\textwidth}p{0.17\textwidth}p{0.18\textwidth}p{0.18\textwidth}p{0.18\textwidth}}
+\begin{tabular}{p{0.30\textwidth}p{0.60\textwidth}}
 \toprule
-Representation & Qwen embedding & Qwen rerank & SkillRouter embedding & SkillRouter rerank \\
+Check & Frozen-v0.4 result \\
 \midrule
-R1 flat metadata & Public 82 run; controlled rerun needed. & Public 82 run; controlled rerun needed. & Not run. & Not run. \\
-R2 structured procedural & Public 82 run; controlled rerun needed. & Public 82 run; controlled rerun needed. & Not run. & Not run. \\
-Full \texttt{SKILL.md} & Controlled 137 and public 82 run. & Controlled 137 and public 82 run. & Controlled 137 and public 82 hosted run. & Controlled 137 and public 82 hosted run. \\
+Composition & 245 controlled prompts, 144 public-gold prompts, 12 low-information prompts, 2433 skills. \\
+Controlled integrity & PASS: 245 prompts, 0 missing references. \\
+Controlled procedural distinctness & PASS: 245/245 prompts; 830/830 gold/alternative pairs. \\
+Controlled prompt-specific alignment & 238/245 prompts pass; strict top-1 among listed candidates 236/245; acceptable top-1 241/245. \\
+Controlled semantic confusability & PASS: 243/245 prompts. Two residual observability prompts remain documented. \\
+Controlled prompt leakage & PASS: 0 critical exact-name leaks and 0 high-risk leaks. \\
+Public-gold integrity & PASS: 144 prompts, 0 missing references. \\
+Public-gold procedural distinctness & PASS: 144/144 prompts; 575/575 gold/alternative pairs. \\
+Public-gold prompt-specific alignment & 131/144 prompts pass; strict top-1 among listed candidates 118/144; acceptable top-1 138/144. \\
+Public-gold semantic confusability & PASS: 144/144 prompts. \\
+Public-gold prompt leakage & PASS: 0 critical exact-name leaks and 0 high-risk leaks. \\
 \bottomrule
 \end{tabular}
-\caption{Coverage of the crossed representation-layer and retrieval-architecture comparison.}
-\label{tab:representation-architecture-coverage}
+\caption{Frozen-v0.4 benchmark validation status.}
+\label{tab:validation-status-v04}
 \end{table}
 
-The current result set is therefore incomplete for the strongest representation-level claim. The active controlled benchmark has strong full-skill comparisons, but it does not yet contain current-scale R1/R2 runs for SkillRouter, nor current-scale controlled R1/R2 reruns for Qwen. The public-gold benchmark has a cleaner Qwen representation comparison across R1, R2, and full artifacts, but it lacks SkillRouter R1/R2 runs. The next experiment cycle should fill these cells before making final claims about representation superiority.
+These validation results support the use of the benchmark as a semantic-confusability stress test. The controlled stratum is stronger for causal comparisons because the gold skill and alternatives were deliberately designed around procedural distinctions. The public-gold stratum is messier but important for external validity because its target skills are publicly available skill artifacts rather than only authored controlled skills.
 
-\section{Public-Gold Horizontal Representation Results}
+\section{Historical Frozen-v0.4 Method Coverage}
 
-The cleaned public-gold stratum currently provides the clearest horizontal comparison for Qwen because R1, R2, and full skill artifacts were tested on the same 82 prompts and 2401-skill library. Table \ref{tab:public-gold-horizontal} shows that full skill artifacts are not automatically the best retrieval representation.
+Table \ref{tab:method-coverage-v04} records which methods have been run against frozen v0.4. The blank entries are deliberate methodological gaps, not negative results.
 
-\begin{table}[h]
-\centering
-\small
-\begin{tabular}{p{0.22\textwidth}rrrr}
-\toprule
-Representation and architecture & Strict top-1 & Accept top-1 & Strict top-5 & MRR \\
-\midrule
-Qwen R1 embedding & 62.2\% & 72.0\% & 84.2\% & 0.720 \\
-Qwen R1 + Qwen rerank, top-20 & 74.4\% & 85.4\% & 96.3\% & 0.837 \\
-Qwen R2 embedding & 59.8\% & 73.2\% & 82.9\% & 0.714 \\
-Qwen R2 + Qwen rerank, top-20 & \textbf{76.8\%} & \textbf{90.2\%} & \textbf{100.0\%} & \textbf{0.861} \\
-Qwen full artifact embedding & 31.7\% & 50.0\% & 58.5\% & 0.448 \\
-Qwen full artifact + Qwen rerank, top-20 & 68.3\% & 79.3\% & 80.5\% & 0.739 \\
-\bottomrule
-\end{tabular}
-\caption{Public-gold horizontal comparison across representation layers using Qwen embedding and reranking.}
-\label{tab:public-gold-horizontal}
-\end{table}
-
-The public-gold horizontal comparison suggests that representation compression can help rather than merely remove information. Full \texttt{SKILL.md} artifacts contain more raw content, but generic embedding over full artifacts performs poorly because the signal is diluted by broad instructions, examples, source-specific wording, and wrapper behaviour. R1 and R2 compact representations perform better for Qwen on public-gold. R2 does not beat R1 by embedding alone, but R2 plus neural reranking is strongest, suggesting that structured procedural information is useful when the architecture can compare it at reranking time.
-
-\section{Provider and SkillRouter Results}
-
-Provider experiments test whether the benchmark remains difficult under stronger modern retrieval models. Table \ref{tab:qwen-2401} shows current 2401-scale Qwen full-skill results.
-
-\begin{table}[h]
-\centering
-\small
-\begin{tabular}{p{0.49\textwidth}rrrr}
-\toprule
-Method & Top-1 & Top-5 & MRR & Non-main top-1 \\
-\midrule
-Qwen full-skill embedding & 52.5\% & 73.7\% & 0.617 & 26.3\% \\
-Qwen full-skill + Qwen generic rerank, top-20 & 62.0\% & 75.2\% & 0.684 & 24.8\% \\
-Qwen full-skill + M6-v0 local schema rerank, top-100 & 77.4\% & 91.2\% & 0.840 & 8.0\% \\
-Qwen full-skill + M6-v1-local task/output/workflow rerank, top-100 & 78.8\% & 92.0\% & 0.851 & 6.6\% \\
-\bottomrule
-\end{tabular}
-\caption{Current Qwen provider results on the active 2401-skill benchmark.}
-\label{tab:qwen-2401}
-\end{table}
-
-The result suggests that dense retrieval is useful for broad candidate generation but insufficient by itself. Generic Qwen reranking improves over full-skill embedding alone, but it does not close the gap on the controlled procedurally confusable benchmark. Adding a procedural reranking layer improves top-1 more substantially and reduces non-main false positives.
-
-Table \ref{tab:skillrouter-2401} reports the SkillRouter hosted baseline. This is important because SkillRouter is a skill-specific retrieve-and-rerank model rather than a generic embedding provider.
-
-\begin{table}[h]
-\centering
-\small
-\begin{tabular}{p{0.46\textwidth}rrrr}
-\toprule
-Method & Top-1 & Top-5 & MRR & Non-main top-1 \\
-\midrule
-SkillRouter full-skill embedding & 73.0\% & 94.2\% & 0.827 & 14.6\% \\
-SkillRouter full-skill + SkillRouter rerank, top-20 & 83.2\% & 97.8\% & 0.898 & 4.4\% \\
-\bottomrule
-\end{tabular}
-\caption{SkillRouter hosted results on the controlled 2401-skill benchmark.}
-\label{tab:skillrouter-2401}
-\end{table}
-
-SkillRouter changes the interpretation of the provider baselines. The controlled benchmark is not only hard for weak local methods or generic embeddings: a skill-specific embedding model performs much better than Qwen full-skill embedding, and SkillRouter's neural reranker becomes a strong comparison point for any proposed structure-aware reranker.
-
-\section{M6-v1 Field-Aware Reranker Results}
-
-M6-v1-local fixes the first-stage candidate generator and varies which information fields the reranker uses. Table \ref{tab:m6v1-fieldsets} shows the Qwen full-skill first-stage condition.
-
-\begin{table}[h]
-\centering
-\small
-\begin{tabular}{p{0.34\textwidth}rrrrr}
-\toprule
-Field set & Top-1 & Top-5 & MRR & Candidate R@100 & Non-main top-1 \\
-\midrule
-Task only & 75.2\% & 88.3\% & 0.816 & 93.4\% & 8.0\% \\
-Task + output + workflow & 78.8\% & 92.0\% & 0.851 & 93.4\% & 6.6\% \\
-Core: task + input + output + workflow & 77.4\% & 92.0\% & 0.843 & 93.4\% & 6.6\% \\
-Core + boundary & 77.4\% & 92.7\% & 0.841 & 93.4\% & 8.0\% \\
-All fields & 73.0\% & 89.0\% & 0.809 & 93.4\% & 11.7\% \\
-\bottomrule
-\end{tabular}
-\caption{M6-v1-local field-set comparison with Qwen full-skill candidate generation.}
-\label{tab:m6v1-fieldsets}
-\end{table}
-
-This result is important because it does not say that adding more structure always helps. The strongest field set is task/use condition plus output and workflow. Adding all fields hurts top-1 and increases non-main false positives, which supports the claim that dependency, boundary, and hierarchy signals must be used conditionally rather than treated as ordinary positive text.
-
-\section{SkillRouter plus M6-v1 Hybrid Results}
-
-The strongest current controlled result comes from combining SkillRouter first-stage retrieval with the M6-v1-local field-aware reranker. Table \ref{tab:skillrouter-m6v1} compares the best field-aware hybrid results against the SkillRouter-only baseline.
+For public-gold full-artifact comparisons, final reporting should use the upstream public \texttt{SKILL.md} artifacts. Wrapper-based public import rows are treated as implementation-history rows until rerun against the original public artifacts.
 
 \begin{table}[h]
 \centering
 \scriptsize
-\begin{tabular}{p{0.42\textwidth}rrrrr}
+\begin{tabular}{p{0.22\textwidth}p{0.28\textwidth}p{0.18\textwidth}p{0.18\textwidth}}
 \toprule
-Method & Budget & Top-1 & Top-5 & MRR & Non-main \\
+Family & Method & Controlled & Public-gold \\
 \midrule
-SkillRouter embedding only & -- & 73.0\% & 94.2\% & 0.827 & 14.6\% \\
-SkillRouter + SkillRouter rerank & 20 & 83.2\% & 97.8\% & 0.898 & 4.4\% \\
-SkillRouter + M6-v1 task/output/workflow & 20 & 83.2\% & 95.6\% & 0.895 & 5.1\% \\
-SkillRouter + M6-v1 task/output/workflow & 100 & \textbf{86.9\%} & \textbf{98.5\%} & \textbf{0.927} & \textbf{0.7\%} \\
+Local lexical & BM25 and TF-IDF over R1 & Done & Done \\
+Local embedding & MiniLM description, full skill, and schema & Done & Done \\
+Structured lexical & TF-IDF/BM25 over schema text & Done & Done \\
+Schema rerank & M6-v0 local schema rerank & Done & Done \\
+Qwen embedding & R1, R2, and full skill & Done & Done \\
+Qwen rerank & Qwen top-20 rerank over R1, R2, and full skill & Done & Done \\
+Local schema over Qwen & Qwen first stage plus local-schema top-20 & Done & Done \\
+M6-v1 local & BM25, TF-IDF, TF-IDF schema, and Qwen-full first stages; top-20/top-100 & Done & Done \\
+Field ablations & 28 local ablation conditions & Done & Done \\
+SkillRouter/Hugging Face & SkillRouter embedding and reranker over R1/R2/full & Done & Done \\
+M6-v1 + SkillRouter & SkillRouter top-20 first stage plus field-aware rerank & Done & Done \\
+M4 tree routing & Hierarchical route then rank & \textbf{TBD} & \textbf{TBD} \\
+M5 graph retrieval & Graph filter/rerank over R4 edges & \textbf{TBD} & \textbf{TBD} \\
+M0 full-scale progressive disclosure & Main-agent baseline at 2433-skill scale & \textbf{TBD} & \textbf{TBD} \\
+Downstream validation & Agent task success after retrieval & \textbf{TBD} & \textbf{TBD} \\
 \bottomrule
 \end{tabular}
-\caption{Controlled SkillRouter and SkillRouter--M6-v1 hybrid comparison. Top-20 rows are the budget-fair reranker comparison; the top-100 M6-v1 row is a larger-candidate-budget condition.}
-\label{tab:skillrouter-m6v1}
+\caption{Frozen-v0.4 method coverage. Historical SkillRouter runs are excluded; current SkillRouter summary metrics are from the frozen-v0.4 rerun.}
+\label{tab:method-coverage-v04}
 \end{table}
 
-This result suggests that SkillRouter provides an excellent first-stage candidate set, while explicit procedural fields can improve final ordering when reranking a larger candidate pool. The fair top-20 comparison is cautious: M6-v1 task/output/workflow matches SkillRouter reranking on top-1, but has slightly lower top-5 and MRR. The top-100 M6-v1 condition improves to 86.9\% top-1, 98.5\% top-5, and 0.927 MRR, but this should be interpreted as a larger-candidate-budget result rather than a direct reranker-only win over SkillRouter's top-20 reranker. Candidate recall is effectively saturated: SkillRouter includes the gold skill in the top-20 for 97.8\% of controlled prompts and in the top-100 for 100.0\%. Therefore, remaining controlled failures are mainly reranker-ordering errors rather than candidate-generation errors.
+\section{Historical Exploratory Representation-First Matrix}
 
-\section{Public-Gold Results}
+The result tables below follow the intended comparison standard: first group by the \emph{representation layer}, then list the retrieval or reranking method, candidate budget, and metrics. This prevents an invalid comparison where a method appears better simply because it was given a richer or noisier skill representation.
 
-The public-gold stratum behaves differently from the controlled benchmark. Table \ref{tab:public-gold} summarises results before applying final public-gold cleanup.
+\subsection{Controlled Stratum}
+
+Table \ref{tab:controlled-representation-first-v04} reports the 245-prompt controlled stratum. The controlled stratum is the cleanest evidence for representation effects because the gold skills and alternatives were designed around explicit procedural distinctions.
+
+{\tiny
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{0.16\textwidth}p{0.48\textwidth}p{0.05\textwidth}rrr@{}}
+\toprule
+Representation & Method & Budget & Top-1 & Top-5 & MRR \\
+\midrule
+\endfirsthead
+\toprule
+Representation & Method & Budget & Top-1 & Top-5 & MRR \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+R1 flat metadata & M1 BM25 flat & all & 55.9\% & 87.4\% & 0.693 \\
+R1 flat metadata & M1 TF-IDF flat & all & 53.9\% & 85.3\% & 0.677 \\
+R1 flat metadata & M2a MiniLM description & all & 38.8\% & 77.1\% & 0.550 \\
+R1 flat metadata & Qwen embedding only & all & 34.3\% & 62.5\% & 0.470 \\
+R1 flat metadata & Qwen embedding + Qwen rerank & 20 & 51.4\% & 74.7\% & 0.612 \\
+R1 flat metadata & Qwen embedding + local schema rerank & 20 & 44.9\% & 74.7\% & 0.585 \\
+R1 flat metadata & SkillRouter embedding only & all & 62.9\% & 93.5\% & 0.763 \\
+R1 flat metadata & SkillRouter embedding + SkillRouter rerank & 20 & 65.7\% & 94.7\% & 0.780 \\
+\midrule
+R2/R3 structured procedural & M3 TF-IDF schema & all & 64.5\% & 93.1\% & 0.772 \\
+R2/R3 structured procedural & M3 MiniLM schema & all & 49.8\% & 83.7\% & 0.650 \\
+R2/R3 structured procedural & Qwen embedding only, R2 & all & 40.0\% & 71.8\% & 0.538 \\
+R2/R3 structured procedural & Qwen embedding + Qwen rerank, R2 & 20 & 58.0\% & 80.4\% & 0.679 \\
+R2/R3 structured procedural & Qwen embedding + local schema rerank, R2 & 20 & 52.6\% & 79.6\% & 0.647 \\
+R2/R3 structured procedural & SkillRouter embedding only, R2 & all & 64.5\% & 94.7\% & 0.783 \\
+R2/R3 structured procedural & SkillRouter embedding + SkillRouter rerank, R2 & 20 & 71.0\% & 96.7\% & 0.823 \\
+\midrule
+Full \texttt{SKILL.md} artifact & M2b MiniLM full skill & all & 41.2\% & 76.7\% & 0.567 \\
+Full \texttt{SKILL.md} artifact & Qwen embedding only & all & 44.1\% & 75.5\% & 0.575 \\
+Full \texttt{SKILL.md} artifact & Qwen embedding + Qwen rerank & 20 & 58.8\% & 80.8\% & 0.686 \\
+Full \texttt{SKILL.md} artifact & Qwen embedding + local schema rerank & 20 & 53.9\% & 80.8\% & 0.661 \\
+Full \texttt{SKILL.md} artifact & SkillRouter embedding only & all & 59.2\% & 91.4\% & 0.737 \\
+Full \texttt{SKILL.md} artifact & SkillRouter embedding + SkillRouter rerank & 20 & 71.8\% & 95.9\% & 0.827 \\
+\caption{Controlled frozen-v0.4 representation-layer results. Field-aware hybrid rerankers are reported separately because they vary both representation and architecture.}
+\label{tab:controlled-representation-first-v04}
+\end{longtable}
+}
+
+The controlled results show a consistent representation-layer signal. Under Qwen embedding-only, R2 improves over R1 from 34.3\% to 40.0\% top-1, while full skill text reaches 44.1\%. Under Qwen reranking, R2 improves over R1 from 51.4\% to 58.0\%, and full text is only slightly higher at 58.8\%. SkillRouter is much stronger than Qwen under the same R1/R2/full comparison. Its R2 reranked result reaches 71.0\% top-1, while full skill text plus SkillRouter reranking reaches 71.8\%. This suggests that structured procedural representation can recover much of the useful signal in the full skill artifact while exposing less irrelevant text. The table does not yet prove that any specific structure-aware architecture is best; it isolates what happens when different amounts and kinds of skill information are exposed to comparable retrieval methods.
+
+\subsection{Public-Gold Stratum}
+
+Table \ref{tab:public-representation-first-v04} reports the 144-prompt public-gold stratum. Public-gold results are reported with strict-gold top-1 and gold-or-acceptable top-1 because public skills contain duplicates, broad parent artifacts, and near-equivalent alternatives.
+
+{\tiny
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{0.16\textwidth}p{0.39\textwidth}p{0.05\textwidth}rrrr@{}}
+\toprule
+Representation & Method & Budget & Strict top-1 & Accept top-1 & Strict top-5 & MRR \\
+\midrule
+\endfirsthead
+\toprule
+Representation & Method & Budget & Strict top-1 & Accept top-1 & Strict top-5 & MRR \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+R1 flat metadata & M1 BM25 flat & all & 55.6\% & 65.3\% & 81.9\% & 0.673 \\
+R1 flat metadata & M1 TF-IDF flat & all & 56.9\% & 64.6\% & 86.8\% & 0.697 \\
+R1 flat metadata & M2a MiniLM description & all & 56.9\% & 63.2\% & 79.9\% & 0.670 \\
+R1 flat metadata & Qwen embedding only & all & 57.6\% & 66.0\% & 82.6\% & 0.687 \\
+R1 flat metadata & Qwen embedding + Qwen rerank & 20 & 74.3\% & 81.9\% & 92.4\% & 0.820 \\
+R1 flat metadata & Qwen embedding + local schema rerank & 20 & 50.0\% & 61.1\% & 83.3\% & 0.640 \\
+R1 flat metadata & SkillRouter embedding only & all & 68.8\% & 77.1\% & 93.8\% & 0.794 \\
+R1 flat metadata & SkillRouter embedding + SkillRouter rerank & 20 & 70.8\% & 79.2\% & 92.4\% & 0.804 \\
+\midrule
+R2/R3 structured procedural & M3 TF-IDF schema & all & 48.6\% & 55.6\% & 81.2\% & 0.629 \\
+R2/R3 structured procedural & M3 MiniLM schema & all & 48.6\% & 58.3\% & 79.9\% & 0.621 \\
+R2/R3 structured procedural & Qwen embedding only, R2 & all & 63.2\% & 72.2\% & 86.8\% & 0.738 \\
+R2/R3 structured procedural & Qwen embedding + Qwen rerank, R2 & 20 & 72.9\% & 82.6\% & 97.9\% & 0.832 \\
+R2/R3 structured procedural & Qwen embedding + local schema rerank, R2 & 20 & 49.3\% & 61.8\% & 88.9\% & 0.657 \\
+R2/R3 structured procedural & SkillRouter embedding only, R2 & all & 75.0\% & 81.2\% & 94.4\% & 0.831 \\
+R2/R3 structured procedural & SkillRouter embedding + SkillRouter rerank, R2 & 20 & 71.5\% & 78.5\% & 93.1\% & 0.805 \\
+\midrule
+Full \texttt{SKILL.md} artifact & M2b MiniLM full skill & all & 40.3\% & 48.6\% & 61.1\% & 0.504 \\
+Full \texttt{SKILL.md} artifact & Qwen embedding only & all & 36.1\% & 47.9\% & 59.7\% & 0.480 \\
+Full \texttt{SKILL.md} artifact & Qwen embedding + Qwen rerank & 20 & 65.3\% & 71.5\% & 79.9\% & 0.716 \\
+Full \texttt{SKILL.md} artifact & Qwen embedding + local schema rerank & 20 & 33.3\% & 46.5\% & 68.8\% & 0.483 \\
+Full \texttt{SKILL.md} artifact & SkillRouter embedding only & all & 75.0\% & 82.6\% & 93.1\% & 0.833 \\
+Full \texttt{SKILL.md} artifact & SkillRouter embedding + SkillRouter rerank & 20 & 70.1\% & 76.4\% & 92.4\% & 0.804 \\
+\caption{Public-gold frozen-v0.4 representation-layer results. Field-aware hybrid rerankers are reported separately because they vary both representation and architecture.}
+\label{tab:public-representation-first-v04}
+\end{longtable}
+}
+
+The public-gold results are more mixed. R2 is best for Qwen embedding-only retrieval, improving strict top-1 over R1 from 57.6\% to 63.2\%. However, R1 plus Qwen reranking has the highest Qwen strict top-1 at 74.3\%, while R2 plus Qwen reranking has the highest Qwen MRR and strict top-5. SkillRouter embedding is strongest on public-gold before reranking: both R2 and full artifact representations reach 75.0\% strict top-1. However, SkillRouter reranking reduces strict top-1 on R2 and full text, which suggests that the neural reranker is not uniformly helpful on messy public-authored skills. Full skill text is a negative result for Qwen but not for SkillRouter, so the public-gold stratum shows an interaction between representation and model family rather than a single global ranking of representations.
+
+\subsection{Crossed Lexical Representation Control}
+
+To check that the representation effect is not only an artifact of dense embedding models, BM25 and TF-IDF were also run over the same three representation layers: R1 flat metadata, R2 structured procedural cards, and full \texttt{SKILL.md} text. These are not the strongest expected final methods, but they provide a clean control because the retriever is held fixed while the representation changes.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.12\textwidth}p{0.10\textwidth}rrrrr}
+\toprule
+Stratum & Retriever & R1 top-1 & R2 top-1 & Full top-1 & R1 cand. R@20 & R2 cand. R@20 \\
+\midrule
+Controlled & BM25 & 55.9\% & 62.9\% & 63.3\% & 94.3\% & 98.0\% \\
+Controlled & TF-IDF & 53.9\% & 64.5\% & 61.2\% & 91.8\% & 97.1\% \\
+Public-gold & BM25 & 55.6\% & 53.5\% & 34.0\% & 87.5\% & 97.9\% \\
+Public-gold & TF-IDF & 56.9\% & 48.6\% & 36.8\% & 92.4\% & 95.1\% \\
+\bottomrule
+\end{tabular}
+\caption{Crossed lexical representation control on frozen v0.4. Public-gold values are strict-gold top-1. Candidate recall is measured before any second-stage reranking.}
+\label{tab:crossed-lexical-representation-v04}
+\end{table}
+
+The controlled lexical control gives direct evidence that R2 contains useful selection information: with the retriever fixed, R2 improves BM25 top-1 by 7.0 percentage points and TF-IDF top-1 by 10.6 percentage points over R1. Public-gold behaves differently. R2 improves candidate recall, especially for BM25, but does not improve strict top-1 under simple lexical ordering. This indicates that structured procedural fields can help surface the correct public skill into the shortlist, while final ordering still depends on a stronger reranker that can handle provider cues, duplicate capabilities, broad public artifacts, and noisy public prose.
+
+\subsection{Reranking and Field-Aware Diagnostics}
+
+The previous tables isolate representation-layer effects. Table \ref{tab:field-aware-diagnostics-v04} moves to architecture-level diagnostics. These rows should not be read as pure representation-layer comparisons because they change the candidate generator, reranker, selected field set, and candidate budget. Their purpose is to test whether explicit procedural fields can help once a first-stage retriever has already produced a candidate subset.
+
+{\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{0.11\textwidth}p{0.34\textwidth}p{0.30\textwidth}p{0.05\textwidth}rrr@{}}
+\toprule
+Stratum & First stage & Reranker / field use & Bgt. & Top-1 & Top-5 & MRR \\
+\midrule
+\endfirsthead
+\toprule
+Stratum & First stage & Reranker / field use & Bgt. & Top-1 & Top-5 & MRR \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Controlled & BM25 flat & M6-v0 schema rerank & 20 & 60.8\% & 90.2\% & 0.743 \\
+Controlled & TF-IDF flat & M6-v0 schema rerank & 20 & 63.3\% & 88.6\% & 0.749 \\
+Controlled & MiniLM full skill & M6-v0 schema rerank & 20 & 54.7\% & 83.3\% & 0.676 \\
+Controlled & BM25 flat & M6-v1 core-boundary field rerank & 20 & 67.8\% & 92.7\% & 0.792 \\
+Controlled & BM25 flat & M6-v1 core-boundary field rerank & 100 & 68.6\% & 94.7\% & 0.805 \\
+Controlled & TF-IDF flat & M6-v1 core-boundary field rerank & 20 & 69.8\% & 91.4\% & 0.793 \\
+Controlled & TF-IDF flat & M6-v1 core field rerank & 100 & 69.8\% & 94.3\% & 0.809 \\
+Controlled & TF-IDF schema & M6-v1 core-boundary field rerank & 20 & 69.8\% & 97.1\% & 0.818 \\
+Controlled & TF-IDF schema & M6-v1 core-boundary field rerank & 100 & 69.0\% & 96.3\% & 0.814 \\
+Controlled & Qwen full skill & M6-v1 core field rerank & 20 & 57.6\% & 81.2\% & 0.684 \\
+Controlled & Qwen full skill & M6-v1 core-boundary field rerank & 100 & 64.5\% & 91.4\% & 0.764 \\
+\midrule
+Public-gold & BM25 flat & M6-v0 schema rerank & 20 & 43.1\% & 80.6\% & 0.585 \\
+Public-gold & TF-IDF flat & M6-v0 schema rerank & 20 & 45.8\% & 84.7\% & 0.612 \\
+Public-gold & MiniLM full skill & M6-v0 schema rerank & 20 & 40.3\% & 69.4\% & 0.523 \\
+Public-gold & BM25 flat & M6-v1 task-field rerank & 20 & 63.9\% & 84.0\% & 0.724 \\
+Public-gold & BM25 flat & M6-v1 task-field rerank & 100 & 63.9\% & 84.0\% & 0.724 \\
+Public-gold & TF-IDF flat & M6-v1 task-field rerank & 20 & 68.1\% & 87.5\% & 0.763 \\
+Public-gold & TF-IDF flat & M6-v1 task-field rerank & 100 & 67.4\% & 86.8\% & 0.756 \\
+Public-gold & TF-IDF schema & M6-v1 task-field rerank & 20 & 66.7\% & 87.5\% & 0.756 \\
+Public-gold & TF-IDF schema & M6-v1 task-field rerank & 100 & 65.3\% & 87.5\% & 0.743 \\
+Public-gold & Qwen full skill & M6-v1 task-field rerank & 20 & 56.2\% & 73.6\% & 0.641 \\
+Public-gold & Qwen full skill & M6-v1 task-field rerank & 100 & 59.0\% & 81.9\% & 0.695 \\
+\caption{Frozen-v0.4 architecture-level field-aware diagnostics. Public-gold top-1 and top-5 are strict-gold metrics.}
+\label{tab:field-aware-diagnostics-v04}
+\end{longtable}
+}
+
+The diagnostic results show that field-aware reranking is promising but not yet a solved method. On controlled prompts, M6-v1 improves substantially over M6-v0, and the strongest current local setting is TF-IDF schema first-stage retrieval with M6-v1 core-boundary reranking at 69.8\% top-1 and 97.1\% top-5. On public-gold prompts, the best M6-v1 setting reaches 68.1\% strict top-1, below Qwen R1+Qwen reranking at 74.3\%, but with useful evidence that explicit task fields can recover part of the procedural signal. This supports treating M6-v1 as a diagnostic method for field usefulness rather than the final proposed architecture.
+
+\subsection{Candidate Recall Companion Table}
+
+Reranked systems have two possible failure points: the first-stage retriever may fail to include the gold skill, or the reranker may include it but order it incorrectly. Candidate recall separates these failure modes. Candidate R@20 measures whether the gold skill was present in the top-20 candidate set before reranking. Candidate R@100 gives the same diagnostic for wider candidate budgets. Conditional top-1 is the final top-1 accuracy among prompts where the gold skill was available to the reranker.
+
+\begin{table}[h]
+\centering
+\tiny
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{p{0.09\textwidth}p{0.27\textwidth}p{0.04\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.13\textwidth}}
+\toprule
+Stratum & Method & Bgt. & Cand. R@20 & Cand. R@100 & Final top-1 & Cond. top-1 & Main bottleneck \\
+\midrule
+Controlled & Qwen R1 embedding + Qwen rerank & 20 & 75.5\% & -- & 51.4\% & -- & Recall + order \\
+Controlled & Qwen R2 embedding + Qwen rerank & 20 & 80.8\% & -- & 58.0\% & -- & Recall + order \\
+Controlled & Qwen full embedding + Qwen rerank & 20 & 82.4\% & -- & 58.8\% & -- & Recall + order \\
+Controlled & TF-IDF schema + M6-v1 core-boundary rerank & 20 & 97.1\% & 98.4\% & 69.8\% & 71.9\% & Ordering \\
+Controlled & Qwen full + M6-v1 core-boundary rerank & 100 & 82.5\% & 93.5\% & 64.5\% & 69.0\% & First-stage + order \\
+\midrule
+Public-gold & Qwen R1 embedding + Qwen rerank & 20 & 93.8\% & -- & 74.3\% & -- & Ordering \\
+Public-gold & Qwen R2 embedding + Qwen rerank & 20 & 99.3\% & -- & 72.9\% & -- & Ordering \\
+Public-gold & Qwen full embedding + Qwen rerank & 20 & 81.2\% & -- & 65.3\% & -- & Candidate recall \\
+Public-gold & TF-IDF flat + M6-v1 task-field rerank & 20 & 92.4\% & 97.9\% & 68.1\% & 73.7\% & Ordering \\
+Public-gold & Qwen full + M6-v1 task-field rerank & 100 & 81.2\% & 95.8\% & 59.0\% & 61.6\% & First-stage + order \\
+\bottomrule
+\end{tabular}
+\caption{Candidate-recall companion table for selected reranked methods on frozen v0.4. Candidate recall is measured before reranking.}
+\label{tab:candidate-recall-companion-v04}
+\end{table}
+
+The candidate-recall table changes the interpretation of several results. For controlled TF-IDF schema plus M6-v1, the gold skill is almost always present in the candidate set, so remaining errors are mostly reranking errors. For Qwen full-skill first stages, candidate recall is lower, especially on public-gold, meaning the full artifact representation can fail before the reranker has a chance to correct the ranking. This is why final accuracy alone is insufficient: it hides whether the system needs a better first-stage representation, a better reranker, or both.
+
+\subsection{Global Field-Ablation Diagnostics}
+
+The frozen-v0.4 global field ablations are retained as diagnostic support, not as the primary RQ1 causal evidence. Unlike the controlled RQ1 suites, these rows do not hold all non-target fields constant around one labelled target field. They show how different field subsets behave under local lexical scoring across the broader controlled and public-gold strata. Table \ref{tab:field-ablation-v04} shows the strongest current ablation conditions for each stratum.
 
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{p{0.52\textwidth}rrr}
+\begin{tabular}{llrrr}
 \toprule
-Method & Top-1 & Top-5 & MRR \\
+Stratum & Ablation & Top-1 & Top-5 & MRR \\
 \midrule
-M1 BM25 flat & 62.5\% & 87.5\% & 0.715 \\
-M1 TF-IDF flat & 59.4\% & 87.5\% & 0.701 \\
-M2a MiniLM description & 65.6\% & 87.5\% & 0.738 \\
-M2b MiniLM full skill & 31.2\% & 71.9\% & 0.483 \\
-M3 TF-IDF schema & 50.0\% & 71.9\% & 0.607 \\
-M6-v0 local schema rerank & 34.4--46.9\% & 75.0--87.5\% & 0.521--0.631 \\
-Qwen R1/R2 embedding & 59.4\% & 87.5\% & 0.716--0.732 \\
-Qwen full-skill embedding & 28.1\% & 65.6\% & 0.469 \\
-Qwen full-skill + Qwen rerank & 68.8\% & 84.4\% & 0.763 \\
-Qwen full-skill + M6-v1-local, best strict top-1 & 53.1\% & 78.1\% & 0.647 \\
-SkillRouter full-skill embedding & 65.6\% & 96.9\% & 0.770 \\
-SkillRouter + SkillRouter rerank & 65.6\% & 93.8\% & 0.788 \\
-SkillRouter + M6-v1-local, best strict top-1 & 62.5\% & 93.8--96.9\% & 0.765 \\
+Controlled & Output artifacts, BM25 & 66.5\% & 95.1\% & 0.788 \\
+Controlled & Input/preconditions, BM25 & 66.1\% & 93.5\% & 0.782 \\
+Controlled & Workflow/procedure, TF-IDF & 65.7\% & 92.2\% & 0.777 \\
+Controlled & Use conditions, BM25 & 64.9\% & 93.9\% & 0.777 \\
+Public-gold & Description only, TF-IDF & 56.2\% & 88.2\% & 0.695 \\
+Public-gold & Description only, BM25 & 55.6\% & 86.8\% & 0.690 \\
+Public-gold & Dependencies/resources, BM25 & 53.5\% & 87.5\% & 0.676 \\
+Public-gold & Use conditions, TF-IDF & 52.8\% & 83.3\% & 0.663 \\
 \bottomrule
 \end{tabular}
-\caption{Public-gold selector results before final cleanup.}
-\label{tab:public-gold}
+\caption{Selected global field-ablation diagnostics on frozen v0.4. These rows support interpretation but should not replace the controlled RQ1 field-isolation suites for individual-field causality.}
+\label{tab:field-ablation-v04}
 \end{table}
 
-The public-gold results are a useful caution. On this stratum, the current schema method underperforms flat or description retrieval, while Qwen generic reranking is strongest on strict top-1. SkillRouter embedding performs much better than Qwen full-skill embedding and has very strong top-5 recall, but neither SkillRouter reranking nor M6-v1 field-aware reranking improves strict public-gold top-1. M6-v1-local has high candidate recall on public-gold, approximately 96.9\% at top-20 and top-100, but weak top-1 reranking. This does not invalidate the representation claim; it shows that extraction quality, broad public wrappers, duplicates, hierarchy, and semantic field matching must be handled explicitly. Public-gold results should therefore be reported separately from controlled results, and final reporting should distinguish strict gold from acceptable alternatives after the manually marked revise/exclude cases are cleaned.
+The global diagnostics support different claims for the two strata. Controlled prompts benefit from procedural fields such as outputs, preconditions, workflow, and use conditions. Public-gold prompts remain strongly driven by descriptions. This is consistent with the RQ1 conclusion, but less clean: field usefulness depends on whether the decisive signal is exposed, whether it is extracted cleanly, and whether the matcher can compare it robustly. Therefore these diagnostics should be reported as RQ2-adjacent support for representation design, while individual field claims should come from the controlled RQ1 hidden-versus-exposed suites and the later public original-document removal study.
 
-The generic non-main top-1 metric is not used as a headline public-gold metric because public gold skills are themselves public/background skills. Public-gold failures should instead be classified by stratum and cause: wrong controlled equivalent, wrong public wrapper, broad parent/router skill, duplicate or acceptable alternative, extraction failure, first-stage exclusion, or reranker ordering failure.
+\section{Historical External SkillRouter-Eval-Core Verification}
 
-\section{M0 Progressive Disclosure}
+The external SkillRouter-Eval-Core track tests whether the information-layer claim transfers beyond the local frozen-v0.4 benchmark. It is not a replacement for the controlled and public-gold strata above. The external benchmark has 75 scored non-generic tasks, an Easy pool of 78,361 public skills, and a Hard pool of 79,141 skills. Many tasks require multiple skills, so the main metrics are Hit@1, MRR@10, Recall@k, FullCoverage@k, and nDCG@10 rather than only single-gold top-1.
 
-The existing M0 progressive-disclosure trace covers an older core condition. The current manifest summary reports 129 runs over 43 prompts, with 68.2\% top-1 accuracy, 69.8\% any-hit rate, 21.7\% no explicit skill loaded, and a mean of 0.83 full skill documents loaded.
+Table \ref{tab:external-skillrouter-i3c-v2} reports the primary full-tier SQLite FTS5 BM25 information-layer ablation after the cleaned I3C V2 full-all extraction. The I3C condition serialises only evidence-grounded selector fields from the cleaned I3C V2 artifact. It should therefore be compared against I1 metadata and I2 full-body artifacts under the same retriever.
 
-This baseline is useful because it represents normal main-agent selection behaviour. However, it has not yet been rerun on the active 137-prompt, 2401-skill condition. At full scale, M0 is mainly a context/cost stress test because compact R1 metadata is already approximately 123k visible tokens and full artifacts exceed 1M visible tokens.
+\begin{table}[h]
+\centering
+\tiny
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{p{0.055\textwidth}p{0.15\textwidth}rrrrrrrr}
+\toprule
+Tier & Layer & Hit@1 & MRR@10 & nDCG@10 & R@5 & R@20 & Full@5 & Full@20 & Tokens \\
+\midrule
+Easy & I1 metadata & 36.0\% & 0.448 & 0.328 & 39.1\% & 48.3\% & 26.7\% & 32.0\% & 5.49M \\
+Easy & I2 full body & 48.0\% & 0.558 & 0.412 & 48.5\% & 57.4\% & 34.7\% & 42.7\% & 152.67M \\
+Easy & I3C V2 fields & 53.3\% & 0.586 & 0.429 & 48.4\% & 60.5\% & 29.3\% & 44.0\% & 15.68M \\
+\midrule
+Hard & I1 metadata & 28.0\% & 0.373 & 0.278 & 34.4\% & 46.1\% & 24.0\% & 30.7\% & 5.54M \\
+Hard & I2 full body & 44.0\% & 0.525 & 0.392 & 47.3\% & 55.7\% & 33.3\% & 41.3\% & 153.16M \\
+Hard & I3C V2 fields & 45.3\% & 0.527 & 0.378 & 44.5\% & 59.2\% & 26.7\% & 40.0\% & 15.83M \\
+\bottomrule
+\end{tabular}
+\caption{External SkillRouter-Eval-Core full-tier information-layer matrix using SQLite FTS5 BM25. R@k is multi-skill Recall@k; Full@k is whether all core gold skills are retrieved in the top-k.}
+\label{tab:external-skillrouter-i3c-v2}
+\end{table}
 
-\section{Low-Information and Implicit-Field Cases}
+On the Easy tier, I3C V2 is best on Hit@1, MRR@10, nDCG@10, Recall@20, and FullCoverage@20. On the Hard tier, I3C V2 narrowly beats I2 full body on Hit@1, MRR@10, and Recall@20, while I2 remains slightly stronger on FullCoverage@20. The cost trade-off is also substantial: I3C V2 uses about 15.8M approximate selector-visible tokens on the Hard tier, compared with 153.2M for I2 full body.
 
-Low-information and implicit-field cases test whether methods depend on explicit procedural cues. Performance drops sharply when prompts are underspecified. This suggests that procedural reranking is not simply guessing hidden intent; it needs request evidence. In a real agent system, very underspecified requests may require clarification before retrieval.
+The result therefore supports the RQ1 claim that task, input, output, workflow, dependency, boundary, and success information can help when it is recovered cleanly. It does not show that local frozen-v0.4 I3C has been run. The local model-parsed artifact is I3M, produced through a paid DeepSeek/API route, and should remain labelled as a feasibility attempt rather than as the practical I3C condition.
 
-The 10 implicit-field stress prompts are now integrated into the main benchmark. Their raw skills remain prose-only, while R2/R3 use conservative extraction to recover procedural fields. This better matches the thesis claim: structure-aware representation should include extraction and normalization rather than assuming perfect author-provided schema fields.
+\subsection{External Corpus and Prompt Audit}
 
-\section{Interim Interpretation}
+The external SkillRouter-Eval-Core result should be interpreted with a corpus-difference caveat. A static audit of the SkillRouter skills and tasks shows that the external benchmark is more documentation-like and more prompt-explicit than the local controlled benchmark. Table \ref{tab:skillrouter-corpus-audit} summarises the key structural differences.
 
-The current results support four interim conclusions:
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.23\textwidth}rrrrr}
+\toprule
+Corpus or prompt set & Rows & Median tokens & H1 & Rich schema & Procedural \\
+\midrule
+SkillRouter all skills & 79141 & 726 & 95.0\% & 27.6\% & 78.8\% \\
+SkillRouter scored gold-name skills & 533 & 885 & 98.5\% & 27.4\% & 79.2\% \\
+Local controlled gold+alternatives & 240 & 260.5 & 100.0\% & 72.9\% & 73.3\% \\
+\bottomrule
+\end{tabular}
+\caption{Static skill-body audit for the external SkillRouter corpus and local controlled comparison set. Rich schema means at least four core selection categories are explicit headings, or at least three plus three numbered steps.}
+\label{tab:skillrouter-corpus-audit}
+\end{table}
+
+The most frequent SkillRouter H2 headings are also template-like. Across the full corpus the leading headings are \texttt{overview} (13,568), \texttt{best practices} (10,567), \texttt{when to use} (10,041), \texttt{when to use this skill} (9,642), \texttt{examples} (6,862), \texttt{workflow} (6,442), and \texttt{quick start} (6,382). In the scored gold-name subset, common headings include \texttt{overview}, \texttt{best practices}, \texttt{quick start}, \texttt{dependencies}, \texttt{when to use this skill}, and \texttt{workflow}. Thus, even though most SkillRouter rows do not satisfy the strict rich-schema definition, many full bodies are already clean markdown documentation with explicit routing sections.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.24\textwidth}rrrrrrr}
+\toprule
+Prompt set & Rows & Mean tok. & Median tok. & \(\geq\)200 tok. & File/path & Input cue & Output cue \\
+\midrule
+SkillRouter scored tasks & 75 & 198.4 & 169 & 41.3\% & 97.3\% & 92.0\% & 85.3\% \\
+Local controlled prompts & 245 & 36.8 & 25 & 0.4\% & 28.2\% & 18.4\% & 26.9\% \\
+Local public-gold prompts & 144 & 30.1 & 29 & 0.0\% & 18.1\% & 21.5\% & 47.2\% \\
+\bottomrule
+\end{tabular}
+\caption{Prompt-side explicitness audit. Token counts are rough whitespace-token counts, not provider tokenizer counts.}
+\label{tab:skillrouter-prompt-audit}
+\end{table}
+
+This audit explains why the external result should be used as portability evidence rather than as a direct replacement for the local controlled benchmark. SkillRouter scored prompts are paragraph-sized task specifications with frequent file, input, output, and step cues. Local controlled prompts are shorter and intentionally include near-neighbour alternatives. Therefore, differences between local and external results may reflect both information-layer quality and benchmark difficulty.
+
+\section{Historical Frozen-v0.4 Method Results}
+
+\subsection{SkillRouter and Hugging Face Results}
+
+SkillRouter frozen-v0.4 metrics and prompt-level artifacts are now available for R1, R2, and full-artifact representations. The detailed failure analysis is kept as a working note rather than inserted into this chapter.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.12\textwidth}p{0.18\textwidth}p{0.30\textwidth}rrr}
+\toprule
+Stratum & Representation & Method & Top-1 & Top-5 & MRR \\
+\midrule
+Controlled & R1 & Embedding only & 62.9\% & 93.5\% & 0.763 \\
+Controlled & R1 & SkillRouter rerank top-20 & 65.7\% & 94.7\% & 0.780 \\
+Controlled & R2 & Embedding only & 64.5\% & 94.7\% & 0.783 \\
+Controlled & R2 & SkillRouter rerank top-20 & 71.0\% & 96.7\% & 0.823 \\
+Controlled & Full & Embedding only & 59.2\% & 91.4\% & 0.737 \\
+Controlled & Full & SkillRouter rerank top-20 & 71.8\% & 95.9\% & 0.827 \\
+\midrule
+Public-gold & R1 & Embedding only & 68.8\% & 93.8\% & 0.794 \\
+Public-gold & R1 & SkillRouter rerank top-20 & 70.8\% & 92.4\% & 0.804 \\
+Public-gold & R2 & Embedding only & 75.0\% & 94.4\% & 0.831 \\
+Public-gold & R2 & SkillRouter rerank top-20 & 71.5\% & 93.1\% & 0.805 \\
+Public-gold & Full & Embedding only & 75.0\% & 93.1\% & 0.833 \\
+Public-gold & Full & SkillRouter rerank top-20 & 70.1\% & 92.4\% & 0.804 \\
+\bottomrule
+\end{tabular}
+\caption{Frozen-v0.4 SkillRouter summary metrics from the hosted rerun. Prompt-level artifacts have been recovered for separate failure analysis.}
+\label{tab:skillrouter-v04-summary}
+\end{table}
+
+The controlled SkillRouter result strengthens the main benchmark claim: even a skill-specific retriever and reranker does not solve the benchmark completely. R2 improves over R1 under both embedding-only and reranked settings, and full skill text helps most after reranking. On public-gold, SkillRouter embedding is strong, but reranking reduces strict top-1 for R2 and full text. This makes SkillRouter a strong baseline rather than a replacement for the representation question.
+
+\subsection{SkillRouter First Stage With M6-v1 Field-Aware Reranking}
+
+Table \ref{tab:skillrouter-m6v1-v04} compares two second-stage policies over the same SkillRouter top-20 candidate sets: the released SkillRouter neural reranker and the local M6-v1 lexical field-aware reranker. This is a fairer architecture comparison than comparing different first-stage retrievers, because the candidate generator, representation, prompt split, library size, and top-20 budget are held fixed.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.12\textwidth}p{0.15\textwidth}rrrp{0.16\textwidth}r}
+\toprule
+Stratum & Rep. & Emb. only & SR rerank & M6-v1 & M6 field set & Cand. R@20 \\
+\midrule
+Controlled & R1 & 62.9\% & 65.7\% & 67.8\% & task/out./workflow & 95.9\% \\
+Controlled & R2 & 64.5\% & 71.0\% & 70.2\% & core + boundary & 97.1\% \\
+Controlled & Full & 59.2\% & 71.8\% & 68.6\% & core + boundary & 96.3\% \\
+\midrule
+Public-gold & R1 & 68.8\% & 70.8\% & 70.1\% & task & 96.5\% \\
+Public-gold & R2 & 75.0\% & 71.5\% & 72.2\% & task & 97.9\% \\
+Public-gold & Full & 75.0\% & 70.1\% & 73.6\% & task & 97.9\% \\
+\bottomrule
+\end{tabular}
+\caption{SkillRouter top-20 first-stage candidates reranked by SkillRouter versus M6-v1 on frozen v0.4. Values are strict top-1 accuracy. M6-v1 uses the best field set within each row and is therefore a diagnostic upper view of the current lexical field-aware prototype.}
+\label{tab:skillrouter-m6v1-v04}
+\end{table}
+
+The SkillRouter--M6-v1 comparison is useful but mixed. On controlled prompts, M6-v1 improves over embedding-only in all three representation conditions, showing that explicit field matching can use information in the candidate set. However, the released SkillRouter reranker remains slightly stronger than M6-v1 for R2 and full representations. On public-gold prompts, the strongest SkillRouter embedding-only rows are already high, and both rerankers can reduce strict top-1. This suggests that public-authored skills often contain provider, platform, and task cues that make second-stage reranking brittle. The result supports the thesis claim that field-aware information is useful, but it also confirms that the current lexical M6-v1 matcher should be treated as diagnostic rather than final.
+
+\subsection{M6-v2 Semantic Field-Matching Calibration}
+
+M6-v2 is a no-rewrite semantic field-aware reranker. It embeds the raw user request and compares it against selector-visible skill fields. The first frozen-v0.4 implementation used a conservative score blend of 0.70 first-stage score and 0.30 semantic-field score. A later calibration sweep varied this blend and the penalty scale using existing candidate-level outputs. The sweep should be read as a diagnostic calibration result, not as a final tuned method, because full-set best weights can overfit the benchmark.
+
+The thesis-facing fixed version now uses one global setting across all models and strata: 0.30 first-stage score, 0.70 semantic-field score, and a 0.25 penalty scale. The selected fixed internal field weights are task/use condition 0.50, output/artifact 0.20, workflow/procedure 0.15, input/precondition 0.10, and dependency/resource 0.05. Table \ref{tab:m6v2-fixed-global-v04} reports this fixed policy on the R2 structured representation. This is the clean method result; the later tuned tables are diagnostics.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.15\textwidth}p{0.16\textwidth}rrrr}
+\toprule
+Candidate source & Stratum & Strict top-1 & Accept top-1 & Strict top-5 & MRR \\
+\midrule
+Qwen & Controlled R2 & 37.5\% & 38.0\% & 72.7\% & 0.524 \\
+Qwen & Public-gold R2 & 59.0\% & 67.4\% & 86.8\% & 0.709 \\
+SkillRouter & Controlled R2 & 54.3\% & 55.1\% & 91.4\% & 0.701 \\
+SkillRouter & Public-gold R2 & 68.1\% & 76.4\% & 91.7\% & 0.775 \\
+\bottomrule
+\end{tabular}
+\caption{M6-v2-fixed task-heavy field-weight result on R2. The same weights, blend, activation rule, and penalty scale are used in every row.}
+\label{tab:m6v2-fixed-global-v04}
+\end{table}
+
+As a boundary check, the task-heavy field-only version with zero first-stage score performs worse: Qwen controlled R2 34.3\%, Qwen public-gold R2 47.2\%, SkillRouter controlled R2 39.6\%, and SkillRouter public-gold R2 50.7\% strict top-1. This suggests that the explicit fields alone are not sufficient under the current no-rewrite matcher; a small first-stage prior is still useful for stabilising candidate order.
+
+The task-heavy internal weighting was selected after a fixed-method ablation in which the outer scoring policy remained constant and only the internal field weights changed. Table \ref{tab:m6v2-internal-weight-ablation-v04} reports the average across the four main R2 conditions: Qwen controlled, Qwen public-gold, SkillRouter controlled, and SkillRouter public-gold.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.25\textwidth}rrrrr}
+\toprule
+Internal scheme & Avg top-1 & Avg accept top-1 & Avg top-5 & Avg MRR & Worst top-1 \\
+\midrule
+Task-heavy & 54.7\% & 59.2\% & 85.6\% & 0.677 & 37.5\% \\
+Dependency-balanced & 53.4\% & 57.3\% & 83.7\% & 0.662 & 36.3\% \\
+Global core & 51.9\% & 56.4\% & 83.0\% & 0.650 & 37.1\% \\
+Workflow-heavy & 51.7\% & 56.6\% & 83.1\% & 0.650 & 37.1\% \\
+Balanced-input & 50.8\% & 55.2\% & 82.8\% & 0.642 & 36.7\% \\
+\bottomrule
+\end{tabular}
+\caption{M6-v2 fixed internal-weight ablation on R2. The outer method is fixed at 0.30 first-stage score, 0.70 field score, and 0.25 penalty scale.}
+\label{tab:m6v2-internal-weight-ablation-v04}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabular}{p{0.13\textwidth}p{0.10\textwidth}p{0.08\textwidth}p{0.12\textwidth}rrrr}
+\toprule
+Candidate source & Stratum & Rep. & Dev-selected field set & Base wt. & Field wt. & Dev top-1 & Test top-1 \\
+\midrule
+Qwen & Controlled & R2 & task & 0.55 & 0.45 & 41.7\% & 42.4\% \\
+Qwen & Public-gold & R2 & task & 0.30 & 0.70 & 72.7\% & 66.7\% \\
+SkillRouter & Controlled & R2 & task & 0.75 & 0.25 & 63.8\% & 64.4\% \\
+SkillRouter & Public-gold & R2 & task & 0.25 & 0.75 & 83.3\% & 66.7\% \\
+\bottomrule
+\end{tabular}
+\caption{M6-v2 fine blend calibration for selected R2 rows. Weights are selected on a deterministic development split and reported on the held-out split.}
+\label{tab:m6v2-calibration-v04}
+\end{table}
+
+The calibration results suggest that the original M6-v2 first-stage weight was too conservative for some Qwen candidate sets, especially public-gold R2, where a field-heavy blend improves held-out top-1 relative to the initial M6-v2 task result. However, this pattern does not hold uniformly. SkillRouter controlled results remain more first-stage-heavy, which means explicit field scoring should act as calibrated evidence rather than a universal override. The next methodological step is therefore to tune M6-v2's explicit field use: compare request-side input, output, workflow, and dependency evidence directly against the corresponding skill fields, instead of relying only on whole-query similarity to every field.
+
+That field-specific M6-v2 pass has now been run as an ablation. Table \ref{tab:m6v2-field-specific-v04} summarises the R2 rows because R2 is the main structured-representation condition. The fixed field-specific score compares request-side fields against matching skill-side fields, while the tuned rows recompute the semantic field score from saved per-field component similarities. The tuning sweep is narrow and should be treated as diagnostic.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.13\textwidth}p{0.13\textwidth}p{0.20\textwidth}p{0.09\textwidth}p{0.09\textwidth}p{0.09\textwidth}}
+\toprule
+Source & Stratum & Best tuned setting & Fixed top-1 & Full-set top-1 & Held-out top-1 \\
+\midrule
+Qwen & Controlled R2 & core-boundary, base 0.90 & 40.0\% & 41.6\% & 40.7\% \\
+Qwen & Public-gold R2 & task-only, base 0.25 & 61.8\% & 68.8\% & 66.7\% \\
+SkillRouter & Controlled R2 & core-boundary, base 0.70 & 64.5\% & 66.1\% & 63.6\% \\
+SkillRouter & Public-gold R2 & task-only, base 0.40 & 73.6\% & 76.4\% & 71.8\% \\
+\bottomrule
+\end{tabular}
+\caption{M6-v2 field-specific tuning on R2 after the focused explicit field-weight sweep. Fixed field-specific top-1 uses the best untuned field-specific field set; tuned full-set top-1 may overfit and is reported only as a calibration diagnostic.}
+\label{tab:m6v2-field-specific-v04}
+\end{table}
+
+The field-specific ablation clarifies the current limitation. Extra fields can improve full-set controlled R2 tuning in some rows, especially when boundary or dependency-aware field sets are used with SkillRouter candidates. However, held-out results remain weaker and the public-gold rows still mostly prefer task-only settings. This suggests that the proposed information fields are useful, but the current no-rewrite M6-v2 scorer is not yet sophisticated enough to decide reliably when output, workflow, dependency, or boundary fields should override the task-level match. A stronger future variant would need better request-field activation, contradiction handling, and validation-selected field weights.
+
+\subsection{M4 Tree Routing and M5 Graph Retrieval}
+
+\textbf{Current frozen-v0.4 result: TBD.} R4 graph edges have been exported, but tree routing and graph retrieval have not yet been evaluated. These should remain blank until implemented.
+
+\subsection{M0 Progressive Disclosure}
+
+\textbf{Current frozen-v0.4 result: TBD.} Existing M0 traces belong to older core conditions. Full-scale progressive disclosure has not been rerun against the 2433-skill frozen library.
+
+\subsection{Downstream Task Success}
+
+\textbf{Current frozen-v0.4 result: TBD.} No downstream task-success experiment has been completed for frozen v0.4. Current claims are therefore about retrieval quality, not final agent task success.
+
+\section{Historical Exploratory Interpretation}
+
+The frozen-v0.4 results support six exploratory observations that motivate, but do not answer, the new RQ2a:
 
 \begin{enumerate}
-  \item Scale creates real retrieval pressure, including non-core false positives.
-  \item Use conditions, output artifacts, and workflow/procedure fields are the strongest current positive fields.
-  \item Dependency, resource, and boundary fields require field-aware handling rather than naive concatenation.
-  \item SkillRouter plus M6-v1-local is the strongest controlled result so far, but the same field-aware matcher remains too brittle for public-gold cases.
+  \item \textbf{Representation matters under controlled confusability.} With Qwen held fixed, R2 structured representation improves over R1 flat representation on controlled prompts, and nearly matches full skill text under Qwen reranking.
+  \item \textbf{Skill-specific retrieval raises the ceiling but preserves the representation question.} SkillRouter substantially improves over generic Qwen on controlled prompts, but R2 and full artifact representations still behave differently under the same SkillRouter architecture.
+  \item \textbf{Full skill text is not automatically best.} On public-gold, full-skill Qwen embedding performs much worse than R1 or R2. More raw text can dilute the retrieval signal.
+  \item \textbf{Lexical candidate generation is a serious baseline.} M6-v1 with TF-IDF/schema or TF-IDF/flat first stages performs strongly on frozen v0.4. The thesis should not frame the comparison as only embedding versus structure.
+  \item \textbf{Public-gold is a harder external-validity check.} Public-gold results show that descriptions and provider/task cues remain powerful, while schema extraction and lexical field matching are brittle for messy public skills.
+  \item \textbf{The current field-aware method is diagnostic, not final.} M6-v1-local supports the value of field-aware matching, but a stronger semantic or LLM-assisted field matcher is needed before claiming a robust structure-aware retrieval method.
 \end{enumerate}
 
-Downstream task success, M4 tree routing, M5 graph retrieval, and stronger semantic M6-v1 variants remain future work at this stage.
+Overall, the current evidence supports an information-centred thesis, but the strongest claim should be phrased carefully: preserving operational selection information helps under controlled semantic confusion, but the way that information is extracted, represented, and matched determines whether the benefit transfers to public-authored skills.

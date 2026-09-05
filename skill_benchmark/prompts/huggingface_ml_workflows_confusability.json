@@ -21,7 +21,10 @@
       "hf-dataset-viewer-inspector",
       "sentence-transformer-finetuner"
     ],
-    "prompt": "I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options; do not design a dataset audit."
+    "prompt": "I need a local model for classifying support tickets on an 8 GB Mac. Choose realistic Hugging Face/GGUF candidates and quantization options for local inference; do not design a dataset audit, browser-side Transformers.js demo, or training workflow.",
+    "acceptable_alternatives": [
+      "public-huggingface-huggingface-local-models"
+    ]
   },
   {
     "id": "huggingface_ml_workflows_p3_sentence_transformer_finetuner",
@@ -31,9 +34,14 @@
       "public-huggingface-train-sentence-transformers",
       "public-swebench-similarity-search-patterns",
       "hf-dataset-viewer-inspector",
-      "hf-local-model-selector"
+      "hf-local-model-selector",
+      "psc-sentence-embedding-trainer",
+      "psc-retrieval-result-adjudicator"
     ],
-    "prompt": "We have labelled skill-query pairs and hard negatives for agent skill routing. Plan a sentence-transformer fine-tuning setup with losses, splits, and retrieval metrics."
+    "prompt": "We have labelled skill-query pairs and hard negatives for agent skill routing. Plan a sentence-transformer fine-tuning setup with losses, splits, and retrieval metrics.",
+    "acceptable_alternatives": [
+      "public-huggingface-train-sentence-transformers"
+    ]
   },
   {
     "id": "huggingface_ml_workflows_p4_gradio_demo_builder",

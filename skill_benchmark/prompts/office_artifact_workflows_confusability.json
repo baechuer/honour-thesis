@@ -7,7 +7,9 @@
       "pdf-ocr-extractor",
       "office-to-markdown-converter",
       "public-office-pdf-extraction",
-      "public-pdf"
+      "public-pdf",
+      "pdf-layout-table-extractor",
+      "implicit-pdf-table-reconstructor"
     ],
     "prompt": "Please inspect `/workspace/fixtures/office_artifact_workflows/grant_application_packet.pdf` as a rendered PDF. I need page-by-page layout issues: cropped tables, broken headers, missing signature areas, and anything that would make the form hard to read. Do not just extract the fields."
   },
@@ -42,9 +44,10 @@
       "office-to-markdown-converter",
       "data-analysis-with-validation",
       "public-xlsx",
-      "public-office-xlsx-manipulation"
+      "public-office-xlsx-manipulation",
+      "psc-data-trust-auditor"
     ],
-    "prompt": "Please check `/workspace/fixtures/office_artifact_workflows/pricing_model.xlsx` for calculation and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly."
+    "prompt": "Please audit `/workspace/fixtures/office_artifact_workflows/pricing_model.xlsx` for formula and assumption risks. I care about wrong cell links, mismatched copied ranges, embedded constants, and whether the summary tab traces back correctly. Do not edit or generate workbook sheets, and do not run a general data-quality validation."
   },
   {
     "id": "office_p5_slide_visual_audit",

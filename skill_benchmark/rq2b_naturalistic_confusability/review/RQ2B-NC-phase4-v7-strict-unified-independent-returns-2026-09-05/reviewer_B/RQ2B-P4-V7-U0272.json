@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-03F9F258515243AC","missing_material_requirement_or_null":"Golden-image scanning and hardening, configuration-managed secrets, and continuous patch/drift detection.","rationale":"The SDLC workflow supplies general CI, deployment, and monitoring discipline, but it offers no VM-specific security-gate mechanics for the three required controls.","source_anchor":"Lint → Type Check → Unit Test → Build → Security Scan"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-9DC51BD377A3F1F8","missing_material_requirement_or_null":"VM golden-image hardening, configuration-managed secrets, and continuous VM patch/drift detection.","rationale":"This is a security-gated Kubernetes pipeline with container-image scanning and External Secrets; it does not provide the requested VM-specific image, secrets, or recurring fleet controls.","source_anchor":"### Phase 3 — Container image scan (post-build, on the actual digest)"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-BC845CF7D2382D92","missing_material_requirement_or_null":null,"rationale":"It directly supplies a VM DevSecOps pipeline with hardened golden-image scanning, Ansible Vault configuration-managed secrets, and scheduled patch and drift checks independent of deployment.","source_anchor":"### Phase 3 — Golden-image scanning and CIS benchmark hardening, baked into the image itself"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-C8B055A658862B3B","missing_material_requirement_or_null":"Security-gated VM delivery pipeline design.","rationale":"The source is exclusively about producing SDK release-note articles and contains no delivery-security controls for virtual machines.","source_anchor":"# Write release notes"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-CDCDB3F454B2088A","missing_material_requirement_or_null":"VM golden-image hardening, configuration-managed secrets, and continuous VM patch/drift detection.","rationale":"This serverless DevSecOps guide provides security gates, but its runtime-secrets and function-package model does not implement the requested VM-specific controls.","source_anchor":"### Phase 6 — Secrets: fetched by the function at runtime, never baked in"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D53EE977A8453B3C","missing_material_requirement_or_null":"Security-gated VM delivery pipeline design.","rationale":"The source addresses API and interface contracts rather than VM image hardening, secrets management, or fleet security monitoring.","source_anchor":"# API and Interface Design"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-E849E4B176C43E6E","missing_material_requirement_or_null":"Security-gated VM delivery pipeline design.","rationale":"The source writes end-user push-notification copy and does not support VM delivery or security controls.","source_anchor":"# Push Notification Copy"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-F4A9B193FC1DE78D","missing_material_requirement_or_null":"Security-gated VM delivery pipeline design.","rationale":"The source surveys documented UI conventions, not virtual-machine delivery pipelines or DevSecOps controls.","source_anchor":"# `visual-prior-art-survey` — SKILL.md"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0272",
+  "batch_input_sha256":"0630ec2ffc594d0dcd51bc3fc7a6a61bd1784858d185840de932a7e644c1a94d",
+  "blind_packet_id":"P-64E9361FE1C2F7EF57",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"9164f90dd27e5aedb7d6e9a535300d2add48ad86529fefe644f0309ebac3bb64"
+}

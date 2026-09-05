@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-254D2485EACCBDF8",
+      "missing_material_requirement_or_null": "A GitHub Actions log-diagnosis workflow that identifies the first meaningful error, ties it to a likely root cause, gives the smallest fix, and names the job to rerun.",
+      "rationale": "This skill triages GitHub issues and labels them; it does not inspect CI logs or provide error isolation, a minimal workflow fix, or a targeted rerun decision.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-296FC8CCEC69B4D8",
+      "missing_material_requirement_or_null": "An explicit GitHub Actions log-triage procedure for isolating the first meaningful error, determining a likely root cause, choosing the smallest fix, and naming the rerun job.",
+      "rationale": "The CI/CD integration phase is relevant background, but the skill is a repository-management framework rather than a procedure for diagnosing a failed Actions log and selecting a rerun.",
+      "source_anchor": "### Phase 8 — CI/CD Integration with Version Control"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6CB5F2231A97BF81",
+      "missing_material_requirement_or_null": "A GitHub Actions log-diagnosis workflow that identifies the first meaningful error, ties it to a likely root cause, gives the smallest fix, and names the job to rerun.",
+      "rationale": "This skill analyzes customer-satisfaction verbatims and prioritizes product themes, not failed CI logs or GitHub Actions jobs.",
+      "source_anchor": "## Data preparation"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-722DC442B13B8EBC",
+      "missing_material_requirement_or_null": "A failed GitHub Actions log-triage procedure that identifies the first meaningful error, determines a likely root cause, specifies the smallest fix, and names the job to rerun.",
+      "rationale": "Its CI-checks stage establishes that failing checks block merging, but it supplies no log-first diagnostic method, minimal fix path, or job-specific rerun guidance.",
+      "source_anchor": "### 11. CI Checks"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-774D6F2681FF445B",
+      "missing_material_requirement_or_null": "A GitHub Actions log-diagnosis workflow that identifies the first meaningful error, ties it to a likely root cause, gives the smallest fix, and names the job to rerun.",
+      "rationale": "This is a security review method for code and untrusted-input risks, not an investigation workflow for a failed GitHub Actions log.",
+      "source_anchor": "# Secure Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8B54D948E58C3EA0",
+      "missing_material_requirement_or_null": "A GitHub Actions log-diagnosis workflow that identifies the first meaningful error, ties it to a likely root cause, gives the smallest fix, and names the job to rerun.",
+      "rationale": "This skill surveys documented UI and interaction conventions before design work; it does not address CI execution failures.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CD040ED1BB65257E",
+      "missing_material_requirement_or_null": "A failed GitHub Actions log-triage procedure that isolates the first meaningful error, determines a likely root cause, defines the smallest fix, and identifies the job to rerun.",
+      "rationale": "It provides substantial Actions workflow engineering and auditing guidance, but lacks a procedure for reading a failed log and returning the requested first-error diagnosis and rerun decision.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F511CAE12FBB31C3",
+      "missing_material_requirement_or_null": "A failed GitHub Actions log-triage procedure that isolates the first meaningful error, determines a likely root cause, defines the smallest fix, and identifies the job to rerun.",
+      "rationale": "It is directly about GitHub Actions workflow design and review, but its operating procedure does not diagnose a failed log or provide the requested first-error, minimal-fix, and rerun-job analysis.",
+      "source_anchor": "## Operating procedure"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0079",
+  "batch_input_sha256": "7b4efe310327c18b84fd2066e91b579205e447d0b11b49c0b28287fa228fed34",
+  "blind_packet_id": "P-18E1980650940DB1AE",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "28be9010428419dc317ae698d8abeaa1c20cd56da6239a5a8405f5377c9eef82"
+}

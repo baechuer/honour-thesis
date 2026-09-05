@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-45B54C863DEB61E9",
+      "missing_material_requirement_or_null": "It requires a C/C++ target compiled with Clang rather than providing a Ruby-library fuzzing setup.",
+      "rationale": "It provides coverage-guided fuzzing, harness construction, campaign commands, and crash artifacts, but its stated scope is C/C++ rather than the Ruby library in the prompt.",
+      "source_anchor": "# libFuzzer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-821C59B7AB5C6B8D",
+      "missing_material_requirement_or_null": "It provides a Python-target fuzzer, not an executable setup for the Ruby parsing library.",
+      "rationale": "It is a coverage-guided fuzzer with harness and run guidance, but its source-visible scope is Python code and C extensions rather than Ruby.",
+      "source_anchor": "# Atheris"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-91EF3C1B68CE3EC8",
+      "missing_material_requirement_or_null": "It does not provide adversarial-input testing, a parser test harness, campaign commands, or failure-input retention.",
+      "rationale": "The skill concerns city-level search visibility and local social content, not testing a Ruby parsing library.",
+      "source_anchor": "# Local + Google Business Profile visibility"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A635679368C52076",
+      "missing_material_requirement_or_null": "It does not provide automated adversarial-input testing, a Ruby parser harness, team run instructions, or retained failing inputs.",
+      "rationale": "The skill prepares commercial-print layouts and prepress files, which is unrelated to the requested testing work.",
+      "source_anchor": "# Print Layout"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-ADB5949C9E440A48",
+      "missing_material_requirement_or_null": "It lacks a concrete adversarial-input test setup, Ruby parser harness, fuzzing run procedure, and failure-artifact retention mechanism.",
+      "rationale": "It offers release-process and testing gates, but delegates the actual testing work and does not implement the requested fuzzing workflow.",
+      "source_anchor": "## Local Testing"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-C0AF6E2EC6EA4B88",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It gives a Ruby coverage-guided fuzzer, parser-harness examples, installation and campaign commands for the team, and specifies crash artifacts that can be retained and rerun for investigation.",
+      "source_anchor": "## Running Campaigns"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DA99FB9D783F43A4",
+      "missing_material_requirement_or_null": "It does not provide a Ruby adversarial-input test harness, commands to run it, or a mechanism to retain failing inputs.",
+      "rationale": "The skill surveys published user-research evidence before interface design rather than testing software parsers.",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DE5E2BAA4C11AE19",
+      "missing_material_requirement_or_null": "It does not set up automated adversarial-input fuzzing or retain inputs that reveal failures.",
+      "rationale": "It supplies deterministic test-data builders and boundary datasets relevant to testing, but not the requested Ruby parser fuzzing and crash-artifact workflow.",
+      "source_anchor": "# Test Data Builder"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0168",
+  "batch_input_sha256": "9eb267aa020887a6df91e3e236f051aaeb0d0c26c311230daf7420c5156d4764",
+  "blind_packet_id": "P-4D2E5AA82273398254",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "24960befb559b9cfa9a8c6ee8522070b5f2d035fa70951f1182cac5cc2acb617"
+}

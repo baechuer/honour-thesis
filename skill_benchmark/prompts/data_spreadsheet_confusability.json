@@ -30,7 +30,7 @@
       "data-analysis-with-anomaly-focus",
       "data-analysis-for-root-cause-diagnosis"
     ],
-    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Before I react to it, audit whether the numbers are trustworthy: check for missing values, inconsistent rows, suspicious outliers, denominator issues, or measurement artifacts that could make a genuine problem look worse than it is."
+    "prompt": "Please read `/workspace/fixtures/data_spreadsheet/channel_performance_weekly.csv`. Before I react to it, do a data-quality validation audit: check missing values, inconsistent rows, suspicious outliers, denominator issues, and measurement artifacts that could make a genuine problem look worse than it is. I need trustworthiness checks, not an anomaly-focused business diagnosis."
   },
   {
     "id": "data_p4_root_cause",

@@ -9,7 +9,7 @@
       "pdf-form-filler",
       "pdf-redaction-reviewer"
     ],
-    "prompt": "Please answer this from `/workspace/fixtures/pdf_document_operations/sample_packet.pdf`: what evidence does the policy give for reimbursing delayed travel meals? Cite the page or section evidence rather than converting the whole document."
+    "prompt": "Using `/workspace/fixtures/pdf_document_operations/sample_packet.pdf`, answer what evidence the policy gives for reimbursing delayed travel meals. Cite the page or section evidence and provide a concise answer. Do not convert the whole document, extract tables, fill forms, run OCR, or do redaction/privacy review; there are no sensitive fields to mark."
   },
   {
     "id": "pdf_document_operations_p2_pdf_layout_table_extractor",
@@ -55,7 +55,8 @@
       "privacy-risk-reviewer",
       "public-office-contract-review",
       "public-openai-pdf",
-      "pdf-question-answerer"
+      "pdf-question-answerer",
+      "pdf-layout-reviewer"
     ],
     "prompt": "Before we send `/workspace/fixtures/pdf_document_operations/client_contract.pdf` to an external vendor, identify page-specific redaction targets such as IDs, addresses, pricing, and confidential clauses."
   },

@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-2A69523CF406B905", "missing_material_requirement_or_null": "TypeScript binding for the requested two-language implementation.", "rationale": "Covers Algorand x402 payment roles and facilitator endpoints in Python, but only Python.", "source_anchor": "Build x402 HTTP-native payment applications on Algorand with Python."},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-4296824D6F353F0E", "missing_material_requirement_or_null": "Signed-ledger payment roles, protocol exchange, options, and language/network bindings.", "rationale": "Provides a concrete staged rollout, rollback thresholds, and general pre-launch verification, but not the payment-system design.", "source_anchor": "## Staged Rollout"},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-4D64591C91B2E103", "missing_material_requirement_or_null": "Signed-ledger payment protocol roles, exchange, payment options, and language/network bindings.", "rationale": "Directly supports an architecture diagram and decision-oriented implementation plan, but lacks the required payment-domain guidance.", "source_anchor": "## Output Templates"},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-5C03B601DA98C40F", "missing_material_requirement_or_null": "Signed-ledger payment roles, exchange, options, language/network bindings, rollout, and test plan.", "rationale": "Can produce the requested architecture or sequence diagram, but contains no guidance for the payment implementation plan itself.", "source_anchor": "Create professional diagrams using Mermaid, PlantUML, and other text-based diagram tools."},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-83E7BEB431626317", "missing_material_requirement_or_null": "Payment-system architecture, protocol exchange, options, language/network bindings, and rollout plan.", "rationale": "Gives useful payment-boundary testing guidance, including exactly-once charging and real-sandbox backstops, but only for the testing portion.", "source_anchor": "For each critical integration (payments, primary datastore), retain at least one test against a real sandbox dependency"},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-9F8C1D01A143762D", "missing_material_requirement_or_null": "Python binding for the requested two-language implementation.", "rationale": "Covers Algorand x402 payment roles and facilitator implementation in TypeScript, but only TypeScript.", "source_anchor": "Build x402 HTTP-native payment applications on Algorand with TypeScript."},
+    {"adequacy": "FULLY_ACCEPTABLE", "candidate_token": "C-B8580FCA7FADD8A7", "missing_material_requirement_or_null": null, "rationale": "Defines the three payment roles, 402/sign/retry/verify/settle exchange, multi-network options, and TypeScript and Python bindings for a complete implementation plan.", "source_anchor": "## Core Architecture"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-EE2086FA54159312", "missing_material_requirement_or_null": "Signed-ledger payment API architecture and both language/network bindings.", "rationale": "This is a GO/KEGG enrichment-analysis workflow, not guidance for a payment API.", "source_anchor": "GO and KEGG enrichment from a gene list"}
+  ],
+  "batch_id": "RQ2B-P4-V7-U0178",
+  "batch_input_sha256": "3c448617506f6d89c31b468d9f9859f670a2bdeb32978da17bd15fdbbb220309",
+  "blind_packet_id": "P-87F2441250E0EBBA67",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "bd698ed5b6263fe0e0e2b4050244df2fec943e78ef2970155fe5225188faf007"
+}

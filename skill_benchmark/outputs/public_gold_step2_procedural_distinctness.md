@@ -7,10 +7,10 @@ Important interpretation: `not_for` boundaries are treated as supporting evidenc
 ## Overall Status
 
 - Step 2 status: **PASS**
-- Prompts with at least one primary procedural differentiator for every alternative: 82/82 (100.0%)
-- Gold/alternative pairs with at least one primary differentiator: 315/315 (100.0%)
-- Gold/alternative pairs with two or more primary differentiators: 288/315 (91.4%)
-- Prompts where all listed alternatives differ on two or more primary axes: 64/82 (78.0%)
+- Prompts with at least one primary procedural differentiator for every alternative: 144/144 (100.0%)
+- Gold/alternative pairs with at least one primary differentiator: 575/575 (100.0%)
+- Gold/alternative pairs with two or more primary differentiators: 526/575 (91.5%)
+- Prompts where all listed alternatives differ on two or more primary axes: 109/144 (75.7%)
 
 Pass rule used here: every pair needs at least one primary procedural axis; the benchmark is considered strong when at least 80% of pairs have two or more primary axes.
 
@@ -22,21 +22,22 @@ Why Step 2 was previously unresolved: the coverage report showed that fields exi
 
 | Primary axis | Pair count |
 |---|---:|
-| input/precondition | 195 |
-| output artifact | 108 |
-| workflow | 306 |
-| success criterion | 228 |
-| dependency/resource | 226 |
+| input/precondition | 317 |
+| output artifact | 215 |
+| workflow | 563 |
+| success criterion | 378 |
+| dependency/resource | 437 |
 
 | Supporting boundary axis | Pair count |
 |---|---:|
-| avoid/not-for boundary | 116 |
+| avoid/not-for boundary | 171 |
 
 ## Family Summary
 
 | Family | Prompts | Prompt pass | Strong prompts | Weak pairs |
 |---|---:|---:|---:|---:|
-| public_gold_validation | 82 | 82/82 | 64/82 | 27/315 |
+| public_gold_expansion | 24 | 24/24 | 19/24 | 6/105 |
+| public_gold_validation | 120 | 120/120 | 90/120 | 43/470 |
 
 ## Weak Or Review-Worthy Pairs
 
@@ -44,10 +45,28 @@ These are not automatically bad; they are the first pairs to inspect manually be
 
 | Prompt | Gold | Alternative | Primary axes | Supporting axes | Main evidence |
 |---|---|---|---|---|---|
+| `public_gold_exp_p122_asana_project_update` | `public-office-asana-automation` | `public-office-jira-automation` | workflow | - | gold: assign, new, prioritize, request; alt: backlog, blocked, issue, review |
+| `public_gold_exp_p131_invoice_organizer` | `public-office-invoice-organizer` | `public-office-invoice-automation` | workflow | - | gold: add, categorize, category, create; alt: apply, branding, creation, customer |
+| `public_gold_exp_p135_facebook_ads_campaign` | `public-office-facebook-ads` | `public-office-ads-copywriter` | workflow | - | gold: ads, audience, awareness, budget; alt: 100, app, bio, caption |
+| `public_gold_exp_p138_transcription_cleanup` | `public-office-transcription-automation` | `public-office-calendar-automation` | workflow | - | gold: audio, convert, diarization, engine; alt: 1-on-1, briefing, calculate_stats, calendar |
+| `public_gold_exp_p138_transcription_cleanup` | `public-office-transcription-automation` | `public-office-podcast-automation` | workflow | - | gold: convert, diarization, engine, enhance; alt: add, clean, editing, guests |
+| `public_gold_exp_p143_slack_workflow_digest` | `public-office-slack-workflows` | `public-office-microsoft-teams` | workflow | - | gold: 2_hours, async, at_1_hour, blockers; alt: context, threading, threads |
 | `public_gold_p01_pdf_extraction` | `public-office-pdf-extraction` | `public-office-pdf-converter` | workflow | - | gold: 5-10, code, csv, example; alt: 1-5, 300, columns, create |
 | `public_gold_p05_pdf_merge_split` | `public-office-pdf-merge-split` | `public-office-pdf-compress` | workflow | - | gold: 5-10, alphabetical, combine, document1; alt: compress, compression, critical, email |
 | `public_gold_p05_pdf_merge_split` | `public-office-pdf-merge-split` | `public-office-pdf-converter` | workflow | - | gold: 5-10, alphabetical, combine, document1; alt: 1-5, 300, columns, convert |
 | `public_gold_p05_pdf_merge_split` | `public-office-pdf-merge-split` | `public-office-pdf-watermark` | workflow | - | gold: 5-10, alphabetical, combine, document1; alt: add, apply, bottom, center |
+| `public_gold_p100_teams_automation` | `public-office-microsoft-teams` | `public-office-slack-workflows` | workflow | - | gold: context, threading, threads; alt: 2_hours, async, at_1_hour, blockers |
+| `public_gold_p105_youtube_automation` | `public-office-youtube-automation` | `public-office-podcast-automation` | workflow | - | gold: description, file, metadata, mov; alt: add, audio, clean, editing |
+| `public_gold_p105_youtube_automation` | `public-office-youtube-automation` | `public-office-transcription-automation` | workflow | - | gold: description, file, metadata, mov; alt: audio, convert, diarization, engine |
+| `public_gold_p106_google_ads_manager` | `public-office-google-ads-manager` | `public-office-seo-optimizer` | dependency/resource | - | gold: ads, google, manager; alt: optimizer, seo |
+| `public_gold_p111_docusign_automation` | `public-office-docusign-automation` | `public-office-crm-automation` | workflow | - | gold: add, create, dates, document; alt: - |
+| `public_gold_p113_quickbooks_automation` | `public-office-quickbooks-automation` | `public-office-stripe-payments` | workflow | - | gold: accounts, automation, bank, categorization; alt: auth, capture, checkout, customer |
+| `public_gold_p114_stripe_payments` | `public-office-stripe-payments` | `public-office-quickbooks-automation` | workflow | - | gold: auth, capture, checkout, customer; alt: accounts, automation, bank, categorization |
+| `public_gold_p114_stripe_payments` | `public-office-stripe-payments` | `public-office-shopify-automation` | workflow | - | gold: auth, capture, card, checkout; alt: checks, fraud_score, inventory_available, payment_captured |
+| `public_gold_p116_transcription_automation` | `public-office-transcription-automation` | `public-office-podcast-automation` | workflow | - | gold: convert, diarization, engine, enhance; alt: add, clean, editing, guests |
+| `public_gold_p117_podcast_automation` | `public-office-podcast-automation` | `public-office-spotify-automation` | workflow | - | gold: add, audio, clean, editing; alt: - |
+| `public_gold_p117_podcast_automation` | `public-office-podcast-automation` | `public-office-transcription-automation` | workflow | - | gold: add, clean, editing, guests; alt: convert, diarization, engine, enhance |
+| `public_gold_p117_podcast_automation` | `public-office-podcast-automation` | `public-office-youtube-automation` | workflow | - | gold: add, audio, clean, editing; alt: description, file, metadata, mov |
 | `public_gold_p17_mcp_builder` | `public-anthropic-mcp-builder` | `public-office-mcp-hub` | workflow | - | gold: answer, answers, best, checklist; alt: access, accomplish, analysis, appropriate |
 | `public_gold_p25_data_pipeline` | `public-office-data-pipeline` | `public-office-data-extractor` | workflow | - | gold: 100, 1000000, 1000_rows, 2_hours; alt: attachments, body, document, documents |
 | `public_gold_p25_data_pipeline` | `public-office-data-pipeline` | `public-office-database-sync` | workflow | - | gold: 1000000, 1000_rows, 2_hours, 2am; alt: 00z, 10000, 12345, 156 |
@@ -71,8 +90,333 @@ These are not automatically bad; they are the first pairs to inspect manually be
 | `public_gold_p75_airtable_automation` | `public-office-airtable-automation` | `public-office-notion-automation` | workflow | - | gold: -; alt: append, capture_data, clearbit, company |
 | `public_gold_p76_invoice_automation` | `public-office-invoice-automation` | `public-office-invoice-organizer` | workflow | - | gold: apply, branding, creation, customer; alt: add, categorize, category, create |
 | `public_gold_p81_shopify_automation` | `public-office-shopify-automation` | `public-office-stripe-payments` | workflow | - | gold: checks, fraud_score, inventory_available, payment_captured; alt: auth, capture, card, checkout |
+| `public_gold_p82_zendesk_automation` | `public-office-zendesk-automation` | `public-office-crm-automation` | workflow | - | gold: analysis, categorize, flow, incoming; alt: - |
+| `public_gold_p96_jira_automation` | `public-office-jira-automation` | `public-office-linear-automation` | workflow | - | gold: blocked, lifecycle; alt: active, flow, linear, prioritized |
+| `public_gold_p97_linear_automation` | `public-office-linear-automation` | `public-office-jira-automation` | workflow | - | gold: active, flow, linear, prioritized; alt: blocked, lifecycle |
+| `public_gold_p99_slack_workflows` | `public-office-slack-workflows` | `public-office-microsoft-teams` | workflow | - | gold: 2_hours, async, at_1_hour, blockers; alt: context, threading, threads |
 
 ## Prompt Detail
+
+### `public_gold_exp_p121_calendar_conflict_workflow`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-calendar-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-meeting-notes` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-microsoft-teams` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-slack-workflows` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.06, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-sheets-automation` | workflow, dependency/resource | - | input/precondition=0.76, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.59, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p122_asana_project_update`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-asana-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-clickup-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-trello-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-jira-automation` | workflow | - | input/precondition=0.95, output artifact=1.00, workflow=0.17, success criterion=1.00, dependency/resource=0.93, avoid/not-for boundary=1.00 |
+| `public-office-monday-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p123_clickup_time_tracking`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-clickup-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-asana-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-n8n-workflow` | workflow, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.80, avoid/not-for boundary=1.00 |
+| `public-office-jira-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-linear-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p124_airtable_view_trigger`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-airtable-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-database-sync` | input/precondition, workflow, dependency/resource | - | input/precondition=0.52, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.30, avoid/not-for boundary=1.00 |
+| `public-office-sheets-automation` | workflow, dependency/resource | - | input/precondition=0.56, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.34, avoid/not-for boundary=1.00 |
+| `public-office-data-pipeline` | input/precondition, workflow, dependency/resource | - | input/precondition=0.54, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.31, avoid/not-for boundary=1.00 |
+| `public-office-n8n-workflow` | workflow, dependency/resource | - | input/precondition=0.63, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.39, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p125_sheets_formula_dashboard`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-sheets-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-excel-automation` | input/precondition, workflow | - | input/precondition=0.11, output artifact=1.00, workflow=0.04, success criterion=1.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-xlsx-manipulation` | workflow, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+| `public-office-data-analysis` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.38, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.40, avoid/not-for boundary=1.00 |
+| `public-office-report-generator` | workflow, dependency/resource | - | input/precondition=0.72, output artifact=1.00, workflow=0.05, success criterion=1.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p126_excel_macro_cleanup`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-excel-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-sheets-automation` | input/precondition, workflow | - | input/precondition=0.11, output artifact=1.00, workflow=0.04, success criterion=1.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-xlsx-manipulation` | input/precondition, workflow, dependency/resource | - | input/precondition=0.11, output artifact=1.00, workflow=0.25, success criterion=1.00, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+| `public-office-data-analysis` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.10, output artifact=0.00, workflow=0.08, success criterion=0.00, dependency/resource=0.40, avoid/not-for boundary=1.00 |
+| `spreadsheet-formula-auditor` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.03, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_exp_p127_contract_risk_review`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-contract-review`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-nda-generator` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.28, output artifact=0.00, workflow=0.09, success criterion=0.12, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-office-contract-template` | output artifact, workflow, success criterion | avoid/not-for boundary | input/precondition=0.94, output artifact=0.00, workflow=0.08, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=0.00 |
+| `public-office-doc-parser` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.33, output artifact=0.00, workflow=0.09, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `document-field-extractor` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.01, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `terms-of-service-drafter` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.07, output artifact=0.00, workflow=0.00, success criterion=0.01, dependency/resource=0.33, avoid/not-for boundary=0.00 |
+| `clause-obligation-extractor` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.07, output artifact=0.00, workflow=0.00, success criterion=0.01, dependency/resource=0.33, avoid/not-for boundary=0.00 |
+| `contract-ops-risk-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.05, output artifact=0.00, workflow=0.00, success criterion=0.02, dependency/resource=0.04, avoid/not-for boundary=0.00 |
+
+### `public_gold_exp_p128_nda_generation`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-nda-generator`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-contract-review` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.28, output artifact=0.00, workflow=0.09, success criterion=0.12, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-office-contract-template` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.26, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-proposal-writer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.26, output artifact=0.00, workflow=0.04, success criterion=0.04, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-docx-manipulation` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.25, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.50, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p129_resume_tailor_job_post`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-resume-tailor`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-cv-builder` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.90, output artifact=0.00, workflow=0.12, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=1.00 |
+| `public-office-cover-letter` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.06, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-applicant-screening` | output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.88, output artifact=0.00, workflow=0.09, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-office-job-description` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.07, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p130_applicant_screening_matrix`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-applicant-screening`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-resume-tailor` | output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.88, output artifact=0.00, workflow=0.09, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-office-cv-builder` | output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.90, output artifact=0.00, workflow=0.07, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=0.00 |
+| `public-office-job-description` | output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.88, output artifact=0.00, workflow=0.11, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-office-hr-automation` | output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.90, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=0.00 |
+
+### `public_gold_exp_p131_invoice_organizer`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-invoice-organizer`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-invoice-automation` | workflow | - | input/precondition=0.95, output artifact=1.00, workflow=0.05, success criterion=1.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-invoice-generator` | output artifact, workflow, success criterion | - | input/precondition=0.95, output artifact=0.00, workflow=0.05, success criterion=0.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-expense-report` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.90, output artifact=0.00, workflow=0.16, success criterion=0.00, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+| `public-office-file-organizer` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.76, output artifact=0.00, workflow=0.21, success criterion=0.00, dependency/resource=0.56, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p132_invoice_generation`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-invoice-generator`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-invoice-organizer` | output artifact, workflow, success criterion | - | input/precondition=0.95, output artifact=0.00, workflow=0.05, success criterion=0.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-invoice-template` | output artifact, workflow, success criterion | - | input/precondition=0.95, output artifact=0.00, workflow=0.06, success criterion=0.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-expense-report` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.90, output artifact=0.00, workflow=0.08, success criterion=0.01, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+| `public-office-quickbooks-automation` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.55, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.33, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p133_linkedin_outreach_sequence`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-linkedin-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-twitter-automation` | workflow, success criterion | - | input/precondition=0.94, output artifact=1.00, workflow=0.21, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-social-publisher` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-lead-research` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-email-marketing` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p134_twitter_content_schedule`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-twitter-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-linkedin-automation` | workflow, success criterion | - | input/precondition=0.94, output artifact=1.00, workflow=0.21, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-social-publisher` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-tiktok-marketing` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-content-writer` | workflow, dependency/resource | - | input/precondition=0.61, output artifact=1.00, workflow=0.05, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p135_facebook_ads_campaign`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-facebook-ads`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-google-ads-manager` | workflow, dependency/resource | - | input/precondition=0.91, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.81, avoid/not-for boundary=1.00 |
+| `public-office-ads-copywriter` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-tiktok-marketing` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-seo-optimizer` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p136_tiktok_marketing_calendar`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-tiktok-marketing`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-facebook-ads` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-social-publisher` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-content-writer` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.09, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-youtube-automation` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `marketing-ops-scenario-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.03, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.05, avoid/not-for boundary=0.00 |
+| `social-post-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.33, avoid/not-for boundary=0.00 |
+| `public-office-twitter-automation` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p137_meeting_notes_action_items`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-meeting-notes`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-transcription-automation` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-calendar-automation` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-weekly-report` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.05, workflow=0.13, success criterion=0.04, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `meeting-summary-writer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.06, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_exp_p138_transcription_cleanup`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-transcription-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-meeting-notes` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-podcast-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.12, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-microsoft-teams` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-calendar-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p139_pipedrive_lead_update`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-pipedrive-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-crm-automation` | input/precondition, workflow | - | input/precondition=0.17, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-lead-routing` | input/precondition, workflow, dependency/resource | - | input/precondition=0.11, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-lead-qualification` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.15, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-lead-research` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.17, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-data-pipeline` | input/precondition, workflow, dependency/resource | - | input/precondition=0.16, output artifact=1.00, workflow=0.01, success criterion=1.00, dependency/resource=0.55, avoid/not-for boundary=1.00 |
+| `public-office-etl-pipeline` | input/precondition, workflow, dependency/resource | - | input/precondition=0.16, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `public-office-linear-automation` | input/precondition, workflow, dependency/resource | - | input/precondition=0.15, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p140_lead_qualification`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-lead-qualification`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-lead-research` | input/precondition, workflow | - | input/precondition=0.21, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-lead-routing` | input/precondition, output artifact, success criterion | - | input/precondition=0.13, output artifact=0.00, workflow=1.00, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-crm-automation` | input/precondition, output artifact, success criterion, dependency/resource | - | input/precondition=0.21, output artifact=0.00, workflow=1.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-pipedrive-automation` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.15, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p141_pdf_table_extraction_public`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-table-extractor`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-pdf-extraction` | input/precondition, workflow, dependency/resource | - | input/precondition=0.14, output artifact=1.00, workflow=0.36, success criterion=1.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-data-extractor` | input/precondition, workflow, dependency/resource | - | input/precondition=0.14, output artifact=1.00, workflow=0.33, success criterion=1.00, dependency/resource=0.59, avoid/not-for boundary=1.00 |
+| `public-office-smart-ocr` | input/precondition, workflow, dependency/resource | - | input/precondition=0.20, output artifact=1.00, workflow=0.23, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `pdf-layout-table-extractor` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.08, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_exp_p142_smart_ocr_receipts`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-smart-ocr`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-pdf-ocr` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.16, output artifact=0.00, workflow=0.31, success criterion=0.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-table-extractor` | input/precondition, workflow, dependency/resource | - | input/precondition=0.20, output artifact=1.00, workflow=0.23, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-data-extractor` | input/precondition, workflow, dependency/resource | - | input/precondition=0.16, output artifact=1.00, workflow=0.26, success criterion=1.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `public-office-invoice-organizer` | input/precondition, workflow, dependency/resource | - | input/precondition=0.15, output artifact=1.00, workflow=0.04, success criterion=1.00, dependency/resource=0.50, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p143_slack_workflow_digest`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-slack-workflows`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-microsoft-teams` | workflow | - | input/precondition=0.91, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.86, avoid/not-for boundary=1.00 |
+| `public-office-email-classifier` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.18, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-calendar-automation` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.06, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-weekly-report` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.60, output artifact=0.00, workflow=0.08, success criterion=0.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+
+### `public_gold_exp_p144_email_classification_triage`
+
+- Family: `public_gold_expansion`
+- Gold skill: `public-office-email-classifier`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-email-drafter` | input/precondition, output artifact, workflow, success criterion | - | input/precondition=0.21, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-gmail-workflows` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.18, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-suspicious-email` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.21, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.54, avoid/not-for boundary=1.00 |
+| `email-classification-router` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
 
 ### `public_gold_p01_pdf_extraction`
 
@@ -189,6 +533,135 @@ These are not automatically bad; they are the first pairs to inspect manually be
 | `public-addy-agent-code-review-and-quality` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.18, output artifact=0.00, workflow=0.03, success criterion=0.01, dependency/resource=0.75, avoid/not-for boundary=0.00 |
 | `public-openai-gh-fix-ci` | input/precondition, output artifact, workflow, success criterion | avoid/not-for boundary | input/precondition=0.20, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.86, avoid/not-for boundary=0.00 |
 
+### `public_gold_p100_teams_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-microsoft-teams`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-slack-workflows` | workflow | - | input/precondition=0.91, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.86, avoid/not-for boundary=1.00 |
+| `public-office-calendar-automation` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-meeting-notes` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.60, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-office-mcp` | workflow, dependency/resource | - | input/precondition=0.56, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.33, avoid/not-for boundary=1.00 |
+
+### `public_gold_p101_twilio_sms`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-twilio-sms`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-whatsapp-automation` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-telegram-bot` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.04, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-slack-workflows` | workflow, dependency/resource | - | input/precondition=0.60, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-email-drafter` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_p102_webhook_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-webhook-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `webhook-contract-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.03, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `api-integration-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.07, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.33, avoid/not-for boundary=0.00 |
+| `external-api-integration-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p103_mailchimp_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-mailchimp-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-social-publisher` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.01, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-ads-copywriter` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-email-drafter` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-linkedin-automation` | workflow, success criterion | - | input/precondition=0.94, output artifact=1.00, workflow=0.17, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+
+### `public_gold_p104_social_publisher`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-social-publisher`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-linkedin-automation` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-twitter-automation` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-youtube-automation` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.06, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-tiktok-marketing` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_p105_youtube_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-youtube-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-social-publisher` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.06, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-tiktok-marketing` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.13, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-podcast-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.08, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-transcription-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.09, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+
+### `public_gold_p106_google_ads_manager`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-google-ads-manager`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-facebook-ads` | workflow, dependency/resource | - | input/precondition=0.91, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.81, avoid/not-for boundary=1.00 |
+| `public-office-ads-copywriter` | workflow, dependency/resource | - | input/precondition=0.91, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.81, avoid/not-for boundary=1.00 |
+| `public-office-seo-optimizer` | dependency/resource | - | input/precondition=0.85, output artifact=1.00, workflow=1.00, success criterion=1.00, dependency/resource=0.71, avoid/not-for boundary=1.00 |
+| `public-office-social-publisher` | workflow, dependency/resource | - | input/precondition=0.85, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.71, avoid/not-for boundary=1.00 |
+
+### `public_gold_p107_proposal_writer`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-proposal-writer`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-investment-memo` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.17, workflow=0.04, success criterion=0.01, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-report-generator` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.14, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-content-writer` | output artifact, workflow, success criterion | - | input/precondition=0.61, output artifact=0.00, workflow=0.07, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-contract-template` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.15, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_p108_report_generator`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-report-generator`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-data-analysis` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.42, output artifact=0.00, workflow=0.09, success criterion=0.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `public-office-chart-designer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.42, output artifact=0.00, workflow=0.17, success criterion=0.00, dependency/resource=0.55, avoid/not-for boundary=1.00 |
+| `public-office-weekly-report` | output artifact, workflow, success criterion | - | input/precondition=0.94, output artifact=0.00, workflow=0.16, success criterion=0.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-infographic` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.76, output artifact=0.00, workflow=0.07, success criterion=0.00, dependency/resource=0.57, avoid/not-for boundary=1.00 |
+
+### `public_gold_p109_job_description`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-job-description`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-offer-letter` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.20, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-applicant-screening` | output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.88, output artifact=0.00, workflow=0.11, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-office-resume-tailor` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.07, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-cover-letter` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
 ### `public_gold_p10_analyze_ci`
 
 - Family: `public_gold_validation`
@@ -203,6 +676,140 @@ These are not automatically bad; they are the first pairs to inspect manually be
 | `pr-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.00, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
 | `repo-ops-failure-diagnoser` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.00, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.08, avoid/not-for boundary=0.00 |
 
+### `public_gold_p110_offer_letter`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-offer-letter`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-job-description` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.20, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-contract-template` | workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-nda-generator` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.26, output artifact=0.00, workflow=0.02, success criterion=0.04, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-hr-automation` | workflow, success criterion, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=1.00 |
+
+### `public_gold_p111_docusign_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-docusign-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-contract-template` | workflow, dependency/resource | - | input/precondition=0.76, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-nda-generator` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.28, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-invoice-automation` | workflow, dependency/resource | - | input/precondition=0.66, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.56, avoid/not-for boundary=1.00 |
+| `public-office-form-builder` | workflow, dependency/resource | - | input/precondition=0.76, output artifact=1.00, workflow=0.05, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-crm-automation` | workflow | - | input/precondition=0.81, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-notion-automation` | workflow, dependency/resource | - | input/precondition=0.58, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-slack-workflows` | workflow, dependency/resource | - | input/precondition=0.57, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+
+### `public_gold_p112_expense_tracker`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-expense-tracker`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-expense-report` | output artifact, workflow, success criterion | - | input/precondition=0.95, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.91, avoid/not-for boundary=1.00 |
+| `public-office-quickbooks-automation` | input/precondition, workflow, dependency/resource | - | input/precondition=0.55, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.33, avoid/not-for boundary=1.00 |
+| `public-office-invoice-organizer` | workflow, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.12, success criterion=1.00, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+| `public-office-invoice-automation` | workflow, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+
+### `public_gold_p113_quickbooks_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-quickbooks-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-invoice-automation` | workflow, dependency/resource | - | input/precondition=0.58, output artifact=1.00, workflow=0.06, success criterion=1.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-expense-tracker` | input/precondition, workflow, dependency/resource | - | input/precondition=0.55, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.33, avoid/not-for boundary=1.00 |
+| `public-office-stripe-payments` | workflow | - | input/precondition=0.93, output artifact=1.00, workflow=0.07, success criterion=1.00, dependency/resource=0.89, avoid/not-for boundary=1.00 |
+| `public-office-saas-metrics` | workflow, dependency/resource | - | input/precondition=0.59, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.38, avoid/not-for boundary=1.00 |
+
+### `public_gold_p114_stripe_payments`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-stripe-payments`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-subscription-management` | workflow, dependency/resource | - | input/precondition=0.60, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-invoice-automation` | workflow, dependency/resource | - | input/precondition=0.57, output artifact=1.00, workflow=0.08, success criterion=1.00, dependency/resource=0.36, avoid/not-for boundary=1.00 |
+| `public-office-shopify-automation` | workflow | - | input/precondition=0.93, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.89, avoid/not-for boundary=1.00 |
+| `public-office-quickbooks-automation` | workflow | - | input/precondition=0.93, output artifact=1.00, workflow=0.07, success criterion=1.00, dependency/resource=0.89, avoid/not-for boundary=1.00 |
+
+### `public_gold_p115_subscription_management`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-subscription-management`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-saas-metrics` | workflow, dependency/resource | - | input/precondition=0.72, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `public-office-stripe-payments` | workflow, dependency/resource | - | input/precondition=0.60, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-customer-success` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-invoice-automation` | workflow, dependency/resource | - | input/precondition=0.70, output artifact=1.00, workflow=0.01, success criterion=1.00, dependency/resource=0.50, avoid/not-for boundary=1.00 |
+
+### `public_gold_p116_transcription_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-transcription-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-openai-transcribe` | workflow, success criterion, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.03, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=1.00 |
+| `public-office-meeting-notes` | output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.88, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-podcast-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.12, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-markitdown` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.20, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.11, avoid/not-for boundary=1.00 |
+| `public-office-smart-ocr` | input/precondition, workflow, dependency/resource | - | input/precondition=0.16, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_p117_podcast_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-podcast-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-transcription-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.12, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-youtube-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.08, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-spotify-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+| `public-office-social-publisher` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.01, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+
+### `public_gold_p118_news_monitor`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-news-monitor`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-web-search` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.47, output artifact=0.00, workflow=0.02, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-academic-search` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.47, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-office-deep-research` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.47, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `tech-news-trend-extractor` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.01, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p119_data_analysis`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-data-analysis`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-report-generator` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.42, output artifact=0.00, workflow=0.09, success criterion=0.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `public-office-chart-designer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.42, output artifact=0.10, workflow=0.08, success criterion=0.10, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-saas-metrics` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.38, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.40, avoid/not-for boundary=1.00 |
+| `public-office-xlsx-manipulation` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.38, output artifact=0.00, workflow=0.10, success criterion=0.00, dependency/resource=0.40, avoid/not-for boundary=1.00 |
+
 ### `public_gold_p11_setup_pre_commit`
 
 - Family: `public_gold_validation`
@@ -211,11 +818,24 @@ These are not automatically bad; they are the first pairs to inspect manually be
 
 | Alternative | Primary axes | Supporting axes | Axis similarities |
 |---|---|---|---|
+| `psc-repo-guardrail-hook-installer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.00, output artifact=0.00, workflow=0.06, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
 | `git-safety-guardrail-installer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
 | `public-mattpocock-git-guardrails-claude-code` | workflow, dependency/resource | - | input/precondition=0.68, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.46, avoid/not-for boundary=1.00 |
 | `public-swebench-fix` | workflow, dependency/resource | - | input/precondition=0.88, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
 | `git-commit-writer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.07, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.32, avoid/not-for boundary=0.00 |
 | `public-swebench-github-actions-templates` | workflow, dependency/resource | - | input/precondition=0.82, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.67, avoid/not-for boundary=1.00 |
+
+### `public_gold_p120_xlsx_manipulation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-xlsx-manipulation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-sheets-automation` | workflow, dependency/resource | - | input/precondition=0.90, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.83, avoid/not-for boundary=1.00 |
+| `public-office-data-analysis` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.38, output artifact=0.00, workflow=0.10, success criterion=0.00, dependency/resource=0.40, avoid/not-for boundary=1.00 |
+| `public-swebench-xlsx` | output artifact, workflow, success criterion | - | input/precondition=0.97, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.95, avoid/not-for boundary=1.00 |
 
 ### `public_gold_p12_git_guardrails`
 
@@ -1116,7 +1736,7 @@ These are not automatically bad; they are the first pairs to inspect manually be
 
 - Family: `public_gold_validation`
 - Gold skill: `public-office-zendesk-automation`
-- Status: PASS; strong
+- Status: PASS; needs review
 
 | Alternative | Primary axes | Supporting axes | Axis similarities |
 |---|---|---|---|
@@ -1126,4 +1746,225 @@ These are not automatically bad; they are the first pairs to inspect manually be
 | `public-office-slack-workflows` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
 | `support-ticket-triager` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.04, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.33, avoid/not-for boundary=0.00 |
 | `support-ops-monitoring-plan-builder` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.04, avoid/not-for boundary=0.00 |
+| `public-office-crm-automation` | workflow | - | input/precondition=0.94, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.87, avoid/not-for boundary=1.00 |
+
+### `public_gold_p83_web_seo`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-seo`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-addy-web-web-quality-audit` | workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.88, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.06 |
+| `public-addy-web-best-practices` | workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.74, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=0.00 |
+| `public-addy-web-performance` | input/precondition, workflow | avoid/not-for boundary | input/precondition=0.42, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.86, avoid/not-for boundary=0.00 |
+
+### `public_gold_p84_web_performance`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-performance`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-addy-web-core-web-vitals` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.31, output artifact=1.00, workflow=0.04, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=1.00 |
+| `public-addy-web-web-quality-audit` | input/precondition, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.41, output artifact=1.00, workflow=0.01, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-addy-agent-browser-testing-with-devtools` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.34, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.38, avoid/not-for boundary=0.00 |
+| `public-addy-agent-performance-optimization` | input/precondition, workflow | - | input/precondition=0.34, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.93, avoid/not-for boundary=1.00 |
+
+### `public_gold_p85_web_quality_audit`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-web-quality-audit`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-addy-web-accessibility` | input/precondition, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.43, output artifact=1.00, workflow=0.01, success criterion=0.01, dependency/resource=0.75, avoid/not-for boundary=0.00 |
+| `public-addy-web-core-web-vitals` | input/precondition, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.54, output artifact=1.00, workflow=0.00, success criterion=0.13, dependency/resource=0.77, avoid/not-for boundary=0.00 |
+| `public-addy-web-seo` | workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.88, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.75, avoid/not-for boundary=0.06 |
+| `public-addy-web-best-practices` | workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.70, output artifact=1.00, workflow=0.00, success criterion=0.01, dependency/resource=0.71, avoid/not-for boundary=0.00 |
+
+### `public_gold_p86_web_best_practices`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-web-best-practices`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-addy-web-accessibility` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.41, output artifact=1.00, workflow=0.01, success criterion=0.02, dependency/resource=0.80, avoid/not-for boundary=1.00 |
+| `public-addy-web-performance` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.41, output artifact=1.00, workflow=0.02, success criterion=0.00, dependency/resource=0.80, avoid/not-for boundary=1.00 |
+| `public-openai-security-best-practices` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.43, output artifact=1.00, workflow=0.02, success criterion=0.00, dependency/resource=0.61, avoid/not-for boundary=1.00 |
+
+### `public_gold_p87_api_design_principles`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-api-design-principles`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `openapi-contract-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.06, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p88_interface_design`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-addy-agent-api-and-interface-design`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-api-design-principles` | input/precondition, workflow, dependency/resource | - | input/precondition=0.24, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.13, avoid/not-for boundary=1.00 |
+| `public-architecture-patterns` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.32, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.12, avoid/not-for boundary=1.00 |
+| `api-design-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.06, output artifact=0.00, workflow=0.01, success criterion=0.00, dependency/resource=0.25, avoid/not-for boundary=0.00 |
+| `rest-api-contract-designer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.05, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p89_api_documentation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-oh-my-api-documentation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-api-design-principles` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.15, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.13, avoid/not-for boundary=0.00 |
+| `public-openai-openai-docs` | input/precondition, output artifact, workflow, success criterion | avoid/not-for boundary | input/precondition=0.22, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.91, avoid/not-for boundary=0.00 |
+| `openapi-contract-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.06, output artifact=0.08, workflow=0.03, success criterion=0.02, dependency/resource=0.00, avoid/not-for boundary=0.04 |
+
+### `public_gold_p90_claude_api`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-anthropic-claude-api`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-openai-openai-docs` | input/precondition, workflow, success criterion | - | input/precondition=0.20, output artifact=1.00, workflow=0.01, success criterion=0.00, dependency/resource=0.86, avoid/not-for boundary=1.00 |
+| `public-office-ai-agent-builder` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.28, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.55, avoid/not-for boundary=1.00 |
+| `public-anthropic-mcp-builder` | input/precondition, workflow, success criterion | - | input/precondition=0.26, output artifact=1.00, workflow=0.04, success criterion=0.00, dependency/resource=0.86, avoid/not-for boundary=1.00 |
+| `public-openai-chatgpt-apps` | input/precondition, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.20, output artifact=1.00, workflow=0.05, success criterion=0.00, dependency/resource=0.55, avoid/not-for boundary=0.00 |
+| `api-integration-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.01, output artifact=0.00, workflow=0.01, success criterion=0.00, dependency/resource=0.26, avoid/not-for boundary=0.00 |
+| `external-api-integration-planner` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `public-openai-cli-creator` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.17, output artifact=1.00, workflow=0.02, success criterion=0.00, dependency/resource=0.55, avoid/not-for boundary=1.00 |
+| `public-addy-agent-incremental-implementation` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.30, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.55, avoid/not-for boundary=1.00 |
+
+### `public_gold_p91_admin_api_endpoint`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-swebench-add-admin-api-endpoint`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-api-design-principles` | input/precondition, workflow, dependency/resource | - | input/precondition=0.24, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.15, avoid/not-for boundary=1.00 |
+| `rest-api-contract-designer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.04, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `public-swebench-add-malli-schemas` | workflow, success criterion, dependency/resource | - | input/precondition=0.58, output artifact=1.00, workflow=0.00, success criterion=0.00, dependency/resource=0.54, avoid/not-for boundary=1.00 |
+| `api-security-threat-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `public-swebench-fix` | workflow, dependency/resource | - | input/precondition=0.74, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `public-swebench-turborepo` | input/precondition, workflow, success criterion, dependency/resource | - | input/precondition=0.20, output artifact=1.00, workflow=0.02, success criterion=0.00, dependency/resource=0.52, avoid/not-for boundary=1.00 |
+| `openapi-contract-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.09, output artifact=0.00, workflow=0.01, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p92_security_review`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-swebench-security-review`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-openai-security-best-practices` | input/precondition, workflow | - | input/precondition=0.20, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.88, avoid/not-for boundary=1.00 |
+| `public-addy-agent-security-and-hardening` | input/precondition, output artifact, workflow, success criterion | avoid/not-for boundary | input/precondition=0.23, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.91, avoid/not-for boundary=0.00 |
+| `api-security-threat-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.03, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p93_security_best_practices`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-openai-security-best-practices`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-swebench-security-review` | input/precondition, workflow | - | input/precondition=0.20, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.88, avoid/not-for boundary=1.00 |
+| `security-code-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.04, output artifact=0.00, workflow=0.04, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+
+### `public_gold_p94_security_ownership_map`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-openai-security-ownership-map`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-security-threat-model` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.40, output artifact=0.00, workflow=0.03, success criterion=0.00, dependency/resource=0.19, avoid/not-for boundary=0.00 |
+| `security-threat-modeler` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.00, output artifact=0.00, workflow=0.01, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `public-office-security-monitoring` | input/precondition, output artifact, workflow, success criterion | - | input/precondition=0.40, output artifact=0.00, workflow=0.01, success criterion=0.00, dependency/resource=0.88, avoid/not-for boundary=1.00 |
+| `repo-code-reviewer` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.00, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.00, avoid/not-for boundary=0.00 |
+| `public-openai-security-best-practices` | input/precondition, output artifact, workflow, success criterion, dependency/resource | - | input/precondition=0.26, output artifact=0.00, workflow=0.05, success criterion=0.00, dependency/resource=0.84, avoid/not-for boundary=1.00 |
+| `security-ops-dependency-mapper` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.01, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.12, avoid/not-for boundary=0.00 |
+| `identity-ops-dependency-mapper` | input/precondition, output artifact, workflow, success criterion, dependency/resource | avoid/not-for boundary | input/precondition=0.02, output artifact=0.00, workflow=0.00, success criterion=0.00, dependency/resource=0.04, avoid/not-for boundary=0.00 |
+
+### `public_gold_p95_security_monitoring`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-security-monitoring`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-openai-security-ownership-map` | input/precondition, output artifact, workflow, success criterion | - | input/precondition=0.40, output artifact=0.00, workflow=0.01, success criterion=0.00, dependency/resource=0.88, avoid/not-for boundary=1.00 |
+| `public-security-threat-model` | input/precondition, workflow, dependency/resource | avoid/not-for boundary | input/precondition=0.44, output artifact=1.00, workflow=0.05, success criterion=1.00, dependency/resource=0.19, avoid/not-for boundary=0.00 |
+| `public-office-devops-automation` | workflow, dependency/resource | - | input/precondition=0.70, output artifact=1.00, workflow=0.10, success criterion=1.00, dependency/resource=0.50, avoid/not-for boundary=1.00 |
+| `public-swebench-distributed-tracing` | workflow, dependency/resource | - | input/precondition=0.70, output artifact=1.00, workflow=0.04, success criterion=1.00, dependency/resource=0.50, avoid/not-for boundary=1.00 |
+
+### `public_gold_p96_jira_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-jira-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-openai-linear` | input/precondition, workflow, success criterion | - | input/precondition=0.40, output artifact=1.00, workflow=0.03, success criterion=0.00, dependency/resource=0.93, avoid/not-for boundary=1.00 |
+| `public-office-linear-automation` | workflow | - | input/precondition=0.95, output artifact=1.00, workflow=0.33, success criterion=1.00, dependency/resource=0.93, avoid/not-for boundary=1.00 |
+| `public-office-trello-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-monday-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+
+### `public_gold_p97_linear_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-linear-automation`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-jira-automation` | workflow | - | input/precondition=0.95, output artifact=1.00, workflow=0.33, success criterion=1.00, dependency/resource=0.93, avoid/not-for boundary=1.00 |
+| `public-office-trello-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-clickup-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+
+### `public_gold_p98_trello_automation`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-trello-automation`
+- Status: PASS; strong
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-jira-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-linear-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+| `public-office-asana-automation` | workflow, dependency/resource | - | input/precondition=0.65, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.43, avoid/not-for boundary=1.00 |
+
+### `public_gold_p99_slack_workflows`
+
+- Family: `public_gold_validation`
+- Gold skill: `public-office-slack-workflows`
+- Status: PASS; needs review
+
+| Alternative | Primary axes | Supporting axes | Axis similarities |
+|---|---|---|---|
+| `public-office-microsoft-teams` | workflow | - | input/precondition=0.91, output artifact=1.00, workflow=0.03, success criterion=1.00, dependency/resource=0.86, avoid/not-for boundary=1.00 |
+| `public-office-twilio-sms` | workflow, dependency/resource | - | input/precondition=0.60, output artifact=1.00, workflow=0.02, success criterion=1.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
+| `public-office-whatsapp-automation` | workflow, dependency/resource | - | input/precondition=0.64, output artifact=1.00, workflow=0.00, success criterion=1.00, dependency/resource=0.41, avoid/not-for boundary=1.00 |
+| `public-office-telegram-bot` | workflow, success criterion, dependency/resource | - | input/precondition=0.60, output artifact=1.00, workflow=0.04, success criterion=0.00, dependency/resource=0.37, avoid/not-for boundary=1.00 |
 

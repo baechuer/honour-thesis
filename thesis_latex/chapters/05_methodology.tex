@@ -2,57 +2,133 @@
 
 \section{Experimental Overview}
 
-The methodology is a controlled comparison of representation-and-retrieval conditions. Each method receives the same user prompts and skill library, produces a ranked list of candidate skills, and is evaluated against gold labels and documented acceptable alternatives.
+The methodology is a controlled comparison of operational-information, representation, and retrieval conditions. Each method receives the same user prompts and skill library and produces a ranked list of candidate skills. Evaluation follows the label regime defined for the relevant experiment: historical frozen-v0.4 records retain documented acceptable alternatives, whereas V3 RQ2b reports strict intended-label agreement only.
 
-The methodology treats skill selection as a \emph{two-factor design}. The first factor is the representation layer: what information about each skill is visible to the selector. The second factor is the retrieval architecture: how that representation is searched, ranked, or reranked. This separation is essential because a selector can fail either because the representation has lost the relevant procedural distinction, or because the retrieval architecture fails to use information that is present.
+The methodology separates two related questions. RQ1 is an information-isolation question: which operational fields help distinguish semantically similar skills when skills, prompts, and retrieval setup are otherwise held fixed? RQ2 asks how skill representation and retrieval-pipeline choices affect the preservation and use of those fields under semantic confusability, and what accuracy, candidate-recall, and retrieval-cost trade-offs result. This separation is essential because a selector can fail either because the visible representation has lost the relevant operational distinction, or because the selection method fails to use information that is present.
+
+This methodology does not claim that the list of operational fields is itself novel. It overlaps with SSL-style structured skill information: expected inputs and outputs, dependencies, execution phases, action/resource evidence, effects, and boundaries. RQ1's contribution is a controlled way to test each field in near-neighbour routing, while prior structured representations mainly test the complete representation as a whole.
 
 The independent variables are therefore:
 
 \begin{itemize}
-  \item the selection representation exposed to the retriever;
+  \item the operational information exposed to the retriever;
+  \item the skill representation that carries or organises that information;
   \item the first-stage retrieval strategy;
   \item whether a reranker is used;
   \item whether the reranker uses selection information as structured fields or as ordinary text.
 \end{itemize}
 
-The main dependent measures are top-1 accuracy, top-k recall, mean reciprocal rank (MRR), background or non-core false positives, candidate budget, context cost, latency, and qualitative failure type.
+For RQ1, the main dependent measures are top-1 accuracy, mean reciprocal rank (MRR), lift over the hidden-field baseline, prompt-variant breakdown, and ambiguity resolution for reasoning selectors. Top-k recall, candidate budget, context cost, latency, and qualitative failure type mainly support RQ2 because they describe complete retrieval strategies rather than individual field discriminability.
 
-The intended final experiment matrix is shown in Table \ref{tab:method-crossed-design}. Rows correspond to representation layers and columns correspond to retrieval/reranking architectures. A result is only interpreted as a representation effect when the retriever, reranker, prompt stratum, skill library scale, and candidate budget are held fixed. A result is only interpreted as an architecture effect when the representation layer is held fixed.
+\section{RQ1 Methodology: Field-Isolation Test Units}
+
+RQ1 is evaluated before the broader representation/retrieval matrix. The purpose is not to ask which complete selector is best. The purpose is to test whether a specific skill-side operational field helps distinguish semantically similar sibling skills when everything else is controlled.
+
+The first RQ1 experiment uses field-isolation test units. Each unit contains one prompt, one intended gold skill, and two deliberately plausible sibling alternatives. The siblings share all non-target context: broad task intent, the non-tested operational fields, workflow, boundary, dependency, and success framing. Only one target field differs. Each cluster has one direct prompt and one paraphrase-safe prompt. Boundary/not-for units additionally include an \texttt{implicit\_authority} prompt variant, where the user asks for a constrained review role, triage note, or evidence packet without explicitly naming the excluded action. Dependency/resource units use a \texttt{contextual} prompt variant instead of ordinary paraphrase: the task request remains natural, while routing context supplies a positive capability cue such as a package manifest, available MCP server, credential, runtime, or provider configuration. This separates explicit user wording from capability evidence that may be acquired from the environment.
+
+The main controlled comparison uses the same shared context in two conditions: first with the target field hidden, and then with one candidate-specific target-field line shown. In the experiment files, these conditions are called \texttt{shared\_context\_only} and \texttt{shared\_context\_plus\_field}. The added line can be, for example, \texttt{Input / Precondition: ...} or \texttt{Output Artifact: ...}. Because the candidates are intentionally identical when the field is hidden, top-1 and MRR are reported with tie-aware scoring. Other runner conditions are diagnostics only: \texttt{field\_only} asks whether the field text alone is enough signal, and \texttt{full\_skill\_doc} asks whether the signal survives when embedded inside the whole generated skill document. These diagnostics are not the main RQ1 field-isolation comparison. The candidate-specific field values are used as written rather than forced to equal length. The result therefore measures the practical value of showing that information, including its amount and specificity; it does not separate field meaning from text length alone.
+
+The key RQ1 reporting rule is therefore simple: a field is treated as useful only when exposing that field improves selection over the same prompts, the same sibling set, the same retriever, and the same scoring metric. The completed use-condition, input/precondition, output/artifact, dependency/resource, boundary/not-for, success/verification, and workflow/procedure suites establish this pattern. Prompt variants are averaged within cluster and uncertainty is estimated by 10,000 cluster bootstrap resamples, not by treating the variants as independent tasks. A companion leading-negative diagnostic subtracts the highest-scoring non-gold sibling's score from the gold score. It is a retrieval-leading-negative margin, not a human semantic-distance annotation, because the frozen units do not pre-designate one of the two alternatives as semantically closer. Use condition is reported with direct and paraphrase rows separated because it can act as a direct task-intent hint when the prompt names the same trigger, but may require stronger semantic interpretation when the request is paraphrased. Boundary/not-for is also reported with its prompt variants separated, because explicit boundary wording and implicit authority cues test different routing conditions. Dependency/resource is reported as capability compatibility rather than raw setup text: a positive dependency signal is a required tool, server, provider/API, credential boundary, runtime/platform, pinned version, database, hardware, config, or resource. Generic commands such as \texttt{npm install}, \texttt{pip install}, \texttt{npm ci}, build/test/lint steps, or dependency-hygiene advice are not counted as strong routing evidence unless they name a concrete capability or compatibility conflict. In the public-skill audit, for example, \texttt{npm install} and \texttt{npm ci} are weak setup evidence by themselves, while requirements such as a Chrome DevTools MCP server, \texttt{GH\_TOKEN}, or Node.js 20+ are candidate routing evidence because they constrain which skill can run in the current environment. Success/verification is reported only for concrete acceptance gates, such as schema validation, threshold checks, evidence anchoring, unresolved finding state, rollback proof, reproducible failure, or smoke checks. Workflow/procedure is reported as procedure-order or operation-path evidence, with aspect types such as wrong order, swapped step, missing prerequisite, missing branch, missing verification, and substitute method. The examples/tests suite is reported separately as a negative-control/support-information suite, not as an eighth core routing field.
+
+This is also the main difference from SSL-like representation work. SSL can show whether a complete structured skill record improves discovery overall. RQ1 asks the narrower question of whether one operational field supplies the missing distinction between otherwise equivalent sibling candidates.
+
+The second RQ1 experiment tests the same question in preserved public skill documents. It starts from 1,099 source-tracked public originals; this is not a random sample and not every document was manually field-annotated. Source checking, near-neighbour screening, field-evidence mapping, prompt checks, and AI-assisted curation produced 82 purposefully selected candidate groups. For each accepted group and field, the selector compares the complete original documents with the same documents after every cited line carrying that field has been removed from every candidate. The implementation blanks those line contents so the line numbers remain stable; it does not add or rewrite any remaining text. The candidates, prompt, source hashes, and gold skill remain fixed. The edit may make a document incomplete or non-executable: the experiment tests routing after information removal, not execution of the edited skill. Each field has its own set of 49--69 eligible groups because a group is scored only when the target information can be removed cleanly from every candidate. Direct and paraphrased requests are averaged within each group, and 10,000 paired bootstrap samples show the uncertainty in \texttt{FULL\_ORIGINAL - REMOVE\_<FIELD>}. The removed passages differ in length, and one passage can express more than one operational function. The result therefore measures the effect of removing the identified information from these groups; it is not a length-controlled estimate of an isolated semantic category. The researcher reviewed and approved all 194 scored gold-label cases and all 402 scored removals with the labels or document edits visible; this was not an independent blinded review. Appendix~\ref{app:rq1-intervention-examples} shows one frozen controlled field-addition example and one frozen public line-removal example.
+
+\section{Current RQ2 Protocol Status}
+
+Both RQ1 experiments, the matched-content RQ2a fixed-candidate mechanism study, and the RQ2b full-library retrieve-then-rerank study are complete. RQ2a includes the protocol, deterministic cluster split, eight representation conditions, proposition/leakage validation, common result schema, selector adapters, length audit, development freeze, untouched confirmatory execution, paired statistical analysis, and cost ledger. The confirmatory split contains 280 clusters, 600 prompt variants, 22 conditions, and 13,200 aligned decisions. RQ2b scores 381 frozen strict-gold prompts against 2,433 skills, with 4,572 first-stage rows in total (1,524 per B1 retriever) and 9,144 fixed-Top-20 reranked rows in total (4,572 per B2 reranker). Its result synthesis is explicitly post-hoc and descriptive; it reports all representation/retriever/reranker rows, paired cluster-bootstrap intervals, failure mechanisms, and measured cost without using a p-value or Holm threshold as a thesis claim gate. Earlier frozen-v0.4 I1/I2/I3, M6, and external SkillRouter experiments remain exploratory, feasibility, diagnostic, or portability evidence.
+
+\section{RQ2a Matched-Content Representation Study}
+
+RQ2a reuses all 350 author-reviewed controlled-RQ1 clusters and 750 prompt variants. Clusters, rather than individual prompts, are divided into a 70-cluster development split and a 280-cluster confirmatory split, balanced with 10 and 40 clusters per field respectively. The development split is used for templates, smoke tests, and the one permitted field-score aggregation decision. Confirmatory clusters must not be inspected for method tuning.
+
+Each test unit keeps the query, three sibling candidates, gold identity, reviewed operational propositions, and deterministic candidate order fixed. It then changes only how the reviewed facts are exposed:
+
+\begin{description}
+  \item[\texttt{shared-only}.] Shared neutral context with the decisive sibling-specific field values omitted.
+  \item[\texttt{same-facts-fielded}.] All seven reviewed values with explicit field labels and boundaries.
+  \item[\texttt{same-facts-flat}.] Exactly the same values and order as the fielded condition, but with labels and headings removed.
+  \item[\texttt{same-facts-prose}.] The same propositions expressed through one frozen proposition-preserving prose template.
+  \item[\texttt{same-facts-diluted-2x}.] The fielded values plus sibling-identical support text that contains no decisive cue.
+\end{description}
+
+Order-controlled and 0x/1x/2x/4x dilution variants are diagnostics after the core matrix. Every serializer must preserve the reviewed propositions, use neutral candidate names, omit benchmark role labels, record source and output hashes, and pass identity, leakage, proposition-equivalence, length, and padding checks.
+
+The three core fixed-candidate selectors are BM25, Qwen \texttt{text-embedding-v4} single-vector cosine similarity, and direct cross-encoder scoring with \texttt{pipizhao/SkillRouter-Reranker-0.6B}. For each prompt, BM25 scores only the fixed three-sibling corpus, so its term statistics are local to that decision rather than global to the 280-cluster split. Qwen is a bi-encoder: the query and each complete candidate representation are embedded independently, document vectors are computed once and reused, and cosine similarity produces the ranking. SkillRouter is a cross-encoder reranker model: each query--candidate pair is tokenised and scored jointly, allowing token-level interaction but preventing document-only precomputation of the final pair score. The cross-encoder scores all three candidates directly; in RQ2a it is therefore used as a selector, not as a reranker over a fallible first stage. This is distinct from the historical external pipeline that used the released SkillRouter embedding model for candidate retrieval before applying the reranker. One frozen LLM A/B/C/ABSTAIN selector is retained only as a reasoning diagnostic.
+
+\subsection{Semantic Field-Aware Selector}
+
+The repository already contains M6-v1 lexical and M6-v2 semantic field-aware prototypes. These establish implementation feasibility, but they do not satisfy the clean RQ2a protocol: they are tied to old representations, selected field sets, calibrated weights, request parsing, boundary penalties, or first-stage-score blending. The implemented RQ2a field-aware selector adapts reusable M6-v2 embedding and caching components rather than claiming a from-scratch method or reusing the old result rows.
+
+The adapter reads \texttt{same-facts-fielded}, embeds the raw query, and embeds all seven candidate fields separately. It directly scores all three candidates without candidate exclusion or a first-stage prior. It does not receive the target field, cluster type, gold identity, candidate role, or alternative metadata. For every query-candidate pair it retains seven component similarities, an aggregate score, selected candidate, rank margin, and latency. Query and field embeddings are cached by exact text.
+
+Only two target-agnostic aggregation rules were compared on the development split: maximum field similarity and the uniform average of the two highest field similarities. The uniform-top-two rule was frozen and then applied unchanged to every confirmatory field suite. Field-specific weights, oracle target-field scoring, and tuning on confirmatory clusters were prohibited. This creates two distinct mechanism contrasts:
+
+\begin{itemize}
+  \item fielded versus flat under Qwen single-vector selection tests whether labels and boundaries help a generic semantic selector;
+  \item field-aware versus single-vector Qwen on identical fielded text tests whether explicit field-wise use adds value beyond merely displaying the structure.
+\end{itemize}
+
+The primary RQ2a outcome is paired top-1 accuracy at the cluster level. Secondary outcomes are MRR, score margin, near-neighbour confusion, prompt-variant and field strata, selector-visible tokens, and latency. Each preregistered contrast uses 10,000 cluster bootstrap resamples and 10,000 paired cluster sign flips; the eight secondary contrasts receive full-family Holm correction. Before confirmatory execution, a three-percentage-point top-1 difference was frozen as the smallest effect of practical interest. A technically valid null result remains an answer: it may show that preserving facts matters more than field labels, or that explicit field segmentation does not help under the frozen aggregation rule.
+
+\section{RQ2b Full-Library Representation And Pipeline Study}
+
+RQ2b evaluates source-grounded representations over the V3 strict-gold library. Every condition uses the same 2,433 source skills and 381 prompts, separated into 243 controlled and 138 public-gold prompts. The labels are single intended gold skills frozen before scoring. They support strict-label retrieval comparisons, not a claim that each selected label is the uniquely useful skill in every real deployment.
+
+The four representation conditions preserve a clear content boundary:
+
+\begin{description}
+  \item[I1.] Native skill name plus frozen source-native description.
+  \item[I2.] Complete original source skill body.
+  \item[I3-flat.] Retained I3 source-evidence items serialised without field headings.
+  \item[I3C.] The same retained I3 source-evidence items serialised with the seven operational field headings: use condition, input/precondition, output/artifact, workflow/procedure, success/verification, boundary/not-for, and dependency/resource.
+\end{description}
+
+I3-flat and I3C therefore contain the same extracted operational evidence; headings are the intended difference. I1 is not a ``no-information'' condition: it can contain name and description cues. I2 is not a matched-content control because it retains all body text, including information that I3 may omit. Canonical extraction records retain each source path and SHA-256 and validate the source grounding of every retained evidence item.
+
+B1 independently ranks the full library with local BM25, Qwen \texttt{text-embedding-v4} bi-encoder retrieval, and the native SkillRouter bi-encoder. Qwen scores a query against the maximum cosine across any document chunks for a skill; its cached document vectors are one-time construction work. B2 takes the immutable B1 Top-20 list for each representation/retriever/prompt condition and reorders only those candidates with Qwen \texttt{qwen3-rerank} or \texttt{pipizhao/SkillRouter-Reranker-0.6B}. Thus B2 tests conditional ordering quality, not recovery from a first-stage candidate miss. No result row changes the candidate identities, gold labels, sources, or representation text after B1.
+
+The completed B3-v2 synthesis aggregates the frozen B1/B2 rows by semantic cluster and reports strict Hit@1, MRR@20, Recall@20, direct/paraphrase-averaged cluster effects, controlled and public-gold strata, paired cluster-bootstrap intervals, descriptive failure rates, and recorded cost. It contains no new model call or method tuning. B4 adds a provenance-bounded availability census: an I3 item is description-visible only when its original source text, after whitespace folding only, is present in the frozen I1 metadata description. This census is explanatory rather than causal; it cannot identify which text caused a ranking outcome.
+
+\section{Historical Exploratory Crossed Matrix}
+
+Table \ref{tab:method-crossed-design} records the earlier broad strategy matrix. It is retained for provenance and exploratory interpretation, not as the confirmatory RQ2a design. Its rows often change information content, representation, candidate generation, and reranking together, so they cannot isolate the new matched-content mechanism question.
 
 \begin{table}[h]
 \centering
-\small
-\begin{tabular}{p{0.18\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.17\textwidth}p{0.17\textwidth}p{0.17\textwidth}p{0.17\textwidth}p{0.17\textwidth}}
 \toprule
-Representation layer & Embedding only & Neural reranker & Field-aware reranker & Tree/graph retrieval \\
+Representation or carrier layer & Embedding only & Neural reranker & Field-aware reranker & Tree/graph retrieval \\
 \midrule
-R1 flat metadata & Qwen public run; controlled rerun needed. SkillRouter not run. & Qwen public run; controlled rerun needed. SkillRouter not run. & Diagnostic only; weak procedural fields. & Not central. \\
-R2 structured procedural & Qwen public run; controlled rerun needed. SkillRouter not run. & Qwen public run; controlled rerun needed. SkillRouter not run. & Main field-aware target. & Candidate ablation. \\
-R3 dependency/resource-aware & Partial local ablations. & Not complete. & Dependency and boundary ablation. & Candidate graph ablation. \\
-Full \texttt{SKILL.md} artifact & Qwen and SkillRouter run. & Qwen and SkillRouter run. & Qwen or SkillRouter first stage plus local field rerank. & Requires field extraction first. \\
+R1 flat metadata & Qwen and SkillRouter frozen-v0.4 run. & Qwen and SkillRouter frozen-v0.4 run. & Local and SkillRouter-first-stage top-20 runs complete. & Not central. \\
+R2 structured procedural & Qwen and SkillRouter frozen-v0.4 run. & Qwen and SkillRouter frozen-v0.4 run. & Local and SkillRouter-first-stage top-20 runs complete. & Candidate ablation. \\
+R3 dep./resource card & Frozen-v0.4 local ablations. & Not complete. & Dep. and boundary ablation. & Candidate graph ablation. \\
+Full \texttt{SKILL.md} & Qwen and SkillRouter frozen-v0.4 run. & Qwen and SkillRouter frozen-v0.4 run. & Qwen and SkillRouter first-stage top-20 runs complete. & Requires field extraction first. \\
 \bottomrule
 \end{tabular}
-\caption{Crossed representation-layer and retrieval-architecture design. Blank or partial cells are methodological gaps rather than negative results.}
+\caption{Historical exploratory information-carrier and retrieval-architecture matrix. It is not the confirmatory matched-content RQ2a design.}
 \label{tab:method-crossed-design}
 \end{table}
 
 This crossed design also explains why provider results must be interpreted carefully. For example, Qwen reranking over R2 structured cards is not directly comparable with SkillRouter reranking over full \texttt{SKILL.md} artifacts. That comparison changes both the model and the representation. The fair comparison requires running each architecture against the same representation layer, especially R1, R2, and full skill text.
 
-\section{Representation Conditions}
+\section{Information and Representation Conditions}
 
-The experiments use the following representation conditions:
+The experiments use the following information and representation conditions:
 
 \begin{description}
   \item[R1 flat metadata.] Skill name, family, and short description. This approximates the compact representation that a main agent might see in a progressive-disclosure setup.
   \item[Full artifact text.] The complete \texttt{SKILL.md} text. This exposes the richest information but is expensive and can dilute the signal with examples, resources, and broad documentation.
   \item[R2 structured procedural card.] Extracted fields for use conditions, preconditions, workflow, outputs, and boundaries.
   \item[R3 dependency/resource-aware card.] R2 plus external dependencies, resource signals, public-source metadata, and bundled resource files.
-  \item[R4 graph edges.] A typed edge view derived from R2/R3 fields. It is prepared for M5 graph retrieval and graph-aware reranking.
+  \item[R4 graph edges.] A planned typed edge view for relation-aware retrieval. Candidate edges may derive from operational fields, public provenance, dependencies, workflow order, input-output direction, or unsupervised similarity, but the final thesis-facing edge schema is still to be decided.
 \end{description}
 
-The thesis does not assume that public skill authors always write clean fields. The representation layer is allowed to extract or normalize fields from prose. This is important because the public skill audit shows that many selection signals are present but not always explicitly labelled.
+For controlled skills, the full-artifact condition uses the authored benchmark \texttt{SKILL.md}. For imported public-gold targets, the intended source artifact is the upstream publicly available \texttt{SKILL.md}; normalised import wrappers are retained for provenance and bookkeeping rather than as the public full-artifact source. The thesis does not assume that public skill authors always write clean fields. The representation layer is allowed to extract or normalise fields from prose. This is important because the public skill audit shows that many selection signals are present but not always explicitly labelled.
 
-The current fixed selection-information groups are task/use condition, input/precondition, output/artifact, workflow/procedure, dependency/resource/platform, boundary/not-for, and hierarchy/task role. These are not all simple positive retrieval text. Task, output, and workflow are primary disambiguation fields; dependency, boundary, and hierarchy are conditional feasibility or guardrail fields.
+The current fixed RQ1 operational-information groups are task/use condition, input/precondition, output/artifact, workflow/procedure, dependency/resource/platform, boundary/not-for, and success/verification criteria where available. These are not all simple positive retrieval text. Task/use condition, input, output, and workflow are primary disambiguation fields, but task/use condition is partly an intent signal: it is highly discriminative when prompt and skill wording align, and less robust when the requested intent is paraphrased. Dependency and boundary are conditional feasibility, authority, scope, or guardrail fields. The dependency/resource suite makes this distinction explicit for capability compatibility: the field is strong when the request or routing context contains a matching platform, tool, API, runtime, permission, version, or resource, but generic package-download prose has little routing value by itself. The boundary/not-for suite makes a parallel distinction: the field is strong when the request states an exclusion and weaker when the request only implies an authority boundary. Hierarchy, DAG, and graph relations are RQ2 strategy directions rather than settled RQ1 field groups unless a specific experiment maps them to operational information explicitly.
 
 \section{Retrieval and Reranking Methods}
 
@@ -61,13 +137,14 @@ The method families are:
 \begin{description}
   \item[M0 progressive disclosure.] The main agent sees compact skill cards and decides which full skill documents to load. This is the normal-agent baseline, but it becomes expensive at large scale.
   \item[M1 flat lexical retrieval.] BM25 or TF-IDF over R1. This is a control for lexical cueing rather than a proposed final architecture.
-  \item[M2 dense retrieval.] Embedding retrieval over R1, R2, or full artifacts. Current provider experiments use Qwen \texttt{text-embedding-v4} and the released SkillRouter embedding model; MiniLM is retained mainly as a local construction and validation model.
-  \item[M3 structured-card retrieval.] Retrieval over serialized R2 procedural fields. This tests whether procedural information helps when exposed in a structured card.
-  \item[M4 tree routing.] A planned hierarchy-based architecture: route from root to family or cluster, then to skill. This tests scale efficiency and branch-exclusion failure.
-  \item[M5 graph retrieval.] A planned graph-based architecture over R4 edges. This tests whether explicit relations among triggers, outputs, workflow steps, dependencies, resources, and boundaries help beyond serialized text.
+  \item[M2 dense retrieval.] Embedding retrieval over R1, R2, or full artifacts. Current frozen-v0.4 provider experiments use Qwen \texttt{text-embedding-v4} and the released SkillRouter embedding model. MiniLM is retained mainly as a local construction and validation model.
+  \item[M3 structured-card retrieval.] Retrieval over serialised R2 procedural fields. This tests whether procedural information helps when exposed in a structured card.
+  \item[M4 tree routing.] A planned hierarchy-based architecture: route from root to family or cluster, then to skill. This tests scale efficiency and branch-exclusion failure. The branch information to expose is still TBD.
+  \item[M5 graph retrieval.] A planned graph-based architecture over R4 edges. This tests whether explicit relations help beyond serialised text. The edge schema and the exact information carried by those edges are still TBD and must avoid benchmark-derived leakage.
   \item[M6-v0 diagnostic schema reranking.] The current deterministic local schema reranker. It uses weighted lexical overlap over extracted fields. It is transparent and useful for diagnosis, but too crude to be the final structure-aware method.
   \item[M6-v1 field-aware rerank.] The current first prototype of the proposed structure-aware method. It parses the request into fields and compares those fields against extracted skill fields.
-  \item[M7/M8 provider retrieval and reranking.] Provider or hosted-model embedding retrieval and neural reranking. Current implementations include Qwen embeddings with Qwen reranking, and SkillRouter embedding with SkillRouter reranking on Hugging Face Jobs.
+  \item[M6-v2 semantic field-aware rerank.] A no-rewrite semantic field matcher. It keeps the first-stage candidate set fixed, embeds selector-visible skill fields separately, and compares the user request to those fields with an embedding model.
+  \item[M7/M8 provider retrieval and reranking.] Provider or hosted-model embedding retrieval and neural reranking. Current frozen-v0.4 implementations include Qwen embeddings with Qwen reranking and SkillRouter embeddings with SkillRouter reranking. SkillRouter prompt-level artifacts have been recovered for detailed failure analysis.
 \end{description}
 
 \section{M6-v0 Diagnostic Reranker}
@@ -86,7 +163,7 @@ This method is intentionally simple. It tests whether extracted procedural field
 
 Therefore, M6-v0 should be reported as diagnostic evidence, not as the final proposed retrieval architecture.
 
-\section{M6-v1 Field-Aware Procedural Reranking}
+\section{Existing M6-v1 Field-Aware Diagnostic Prototype}
 
 The M6-v1 method better matches the thesis claim. Its pipeline is:
 
@@ -120,9 +197,57 @@ This distinction matters for interpretation. If M6-v1-local improves a controlle
 
 The current M6-v1-local analysis therefore records candidate recall separately from final top-1. A first-stage failure means the gold skill never entered the reranker candidate set. A reranking failure means the gold skill was present but not placed first. This separation is important because dense retrievers may be good high-recall candidate generators even when final ordering remains poor.
 
-\section{SkillRouter Hybrid Experiment}
+\section{Existing M6-v2 Semantic Field-Aware Diagnostic Prototype}
 
-To compare the proposed field-aware reranker against a strong skill-specific neural baseline, the thesis also evaluates a hybrid pipeline:
+M6-v2 is the existing semantic field-matching prototype from the frozen-v0.4 exploratory pipeline. It keeps the same representation taxonomy as M6-v1 but replaces lexical field overlap with semantic field matching. It is not the new RQ2a field-aware selector because it is coupled to a first-stage score, selected field sets, calibrated weights, request parsing, and the older representations. Its reusable embedding, chunking, aggregation, and cache components will be adapted under the stricter RQ2a contract described above.
+
+For each first-stage candidate, M6-v2 embeds the candidate's task/use conditions, input or precondition fields, output fields, workflow fields, dependency/resource fields, and boundary fields separately. The current implementation compares either the raw positive request against each field, or a field-specific request span against the corresponding skill field. Multi-item fields such as workflow are chunked and aggregated by maximum or top-two average similarity rather than by summing all matches, so longer skills are not automatically rewarded for containing more text.
+
+The generic score form is:
+
+\begin{verbatim}
+score =
+  alpha * normalized_first_stage_score
++ (1 - alpha) * normalized_semantic_field_score
++ explicit_exclusion_alignment_bonus
+- boundary_or_dependency_mismatch_penalty
+- broad_router_penalty
+\end{verbatim}
+
+The parameter \texttt{alpha} controls whether M6-v2 behaves mainly as a first-stage-preserving reranker or as a field-dominant reranker. Field weights are tuned only as a calibration or ablation question. A full-set best weight should not be treated as a final result unless it is selected on a development split and evaluated on held-out prompts. The thesis therefore reports M6-v2 both as an interpretability diagnostic and as a candidate method requiring further calibration.
+
+For the main fixed M6-v2 condition, the same weights are used across all candidate sources, representations, and prompt strata. The fixed score uses a light first-stage prior and a stronger semantic-field term:
+
+\begin{verbatim}
+score =
+  0.30 * normalized_first_stage_score
++ 0.70 * normalized_semantic_field_score
++ 0.25 * boundary_or_dependency_adjustment
+\end{verbatim}
+
+The fixed semantic-field weights are:
+
+\begin{itemize}
+  \item task/use condition: 0.50;
+  \item output/artifact: 0.20;
+  \item workflow/procedure: 0.15;
+  \item input/precondition: 0.10;
+  \item dependency/resource: 0.05.
+\end{itemize}
+
+This setting is intentionally not optimised separately per model or stratum. It tests whether the same explicit procedural-information policy transfers across candidate generators.
+
+\section{Historical Baselines and Optional Architecture Record}
+
+This section records the earlier broad method programme. These methods remain useful exploratory baselines, but the active RQ2a core is the matched-content BM25, Qwen single-vector, cross-encoder, and field-aware comparison described above.
+
+SkillRouter-style models are necessary strong baselines because they represent the most directly related skill-specific retrieval family. However, they should be introduced as a baseline after the benchmark has already established the scaling and semantic-confusability problem. The fair comparison is not simply ``SkillRouter versus our method.'' The fair comparison asks whether a skill-specific dense retriever and reranker still benefits from, or is challenged by, the proposed field-aware information.
+
+M4 tree routing and M5 graph retrieval are outside the current core. They introduce hierarchy or relation information not isolated by RQ1 and must not be implemented as part of RQ2a. They may be revisited only as separately motivated future work.
+
+\section{Historical SkillRouter Hybrid Experiment}
+
+To compare the proposed field-aware reranker against a strong skill-specific neural baseline, the thesis should also evaluate a SkillRouter hybrid pipeline:
 
 \begin{enumerate}
   \item SkillRouter's released embedding model, \texttt{pipizhao/SkillRouter-Embedding-0.6B}, embeds full skill artifacts and the user request.
@@ -130,11 +255,39 @@ To compare the proposed field-aware reranker against a strong skill-specific neu
   \item Either SkillRouter's released reranker, \texttt{pipizhao/SkillRouter-Reranker-0.6B}, reranks top-20 candidates, or the M6-v1-local field-aware reranker reranks top-20 or top-100 candidates.
 \end{enumerate}
 
-This experiment was executed inside a Hugging Face Jobs \texttt{t4-small} GPU container. The benchmark snapshot, including skills, prompts, representation files, and scripts, was uploaded to a private Hugging Face dataset. The container downloaded the snapshot, loaded the SkillRouter model weights from Hugging Face, computed first-stage embeddings, and then ran either the SkillRouter neural reranker or the local M6-v1 field-aware reranker inside the same remote environment. Embeddings were not transferred back to the laptop for local reranking.
+The frozen-v0.4 local benchmark has already been run for SkillRouter embeddings and SkillRouter reranking over R1, R2, and full artifacts, and for SkillRouter-first-stage plus M6-v1 diagnostic reranking over matched candidate budgets. A remote Hugging Face Jobs container remains useful for reproducibility and larger reruns, but it is no longer a prerequisite for the existing frozen-v0.4 SkillRouter rows.
 
-This design gives a comparison between two second-stage selection policies over the same strong first-stage retriever: learned SkillRouter reranking versus explicit procedural field matching. Candidate budget must be held fixed for a direct reranker comparison. The SkillRouter neural reranker has currently been run at a top-20 budget, while M6-v1-local has been run at both top-20 and top-100 budgets. Therefore, top-20 results are the budget-fair comparison; top-100 M6-v1-local results are reported as a larger-candidate-budget condition unless SkillRouter reranking is also evaluated at top-100.
+This design gives a comparison between two second-stage selection policies over the same strong first-stage retriever: learned SkillRouter reranking versus explicit procedural field matching. Candidate budget must be held fixed for a direct reranker comparison. Current frozen-v0.4 SkillRouter metrics, SkillRouter-to-M6-v1 diagnostic rows, and prompt-level artifacts are available for R1, R2, and full artifacts. The remaining work is interpretation, failure analysis, and cost/candidate-budget reporting. This local frozen-v0.4 track is distinct from the external SkillRouter-Eval-Core verification track, where full-tier I3C FTS/BM25 retrieval has now been run but fixed-candidate I3C reranking remains future work.
+
+\section{Execution Venue and Provider Boundary}
+
+The execution venue is recorded as part of each method configuration. This avoids conflating a local smoke test, a paid provider API run, a Codex-based extraction pass, and a hosted GPU retrieval matrix.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.23\textwidth}p{0.22\textwidth}p{0.45\textwidth}}
+\toprule
+Experiment family & Execution venue & Boundary rule \\
+\midrule
+Local validation, representation export, BM25/TF-IDF, SQLite FTS, aggregation, and thesis rebuild & Local repository checkout & These are CPU/file operations and may be run locally. They must still report benchmark version, prompt stratum, information layer, and output artifact. \\
+Qwen embedding and Qwen reranking & Local orchestration with DashScope/Qwen API calls & Model computation and cost are provider-side. Runs require API credentials and should be reported as provider/API conditions, not local model inference. \\
+DeepSeek/API I3M extraction & Local orchestration with paid provider API calls & This is a paid-model feasibility/pass attempt for model-parsed I3. It must not be relabelled as I3C. \\
+ChatGPT/Codex I3C extraction & Codex subagents over assigned artifact text & Workers use the I3C extraction prompt, produce JSONL rows, and validate exact evidence spans. This is the practical thesis-facing extraction route, not a provider reranker run. \\
+SkillRouter smoke test & Local subset only & Local SkillRouter execution is allowed only to verify code/model loading on tiny subsets. It is not a full result row. \\
+SkillRouter full matrices and external SkillRouter-Eval-Core neural reruns & Hugging Face Jobs GPU or equivalent hosted GPU & The released SkillRouter embedder/reranker full-scale runs should not run on the laptop. Snapshot inputs and uploaded result artifacts are part of the method record. \\
+\bottomrule
+\end{tabular}
+\caption{Execution venue boundaries for reproducible method records.}
+\label{tab:execution-venue-boundaries}
+\end{table}
+
+For the external SkillRouter-Eval-Core neural matrix, the current reproducible pattern is to package the relevant benchmark snapshot, upload it to the Hugging Face dataset repository, submit a Hugging Face Jobs GPU run, and persist the resulting Markdown/JSON artifacts back to the same dataset repository. Local commands may prepare or inspect the snapshot, but the full SkillRouter embedding and reranking computation is a hosted GPU experiment.
 
 \section{M4 Tree Routing}
+
+This section is retained as a historical architecture plan. M4 is not part of the active RQ2a protocol and has not been evaluated.
 
 M4 represents skills in a hierarchy:
 
@@ -156,6 +309,8 @@ The method first routes the request to one or more families, then ranks only ski
 M4 mainly tests scalability and early-routing risk. It is not the central method for discovering which procedural fields matter.
 
 \section{M5 Graph Retrieval}
+
+This section is retained as a historical architecture plan. M5 is not part of the active RQ2a protocol and has not been evaluated.
 
 M5 uses a heterogeneous graph over skills and information nodes. The current R4 export includes typed edges such as:
 
@@ -193,27 +348,80 @@ This allows the thesis to distinguish an information claim from an architecture 
 
 \section{Evaluation Metrics}
 
-The retrieval metrics are:
+For current RQ2a, the primary metric is paired top-1 accuracy over fixed three-candidate sets, with the cluster as the inferential unit. MRR, rank margin, near-neighbour confusion, per-field and prompt-variant accuracy, selector-visible tokens, and latency are secondary. Candidate recall is not an RQ2a outcome because the gold skill is guaranteed to be present.
+
+RQ2b uses the following full-library metrics. It reports the strict single-gold outcomes separately from older historical acceptable-alternative metrics:
 
 \begin{itemize}
   \item \textbf{Strict top-1 accuracy:} whether the top-ranked skill is the gold skill.
-  \item \textbf{Gold-or-acceptable top-1 accuracy:} whether the top-ranked skill is either the gold skill or a documented acceptable alternative.
   \item \textbf{Strict top-k recall:} whether the gold skill appears within the top-k candidate set.
-  \item \textbf{Gold-or-acceptable top-k recall:} whether the gold skill or a documented acceptable alternative appears within the top-k candidate set.
-  \item \textbf{Mean reciprocal rank:} how highly the strict gold skill is ranked.
-  \item \textbf{Non-core top-1 rate:} how often a background or public skill outranks the intended controlled skill.
-  \item \textbf{Candidate recall:} whether the first-stage retriever includes the gold skill before reranking.
+  \item \textbf{MRR@20:} how highly the strict gold skill is ranked within the retrieval cut-off.
+  \item \textbf{Recall@20:} whether the B1 full-library ranking includes the strict gold in the candidate set available to B2.
+  \item \textbf{Conditional reranked Hit@1:} strict top-1 after a Qwen or SkillRouter reranker has reordered the fixed B1 Top-20 list.
 \end{itemize}
 
-Strict and acceptable scores are reported separately because they answer different questions. Strict scoring tests whether the selector recovers the intended benchmark target. Acceptable scoring tests whether the selector found a near-equivalent skill that may still be reasonable for task success. Public-gold results require extra care: a public skill may be the correct target, so a generic non-core rate is not meaningful for that stratum. Public-gold failures should instead be labelled as wrong controlled skill, wrong public wrapper, broad parent/router, duplicate or acceptable alternative, extraction failure, first-stage exclusion, or reranking failure.
+Strict scoring tests whether the selector recovers the intended frozen benchmark target. RQ2b deliberately does not convert historically discussed acceptable alternatives into a post-hoc second endpoint. Public-gold results are reported as their own stratum because imported skills can be broader, duplicated, or differently authored. A strict-label miss may therefore be a candidate miss, ordering error, broad parent/router selection, duplicate-like alternative, or an ambiguity that the present strict endpoint does not resolve; it is not direct evidence of downstream task failure.
 
 The efficiency metrics are candidate budget, representation length, selector-visible token cost, latency, provider API calls, and cache behaviour.
 
 Qualitative failure analysis records first-stage exclusion, reranker misweighting, boundary or negation failure, broad parent/router selection, public-skill duplication, underspecified request ambiguity, and acceptable-alternative ambiguity.
 
-\section{Downstream Validation Plan}
+\subsection{Historical External SkillRouter-Eval-Core Metric Alignment}
 
-Downstream validation remains planned rather than completed. A smaller sample of prompts should be selected after offline retrieval behaviour is stable. The main agent will receive selected candidate skills under fixed conditions, generate task artifacts, and be graded for task success, artifact correctness, evidence use, and misuse of wrong skills.
+The external SkillRouter-Eval-Core track uses related but not identical metrics. The local frozen-v0.4 benchmark usually has a single strict gold skill per prompt, plus optional acceptable alternatives. SkillRouter-Eval-Core tasks can require multiple core skills and include graded relevance labels. Therefore, the external track is reported with a compatible but multi-skill metric view:
+
+\begin{itemize}
+  \item \textbf{Hit@1} is the closest analogue to strict top-1: the top-ranked skill must be one of the core gold skills.
+  \item \textbf{MRR@10} is directly comparable as the reciprocal rank of the first core gold skill.
+  \item \textbf{Recall@k} is not the same as local single-gold top-k accuracy when a task has multiple required skills; it measures the fraction of all core gold skills retrieved in the top-k list.
+  \item \textbf{FullCoverage@k} is a stricter multi-skill analogue of top-k success: all core gold skills must appear in the top-k list.
+  \item \textbf{nDCG@10} uses SkillRouter's graded relevance annotations and has no exact local strict-gold equivalent.
+  \item \textbf{Acceptable-alternative scoring} is not currently available for SkillRouter-Eval-Core unless an additional acceptable-alternative layer is manually defined.
+\end{itemize}
+
+The external runner is therefore configured to report the thesis cutoffs where useful, especially Recall@5 and FullCoverage@5, while keeping the original SkillRouter multi-skill metrics. External results should be used as portability evidence, not merged directly into the local controlled/public-gold tables.
+
+\subsection{Historical External Corpus and Prompt Audit}
+
+Because SkillRouter-Eval-Core is used as an external portability check, its corpus and prompts are also audited for structural comparability with the local benchmark. This audit is not a retrieval result. It measures whether skill bodies contain explicit markdown structure and whether prompts provide direct routing cues.
+
+The audit shows that SkillRouter-Eval-Core is not uniformly an I3-style structured corpus: only about 27\% of all skills, and about 27\% of the scored gold-name subset, satisfy the strict rich-schema test used in the audit. However, the corpus is highly documentation-like. In the full SkillRouter corpus, 95.0\% of skill bodies have an H1 heading and 78.8\% contain procedural signal. In the scored gold-name subset, 98.5\% have an H1 heading and 79.2\% contain procedural signal. Frequent section headings include \texttt{overview}, \texttt{best practices}, \texttt{when to use}, \texttt{when to use this skill}, \texttt{workflow}, \texttt{quick start}, \texttt{dependencies}, and \texttt{resources}. This means that full-body retrieval on the external benchmark often searches clean markdown documentation sections rather than arbitrary unstructured text.
+
+The prompt distribution is also different. The 75 scored SkillRouter tasks have a mean length of 198.4 rough whitespace tokens and a median length of 169. They contain file or path references in 97.3\% of tasks, explicit input cues in 92.0\%, explicit output cues in 85.3\%, and numbered steps in 40.0\%. By contrast, the local controlled prompts average 36.8 rough tokens with a median of 25, and are designed with near-neighbour alternatives. The external benchmark is therefore useful for portability and scale, but it should not be treated as the same difficulty regime as the local controlled semantic-confusability benchmark.
+
+\section{Cost and Trade-off Accounting}
+
+RQ2a records representation-construction time, document-scoring preparation time, cache size, selector-visible length, cold and warm query latency, and provider calls. RQ2b extends this ledger to B1 document/index time, B1 query time, selector-visible corpus tokens, and B2 fixed-Top-20 reranking work. The two studies have different candidate regimes, so their absolute latency figures are not pooled.
+
+\begin{description}
+  \item[One-time representation construction cost.] This includes parsing skill files, extracting I3 fields, validating evidence spans, and building serialised representation files. For I3C this can be expensive, because it may involve Codex/ChatGPT-style parsing and QA. This cost is paid when the skill library changes, not on every user query.
+  \item[One-time indexing or embedding cost.] Lexical indexes and embedding vectors can be precomputed. Full documents are expensive here because every full artifact must be indexed or embedded; I3 fields may reduce this cost by reducing the number of selector-visible tokens. If embeddings are cached, this is mostly an amortised library-maintenance cost.
+  \item[Per-query selection cost.] This includes query embedding or lexical lookup, first-stage retrieval latency, reranking calls, candidate-budget size, and any main-agent context used for final skill loading. This cost is paid for every user request.
+\end{description}
+
+For a library with \(N\) skills and \(Q\) future user queries, the rough total cost of a representation \(r\) can be written as:
+
+\begin{verbatim}
+total_cost(r, Q) =
+  extraction_cost(r)
++ index_or_embedding_cost(r)
++ Q * per_query_selection_cost(r)
++ Q * expected_full_doc_hydration_cost(r)
+\end{verbatim}
+
+This formula states the intended amortisation model, but RQ2b reports only costs that were durably recorded. It measures representation-size, B1 document/index, B1 query, and B2 reranking quantities. The V3 extraction record contains 2,433 source rows, 57 source chunks, and 1,455,632 proxy input tokens, but it lacks a durable comparable extraction wall-time or provider invoice. The thesis therefore does not calculate a total I3C construction cost or a break-even query count. It can state only that I3C reduces the observed B1 selector surface and document/index burden relative to I2, while its strict-label accuracy may be lower in a given stratum and retriever.
+
+\section{RQ2a Statistical Comparison Plan}
+
+All RQ2a comparisons are paired because every representation and selector sees the same query, three candidate identities, and gold label. Prompt variants from one cluster are not treated as independent observations. The primary contrast is \texttt{same-facts-fielded} minus \texttt{same-facts-flat} under Qwen single-vector selection. The effect is reported in top-1 percentage points with a 95\% cluster-bootstrap interval based on at least 10,000 resamples.
+
+The required replications apply the same fielded-versus-flat contrast under BM25 and the fixed cross-encoder. Key secondary contrasts are fielded versus prose, fielded versus diluted-2x, fielded versus shared-only, and field-aware Qwen versus single-vector Qwen on identical fielded text. Holm correction is applied to the predeclared secondary family. MRR, margin, field strata, and prompt-variant strata are reported as supporting analyses. Mixed-effects logistic regression with representation as a fixed effect and cluster as a random intercept is a sensitivity analysis, not the primary estimator.
+
+Technical completion and scientific support are reported separately. A run passes technically only if every expected row exists, candidate identities align, decisive text is not truncated, caches and model versions are recorded, and no confirmatory score was used to retune a method. Subject to supervisor approval, the organisation or field-aware hypotheses receive practical support when their paired top-1 gain is at least three percentage points and the corresponding cluster-bootstrap interval excludes zero. Null or negative outcomes are retained when the controls pass.
+
+\section{Unreviewed Downstream Validation Option}
+
+Downstream validation is neither part of active RQ2a nor an approved RQ2b requirement. If separately reviewed later, a smaller sample of prompts could be selected after offline retrieval behaviour is stable. The main agent would receive selected candidate skills under fixed conditions, generate task artifacts, and be graded for task success, artifact correctness, evidence use, and misuse of wrong skills.
 
 This step is necessary before claiming that retrieval improvements directly improve final agent task performance. Until then, the thesis should frame current results as retrieval and representation evidence rather than full end-to-end agent reliability evidence.
 

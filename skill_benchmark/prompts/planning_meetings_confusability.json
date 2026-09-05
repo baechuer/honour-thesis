@@ -27,7 +27,7 @@
       "meeting-summary-writer",
       "task-extractor"
     ],
-    "prompt": "I need something clean from these meeting notes so I can quickly see what needs to happen next and what still needs attention: we agreed to keep the thesis evaluation-focused, reduce the first benchmark to a smaller confusable core, and send an updated scope note by Friday. I need to draft the note, update the benchmark README, and check the prompt set again before the end of the week. Someone also needs to review the updated note after I send it."
+    "prompt": "Extract the meeting follow-up items from these notes: decisions, action items, owners if implied, open questions, and what still needs attention. We agreed to keep the thesis evaluation-focused, reduce the first benchmark to a smaller confusable core, and send an updated scope note by Friday. I need to draft the note, update the benchmark README, and check the prompt set again before the end of the week. Someone also needs to review the updated note after I send it. Do not only write a meeting summary."
   },
   {
     "id": "plan_p4_task_extractor",

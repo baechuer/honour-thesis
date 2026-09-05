@@ -160,7 +160,9 @@ class SkillRouterEmbedder:
 
         for start in range(0, len(missing), batch_size):
             batch = missing[start : start + batch_size]
-            if not self.quiet:
+            batch_number = start // max(batch_size, 1) + 1
+            should_log = start == 0 or batch_number % 100 == 0 or start + len(batch) >= len(missing)
+            if not self.quiet and should_log:
                 print(f"Encoding embeddings {start + 1}-{start + len(batch)} of {len(missing)} uncached items...", flush=True)
             encoded = self.tokenizer(
                 [text for _, text, _ in batch],

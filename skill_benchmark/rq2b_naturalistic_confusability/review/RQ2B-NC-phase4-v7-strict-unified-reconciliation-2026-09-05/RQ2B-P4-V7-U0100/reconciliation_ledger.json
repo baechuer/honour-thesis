@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0100",
+  "blind_packet_id": "P-9043F867C0687228A0",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-689F2A921F11C8DF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Launch Planning Workflow",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Technical Launch Planner"
+    },
+    {
+      "candidate_token": "C-6D4BBE2A71D73DCF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### Comparing Environments",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Setting Up a New Environment"
+    },
+    {
+      "candidate_token": "C-8A12A0F474E92744",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Strictly read-only and defensive",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Hard Rules"
+    },
+    {
+      "candidate_token": "C-8BEDD31C85E83A8A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Core Incident Response Workflows",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Velociraptor Incident Response"
+    },
+    {
+      "candidate_token": "C-935FFB2993F813E0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### Store and Retrieve Secrets",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Store and Retrieve Secrets"
+    },
+    {
+      "candidate_token": "C-D7CF3D415D67B273",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### 8. Use secret templates",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Instructions"
+    },
+    {
+      "candidate_token": "C-EA74F5DDE79C335E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Purpose",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Prometheus Configuration"
+    },
+    {
+      "candidate_token": "C-F60126C0158A9FBC",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to activate",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "visual-prior-art-survey"
+    }
+  ],
+  "reviewer_A_return_sha256": "54b15b06be79d3c17b3ab925bd2f03adf40d0d6e4608f7cccf2cbd9cae0b9b1d",
+  "reviewer_B_return_sha256": "608dc96f016776d59c75720e45bdc60f2619cd11c27886341b702f9f6efd7170",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

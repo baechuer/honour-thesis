@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0021",
+  "blind_packet_id": "P-C577EDBD54F3FA7A1F",
+  "batch_input_sha256": "d62d5ee7c2e491a52bdae06479a2c6fcabbb107e2b588c70ae648f30cb29a907",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-34B86FFBE75E6FD2","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"This skill transforms raw meeting notes","rationale":"Can structure raw notes into project progress, risks, decisions, actions, and next steps, but is designed for meeting material rather than a concise manager-facing consolidation of individual work updates.","missing_material_requirement_or_null":"A status-report transformation that directly organizes work updates into project standing, help needed, and next-week intent."},
+    {"candidate_token":"C-4093A8CFD2A425EF","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"Can surface team issues and owned follow-up actions, but facilitates a retrospective rather than synthesizing the provided work updates into a manager status account.","missing_material_requirement_or_null":"A concise project-status summary covering changes, help needed, and next-week plans."},
+    {"candidate_token":"C-6D4EBEDEC1EC8C72","adequacy":"INADEQUATE","source_anchor":"# Coordinator Mode — Multi-Agent Orchestration","rationale":"Coordinates parallel agents for complex tasks and does not synthesize work updates into a project status report.","missing_material_requirement_or_null":"A concise manager-facing summary of project standing, changes, support needs, and next steps."},
+    {"candidate_token":"C-83F63EA90065EB8E","adequacy":"INADEQUATE","source_anchor":"# Code Simplification","rationale":"Refactors code for clarity and is unrelated to summarizing project progress or work updates.","missing_material_requirement_or_null":"Synthesis of work updates into a manager-facing project status account."},
+    {"candidate_token":"C-B3AEAA938FD703AF","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Changelog Maintenance","rationale":"Can turn shipped-change evidence into a concise change record, but omits current project state, support needs, and intended work for next week.","missing_material_requirement_or_null":"Coverage of in-progress status, blockers or help needed, and next-week intentions."},
+    {"candidate_token":"C-B4DECC970DDDB0C5","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Weekly Report","rationale":"Directly converts supplied weekly work information into concise manager-facing progress, in-progress status, blockers and help needed, and next-week priorities.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-C7D0EC95D3D2C0FB","adequacy":"INADEQUATE","source_anchor":"Use only when the user explicitly asks to stage","rationale":"Stages and opens GitHub pull requests rather than producing a project-status account from work updates.","missing_material_requirement_or_null":"A manager-facing synthesis of project standing, changes, support needs, and next-week plans."},
+    {"candidate_token":"C-DFD2C4B0771E4425","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Weekly Review","rationale":"Helps audit commitments and choose next-week outcomes, but is a personal planning ritual rather than a report that summarizes supplied project updates and manager support needs.","missing_material_requirement_or_null":"A concise status report synthesizing current projects, changes, blockers, and planned next work."}
+  ],
+  "reviewer_output_sha256": "451e2a341136b9d4d8600ea3bcfaaa5f4590545c6c8d469af7550f7ddb145db0"
+}

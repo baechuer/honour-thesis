@@ -52,7 +52,9 @@
       "architecture-boundary-reviewer",
       "service-dependency-mapper",
       "public-office-database-sync",
-      "public-architecture-patterns"
+      "public-architecture-patterns",
+      "deployment-rollback-planner",
+      "database-backup-planner"
     ],
     "prompt": "Please assess `/workspace/fixtures/api_backend_design/add_subscription_status_migration.sql` before production rollout. I need locking risk, backfill plan, compatibility with old app versions, rollback path, and verification queries."
   },

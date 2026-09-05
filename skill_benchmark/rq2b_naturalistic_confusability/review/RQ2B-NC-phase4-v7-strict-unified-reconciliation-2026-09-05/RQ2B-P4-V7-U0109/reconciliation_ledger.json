@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0109",
+  "blind_packet_id": "P-85644248625C5EAE0C",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-06B3D46C47B694C0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Subscription Management",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Subscription Management"
+    },
+    {
+      "candidate_token": "C-2E37200CE42340AA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "### Example 1: Alembic Migration — Adding a Column with Data Backfill",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "### Example 1: Alembic Migration — Adding a Column with Data Backfill"
+    },
+    {
+      "candidate_token": "C-55FDB3091B641279",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### 3. Test every migration in CI against a real database instance, not just a syntax check",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Database Schema Migration with Liquibase and Flyway"
+    },
+    {
+      "candidate_token": "C-596F2F32D4A0212E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "for schema/data migration safety, use migration-safety-checker",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Language Version Migrator"
+    },
+    {
+      "candidate_token": "C-6A7380A841977DC2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### Do test data migrations and backfills",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "### Do test data migrations and backfills"
+    },
+    {
+      "candidate_token": "C-87EA4C6D2D830AD3",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### Example 1: Adding a column with backfill",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Schema Versioning"
+    },
+    {
+      "candidate_token": "C-B3FD3BE339CD341A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Use",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## When To Use"
+    },
+    {
+      "candidate_token": "C-C84985E3324A8196",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Multilocale CLI",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Multilocale CLI"
+    }
+  ],
+  "reviewer_A_return_sha256": "8f47940d5af9f96f2876d716ebdeefb49504d0ca5f3b9da8480adefa38af5e0e",
+  "reviewer_B_return_sha256": "bfb3c0cd2fdf407cec35ef3dfab5c556146192a431327c71f98c51d62396ec2f",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import http.client
 import json
 import math
 import os
@@ -85,12 +86,19 @@ def post_json(url: str, api_key: str, payload: dict[str, Any], timeout: int) -> 
         },
         method="POST",
     )
-    try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
-            return json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"{url} returned HTTP {exc.code}: {detail[:1000]}") from exc
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            if exc.code not in {429, 500, 502, 503, 504} or attempt == 2:
+                raise RuntimeError(f"{url} returned HTTP {exc.code}: {detail[:1000]}") from exc
+        except (TimeoutError, urllib.error.URLError, http.client.IncompleteRead) as exc:
+            if attempt == 2:
+                raise RuntimeError(f"{url} failed after retries: {exc}") from exc
+        time.sleep(2**attempt)
+    raise RuntimeError(f"{url} failed after retries")
 
 
 class OpenAICompatibleEmbeddingClient:

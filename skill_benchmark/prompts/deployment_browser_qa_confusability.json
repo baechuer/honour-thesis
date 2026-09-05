@@ -19,9 +19,14 @@
       "playwright-flow-debugger",
       "accessibility-interaction-auditor",
       "public-openai-screenshot",
-      "public-anthropic-webapp-testing"
+      "public-anthropic-webapp-testing",
+      "implicit-visual-diff-reviewer",
+      "psc-visual-screenshot-reviewer"
     ],
-    "prompt": "Please compare the baseline and current screenshots for `/workspace/fixtures/deployment_browser_qa/pricing_page_desktop.png` and `/workspace/fixtures/deployment_browser_qa/pricing_page_mobile.png`. I need visual regressions like clipping, spacing shifts, text overflow, and contrast changes."
+    "prompt": "Please compare the baseline and current screenshots for `/workspace/fixtures/deployment_browser_qa/pricing_page_desktop.png` and `/workspace/fixtures/deployment_browser_qa/pricing_page_mobile.png`. I need visual regressions like clipping, spacing shifts, text overflow, and contrast changes.",
+    "acceptable_alternatives": [
+      "implicit-visual-diff-reviewer"
+    ]
   },
   {
     "id": "deploy_p3_accessibility_interaction",
@@ -31,9 +36,15 @@
       "visual-regression-checker",
       "playwright-flow-debugger",
       "web-ui-tester",
-      "public-anthropic-webapp-testing"
+      "public-anthropic-webapp-testing",
+      "accessibility-checker",
+      "public-addy-web-accessibility"
     ],
-    "prompt": "Please audit the account-settings modal for keyboard and screen-reader interaction. Focus on tab order, focus trapping, accessible names, ARIA state, and whether form errors are announced."
+    "prompt": "Please audit the account-settings modal for keyboard and screen-reader interaction. Focus on tab order, focus trapping, accessible names, ARIA state, and whether form errors are announced.",
+    "acceptable_alternatives": [
+      "accessibility-checker",
+      "public-addy-web-accessibility"
+    ]
   },
   {
     "id": "deploy_p4_build_log_triage",
@@ -56,7 +67,7 @@
       "public-netlify-deploy",
       "public-openai-vercel-deploy"
     ],
-    "prompt": "The production deploy is live at `https://example-release.netlify.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, and rollback notes."
+    "prompt": "The production deploy is already live at `https://example-release.app`. Please verify release readiness with URL smoke checks, version evidence, asset loading, critical routes, environment sanity, rollback notes, and a go/no-go summary. Do not create, publish, or configure a new Netlify/Vercel deployment."
   },
   {
     "id": "deploy_p6_performance_budget",

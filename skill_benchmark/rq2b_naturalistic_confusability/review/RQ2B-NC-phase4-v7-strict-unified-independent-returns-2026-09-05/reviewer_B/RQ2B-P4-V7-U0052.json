@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-155418BCFA80848F",
+      "missing_material_requirement_or_null": "An executable automation-workflow artifact with graph nodes, data bindings, connector interactions, and compile/validation guidance.",
+      "rationale": "This is solely a sprint-retrospective facilitation guide; it does not support building, compiling, or validating the requested automation workflow.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-231F0ED5AB1F8818",
+      "missing_material_requirement_or_null": "A graph-based executable automation workflow with edges and Flow artifact guidance.",
+      "rationale": "The source is for reference-mode case plans and explicitly states that a case plan has no edges, so it cannot provide the requested workflow graph.",
+      "source_anchor": "not edges"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-41F66A671BC2AAD3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supports authoring a Maestro BPMN executable graph with tasks, expressions, bindings, connector tasks, and check/compile/validate steps.",
+      "source_anchor": "UiPath Maestro BPMN — TypeScript Builder SDK (structural core)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-51340E06BE451531",
+      "missing_material_requirement_or_null": "Instructions to author and compile/validate a workflow artifact with an explicit execution graph.",
+      "rationale": "It focuses on Retool internal-tool UIs; its generic backend example does not provide the requested workflow-artifact graph or compilation and validation procedure.",
+      "source_anchor": "Workflows (Backend Automation)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-71DF7089732368A4",
+      "missing_material_requirement_or_null": "An executable employee-onboarding automation workflow with graph, bindings, connectors, and artifact validation.",
+      "rationale": "It writes product-user onboarding microcopy and expressly distinguishes employee onboarding, rather than constructing automations.",
+      "source_anchor": "Onboarding Copy"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A15580A46D6FF0EA",
+      "missing_material_requirement_or_null": "An executable automation workflow artifact with task graph, connector interactions, and compile/validation loop.",
+      "rationale": "It governs Next.js route implementation and caching, not workflow authoring or validation.",
+      "source_anchor": "Next.js App Router"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A306D9AF508E0318",
+      "missing_material_requirement_or_null": "An executable employee-onboarding automation workflow with graph, bindings, connectors, and artifact validation.",
+      "rationale": "It is explicitly scoped to bulk-expression GSVA/ssGSEA analysis and heatmaps, unrelated to automation workflows.",
+      "source_anchor": "When Not to Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-BBC00139CDAE1DE3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers Flow graph structure, expressions, node types, bindings, connector interactions, brownfield edits, and the check/compile/validate loop.",
+      "source_anchor": "UiPath Flow — TypeScript Builder SDK"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0052",
+  "batch_input_sha256": "2b7421fc05a9f5a3ec14ea8c88c100803bbddd2b42f314bea481fa3d85c4794c",
+  "blind_packet_id": "P-262DB35C0929183B69",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ea9bcf401465e146ad1b90a596234ddad88843c1e5cebfb81a2bee02efd5f108"
+}

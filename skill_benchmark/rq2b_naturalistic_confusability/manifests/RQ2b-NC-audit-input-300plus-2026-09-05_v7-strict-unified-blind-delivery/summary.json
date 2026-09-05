@@ -1,0 +1,33 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/candidate_proposal_config.json": "4d0c3351c2c923e87cc3d13b9f60e2d890ddfa76fa939c4f546a4f537b1f67aa",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/main_blind_review_packets.jsonl": "283f645fc381535f3bf414b17f731707edca26060740a86c6241119e3b47ca78",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/opaque_token_join.jsonl": "504283c7a831306724ef38193a0640a819e2347e0d9c01c52754422aa84d8be9",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/prompt_k6_allocation_ledger.jsonl": "f65a3340a80545c50462eec43dd8ed9d7b89d9735f9f2c59ba4d3ed952ee7127",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/source_visible_review_pairs.jsonl": "e727c0e7a39fc8066fada918140ff9eb4af22455ec4518c54462f7e2225428be",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/summary.json": "ce0e14d911cd35eef62b61935b436dbb1c88f8ffb34caafa254b018e3dd748be",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/tail_blind_review_packets.jsonl": "8bdd602f4ddae2a2d9cad3ba81d126ed5dea06d2824411267f61c1102fde6b57",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835"
+  },
+  "claim_boundary": "This V7 repair freezes source-native review delivery and schemas only. It contains no reviewer outcome, token-join use, reconciliation, acceptable-set label, retrieval result or final benchmark disposition.",
+  "counts": {
+    "prompt_groups": 1226,
+    "required_independent_assessments": 19616,
+    "reviewer_visible_candidates_per_prompt_group": 8,
+    "sealed_main_candidates_per_prompt_group": 6,
+    "sealed_tail_candidates_per_prompt_group": 2
+  },
+  "implementation": {
+    "path": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "python": "3.13.2 (main, Mar 25 2025, 05:38:46) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "outputs": {
+    "unified_independent_reviewer_return_schema.json": "605ec69bffa6f55f9a5c94be0f9bd40e1d096afddea1f38caaa454882fd1e625",
+    "unified_prompt_group_batch_manifest.jsonl": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55",
+    "unified_sealed_coordinator_return_schema.json": "b92adfb512dfe130c3926a62cabd5b918dbcaf4f61c8581811522ab9fe2b2f57"
+  },
+  "repair_reason": "V4, V5 and V6 were stopped before any outcome entered the library after static QA found insufficient exact-schema, content-binding, frozen-bound-input or coordinator-return enforcement. V7 rejects extra fields, reconstructs every packet at validation, re-hashes every freeze-bound input, validates both independent and coordinator returns, and finalises only validated reconciliation decisions.",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS"
+}

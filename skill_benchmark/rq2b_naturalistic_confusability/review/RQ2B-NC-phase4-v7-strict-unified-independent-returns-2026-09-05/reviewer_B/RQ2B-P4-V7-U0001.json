@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0001",
+  "blind_packet_id": "P-DEB6A3C4B0F81403F2",
+  "batch_input_sha256": "0bc9cee9c0976797757da6c5fe03f4aa03654fe6ff03bead2855c4521823fdc4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token": "C-1355E927705B2B71", "adequacy": "INADEQUATE", "source_anchor": "When to Use", "rationale": "GSVA analyzes bulk expression pathways, not consumer genotype data or a nutrition report.", "missing_material_requirement_or_null": "Consumer-genotype nutrient findings with diet guidance and a nutrient profile."},
+    {"candidate_token": "C-6D2E1620A1255F07", "adequacy": "INADEQUATE", "source_anchor": "Inputs to collect", "rationale": "This summarizes clinical records or studies and does not transform consumer genotype data into nutrition findings.", "missing_material_requirement_or_null": "Consumer-genotype nutrient findings with diet guidance and a nutrient profile."},
+    {"candidate_token": "C-7349A0474B5E3DAB", "adequacy": "INADEQUATE", "source_anchor": "HCV Folder Genotype/Subtype Assignment", "rationale": "This assigns viral genotypes from HCV FASTA sequences, unrelated to personal nutrition.", "missing_material_requirement_or_null": "Consumer-genotype nutrient findings with diet guidance and a nutrient profile."},
+    {"candidate_token": "C-78C1A6B6DC47F032", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "Core Capabilities", "rationale": "It parses DTC genotypes and makes a reproducible risk report, but scores polygenic traits rather than nutrient findings or diet guidance.", "missing_material_requirement_or_null": "Nutrient-specific findings with practical diet guidance and a visual nutrient profile."},
+    {"candidate_token": "C-84438FA8F749598F", "adequacy": "INADEQUATE", "source_anchor": "Sprint Retro Facilitator", "rationale": "This structures team retrospectives rather than analyzing genetic data or nutrition.", "missing_material_requirement_or_null": "Consumer-genotype nutrient findings with diet guidance and a nutrient profile."},
+    {"candidate_token": "C-B314D8E2CF131CAE", "adequacy": "FULLY_ACCEPTABLE", "source_anchor": "What This Skill Does", "rationale": "It locally analyzes consumer genotypes to generate nutrient findings, dietary recommendations, a nutrient-risk visual, disclaimer, and reproduction bundle.", "missing_material_requirement_or_null": null},
+    {"candidate_token": "C-CFBC26304198125E", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "Core Capabilities", "rationale": "It locally parses consumer genotype data and produces reproducible educational reports, but its findings are drug-gene interactions rather than nutrition.", "missing_material_requirement_or_null": "Nutrient-specific findings with practical diet guidance and a visual nutrient profile."},
+    {"candidate_token": "C-E648418FC7EB8F55", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "Step 5: Nutrition - the pattern, not a diet", "rationale": "It provides diet guidance, but it does not accept consumer genotypes or produce a genotype-based nutrient profile.", "missing_material_requirement_or_null": "Consumer-genotype nutrient analysis with a visual nutrient profile and reproducibility information."}
+  ],
+  "reviewer_output_sha256": "38ff3d1cfe38800d8359e3cb399cd0eafc5de011a1d12ac347b9c68f773dbfc7"
+}

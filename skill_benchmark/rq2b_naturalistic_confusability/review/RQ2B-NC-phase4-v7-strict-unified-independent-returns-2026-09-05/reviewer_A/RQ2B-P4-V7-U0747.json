@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy": "INADEQUATE", "candidate_token": "C-04D2964A0539208A", "missing_material_requirement_or_null": "Transform the supplied merged PRs into release notes grouped by features, fixes, and breaking changes.", "rationale": "Addresses app-media outreach and press releases, not release-note synthesis from merged PRs.", "source_anchor": "# Press & PR for Apps"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-04F3612391D93808", "missing_material_requirement_or_null": "Transform the supplied merged PRs into release notes grouped by features, fixes, and breaking changes.", "rationale": "Audits dependency versions, vulnerabilities, and upgrades rather than synthesizing release notes.", "source_anchor": "# Dependency Updater"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-217F59298F286CE7", "missing_material_requirement_or_null": "Transform the supplied merged PRs into release notes grouped by features, fixes, and breaking changes.", "rationale": "Runs gene-set enrichment analysis, which is unrelated to the requested release-note task.", "source_anchor": "## Scope"},
+    {"adequacy": "FULLY_ACCEPTABLE", "candidate_token": "C-324CDB161372ED5C", "missing_material_requirement_or_null": null, "rationale": "Provides a release-note workflow that explicitly covers major features, breaking changes, and bug fixes without code review.", "source_anchor": "Create featured sections for major features and breaking changes"},
+    {"adequacy": "PARTIALLY_ADEQUATE", "candidate_token": "C-660F8F2325D52B41", "missing_material_requirement_or_null": "A distinct breaking-changes group.", "rationale": "Transforms PR titles into categorized release notes with new and fixed entries, but does not require a separate breaking-changes category.", "source_anchor": "## Categories (group entries)"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-77C6E75C1A65C8E0", "missing_material_requirement_or_null": "Transform the supplied merged PRs into release notes grouped by features, fixes, and breaking changes.", "rationale": "Runs an R-package CRAN release gate and source review, not release-note synthesis.", "source_anchor": "# `/r-package-check` — R Package Release Gate"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-C984EBD6C48CA83C", "missing_material_requirement_or_null": "Transform the supplied merged PRs into release notes grouped by features, fixes, and breaking changes.", "rationale": "Generates synthetic CT volumes and masks, unrelated to release notes.", "source_anchor": "# NV-Generate-CT (rflow-ct)"},
+    {"adequacy": "INADEQUATE", "candidate_token": "C-D917A730FBDE5A83", "missing_material_requirement_or_null": "Transform the supplied merged PRs into release notes grouped by features, fixes, and breaking changes.", "rationale": "Audits npm dependencies instead of transforming merged PRs into release notes.", "source_anchor": "# Dependency Auditor"}
+  ],
+  "batch_id": "RQ2B-P4-V7-U0747",
+  "batch_input_sha256": "338954f93b4be1e5c124a7948895bcc4ec11b0dc9355f6c595d77f5428dbc7d1",
+  "blind_packet_id": "P-A11CE262DF79FFB70B",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "6c901ea8e0bdaf8006589acec3add7c5f3a6e1cae7f863512e4ae9b15b4fa3b2"
+}

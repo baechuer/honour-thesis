@@ -15,16 +15,24 @@ The benchmark therefore has four goals:
 
 \section{Skill Library Composition}
 
-The active benchmark contains 2401 skills:
+The frozen-v0.4 benchmark contains 2433 skills:
 
 \begin{itemize}
-  \item 137 controlled evaluated skills;
   \item 1800 generated background-scale skills;
-  \item 460 imported public background skills;
-  \item 4 support or email skills.
+  \item 460 imported public skills;
+  \item controlled confusable skill clusters across multiple task families;
+  \item 32 public-style controlled skills;
+  \item 10 implicit-field stress skills;
+  \item support skills used for older messaging and email cases.
 \end{itemize}
 
 The controlled evaluated skills are organised into task families such as document and PDF operations, browser automation, GitHub and CI workflows, Hugging Face workflows, observability, office automation, API design, deployment, planning, reading and research, messaging, security, and skill lifecycle operations. These skills form the main controlled benchmark. The public skills are used both as realistic background distractors and as evidence for whether the proposed fields exist or are extractable in real skill artifacts.
+
+\section{RQ2b V3 Strict-Gold Freeze}
+
+The thesis-facing full-library evaluation uses the later source-grounded V3 freeze rather than the historical frozen-v0.4 endpoint. It contains the same scale of 2,433 skill artifacts, but its scored subset is deliberately narrower: 381 strict-gold prompts, comprising 243 controlled prompts and 138 public-gold prompts. Each scored prompt has one frozen intended gold skill. The metric is therefore agreement with this intended strict label; it is not a claim that no other skill could ever be useful for the request.
+
+For each source skill, the V3 freeze retains the original source path and SHA-256, native name and description, original full body, and source-grounded I3 evidence. Automatic validation checked source identity, literal evidence provenance, heading exclusion, serialisation, duplicate IDs, and complete source coverage across 57 extraction chunks. A protocol-invalid manual semantic review attempt was quarantined and no replacement human-semantic completeness audit was used. The full-library results must consequently be read as source/provenance-validated strict-label retrieval evidence, not as a universal human judgement that every extraction is semantically complete.
 
 \section{Controlled Confusable Clusters}
 
@@ -41,11 +49,27 @@ Examples include:
 
 The purpose of these clusters is not to model every possible agent skill. It is to create controlled pressure around the exact failure mode of interest: plausible semantic neighbours with different procedures.
 
+\section{RQ1 Field-Isolation Suites}
+
+The RQ1 field-isolation suites are a more controlled derivative of the same near-neighbour idea. They are not intended to be another broad benchmark version. Instead, each suite isolates one operational field while holding all other skill-side information constant. A suite contains 50 clusters, and each cluster contains three sibling skills: one intended gold skill and two deliberately plausible alternatives. The siblings share the same broad task family and the same non-target operational context. Only the target field differs.
+
+The condition with the field hidden, \texttt{shared\_context\_only}, shows only the shared neutral context. In this condition, the sibling candidates are intentionally tied. The condition with the field shown, \texttt{shared\_context\_plus\_field}, shows the same shared context plus one target-field line. This design lets RQ1 ask whether the field itself carries useful information for routing. It also separates RQ1 from the broader RQ2 question of which representation or retriever is best.
+
+The completed RQ1 suites cover use condition, input/precondition, output/artifact, dependency/resource, boundary/not-for, success/verification, and workflow/procedure. The examples/tests suite is retained as a negative control, because examples can steer selection under exact scenario matches but do not necessarily define a distinct skill capability. The units were created with AI assistance under a researcher-defined rubric, mechanically checked, and reviewed and approved by the researcher. The labels were visible during this review, so it was not an independent blinded review.
+
+\section{RQ1 Public Original-Document Benchmark}
+
+The second RQ1 experiment uses preserved public skill documents rather than controlled field templates. A source-tracked pool of 1,099 originals supplies 82 candidate groups containing 265 documents. Each group contains natural near-neighbours and direct/paraphrased requests with one frozen gold skill. Candidate grouping and label preparation used source evidence and AI assistance. The researcher then reviewed and approved all 194 scored gold-label cases with the labels visible. This records researcher agreement, not independent blinded annotation.
+
+The preparation pipeline produced 574 possible candidate-group and field removals. Of these, 439 passed the technical checks for every candidate, and 402 also had an eligible request and gold skill and therefore entered scoring. The upstream registry contains 199 request/gold families, but only 194 occur in at least one scored field condition. Reusing eligible families across fields produces 1,078 field-specific cases and 2,156 direct/paraphrased request rows. These numbers describe different stages of preparation and must not be treated as counts of independent candidate groups.
+
+For each scored case, the intact public documents form the \texttt{FULL\_ORIGINAL} condition. The paired condition keeps the same prompt, candidates, order, source hashes, and gold skill, but removes every cited source line assigned to the target field from every candidate. The implementation replaces only those line contents with blanks and leaves the remaining text unchanged. Each field has its own eligible case count because public documents do not expose equally removable evidence for every field. An edited document may be incomplete or non-executable; this benchmark tests routing after information removal, not execution of the edited skill. Three supporting tests remove predefined groups of fields. They measure the combined removal and do not assign the result to one member field or assume that individual effects add together.
+
 \section{Background and Public Skills}
 
 The 1800 generated background-scale skills provide scale pressure and near-domain distractors. They are designed to be functional enough to compete semantically with evaluated prompts, but they are not the main gold-label targets. Their role is to reveal whether retrieval methods are robust when the library contains many plausible non-core candidates.
 
-The 460 public imported skills improve ecological validity. They introduce authoring styles, broad skills, implicit fields, resources, dependencies, and hierarchical patterns that are less clean than the controlled skills. Public skills are used in three ways:
+The 460 public imported skills improve ecological validity within the historical frozen-v0.4 library. They introduce authoring styles, broad skills, implicit fields, resources, dependencies, and hierarchical patterns that are less clean than the controlled skills. Those embedded public skills are used in three ways:
 
 \begin{enumerate}
   \item as background scale and distractors;
@@ -53,23 +77,27 @@ The 460 public imported skills improve ecological validity. They introduce autho
   \item as a separate public-gold validation stratum when a public skill can be manually adjudicated as a stable target.
 \end{enumerate}
 
-\section{Public-Gold Validation Stratum}
+The 460-skill corpus is not the current prevalence basis for the RQ1 field taxonomy. A later, separate source frame freezes 29,292 canonical public \texttt{SKILL.original.md} documents. The review was completed in 31 batches by a Codex \texttt{gpt-5.6-terra} agent using \texttt{xhigh} reasoning. For each document, the agent read the YAML \texttt{name} and \texttt{description} metadata together with all Markdown sections, tables, and examples, but not attached scripts, references, or other auxiliary files. It recorded only whether each candidate information type was present. The retained package contains the aggregate summary and batch totals, but not the 29,292 row-level decisions. This review asks whether the candidate fields recur in naturally authored public skill documents; it does not make the skills gold targets, certify document quality, or test a retrieval effect.
 
-A separate 32-prompt public-gold stratum was built to test whether externally authored public skills can serve as retrieval targets. This is deliberately separated from the controlled benchmark because public skills are often broader, less atomic, duplicated, or hierarchical.
+\section{Historical Frozen-v0.4 Public-Gold Validation Stratum}
 
-Manual adjudication found:
+A separate 144-prompt public-gold stratum was built for the historical frozen-v0.4 benchmark to test whether externally authored public skills can serve as retrieval targets. This is deliberately separated from the controlled benchmark because public skills are often broader, less atomic, duplicated, or hierarchical.
+
+At that historical endpoint, the public-gold stratum was scored with both strict gold labels and documented acceptable alternatives. Its validation status was:
 
 \begin{itemize}
-  \item 21 stable strict public-gold cases;
-  \item 7 cases that should be kept only with acceptable alternatives;
-  \item 4 cases that should be revised or excluded before final reporting.
+  \item 144/144 prompts pass integrity;
+  \item 144/144 prompts pass procedural distinctness;
+  \item 131/144 prompts pass prompt-specific alignment;
+  \item 144/144 prompts pass semantic confusability;
+  \item 0 critical exact-name leaks and 0 high-risk leaks.
 \end{itemize}
 
-This result is important because it supports a cautious claim. Public skills are valuable for external validity, but they are not clean gold labels by default. Public-gold results should therefore be reported separately as strict public-only, gold-or-acceptable, and cleaned strict subsets.
+These historical validation results support a cautious claim: public skills are valuable for external validity, but they are not clean gold labels by default. They must not be conflated with the thesis-facing V3 RQ2b endpoint, which contains 138 source-grounded public-gold prompts within its 381-prompt strict-only overlay and does not report acceptable-alternative scoring.
 
 \section{Gold Labels and Acceptable Alternatives}
 
-Each evaluated prompt has a gold-label intended skill. A gold label is the skill that should be selected if the selector correctly interprets the user's procedural requirements, not merely the skill whose name or description is most semantically similar to the prompt. A gold label is valid when careful reading shows that the prompt's requirements align more strongly with the gold skill than with its near neighbours.
+Each evaluated prompt has a gold-label intended skill. A gold label is the skill that should be selected if the selector correctly interprets the user's procedural requirements, not merely the skill whose name or description is most semantically similar to the prompt. A gold label is valid when careful reading shows that the prompt's requirements align more strongly with the gold skill than with its near neighbours. Historical frozen-v0.4 records also retain documented acceptable alternatives; V3 RQ2b reports strict intended-label agreement only and does not calculate, imply, or substitute an acceptable-at-$k$ endpoint.
 
 Operationally, a skill is treated as the gold label only when it satisfies the following criteria:
 
@@ -96,25 +124,25 @@ The benchmark is validated through a staged rubric:
   \item \textbf{Semantic confusability:} each prompt has plausible near-neighbour skills.
   \item \textbf{Prompt leakage:} prompts should not reveal exact skill names or copied distinctive phrases.
   \item \textbf{Scale regime:} the library should be large enough to create context and retrieval pressure.
-  \item \textbf{Public field audit:} proposed fields should be observed, extractable, or clearly labelled as proposed normalization fields in public skills.
-  \item \textbf{Public-gold validation:} public skills should be manually atomized and adjudicated before being used as gold targets.
+  \item \textbf{Public field audit:} proposed fields should recur in a frozen public primary-document corpus, or be clearly labelled as proposed normalisation fields.
+  \item \textbf{Public-gold validation:} public skills should be manually atomised and adjudicated before being used as gold targets.
   \item \textbf{Selector pressure:} baseline methods should show meaningful performance differences rather than all succeeding or all failing randomly.
   \item \textbf{Downstream validation:} a smaller sample should test whether retrieval quality affects task success.
 \end{enumerate}
 
-\section{Current Validation Status}
+\section{Historical Frozen-v0.4 Validation Status}
 
-The active validation status is:
+The frozen-v0.4 validation status is:
 
 \begin{itemize}
-  \item Step 1 integrity: passed for 137 prompts and 2401 skills.
-  \item Step 2 procedural distinctness: passed for 137/137 prompts and 449/449 gold/alternative pairs.
-  \item Step 2 prompt-specific alignment: passed for 122/137 prompts under MiniLM alignment.
-  \item Step 3 semantic confusability: near-pass, with 116/137 prompts, or 84.7\%, having at least two plausible alternatives.
-  \item Step 4 prompt leakage: passed with 0 critical exact-name leaks and 0 high-risk leaks.
-  \item Step 5 scale regime: passed; R1 flat metadata is approximately 123k selector-visible tokens, while full skill artifacts exceed 1M selector-visible tokens.
-  \item Step 6 public field audit: mostly complete; 460/460 public skills audited heuristically and with DeepSeek model-assisted verification.
-  \item Step 6b public-gold validation: manually adjudicated but still needs annotation cleanup.
+  \item Step 1 integrity: passed for 245 controlled prompts, 144 public-gold prompts, and 2433 skills.
+  \item Step 2 procedural distinctness: controlled 245/245 prompts and 830/830 pairs pass; public-gold 144/144 prompts and 575/575 pairs pass.
+  \item Step 2 prompt-specific alignment: controlled 238/245 prompts pass; public-gold 131/144 prompts pass.
+  \item Step 3 semantic confusability: controlled 243/245 prompts pass; public-gold 144/144 prompts pass.
+  \item Step 4 prompt leakage: passed with 0 critical exact-name leaks and 0 high-risk leaks in both controlled and public-gold strata.
+  \item Step 5 scale regime: passed; R1 flat metadata is approximately 333k selector-visible tokens, while full skill artifacts exceed 1M selector-visible tokens.
+  \item Step 6 public field audit: the historical frozen-v0.4 record audited 460/460 imported public skills heuristically and with DeepSeek model-assisted verification; the later 29,292-document full-primary-document census is the current descriptive prevalence evidence.
+  \item Step 6b public-gold validation: current public-gold stratum passes validation but should still be reported separately from controlled results.
 \end{itemize}
 
-The main remaining benchmark risk is gold-label stability under realistic public/generated competitors. This risk is handled by manual adjudication, acceptable alternatives, and separate reporting of controlled and public-gold strata.
+The historical frozen-v0.4 validation record remains useful for provenance, but it is not the scoring endpoint for RQ2b. The RQ2b V3 strict-gold freeze uses the narrower 381-prompt subset described above and reports controlled and public-gold strata separately.
