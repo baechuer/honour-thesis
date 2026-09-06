@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-FCF0D9973916285222",
+  "candidate_token": "C-9E6FDC5D23ADD129",
+  "coordinator_decision": "CONFIRMED_PARTIALLY_ADEQUATE",
+  "coordinator_output_sha256": "adb668a8e323f4840fae38ac1b31a489142124e4a84992902acb9e05abbeeb81",
+  "fresh_source_render_sha256": "c4d58354d8c74c494afb361c8d2621fae3b4108cc80fcb32ed1981e83f9f25b9",
+  "rationale": "The candidate provides substantial, internally coherent Laravel-specific coverage across boot/configuration, request and data flow, asynchronous infrastructure, and tests. Reviewer A identifies a material framework-boundary mismatch with the supplied Node.js/Express requirement, while Reviewer B confirms coverage only under a Laravel boundary; therefore partial adequacy is the supported resolution.",
+  "reviewer_a_return_sha256": "7ae31101dd0859451cf948eeb26179ac2cf85a80babe135fefc5af2c90418853",
+  "reviewer_b_return_sha256": "39750a002e6c394488fdee8ea00b06586b306d65cd9b7054277a0202744e62d1",
+  "source_anchor": "Analyze async and infrastructure flow"
+}

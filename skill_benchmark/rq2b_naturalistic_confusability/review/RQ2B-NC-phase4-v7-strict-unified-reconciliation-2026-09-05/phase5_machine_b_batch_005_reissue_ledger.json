@@ -1,0 +1,15 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-005",
+  "claim_boundary": "Machine B only. The invalid original is preserved; replacement is target-blind and independent.",
+  "reissues": [
+    {
+      "batch_id": "RQ2B-P4-V7-U1120",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1120.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_1/RQ2B-P4-V7-U1120.json",
+      "error_category": "identity_binding_mismatch",
+      "status": "VALIDATED_REISSUE_1"
+    }
+  ]
+}

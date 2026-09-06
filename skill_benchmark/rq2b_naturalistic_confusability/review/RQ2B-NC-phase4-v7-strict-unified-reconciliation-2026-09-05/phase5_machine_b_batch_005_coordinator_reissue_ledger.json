@@ -1,0 +1,35 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_coordinator_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-005",
+  "claim_boundary": "Machine B only. The mislocated original is preserved and not adopted; replacement receives only the sealed packet and coordinator schema.",
+  "reissues": [
+    {
+      "candidate_token": "C-929A664CF7090D21",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-reconciliation-2026-09-05/coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/C-929A664CF7090D21.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/coordinator_reissue_1/C-929A664CF7090D21.json",
+      "error_category": "mislocated_coordinator_return",
+      "status": "VALIDATED_REISSUE_1"
+    },
+    {
+      "candidate_token": "C-D5B3AE1D6DB043E4",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-reconciliation-2026-09-05/coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/C-D5B3AE1D6DB043E4.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/coordinator_reissue_1/C-D5B3AE1D6DB043E4.json",
+      "error_category": "mislocated_coordinator_return",
+      "status": "VALIDATED_REISSUE_1"
+    },
+    {
+      "candidate_token": "C-FADC224439A353CB",
+      "original_return_path": "UNRESOLVED_MISLOCATED_OR_MISSING_FROM_AUTHORIZED_ROOT",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/coordinator_reissue_1/C-FADC224439A353CB.json",
+      "error_category": "missing_from_authorized_coordinator_root",
+      "status": "VALIDATED_REISSUE_1"
+    },
+    {
+      "candidate_token": "C-D120F6A553700F9C",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/C-D120F6A553700F9C.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-005/coordinator_reissue_1/C-D120F6A553700F9C.json",
+      "error_category": "coordinator_content_validation_failure",
+      "status": "VALIDATED_REISSUE_1"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-4E1813FF61D4150C","missing_material_requirement_or_null":"Application runtime, request/data flow, asynchronous behavior, and test-gap analysis.","rationale":"Reviews a change set and produces a merge decision; it does not analyze a supplied server-side application's runtime and architecture.","source_anchor":"# Code Review"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-566D009E43A802ED","missing_material_requirement_or_null":"Server-side project analysis of runtime, request flow, data, async behavior, and tests.","rationale":"Surveys published user-research evidence rather than inspecting an application's runtime or repository behavior.","source_anchor":"# `user-research-prior-art-survey` — SKILL.md"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-929A664CF7090D21","missing_material_requirement_or_null":null,"rationale":"Its Node/Express procedure explicitly covers runtime shape, boot and middleware, request-to-response flow, async behavior, data/security flow, and validation, matching the requested analysis boundary.","source_anchor":"### 3. Trace request-to-response flow"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-9C78DC58D0F8EE90","missing_material_requirement_or_null":"Applicability to a non-Symfony supplied application.","rationale":"Covers the requested boot, request, Doctrine/data, security, async, and validation dimensions, but only for Symfony-specific projects and components.","source_anchor":"### 3. Trace request-to-response flow"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-9E6FDC5D23ADD129","missing_material_requirement_or_null":"Applicability to a non-Laravel supplied application.","rationale":"Covers the requested boot, request, Eloquent/data, async, infrastructure, and test dimensions, but only for Laravel-specific projects and components.","source_anchor":"### 3. Trace request-to-response flow"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-B5842CEAEEF731EC","missing_material_requirement_or_null":"Server-side runtime, request/data flow, asynchronous behavior, and test-gap analysis.","rationale":"Transforms a project into an open-source repository and does not provide the requested application analysis.","source_anchor":"# OSS Ready"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-BC8D5F0B6BDAE95F","missing_material_requirement_or_null":"Server-side application analysis.","rationale":"Ports a React feature to iOS and requires a React source plus iOS target; it is not a server-side project-analysis route.","source_anchor":"# React to iOS: Feature Parity Implementation"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D5B3AE1D6DB043E4","missing_material_requirement_or_null":"Repository-grounded runtime-context, architecture, data-flow, async, and test-gap analysis.","rationale":"Runs a live AWS penetration test rather than producing the requested repository-grounded server-side application analysis.","source_anchor":"# AWS Security Agent — Penetration Test"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U1120",
+  "batch_input_sha256":"f730bcdace033c7c5f3d41fd338532c118750bbf4b35d5d3c199dd324511424e",
+  "blind_packet_id":"P-FCF0D9973916285222",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256":"d4fcd55dd5e2d0311ca85c4895e044cf4af124fd7f8331977e0d3d4f55fee80e"
+}
