@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1DFA939EFA2E9730",
+      "missing_material_requirement_or_null": "A retriever for validated latest and historical global-news narrative metadata snapshots plus a deterministic file manifest.",
+      "rationale": "This is an interactive plan-and-documentation grilling workflow, not a data snapshot retrieval or validation route.",
+      "source_anchor": "Interview me relentlessly"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-3EC3A12242E09DDB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly fetches latest and UTC-range GKG snapshots, applies retry and throttling, validates transport and structure, and emits a machine-readable manifest.",
+      "source_anchor": "## Core Goal"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-54A4AAE999741332",
+      "missing_material_requirement_or_null": "GKG narrative-metadata snapshots rather than Events-table exports.",
+      "rationale": "It supplies the requested latest/range retrieval, retry, throttling, validation and manifest flow, but its declared output is the Events table rather than narrative metadata.",
+      "source_anchor": "## Core Goal"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5990C0E6874884DF",
+      "missing_material_requirement_or_null": "A global-news metadata retrieval, validation, and deterministic manifest workflow.",
+      "rationale": "This facilitates team retrospectives and action items, with no route to retrieve or validate news metadata snapshots.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-945BF0F359A4EF58",
+      "missing_material_requirement_or_null": "GKG narrative-metadata snapshots rather than Global Mentions-table exports.",
+      "rationale": "It offers the requested retrieval controls, validation and manifest for a related GDELT export, but the output type is Global Mentions rather than narrative metadata.",
+      "source_anchor": "## Core Goal"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D368936E04A26D81",
+      "missing_material_requirement_or_null": "A global-news metadata retrieval, validation, and deterministic manifest workflow.",
+      "rationale": "This is pathway analysis for expression data, not a route to obtain or validate news snapshots.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ED944746D2C0F3E4",
+      "missing_material_requirement_or_null": "A concrete global-news metadata retrieval, validation, and deterministic manifest implementation.",
+      "rationale": "It provides generic n8n JavaScript guidance but no defined source, snapshot retrieval, validation, or manifest procedure for this task.",
+      "source_anchor": "# JavaScript Code Node"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EEE4E533A3B97261",
+      "missing_material_requirement_or_null": "A global-news narrative metadata source and snapshot retrieval workflow.",
+      "rationale": "It fetches historical weather records, which does not provide the requested global-news narrative metadata snapshots.",
+      "source_anchor": "## Core Goal"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0283",
+  "batch_input_sha256": "c77e387aea0b95bc19f9cc585299fc51959fc98da63937cf4a4ff02517b21a79",
+  "blind_packet_id": "P-E89937FAA860FE803F",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f0edce50c3008483f63c415d349097a53546f40770b5b0d2225a74e4b84de933"
+}

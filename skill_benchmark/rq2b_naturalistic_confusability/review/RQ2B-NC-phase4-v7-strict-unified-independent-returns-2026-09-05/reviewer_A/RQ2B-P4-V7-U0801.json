@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4FB1AE81BC99C66A",
+      "missing_material_requirement_or_null": "A 20-minute review cadence.",
+      "rationale": "Defines the requested roles, a decision log with reasons and ruled-out options, and stand-down criteria, but specifies 15- or 30-minute checkpoints rather than the requested 20-minute rhythm.",
+      "source_anchor": "Set a fixed sync cadence and hold it."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7EC78A48AC25CDE1",
+      "missing_material_requirement_or_null": "A 20-minute review rhythm and an explicit record of rejected options.",
+      "rationale": "Provides an IC, operations, communications and scribe roles plus mitigation handoff, but uses a 15- to 30-minute cadence and its timeline requirement does not require rejected options.",
+      "source_anchor": "Run a fixed comms cadence."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AECCBC7CD6948079",
+      "missing_material_requirement_or_null": "A high-severity outage coordination protocol with roles, review cadence, decision record, and closure criteria.",
+      "rationale": "This source runs gene-set enrichment analysis and does not provide incident-room coordination.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B63FFE5E034268DC",
+      "missing_material_requirement_or_null": "A high-severity outage coordination protocol with roles, review cadence, decision record, and closure criteria.",
+      "rationale": "This source designs Notion databases rather than an outage coordination room.",
+      "source_anchor": "# Notion Database Designer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CD3201F03AFE203B",
+      "missing_material_requirement_or_null": "A 20-minute coordination review and a decision record capturing decisions, reasons, and rejected options.",
+      "rationale": "Provides commander, communications and scribe responsibilities and written closure criteria, but its stated cadence is 15 to 30 minutes and its timeline records actions and findings rather than the requested decision rationale and rejected options.",
+      "source_anchor": "Hold a fixed comms cadence."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CF67A620E2AAE5F8",
+      "missing_material_requirement_or_null": "A high-severity outage coordination protocol with roles, review cadence, decision record, and closure criteria.",
+      "rationale": "This source evaluates interface usability, not live incident coordination.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D4AC2EC2BB73CDDD",
+      "missing_material_requirement_or_null": "A high-severity outage coordination protocol with roles, review cadence, decision record, and closure criteria.",
+      "rationale": "This source reviews database migration safety rather than coordinating a live outage room.",
+      "source_anchor": "# Migration Safety Checker"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E978BC9F2C9AE1DC",
+      "missing_material_requirement_or_null": "A high-severity outage coordination protocol with roles, review cadence, decision record, and closure criteria.",
+      "rationale": "This source is a cloud-architecture planning framework, not a collaboration protocol for a live outage.",
+      "source_anchor": "# Skills"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0801",
+  "batch_input_sha256": "639319b69e2c12e8ce8a1c46da60f2f86e02f881e835aa8786430da7fe41cba9",
+  "blind_packet_id": "P-84B3F776AB0E197C14",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256": "8190b4634a86e07560a5adfce4da37db81195a661dc7824fe4f8b6e1105f0a50"
+}

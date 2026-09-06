@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-469DBF966195E078",
+      "missing_material_requirement_or_null": "An existing-service implementation workflow with matching automated tests and the required structured CI-handoff JSON summary.",
+      "rationale": "The skill is limited to simulator testing and reporting; it does not implement the requested resilience fix.",
+      "source_anchor": "# Xcode Simulator Test"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5D62AB08A2DC25CF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Its non-interactive print mode can delegate the scoped coding and tests, and its structured-output guidance supports the requested JSON handoff.",
+      "source_anchor": "Two Orchestration Modes"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BAA66A05051208D0",
+      "missing_material_requirement_or_null": "A code-change and test-execution workflow for an existing service, with a structured CI-handoff JSON summary.",
+      "rationale": "This skill surveys published user-research evidence rather than implementing or testing a service fix.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D66AA1C20AD1155F",
+      "missing_material_requirement_or_null": "An existing-service resilience implementation and automated-test workflow with the requested CI-handoff JSON summary.",
+      "rationale": "The procedure optimizes landing-page conversion experiments, not a scoped service code change.",
+      "source_anchor": "# Landing Page CRO"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DA3EDC37A09E1EA9",
+      "missing_material_requirement_or_null": "A guaranteed structured JSON handoff summary identifying edited areas, executed checks and known limitation.",
+      "rationale": "It can delegate a bounded non-interactive coding task and test work, but its prescribed completion summary is not the required structured CI-handoff JSON.",
+      "source_anchor": "## One-Shot Tasks"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E5FDDC70789B2677",
+      "missing_material_requirement_or_null": "An existing-service implementation and automated-test workflow, including the requested CI-handoff JSON summary.",
+      "rationale": "The workflow designs and evaluates LLM prompts rather than implementing a resilience fix in a service.",
+      "source_anchor": "# Prompt Engineer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E68EF272A054242E",
+      "missing_material_requirement_or_null": "A guaranteed structured JSON handoff summary identifying edited areas, executed checks and known limitation.",
+      "rationale": "It can run a one-shot coding task in a repository, but the documented result contract does not guarantee the requested structured CI-handoff JSON.",
+      "source_anchor": "## One-Shot Tasks"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F46BEB1F9B7DFE83",
+      "missing_material_requirement_or_null": "A non-interactive existing-service implementation workflow and the required structured CI-handoff JSON summary.",
+      "rationale": "It directs root-cause fixes and regression testing, but does not provide the requested non-interactive execution and structured handoff contract.",
+      "source_anchor": "### Step 5: Guard Against Recurrence"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1203",
+  "batch_input_sha256": "aa5089b3a903dc7d80db9a0b0860b5b60ae10d453a0403ac4dd13d988ecce0c1",
+  "blind_packet_id": "P-617EEA98448BB672A0",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "129bf9c462f76680e6d957e12bdea4c8f425fe211bade4c574c8542fa8773317"
+}

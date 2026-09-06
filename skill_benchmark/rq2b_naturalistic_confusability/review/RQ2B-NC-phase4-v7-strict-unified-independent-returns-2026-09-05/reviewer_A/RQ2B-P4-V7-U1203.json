@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-469DBF966195E078",
+      "missing_material_requirement_or_null": "A workflow to implement the resilience change and deliver automated service tests.",
+      "rationale": "It exercises and reports on an iOS simulator but does not implement the requested service change or matching automated tests.",
+      "source_anchor": "# Xcode Simulator Test"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5D62AB08A2DC25CF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It supports a bounded non-interactive coding task, code and shell execution, and structured JSON output suitable for implementing and testing the scoped change.",
+      "source_anchor": "Print mode runs a one-shot task, returns the result, and exits."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BAA66A05051208D0",
+      "missing_material_requirement_or_null": "A workflow to modify an existing service, add automated tests, run them, and report the result.",
+      "rationale": "It surveys published user-research evidence rather than implementing or validating a software resilience fix.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D66AA1C20AD1155F",
+      "missing_material_requirement_or_null": "A workflow to implement a service resilience fix with automated tests and a CI handoff summary.",
+      "rationale": "It audits and experiments on landing-page conversion rather than changing and testing an existing service.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-DA3EDC37A09E1EA9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Its bounded non-interactive coding mode explicitly supports adding retry logic and updating tests, with machine-readable output and concrete outcome reporting.",
+      "source_anchor": "## One-Shot Tasks"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E5FDDC70789B2677",
+      "missing_material_requirement_or_null": "A workflow to implement and test a resilience change in an existing software service.",
+      "rationale": "It designs and evaluates LLM prompts, not a code change and its automated test execution.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E68EF272A054242E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It delegates bounded coding work in a repository and can implement the scoped fix, run tests, and return the requested structured handoff.",
+      "source_anchor": "# Codex CLI"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F46BEB1F9B7DFE83",
+      "missing_material_requirement_or_null": "A non-interactive implementation workflow that produces the requested structured CI handoff.",
+      "rationale": "It gives a strong process for root-cause fixes, regression tests, and verification, but not a non-interactive implementation-and-summary execution workflow.",
+      "source_anchor": "## The Stop-the-Line Rule"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1203",
+  "batch_input_sha256": "c4de074960a7c610f94a082dcbf82780529de808652da139cfe1d55060a952fb",
+  "blind_packet_id": "P-617EEA98448BB672A0",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "374bfe1980cea8195c9d89410c5ccf03e5a09ffe39599ced4fd2887f9eed0513"
+}
