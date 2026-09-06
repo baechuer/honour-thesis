@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-19414B3247CA6AD4",
+      "missing_material_requirement_or_null": "Asana workspace actions (creating sections, assigning tasks, and updating due dates)",
+      "rationale": "Produces a weekly client status report from task completion fields, covering the reporting portion but not the requested Asana workspace operations.",
+      "source_anchor": "Produces the weekly 5-block client status report"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1E175287E7A72222",
+      "missing_material_requirement_or_null": "Asana workspace actions and task-status reporting from completion fields",
+      "rationale": "Runs quarterly business reviews and account-health/renewal conversations, not Asana project administration or the requested status report.",
+      "source_anchor": "Runs quarterly business reviews"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2323EF19F28C175B",
+      "missing_material_requirement_or_null": "Asana project sections, task assignment/due-date updates, and status reporting",
+      "rationale": "Builds Slack bots and integrations using the Slack API, which does not provide the requested Asana workflow.",
+      "source_anchor": "Builds Slack bots and integrations using the Slack API"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-269DA8A8F26828EF",
+      "missing_material_requirement_or_null": "Asana workspace operations and task-completion status reporting",
+      "rationale": "Transforms projects into open-source repositories by adding repository files and templates, unrelated to Asana task administration.",
+      "source_anchor": "Transform a project into a professional open-source repository"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3C564322FEE341E0",
+      "missing_material_requirement_or_null": "Asana workspace operations and status reporting",
+      "rationale": "Performs GO and KEGG enrichment on gene lists and generates a chart, unrelated to project/task management.",
+      "source_anchor": "Use when performing GO and KEGG enrichment on a gene list"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-507007B12378DB87",
+      "missing_material_requirement_or_null": "Asana workspace operations and status reporting",
+      "rationale": "Initializes Webflow Code Components projects and development configuration, not Asana workspace or task work.",
+      "source_anchor": "Initialize a new Webflow Code Components project from scratch"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-658208F955B5D1CD",
+      "missing_material_requirement_or_null": "Asana project sections, task assignment/due-date updates, and completion-field status report",
+      "rationale": "Facilitates sprint retrospectives with agendas and action items, but does not provide the requested Asana operations or report.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8E1BCC6DDCE09BBE",
+      "missing_material_requirement_or_null": "Asana project sections, task assignment/due-date updates, and completion-field status report",
+      "rationale": "Reports event-task status from an Event Tracker document and Luma statistics, not from an Asana workspace and not the requested project administration.",
+      "source_anchor": "Report task status for an AAIF chapter or online series"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0474",
+  "batch_input_sha256": "6b7fb546f854118b8214d09035bd6b04d2261a91e105ecf5af343ff56b7e701a",
+  "blind_packet_id": "P-09C122A58417182130",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c001b6547d7465055327768360eeb68a74b9786c15ca9593adbf06b9784add0c"
+}
