@@ -1,0 +1,15 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-008",
+  "claim_boundary": "Machine B only. Invalid original is preserved; reissue is a fresh independently target-blind return for the same frozen packet.",
+  "reissues": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0531",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0531.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_1/RQ2B-P4-V7-U0531.json",
+      "error_category": "packet_binding_mismatch",
+      "status": "VALIDATED_REISSUE_1"
+    }
+  ]
+}
