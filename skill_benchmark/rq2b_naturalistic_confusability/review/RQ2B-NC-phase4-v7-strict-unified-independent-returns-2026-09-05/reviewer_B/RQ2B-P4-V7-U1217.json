@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0191EDE3071894FC",
+      "missing_material_requirement_or_null": "A workflow that turns unresolved pull-request comments into exact code edits and records each comment as addressed.",
+      "rationale": "It writes user-facing help articles, not a comment-by-comment remediation plan for a pull request.",
+      "source_anchor": "# Help Documentation"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-041B3992F41405E8",
+      "missing_material_requirement_or_null": "A comment-by-comment plan of exact code edits with an addressed-status record for unresolved pull-request feedback.",
+      "rationale": "It covers a general feature lifecycle and code-review stage, but does not turn the supplied review comments into the requested edit plan and status mapping.",
+      "source_anchor": "## The Pipeline"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5B764AA3ED43C9AD",
+      "missing_material_requirement_or_null": "A pull-request review-comment workflow that plans exact code edits and marks individual comments addressed.",
+      "rationale": "It covers Atlassian integrations and issue/document operations rather than resolving pull-request review feedback into code edits.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6109C88C18CF933F",
+      "missing_material_requirement_or_null": "A comment-by-comment remediation plan that identifies exact code edits and records which unresolved pull-request comments are addressed.",
+      "rationale": "It includes collaboration and code-review guidance, but lacks the requested review-comment-driven edit plan and addressed-comment tracking.",
+      "source_anchor": "### Phase 5 — Collaboration Workflows and Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-726AB11B9533867C",
+      "missing_material_requirement_or_null": "A workflow for resolving pull-request review comments through exact code-edit planning and comment-status marking.",
+      "rationale": "It is specific to database schema migrations and does not address review-comment triage for a general code change.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ADF306249B26BFCB",
+      "missing_material_requirement_or_null": "A workflow for planning code edits from unresolved pull-request comments and recording their resolution status.",
+      "rationale": "It applies tracked changes to DOCX documents, not pull-request feedback to source-code edits.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D11A84B0BA60C8E4",
+      "missing_material_requirement_or_null": "A pull-request review-comment workflow that plans exact code edits and tracks addressed comments.",
+      "rationale": "It performs GO/KEGG enrichment analysis rather than handling pull-request review feedback.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F4B69AA1F53FFF7A",
+      "missing_material_requirement_or_null": "A review-comment-driven plan that specifies exact code edits and marks each unresolved pull-request comment as addressed.",
+      "rationale": "It can investigate an existing codebase, which can inform edits, but it does not process pull-request comments or provide their requested resolution mapping.",
+      "source_anchor": "# Acquire Codebase Knowledge"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1217",
+  "batch_input_sha256": "db2767980603574e80ba8ce5edbf462712ad05c1b44b97283d7be3be95e37d30",
+  "blind_packet_id": "P-383E2E0ED92D5D1104",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "724bdc186389fe4201070769da0820deb95c973c478954dc3960a73e6b76cdea"
+}

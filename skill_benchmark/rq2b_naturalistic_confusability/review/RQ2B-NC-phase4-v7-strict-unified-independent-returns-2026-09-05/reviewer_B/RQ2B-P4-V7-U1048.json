@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5449E13E5CD61AD9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly analyzes rank changes between chart snapshots and specifies gainers, losers, entries, dropouts, scope, and reporting formats.",
+      "source_anchor": "# Market Movers Analysis"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6D154C1EF138977D",
+      "missing_material_requirement_or_null": "A mobile-app chart snapshot comparison that identifies chart-wide gainers, losers, entrants, dropouts, and breakout titles.",
+      "rationale": "It compares ranking snapshots and reports changes, but is limited to domain keyword SERP positions rather than app-chart movements.",
+      "source_anchor": "# Rank Tracker"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-897AB80736A2738D",
+      "missing_material_requirement_or_null": "A mobile-app chart snapshot comparison with a ranked movement table and interpretation.",
+      "rationale": "This writes behavior-pinning tests for legacy-code refactors, not chart-movement analysis.",
+      "source_anchor": "# Characterization Test Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C736282ADD4DBDFB",
+      "missing_material_requirement_or_null": "A mobile-app chart snapshot comparison with ranked changes, entries, exits, and interpretation.",
+      "rationale": "This surveys documented UI conventions before design work, not App Store chart snapshots.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E130823A700717A8",
+      "missing_material_requirement_or_null": "A focused comparison of the two supplied daily chart snapshots with a ranked change table and stated snapshot dates.",
+      "rationale": "It includes App Store chart movers, gainers, losers, entries, and exits, but is a broader market briefing rather than the requested two-snapshot comparison.",
+      "source_anchor": "## Chart Dynamics"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E2906A0B1399BD69",
+      "missing_material_requirement_or_null": "A chart-wide two-snapshot analysis covering the largest movers, new entrants, dropouts, and breakout titles.",
+      "rationale": "It monitors competitor chart positions and changes, but its watchlist focus does not provide the requested category-wide snapshot comparison.",
+      "source_anchor": "### Chart Positions"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EBF03FAC08DA411E",
+      "missing_material_requirement_or_null": "A mobile-app chart snapshot comparison with rank-change analysis and a ranked movement table.",
+      "rationale": "This selects AI models from benchmark leaderboards, not mobile-app chart movements.",
+      "source_anchor": "# HuggingFace Best Model Finder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EFB5416AB1F3AA04",
+      "missing_material_requirement_or_null": "A mobile-app chart snapshot comparison with rank changes, entries, exits, and interpretation.",
+      "rationale": "This optimizes webpage performance metrics, not App Store chart data.",
+      "source_anchor": "# Core Web Vitals optimization"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1048",
+  "batch_input_sha256": "11d2f9326b6b6e53884cf645497992e65cedb57db891fc9aee7034261526f6e4",
+  "blind_packet_id": "P-3402C435463A21D442",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f5bafff93bdc47e3d6f00dc99996b5e9e1e3ab933f670192919b861f5fcf0c7c"
+}
