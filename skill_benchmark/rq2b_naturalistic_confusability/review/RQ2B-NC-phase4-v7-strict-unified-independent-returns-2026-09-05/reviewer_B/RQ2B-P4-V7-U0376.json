@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0376",
+  "blind_packet_id": "P-709B535D514DBCB669",
+  "batch_input_sha256": "78fb9a335680932dd8277b5dcfab3087784caaa00e69d632f10aed92a20ee58f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-4F6E09BA9A87E5E0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Sprint retrospective facilitation does not create reusable service-agreement forms or define machine-populated variables.",
+      "missing_material_requirement_or_null": "A contract-template system with stable legal text and typed changing deal fields."
+    },
+    {
+      "candidate_token": "C-8157E04397EFC4EE",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Contract Review Skill",
+      "rationale": "It can review service agreements for completeness and identify contractual elements that should be stable or negotiated, but it does not create a reusable machine-populated template or a variable data model.",
+      "missing_material_requirement_or_null": "A formal template with defined variable fields and a mechanism to populate each agreement from customer and deal facts."
+    },
+    {
+      "candidate_token": "C-98F40C6A257EDE1A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# PLG Motion Designer",
+      "rationale": "This source designs self-serve product activation, not contract documents.",
+      "missing_material_requirement_or_null": "A reusable service-agreement template with stable boilerplate and controlled variables."
+    },
+    {
+      "candidate_token": "C-A0671F7211190BE5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# gsea",
+      "rationale": "Gene-set enrichment analysis is unrelated to contract-form creation.",
+      "missing_material_requirement_or_null": "Machine-populated service-agreement document templating."
+    },
+    {
+      "candidate_token": "C-A2A8430D2D0F5761",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Contract Template Skill",
+      "rationale": "It directly creates machine-readable Accord Project contract templates with stable TemplateMark boilerplate, explicitly modeled changing fields, optional clauses and logic, plus data-driven drafting for service agreements.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-D52DD553FA613FE7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Competitive Intel Monitor Agent",
+      "rationale": "Competitive-intelligence monitoring does not produce legal agreement templates.",
+      "missing_material_requirement_or_null": "A reusable service-agreement form with defined variables and stable boilerplate."
+    },
+    {
+      "candidate_token": "C-E960966CB3187EA5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Terraform Engineer",
+      "rationale": "Terraform modules and variables configure cloud infrastructure rather than a legally structured service-agreement document.",
+      "missing_material_requirement_or_null": "A machine-populated contract template with customer and deal field definitions."
+    },
+    {
+      "candidate_token": "C-E9849231F1A74668",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Press Release Writer",
+      "rationale": "The source creates announcement releases and boilerplate, not service contracts or dynamic agreement forms.",
+      "missing_material_requirement_or_null": "A reusable service-agreement template with explicit variable terms and machine population."
+    }
+  ],
+  "reviewer_output_sha256": "2af1fb19f93b4b4751907cacf381be35437e215ed015d6dd699f340b82fea4b9"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1198",
+  "blind_packet_id": "P-DE3961931D3CDCB3B2",
+  "batch_input_sha256": "71d47c7e65d8b90e7a2cba901aeb342840f9f607ce8a5f79388955696c90ee70",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2865C07488A9840B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Experiment Tracking",
+      "rationale": "It establishes reproducible run logging, a predeclared metric, same-held-out-test comparison, and promotion discipline, but it does not set up the requested bounded GPU training search loop with a fixed runtime and automatic keep/revert iteration.",
+      "missing_material_requirement_or_null": "An operational bounded loop that mutates the training repository, runs each change under the same fixed time budget, and retains only metric improvements."
+    },
+    {
+      "candidate_token": "C-2DF12AFEEA12508F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Sprint retrospective facilitation does not configure or run controlled language-model training experiments.",
+      "missing_material_requirement_or_null": "A fixed-harness, GPU-based training experiment loop with comparable validation results."
+    },
+    {
+      "candidate_token": "C-47D37E80C98173D9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Print Layout",
+      "rationale": "Commercial-print prepress preparation is unrelated to training-repository experimentation.",
+      "missing_material_requirement_or_null": "A bounded ML training loop with fixed runtime and validation metric."
+    },
+    {
+      "candidate_token": "C-548A4BD2315789E1",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# autoresearch",
+      "rationale": "It directly provides a Linux NVIDIA-GPU training-repository workflow with an immutable evaluation harness, fixed 300-second run budget, fixed val_bpb metric, train.py-only mutations, append-only results, and keep/revert discipline for a bounded experiment loop.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-9D939091C6BD42AA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Skill Autoresearch",
+      "rationale": "This source explicitly targets local SKILL.md and workflow-document ratcheting and routes GPU-bound training-repository experiments to autoresearch.",
+      "missing_material_requirement_or_null": "A GPU-bound language-model training loop over the training code with fixed runtime and validation harness."
+    },
+    {
+      "candidate_token": "C-ABA4303439D27605",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Market Movers Analysis",
+      "rationale": "App Store rank-movement analysis is unrelated to language-model training experiments.",
+      "missing_material_requirement_or_null": "A controlled GPU training experiment loop and fixed validation comparison process."
+    },
+    {
+      "candidate_token": "C-BD62CFF815193100",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Screening Rubric Builder",
+      "rationale": "Hiring-screening rubric design does not support model-training changes or evaluation under a fixed runtime harness.",
+      "missing_material_requirement_or_null": "A GPU-based language-model training loop with deterministic comparison conditions."
+    },
+    {
+      "candidate_token": "C-E2CF57DBC7636FC4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Local + Google Business Profile visibility",
+      "rationale": "Local search visibility and social-post workflow is unrelated to language-model training experiments.",
+      "missing_material_requirement_or_null": "A bounded ML training experiment workflow with fixed runtime and validation metric."
+    }
+  ],
+  "reviewer_output_sha256": "96191e174c45503bb7075adcf96e08fb193c36b15e461f3dbcdcbf6bdd9ae083"
+}
