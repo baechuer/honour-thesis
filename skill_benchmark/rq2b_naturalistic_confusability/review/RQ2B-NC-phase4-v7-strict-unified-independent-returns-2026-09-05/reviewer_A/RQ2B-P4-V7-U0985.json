@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-242FDE913CB1C3A8",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports building a Slack bot and may cover part of application implementation, but it does not provide the complete prompt lifecycle, production tracing, controlled-experiment, and evaluation-dataset workflow required.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-31A1BF7DBB4375C2",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill conducts a security prior-art survey, not LLM request tracing, prompt lifecycle management, controlled experiments, or evaluation datasets.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-561CED65A1566855",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill addresses mobile offline synchronization, not an LLM request, prompt-version, experiment, cost/latency, and evaluation-dataset workflow.",
+      "source_anchor": "# Mobile Offline Sync"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5E775288A7492490",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly covers tracing from development through production, prompt management, datasets and evaluations, production monitoring, CI/CD testing, and trace-level investigation of poor outputs.",
+      "source_anchor": "# LangSmith"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7E4DC030A17FEA13",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports Wix headless development, not LLM request tracing, prompt revisions, controlled experiments, or evaluation datasets.",
+      "source_anchor": "# Wix Headless Fast"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-99EF7ADAB1B3ECA8",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports AI application gateway operations and may address model routing or observability, but it does not provide the complete prompt revision, controlled-experiment, and reusable evaluation-dataset workflow required.",
+      "source_anchor": "# Vercel AI Gateway"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FA643C4B83978F3F",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill builds merger models, not LLM request tracing, prompt lifecycle management, controlled experiments, or evaluation datasets.",
+      "source_anchor": "## Environment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FD489815B5D61604",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill facilitates team retrospectives and action items, not LLM request tracing, prompt revision management, controlled experiments, or evaluation datasets.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0985",
+  "batch_input_sha256": "b1dbbe15344b5481910b3bb58d0e17b8f7823370d1dd9489872bf45c86dee5ab",
+  "blind_packet_id": "P-FAA373B51C402AF7C0",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "94e37c14780ba509ddce20a44a0793c2c4429e43bf3ca4b8da74a152a698f78e"
+}
