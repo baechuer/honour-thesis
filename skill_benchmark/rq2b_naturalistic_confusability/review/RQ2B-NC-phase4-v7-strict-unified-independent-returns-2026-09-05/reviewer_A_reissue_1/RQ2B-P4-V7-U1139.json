@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-103957E910EE138C","missing_material_requirement_or_null":"Does not address GitHub PR review threads or map them to concrete code/test changes and response text.","rationale":"This is an Atlassian project-tracking integration skill, not a PR review-comment resolution workflow.","source_anchor":"## Core Workflow"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-115C895A3FE77429","missing_material_requirement_or_null":"Provides general SDLC and code-review stages but does not map each unresolved GitHub review thread to concrete code/test changes and response text.","rationale":"It is a neighbouring software-development workflow with review and testing stages, but the requested comment-by-comment resolution deliverable is missing.","source_anchor":"### 10. Code Review"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-254A4EAAD985157D","missing_material_requirement_or_null":"Does not address GitHub PR review comments or provide code/test changes and response text for each thread.","rationale":"This skill is specifically for AWS Security Agent findings and remediation, outside the requested PR-comment resolution task.","source_anchor":"## Stage 4: Offer to remediate"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-597E86A079BD5336","missing_material_requirement_or_null":"Performs a fresh systematic code review rather than resolving existing review threads with thread-to-change mappings and response text.","rationale":"It is a plausible code-review route and produces findings, but the prompt explicitly prohibits a fresh review and requires resolution of already-unresolved comments.","source_anchor":"## Operating procedure"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-5DF2FCD36853BB35","missing_material_requirement_or_null":"Does not address GitHub PR review comments or code/test change mapping.","rationale":"This is a CapRover deployment and hosting skill, unrelated to PR review-comment resolution.","source_anchor":"## Instructions"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6E3461257222EBDF","missing_material_requirement_or_null":"Does not address GitHub PR review comments, code/test changes, or response text.","rationale":"This skill performs GO and KEGG enrichment analysis for gene-expression data and is unrelated to the requested task.","source_anchor":"## When To Use"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-8E46AA2ADBF743CA","missing_material_requirement_or_null":"Does not map unresolved PR review threads to implementation/test changes and response text.","rationale":"It defines broad secure-development policy controls rather than resolving specific GitHub review comments.","source_anchor":"### PR Review Checklist"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-ABA044957126D6D8","missing_material_requirement_or_null":"Focuses on running a broad or fresh automated PR review and does not provide a thread-by-thread mapping of existing unresolved comments to code/test changes and response text.","rationale":"It contains GitHub PR review and iteration mechanisms, but conflicts with the instruction not to perform a fresh review and lacks the requested unresolved-thread response workflow.","source_anchor":"### `/iterate <issue-id>` Protocol"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U1139",
+  "batch_input_sha256":"ca53e6670877f1ff44601459d51cd627b24b7b2289781256f80a4060d0f8e0c3",
+  "blind_packet_id":"P-6677A10E4F96C66AA4",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"e80f7008ea622b141e6d2959890c90efdfe65510b419b9d10197e68129e680c8"
+}

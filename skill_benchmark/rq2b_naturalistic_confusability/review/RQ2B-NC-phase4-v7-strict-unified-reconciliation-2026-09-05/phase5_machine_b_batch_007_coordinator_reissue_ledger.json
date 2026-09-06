@@ -1,0 +1,14 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_coordinator_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-007",
+  "claim_boundary": "Machine B only. Invalid coordinator original is preserved; reissue is restricted to its original sealed disagreement packet and frozen coordinator schema.",
+  "reissues": [
+    {
+      "coordinator_case_id": "C-A2D4B0A4D9B98A44",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-007/C-A2D4B0A4D9B98A44.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-007/coordinator_reissue_1/C-A2D4B0A4D9B98A44.json",
+      "error_category": "sealed_packet_binding_mismatch",
+      "status": "VALIDATED_REISSUE_1"
+    }
+  ]
+}
