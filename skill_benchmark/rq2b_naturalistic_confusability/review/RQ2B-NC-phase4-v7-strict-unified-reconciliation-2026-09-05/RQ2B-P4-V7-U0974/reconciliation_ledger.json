@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0974",
+  "blind_packet_id": "P-3F2D6F18D06B281EF6",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0FB63D855190C919",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# flux",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# flux"
+    },
+    {
+      "candidate_token": "C-28C8B67AC6D31816",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# livewire",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# livewire"
+    },
+    {
+      "candidate_token": "C-3522D43E3D4AB233",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Use",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "description"
+    },
+    {
+      "candidate_token": "C-7FFC85C6B68549F2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Secure Code Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Secure Code Review"
+    },
+    {
+      "candidate_token": "C-B3046A0DA075D142",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Playwright CLI Skill",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Playwright CLI Skill"
+    },
+    {
+      "candidate_token": "C-D5C5D5D6084D6EAA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sentry TanStack Start React SDK",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sentry TanStack Start React SDK"
+    },
+    {
+      "candidate_token": "C-E75AC9965A9B360A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Add MCP App Support to a Web App",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Add MCP App Support to a Web App"
+    },
+    {
+      "candidate_token": "C-F8F662573C4A5E3B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# blade-ui",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# blade-ui"
+    }
+  ],
+  "reviewer_A_return_sha256": "2f1984decd2106ee62880a7a05bdc8dd5df14514d79a7067d67ad96269219cb4",
+  "reviewer_B_return_sha256": "b1b2015d9c8d5d0ab91fb07f001b4dec929c357c28d0daad60957e3b09715a71",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

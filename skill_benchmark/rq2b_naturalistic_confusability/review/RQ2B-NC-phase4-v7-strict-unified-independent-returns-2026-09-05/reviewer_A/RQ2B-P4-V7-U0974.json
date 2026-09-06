@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0FB63D855190C919",
+      "missing_material_requirement_or_null": "application stack compatibility and complete account-settings implementation",
+      "rationale": "It covers Flux components and form primitives, but is dispatched for a specific Livewire/Flux stack and does not alone define the full page handler and layout integration.",
+      "source_anchor": "# flux"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-28C8B67AC6D31816",
+      "missing_material_requirement_or_null": "server-side form implementation and stack compatibility",
+      "rationale": "It covers Livewire reactive state and view separation, but the prompt does not establish Livewire and the skill does not alone specify the complete account-settings page workflow.",
+      "source_anchor": "# livewire"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3522D43E3D4AB233",
+      "missing_material_requirement_or_null": "server-rendered account-settings page implementation",
+      "rationale": "It performs GO/KEGG enrichment and dot-chart generation, unrelated to web page construction.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7FFC85C6B68549F2",
+      "missing_material_requirement_or_null": "page construction and visual verification",
+      "rationale": "It can review security risks in submitted account data, but does not build the page, reusable partials, layout, or rendered verification.",
+      "source_anchor": "# Secure Code Review"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B3046A0DA075D142",
+      "missing_material_requirement_or_null": "page implementation and server-side validation",
+      "rationale": "It can verify the rendered result through browser automation, but does not implement the server-rendered page or form handler.",
+      "source_anchor": "# Playwright CLI Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D5C5D5D6084D6EAA",
+      "missing_material_requirement_or_null": "server-rendered account-settings page implementation",
+      "rationale": "It configures Sentry observability for TanStack Start rather than building account settings.",
+      "source_anchor": "# Sentry TanStack Start React SDK"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E75AC9965A9B360A",
+      "missing_material_requirement_or_null": "account-settings page rather than MCP conversion",
+      "rationale": "It converts an existing web app to an MCP App, which is outside the requested server-rendered page and form workflow.",
+      "source_anchor": "# Add MCP App Support to a Web App"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F8F662573C4A5E3B",
+      "missing_material_requirement_or_null": "application stack compatibility and server-side account form implementation",
+      "rationale": "It covers Blade views, components, partials, layouts and view logic, but the prompt does not establish Blade and it does not by itself define the complete submitted-form validation workflow.",
+      "source_anchor": "# blade-ui"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0974",
+  "batch_input_sha256": "c81b61748be9f3b798e19a87573ec4803e86144dce4fb795d436d11c101b742c",
+  "blind_packet_id": "P-3F2D6F18D06B281EF6",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "b1b31e3bf494475defd53440413d783b5b25128d1faa18b92271e63bb21e8f80"
+}
