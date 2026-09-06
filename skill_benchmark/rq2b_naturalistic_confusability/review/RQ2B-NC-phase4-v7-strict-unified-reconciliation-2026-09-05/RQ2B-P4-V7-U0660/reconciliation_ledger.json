@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0660",
+  "blind_packet_id": "P-5A8E2FC66B77700159",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-5E167823A9C45D2C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Incident response team of agents",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Incident response team of agents"
+    },
+    {
+      "candidate_token": "C-629898C68C9D363F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# SaaS Production Engineering",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "### Incident response"
+    },
+    {
+      "candidate_token": "C-7B5372A227F08E15",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Velociraptor Incident Response",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Velociraptor Incident Response"
+    },
+    {
+      "candidate_token": "C-7D88779BB32A675C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Alerting & On-Call",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "### Alertmanager Configuration"
+    },
+    {
+      "candidate_token": "C-879ECF7AD825A3D9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Read External Files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## Usage"
+    },
+    {
+      "candidate_token": "C-A37439C9E34EDECF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Opsgenie",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "### Task E: Integration with Prometheus Alertmanager"
+    },
+    {
+      "candidate_token": "C-CDDD5FFA314E247A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-D8DCC4BAC7955BDA",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# PagerDuty",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "### Task B: Send Alerts via Events API"
+    }
+  ],
+  "reviewer_A_return_sha256": "15116f8fc9d213dbb3ec6e035898716a8d63b7fdd198f59b9255604965fe8527",
+  "reviewer_B_return_sha256": "ad9316aa8bb7b8541a6e0165f654861d72f7265380aed9fe91481acba2882c23",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
