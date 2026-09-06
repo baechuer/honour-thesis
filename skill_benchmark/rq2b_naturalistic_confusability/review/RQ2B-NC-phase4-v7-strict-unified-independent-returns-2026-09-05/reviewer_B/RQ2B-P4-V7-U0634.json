@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-05326DD5FA0ED89B",
+      "missing_material_requirement_or_null": "An Atlassian MCP workflow for Jira filtering and custom-field updates plus Confluence search and drafting.",
+      "rationale": "This repository-scaffolding procedure creates standard GitHub repository files, not an issue-tracker/wiki connection or its requested operations.",
+      "source_anchor": "# Repo Scaffold"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E878E2FAB746FA1",
+      "missing_material_requirement_or_null": "An Atlassian MCP workflow for Jira filtering and custom-field updates plus Confluence search and drafting.",
+      "rationale": "This is a security prior-art research method and does not provide the requested issue-tracker or team-wiki workflow.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-60444CBD303E7B72",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides MCP-server setup and authentication, JQL/CQL design with a maxResults=1 validation probe, ticket updates including custom fields, and Confluence search/edit workflows.",
+      "source_anchor": "Core Workflow"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7A0C350507EAD9C3",
+      "missing_material_requirement_or_null": "A documented MCP protocol connection and custom-field update workflow.",
+      "rationale": "It supplies Jira JQL and Confluence search operations through wrappers, but the visible procedure does not provide the requested MCP connection or a custom-field update operation.",
+      "source_anchor": "Jira Operations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B9F7B1FA030DA3FC",
+      "missing_material_requirement_or_null": "An Atlassian MCP workflow for Jira filtering and custom-field updates plus Confluence search and drafting.",
+      "rationale": "This skill analyzes post-earnings results and has no route for the requested issue-tracker or wiki work.",
+      "source_anchor": "# Earnings Recap Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CD3BE0E4136A8887",
+      "missing_material_requirement_or_null": "An Atlassian MCP workflow for Jira filtering and custom-field updates plus Confluence search and drafting.",
+      "rationale": "This is a read-only Sentry observability skill, not a workflow for Jira-style ticket mutation or team-wiki search and drafting.",
+      "source_anchor": "# Sentry (Read-only Observability)"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DA6E351BF3869FD5",
+      "missing_material_requirement_or_null": "An MCP protocol connection and a documented custom-field update operation.",
+      "rationale": "It can search and update Jira and Confluence via REST, but explicitly operates without an MCP server and does not visibly specify custom-field updates.",
+      "source_anchor": "Portable Jira & Confluence integration via REST APIs."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F6D07046C340B5C8",
+      "missing_material_requirement_or_null": "An Atlassian MCP workflow for Jira filtering and custom-field updates plus Confluence search and drafting.",
+      "rationale": "This Airtable product-operations skill may integrate with trackers, but it does not provide the requested Atlassian connection and direct issue/wiki workflow.",
+      "source_anchor": "# Product and roadmap management"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0634",
+  "batch_input_sha256": "93564f6c76fd14e1796cf623fea4137f2aa4b4b1a3fef98969764762623b419a",
+  "blind_packet_id": "P-D67E6EA493DC19B1BC",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "83607ab7cabdddb3e33ce523ddd3e84961faa398af5420800fe778808b06306e"
+}

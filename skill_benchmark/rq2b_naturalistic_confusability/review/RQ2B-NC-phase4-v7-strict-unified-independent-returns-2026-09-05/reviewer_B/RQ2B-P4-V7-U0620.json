@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0348E199F04FF393",
+      "missing_material_requirement_or_null": "A customer-impact API monitoring plan with alert signals, ownership, and response actions.",
+      "rationale": "This is an application-localization workflow, not a route for defining service-health monitoring.",
+      "source_anchor": "Localize an app with Multilocale"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0F41176301B8BCB3",
+      "missing_material_requirement_or_null": "A customer-impact API monitoring plan with alert signals, ownership, and response actions.",
+      "rationale": "This addresses Jetpack Compose test interactions rather than API monitoring or incident response.",
+      "source_anchor": "Use this skill to drive Jetpack Compose UI"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21C82FE937AEF2EE",
+      "missing_material_requirement_or_null": "An alert-and-ownership plan for customer-impacting checkout failures with a responder action path.",
+      "rationale": "It can frame measurement-led latency or throughput work, but its central route is bottleneck tuning rather than defining the required monitoring and alert response plan.",
+      "source_anchor": "Route performance work"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-24BA1AF9ECD8CB76",
+      "missing_material_requirement_or_null": "A customer-impact API monitoring plan with alert signals, ownership, and response actions.",
+      "rationale": "A sprint-retrospective facilitation process does not establish service alerts or operational response coverage.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-94576480F1D370DC",
+      "missing_material_requirement_or_null": "A customer-impact API monitoring plan with alert signals, ownership, and response actions.",
+      "rationale": "Surveying published user-research prior art is not a practical route to monitoring a launched checkout API.",
+      "source_anchor": "Use when surveying the PUBLISHED user-research evidence"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B4BCDEE160FEF351",
+      "missing_material_requirement_or_null": "Service-specific customer-impact signals and operational alert/runbook design for a checkout API.",
+      "rationale": "Its signals, thresholds, cadence, and escalation structure is adjacent, but it is scoped to finance and accounting operations rather than API service health.",
+      "source_anchor": "Finance Ops Monitoring Plan Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B77BED04B60DE5DB",
+      "missing_material_requirement_or_null": "A customer-impact API monitoring plan with alert signals, ownership, and response actions.",
+      "rationale": "Characterization testing protects legacy behavior before refactoring; it does not design production monitoring or alerts.",
+      "source_anchor": "Characterization Test Writer"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-C951517EF0FFFAED",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly routes service-reliability observability work and specifies customer-impact signals, alert policy, ownership, dashboards, and first response-oriented implementation slices.",
+      "source_anchor": "Monitoring & Observability"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0620",
+  "batch_input_sha256": "23af89c2a81cac562908d6963d48f554d6acf20692e4e5ba82f330e4d24a300f",
+  "blind_packet_id": "P-673D9340FEAB31F926",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "2ddc1edbaf20fe81d67ba9c0de4909555e787cece2ce1cf025c49e96f89214d8"
+}

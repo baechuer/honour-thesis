@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1460CFAF118038D4",
+      "missing_material_requirement_or_null": "Validated table shapes, fine-grained subscriptions, and a restart/multi-device convergence test matrix.",
+      "rationale": "It specifies durable offline persistence, sync conflict rules, and retry behavior, but not the requested local table model and view-level subscription design or test matrix.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5C0EC83C6EE5794B",
+      "missing_material_requirement_or_null": "Validated local table shapes, explicit conflict semantics, and a restart/multi-device convergence test matrix.",
+      "rationale": "It provides local-first Postgres shape sync and an offline write example, but leaves the requested data-model validation, conflict policy, and acceptance testing materially unspecified.",
+      "source_anchor": "### Offline Support"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6256A2646F50FC57",
+      "missing_material_requirement_or_null": "A client-side data-model architecture with local persistence, subscriptions, multi-device conflict semantics, and convergence tests.",
+      "rationale": "This is an experiment-validity audit workflow rather than a route to the requested local-first application architecture.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B81226D4A5BC7257",
+      "missing_material_requirement_or_null": "A durable local data model with synchronization conflict semantics and restart/multi-device convergence acceptance tests.",
+      "rationale": "Its rerender and performance guidance can inform view updates, but it does not supply the central local-first data and synchronization architecture.",
+      "source_anchor": "## Quick Reference"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BC87C84B322711D1",
+      "missing_material_requirement_or_null": "A client-side data-model architecture with local persistence, subscriptions, multi-device conflict semantics, and convergence tests.",
+      "rationale": "This source creates legal smart-contract templates and does not provide a route for the requested desktop planning data architecture.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C91F02485569351C",
+      "missing_material_requirement_or_null": "A 50,000-item scaling plan and a restart/multi-device convergence test matrix with acceptance criteria.",
+      "rationale": "It covers typed local tables, fine-grained reactive subscriptions, persistence, and CRDT synchronization, but does not specify the requested scale validation or convergence test-and-acceptance artifact.",
+      "source_anchor": "## Core Capabilities"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DAA9462ACF7E67FB",
+      "missing_material_requirement_or_null": "A client-side data-model architecture with local persistence, subscriptions, multi-device conflict semantics, and convergence tests.",
+      "rationale": "This source surveys documented visual and interaction conventions, not application data modeling or device synchronization.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DC54E8DC29CB5597",
+      "missing_material_requirement_or_null": "A client-side data-model architecture with local persistence, subscriptions, multi-device conflict semantics, and convergence tests.",
+      "rationale": "This source engineers CI/CD workflows rather than a local-first desktop application data architecture.",
+      "source_anchor": "## Overview"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0945",
+  "batch_input_sha256": "4452423542da17e8524a69148be827068b7fd55f4f100d73b507c728c32d7809",
+  "blind_packet_id": "P-D3DB429BE6CECB476B",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "72d8ae9f698689b016cfad8cba0effbfae23b53864aefa35c8808a983b7f84df"
+}

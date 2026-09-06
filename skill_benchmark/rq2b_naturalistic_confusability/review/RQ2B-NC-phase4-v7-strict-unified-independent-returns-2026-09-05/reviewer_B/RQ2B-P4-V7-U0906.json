@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-00EA1E85E1851333",
+      "missing_material_requirement_or_null": "A review procedure and report template covering the proposed change, supporting configuration, example settings, prioritization, and approval-context checks.",
+      "rationale": "It provides a route to code or PR review with Codex, but it does not establish the requested prioritized findings report across the proposed change, configuration, and example settings.",
+      "source_anchor": "## PR Reviews"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-034FDE8A4746EAC2",
+      "missing_material_requirement_or_null": "A code and configuration review workflow that identifies, prioritizes, and remediates security, reliability, and maintainability risks.",
+      "rationale": "It describes connecting to MCP servers rather than reviewing a proposed change and its supporting configuration and examples.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-535343B0D5D54FB9",
+      "missing_material_requirement_or_null": "A review workflow for a proposed change, configuration, and example settings with prioritized risk findings and remediation recommendations.",
+      "rationale": "It is implementation guidance for Ionic applications, not a review method for the requested change and supporting materials.",
+      "source_anchor": "# Ionic — Cross-Platform Apps with Web Technologies"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-760A6403E33AD81E",
+      "missing_material_requirement_or_null": "A review workflow for a proposed change, configuration, and example settings with prioritized risk findings and remediation recommendations.",
+      "rationale": "It is a GSVA pathway-analysis workflow and does not address code or configuration review.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-809F89851C34BD77",
+      "missing_material_requirement_or_null": "An integrated review rubric and prioritized report format that explicitly covers supporting configuration, example settings, security, reliability, maintainability, and remaining approval checks.",
+      "rationale": "It supplies a way to delegate PR review, but it lacks a defined integrated review and reporting method for the configuration and example-settings scope requested.",
+      "source_anchor": "## PR Review Pattern"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8926AFA0C762D06D",
+      "missing_material_requirement_or_null": "A first-pass review method that discovers and prioritizes risks in the proposed change, supporting configuration, and example settings without requiring a pre-existing hack-review report.",
+      "rationale": "It helps consume an existing hack-review report, but the requested task requires an initial review and it does not establish coverage of the supplied configuration and examples.",
+      "source_anchor": "## Skill Boundary"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A81E6E6FDDA9E9E4",
+      "missing_material_requirement_or_null": "A general change-review method covering first-party code, supporting configuration, and example settings in addition to dependency risks.",
+      "rationale": "It provides prioritized security findings and remediation for dependency audits, but that narrower dependency scope does not cover the requested whole-change reliability and maintainability review.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BA1AE4F8C8E63A57",
+      "missing_material_requirement_or_null": "An integrated review rubric and prioritized report format for code, supporting configuration, example settings, security, reliability, maintainability, and approval-context checks.",
+      "rationale": "It can delegate a PR review, but it does not define the requested combined review and prioritized findings-report workflow.",
+      "source_anchor": "## PR Review Workflow"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0906",
+  "batch_input_sha256": "3bb0df606490687928b112246a53cee00c118c7978cba85b44493dd0e7bf68ed",
+  "blind_packet_id": "P-2E2BB41DA8F60AB0D8",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "487f01e3471f52ae56708b090dffddc1aa04c8d75ba26984acb8e85071f9c081"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-00EA1E85E1851333",
+      "missing_material_requirement_or_null": "An explicit non-modifying review workflow that covers security, reliability, maintainability, prioritized findings, remediation, and approval checks.",
+      "rationale": "It can delegate PR review work, but the source supplies only general CLI orchestration rather than the requested end-to-end review/report method.",
+      "source_anchor": "## PR Reviews"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-034FDE8A4746EAC2",
+      "missing_material_requirement_or_null": "A workflow for reviewing the proposed change and its configuration, then producing prioritized security, reliability, and maintainability findings.",
+      "rationale": "It is a general MCP-server access hub and provides no review or findings-report procedure.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-535343B0D5D54FB9",
+      "missing_material_requirement_or_null": "A non-modifying review workflow and prioritized remediation report for a proposed change and configuration.",
+      "rationale": "It is for building Ionic applications, not assessing an existing proposed change or configuration.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-760A6403E33AD81E",
+      "missing_material_requirement_or_null": "A workflow for security, reliability, and maintainability review of a proposed change and its configuration.",
+      "rationale": "It is limited to bulk-expression GSVA or ssGSEA analysis and heatmap generation, outside the requested review task.",
+      "source_anchor": "## When Not to Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-809F89851C34BD77",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It supports non-interactive review prompts and PR review, so it can inspect the proposed change and supporting configuration without editing and return the requested findings and recommendations.",
+      "source_anchor": "## PR Reviews"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8926AFA0C762D06D",
+      "missing_material_requirement_or_null": "A workflow that performs the requested initial proposed-change review and produces its findings report without requiring a pre-existing hack-review report.",
+      "rationale": "It consumes an existing hack-review report and is oriented to resolving its findings, not conducting the requested review.",
+      "source_anchor": "## Skill Boundary"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A81E6E6FDDA9E9E4",
+      "missing_material_requirement_or_null": "Coverage of reliability and maintainability for the whole proposed change and its supporting configuration, beyond third-party dependency risk.",
+      "rationale": "Its findings-report format and security focus are useful, but its procedure is restricted to dependency and supply-chain risk rather than the full requested review.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BA1AE4F8C8E63A57",
+      "missing_material_requirement_or_null": "An explicit non-modifying review procedure that covers security, reliability, maintainability, prioritized remediation, and pre-approval checks.",
+      "rationale": "It can delegate PR review and report risks, but the source provides generic agent orchestration rather than the requested complete review framework.",
+      "source_anchor": "## PR Review Workflow"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0906",
+  "batch_input_sha256": "3bb0df606490687928b112246a53cee00c118c7978cba85b44493dd0e7bf68ed",
+  "blind_packet_id": "P-2E2BB41DA8F60AB0D8",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "771ca18c50dee33ba489e2b6592baa244d49190f866f09a6190e633c617f9e2a"
+}
