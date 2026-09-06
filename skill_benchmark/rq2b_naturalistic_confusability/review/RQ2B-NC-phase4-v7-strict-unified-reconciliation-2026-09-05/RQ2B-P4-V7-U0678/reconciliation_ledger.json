@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0678",
+  "blind_packet_id": "P-18D5526E458AA54E12",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0B525FF07355650F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Model Evaluation Report",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Produces a rigorous, honest evaluation report for an ML model"
+    },
+    {
+      "candidate_token": "C-2A146831A53CAA10",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Ensembl Genome Database",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Ensembl REST API for gene/transcript/variant annotations"
+    },
+    {
+      "candidate_token": "C-3ACDDBC39B7644EB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Lead Routing",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Intelligent lead assignment and routing"
+    },
+    {
+      "candidate_token": "C-555F19E510D9DBE9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# A/B Test Analyzer",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Analyzes an A/B experiment to a defensible verdict"
+    },
+    {
+      "candidate_token": "C-7A238260F18350E6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Data Drift Monitor",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Designs a production drift-monitoring plan for ML systems"
+    },
+    {
+      "candidate_token": "C-AE03C503C5306931",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# LLM Evaluation",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT use for classical ML model reporting"
+    },
+    {
+      "candidate_token": "C-CA741E36C7CB3C2D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Specify Adaptive Behaviour",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Specify adaptive behaviour for an interface"
+    },
+    {
+      "candidate_token": "C-F616B9A9C950C54F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Sprint Retro Facilitator"
+    }
+  ],
+  "reviewer_A_return_sha256": "db6d6ec99866ea0f2290fa61e478ae05970861662c3198a3f79bc911d2a42646",
+  "reviewer_B_return_sha256": "c0755cbb0f09e4be81acbf83da8b297f6b3e81fdb4dc5ca54991d49b01ed5aeb",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
