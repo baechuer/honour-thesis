@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0586",
+  "blind_packet_id": "P-291A9C6A8227405515",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-5F24B295F3AD6D42",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to read external files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "candidate_token": "C-683EF95D4C5129BB",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# libFuzzer",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "coverage-guided fuzzer built into LLVM"
+    },
+    {
+      "candidate_token": "C-6EABAC629F1937F4",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Atheris",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Sets up and runs Atheris, the coverage-guided Python fuzzer"
+    },
+    {
+      "candidate_token": "C-86E719BF9A57B8C6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Usage",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Validate, test, and debug regular expressions"
+    },
+    {
+      "candidate_token": "C-945394C965F68146",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Ruzzy",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Sets up and runs Ruzzy"
+    },
+    {
+      "candidate_token": "C-A657CEB82F2D7C97",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Web Performance",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Diagnoses and fixes Core Web Vitals"
+    },
+    {
+      "candidate_token": "C-C34DB88DB955CEBB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-D17622F6CEEE9C56",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Debugging and Error Recovery",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Guides systematic root-cause debugging"
+    }
+  ],
+  "reviewer_A_return_sha256": "21b5c214507145179cf58e9364374c2c1e5b6bdc890eefcdb182e663103a13c1",
+  "reviewer_B_return_sha256": "6b573e29bba28094204258a442e207e57a93ce9ccc253e085e6ce8c320de9912",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
