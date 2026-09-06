@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0754",
+  "blind_packet_id": "P-820C4C93F4D62279CC",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-02B9571005545184",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ENCODE Database",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "TF ChIP-seq, ATAC-seq/DNase-seq peaks, histone marks, and RNA-seq"
+    },
+    {
+      "candidate_token": "C-10444ADF384C9DAF",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# RegulomeDB Database",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "retrieve overlapping evidence (TF binding, histone marks, DNase peaks, footprints, motifs, eQTLs, chromatin state)"
+    },
+    {
+      "candidate_token": "C-7A012BF6445AE682",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Receiving Thermo Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Consume a `thermo-review` Markdown report"
+    },
+    {
+      "candidate_token": "C-824238334E71D2FF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# GSVA Analysis And Visualization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Use this skill to run GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "candidate_token": "C-8CD3B17D588E77D1",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Clinical Summary",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Produces structured, faithful clinical summaries"
+    },
+    {
+      "candidate_token": "C-A848E08E1E323A98",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# 🧬 GWAS Catalog Region Fetch",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Fetch a region of GWAS summary statistics"
+    },
+    {
+      "candidate_token": "C-AAD346F387CCBEB3",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ReMap Database",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Retrieve TF peaks overlapping a region"
+    },
+    {
+      "candidate_token": "C-E322086A6523D968",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# 🧬 eQTL Catalogue Region Fetch",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Fetch a region of cis-eQTL summary statistics"
+    }
+  ],
+  "reviewer_A_return_sha256": "e9d90eb7d915459253a6a9268a377dd1421620b84779f8090fc9cd5dfd060fd1",
+  "reviewer_B_return_sha256": "a24b57646ed6fccef60ed8b1b9a0d05aa8e066798c8555fe60b967c410f8f238",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
