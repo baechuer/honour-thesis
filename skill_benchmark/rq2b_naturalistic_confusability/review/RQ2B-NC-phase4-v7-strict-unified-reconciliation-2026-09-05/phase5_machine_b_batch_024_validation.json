@@ -1,0 +1,60 @@
+{
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-024",
+  "manifest": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2_fresh_v20/machine_b_manifest.jsonl",
+  "manifest_lf_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+  "groups": [
+    "RQ2B-P4-V7-U1004",
+    "RQ2B-P4-V7-U1120",
+    "RQ2B-P4-V7-U1139",
+    "RQ2B-P4-V7-U0801"
+  ],
+  "current_execution_state": {
+    "RQ2B-P4-V7-U1004": "UNSTARTED",
+    "RQ2B-P4-V7-U1120": "UNSTARTED",
+    "RQ2B-P4-V7-U1139": "UNSTARTED",
+    "RQ2B-P4-V7-U0801": "UNSTARTED"
+  },
+  "source_disjointness": {
+    "pairwise_source_overlap_count": 0,
+    "status": "PASS"
+  },
+  "selected_returns": {
+    "RQ2B-P4-V7-U1004": {
+      "A": "reviewer_A/RQ2B-P4-V7-U1004.reissue-01.json",
+      "B": "reviewer_B/RQ2B-P4-V7-U1004.json"
+    },
+    "RQ2B-P4-V7-U1120": {
+      "A": "reviewer_A/RQ2B-P4-V7-U1120.reissue-01.json",
+      "B": "reviewer_B/RQ2B-P4-V7-U1120.json"
+    },
+    "RQ2B-P4-V7-U1139": {
+      "A": "reviewer_A/RQ2B-P4-V7-U1139.json",
+      "B": "reviewer_B/RQ2B-P4-V7-U1139.json"
+    },
+    "RQ2B-P4-V7-U0801": {
+      "A": "reviewer_A/RQ2B-P4-V7-U0801.reissue-01.json",
+      "B": "reviewer_B/RQ2B-P4-V7-U0801.json"
+    }
+  },
+  "checks": {
+    "packet_hash": "PASS",
+    "schema": "PASS",
+    "blindness": "PASS",
+    "ab_completeness": "PASS",
+    "return_validation": "PASS",
+    "selected_reissue_returns": "PASS",
+    "coordinator_validation": "PASS"
+  },
+  "selected_return_count": 8,
+  "coordinator_case_count": 6,
+  "coordinator_tokens": [
+    "C-254A4EAAD985157D",
+    "C-4E1813FF61D4150C",
+    "C-597E86A079BD5336",
+    "C-8E46AA2ADBF743CA",
+    "C-ABA044957126D6D8",
+    "C-D5B3AE1D6DB043E4"
+  ],
+  "fully_acceptable_assessment_signals": 4,
+  "validation": "PASS"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4E1813FF61D4150C",
+      "missing_material_requirement_or_null": "A repository-analysis procedure that explicitly maps installed runtime, startup/configuration, request flow, data loading, asynchronous behavior, caching, and test gaps rather than reviewing a proposed change.",
+      "rationale": "It gives an evidence-first review process and mentions config, auth, and missing validation, but it is centered on PR/diff review rather than the requested end-to-end server-application analysis.",
+      "source_anchor": "## When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-566D009E43A802ED",
+      "missing_material_requirement_or_null": "A server-side web-application analysis procedure covering runtime, boot/configuration, request authorization, data queries, asynchronous side effects, caching, and test gaps from repository evidence.",
+      "rationale": "This is a published user-research literature-survey workflow, not a procedure for analyzing a web application's repository and runtime behavior.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-929A664CF7090D21",
+      "missing_material_requirement_or_null": "Explicit treatment of source-versus-runtime configuration and caching differences, plus a fuller test-gap analysis procedure.",
+      "rationale": "It directly covers Node/Express runtime, boot, middleware/auth flow, data access, async behavior, and risks, but does not explicitly map caching/source-runtime divergence or give a substantive testing workflow.",
+      "source_anchor": "### 2. Analyze app boot and middleware registration"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9C78DC58D0F8EE90",
+      "missing_material_requirement_or_null": "Explicit cache/source-runtime comparison and a defined test-gap assessment covering the requested reliability-release concerns.",
+      "rationale": "It traces Symfony boot, configuration, request/security flow, Doctrine, and Messenger, but caching/runtime divergence and test gaps are not developed as required analysis outputs.",
+      "source_anchor": "### 2. Analyze kernel and container boot"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-9E6FDC5D23ADD129",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It covers version/runtime, boot and configuration caching, middleware and authorization flow, Eloquent/query risks, events/observers/queues and other async side effects, infrastructure cache behavior, and test posture with evidence-based next steps.",
+      "source_anchor": "### 2. Analyze boot and configuration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B5842CEAEEF731EC",
+      "missing_material_requirement_or_null": "A repository-analysis procedure for server runtime and reliability behavior rather than an open-source repository documentation and community-files setup workflow.",
+      "rationale": "It prepares public repository documentation, templates, and metadata; it does not analyze application execution, authorization, data, async behavior, or reliability risks.",
+      "source_anchor": "# OSS Ready"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BC8D5F0B6BDAE95F",
+      "missing_material_requirement_or_null": "A server-side web-application reliability analysis workflow instead of a React/React Native feature porting workflow for native iOS.",
+      "rationale": "It is specifically for translating React features into Swift/iOS implementations and does not perform the requested server repository analysis.",
+      "source_anchor": "# React to iOS: Feature Parity Implementation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D5B3AE1D6DB043E4",
+      "missing_material_requirement_or_null": "A repository-evidence reliability analysis procedure instead of an active live-target penetration-testing workflow.",
+      "rationale": "It orchestrates authorized AWS live-application penetration tests, not analysis of server source, runtime configuration, data behavior, asynchronous side effects, and test gaps.",
+      "source_anchor": "# AWS Security Agent — Penetration Test"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1120",
+  "batch_input_sha256": "f730bcdace033c7c5f3d41fd338532c118750bbf4b35d5d3c199dd324511424e",
+  "blind_packet_id": "P-FCF0D9973916285222",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "85df2c7b14d26562839cc45def0732279961351dc3156d102a43cfd23bb71076"
+}

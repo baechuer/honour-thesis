@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-103957E910EE138C",
+      "missing_material_requirement_or_null": "A thread-by-thread GitHub-comment resolution workflow mapping each unresolved comment to code changes, test changes, and a proposed response without a fresh review.",
+      "rationale": "Atlassian MCP setup and Jira/Confluence operations do not provide a workflow for resolving GitHub review threads or drafting replies.",
+      "source_anchor": "# Atlassian MCP Expert"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-115C895A3FE77429",
+      "missing_material_requirement_or_null": "An explicit per-thread GitHub review-comment mapping from each unresolved comment to code/test changes and response text, without initiating a new review.",
+      "rationale": "It says the developer addresses review findings, but supplies no thread-level resolution mapping, test-change mapping, or reply text and centers a full delivery pipeline.",
+      "source_anchor": "### 10. Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-254A4EAAD985157D",
+      "missing_material_requirement_or_null": "A GitHub PR review-comment resolution workflow mapping each unresolved thread to code changes, tests, and response text without a fresh review.",
+      "rationale": "This is an AWS security-findings discovery and remediation workflow, not a process for resolving GitHub PR review threads.",
+      "source_anchor": "# Security Agent Remediation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-597E86A079BD5336",
+      "missing_material_requirement_or_null": "A thread-by-thread response workflow that maps existing unresolved GitHub review comments to implementation and test changes without conducting a new review.",
+      "rationale": "It instructs a fresh multi-pass code review and report, which conflicts with the request to address existing threads rather than review from scratch.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5DF2FCD36853BB35",
+      "missing_material_requirement_or_null": "A GitHub PR review-comment resolution workflow with per-thread code/test mappings and response text.",
+      "rationale": "CapRover installation and deployment guidance does not address GitHub PR review comments or their resolution.",
+      "source_anchor": "# CapRover — Self-Hosted PaaS with One-Click Apps"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6E3461257222EBDF",
+      "missing_material_requirement_or_null": "A GitHub PR review-comment resolution workflow with per-thread code/test mappings and response text.",
+      "rationale": "GO/KEGG enrichment analysis instructions are unrelated to PR review-thread resolution.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8E46AA2ADBF743CA",
+      "missing_material_requirement_or_null": "A per-thread GitHub review-comment resolution process that maps comments to code/test changes and reply text without a fresh review.",
+      "rationale": "The policy supplies security compliance checks, not a process for resolving existing review threads and communicating responses.",
+      "source_anchor": "## Policy Compliance Verification"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ABA044957126D6D8",
+      "missing_material_requirement_or_null": "A GitHub PR review-comment resolution workflow mapping each existing unresolved thread to code/test changes and a response, without a new review.",
+      "rationale": "The skill launches a new multi-lens PR review and synthesizes findings, contrary to the request not to perform a fresh review.",
+      "source_anchor": "## HIGH-LEVEL WORKFLOW"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1139",
+  "batch_input_sha256": "ca53e6670877f1ff44601459d51cd627b24b7b2289781256f80a4060d0f8e0c3",
+  "blind_packet_id": "P-6677A10E4F96C66AA4",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "936b817f78747b17eaa7e6aa35a02fce4deba3077d5127b6c18b007ad1f9afb0"
+}
