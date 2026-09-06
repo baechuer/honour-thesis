@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-046C3A8F3FC2369397",
+  "candidate_token": "C-991C48EB1A627A13",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "fresh_source_render_sha256": "3d21a415306f1b31eb4e53e62f7aefb15688cf7e42bf9d87e6bc3ab3a4d4ffbb",
+  "rationale": "The source offers broad PostgreSQL migration and index guidance, but it does not contain the Django-specific two-step implementation for concurrent index creation across existing range partitions, parent-model registration, rollback, or the required fake-before-maintenance deployment plan.",
+  "reviewer_a_return_sha256": "9649c97a2f05ecd2d24a6b55f30300506de9dee626a5dee5edf77ce6f1f8ebe0",
+  "reviewer_b_return_sha256": "38f3f2e4c1cc898bbd446d49597ce7061266d66db6c525d8ae44c9a7494281b9",
+  "source_anchor": "# PostgreSQL Migrations Skill",
+  "coordinator_output_sha256": "36028cf923d5f36dff3a3afddf5937b84ebbcc5443058d9c7a73ac5a80010fed"
+}

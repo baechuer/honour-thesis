@@ -1,0 +1,13 @@
+{
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-028",
+  "manifest_lf_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+  "groups": ["RQ2B-P4-V7-U0476", "RQ2B-P4-V7-U1056", "RQ2B-P4-V7-U0905", "RQ2B-P4-V7-U1101"],
+  "current_execution_state": {"RQ2B-P4-V7-U0476": "UNSTARTED", "RQ2B-P4-V7-U1056": "UNSTARTED", "RQ2B-P4-V7-U0905": "UNSTARTED", "RQ2B-P4-V7-U1101": "UNSTARTED"},
+  "source_disjointness": {"pairwise_source_overlap_count": 0, "status": "PASS"},
+  "checks": {"packet_hash": "PASS", "schema": "PASS", "blindness": "PASS", "ab_completeness": "PASS", "return_validation": "PASS", "coordinator_validation": "PASS"},
+  "selected_return_count": 8,
+  "coordinator_case_count": 8,
+  "coordinator_tokens": ["C-996CD483CA06B7BD", "C-0934973C51CB4DB0", "C-38D420656E9C23A6", "C-D8F1AF647C28B073", "C-DC0856FE751DBFB6", "C-991C48EB1A627A13", "C-CE7DF0EC5D329A1D", "C-FAD8B6CBAA72D7F2"],
+  "fully_acceptable_assessment_signals": 5,
+  "validation": "PASS"
+}

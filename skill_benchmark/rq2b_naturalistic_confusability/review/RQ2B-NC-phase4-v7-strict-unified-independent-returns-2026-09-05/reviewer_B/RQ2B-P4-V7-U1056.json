@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-58CF7DE0DB0F6A1D",
+      "missing_material_requirement_or_null": "A paper-reading workflow that extracts task, dataset, model, baselines, metrics, ablations, and limitations into a structured map.",
+      "rationale": "It sets up ML run tracking rather than reading a paper or mapping its experimental design.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-996CD483CA06B7BD",
+      "missing_material_requirement_or_null": "An explicit output schema mapping task, dataset, model, baseline, metrics, ablations, and limitations.",
+      "rationale": "It directs full-paper reading across methodology, experiments/results, and limitations, but its prescribed result is a peer review rather than the requested component-by-component design map.",
+      "source_anchor": "#### Step 1.2: Deep Reading Pass"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-997317B5747AE157",
+      "missing_material_requirement_or_null": "A paper-reading extraction workflow covering the paper's model, ablations, limitations, and all requested design fields.",
+      "rationale": "It organizes evaluation task, dataset, baselines, and metrics, but assumes supplied model-evaluation inputs and does not map a paper's model, ablations, and limitations.",
+      "source_anchor": "### Step 1: Gather inputs"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B64E4CCB35F6BCD6",
+      "missing_material_requirement_or_null": "A structured extraction template for task, dataset, model, baselines, metrics, ablations, and limitations.",
+      "rationale": "It directs reading the manuscript and preserving experimental settings, but it is a drafting workflow and supplies no experiment-design mapping artifact.",
+      "source_anchor": "## Preserve Technical Integrity"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BE4AB4A3309D083A",
+      "missing_material_requirement_or_null": "A single-paper experiment-design analysis workflow with the requested mapping fields.",
+      "rationale": "It is a workflow for surveying published user-research evidence, not for analyzing the experiment design of one paper.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C8A76F08FC008581",
+      "missing_material_requirement_or_null": "A paper-reading workflow that extracts all requested experiment-design fields, including model, baseline, metrics, ablations, and limitations.",
+      "rationale": "It selects causal identification strategies from supplied study inputs rather than reading a paper and mapping its experimental design.",
+      "source_anchor": "## Inputs to collect"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C96946CC2D4F3B6E",
+      "missing_material_requirement_or_null": "A paper-analysis workflow that produces the requested structured experiment-design map.",
+      "rationale": "It resolves legal open-access copies of identified papers but does not analyze or map their experimental design.",
+      "source_anchor": "## Process"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ED4C8DA553037AA6",
+      "missing_material_requirement_or_null": "A scientific-paper analysis workflow extracting the requested design components.",
+      "rationale": "It reviews shareholder agreements from a represented party's perspective and has no capability for scientific-paper experiment mapping.",
+      "source_anchor": "## Instructions"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1056",
+  "batch_input_sha256": "59dab9bc0c1207ff116f674454b2c0b00c1d460271581e7ba6bbeb8102c10d0c",
+  "blind_packet_id": "P-CF86E3C84C95FC89FE",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "003c0ce687e6fa43ca56e40b28fe74e76b320a66b063776d8d752521a3ed1729"
+}

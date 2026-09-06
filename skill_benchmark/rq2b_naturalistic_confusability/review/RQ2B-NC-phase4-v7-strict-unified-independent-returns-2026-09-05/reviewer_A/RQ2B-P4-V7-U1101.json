@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1D69697280405EC9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly specifies the required two migration pattern: concurrent physical indexes on every existing partition with a reverse operation, followed by a parent AddIndex migration, and it provides the fake-then-maintenance-window procedure for a huge table.",
+      "source_anchor": "## Rule 3: partitioned table indexes require the two-step pattern"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-209186D94A3B32C2",
+      "missing_material_requirement_or_null": "Django/PostgreSQL partition-index migration implementation and large-table deployment procedure.",
+      "rationale": "This is Spark job-performance guidance and provides no Django migration, partition index workflow, rollback, parent registration, or maintenance-window plan.",
+      "source_anchor": "# Apache Spark Optimization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8A68739396D89A0B",
+      "missing_material_requirement_or_null": "A Django two-file partition-index implementation with concurrent per-partition creation and reverse code, followed by parent registration and the requested fake-before-maintenance procedure.",
+      "rationale": "It supplies Django migration-generation and large-index deployment guidance, but does not define the required partition-first/parent-second migration pair or the production handling for existing partitions.",
+      "source_anchor": "### Adding Indexes"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-991C48EB1A627A13",
+      "missing_material_requirement_or_null": "Django-specific two-step partition-index migrations, concurrent rollback path, parent registration, and a fake-before-maintenance production plan.",
+      "rationale": "The generic PostgreSQL reference discusses index syntax but does not provide the requested Django workflow for all existing range partitions or record the index on a parent model.",
+      "source_anchor": "# PostgreSQL Migrations Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C30257733E8D8AB9",
+      "missing_material_requirement_or_null": "The exact Django partition-first/parent-second migration files, all-existing-partitions implementation and parent-model state registration, plus the requested fake migration procedure.",
+      "rationale": "Its concurrent-index and rollback safety guidance is relevant to the operational risk, but it lacks the required Django partition migration pair and parent registration details.",
+      "source_anchor": "Build indexes and constraints without blocking."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CE7DF0EC5D329A1D",
+      "missing_material_requirement_or_null": "Django migration files for concurrent indexing of all existing partitions with reverse code, parent registration, and a large-table maintenance deployment plan.",
+      "rationale": "This is an index-design advisor and explicitly defers large-table partitioning; it does not implement or explain the requested Django partition-index migration sequence.",
+      "source_anchor": "# Index Advisor"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FAD8B6CBAA72D7F2",
+      "missing_material_requirement_or_null": "Django/PostgreSQL partition-index migration code covering concurrent creation on all existing partitions, parent state registration, and the requested production fake/apply procedure.",
+      "rationale": "It covers framework-agnostic schema versioning and rollback, but lacks the required Django partitioned-table index procedure and even recommends transactional DDL generally, which does not supply the concurrent-index path.",
+      "source_anchor": "# Schema Versioning"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FEAE4AEB84AA5282",
+      "missing_material_requirement_or_null": "Django/PostgreSQL migration guidance for partition indexes, including the two dependent migration files and maintenance-window deployment procedure.",
+      "rationale": "This is a security prior-art research workflow, unrelated to Django migrations or PostgreSQL partition index construction.",
+      "source_anchor": "## Overview"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1101",
+  "batch_input_sha256": "9f54ed97588a826f35d9dace6a460a64f82ec5549925f452a876c37e9bd2589a",
+  "blind_packet_id": "P-046C3A8F3FC2369397",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9649c97a2f05ecd2d24a6b55f30300506de9dee626a5dee5edf77ce6f1f8ebe0"
+}

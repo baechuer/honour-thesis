@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1D69697280405EC9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It specifies the Django two-migration partition pattern, atomic=False, concurrent per-partition creation with a reverse drop path, parent AddIndex registration, and the fake/manual maintenance-window procedure.",
+      "source_anchor": "## Rule 3: partitioned table indexes require the two-step pattern"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-209186D94A3B32C2",
+      "missing_material_requirement_or_null": "Django/PostgreSQL partition-index migration guidance, including the two dependent migration files, concurrent build/rollback, and the maintenance-window applied-state plan.",
+      "rationale": "This is Spark performance guidance and provides no Django or PostgreSQL migration solution for the requested partition indexes.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8A68739396D89A0B",
+      "missing_material_requirement_or_null": "The Django partition-index two-step implementation: atomic=False concurrent partition creation with rollback, a dependent parent AddIndex migration, and fake/manual maintenance-window handling.",
+      "rationale": "It gives a Django migration review workflow and notes that large-table indexes need special deployment treatment, but it does not provide the required partition-specific rewrite.",
+      "source_anchor": "### Adding Indexes"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-991C48EB1A627A13",
+      "missing_material_requirement_or_null": "Django-specific two-file partition-index migrations with atomic=False concurrent per-partition creation, rollback, parent registration, and a fake/manual maintenance-window plan.",
+      "rationale": "It supplies general PostgreSQL index and migration practices, but lacks the required Django partition workflow and production application plan.",
+      "source_anchor": "## Migration Checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C30257733E8D8AB9",
+      "missing_material_requirement_or_null": "The Django two-migration pattern for existing partitions and parent index state, plus the required fake-before-maintenance-window application plan.",
+      "rationale": "It correctly requires concurrent index builds outside a transaction and reversible deployment steps, but does not cover the Django partition and parent-migration implementation.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CE7DF0EC5D329A1D",
+      "missing_material_requirement_or_null": "Django partition-index migration code with rollback and parent registration, together with the requested fake/manual maintenance-window plan.",
+      "rationale": "It offers relevant concurrent index design and verification advice, but not the required Django migration rewrite for all existing partitions.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-FAD8B6CBAA72D7F2",
+      "missing_material_requirement_or_null": "A Django/PostgreSQL partition-aware two-file implementation using atomic=False concurrent builds with rollback and the fake/manual maintenance-window procedure.",
+      "rationale": "It supports separate, reversible migrations and index separation, but is framework-generic and does not supply the necessary partition or concurrent-Django details.",
+      "source_anchor": "## Guidelines"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FEAE4AEB84AA5282",
+      "missing_material_requirement_or_null": "Django/PostgreSQL migration guidance for concurrent indexes on existing partitions, parent index registration, rollback, and the maintenance-window plan.",
+      "rationale": "This is a security prior-art survey method, not a database migration review or rewrite procedure.",
+      "source_anchor": "## When to activate"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1101",
+  "batch_input_sha256": "9f54ed97588a826f35d9dace6a460a64f82ec5549925f452a876c37e9bd2589a",
+  "blind_packet_id": "P-046C3A8F3FC2369397",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "38f3f2e4c1cc898bbd446d49597ce7061266d66db6c525d8ae44c9a7494281b9"
+}

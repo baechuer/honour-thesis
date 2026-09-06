@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-58CF7DE0DB0F6A1D",
+      "missing_material_requirement_or_null": "A paper-analysis workflow that extracts and maps the paper task, dataset, model, baselines, metrics, ablations, and limitations.",
+      "rationale": "This skill specifies ML run tracking and reproducibility practices, not how to read a paper and map its experimental design.",
+      "source_anchor": "Experiment Tracking"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-996CD483CA06B7BD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The paper-reading workflow explicitly examines methodology, model or approach, datasets, baselines, metrics, ablations, and limitations, providing the requested experimental-design evidence.",
+      "source_anchor": "Deep Reading Pass"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-997317B5747AE157",
+      "missing_material_requirement_or_null": "Paper-specific extraction of the model and ablations, with all requested fields consolidated into one design map.",
+      "rationale": "It covers task, evaluation data, baselines, metrics, and failure modes, but it is a model evaluation-report workflow rather than a paper-specific experiment-design map and does not require ablation extraction.",
+      "source_anchor": "Establish baselines"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B64E4CCB35F6BCD6",
+      "missing_material_requirement_or_null": "An explicit extraction template that maps task, dataset, model, baselines, metrics, ablations, and limitations.",
+      "rationale": "It instructs the reader to inspect an empirical paper and connect claims to evidence including controlled comparisons and ablations, but does not provide the requested experimental-design mapping structure.",
+      "source_anchor": "Build The Argument Before The Prose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BE4AB4A3309D083A",
+      "missing_material_requirement_or_null": "A research-paper experimental-design extraction workflow covering task, dataset, model, baselines, metrics, ablations, and limitations.",
+      "rationale": "This is a survey workflow for published user-research evidence and search artifacts, not a method for mapping one paper experimental design.",
+      "source_anchor": "When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C8A76F08FC008581",
+      "missing_material_requirement_or_null": "A research-paper experimental-design extraction workflow covering task, dataset, model, baselines, metrics, ablations, and limitations.",
+      "rationale": "This skill chooses and executes causal identification designs; it does not read a paper and map its reported experimental components.",
+      "source_anchor": "Causal Inference"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C96946CC2D4F3B6E",
+      "missing_material_requirement_or_null": "An analysis and structured extraction stage that maps a paper task, dataset, model, baselines, metrics, ablations, and limitations.",
+      "rationale": "It resolves an identifier to an open-access copy, but supplies no workflow for analyzing or mapping the paper experiment design.",
+      "source_anchor": "Fetch Paper"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ED4C8DA553037AA6",
+      "missing_material_requirement_or_null": "A research-paper experimental-design mapping workflow.",
+      "rationale": "This is a shareholder-agreement legal review procedure and does not address academic-paper experiment analysis.",
+      "source_anchor": "Shareholder Agreement Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1056",
+  "batch_input_sha256": "59dab9bc0c1207ff116f674454b2c0b00c1d460271581e7ba6bbeb8102c10d0c",
+  "blind_packet_id": "P-CF86E3C84C95FC89FE",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "bec4009cb6a1891030271a0fd86f4e28dc8f43285fdec532dbddcbe0d76f4619"
+}
