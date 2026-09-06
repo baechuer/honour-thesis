@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-04FDAA0CC22D91BB",
+      "missing_material_requirement_or_null": "A documented integration and wiring path for the existing chat framework is absent.",
+      "rationale": "It provides Telegram bot setup, message handling, and reply workflows, but does not show how the existing support assistant or chat framework is connected to that channel.",
+      "source_anchor": "# Telegram Bot"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-415284D35AF4B5B3",
+      "missing_material_requirement_or_null": "Telegram channel integration is absent.",
+      "rationale": "This is an existing-framework channel procedure, but it connects Google Chat rather than the requested Telegram channel.",
+      "source_anchor": "# Add Google Chat Channel"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4B98C78E37192804",
+      "missing_material_requirement_or_null": "Telegram channel connection and support-assistant message delivery are absent.",
+      "rationale": "The source structures sprint retrospective sessions and provides no route to connect a support assistant to customer conversations.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5159E7F0A62CD2B5",
+      "missing_material_requirement_or_null": "Telegram channel integration is absent.",
+      "rationale": "It documents a Chat SDK integration for Slack, not the requested Telegram channel.",
+      "source_anchor": "# Add Slack Channel"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8A108342C385F6AB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It installs and registers a Telegram adapter through the Chat SDK bridge, configures credentials, starts the service, pairs chats, and documents channel wiring for interactive conversations.",
+      "source_anchor": "Adds Telegram bot support via the Chat SDK bridge."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-ADCEEBE767AFB4D4",
+      "missing_material_requirement_or_null": "A documented integration and wiring path for the existing chat framework is absent.",
+      "rationale": "It provides a plausible standalone Telegram bot implementation with inbound handlers and replies, but does not connect that bot to the existing support assistant framework.",
+      "source_anchor": "# Telegram Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CCBF197A9F7BE5E0",
+      "missing_material_requirement_or_null": "Telegram channel connection and message transport through the existing chat framework are absent.",
+      "rationale": "The source helps compose support-ticket replies but supplies no Telegram integration or mechanism to receive and send customer conversations.",
+      "source_anchor": "# Support Ticket Reply"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D230D8E028C0AF43",
+      "missing_material_requirement_or_null": "Telegram channel connection and support-assistant messaging are absent.",
+      "rationale": "The source is a procedure for surveying published user-research evidence, not for implementing a customer messaging channel.",
+      "source_anchor": "surveying the PUBLISHED user-research evidence"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0294",
+  "batch_input_sha256": "07ad085258f797d2f29c858646a21f115f6b14df2cf2daddf885f97529709401",
+  "blind_packet_id": "P-6A7C9CA7B6DDFE27DC",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e4c60b338bfc3e29b6c505b9b22ff1888450ee9bc69ace08941ee9f1bc2af34e"
+}

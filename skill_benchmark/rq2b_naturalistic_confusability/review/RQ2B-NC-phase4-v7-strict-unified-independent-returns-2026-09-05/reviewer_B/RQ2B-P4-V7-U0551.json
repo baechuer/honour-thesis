@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4292324462BC5C3C",
+      "missing_material_requirement_or_null": "A customer-support assistant integration, its message flow, durable state/data handling, and deployment design.",
+      "rationale": "This is a survey procedure for documented UI conventions and produces research artifacts, not an implementation or design route for the requested customer-support assistant.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4C05DFBC5FB260CB",
+      "missing_material_requirement_or_null": "A customer chat integration and its order, return, media-claim, and support-handoff design.",
+      "rationale": "The source authors structural BPMN artifacts for UiPath Maestro; it does not provide the chat-platform integration or assistant design requested.",
+      "source_anchor": "## Authoring"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-699C5A4135703AB4",
+      "missing_material_requirement_or_null": "A customer-support chat assistant design, including conversation flows and messaging integration.",
+      "rationale": "This source designs ML feature-store infrastructure, which does not address the requested customer interaction, fulfillment flows, or support operations.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6A503D7F7A1AE26E",
+      "missing_material_requirement_or_null": "Durable customer conversation state and an order/return/damaged-item workflow with secure, idempotent customer notification handling.",
+      "rationale": "It provides a production Slack bot route with selectable interactions, credentials handling, and deployment, but does not cover the specified retailer-support workflows or their durable and idempotent processing requirements.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A7D9F802034818E0",
+      "missing_material_requirement_or_null": "Authenticated verification of incoming webhook notifications.",
+      "rationale": "It directly covers the customer-support flows, selectable replies, media, durable state, delivery status, idempotency, credentials, and deployment, but its webhook receiver does not specify validating incoming POST notification authenticity.",
+      "source_anchor": "## Examples"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AFD6BCE9A58B7444",
+      "missing_material_requirement_or_null": "Durable customer conversation state, idempotent secure webhook processing, and retailer support-team handoff/visibility design.",
+      "rationale": "It supplies selectable keyboards, conversational flows, media, and production webhooks, but leaves the requested durable operational support workflow and secure duplicate-safe notification processing unspecified.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BB7468EDE6954105",
+      "missing_material_requirement_or_null": "A chat-channel integration and customer-facing order, return, damage-claim, and human-handoff assistant workflow.",
+      "rationale": "This source exposes controls and observation for existing CanDoItAll process runs; it is not a route for designing or integrating the customer-support chat assistant itself.",
+      "source_anchor": "## Current Commands"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BF39F958D6795F1E",
+      "missing_material_requirement_or_null": "The customer-support assistant's integration design, message flows, state/data handling, and operational controls.",
+      "rationale": "The source is a generic software-delivery workflow; it supplies no substantive route for the specific assistant design requested.",
+      "source_anchor": "## The Pipeline"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0551",
+  "batch_input_sha256": "76be1ec1757a0543247aaec2fcabc10706ed0b9cd20b1550a66d68b06f0bcbc3",
+  "blind_packet_id": "P-D9DE6488BBC7F7F1AE",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "34400bd5d533af3b6dae9c668b12c5287c934fe75310b294d3058bb6590cd9c0"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0EA87CD721CC38C4",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It identifies the producing DAG, traces upstream source tables recursively, and specifies a lineage report with the transformation chain and source-focused investigation details requested.",
+      "source_anchor": "### Step 4: Build the Lineage Chain"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4181B7C295780000",
+      "missing_material_requirement_or_null": "Tracing monthly_revenue's upstream tables, producing transformations, and dependency chain.",
+      "rationale": "It maps supplier tiers and concentration risks for a product supply chain, not the sources and transformations that produce a dataset.",
+      "source_anchor": "# Supply Chain Intelligence"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5400B2992A6F3616",
+      "missing_material_requirement_or_null": "Tracing monthly_revenue's upstream tables, producing transformations, and dependency chain.",
+      "rationale": "It facilitates sprint retrospectives and action items rather than investigating data origins or pipeline dependencies.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7DB3910D43DF6D42",
+      "missing_material_requirement_or_null": "Tracing monthly_revenue's upstream tables, producing transformations, and dependency chain.",
+      "rationale": "It evaluates interface usability heuristics and provides no route for tracing a dataset's sources or transformations.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8FB5012AB1386A52",
+      "missing_material_requirement_or_null": "Tracing monthly_revenue's upstream tables, producing transformations, and dependency chain.",
+      "rationale": "It builds a sales mutual action plan, which does not address dataset lineage, upstream tables, or transformations.",
+      "source_anchor": "# Mutual Action Plan"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-973BEC5511D7672F",
+      "missing_material_requirement_or_null": "Tracing monthly_revenue's upstream tables, producing transformations, and dependency chain.",
+      "rationale": "It surveys security prior art and produces security-research artifacts, not a data-lineage investigation.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DBEFE6E68FD24411",
+      "missing_material_requirement_or_null": "An upstream, source-focused trace of the tables and transformations that produce monthly_revenue.",
+      "rationale": "It supplies a neighbouring dependency-analysis workflow, but it traces direct consumers and downstream change impact rather than working backward through the dataset's sources.",
+      "source_anchor": "### Step 1: Identify Direct Consumers"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-EA5F2C93FA3384E9",
+      "missing_material_requirement_or_null": "Inspection and reporting of the concrete transformations that produce monthly_revenue, with a source-based investigation priority.",
+      "rationale": "It can resolve the named dataset, traverse its upstream dependency graph, and visualize the chain, but its stated lineage output provides entities and hop distances rather than inspecting the producing transformations or prioritizing likely faulty steps.",
+      "source_anchor": "### What lineage returns vs. what needs follow-up"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0557",
+  "batch_input_sha256": "7163918382cfd52986df81f76db1ed07fccc9c00cfc23905eb3fbe16bd600e56",
+  "blind_packet_id": "P-8CC807B4EB1369AA19",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "62e9d59ce314f9261302df6e984bdd0e3d042509cedea0ecd999fe7bfccd7968"
+}
