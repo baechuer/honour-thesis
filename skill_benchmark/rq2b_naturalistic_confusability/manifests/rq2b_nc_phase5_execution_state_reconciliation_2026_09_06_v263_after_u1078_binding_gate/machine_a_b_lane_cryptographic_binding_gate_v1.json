@@ -1,0 +1,48 @@
+{
+  "schema_version": "rq2b_nc_v7_machine_a_binding_gate_v1",
+  "operative_scope": "RQ2b-NC V7 frozen library only",
+  "execution_state_reconciliation": "execution_state_reconciliation.json",
+  "execution_state_version": "v263_after_u1078_binding_gate",
+  "gate_status": "FROZEN_METHOD_GATE_PENDING_DISPOSITION",
+  "trigger": "Two independently collected Reviewer-B returns fail the frozen validator with the same identity-or-cryptographic-binding error.",
+  "affected_groups": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0979",
+      "reviewer": "B",
+      "raw_return_sha256": "1558815b1a78e372a2abae81cde2985e1e5656014f5cb53b401dccc382adbc4f",
+      "validation_error": "V7 return identity or cryptographic binding drift",
+      "field_check": {
+        "reviewer_blind_id": "match",
+        "batch_id": "match",
+        "blind_packet_id": "mismatch",
+        "batch_input_sha256": "mismatch",
+        "reviewer_instruction_sha256": "mismatch",
+        "reviewer_output_sha256": "mismatch"
+      },
+      "reviewer_a_validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+      "preservation_record": "../../review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/superseded_invalid/RQ2B-P4-V7-U0979_1558815b1a78e372_reissue_record.json"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U1078",
+      "reviewer": "B",
+      "raw_return_sha256": "04f4510e00c66923a70c04731cf47299a41800ecc0cca2e7ae36e58dd4bb0bdb",
+      "validation_error": "V7 return identity or cryptographic binding drift",
+      "field_check": {
+        "reviewer_blind_id": "match",
+        "batch_id": "match",
+        "blind_packet_id": "mismatch",
+        "batch_input_sha256": "mismatch",
+        "reviewer_instruction_sha256": "mismatch",
+        "reviewer_output_sha256": "mismatch"
+      },
+      "reviewer_a_validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+      "preservation_record": "../../review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/superseded_invalid/RQ2B-P4-V7-U1078_04f4510e00c66923_reissue_record.json"
+    }
+  ],
+  "required_next_action": "Do not dispatch further Machine-A groups. Retain the raw invalid returns, do not overwrite them, and obtain a frozen-SOP disposition before any traceable Reviewer-B reissue.",
+  "non_actions": [
+    "No candidate, prompt, source, tail, or K=6 change was made.",
+    "No reconciliation, coordinator, or finalisation was run for either affected group.",
+    "No finalised group was rerun or altered."
+  ]
+}
