@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3D1E6F7C64F85CDA",
+      "missing_material_requirement_or_null": "A unified MarkItDown-style folder pipeline covering PDF, DOCX, PPTX, XLSX, images, HTML, CSV, and JSON with OCR where needed.",
+      "rationale": "It converts XLSX into Markdown, but is explicitly limited to XLSX and does not cover the other requested file types or the whole-folder pipeline.",
+      "source_anchor": "This skill only supports `.xlsx`."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-503FBE7485FEA5DA",
+      "missing_material_requirement_or_null": "A mixed-file Markdown conversion and OCR pipeline for the requested formats.",
+      "rationale": "This is a code-refactoring guide, not a document and media conversion pipeline.",
+      "source_anchor": "Simplify code by reducing complexity while preserving exact behavior."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-832E2F0501DE184A",
+      "missing_material_requirement_or_null": "A mixed-file Markdown conversion and OCR pipeline for the requested formats.",
+      "rationale": "It performs pathway analysis on expression data and has no role in converting the requested file collection to Markdown.",
+      "source_anchor": "Pathway-level GSVA or ssGSEA analysis from a bulk expression matrix plus a sample group file"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93274BF4AC55BA56",
+      "missing_material_requirement_or_null": "A mixed-file Markdown conversion and OCR pipeline for the requested formats.",
+      "rationale": "It adds interactive UIs to MCP servers rather than extracting content from files into Markdown.",
+      "source_anchor": "Enrich an existing MCP server's tools with interactive UIs"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A80DF34897CD559E",
+      "missing_material_requirement_or_null": "A non-Office-output mixed-file Markdown conversion and OCR pipeline for the requested formats.",
+      "rationale": "It creates a fundraising pitch-deck PPTX, which does not convert the source collection to Markdown and conflicts with the no-Office-files constraint.",
+      "source_anchor": "Output is a single .pptx."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C7EF8EEF454A932B",
+      "missing_material_requirement_or_null": "A MarkItDown-style Markdown extraction workflow for the full requested formats, including PDF, DOCX, PPTX, XLSX, HTML, CSV, and JSON.",
+      "rationale": "It can process media and OCR documents, but does not provide the requested all-format Markdown conversion pipeline.",
+      "source_anchor": "OCR documents (PDF, scanned images)"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D771981EE35F8882",
+      "missing_material_requirement_or_null": "A unified MarkItDown-style folder pipeline covering PDF, DOCX, PPTX, XLSX, images, HTML, CSV, and JSON with OCR where needed.",
+      "rationale": "It converts PDFs to Markdown, but its stated scope is PDF only and it does not cover the full requested collection.",
+      "source_anchor": "This skill only supports `.pdf`"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D973008A100D781C",
+      "missing_material_requirement_or_null": "A unified MarkItDown-style folder pipeline covering PDF, DOCX, PPTX, XLSX, images, HTML, CSV, and JSON with OCR where needed.",
+      "rationale": "It converts DOCX to Markdown, but its stated scope is DOCX only and it does not cover the full requested collection.",
+      "source_anchor": "This skill only supports `.docx`."
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0412",
+  "batch_input_sha256": "5a7057f1c375ef63c6d1a2d94b5eef58318f70d4f77b8edc28c2c7a57fc6ec5f",
+  "blind_packet_id": "P-82A0532C86C899D623",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d9a27d6ec59fb56adc5db8a5a396dab3d423f7ebdc64540ee3b585b407fd0082"
+}

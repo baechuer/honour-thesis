@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-097E2363DBDECAD4",
+      "missing_material_requirement_or_null": "GitHub PR review-thread inspection, scoped code patching, and completion reporting.",
+      "rationale": "This is a Wails desktop-app development guide and does not cover PR review comments or repository patching.",
+      "source_anchor": "Wails — Desktop Apps with Go and Web Frontend"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0E4BA41D6EF078D9",
+      "missing_material_requirement_or_null": "A GitHub PR review-thread retrieval and disposition workflow that maps actionable comments to scoped patches.",
+      "rationale": "It defines PR review and a per-issue fix flow, but it does not operate an existing PR's review-comment threads.",
+      "source_anchor": "Automated PR Review & Code Quality"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-314F6E66B1125DBC",
+      "missing_material_requirement_or_null": "A workflow for retrieving and actioning general GitHub PR review threads rather than hack-review feedback.",
+      "rationale": "It verifies and resolves feedback with patches and a disposition ledger, but is scoped to hack-review reports rather than arbitrary PR threads.",
+      "source_anchor": "Receiving Hack Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E0F55C0DBE69166",
+      "missing_material_requirement_or_null": "GitHub PR review-thread inspection, scoped code patching, and completion reporting.",
+      "rationale": "This only guides Webflow CMS collection creation and verification.",
+      "source_anchor": "CMS Collection Setup"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-61BAA17232B693BB",
+      "missing_material_requirement_or_null": "GitHub PR review-thread inspection, scoped code patching, and completion reporting.",
+      "rationale": "This is a Flutter application-development guide, not a pull-request review workflow.",
+      "source_anchor": "Flutter — Cross-Platform UI Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-756C018E983FFA64",
+      "missing_material_requirement_or_null": "GitHub PR review-thread inspection and scoped code-patch workflow.",
+      "rationale": "It covers GitHub issue categorization, labels, and assignment, not pull-request review comments or patches.",
+      "source_anchor": "Issue Triage Workflow Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A91AA0AE4ABBE241",
+      "missing_material_requirement_or_null": "GitHub PR review-thread inspection, scoped code patching, and completion reporting.",
+      "rationale": "This is a Nhost backend-platform setup guide and does not address PR review comments.",
+      "source_anchor": "Nhost — Open-Source Firebase Alternative with GraphQL"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AA57EB15B53F97C6",
+      "missing_material_requirement_or_null": "GitHub PR review-thread inspection, scoped code patching, and completion reporting.",
+      "rationale": "It surveys documented UI and interaction conventions and produces research artifacts, not review-comment implementation.",
+      "source_anchor": "visual-prior-art-survey"
+    }
+  ],
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-033",
+  "batch_input_sha256": "09ea374e0aa16ca1b308f5f06315dde672081ff7305de5a85b9e848da1af0e13",
+  "blind_packet_id": "P-CC08F420174F5A5D93",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e3f3bff19dd8338cbc3ab9953e80f381027cdfe3a7af9eee358240e77efca5ce"
+}

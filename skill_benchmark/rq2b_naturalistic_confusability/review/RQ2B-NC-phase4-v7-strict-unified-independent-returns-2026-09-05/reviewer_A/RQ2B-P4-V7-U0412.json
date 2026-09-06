@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3D1E6F7C64F85CDA",
+      "missing_material_requirement_or_null": "A single workflow covering PDF, DOCX, PPTX, XLSX, images, HTML, CSV, and JSON with OCR and structure preservation.",
+      "rationale": "It converts XLSX workbooks to Markdown and directs mixed Office/PDF handling to sibling skills, but it does not cover the complete requested format set or a unified mixed-folder pipeline.",
+      "source_anchor": "Mixed file types:"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-503FBE7485FEA5DA",
+      "missing_material_requirement_or_null": "A document-conversion workflow that produces Markdown from the requested mixed file types.",
+      "rationale": "The skill is for behavior-preserving code refactoring, not converting documents or folders into Markdown.",
+      "source_anchor": "# Code Simplification"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-832E2F0501DE184A",
+      "missing_material_requirement_or_null": "A mixed-document conversion workflow producing Markdown with structure and OCR support.",
+      "rationale": "This is a GSVA/ssGSEA pathway-analysis workflow and provides no document conversion capability.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93274BF4AC55BA56",
+      "missing_material_requirement_or_null": "A mixed-document conversion workflow producing Markdown with structure and OCR support.",
+      "rationale": "The skill concerns adding interactive UI resources to an MCP server rather than converting documents to Markdown.",
+      "source_anchor": "add an app to my MCP server"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A80DF34897CD559E",
+      "missing_material_requirement_or_null": "A mixed-document conversion workflow producing Markdown with structure and OCR support.",
+      "rationale": "It is specifically for fundraising pitch decks and produces a PowerPoint file rather than Markdown conversions.",
+      "source_anchor": "Output is a single .pptx."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C7EF8EEF454A932B",
+      "missing_material_requirement_or_null": "A local mixed-folder Markdown conversion workflow covering PDF, DOCX, PPTX, XLSX, images, HTML, CSV, and JSON while preserving lightweight structure.",
+      "rationale": "It supports document OCR and broad media processing, but does not provide the requested comprehensive Markdown conversion and structure-preserving pipeline.",
+      "source_anchor": "OCR documents (PDF, scanned images)"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D771981EE35F8882",
+      "missing_material_requirement_or_null": "Support for DOCX, PPTX, XLSX, images, HTML, CSV, and JSON alongside PDF in one mixed-folder conversion workflow, with OCR where needed.",
+      "rationale": "It converts PDFs to Markdown and handles mixed-file routing with sibling skills, but it is limited to PDFs and explicitly lacks OCR for scanned PDFs.",
+      "source_anchor": "## When to use this skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D973008A100D781C",
+      "missing_material_requirement_or_null": "Support for PDF, PPTX, XLSX, images, HTML, CSV, and JSON alongside DOCX in one mixed-folder conversion workflow, with OCR where needed.",
+      "rationale": "It converts DOCX files to Markdown and routes some mixed Office/PDF inputs to siblings, but it does not cover the full requested set or OCR.",
+      "source_anchor": "## When to use this skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0412",
+  "batch_input_sha256": "5a7057f1c375ef63c6d1a2d94b5eef58318f70d4f77b8edc28c2c7a57fc6ec5f",
+  "blind_packet_id": "P-82A0532C86C899D623",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "03e853effddbab1de0989e5016629d4c64fa197d9b0f722be6618cbab2a83891"
+}

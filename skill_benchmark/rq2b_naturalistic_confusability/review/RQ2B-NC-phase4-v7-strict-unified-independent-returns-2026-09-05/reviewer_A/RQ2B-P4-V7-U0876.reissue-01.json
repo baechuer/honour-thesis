@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-097E2363DBDECAD4",
+      "missing_material_requirement_or_null": "A workflow to inspect actionable GitHub PR review threads, apply requested repository patches, and report the addressed threads.",
+      "rationale": "This skill is for building Wails desktop applications, not handling existing GitHub PR feedback or repository patches.",
+      "source_anchor": "# Wails — Desktop Apps with Go and Web Frontend"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0E4BA41D6EF078D9",
+      "missing_material_requirement_or_null": "Direct handling of existing actionable GitHub PR review threads and a thread-by-thread resolution report after requested patches.",
+      "rationale": "It supplies structured PR/code review and a fix command, but its stated workflow produces a new review rather than inspecting and resolving the current PR comment threads.",
+      "source_anchor": "## HIGH-LEVEL WORKFLOW"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-314F6E66B1125DBC",
+      "missing_material_requirement_or_null": "Support for generic current GitHub PR review threads rather than only hack-review-derived feedback.",
+      "rationale": "It is designed to verify and address review feedback with evidence, but its declared intake is constrained to a coverage-led hack-review report or PR feedback derived from one.",
+      "source_anchor": "## Skill Boundary"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E0F55C0DBE69166",
+      "missing_material_requirement_or_null": "A GitHub PR review-thread inspection and repository patch workflow.",
+      "rationale": "This skill creates Webflow CMS collections and fields, which does not address PR comments or requested code changes.",
+      "source_anchor": "# CMS Collection Setup"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-61BAA17232B693BB",
+      "missing_material_requirement_or_null": "A GitHub PR review-thread inspection and repository patch workflow.",
+      "rationale": "This skill provides Flutter application-development guidance rather than PR comment resolution.",
+      "source_anchor": "# Flutter — Cross-Platform UI Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-756C018E983FFA64",
+      "missing_material_requirement_or_null": "A workflow to inspect GitHub PR review threads, patch the requested repository changes, and report thread resolution.",
+      "rationale": "It covers triage of GitHub issues, not current pull-request review comments or implementation of requested patches.",
+      "source_anchor": "# Issue Triage Workflow Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A91AA0AE4ABBE241",
+      "missing_material_requirement_or_null": "A GitHub PR review-thread inspection and repository patch workflow.",
+      "rationale": "This skill is for Nhost backend-platform development and does not handle PR feedback.",
+      "source_anchor": "# Nhost — Open-Source Firebase Alternative with GraphQL"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AA57EB15B53F97C6",
+      "missing_material_requirement_or_null": "A GitHub PR review-thread inspection and repository patch workflow.",
+      "rationale": "This skill surveys documented UI conventions before design work; it does not inspect or resolve PR review threads.",
+      "source_anchor": "## When to activate"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0876",
+  "batch_input_sha256": "09ea374e0aa16ca1b308f5f06315dde672081ff7305de5a85b9e848da1af0e13",
+  "blind_packet_id": "P-CC08F420174F5A5D93",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "5df8d66d117627cec44266da12a0faa7e4cea8c2106afdfce55fc8e8b0176ad3"
+}

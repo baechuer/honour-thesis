@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-78694CAEBEA7B45D1D",
+  "candidate_token": "C-60ED1B5EE3EA0646",
+  "coordinator_decision": "INADEQUATE",
+  "coordinator_output_sha256": "b0e7c17dd7b5aec63c3d316d6d292f1cacf2b1769f4db279f7341a9ff7ad0c73",
+  "fresh_source_render_sha256": "087bd5c8ec361288ebd0dc4851d0f3198d8e014f81963d41481a05a80fe5d2eb",
+  "rationale": "The candidate designs client-generated Idempotency-Key handling and expressly sends inbound provider event-ID deduplication to a different skill; it omits the requested provider-webhook receiver design.",
+  "reviewer_a_return_sha256": "5edfbafb789c74ee808029a4bf5c2025770ebe026527cc8c98a55a921f27962a",
+  "reviewer_b_return_sha256": "a3f5adb396afe235d7ea78fc29117abbcdab4dd0fca143c13293ddf019cfddf4",
+  "source_anchor": "Inbound webhook dedup keyed on provider event IDs belongs to webhook-receiver-hardener."
+}

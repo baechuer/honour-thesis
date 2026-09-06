@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0108C59F10DDA110",
+      "missing_material_requirement_or_null": "Webhook receiver controls for event acceptance, raw-body validation, signature verification, idempotency, retries, ordering, and failed-message storage.",
+      "rationale": "The source is React GSAP animation guidance and provides none of the requested inbound payment-event receiver design.",
+      "source_anchor": "GSAP with React"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-01D37426B0CCDF22",
+      "missing_material_requirement_or_null": "Webhook receiver controls for event acceptance, raw-body validation, signature verification, idempotency, retries, ordering, and failed-message storage.",
+      "rationale": "The source facilitates sprint retrospectives rather than handling signed payment-provider callbacks.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C87BA3E7682238F",
+      "missing_material_requirement_or_null": "Webhook receiver controls for event acceptance, raw-body validation, signature verification, idempotency, retries, ordering, and failed-message storage.",
+      "rationale": "The source is a GO/KEGG enrichment workflow and contains no receiver-hardening material.",
+      "source_anchor": "When To Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-298BFEC9EF49E06B",
+      "missing_material_requirement_or_null": "A provider-event-ID deduplication design plus an accepted-event allowlist and authenticated payload-schema validation policy.",
+      "rationale": "It covers raw-body HMAC verification, replay resistance, persist-enqueue-ack flow, order tolerance, and dead-letter handling, but explicitly excludes deduplication semantics and does not define event acceptance or payload validation policy.",
+      "source_anchor": "Webhook Receiver Hardener"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-60ED1B5EE3EA0646",
+      "missing_material_requirement_or_null": "Provider-webhook-specific event-ID deduplication together with raw-body signature checks, event validation, ordering, acknowledgement, and failed-message handling.",
+      "rationale": "It supplies useful durable deduplication and retry-state concepts, but is for client Idempotency-Key endpoints and directs inbound provider webhooks elsewhere; it lacks the rest of the receiver design.",
+      "source_anchor": "Idempotency Enforcer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8EDA557D4CD4F556",
+      "missing_material_requirement_or_null": "Webhook receiver controls for event acceptance, raw-body validation, signature verification, idempotency, retries, ordering, and failed-message storage.",
+      "rationale": "The source covers an iOS in-app purchase SDK, not server-side receipt of payment-provider callbacks.",
+      "source_anchor": "AppActor — iOS (Swift)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A07ED733B5C9F3BD",
+      "missing_material_requirement_or_null": "Webhook receiver controls for event acceptance, raw-body validation, signature verification, idempotency, retries, ordering, and failed-message storage.",
+      "rationale": "The source builds Slack bots and does not specify secure payment-provider webhook receiver behavior.",
+      "source_anchor": "Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F8ADF627FF6E4746",
+      "missing_material_requirement_or_null": "Webhook receiver controls for event acceptance, raw-body validation, signature verification, idempotency, retries, ordering, and failed-message storage.",
+      "rationale": "The source concerns Jetpack Compose UI-test actions and provides no payment callback receiver design.",
+      "source_anchor": "Clicking and Scrolling — Drive the UI Without a Gesture Builder"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0472",
+  "batch_input_sha256": "c02956890a27105159c5ab05a8ffc5945c8ba6797e5b5544ac47c365224386fa",
+  "blind_packet_id": "P-78694CAEBEA7B45D1D",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "5edfbafb789c74ee808029a4bf5c2025770ebe026527cc8c98a55a921f27962a"
+}

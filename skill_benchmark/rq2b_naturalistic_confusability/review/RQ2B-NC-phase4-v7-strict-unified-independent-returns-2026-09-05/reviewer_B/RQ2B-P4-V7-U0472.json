@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0108C59F10DDA110",
+      "missing_material_requirement_or_null": "A webhook-receiver design covering accepted events, validation, signature checks, duplicate handling, delivery retry, ordering, and failed-message storage.",
+      "rationale": "React/GSAP animation guidance does not address an inbound payment callback receiver.",
+      "source_anchor": "# GSAP with React"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-01D37426B0CCDF22",
+      "missing_material_requirement_or_null": "A webhook-receiver design covering accepted events, validation, signature checks, duplicate handling, delivery retry, ordering, and failed-message storage.",
+      "rationale": "Sprint retrospective facilitation does not address an inbound payment callback receiver.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C87BA3E7682238F",
+      "missing_material_requirement_or_null": "A webhook-receiver design covering accepted events, validation, signature checks, duplicate handling, delivery retry, ordering, and failed-message storage.",
+      "rationale": "GO/KEGG enrichment analysis is unrelated to receiving payment-provider callbacks.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-298BFEC9EF49E06B",
+      "missing_material_requirement_or_null": "An event allow-list and semantic payload validation plus provider-event-ID deduplication and replay semantics.",
+      "rationale": "It covers raw-body signature verification, durable persist-enqueue-ack handling, retry signaling, ordering tolerance, and a dead-letter path, but expressly excludes the required deduplication design and does not define event acceptance or semantic validation.",
+      "source_anchor": "Do NOT use this skill to design the dedup-key mechanism"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-60ED1B5EE3EA0646",
+      "missing_material_requirement_or_null": "A provider-webhook receiver design covering event admission and validation, raw-body signature verification, delivery retry policy, ordering, and failed-message storage.",
+      "rationale": "It only designs generic client-key idempotency and explicitly routes inbound provider-event deduplication to a different receiver skill.",
+      "source_anchor": "Inbound webhook dedup keyed on provider event IDs belongs to webhook-receiver-hardener."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8EDA557D4CD4F556",
+      "missing_material_requirement_or_null": "A webhook-receiver design covering accepted events, validation, signature checks, duplicate handling, delivery retry, ordering, and failed-message storage.",
+      "rationale": "This is an iOS in-app-purchase SDK integration guide, not inbound callback receiver guidance.",
+      "source_anchor": "## Configure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A07ED733B5C9F3BD",
+      "missing_material_requirement_or_null": "A webhook-receiver design covering accepted events, validation, signature checks, duplicate handling, delivery retry, ordering, and failed-message storage.",
+      "rationale": "Slack bot construction does not address an inbound payment callback receiver.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F8ADF627FF6E4746",
+      "missing_material_requirement_or_null": "A webhook-receiver design covering accepted events, validation, signature checks, duplicate handling, delivery retry, ordering, and failed-message storage.",
+      "rationale": "Jetpack Compose UI-test actions do not address an inbound payment callback receiver.",
+      "source_anchor": "## When to use this skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0472",
+  "batch_input_sha256": "c02956890a27105159c5ab05a8ffc5945c8ba6797e5b5544ac47c365224386fa",
+  "blind_packet_id": "P-78694CAEBEA7B45D1D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "a3f5adb396afe235d7ea78fc29117abbcdab4dd0fca143c13293ddf019cfddf4"
+}
