@@ -1,0 +1,18 @@
+{
+  "assessments":[
+    {"adequacy":"INADEQUATE","candidate_token":"C-00CDC71016CBEA5C","missing_material_requirement_or_null":"video caption retrieval and transcript saving","rationale":"This skill facilitates sprint retrospectives and does not retrieve captions or produce a readable transcript from a video URL.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-671886B6D4546801","missing_material_requirement_or_null":"caption retrieval and transcript formatting","rationale":"This skill exports Figma variables into design-token files; it does not retrieve video captions or save transcript text.","source_anchor":"## Skill boundaries"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-9623DA4D3D6E6570","missing_material_requirement_or_null":null,"rationale":"This skill directly downloads captions or transcripts from a video URL, preserves transcript wording, and supports saving a readable transcript without timestamps.","source_anchor":"# YouTube Transcript Downloader"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A94980AD9F92A563","missing_material_requirement_or_null":"video caption retrieval and transcript output","rationale":"This skill concerns software dependency and catalog context rather than video caption retrieval or transcript saving.","source_anchor":"## Common Tasks"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-AA0D38CAFE597345","missing_material_requirement_or_null":null,"rationale":"This skill downloads YouTube transcripts or subtitles from a URL or video ID and supports transcript text output, directly matching the requested retrieval and readable transcript task.","source_anchor":"# YouTube Transcript"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-ABB0F53D437F5934","missing_material_requirement_or_null":null,"rationale":"This skill extracts transcripts or subtitles from a YouTube URL and is directly designed for the requested caption retrieval and transcript output.","source_anchor":"# YouTube Transcript"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-B6619B3FF6A26486","missing_material_requirement_or_null":"retrieving and saving the source caption transcript without timing cues","rationale":"This skill can work with captions and produce accurate caption text, but its central deliverable is a timed SRT or WebVTT caption track rather than retrieving and saving a readable transcript with timestamps omitted.","source_anchor":"# Captions From Transcript"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D1BB517DDFA67E9C","missing_material_requirement_or_null":"video caption retrieval and transcript formatting","rationale":"This skill performs GSVA or ssGSEA pathway analysis on expression data and is unrelated to video captions or transcripts.","source_anchor":"# GSVA Analysis And Visualization"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0702",
+  "batch_input_sha256":"9dbf0537e9791cf76a41f1e7d91a24f5d94675f9b90d58619aa96e2b0d95f80a",
+  "blind_packet_id":"P-820D1F252ABAC2A23A",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"46d53aa2e1f007e47f53f3e283232037a47ea315cb423d69bbdcba104a30925d"
+}
