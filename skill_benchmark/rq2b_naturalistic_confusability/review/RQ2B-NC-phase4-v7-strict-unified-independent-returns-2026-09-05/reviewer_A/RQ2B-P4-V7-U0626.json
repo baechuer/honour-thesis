@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1DA63CE81B1B3FB7",
+      "missing_material_requirement_or_null": "A PR-review workflow that inspects the changed auth middleware, migration, API tests, and backward-compatibility claim.",
+      "rationale": "This source is for drafting funding proposals, not examining a pull-request diff or producing engineering feedback.",
+      "source_anchor": "# Grant Writing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1F21F0A9D53377D5",
+      "missing_material_requirement_or_null": "A PR-review workflow that analyzes the changed code and returns backward-compatibility feedback.",
+      "rationale": "This source runs gene-set enrichment analysis and has no route for reviewing application changes.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21805C251C315796",
+      "missing_material_requirement_or_null": "Concrete PR-review guidance for inspecting the actual auth, migration, and API-test changes against the stated backward-compatibility requirement.",
+      "rationale": "It includes a separate code-review stage and security/testing checks, but is primarily an end-to-end delivery pipeline rather than a focused review procedure for this change set.",
+      "source_anchor": "### 10. Code Review"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-83E6E732561BE336",
+      "missing_material_requirement_or_null": "A framework-agnostic PR-review process that evaluates the supplied diff and reports compatibility findings.",
+      "rationale": "It covers implementation and tests for Laravel features, including migrations and authentication, but it is not a PR-feedback workflow and the prompt does not establish Laravel.",
+      "source_anchor": "## Core Workflow"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A2EB64574701FF9F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It is expressly a structured PR-review workflow with security, architecture, testing, and diff-context review, and produces severity-graded actionable feedback.",
+      "source_anchor": "# Automated PR Review & Code Quality"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B337C6C3085414AE",
+      "missing_material_requirement_or_null": "A PR-review process that evaluates auth behavior, migrations, API tests, and backward compatibility rather than only simplification opportunities.",
+      "rationale": "It can surface readability and behavior-preservation concerns during review, but its purpose is refactoring for clarity rather than reviewing this cross-cutting PR.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BCAD095458C9B20A",
+      "missing_material_requirement_or_null": "A code-review workflow for a software pull request with actionable feedback on changed application behavior.",
+      "rationale": "This source plans and revises research papers, not source-code pull requests.",
+      "source_anchor": "# Paper Writing"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E62103FA756EBBAA",
+      "missing_material_requirement_or_null": "A PR-review process that inspects the current changes and provides review feedback across auth, migration, and API-test compatibility.",
+      "rationale": "It can help preserve existing behavior through tests, but it writes characterization tests before refactoring instead of reviewing the presented pull request.",
+      "source_anchor": "# Characterization Test Writer"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0626",
+  "batch_input_sha256": "1755b30807889e4d61d66194acb7d09daa49931f70d224fde6f4ccfee8ed100f",
+  "blind_packet_id": "P-2ED1B539B9139C4A89",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8d5ecbb31adbe1f54bfdba213cf7ea7531a69a804ea885d323a5e47dffd95ad4"
+}

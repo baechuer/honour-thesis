@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-110394AFE47E2BDF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides a complete MCP implementation workflow with typed Zod/Pydantic tool schemas, transport setup, authentication/authorization, testing, and a concrete external-API tool pattern.",
+      "source_anchor": "## Core Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C77625FE8898509",
+      "missing_material_requirement_or_null": "An MCP-server implementation for an issue-tracking API, including typed tools and authentication contracts.",
+      "rationale": "It is a published user-research evidence-survey procedure rather than a route to design or implement an MCP integration.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2E2DDC46C461B8AE",
+      "missing_material_requirement_or_null": "MCP-specific implementation guidance for typed issue-tracking tools, authentication, and protocol transport.",
+      "rationale": "Its design-first decomposition and contract/verification process can support implementation work, but it supplies no MCP or third-party API integration method.",
+      "source_anchor": "## Algorithm"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5555924886572CB3",
+      "missing_material_requirement_or_null": "An MCP server implementation with authenticated, schema-aware issue-tracking tools.",
+      "rationale": "It designs GraphQL schemas and resolvers, which is a different protocol and deliverable from an MCP server.",
+      "source_anchor": "# GraphQL Schema"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-96EFB76AF5D1B35B",
+      "missing_material_requirement_or_null": "Initial MCP-server implementation with authenticated third-party issue-tracking API tools and contracts.",
+      "rationale": "It describes UI enrichment and typed tool registration for an already existing MCP server, but not the requested server or its issue-tracker authentication integration.",
+      "source_anchor": "## Step 1: Analyze Existing Tools"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B1701AC14FAD6879",
+      "missing_material_requirement_or_null": "Third-party issue-tracking API integration and authentication implementation for the generated tools.",
+      "rationale": "It can scaffold a typed Ruby MCP server and tool project, but its example tools are generic and omit the requested issue-tracker integration and authentication.",
+      "source_anchor": "## Project Generation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E58197F473A34AB0",
+      "missing_material_requirement_or_null": "An MCP-server implementation method for authenticated issue-tracking API tools.",
+      "rationale": "It is a procurement workflow for finding US web-development firms, not a software implementation route.",
+      "source_anchor": "# find-web-developer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F5FC67878CCF2418",
+      "missing_material_requirement_or_null": "An MCP-server implementation with typed, authenticated issue-tracking API tools.",
+      "rationale": "It audits an existing codebase for architecture fitness and produces a review report instead of implementing an MCP server.",
+      "source_anchor": "# Software Architecture Fitness Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0807",
+  "batch_input_sha256": "cf6bf67434d15a4ce72b08cb6796acae9d6d071c6cc018df8c9839c03fd4cf1a",
+  "blind_packet_id": "P-5118F723B1D8505AC0",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c03d2ed704af82370bd1918a51e30c5e6c7ccd6d287a7db547148f78b02e48ed"
+}

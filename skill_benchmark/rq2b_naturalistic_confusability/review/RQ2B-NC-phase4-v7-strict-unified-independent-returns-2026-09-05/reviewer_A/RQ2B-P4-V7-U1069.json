@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0212713AB0D05E99",
+      "missing_material_requirement_or_null": "A keyword-SERP competitor-domain tracking workflow with longitudinal position comparison and change reporting.",
+      "rationale": "This standardizes skill files; it does not collect or compare competing domains' keyword rankings.",
+      "source_anchor": "# Skill Standardization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1551C3DCC2BE7D32",
+      "missing_material_requirement_or_null": "Keyword-SERP competitor-domain ranking collection with longitudinal position comparison.",
+      "rationale": "It provides monitoring and change triage, but monitors media mentions rather than domains' positions for a keyword set.",
+      "source_anchor": "# Media Monitor"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2C2CECC5BB9A250B",
+      "missing_material_requirement_or_null": "Discovery and per-keyword position tracking for the domains competing across the supplied keyword set.",
+      "rationale": "It compares visibility scores for a specified domain and optional competitors over time, but does not identify competing domains or report their individual keyword positions.",
+      "source_anchor": "# Visibility Monitor"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-597358A4B2DE38A3",
+      "missing_material_requirement_or_null": "Discovery and comparative tracking of the domains that compete across the keyword set.",
+      "rationale": "It tracks one supplied domain's keyword positions over time, but does not identify or compare the competing domains requested.",
+      "source_anchor": "# Rank Tracker"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-636FDAEE32DA5657",
+      "missing_material_requirement_or_null": "Longitudinal tracking and reporting of competing domains' keyword ranking positions and changes.",
+      "rationale": "It uses ranking pages to find content gaps in a draft, but does not monitor domain positions over time.",
+      "source_anchor": "# SERP Gap Analyzer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-849C06E5C5808549",
+      "missing_material_requirement_or_null": "A workflow to identify competing domains, retain keyword-ranking snapshots, and report position changes.",
+      "rationale": "It classifies search intent and page format from a SERP, not competitor domains or their ranking trends.",
+      "source_anchor": "# Search Intent Classifier"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-856B6A221CC3FA55",
+      "missing_material_requirement_or_null": "A keyword-SERP competitor tracking and longitudinal ranking-reporting workflow.",
+      "rationale": "It surveys documented UI conventions and has no route to identify or track competing domains' search rankings.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-DFA47E76C02626E9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It identifies domains ranking for supplied keywords, saves dated snapshots, compares positions, and reports competitive changes.",
+      "source_anchor": "# Competitor Tracker"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1069",
+  "batch_input_sha256": "8dbe8a41267c999cf97f14f15871030d4551505d7cc36f138a3e2dccc0c75745",
+  "blind_packet_id": "P-6116809525E4046018",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d4ab9432c5e5dcd0526474e8a07d922d752b75747c7bba7a127f380d5d4ddbaa"
+}

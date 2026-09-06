@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-110394AFE47E2BDF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers implementing MCP servers that connect external data sources, with typed tool schemas, transport, testing, authentication, and rate limiting.",
+      "source_anchor": "Validate all inputs with schemas (Zod/Pydantic)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C77625FE8898509",
+      "missing_material_requirement_or_null": "An MCP server implementation with authenticated, schema-aware issue-tracking tools.",
+      "rationale": "This is a published user-research evidence-survey workflow, not an implementation route for an MCP server or an issue-tracking API integration.",
+      "source_anchor": "Before anyone designs a screen or writes a requirement"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2E2DDC46C461B8AE",
+      "missing_material_requirement_or_null": "MCP-specific tool contracts, authentication, and third-party issue-tracking API integration guidance.",
+      "rationale": "Its design-first workflow can structure implementation work, but it supplies no MCP protocol, typed tool-contract, authentication, or issue-tracker integration method.",
+      "source_anchor": "# Decompose, Design, Then Implement"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5555924886572CB3",
+      "missing_material_requirement_or_null": "An MCP server with authenticated, schema-aware tools over the third-party issue-tracking API.",
+      "rationale": "It designs GraphQL schemas and resolvers, which is a different API surface from implementing MCP tools.",
+      "source_anchor": "# GraphQL Schema"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-96EFB76AF5D1B35B",
+      "missing_material_requirement_or_null": "Creation of the MCP server and authenticated, schema-aware issue-tracking tool implementation.",
+      "rationale": "It provides MCP-related UI guidance for tools in an existing server, but its scope is adding interactive UI rather than building the requested authenticated issue-tracking server and tools.",
+      "source_anchor": "# Add UI to MCP Server"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B1701AC14FAD6879",
+      "missing_material_requirement_or_null": "Authenticated third-party issue-tracking API integration and issue-domain tool contracts.",
+      "rationale": "It can scaffold an MCP server with typed tool schemas, but the provided project is generic and omits authenticated issue-tracker API integration and issue-specific tools.",
+      "source_anchor": "# Ruby MCP Server Generator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E58197F473A34AB0",
+      "missing_material_requirement_or_null": "An MCP server implementation exposing issue-tracking operations as typed tools.",
+      "rationale": "It operates a web-development-firm search API for procurement rather than implementing an MCP server for an issue-tracking API.",
+      "source_anchor": "# find-web-developer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F5FC67878CCF2418",
+      "missing_material_requirement_or_null": "An MCP server implementation with authenticated, schema-aware issue-tracking tools.",
+      "rationale": "It is a codebase architecture review procedure, not a route to building an MCP server or integrating an issue-tracking API.",
+      "source_anchor": "# Software Architecture Fitness Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0807",
+  "batch_input_sha256": "cf6bf67434d15a4ce72b08cb6796acae9d6d071c6cc018df8c9839c03fd4cf1a",
+  "blind_packet_id": "P-5118F723B1D8505AC0",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c8f23e000aa7e71ca9dec69ba6c9d7ea38916b8ae3cd2bdbb49f5b014e827700"
+}

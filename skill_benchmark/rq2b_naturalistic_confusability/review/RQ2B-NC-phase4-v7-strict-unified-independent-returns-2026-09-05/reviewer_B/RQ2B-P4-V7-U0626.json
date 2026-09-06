@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1DA63CE81B1B3FB7",
+      "missing_material_requirement_or_null": "A pull-request review workflow that evaluates authentication, migrations, API tests, and backward compatibility.",
+      "rationale": "This workflow builds grant proposals for funders rather than reviewing a software change.",
+      "source_anchor": "## Start with the funder and constraints"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1F21F0A9D53377D5",
+      "missing_material_requirement_or_null": "A pull-request review workflow for code changes and compatibility risks.",
+      "rationale": "This source runs gene-set enrichment analysis and does not address code review.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21805C251C315796",
+      "missing_material_requirement_or_null": "Concrete review guidance for authentication changes, migrations, API tests, and backward-compatibility findings.",
+      "rationale": "It establishes an independent code-review gate and general review checks, but delegates the review and lacks focused compatibility review guidance.",
+      "source_anchor": "### 10. Code Review"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-83E6E732561BE336",
+      "missing_material_requirement_or_null": "A framework-independent PR-review process that produces feedback on authentication, migration, API-test, and backward-compatibility changes.",
+      "rationale": "It supplies relevant Laravel implementation and testing practices, but is framework-specific and does not provide a PR-feedback review workflow.",
+      "source_anchor": "## Core Workflow"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A2EB64574701FF9F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It is explicitly a pull-request review workflow with security, architecture, testing, documentation, and diff-review lenses that can assess the stated authentication, migration, API-test, and compatibility changes.",
+      "source_anchor": "## PHASE 2 — REVIEW LENSES"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B337C6C3085414AE",
+      "missing_material_requirement_or_null": "A complete PR-review process for authentication, migration, API-test, and backward-compatibility risks.",
+      "rationale": "It can identify readability and complexity concerns during code review, but its scope is simplification rather than a complete change-risk review.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BCAD095458C9B20A",
+      "missing_material_requirement_or_null": "A pull-request code-review workflow for software changes and compatibility risks.",
+      "rationale": "This source plans and revises technical research papers rather than reviewing software pull requests.",
+      "source_anchor": "# Paper Writing"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E62103FA756EBBAA",
+      "missing_material_requirement_or_null": "A PR-review workflow that assesses the proposed authentication, migration, and API-test changes and reports feedback.",
+      "rationale": "It can help preserve existing behavior with characterization tests, but it does not perform a current pull-request review.",
+      "source_anchor": "## Deliverable"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0626",
+  "batch_input_sha256": "1755b30807889e4d61d66194acb7d09daa49931f70d224fde6f4ccfee8ed100f",
+  "blind_packet_id": "P-2ED1B539B9139C4A89",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9c442334ff98ed2de2b1c9f6d2da96ec8d4069f8fbb5510157039e654c7db439"
+}
