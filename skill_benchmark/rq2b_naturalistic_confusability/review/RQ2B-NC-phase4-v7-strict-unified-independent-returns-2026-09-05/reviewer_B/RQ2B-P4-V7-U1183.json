@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-21D270EBB0528FBA",
+      "missing_material_requirement_or_null": "A Figma-variable import workflow for supplied design-token JSON with collection, mode, alias, safe-update, and result-reporting support.",
+      "rationale": "The material governs TypeScript coding standards, not importing design tokens into a Figma file.",
+      "source_anchor": "# TypeScript Strict Standard"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2A1BD47BB4B0A708",
+      "missing_material_requirement_or_null": "A workflow that imports supplied design-token JSON into Figma variables while preserving modes, aliases, and update/reporting behavior.",
+      "rationale": "This skill addresses Jira and Confluence operations through MCP rather than Figma design-token variables.",
+      "source_anchor": "# Atlassian MCP Expert"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-33B3E68063B44E03",
+      "missing_material_requirement_or_null": "An explicit report of skipped values and a distinct unresolved-value outcome in addition to created and updated results.",
+      "rationale": "It imports token sources into Figma collections and modes, resolves aliases in two passes, matches existing variables, and avoids deleting Figma-only variables, but its stated result report lists created, updated, and errors rather than skipped and unresolved values.",
+      "source_anchor": "# figma-import-tokens — design tokens → Figma variables"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4EDB3449247ACAE1",
+      "missing_material_requirement_or_null": "Direct import of supplied design-token JSON into editable Figma variables with collection/mode and alias preservation.",
+      "rationale": "The workflow audits and reconciles token drift between canonical sources and code consumers; it does not provide the requested Figma-variable import operation.",
+      "source_anchor": "# Design Tokens Sync"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-884F6146F9FC9988",
+      "missing_material_requirement_or_null": "A Figma design-token JSON import and variable-management workflow.",
+      "rationale": "The material is for GO and KEGG enrichment analysis of gene-expression lists, not design tokens or Figma variables.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A6067F1EA9714126",
+      "missing_material_requirement_or_null": "An import path from supplied design-token JSON into Figma variables.",
+      "rationale": "This is explicitly the reverse direction: it reads Figma variables and exports design-token files.",
+      "source_anchor": "# figma-export-tokens — Figma variables → design tokens"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AE0A3B215B7C1A8E",
+      "missing_material_requirement_or_null": "A direct, deterministic import of the supplied JSON plus explicit created, updated, skipped, and unresolved-value reporting.",
+      "rationale": "It covers Figma variable collections, light/dark modes, aliases, idempotent matching, and non-destructive updates, but its workflow is a broader phased design-system build rather than a direct supplied-token import with the requested outcome report.",
+      "source_anchor": "# Design System Builder — Figma MCP Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E5974239DB1C10D5",
+      "missing_material_requirement_or_null": "A Figma design-token JSON import workflow with editable-variable creation or update.",
+      "rationale": "The material routes runtime-log evidence for read-only triage rather than working with Figma variables or design tokens.",
+      "source_anchor": "# Log Analysis"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1183",
+  "batch_input_sha256": "5680487eee6623d2e056ffae87af144002e7ab94da34473eae011726be1d3f2e",
+  "blind_packet_id": "P-641CFA2548BFDAB1CA",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9fa08cc7c79b6aff3ae9d9cf674240c1f4f64b6b079787158ad10796583b1f02"
+}

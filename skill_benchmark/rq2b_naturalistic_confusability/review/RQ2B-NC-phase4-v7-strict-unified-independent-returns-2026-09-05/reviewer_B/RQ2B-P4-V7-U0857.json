@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0B7EE61B9F48B34B",
+      "missing_material_requirement_or_null": "Implementation-level API-handler vulnerability analysis with concrete code fixes.",
+      "rationale": "It audits third-party dependency risk rather than first-party API-handler flaws.",
+      "source_anchor": "## Do NOT"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2A708A08F432C58D",
+      "missing_material_requirement_or_null": "Analysis of exploitable API-handler flaws and concrete code fixes.",
+      "rationale": "It reviews product design, simplicity, and experience rather than implementation security.",
+      "source_anchor": "# Steve Jobs Design Review"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-50A59284E475D51D",
+      "missing_material_requirement_or_null": "Security-specific analysis of exploitable API-handler flaw classes.",
+      "rationale": "It inspects code and API design and provides remediation, but its rubric is architecture fitness rather than security flaws.",
+      "source_anchor": "# Software Architecture Fitness Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-542E1CCE11A37719",
+      "missing_material_requirement_or_null": "An implementation-level security review with exploitable findings and code fixes.",
+      "rationale": "It produces repository knowledge documents, not a security review of an API handler.",
+      "source_anchor": "# Acquire Codebase Knowledge"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5435244C33556E57",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly reviews API endpoint code for exploitable authorization, injection, SSRF, mass-assignment, and deserialization flaws and asks for concrete fixes.",
+      "source_anchor": "### Step 3: Authorization - the highest-value check"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9DED6E37431BDBD6",
+      "missing_material_requirement_or_null": "API-handler code analysis for application vulnerability classes and code-level fixes.",
+      "rationale": "It provides defensive security findings and remediation, but centers on infrastructure and configuration rather than an API handler’s implementation flaws.",
+      "source_anchor": "# Security Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD9671D4A91A1514",
+      "missing_material_requirement_or_null": "An implementation-level API-handler security review with concrete code fixes.",
+      "rationale": "It conducts a research prior-art survey rather than inspecting an API handler for vulnerabilities.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4B2EE0CB425284F",
+      "missing_material_requirement_or_null": "Implementation-level API-handler review with exploitable flaw findings and code fixes.",
+      "rationale": "It is a design-stage threat model and explicitly does not cover implementation-level security review.",
+      "source_anchor": "## Do NOT"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0857",
+  "batch_input_sha256": "85254e0b9a87021ebec75c16365b4fe709bbb952a339095bae22d5503c23fd54",
+  "blind_packet_id": "P-A3A12340CBA8B35E23",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d5e205e0254172f59675c223b902f00a7d9366916f69e984dc11a65de6667696"
+}

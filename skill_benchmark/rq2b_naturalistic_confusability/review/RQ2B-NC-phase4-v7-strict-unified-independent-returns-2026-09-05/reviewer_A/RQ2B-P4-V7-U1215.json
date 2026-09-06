@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-26AF7A2A10FABCCC",
+      "missing_material_requirement_or_null": "An implemented retry/backoff policy, including retriable conditions and idempotency handling, centralised in the transport.",
+      "rationale": "It generates a contract-derived typed client and centralises authentication and typed transport errors, but delegates the actual retry/backoff policy.",
+      "source_anchor": "Defer cross-cutting policy."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4ABCE90155EA1922",
+      "missing_material_requirement_or_null": "Contract-derived generic API client generation with a shared authenticated transport, typed errors, and retry handling.",
+      "rationale": "This is an Algorand-specific application utility reference, not a workflow for generating a client from a machine-readable HTTP contract.",
+      "source_anchor": "# AlgoKit Utils TypeScript — Quick Reference"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-887B9C8D481821B3",
+      "missing_material_requirement_or_null": "A typed TypeScript HTTP client generated from the approved contract with central transport behavior.",
+      "rationale": "It runs gene-set enrichment analysis and provides no route to create the requested HTTP client.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B0BF7E86F22ED50A",
+      "missing_material_requirement_or_null": "Generation of TypeScript models and operations plus an authenticated transport with typed errors and retry handling.",
+      "rationale": "It is adjacent API-contract guidance for evolution and reproducibility, but it produces versioning policy rather than the requested client implementation.",
+      "source_anchor": "# API Versioning Strategist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B923A6AC54E01BB5",
+      "missing_material_requirement_or_null": "A contract-derived typed TypeScript client and shared HTTP transport.",
+      "rationale": "It plans monolith service extraction and does not address generating or configuring an API client.",
+      "source_anchor": "# Monolith Decomposer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D7ABA4B2F10A0C79",
+      "missing_material_requirement_or_null": "A typed TypeScript client generated from the HTTP contract with central authentication, error, and retry behavior.",
+      "rationale": "It manages translation data through a localization CLI, not an HTTP client generated from a product contract.",
+      "source_anchor": "# Multilocale CLI"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F57856C5B9C15339",
+      "missing_material_requirement_or_null": "Implementation of contract-derived TypeScript models and operations with a shared authenticated, error-mapping, retrying transport.",
+      "rationale": "It provides useful adjacent HTTP contract and error-shape design, but the contract is already approved and it does not generate the requested client.",
+      "source_anchor": "# REST API Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FDF22428B34EF352",
+      "missing_material_requirement_or_null": "Contract-derived API client generation and transport implementation.",
+      "rationale": "It is a repository-maintenance workflow with no route to build the requested typed HTTP client.",
+      "source_anchor": "# Open Source Maintainer"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1215",
+  "batch_input_sha256": "14a3594a9d4f009d1a5bb428d7da2f22238c796fe76da85f44f20ec2f307349d",
+  "blind_packet_id": "P-6D4CA9133416B3CF2F",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9b85e01f7ce70c7b7129bbc7abecba22c6a20263a63a97e2cb0310e96a60880e"
+}

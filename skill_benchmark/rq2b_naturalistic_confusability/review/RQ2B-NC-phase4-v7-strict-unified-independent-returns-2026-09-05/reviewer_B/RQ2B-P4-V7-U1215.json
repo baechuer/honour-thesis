@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-26AF7A2A10FABCCC",
+      "missing_material_requirement_or_null": "A concrete retry/backoff policy for the transport, including retry eligibility, Retry-After handling and idempotency, is required.",
+      "rationale": "Generates a typed client from a pinned machine-readable API contract and centralizes authentication, timeout and typed transport errors, but explicitly defers the retry/backoff policy needed by the prompt.",
+      "source_anchor": "Defer cross-cutting policy."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4ABCE90155EA1922",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Provides Algorand-specific TypeScript utilities rather than generating a client from the approved HTTP contract.",
+      "source_anchor": "This skill targets **version 10.x** of `@algorandfoundation/algokit-utils`."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-887B9C8D481821B3",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Runs gene-set enrichment analysis and does not provide the requested HTTP client generation or transport design.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B0BF7E86F22ED50A",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Addresses API versioning and deprecation strategy, not generation of the requested typed TypeScript client and transport.",
+      "source_anchor": "# API Versioning Strategist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B923A6AC54E01BB5",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Addresses decomposing a monolith rather than producing a client from an HTTP contract.",
+      "source_anchor": "# Monolith Decomposer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D7ABA4B2F10A0C79",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Provides localization-project CLI operations rather than HTTP client generation or transport handling.",
+      "source_anchor": "# Multilocale CLI"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F57856C5B9C15339",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Designs an API surface and endpoint specification, but does not generate the requested typed client from the already approved contract.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FDF22428B34EF352",
+      "missing_material_requirement_or_null": "A contract-driven TypeScript API-client generator with centralized transport, authentication, error and retry handling is required.",
+      "rationale": "Provides open-source repository maintenance workflow rather than an HTTP client generation and transport solution.",
+      "source_anchor": "# Open Source Maintainer"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1215",
+  "batch_input_sha256": "14a3594a9d4f009d1a5bb428d7da2f22238c796fe76da85f44f20ec2f307349d",
+  "blind_packet_id": "P-6D4CA9133416B3CF2F",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7e1a824918b94c3c8ecf03fa455eaec6a483d023e9bb60ca7bbabea425623471"
+}
