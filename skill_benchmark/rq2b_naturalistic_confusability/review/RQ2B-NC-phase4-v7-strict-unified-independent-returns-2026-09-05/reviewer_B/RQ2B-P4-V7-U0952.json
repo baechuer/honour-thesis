@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-10105232EF174D5B",
+      "missing_material_requirement_or_null": "Card-data network isolation assessment",
+      "rationale": "Triage game-demo feedback, unrelated to security segmentation.",
+      "source_anchor": "Triage mixed game demo and playtest feedback"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C52373813211805",
+      "missing_material_requirement_or_null": "Network isolation security review",
+      "rationale": "Facilitates sprint retrospectives, unrelated to security controls.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21A2D84C8904617F",
+      "missing_material_requirement_or_null": "Network boundary, remote-access, and automation-agent review",
+      "rationale": "Audits PCI-DSS encryption and key management, relevant to card data but not full network isolation and scope reduction.",
+      "source_anchor": "Audits PCI-DSS v4.0 Requirement 3"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-26E058A0BAD11E05",
+      "missing_material_requirement_or_null": "Network isolation assessment",
+      "rationale": "Audits payment-page scripts, not VLAN boundaries or network paths.",
+      "source_anchor": "PCI-DSS v4.0 Requirements 6.4.3"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-2F35292846EE8C7B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Identifies security risks and infrastructure misconfigurations, directly supporting network diagram, firewall, access-path, evidence-gap, remediation, and retest analysis.",
+      "source_anchor": "Identify security risks and infrastructure misconfigurations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5CDD51DC5E58AADB",
+      "missing_material_requirement_or_null": "Card-data network isolation review",
+      "rationale": "Surveys published user-research evidence, unrelated to infrastructure security.",
+      "source_anchor": "surveying the PUBLISHED user-research evidence"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8D7ED87E4EE18DAF",
+      "missing_material_requirement_or_null": "Company-wide network and VLAN boundary assessment",
+      "rationale": "Hardens a Vercel app at the platform edge, relevant to firewall controls but narrower than the requested environment-wide isolation review.",
+      "source_anchor": "Harden a Vercel app at the platform edge"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E24A6D36D1AFCDCB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Validates PCI-DSS v4.0 network segmentation and scope reduction, directly matching card-data isolation, boundaries, evidence gaps, remediation priorities, and retesting.",
+      "source_anchor": "Validates PCI-DSS v4.0 network segmentation and scope reduction"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0952",
+  "batch_input_sha256": "bde11a166fd28ed5ea20506c0821893c4a04ab01bd3d7e01b08ca25b362366f5",
+  "blind_packet_id": "P-50D1B5F184B0E8E21C",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9f4e8ed082e9f47dbbaeaa52d1a86f7357df19cece0c44c4e1a63741eebac6bb"
+}
