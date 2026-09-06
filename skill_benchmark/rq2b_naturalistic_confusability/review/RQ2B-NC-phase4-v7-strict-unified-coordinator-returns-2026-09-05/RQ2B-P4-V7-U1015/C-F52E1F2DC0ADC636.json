@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-17F9BFD56A64AB912A",
+  "candidate_token": "C-F52E1F2DC0ADC636",
+  "coordinator_decision": "CONFIRMED_PARTIALLY_ADEQUATE",
+  "coordinator_output_sha256": "54995bd800e5e7271f25172c2386e4a4ce5ac2cc2294705cd3519667cc77da38",
+  "fresh_source_render_sha256": "cc6ef55575dcaeb3ef1d3d4616f9a6b4d268737126b9433e34c4a6e30f79e6e6",
+  "rationale": "The source provides application deployment to managed Kubernetes across cloud accounts, including configuration, scaling, previews, secrets, and CI integration, but it does not itself provide the requested Argo CD delivery controller, ingress, multi-environment GitOps sync policy, and identity-handoff procedure. It is a meaningful neighboring deployment route, so the disagreement is resolved as partially adequate.",
+  "reviewer_a_return_sha256": "6e9c2b6148b78a5889a6c9cf7da6ba0bf024c29ca615a3bbd2f6de0f4e6272da",
+  "reviewer_b_return_sha256": "e26a8a7301d3c3783d2fc97a30ff3c0616699c169566c69d45689c9a7a5cc49f",
+  "source_anchor": "# Porter — PaaS on Your Own Cloud"
+}

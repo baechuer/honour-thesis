@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-255494B07752203F",
+      "missing_material_requirement_or_null": "GitOps Kubernetes delivery and cloud-managed identity setup",
+      "rationale": "It surveys published user research and does not configure Kubernetes GitOps.",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4B08A6415FFD9BFD",
+      "missing_material_requirement_or_null": "provider-neutral managed-cluster support if the target is not GKE",
+      "rationale": "It directly covers Argo CD GitOps on GKE, rollout and identity, but is provider-specific while the prompt does not specify GKE.",
+      "source_anchor": "# Complete GitOps/Argo CD Deployment on GKE, From Scratch"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5A7B0C8605A32F24",
+      "missing_material_requirement_or_null": "Kubernetes GitOps deployment",
+      "rationale": "It prepares commercial print files and is unrelated to Kubernetes delivery.",
+      "source_anchor": "# Print Layout"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9F850FCD8331E112",
+      "missing_material_requirement_or_null": "cloud-managed identity integration and provider match",
+      "rationale": "It covers Argo CD GitOps and rollout but targets on-prem infrastructure, not a cloud-managed identity.",
+      "source_anchor": "# Complete GitOps/Argo CD Deployment On-Prem, From Scratch"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D11AABE091A0A048",
+      "missing_material_requirement_or_null": "complete Argo CD delivery controller and multi-environment rollout",
+      "rationale": "It contributes Kubernetes admission security policy, but not the requested GitOps controller, ingress, rollout and identity handoffs.",
+      "source_anchor": "# Kubewarden Admission Policy Configuration"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D198794D66D92085",
+      "missing_material_requirement_or_null": "provider-neutral managed-cluster support if the target is not AKS",
+      "rationale": "It directly covers Argo CD GitOps on AKS, rollout and managed identity, but is provider-specific while the prompt does not specify AKS.",
+      "source_anchor": "# Complete GitOps/Argo CD Deployment on AKS, From Scratch"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F52E1F2DC0ADC636",
+      "missing_material_requirement_or_null": "Argo CD delivery controller, ingress and sync policy detail",
+      "rationale": "It addresses application deployment to managed Kubernetes across cloud accounts, but does not itself provide the requested Argo CD, ingress, multi-environment and identity-handoff procedure.",
+      "source_anchor": "# Porter — PaaS on Your Own Cloud"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F80144C5DA2B412A",
+      "missing_material_requirement_or_null": "GitOps Kubernetes deployment",
+      "rationale": "It facilitates retrospectives and does not configure a Kubernetes delivery system.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1015",
+  "batch_input_sha256": "3ead639d3d838bc8b555174748e078f84892f3f31811fb517a5a8c9a3566faf7",
+  "blind_packet_id": "P-17F9BFD56A64AB912A",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9113e749aa4dfd6fca006cb34573c19e39dccc787ccb1cde4548e81b5d8ac2d2"
+}

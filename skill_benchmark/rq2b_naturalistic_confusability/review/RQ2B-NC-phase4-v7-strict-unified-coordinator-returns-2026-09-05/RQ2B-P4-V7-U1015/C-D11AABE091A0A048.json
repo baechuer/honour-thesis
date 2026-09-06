@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-17F9BFD56A64AB912A",
+  "candidate_token": "C-D11AABE091A0A048",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "coordinator_output_sha256": "e1cc1241fcefd379cafc9a03ecb047c3345bb6cfc29a6dd6345fd025ab4e3de1",
+  "fresh_source_render_sha256": "6566d14ad5c1efcb0a68fefbad22673f1fee1bd9b8ebed17669c6c7417807f7a",
+  "rationale": "The source provides Kubernetes admission-policy configuration and rollout safeguards, but it does not provide the requested GitOps delivery controller, managed-cluster workflow, ingress, multi-environment rollout, or cloud identity handoffs. The shared assessment is therefore inadequate.",
+  "reviewer_a_return_sha256": "6e9c2b6148b78a5889a6c9cf7da6ba0bf024c29ca615a3bbd2f6de0f4e6272da",
+  "reviewer_b_return_sha256": "e26a8a7301d3c3783d2fc97a30ff3c0616699c169566c69d45689c9a7a5cc49f",
+  "source_anchor": "# Kubewarden Admission Policy Configuration"
+}
