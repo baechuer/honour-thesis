@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2AB3E50FD5931F54",
+      "missing_material_requirement_or_null": "article-specific decision memo content and situation-awareness synthesis",
+      "rationale": "It offers reusable document structure and conventions, but is a template-maintenance system rather than an article-specific decision memo workflow.",
+      "source_anchor": "# Document Template System"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2D1A70BE656A4B5F",
+      "missing_material_requirement_or_null": "decision-memo synthesis and affected-party signal extraction",
+      "rationale": "It produces C4-style architecture documentation, unrelated to the supplied news article.",
+      "source_anchor": "# System Architecture"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-35D267AD7CF8A7F3",
+      "missing_material_requirement_or_null": "news-event situation-awareness and affected-party memo synthesis",
+      "rationale": "It produces a written starter plan, but addresses personal investing education rather than turning an article into the requested event memo.",
+      "source_anchor": "# Investment Basics"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7D38FA83835794C1",
+      "missing_material_requirement_or_null": "decision memo from a news article",
+      "rationale": "It is a digital-forensics and incident-response skill, not an article decision-memo workflow.",
+      "source_anchor": "# DFIR"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-983A0411B6048316",
+      "missing_material_requirement_or_null": "news decision-memo synthesis",
+      "rationale": "It performs GO/KEGG enrichment and dot-chart generation, not news analysis.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-986A4A611B5B227C",
+      "missing_material_requirement_or_null": "news decision-memo synthesis",
+      "rationale": "It facilitates sprint retrospectives rather than extracting event, state, significance and follow-up signals from an article.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-98F3FAB2E11BFCF1",
+      "missing_material_requirement_or_null": "news decision-memo synthesis",
+      "rationale": "It builds Slack bots and integrations, not decision memos.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B14A0AF6622E26B2",
+      "missing_material_requirement_or_null": "news decision-memo synthesis",
+      "rationale": "It plans personal emergency funds and does not transform articles into situation-awareness memos.",
+      "source_anchor": "# Emergency Fund Planner"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0665",
+  "batch_input_sha256": "76c3bade481fe82966b1e1f3fc50a14eaaea6c1e6153f41732c23f37274a540b",
+  "blind_packet_id": "P-E1AC561EEBA09D51E7",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "50e7baf6221e501d63b93c39bf03204a6b6136bc13981d0e7315af1ebf34a8ae"
+}
