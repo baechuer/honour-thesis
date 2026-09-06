@@ -1,0 +1,33 @@
+{
+  "schema": "rq2b_nc_v7_invalid_coordinator_return_preservation_v1",
+  "batch_id": "RQ2B-P4-V7-U0087",
+  "reason": "frozen validator rejected canonical coordinator return with V7 coordinator output-hash drift",
+  "validation_status": "INVALID_OUTPUT_HASH_DRIFT",
+  "preserved_returns": [
+    {
+      "candidate_token": "C-0B6A74A4B6A22008",
+      "original_canonical_path": "C-0B6A74A4B6A22008.json",
+      "preserved_path": "superseded_invalid/C-0B6A74A4B6A22008.json",
+      "sha256": "942e16f3224d7e015d5a1b299750b82f890bcf12f4d9e4066879c6baf29c4382"
+    },
+    {
+      "candidate_token": "C-349044801C72D035",
+      "original_canonical_path": "C-349044801C72D035.json",
+      "preserved_path": "superseded_invalid/C-349044801C72D035.json",
+      "sha256": "d6bdbd352e4877fd47782f8c86c136be8c5127a322c275a25c4ad18bef39a0ff"
+    },
+    {
+      "candidate_token": "C-8A1BEB13F923B0FE",
+      "original_canonical_path": "C-8A1BEB13F923B0FE.json",
+      "preserved_path": "superseded_invalid/C-8A1BEB13F923B0FE.json",
+      "sha256": "9a97b8ae15b25ac3e6439afd1f99b70736062eb71ca12957e92845aaeab35470"
+    },
+    {
+      "candidate_token": "C-9F89D2B750937A2D",
+      "original_canonical_path": "C-9F89D2B750937A2D.json",
+      "preserved_path": "superseded_invalid/C-9F89D2B750937A2D.json",
+      "sha256": "e1b4e9882a4ccb86c51bb1d10b2fdcab4eb2d0b7964346c85b32dbc037dfe8a9"
+    }
+  ],
+  "required_next_action": "independent traceable coordinator reissue against the unchanged sealed binding envelope; do not overwrite this preservation record"
+}
