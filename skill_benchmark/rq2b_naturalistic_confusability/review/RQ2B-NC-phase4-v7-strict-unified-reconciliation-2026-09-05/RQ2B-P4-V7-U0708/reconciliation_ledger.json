@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0708",
+  "blind_packet_id": "P-E497B3C8EA2417364F",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0A1BBC60507A13F3",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Clean Data",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Clean up messy spreadsheet data"
+    },
+    {
+      "candidate_token": "C-1DD67BF88EF439C1",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Import and Evolve Workflow",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Imports existing RudderStack workspace resources into YAML files for git-based management"
+    },
+    {
+      "candidate_token": "C-4A0E42A266BD237A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Database Schema Design",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Design storage-model and migration-safety packets"
+    },
+    {
+      "candidate_token": "C-51381F788273C3B0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Rudder CLI Development Workflow",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Validates, previews, and applies RudderStack resource changes via YAML specs"
+    },
+    {
+      "candidate_token": "C-C28D0E33876C6CCE",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Schema Versioning",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Set up and manage database schema versioning"
+    },
+    {
+      "candidate_token": "C-D8466C5DED5FB703",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# RudderStack Transformations with Rudder CLI",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Creates and manages RudderStack transformations and libraries"
+    },
+    {
+      "candidate_token": "C-F9442FB7B38CDE92",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-FFEA919B45405A82",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to read external files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Run GSEA on a ranked gene list"
+    }
+  ],
+  "reviewer_A_return_sha256": "02f40eff1955b4ee756a77283b054c22a19ffb3f618aea03bec8e8052ee9f0a0",
+  "reviewer_B_return_sha256": "343e1da12728cb41e7e9e8374096efcd691bd6aa0523db4afabcedd0dea83cb2",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
