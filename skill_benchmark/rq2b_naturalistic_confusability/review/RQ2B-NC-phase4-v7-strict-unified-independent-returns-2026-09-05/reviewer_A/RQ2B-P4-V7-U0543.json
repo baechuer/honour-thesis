@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1F539A4DF991DD50",
+      "missing_material_requirement_or_null": "A supported, executable brain-MRI-volume generation workflow with prerequisite checks, run steps, evidence logging, and limitations.",
+      "rationale": "This skill only authors prompts for general image-generation platforms and explicitly does not generate images; it cannot carry out or document the requested MRI-volume workflow.",
+      "source_anchor": "What I cannot do:"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-25D072450C1C21A3",
+      "missing_material_requirement_or_null": "A supported synthetic brain MRI generation workflow with executable prerequisites, generation steps, output evidence, and stated limitations.",
+      "rationale": "The source runs gene-set enrichment analysis on ranked gene lists, so it provides no MRI synthesis capability or relevant execution path.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3269F5AD70881CA2",
+      "missing_material_requirement_or_null": "The brain-specific rflow-mr-brain generation path and its corresponding model configuration.",
+      "rationale": "It supplies prerequisite checks, runnable synthetic-MRI generation, recorded output evidence, and non-production limitations, but is explicitly a body-MRI path and directs brain synthesis to a different skill.",
+      "source_anchor": "The upstream README recommends `rflow-mr-brain` instead for brain MRI synthesis"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-77ECF51C037F47CD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supports synthetic brain MRI volumes, specifies prerequisites and an exact supported wrapper command, records settings and output checks, and clearly states non-production and clinical limitations.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8CC4F4EA6B4DDF90",
+      "missing_material_requirement_or_null": "A supported, executable brain-MRI-volume generation workflow with prerequisite checks, run steps, evidence logging, and limitations.",
+      "rationale": "This is a P2P product-search skill and has no MRI or synthetic-volume generation capability.",
+      "source_anchor": "# 1088 Search — 搜索商品"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C1F39A510619FF04",
+      "missing_material_requirement_or_null": "A supported, executable brain-MRI-volume generation workflow with prerequisite checks, run steps, evidence logging, and limitations.",
+      "rationale": "This source organizes notes using PARA; it neither generates imaging volumes nor provides the required technical workflow.",
+      "source_anchor": "# Second Brain"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F7826B5960641B93",
+      "missing_material_requirement_or_null": "A supported, executable brain-MRI-volume generation workflow with prerequisite checks, run steps, evidence logging, and limitations.",
+      "rationale": "The skill is for profiling and improving application performance, not medical-image synthesis or MRI-volume generation.",
+      "source_anchor": "# Performance Optimization"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F8175BBDFA191B1E",
+      "missing_material_requirement_or_null": "A supported synthetic brain MRI generation workflow with executable prerequisites, generation steps, output evidence, and stated limitations.",
+      "rationale": "Although it is an executable synthetic-imaging workflow, it produces CT volumes and masks rather than brain MRI volumes.",
+      "source_anchor": "# NV-Generate-CT (rflow-ct)"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0543",
+  "batch_input_sha256": "e54c44ee61cd931584ff4e8eb6350291a8f64bdb7b244701bbb59251391fca9f",
+  "blind_packet_id": "P-A3F44ED9CBEC194E10",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "bb1735e499bf7f63e5686225bdef80657c1e72255da26cba444772f4587b980c"
+}

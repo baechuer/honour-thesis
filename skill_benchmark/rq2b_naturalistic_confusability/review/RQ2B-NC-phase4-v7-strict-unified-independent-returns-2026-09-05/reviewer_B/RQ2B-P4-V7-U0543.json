@@ -1,0 +1,66 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0543",
+  "batch_input_sha256": "e54c44ee61cd931584ff4e8eb6350291a8f64bdb7b244701bbb59251391fca9f",
+  "blind_packet_id": "P-A3F44ED9CBEC194E10",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1F539A4DF991DD50",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "What I cannot do:",
+      "rationale": "This source only helps compose image-generation prompts and expressly does not generate images; it provides no executable local brain-MRI synthesis workflow or run evidence.",
+      "missing_material_requirement_or_null": "A supported local brain-MRI volume generator with prerequisite checks, execution steps, and settings/output reporting."
+    },
+    {
+      "candidate_token": "C-25D072450C1C21A3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "The documented workflow performs gene-set enrichment on ranked gene lists, not synthetic MRI-volume generation.",
+      "missing_material_requirement_or_null": "A supported local brain-MRI volume generation workflow with prerequisite checks, execution, and output/limitation reporting."
+    },
+    {
+      "candidate_token": "C-3269F5AD70881CA2",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Limitations",
+      "rationale": "It documents prerequisites, a runnable MR wrapper, output records, and limitations, but it is scoped to body rflow-mr and explicitly directs brain synthesis to a different skill.",
+      "missing_material_requirement_or_null": "The supported brain-specific rflow-mr-brain generation wrapper and its corresponding brain-MRI run procedure."
+    },
+    {
+      "candidate_token": "C-77ECF51C037F47CD",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Exact Runnable Surface",
+      "rationale": "It supplies the brain-MRI-specific wrapper, concrete prerequisite and run guidance, recorded output/settings evidence, and explicit synthetic-use limitations.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8CC4F4EA6B4DDF90",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# 1088 Search — 搜索商品",
+      "rationale": "This source is a local P2P product-search workflow and does not address medical-image generation.",
+      "missing_material_requirement_or_null": "A supported local brain-MRI volume generation workflow with prerequisite checks, execution, and output/limitation reporting."
+    },
+    {
+      "candidate_token": "C-C1F39A510619FF04",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Second Brain",
+      "rationale": "This source configures a PARA note-taking system and contains no MRI-generation capability.",
+      "missing_material_requirement_or_null": "A supported local brain-MRI volume generation workflow with prerequisite checks, execution, and output/limitation reporting."
+    },
+    {
+      "candidate_token": "C-F7826B5960641B93",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Performance Optimization",
+      "rationale": "This source concerns web and application performance measurement and optimization, not synthetic MRI-volume generation.",
+      "missing_material_requirement_or_null": "A supported local brain-MRI volume generation workflow with prerequisite checks, execution, and output/limitation reporting."
+    },
+    {
+      "candidate_token": "C-F8175BBDFA191B1E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# NV-Generate-CT (rflow-ct)",
+      "rationale": "Although it provides a synthetic-imaging workflow, it is explicitly for CT volumes and masks rather than brain MRI volumes.",
+      "missing_material_requirement_or_null": "A supported brain-MRI, rather than CT, volume-generation workflow with prerequisite checks, execution, and output/limitation reporting."
+    }
+  ],
+  "reviewer_output_sha256": "633d886adeba2e216296a2ebc808f7fb69b81ce509ceaf7d21a60d79234f3bcf"
+}

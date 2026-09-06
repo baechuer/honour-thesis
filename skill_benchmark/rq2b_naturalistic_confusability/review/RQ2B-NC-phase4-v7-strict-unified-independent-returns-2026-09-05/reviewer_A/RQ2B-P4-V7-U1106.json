@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-147A215A62B937CA",
+      "missing_material_requirement_or_null": "A concrete customer dashboard design covering read queries, customer filters/details, confirmed audited refund processing, server-side role enforcement, reusable lookup, and release review.",
+      "rationale": "It supports code-first internal apps, scripts, tables, and approval steps, but it does not provide the requested customer-investigation and protected-refund design.",
+      "source_anchor": "# Windmill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-376A4CFA8298D0B4",
+      "missing_material_requirement_or_null": "Guidance for a database/API-backed customer operations dashboard, including customer lookup, protected refund actions, audit events, server-side permissions, and release review.",
+      "rationale": "This is presentation-table formatting guidance, not an internal subscription-operations application design.",
+      "source_anchor": "# Data Table Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-501C14D3DAB8476D",
+      "missing_material_requirement_or_null": "Guidance for the customer dashboard, billing API integration, investigation UI, confirmed audited refund workflow, server-side authorization, reusable lookup, and release review.",
+      "rationale": "It addresses database migrations and deployment rollback, but not the requested operational dashboard or billing actions.",
+      "source_anchor": "# Schema Versioning"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-506F5E36A4D4A05F",
+      "missing_material_requirement_or_null": "An explicit server-side role authorization design for refunds, refund audit-event implementation, reusable customer lookup, and a concrete change-review plan.",
+      "rationale": "It covers low-code database/API tools, tables, refund triggering, data refresh, and general permissions/audit logging, but leaves several required controls and reusable/release details unspecified.",
+      "source_anchor": "### Events and Actions"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-73F0D6A9A89E87F3",
+      "missing_material_requirement_or_null": "Guidance for building a relational-database and billing-API customer operations dashboard with customer investigation, protected refunds, auditing, authorization, and release review.",
+      "rationale": "This skill routes web-scraping work and provides no material for the requested internal operations application.",
+      "source_anchor": "# scrapling - routing-first adaptive web scraping"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AE1478AE3730B861",
+      "missing_material_requirement_or_null": "Guidance for building a relational-database and billing-API customer operations dashboard with customer investigation, protected refunds, auditing, authorization, and release review.",
+      "rationale": "This is a published user-research evidence-survey procedure, not implementation guidance for an internal dashboard.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-BF3C23EC0CDBDEDD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides server-side read SQL and billing REST queries, table bindings and refund confirmation/refresh, plus audit logging, role permissions, reusable modules, and Git-based change review.",
+      "source_anchor": "## Guidelines"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D2A1491F76303DA8",
+      "missing_material_requirement_or_null": "Guidance for building a relational-database and billing-API customer operations dashboard with customer investigation, protected refunds, auditing, authorization, and release review.",
+      "rationale": "This skill handles PDF extraction and generation rather than internal operations application design.",
+      "source_anchor": "## Overview"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1106",
+  "batch_input_sha256": "bd0e08e7de89406a08aea52f52961452315dca756bd74ecf86331740ea691b8f",
+  "blind_packet_id": "P-E55D83D0AC6CF5282C",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "dcf1a5d9735c2ed14b395cc6d4e913916d0f9ac069b7ac4212ac0ebe0fd012d6"
+}
