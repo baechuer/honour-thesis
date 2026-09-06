@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-245DE8368D10D55A",
+      "missing_material_requirement_or_null": "A procedure for authorized network evidence capture, protected handling, protocol-anomaly analysis, artifact extraction, and findings documentation.",
+      "rationale": "Browser automation instructions do not provide a network evidence-collection or forensic-analysis workflow.",
+      "source_anchor": "# Dev Browser"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6233E3D4EF126B33",
+      "missing_material_requirement_or_null": "An end-to-end authorized packet-collection, cross-protocol analysis, artifact-extraction, and findings-log procedure.",
+      "rationale": "Transit Gateway configuration and flow-log controls do not establish the requested traffic capture and investigative analysis workflow.",
+      "source_anchor": "## Security considerations"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-831E89B3C7577831",
+      "missing_material_requirement_or_null": "An explicit pre-capture written-authorization, protected-storage access-control, and retention-record procedure.",
+      "rationale": "It gives strong capture, minimization, traffic-analysis, artifact, timestamp, and handling guidance, but lacks the requested explicit authorization and storage/access/retention governance plan.",
+      "source_anchor": "## Capture and Handling"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C8940DAF7B411AC4",
+      "missing_material_requirement_or_null": "A network evidence-collection and forensic traffic-analysis workflow.",
+      "rationale": "This is a bulk-expression pathway-analysis workflow, not a network evidence-collection or malware-traffic investigation procedure.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D01C4E605513A3D6",
+      "missing_material_requirement_or_null": "A defined protected-storage, access-control, and retention-record procedure for collected evidence.",
+      "rationale": "It covers authorization, scoped capture, duration and BPF filters, packet analysis, and file extraction, but does not define the requested storage/access/retention evidence controls.",
+      "source_anchor": "## Guidelines"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-D7CE5FC7E094DE20",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly requires written authorization, documented scope and handling requirements, capture interface/duration/filters, secure encrypted storage and access controls, retention/deletion, cross-protocol anomaly analysis, necessary artifact extraction, and timestamped audit/findings documentation.",
+      "source_anchor": "### Network Analysis Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F666E670FE3DC84E",
+      "missing_material_requirement_or_null": "A passive network-evidence collection and malware-traffic analysis workflow rather than an OT discovery and vulnerability-assessment procedure.",
+      "rationale": "This material focuses on OT discovery, enumeration, vulnerability research, and assessment rather than the requested packet-evidence collection and traffic investigation.",
+      "source_anchor": "# OT Security Assessment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FCF0FCDFE81D06FF",
+      "missing_material_requirement_or_null": "A network evidence-collection and forensic traffic-analysis procedure.",
+      "rationale": "Data-architecture documentation guidance does not address authorized traffic capture, anomaly analysis, artifact handling, or findings logging.",
+      "source_anchor": "# Data Architecture"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0920",
+  "batch_input_sha256": "eb81fe8a4507af63a85446898ef96f9809d9acdbb5edfd87ec9ed44b0580d34a",
+  "blind_packet_id": "P-908E66F1ECF4EFFB4F",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "fbdd99315b25409c989d3c97d491add7cb173faedbcfea5c9bc098c81246e695"
+}

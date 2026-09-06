@@ -1,0 +1,66 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0130",
+  "batch_input_sha256": "154115e32f2e93bc341169b16fb63a48918f58c960f17b859c96aeb7bcb74e9f",
+  "blind_packet_id": "P-730AD68270D1148B66",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-226EEF227C03A08F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Step 0: Nuclear Scope Challenge + Mode Selection",
+      "rationale": "It challenges the premise and requires alternatives, but its mandatory mode-selection and exhaustive interactive process does not directly yield the requested concise adversarial report.",
+      "missing_material_requirement_or_null": "A direct single-pass proposal-review format that produces concise challenges and alternatives without mandatory staged mode selection."
+    },
+    {
+      "candidate_token": "C-3392EE47C04B0D26",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "### Attack Vectors",
+      "rationale": "Its multi-angle adversarial vectors, severity-ranked findings, and recommended mitigations directly support stress-testing a proposal's rationale, approach, assumptions, evidence gaps, and alternatives.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-4C55373D60F44140",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## The Process",
+      "rationale": "It supplies a fresh-context adversarial critique for non-trivial decisions, but it is organized around in-flight technical decisions and repeated orchestration rather than a concise proposal-level review.",
+      "missing_material_requirement_or_null": "A proposal-oriented report that directly examines why, what, and how while offering concrete alternatives."
+    },
+    {
+      "candidate_token": "C-684C8F24274E1DC5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "This is a narrowly scoped Django/PostgreSQL migration-review procedure, not a method for adversarially reviewing a general proposal.",
+      "missing_material_requirement_or_null": "A general proposal stress-test framework covering motivation, scope, approach, assumptions, evidence, and alternatives."
+    },
+    {
+      "candidate_token": "C-988828DFB0318D87",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "It runs gene-set enrichment analysis on ranked gene lists and provides no proposal-review or adversarial-analysis method.",
+      "missing_material_requirement_or_null": "A general proposal stress-test framework covering motivation, scope, approach, assumptions, evidence, and alternatives."
+    },
+    {
+      "candidate_token": "C-B1C9F7430379EFDD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to use this skill",
+      "rationale": "It reviews code changes, diffs, and merge requests; it does not evaluate a pre-specification proposal's rationale, design, or alternatives.",
+      "missing_material_requirement_or_null": "A proposal-focused adversarial review method independent of a code-change packet."
+    },
+    {
+      "candidate_token": "C-C4BA912892F395F0",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Report",
+      "rationale": "It explicitly challenges a proposal's motivation, scope, and high-level approach, identifies weak evidence and assumptions, and requires concrete alternatives with a direct readiness report.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E02426173E634EF0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Inputs to collect",
+      "rationale": "It facilitates sprint retrospectives with team-process inputs and action items, rather than reviewing a proposal before specifications are written.",
+      "missing_material_requirement_or_null": "A proposal-focused adversarial review method covering why, what, how, assumptions, evidence, and alternatives."
+    }
+  ],
+  "reviewer_output_sha256": "4bdd67339a7caba18921250216d41c37fab53520b056ce94b002bbf83dad55c6"
+}

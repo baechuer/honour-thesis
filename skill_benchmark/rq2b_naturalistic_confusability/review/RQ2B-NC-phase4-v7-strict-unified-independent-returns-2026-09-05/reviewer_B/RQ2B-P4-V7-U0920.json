@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-245DE8368D10D55A",
+      "missing_material_requirement_or_null": "A network evidence-collection workflow covering authorized capture planning, analysis, artifact minimization, and an auditable findings record.",
+      "rationale": "This is a browser-automation CLI description and contains no packet-capture or network-forensic collection procedure.",
+      "source_anchor": "# Dev Browser"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6233E3D4EF126B33",
+      "missing_material_requirement_or_null": "A procedure for controlled packet capture, cross-protocol anomaly analysis, necessary-artifact extraction, and findings logging.",
+      "rationale": "The material configures AWS Transit Gateway routing and related cloud controls rather than conducting the requested network evidence collection and analysis.",
+      "source_anchor": "# AWS Transit Gateway"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-831E89B3C7577831",
+      "missing_material_requirement_or_null": "A pre-capture record that explicitly defines protected storage, access controls, and retention for the collection.",
+      "rationale": "It supplies substantial packet-capture handling and offline multi-protocol forensic analysis, but does not provide the requested pre-capture storage, access-control, and retention plan and record.",
+      "source_anchor": "## Capture and Handling"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C8940DAF7B411AC4",
+      "missing_material_requirement_or_null": "A network packet-evidence collection and malware-traffic analysis workflow.",
+      "rationale": "This is a bulk-expression pathway-analysis and heatmap workflow, unrelated to network evidence collection.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D01C4E605513A3D6",
+      "missing_material_requirement_or_null": "A documented pre-capture protected-storage, access-control, retention, and findings-log procedure.",
+      "rationale": "It covers interface selection, bounded capture, filters, protocol inspection, and artifact export, but lacks the requested controls and records for protected storage, access, retention, handling, and findings.",
+      "source_anchor": "## Guidelines"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-D7CE5FC7E094DE20",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It specifies authorization, interface and scope documentation, duration and minimization filters before capture; provides cross-protocol anomaly analysis and artifact extraction; and requires encrypted storage, restricted access, retention/deletion handling, and an audit log with timestamps, scope, handling, and findings.",
+      "source_anchor": "### 1. Authorization Verification"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F666E670FE3DC84E",
+      "missing_material_requirement_or_null": "A passive packet-evidence collection and forensic traffic-analysis workflow with capture controls and necessary-artifact handling.",
+      "rationale": "The material is an active OT discovery and vulnerability-assessment procedure, not a controlled collection and analysis of network traffic evidence.",
+      "source_anchor": "# OT Security Assessment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FCF0FCDFE81D06FF",
+      "missing_material_requirement_or_null": "A network capture, forensic analysis, evidence-handling, and findings-reporting procedure.",
+      "rationale": "This describes how to document a software system's data architecture, not how to collect or analyze network evidence.",
+      "source_anchor": "# Data Architecture"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0920",
+  "batch_input_sha256": "eb81fe8a4507af63a85446898ef96f9809d9acdbb5edfd87ec9ed44b0580d34a",
+  "blind_packet_id": "P-908E66F1ECF4EFFB4F",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "cb888a6472ecae1e1fc7052780af023820f858abe6835e854f03c634fec9d6d8"
+}

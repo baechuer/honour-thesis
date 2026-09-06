@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-25D467826AFCA2BE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides a staff-level PR review workflow covering patch and full-file context, correctness, security, tests, maintainability, integration, actionable severities, and an explicit merge verdict.",
+      "source_anchor": "## Review Execution Order"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6581135E68C1E7F6",
+      "missing_material_requirement_or_null": "A staff-level PR review procedure covering the patch and full changed files, the requested review dimensions, five finding levels, concrete fixes for major findings, and an explicit merge verdict.",
+      "rationale": "Configures AWS MCP servers and does not provide a PR-review method or the required review output.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-925E717CD6488AF9",
+      "missing_material_requirement_or_null": "A staff-level PR review procedure covering the patch and full changed files, the requested review dimensions, five finding levels, concrete fixes for major findings, and an explicit merge verdict.",
+      "rationale": "Defines a security prior-art research workflow rather than review of a pull request and its changed code.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-ABBA564A141D48D1",
+      "missing_material_requirement_or_null": "An output contract that maps findings to merge blocker, major, minor, optional suggestion, and note; requires a concrete fix for every blocker or major; and ends with an explicit merge verdict.",
+      "rationale": "Offers broad, structured multi-lens PR review with context gathering and actionable severity-graded findings, but its P0-P3 report omits the requested five-level contract and explicit merge verdict.",
+      "source_anchor": "## HIGH-LEVEL WORKFLOW"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B862B8546C83A485",
+      "missing_material_requirement_or_null": "A complete PR review procedure that reads the patch and full changed files; reviews correctness, security, tests, maintainability, and integration; and returns the requested five-level actionable findings with an explicit merge verdict.",
+      "rationale": "Describes an end-to-end delivery workflow; its short code-review stage lacks the requested review coverage and return format.",
+      "source_anchor": "### 10. Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C17036A46BDB4CFA",
+      "missing_material_requirement_or_null": "A staff-level PR review procedure covering the patch and full changed files, the requested review dimensions, five finding levels, concrete fixes for major findings, and an explicit merge verdict.",
+      "rationale": "Guides Sentry setup for a React Router application and contains no PR-review workflow or requested finding format.",
+      "source_anchor": "# Sentry React Router Framework SDK"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E62E112BF7ACE213",
+      "missing_material_requirement_or_null": "A staff-level PR review procedure covering the patch and full changed files, the requested review dimensions, five finding levels, concrete fixes for major findings, and an explicit merge verdict.",
+      "rationale": "Runs an AWS security diff scan only and does not provide the complete multi-dimension PR review or required response contract.",
+      "source_anchor": "# AWS Security Agent — Diff Scan"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F05D61BE95BC9B2E",
+      "missing_material_requirement_or_null": "A staff-level PR review procedure covering the patch and full changed files, the requested review dimensions, five finding levels, concrete fixes for major findings, and an explicit merge verdict.",
+      "rationale": "Consumes a pre-existing structural review report rather than independently reviewing a pull request and its changed code.",
+      "source_anchor": "# Receiving Thermo Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1172",
+  "batch_input_sha256": "7e52f8121b08130dc0e654a1b858afc3ff615d2c79c2b72b7b4032c23493b7ec",
+  "blind_packet_id": "P-D4881CDDE2A0D1A2B9",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e032bcc99e6f67ea39e8340d5fc5ec4b825f964ef8bbb76d8852f6aa7e20a900"
+}
