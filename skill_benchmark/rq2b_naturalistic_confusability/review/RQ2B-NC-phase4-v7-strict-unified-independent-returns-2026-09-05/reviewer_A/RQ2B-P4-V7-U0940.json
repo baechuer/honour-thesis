@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-225C5733140DE164",
+      "missing_material_requirement_or_null": "A workflow that converts the existing HTML report into a shareable editable document while preserving its supplied content and charts.",
+      "rationale": "Generates new reports from provided data rather than converting an existing HTML report into an editable stakeholder document.",
+      "source_anchor": "This skill enables automatic generation of professional data reports. Create dashboards, KPI summaries, and analytical reports with charts, tables, and insights from your data."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-28BC03AF858411B0",
+      "missing_material_requirement_or_null": "Editable-document output and a review/comment-capable sharing workflow.",
+      "rationale": "It preserves a static HTML report in a faithful PDF, but PDF output does not meet the requested editable document deliverable.",
+      "source_anchor": "The expected path is static HTML -> Chrome headless print-to-PDF -> PDF verification."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-635CED6923B95EB4",
+      "missing_material_requirement_or_null": "A document-oriented conversion that preserves the full report structure and supports document review/comments.",
+      "rationale": "Provides an editable Slides deck, but explicitly transforms the report into slide-native communication instead of delivering the requested editable document artifact.",
+      "source_anchor": "The output should be a deck, not a pasted report."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-77C8D82F9A186CCA",
+      "missing_material_requirement_or_null": "An HTML-report-to-editable-document conversion and sharing workflow.",
+      "rationale": "This is guidance for JavaScript in n8n Code nodes and supplies no report conversion or document artifact workflow.",
+      "source_anchor": "Expert guidance for writing JavaScript code in n8n Code nodes."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7B229194D041EE9D",
+      "missing_material_requirement_or_null": "HTML-to-editable-document conversion that preserves report charts and a shareable review artifact.",
+      "rationale": "It normalises existing documents, but explicitly excludes format conversion where preserving layout is the main goal.",
+      "source_anchor": "Converting format while preserving layout as the main goal."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B5B2134CE76594FD",
+      "missing_material_requirement_or_null": "An HTML-report-to-editable-document conversion and sharing workflow.",
+      "rationale": "Nx workspace configuration does not address report conversion, editable documents, or stakeholder review.",
+      "source_anchor": "Configure and optimize Nx monorepo workspaces."
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E860F781DD1EBB69",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly converts an existing HTML analytics report into DOCX or a shareable Drive document, with checks to preserve report sections, charts, tables, links, and readable document structure.",
+      "source_anchor": "The expected path is HTML -> DOCX -> Drive upload."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F3B1EE60EF991C77",
+      "missing_material_requirement_or_null": "An HTML-report-to-editable-document conversion and sharing workflow.",
+      "rationale": "This defines a security prior-art survey workflow, not document conversion or report-preserving artifact delivery.",
+      "source_anchor": "`security-prior-art-survey` — SKILL.md"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0940",
+  "batch_input_sha256": "f61a74c58efd1df022697863c7100cda369063ca08d919d4d4d0c092664e716a",
+  "blind_packet_id": "P-CD70FE2DD607C75180",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "43dfad1df170249b89ea59f08bdcce69d66dc916adc8f534865ebe82190996f0"
+}

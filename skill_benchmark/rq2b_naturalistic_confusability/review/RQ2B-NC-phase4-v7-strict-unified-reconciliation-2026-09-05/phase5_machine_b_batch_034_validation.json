@@ -1,0 +1,46 @@
+{
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-034",
+  "manifest_lf_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+  "groups": [
+    "RQ2B-P4-V7-U0085",
+    "RQ2B-P4-V7-U0940",
+    "RQ2B-P4-V7-U1167"
+  ],
+  "current_execution_state": {
+    "RQ2B-P4-V7-U0085": "UNSTARTED",
+    "RQ2B-P4-V7-U0940": "UNSTARTED",
+    "RQ2B-P4-V7-U1167": "UNSTARTED"
+  },
+  "source_disjointness": {
+    "pairwise_source_overlap_count": 0,
+    "status": "PASS"
+  },
+  "checks": {
+    "packet_hash": "PASS",
+    "schema": "PASS",
+    "blindness": "PASS",
+    "ab_completeness": "PASS",
+    "return_validation": "PASS",
+    "coordinator_validation": "PASS"
+  },
+  "selected_return_count": 6,
+  "coordinator_case_count": 4,
+  "coordinator_tokens": [
+    "C-28BC03AF858411B0",
+    "C-6D5620A53345334F",
+    "C-7B229194D041EE9D",
+    "C-C337CFD0B8BD08D8"
+  ],
+  "fully_acceptable_assessment_signals": 2,
+  "selected_reissues": {
+    "RQ2B-P4-V7-U1167": {
+      "reviewer_A": "RQ2B-P4-V7-U1167.reissue-01.json",
+      "coordinator_C-6D5620A53345334F": "C-6D5620A53345334F.reissue-01.json"
+    }
+  },
+  "preserved_unselected_coordinator_returns": [
+    "C-17ACD3F76FFEAB50.json",
+    "C-6D5620A53345334F.json"
+  ],
+  "validation": "PASS"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0D8471C39ADE0ED0",
+      "missing_material_requirement_or_null": "A workflow for dependency-aware, balanced survey-response batching with a six-worker cap, verified aggregation and quality control, and failed-batch fallback.",
+      "rationale": "The source is for database-query performance tuning, not processing independently collected survey responses.",
+      "source_anchor": "# Database Optimizer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-17ACD3F76FFEAB50",
+      "missing_material_requirement_or_null": "A concrete survey-response batch-assignment table, a six-worker configuration, and response-level quality-control and failed-batch recovery procedures.",
+      "rationale": "It covers dependency-aware task decomposition, bounded parallelism, aggregation, and partial-failure handling, but not the requested response-processing plan.",
+      "source_anchor": "## Implementation"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3583C1547E19D97E",
+      "missing_material_requirement_or_null": "Balanced survey-response batch assignment, an explicit six-worker limit, verified result aggregation and quality control.",
+      "rationale": "It provides parallel and dependency pipeline patterns plus a retry/reassign fallback, but lacks the requested survey-specific batching and verification detail.",
+      "source_anchor": "## Task Orchestration"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6D5620A53345334F",
+      "missing_material_requirement_or_null": "Balanced survey-response batch assignment, an explicit six-worker limit, aggregation and quality-control steps, and a failed-batch fallback.",
+      "rationale": "It supports milestones, role splits, dependencies, and risk mitigation, but does not specify an operational plan for processing survey responses.",
+      "source_anchor": "### Phase 5: Execution plan"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-76F47CC984F1656F",
+      "missing_material_requirement_or_null": "A dependency-aware workflow to batch 480 survey responses across at most six workers, aggregate verified outputs, and recover a failed batch.",
+      "rationale": "The source schedules an individual’s deep-work calendar rather than executing or coordinating survey-response processing.",
+      "source_anchor": "# Deep Work Planner"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A410D9F8C6B37557",
+      "missing_material_requirement_or_null": "A dependency-aware workflow to batch 480 survey responses across at most six workers, aggregate verified outputs, and recover a failed batch.",
+      "rationale": "The source is a gene-set enrichment analysis CLI specification, not a survey-response execution-planning workflow.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AE221B9A64BED6F1",
+      "missing_material_requirement_or_null": "A dependency-aware workflow to batch 480 survey responses across at most six workers, aggregate verified outputs, and recover a failed batch.",
+      "rationale": "The source governs research landscape surveys and reusable research artifacts, not operational processing of survey responses.",
+      "source_anchor": "# Survey"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BF39EB4557052B98",
+      "missing_material_requirement_or_null": "A concrete survey-response batch-assignment table, a six-worker limit, response-level quality control, and a failed-batch fallback.",
+      "rationale": "It gives dependency-aware decomposition, safe parallelization, synthesis, and verification, but not the required survey-processing controls.",
+      "source_anchor": "## Coordinator Lifecycle"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1167",
+  "batch_input_sha256": "cece5e6fc0228b93b6807634355158c61a26198ed39fb77f1b83ab5b0d63269b",
+  "blind_packet_id": "P-3449DA60CA349C53CE",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "251a3319d658c06d3d030eb118abeecb6cdd417e58cf91920ae2d841ce00e2b5"
+}

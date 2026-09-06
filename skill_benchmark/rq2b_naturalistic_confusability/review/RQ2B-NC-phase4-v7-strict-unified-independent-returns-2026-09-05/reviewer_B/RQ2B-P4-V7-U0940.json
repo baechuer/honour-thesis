@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-225C5733140DE164",
+      "missing_material_requirement_or_null": "A conversion workflow that turns the existing HTML report into a shareable editable document while preserving its supplied charts and claims.",
+      "rationale": "This skill generates new data reports from data; it does not convert a supplied HTML report into an editable stakeholder document.",
+      "source_anchor": "# Report Generator Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-28BC03AF858411B0",
+      "missing_material_requirement_or_null": "An editable document output and review/comment workflow rather than a static PDF conversion.",
+      "rationale": "The skill converts existing HTML reports to PDF, which is not the requested editable document artifact.",
+      "source_anchor": "# Report To PDF"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-635CED6923B95EB4",
+      "missing_material_requirement_or_null": "A shareable editable document (such as DOCX or Google Doc), rather than a slide deck, with document-oriented review and comments.",
+      "rationale": "It converts an HTML report into an editable deck and preserves report evidence and charts, but its deliverable is Google Slides rather than the requested document artifact.",
+      "source_anchor": "# Report To Google Slides"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-77C8D82F9A186CCA",
+      "missing_material_requirement_or_null": "HTML-report-to-editable-document conversion that preserves report content and charts for stakeholder review.",
+      "rationale": "This source provides JavaScript guidance for n8n Code nodes and has no document-conversion capability.",
+      "source_anchor": "# JavaScript Code Node"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7B229194D041EE9D",
+      "missing_material_requirement_or_null": "An HTML-to-shareable-editable-document conversion and chart-preservation workflow.",
+      "rationale": "It focuses on retaining original document content and structure while improving readability, but does not specify converting an HTML analytics report into a shareable editable artifact with its charts preserved.",
+      "source_anchor": "# Document Normaliser"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B5B2134CE76594FD",
+      "missing_material_requirement_or_null": "HTML-report-to-editable-document conversion that preserves report content and charts for stakeholder review.",
+      "rationale": "This source concerns Nx monorepo configuration and does not support report-to-document conversion.",
+      "source_anchor": "# Nx Workspace Patterns"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E860F781DD1EBB69",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly converts an existing HTML analytics report to a Google Doc or DOCX shareable document, preserves report content and charts, and verifies the delivered document.",
+      "source_anchor": "# Report To Google Doc"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F3B1EE60EF991C77",
+      "missing_material_requirement_or_null": "HTML-report-to-editable-document conversion that preserves report content and charts for stakeholder review.",
+      "rationale": "This source defines a security prior-art survey workflow, not document conversion or stakeholder report delivery.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0940",
+  "batch_input_sha256": "f61a74c58efd1df022697863c7100cda369063ca08d919d4d4d0c092664e716a",
+  "blind_packet_id": "P-CD70FE2DD607C75180",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "fe69e31473d95d0bd4ddc42b9f0120307043c932bc38f1aeb3603ae816b5a65e"
+}

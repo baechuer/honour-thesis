@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0D8471C39ADE0ED0",
+      "missing_material_requirement_or_null": "A dependency-aware multi-worker survey-classification execution protocol with balanced batching, a six-worker limit, verified aggregation, quality control, and failed-batch recovery.",
+      "rationale": "Database performance tuning does not provide a process for classifying survey responses with coordinated workers.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-17ACD3F76FFEAB50",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It supplies task decomposition with dependencies, bounded concurrent execution, result aggregation, conflict handling, and partial-failure handling that can be instantiated as the requested classification plan.",
+      "source_anchor": "## Best Practices"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3583C1547E19D97E",
+      "missing_material_requirement_or_null": "An explicit dependency-check and balanced batch-assignment/verified-aggregation quality-control protocol for the survey-classification workflow.",
+      "rationale": "It supports parallel tasks, a sequential dependency pipeline, worker limits, and retries, but does not specify the requested batch assignment and verified merge controls.",
+      "source_anchor": "### Parallel Execution"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6D5620A53345334F",
+      "missing_material_requirement_or_null": "A concrete balanced worker-batch table with a six-worker concurrency limit, verified output aggregation, and failed-batch fallback for survey classification.",
+      "rationale": "Its execution-plan material covers milestones, responsibilities, dependencies, and handoffs, but not the operational batching and recovery controls requested.",
+      "source_anchor": "### Phase 5: Execution plan"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-76F47CC984F1656F",
+      "missing_material_requirement_or_null": "A dependency-aware multi-worker survey-classification execution protocol with balanced batching, a six-worker limit, verified aggregation, quality control, and failed-batch recovery.",
+      "rationale": "This is a personal focus-scheduling guide rather than a multi-worker classification execution method.",
+      "source_anchor": "## Step 3: Batch the shallow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A410D9F8C6B37557",
+      "missing_material_requirement_or_null": "A dependency-aware multi-worker survey-classification execution protocol with balanced batching, a six-worker limit, verified aggregation, quality control, and failed-batch recovery.",
+      "rationale": "The skill is limited to gene-set enrichment analysis and does not address survey-response classification orchestration.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AE221B9A64BED6F1",
+      "missing_material_requirement_or_null": "A dependency-aware multi-worker survey-classification execution protocol with balanced batching, a six-worker limit, verified aggregation, quality control, and failed-batch recovery.",
+      "rationale": "This source is for bounded landscape research and explicitly routes task planning elsewhere.",
+      "source_anchor": "## When not to use this skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BF39EB4557052B98",
+      "missing_material_requirement_or_null": "A concrete balanced batch-assignment table, a configurable six-worker resource limit, and failed-batch recovery rules for survey classification.",
+      "rationale": "It provides decomposition, dependency-aware concurrency guidance, synthesis, and verification, but lacks the requested operational batching, capacity, and recovery detail.",
+      "source_anchor": "## Concurrency Rules"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1167",
+  "batch_input_sha256": "cece5e6fc0228b93b6807634355158c61a26198ed39fb77f1b83ab5b0d63269b",
+  "blind_packet_id": "P-3449DA60CA349C53CE",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256": "9d6fd5d145d83eb5bc5e57281f2424dc369e1e158df4a419d55ae238ae4d8747"
+}

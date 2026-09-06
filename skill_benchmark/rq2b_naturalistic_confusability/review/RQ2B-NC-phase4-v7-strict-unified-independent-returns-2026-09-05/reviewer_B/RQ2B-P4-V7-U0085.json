@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2AD9A01ED8BD1474",
+      "missing_material_requirement_or_null": "A distributed-tracing workflow that loads the supplied fixture and attributes checkout latency to spans/services.",
+      "rationale": "This source builds Slack bots and contains no procedure for analysing cross-service trace data.",
+      "source_anchor": "name: slack-bot-builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2FEFA6BC92B17D76",
+      "missing_material_requirement_or_null": "Trace ingestion and cross-service span analysis for the supplied checkout trace fixture.",
+      "rationale": "It covers latency alert rules and incident investigation, but not diagnosis from an existing distributed trace.",
+      "source_anchor": "name: alerting-oncall"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8E8439292DF0119B",
+      "missing_material_requirement_or_null": "A service-agnostic distributed-trace workflow for checkout, rather than Qdrant-specific search tuning.",
+      "rationale": "It offers latency troubleshooting, but its diagnostic scope is Qdrant search rather than a multi-service checkout trace.",
+      "source_anchor": "name: qdrant-search-speed-optimization"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8FAFCBA83586FCFF",
+      "missing_material_requirement_or_null": "A technical workflow for inspecting the supplied trace and locating latency across services.",
+      "rationale": "This source surveys published user-research evidence and does not analyse operational traces.",
+      "source_anchor": "name: user-research-prior-art-survey"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C337CFD0B8BD08D8",
+      "missing_material_requirement_or_null": "Instructions for reading the supplied JSON trace and attributing latency among checkout services.",
+      "rationale": "It is relevant to Shopify checkout work and performance, but provides no cross-service trace-diagnosis procedure.",
+      "source_anchor": "name: shopify-expert"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D60055D5970F9F7E",
+      "missing_material_requirement_or_null": "A workflow for inspecting the supplied generic checkout trace across services and isolating latency spans.",
+      "rationale": "Its OpenTelemetry-based tracing can expose latency, but the guidance is scoped to LLM applications and lacks a procedure for the supplied checkout trace.",
+      "source_anchor": "name: langtrace"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D9888ACD346691B5",
+      "missing_material_requirement_or_null": "A trace-based diagnosis procedure for existing checkout latency data.",
+      "rationale": "It maps distributed-system dependencies and failure modes, but is for designing chaos experiments rather than reading a checkout trace.",
+      "source_anchor": "name: chaos-engineer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FF64EBACC125CEF6",
+      "missing_material_requirement_or_null": "A distributed-tracing procedure that diagnoses latency from the supplied fixture.",
+      "rationale": "This source facilitates sprint retrospectives and provides no operational trace analysis.",
+      "source_anchor": "name: Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0085",
+  "batch_input_sha256": "23cf596c1afbdb27f3d8d9917a1c79aab212ae673abd34350186ae7afca19535",
+  "blind_packet_id": "P-35BA12AD6AF9C3B5CA",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7891f0b4528b301ee8b00332f56d88b4d572cd1d2824b8b682e5a6bfd7a7f369"
+}
