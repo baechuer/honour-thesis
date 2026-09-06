@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-08401258F06D5F75",
+      "missing_material_requirement_or_null": "binary reverse engineering and CTF analysis",
+      "rationale": "It surveys visual and interaction conventions and is unrelated to executable analysis.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2E136B0E14CF9EBB",
+      "missing_material_requirement_or_null": "packed-binary-specific static and dynamic analysis workflow",
+      "rationale": "It reverse engineers undocumented systems and extracts specifications, but is not CTF- and packed-executable-specific.",
+      "source_anchor": "# Spec Miner"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-418D59247D38AA1F",
+      "missing_material_requirement_or_null": "primary reverse-engineering analysis before exploitation",
+      "rationale": "It applies to CTF binaries, but its central focus is exploitation after the vulnerability is understood rather than determining packed-program behavior.",
+      "source_anchor": "# CTF Binary Exploitation (Pwn)"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5B177FEA3F57385A",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers reverse engineering packed binaries in CTF challenges using static and controlled dynamic analysis to understand behavior and solve the target.",
+      "source_anchor": "# CTF Reverse Engineering"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-76CD360F5D1ADC6F",
+      "missing_material_requirement_or_null": "native executable reverse engineering",
+      "rationale": "It targets HTTP and web application exploitation and explicitly excludes standalone native-binary reverse engineering.",
+      "source_anchor": "# CTF Web Exploitation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-976CDA56F896F813",
+      "missing_material_requirement_or_null": "native binary reverse engineering",
+      "rationale": "It facilitates retrospectives and does not analyze executables.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D15D8E4A5AA88C97",
+      "missing_material_requirement_or_null": "binary reverse engineering",
+      "rationale": "It performs commercial audience analysis from public evidence, not CTF binary analysis.",
+      "source_anchor": "# Portray Audience"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F2D1E222910927EF",
+      "missing_material_requirement_or_null": "binary reverse engineering",
+      "rationale": "It implements mobile push notification delivery and does not analyze binaries.",
+      "source_anchor": "# Push Notification Wirer"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0742",
+  "batch_input_sha256": "ae15c55f1db38d4d4542c6df48e4988d503001aeeeb4efb6085f73c9e49e0b6f",
+  "blind_packet_id": "P-CFF91BC8902D0B3E51",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f27e90308efd0a1a95c63fdc9252b9a89754a80e5484f69c88a20819181c68d5"
+}
