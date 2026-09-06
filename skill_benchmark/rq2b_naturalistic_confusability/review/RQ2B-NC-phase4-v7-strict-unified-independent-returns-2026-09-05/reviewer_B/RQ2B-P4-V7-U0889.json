@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-16DCA0793A6C0C48",
+      "missing_material_requirement_or_null": "Pre-commit secret/file guardrail",
+      "rationale": "Runs GSVA or ssGSEA pathway analysis, unrelated to commit safety.",
+      "source_anchor": "run GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-359867522FC6E009",
+      "missing_material_requirement_or_null": "Pre-commit secret and unsafe-file verification",
+      "rationale": "Builds Slack bots and integrations, not repository guardrails.",
+      "source_anchor": "Builds Slack bots and integrations using the Slack API"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3DE50457E1DD7B9B",
+      "missing_material_requirement_or_null": "Pre-commit guardrail configuration",
+      "rationale": "Tracks local search visibility, unrelated to source-control safety.",
+      "source_anchor": "Build and track local search visibility"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8C4EF901843D46F9",
+      "missing_material_requirement_or_null": "Pre-commit guardrail",
+      "rationale": "Facilitates sprint retrospectives rather than secret or generated-file checks.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A8B33C5C6A28E87A",
+      "missing_material_requirement_or_null": "Pre-commit secret/file guardrail",
+      "rationale": "Prepares print layouts with bleed and safe zones, unrelated to repository commits.",
+      "source_anchor": "Prepares a design for commercial print"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B7F2FE66B2D6CE87",
+      "missing_material_requirement_or_null": "Pre-commit configuration and unsafe-generated-file verification",
+      "rationale": "Manages environment variables and secrets, relevant to secret safety but not the requested commit hook and generated-file check.",
+      "source_anchor": "Manage environment variables and secrets"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C186703A7612484D",
+      "missing_material_requirement_or_null": "Pre-commit guardrail configuration",
+      "rationale": "Queries ENCODE regulatory-genomics data, unrelated to repository safety.",
+      "source_anchor": "ENCODE Portal REST API for regulatory genomics"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DA65E35192C293D7",
+      "missing_material_requirement_or_null": "Pre-commit secret/file guardrail",
+      "rationale": "Localizes whole applications, unrelated to source-control guardrails.",
+      "source_anchor": "End-to-end recipe for translating a whole application"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0889",
+  "batch_input_sha256": "0cb0a01e9202802bebebfdcf569a459e998a58cf061e7fc18f1f7bfe4af763cd",
+  "blind_packet_id": "P-0E82EA9BD6A145F9C2",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0b181f242261207fed874f7c239ead8c74b9486c99fd172a32ee58bbdc5711cc"
+}
