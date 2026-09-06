@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-30E53EFD949556D1",
+      "missing_material_requirement_or_null": "A translation-management workflow that can add and revise locale phrases, export dictionaries, and audit localization keys.",
+      "rationale": "The competitive-analysis guidance concerns market and competitor research, not translation-project operations.",
+      "source_anchor": "Competitive Analysis Skill"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-33CC2A11D8E50289",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The existing-app recipe covers managing a translation catalogue with Multilocale, including adding copy, revising a locale, downloading dictionaries, and auditing localization work.",
+      "source_anchor": "Recipe 2 — the app already has i18n"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-67023134E8351712",
+      "missing_material_requirement_or_null": "Translation-project controls for phrase creation, per-locale revision, dictionary export, and duplicate or unused-key auditing.",
+      "rationale": "The skill is for Appwrite backend setup and operations, with no localization workflow.",
+      "source_anchor": "Appwrite"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-82567827F3B0AF64",
+      "missing_material_requirement_or_null": "A translation-management workflow for locale phrases, exports, and key audits.",
+      "rationale": "The skill describes browser and Electron UI debugging rather than translation work.",
+      "source_anchor": "Playwright Interactive Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CEA7B7D9F73596CE",
+      "missing_material_requirement_or_null": "Filesystem and codebase access to write the mobile and web dictionaries and determine unused application keys.",
+      "rationale": "The connector can manage phrase data, locale coverage, duplicate copy, and dictionary exports, but it explicitly cannot read or write repository files.",
+      "source_anchor": "What this connector can and cannot do"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D71C877DF7DB7DFE",
+      "missing_material_requirement_or_null": "A translation-project workflow for adding phrases, modifying French copy, exporting dictionaries, and auditing localization keys.",
+      "rationale": "The skill is scoped to gene-set enrichment analysis, not localization management.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DE62C0DC935CC592",
+      "missing_material_requirement_or_null": "Translation-management capabilities for phrase updates, locale dictionary exports, and localization-key audits.",
+      "rationale": "The skill operates Payload CMS projects and content models, not translation data.",
+      "source_anchor": "When to use this skill"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E730BAD82741D6A9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The CLI skill explicitly supports adding and machine-translating phrases, updating one locale, downloading dictionaries, and auditing duplicate and unused keys.",
+      "source_anchor": "Multilocale CLI"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0797",
+  "batch_input_sha256": "2aa56abbd28542c1e1e94b6c2ce813ccb6e5eac92566eb12dcd94abc7098b5ed",
+  "blind_packet_id": "P-395F98C56994AD827A",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e3f59f33059232100ec7a85013cced5800b3b1c51c358742c1fc001f8b185838"
+}
