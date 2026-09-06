@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-16569C1CC5D0A2EE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly audits dependency CVEs, abandonment, license exposure and supply-chain hygiene for deciding whether a package is safe to add.",
+      "source_anchor": "# Dependency Risk Audit"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-23211A17C8DB9128",
+      "missing_material_requirement_or_null": "dependency supply-chain risk assessment",
+      "rationale": "It facilitates sprint retrospectives and does not assess npm packages or supply-chain risk.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-33171E27E223C1F9",
+      "missing_material_requirement_or_null": "third-party package risk assessment and postinstall-specific mitigation",
+      "rationale": "It may cover pipeline installation and deployment controls, but does not provide the central dependency supply-chain risk audit.",
+      "source_anchor": "# Complete CI/CD Pipeline Deployment for Serverless, From Scratch"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6922B58DD0946440",
+      "missing_material_requirement_or_null": "npm dependency supply-chain audit",
+      "rationale": "It builds Slack bots and integrations, not dependency risk assessments.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6BD36EC7D2F05F3B",
+      "missing_material_requirement_or_null": "dependency supply-chain assessment",
+      "rationale": "It surveys visual and interaction conventions rather than package or postinstall risk.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6FED5FF056359876",
+      "missing_material_requirement_or_null": "postinstall threat analysis, abandonment and license exposure",
+      "rationale": "It audits npm vulnerabilities and outdated or unused packages, but does not cover the full supply-chain hygiene and postinstall-specific mitigation requested.",
+      "source_anchor": "# Dependency Auditor"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-78558BC053979462",
+      "missing_material_requirement_or_null": "dependency supply-chain risk assessment",
+      "rationale": "It develops payment protocol integrations and does not audit npm package supply-chain risk.",
+      "source_anchor": "# x402 Protocol Development"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-870BB44C5F652544",
+      "missing_material_requirement_or_null": "general npm supply-chain risk audit",
+      "rationale": "It is a product-specific SDK migration procedure, not a general package supply-chain risk assessment.",
+      "source_anchor": "# Upgrade Datadog Browser SDK to v6"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0504",
+  "batch_input_sha256": "8bb0c796f6a3b582f67ee84b9b48f77b10299d2d4d1c558649f39c67bb1c106a",
+  "blind_packet_id": "P-A59752C94A35C9B4B2",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "b973fcb58933ba1eea5ec529791c541337cb4d106d659980c13e19879e8b1f68"
+}
