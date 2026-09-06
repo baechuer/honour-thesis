@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1194",
+  "blind_packet_id": "P-F01A74B2B7EB382F37",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-7A867CA3C7B38951",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Git Workflow",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Route local Git work into the safest next move"
+    },
+    {
+      "candidate_token": "C-80D466770795AE45",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Skill Sync",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Sync skills between local installation and the GitHub source-of-truth repository"
+    },
+    {
+      "candidate_token": "C-8620CAE1212C010E",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Regulatory Scanner",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Maps which regulations apply to a product or business"
+    },
+    {
+      "candidate_token": "C-ADBE6936113BCF36",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Workflow Automation",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Routing-first skill for repo-scoped recurring workflow automation"
+    },
+    {
+      "candidate_token": "C-B1CCE5AC4A961A6F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# sync-skill - 他PJのスキルを skills リポジトリに取り込む / 更新する",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Import or update a skill from another project"
+    },
+    {
+      "candidate_token": "C-B3B72C44E7EB3CB2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "visual-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-DCE5297151620A36",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Setup Git Guardrails",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Set up Claude Code hooks to block dangerous git commands"
+    },
+    {
+      "candidate_token": "C-FC72D4CB9894E2A4",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Updating Skills from Upstream",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Sync local skills repository with upstream changes"
+    }
+  ],
+  "reviewer_A_return_sha256": "962734d8f3589b824b43935ecfd3b3cf31937239d188a26ca8fd9cad1b559c63",
+  "reviewer_B_return_sha256": "a03341abf723ef1c2ee9f24e6ae77f09f97b8be16118a1ff5c3c5ae1206b7945",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
