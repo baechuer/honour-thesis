@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-129189EC922DE268",
+      "missing_material_requirement_or_null": "It rewrites validation messages but does not test the checkout page or compare expected and actual behavior.",
+      "rationale": "This is a meaningful neighboring route for the validation-message aspect, but it lacks the required page test and observed-versus-expected report.",
+      "source_anchor": "The three jobs of an error message"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-195F10DD1150CC24",
+      "missing_material_requirement_or_null": "It surveys published user-research evidence rather than executing a checkout-page validation test.",
+      "rationale": "It is not a plausible route for testing the stated page behavior or reporting actual versus expected results.",
+      "source_anchor": "When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1DD1C400D6DA1FF4",
+      "missing_material_requirement_or_null": "It optimizes Google Business Profiles and provides no checkout-page testing procedure.",
+      "rationale": "Its central task and output boundary are unrelated to form validation testing.",
+      "source_anchor": "Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-247C67542D8BEC2D",
+      "missing_material_requirement_or_null": "It analyzes randomized A/B experiments statistically and does not test an empty postcode field or report UI behavior.",
+      "rationale": "Its validity-checking and verdict workflow is a meaningful testing neighbor, but the required UI interaction and expected-versus-actual observation are absent.",
+      "source_anchor": "Step 3: Run the validity checks"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-33362267411F9847",
+      "missing_material_requirement_or_null": "It manages advertising budget pacing and contains no checkout validation test.",
+      "rationale": "It is unrelated to the requested page input, interaction, and behavior report.",
+      "source_anchor": "Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7AC147D06597B483",
+      "missing_material_requirement_or_null": "It formats a report but does not execute the checkout-page test or establish the expected and actual observations.",
+      "rationale": "It can support the reporting portion as a neighboring route, but it lacks the material test procedure and evidence needed for the requested result.",
+      "source_anchor": "Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9D3EBB593A5AD9AF",
+      "missing_material_requirement_or_null": "It specifies responsive layout behavior and does not test postcode validation on checkout.",
+      "rationale": "Its input, transformation, and output boundary is responsive design specification, not behavioral page testing.",
+      "source_anchor": "Verify edge cases"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DC4EFA11A95BED6D",
+      "missing_material_requirement_or_null": "It retrieves and remediates AWS security findings and contains no checkout-page validation test.",
+      "rationale": "It is not a plausible route for the central checkout interaction or expected-versus-actual report.",
+      "source_anchor": "Stage 1: Discover scans (live, read-only)"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1117",
+  "batch_input_sha256": "3bea1a09a50c1ed2c46c2c4b8c9e5c6f060cbd24c7cb9a8aa42a875bc18cd7dc",
+  "blind_packet_id": "P-722511F27692A0593D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256": "7ab2a2e22e6e298e1b012f2446e5e4a23af68b08dbece04977b70aa2609716ee"
+}

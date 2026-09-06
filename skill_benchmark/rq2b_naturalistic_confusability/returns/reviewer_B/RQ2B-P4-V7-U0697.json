@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-216E0C7F5B1B24D8","missing_material_requirement_or_null":"Does not address repository secret-commit safeguards or confirmation gates for destructive git operations.","rationale":"This is a Slack bot and integration-building route; it is not a plausible route for setting repository safeguards.","source_anchor":"# Slack Bot Builder"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-2347AFD794E5197A","missing_material_requirement_or_null":"Does not provide repository safeguards, secret scanning, or destructive-git confirmation controls.","rationale":"This facilitates sprint retrospectives and action items, unrelated to the requested repository protections.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-7B9286C4E9F3B994","missing_material_requirement_or_null":"Provides secrets storage and injection but does not set up repository commit protection or confirmation before destructive git operations.","rationale":"Infisical is a meaningful neighboring route for managing secrets, yet it leaves the requested git-operation safeguards uncovered.","source_anchor":"# Infisical"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-8D743A24E57FF156","missing_material_requirement_or_null":"Surveys security prior art and controls but does not implement repository secret-commit prevention or destructive-git confirmation safeguards.","rationale":"A security prior-art survey can inform safeguard design, but it is preparatory research rather than setup of the requested repository controls.","source_anchor":"# `security-prior-art-survey` — SKILL.md"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-9ED8146735A19870","missing_material_requirement_or_null":"Covers contributor policies and branching/release governance but does not cover secret detection or confirmation gates for destructive git commands.","rationale":"Repository maintenance governance is adjacent and could contribute safeguards, but it misses two material protection requirements.","source_anchor":"# Open Source Project Maintainer"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9FD450894CB773A4","missing_material_requirement_or_null":"Does not address repository safeguards, secret commits, or destructive git confirmation.","rationale":"This unifies marketing, sales, and customer-success operations; it is not a route for repository security controls.","source_anchor":"# Revenue Operations"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A3832593FFEE61D3","missing_material_requirement_or_null":"Does not address repository safeguards, secret commits, or destructive git confirmation.","rationale":"This prepares commercial print documents and prepress output, unrelated to repository protections.","source_anchor":"# Print Layout"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-DADB2B4741B321B4","missing_material_requirement_or_null":"Does not address repository safeguards, secret commits, or destructive git confirmation.","rationale":"This handles local search visibility and social content workflows, not repository security safeguards.","source_anchor":"# Local + Google Business Profile visibility"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0697",
+  "batch_input_sha256":"fe8e4d2d9a33c3e3e62544800aa4b511f509a10095a5f670b7e3bfb66faca535",
+  "blind_packet_id":"P-B20DC0FE0D9291AFDC",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256":"2f6ef2a75d8e27a4d88be3e61ec115311849dcbcf33d627a5b454551bcb50506"
+}

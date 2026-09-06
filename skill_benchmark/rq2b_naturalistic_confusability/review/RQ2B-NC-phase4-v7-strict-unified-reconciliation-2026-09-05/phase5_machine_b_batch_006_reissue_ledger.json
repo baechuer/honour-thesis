@@ -1,0 +1,47 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-006",
+  "claim_boundary": "Machine B only. The mislocated original is preserved and excluded; the replacement is independently target-blind.",
+  "reissues": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0697",
+      "role": "B",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/returns/reviewer_B/RQ2B-P4-V7-U0697.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_1/RQ2B-P4-V7-U0697.json",
+      "error_category": "mislocated_return",
+      "status": "VALIDATED_REISSUE_1"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U1117",
+      "role": "B",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/returns/reviewer_B/RQ2B-P4-V7-U1117.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_1/RQ2B-P4-V7-U1117.json",
+      "error_category": "mislocated_return",
+      "status": "INVALID_PRESERVED_REISSUE_1"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U1117",
+      "role": "B",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_1/RQ2B-P4-V7-U1117.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_2/RQ2B-P4-V7-U1117.json",
+      "error_category": "identity_binding_mismatch",
+      "status": "VALIDATED_REISSUE_2"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U1225",
+      "role": "B",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1225.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_1/RQ2B-P4-V7-U1225.json",
+      "error_category": "identity_binding_mismatch",
+      "status": "INVALID_PRESERVED_REISSUE_1"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U1225",
+      "role": "B",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_1/RQ2B-P4-V7-U1225.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B_reissue_2/RQ2B-P4-V7-U1225.json",
+      "error_category": "identity_binding_mismatch",
+      "status": "VALIDATED_REISSUE_2"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_coordinator_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-006",
+  "claim_boundary": "Machine B only. The invalid original remains preserved; the reissue receives only its sealed packet and frozen coordinator schema.",
+  "reissues": [
+    {
+      "candidate_token": "C-B98055B4BF3E19DE",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-006/C-B98055B4BF3E19DE.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-006/coordinator_reissue_1/C-B98055B4BF3E19DE.json",
+      "error_category": "canonical_coordinator_hash_mismatch",
+      "status": "VALIDATED_REISSUE_1"
+    }
+  ]
+}

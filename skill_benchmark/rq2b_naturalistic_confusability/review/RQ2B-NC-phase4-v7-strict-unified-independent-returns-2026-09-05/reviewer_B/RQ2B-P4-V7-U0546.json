@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-0C269A2ED5585495","missing_material_requirement_or_null":"Does not address comparing monthly forecast assumptions or flagging forecast-impacting changes.","rationale":"This route is for economically prioritising technical debt, a different task and output boundary.","source_anchor":"# Tech Debt Prioritizer"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-1F352650ACB3DB0F","missing_material_requirement_or_null":"Does not provide a focused workflow for comparing forecast assumptions between periods or management validation recommendations.","rationale":"Pattern detection can identify suspicious drift or anomalies, but it is a neighbouring detection workflow rather than a forecast-assumption comparison route.","source_anchor":"# Pattern Detection"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-3523C0148691758B","missing_material_requirement_or_null":"Lacks a forecast-assumption-specific JSON output and explicit assumption-change materiality/validation framing.","rationale":"General data analysis supports comparing periods and explaining changes with caveats, but it does not directly specify the requested compact forecast-assumption summary.","source_anchor":"# Data Analysis"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-6595074F9FED6A48","missing_material_requirement_or_null":null,"rationale":"It is explicitly designed to compare forecast assumptions over time, flag high-impact drift, and produce a concise structured JSON report with findings and recommendations, matching the requested task boundary.","source_anchor":"## Purpose"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-7459A8D29B4C73BC","missing_material_requirement_or_null":"Focuses on systematic forecast bias by rep, segment, and stage, which conflicts with the instruction not to diagnose individual-owner estimation patterns and does not compare assumptions between periods.","rationale":"It is forecast-adjacent and could inspect bias, but misses the central assumption-drift comparison and includes a prohibited diagnostic focus.","source_anchor":"## Purpose"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9D64A93E28471484","missing_material_requirement_or_null":"Does not address forecast records, assumption drift, materiality, or management validation.","rationale":"This route performs GO/KEGG enrichment on gene lists, unrelated to the requested business forecast analysis.","source_anchor":"## When To Use"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-B98055B4BF3E19DE","missing_material_requirement_or_null":"Forecasts sales quota attainment rather than comparing assumptions that changed between periods, and the prompt explicitly excludes target-attainment estimation.","rationale":"It is a sales-forecast neighbouring route with structured input/output, but its central transformation is prohibited and materially different.","source_anchor":"## Purpose"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-C6E8B73444D2A968","missing_material_requirement_or_null":"Does not address forecast assumptions or monthly forecast comparison.","rationale":"This route triages Unity and Unreal build logs, unrelated to the requested forecast-record analysis.","source_anchor":"# Game Build Log Triage"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0546",
+  "batch_input_sha256":"2dc8edcc2a6da19c4c205a01188f80febe2cdc8baf1b9e72420e664950e741bf",
+  "blind_packet_id":"P-0E164DDE9C3F00430F",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"0baeed118bf896620287ebbf1b5f72c1d2ef21a4a7e40287a0723494f79e4957"
+}
