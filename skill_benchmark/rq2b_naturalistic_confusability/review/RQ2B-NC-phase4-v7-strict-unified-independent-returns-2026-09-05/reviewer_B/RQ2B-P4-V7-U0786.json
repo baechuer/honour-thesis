@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-044DF6DBEB4A2C6F",
+      "missing_material_requirement_or_null": "Anthropic SDK-specific prompt caching, Claude request shape, streaming, and model-specific error handling.",
+      "rationale": "It provides useful general asyncio guidance for timeouts, cancellation, and bounded concurrency, but does not address the Anthropic SDK or the requested Claude-specific integration concerns.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-72A6902E704F6774",
+      "missing_material_requirement_or_null": "Anthropic SDK and Claude integration debugging, including prompt caching, streaming, request shape, and model-specific errors.",
+      "rationale": "This is a LinkedIn marketing and LinkedIn API skill, so it does not provide a route for the requested Claude API integration work.",
+      "source_anchor": "### LinkedIn API Integration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8ED5ADFAB6325EA5",
+      "missing_material_requirement_or_null": "Anthropic SDK and Claude integration debugging, including prompt caching, streaming, request shape, and model-specific errors.",
+      "rationale": "This concerns Twitter/X marketing and its API rather than an Anthropic SDK integration.",
+      "source_anchor": "### X API v2 Integration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-926684CF7E9048A6",
+      "missing_material_requirement_or_null": "Anthropic SDK and Claude integration debugging, including prompt caching, streaming, request shape, and model-specific errors.",
+      "rationale": "This covers Instagram marketing and Graph API publication, not Claude API integration.",
+      "source_anchor": "### Instagram Graph API"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A8CCA38D035C18D2",
+      "missing_material_requirement_or_null": "Anthropic SDK and Claude integration debugging, including prompt caching, streaming, request shape, and model-specific errors.",
+      "rationale": "This covers TikTok marketing and the Content Posting API, which is unrelated to the requested Claude integration.",
+      "source_anchor": "### TikTok Content Posting API"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AE3D635E38AB545D",
+      "missing_material_requirement_or_null": "Anthropic SDK and Claude integration debugging, including prompt caching, streaming, request shape, and model-specific errors.",
+      "rationale": "This skill facilitates sprint retrospectives and offers no technical route for debugging a Claude API integration.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C3ECC988871291D6",
+      "missing_material_requirement_or_null": "Anthropic SDK-specific guidance for Claude prompt caching, request construction, streaming, and model-specific error handling.",
+      "rationale": "Its generic API integration and resilience guidance can support adjacent client integration work, but it lacks the requested Anthropic and Claude-specific operational details.",
+      "source_anchor": "### Phase 6 — API Integration and Data Layer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D384A7A53FE43EAE",
+      "missing_material_requirement_or_null": "Anthropic SDK and Claude integration debugging, including prompt caching, streaming, request shape, and model-specific errors.",
+      "rationale": "This is a visual UI convention research workflow and does not address API integration debugging.",
+      "source_anchor": "## Overview"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0786",
+  "batch_input_sha256": "41fa9e6ffcf16f9715d89a8d9579c0e3861d5a1ed505e25a3e765bb26d2fb73c",
+  "blind_packet_id": "P-2D79044856A6996C2C",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d491ea1e426ea91129a5454f0abaa33c2c2e820b76690cc91d150f63d99fc28c"
+}

@@ -1,0 +1,23 @@
+{
+  "blind_packet_id": "P-490838B73DBBC8C134",
+  "candidate_token": "C-E3EB4BCDBF70489E",
+  "coordinator_instruction": "Resolve only this A/B adequacy disagreement or UNCLEAR trigger under the frozen rubric. Do not inspect targets, main/tail role, allocation, rank, source path/provenance, historical/local reference, retrieval outcome or metric. Return only the strict coordinator schema.",
+  "fresh_source_render_sha256": "03e58e0209541a60ee4c0648c5ca7306b5b8f5ba16a1e6e5cc9d10ae44483947",
+  "fresh_source_visible_skill": "---\nname: forecast-assumption-drift-checker\ndescription: Vendor-neutral skill to compare forecast assumptions over time and flag high-impact drift.\n---\n\n## Purpose\n\nUse this skill to process structured input and produce a concise, actionable report.\n\n## Input\n\n- JSON object or CSV rows with the relevant business signals.\n\n## Output\n\n- Structured JSON summary with findings and recommendations.\n",
+  "reviewer_A_assessment": {
+    "adequacy": "INADEQUATE",
+    "candidate_token": "C-E3EB4BCDBF70489E",
+    "missing_material_requirement_or_null": "Evaluate opportunity forecasts against actual outcomes for over- or under-estimation patterns by the requested dimensions.",
+    "rationale": "It compares forecast assumptions over time rather than assessing opportunity forecast accuracy against actual outcomes.",
+    "source_anchor": "forecast-assumption-drift-checker"
+  },
+  "reviewer_B_assessment": {
+    "adequacy": "PARTIALLY_ADEQUATE",
+    "candidate_token": "C-E3EB4BCDBF70489E",
+    "missing_material_requirement_or_null": "Comparison against actual outcomes with breakdowns by owner, customer group, and pipeline step.",
+    "rationale": "Assumption drift is not forecast accuracy versus actual outcomes and has no owner, customer-group, or pipeline-step breakdown.",
+    "source_anchor": "compare forecast assumptions over time and flag high-impact drift."
+  },
+  "reviewer_a_return_sha256": "b04a0fd7b0f6549ad3b45634d2a33006d13a6f2b155022aafad48a334a5b37eb",
+  "reviewer_b_return_sha256": "4a3ee816b881bb6de8b3cf792edbda0d809db4a4d9848cba2c5a4cb1263d9fdc"
+}

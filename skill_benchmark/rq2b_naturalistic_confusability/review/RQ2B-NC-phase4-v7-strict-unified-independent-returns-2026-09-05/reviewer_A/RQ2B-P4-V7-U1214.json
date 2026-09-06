@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-00C8374D854810E2",
+      "missing_material_requirement_or_null": "Opportunity-forecast versus actual-outcome analysis with the requested business dimensions and report.",
+      "rationale": "It surveys published user-research evidence rather than analysing opportunity forecast-versus-outcome records or returning the requested report.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-03CECAD7AA0ACD42",
+      "missing_material_requirement_or_null": "Forecast-bias analysis grouped by owner, customer group, and pipeline step.",
+      "rationale": "It performs budget-versus-actual financial variance decomposition, but does not analyse forecast bias by owner, customer group, and pipeline step.",
+      "source_anchor": "Deliverable"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-284897FE44BED298",
+      "missing_material_requirement_or_null": "Recurring forecast-error analysis against actual outcomes by the requested groups.",
+      "rationale": "It forecasts quota attainment from stages and historical conversion, but does not evaluate recurring forecast errors against actual outcomes by the requested groups.",
+      "source_anchor": "Purpose"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-59FDAEFBB0DDA2C9",
+      "missing_material_requirement_or_null": "Use of actual outcomes and a practical-risk explanation for each identified pattern.",
+      "rationale": "It names bias dimensions and a JSON report, but does not specify use of actual outcomes or a per-pattern practical-risk explanation.",
+      "source_anchor": "Vendor-neutral skill to detect systematic forecast bias by rep, segment, and stage."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-765101D2DB8D36D2",
+      "missing_material_requirement_or_null": "Structured analysis of recurring forecast estimation patterns with risks and corrective actions.",
+      "rationale": "It generates customer-facing sales assets from CRM context, not a structured forecast-bias analysis.",
+      "source_anchor": "Create an Asset"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A057E0B633F29D18",
+      "missing_material_requirement_or_null": "A forecast-bias and corrective-action workflow tied to the requested business dimensions.",
+      "rationale": "It can group metric anomalies and state why they matter, but it stays at first-pass detection and lacks the requested forecast-bias and corrective-action workflow.",
+      "source_anchor": "Pattern Detection"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E3EB4BCDBF70489E",
+      "missing_material_requirement_or_null": "Actual-outcome analysis by owner, customer group, and pipeline step, with per-pattern risks and actions.",
+      "rationale": "It only names generic assumption-drift checking and generic JSON findings; it lacks the required actual-outcome, owner/customer/step analysis and risk/action logic.",
+      "source_anchor": "compare forecast assumptions over time"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F28DC5C571801AB3",
+      "missing_material_requirement_or_null": "A compact structured JSON report rather than a spreadsheet-file deliverable.",
+      "rationale": "It is an xlsx-file workflow whose deliverable must be a spreadsheet, not the requested JSON analysis.",
+      "source_anchor": "The deliverable must be a spreadsheet file."
+    }
+  ],
+  "batch_id": "RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05",
+  "batch_input_sha256": "6751871e160a111a7e6c43a7af16d77d0cc878e8ac49ea1c772c213e92b69e56",
+  "blind_packet_id": "P-490838B73DBBC8C134",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e192af9b5dbb3a5454d0df355baf0f3dea242e404c5f584c775006c31b1e1d6c"
+}

@@ -1,0 +1,23 @@
+{
+  "blind_packet_id": "P-490838B73DBBC8C134",
+  "candidate_token": "C-284897FE44BED298",
+  "coordinator_instruction": "Resolve only this A/B adequacy disagreement or UNCLEAR trigger under the frozen rubric. Do not inspect targets, main/tail role, allocation, rank, source path/provenance, historical/local reference, retrieval outcome or metric. Return only the strict coordinator schema.",
+  "fresh_source_render_sha256": "6ec0f38ce5e2d48b409f5638cc32b889b9d3d01c8c72672f2a4249754a5a9594",
+  "fresh_source_visible_skill": "---\nname: quota-forecast-builder\ndescription: Vendor-neutral skill to forecast sales quota attainment from pipeline stage and historical conversion.\n---\n\n## Purpose\n\nUse this skill to process structured input and produce a concise, actionable report.\n\n## Input\n\n- JSON object or CSV rows with the relevant business signals.\n\n## Output\n\n- Structured JSON summary with findings and recommendations.\n",
+  "reviewer_A_assessment": {
+    "adequacy": "INADEQUATE",
+    "candidate_token": "C-284897FE44BED298",
+    "missing_material_requirement_or_null": "Diagnose recurring forecast over- or under-estimation against actual outcomes by owner, customer group, and pipeline step.",
+    "rationale": "It forecasts quota attainment from stage and historical conversion rather than diagnosing systematic forecast estimation bias.",
+    "source_anchor": "Purpose"
+  },
+  "reviewer_B_assessment": {
+    "adequacy": "PARTIALLY_ADEQUATE",
+    "candidate_token": "C-284897FE44BED298",
+    "missing_material_requirement_or_null": "Comparison of forecasts with actual outcomes and recurring bias analysis by owner and customer group.",
+    "rationale": "Forecasting quota attainment from stage is adjacent, but it does not compare forecasts to actual outcomes or analyze recurring bias by owner and customer group.",
+    "source_anchor": "forecast sales quota attainment from pipeline stage and historical conversion."
+  },
+  "reviewer_a_return_sha256": "b04a0fd7b0f6549ad3b45634d2a33006d13a6f2b155022aafad48a334a5b37eb",
+  "reviewer_b_return_sha256": "4a3ee816b881bb6de8b3cf792edbda0d809db4a4d9848cba2c5a4cb1263d9fdc"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-00C8374D854810E2",
+      "missing_material_requirement_or_null": "Analyze opportunity forecasts against actual outcomes for recurring over- or under-estimation by owner, customer group, and pipeline step, with corrective actions in compact JSON.",
+      "rationale": "It surveys published user-research evidence rather than analyzing opportunity forecast accuracy and producing the requested operational report.",
+      "source_anchor": "When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-03CECAD7AA0ACD42",
+      "missing_material_requirement_or_null": "Group opportunity forecast-versus-actual bias by owner, customer group, and pipeline step and return a compact JSON report with risks and corrective actions.",
+      "rationale": "It provides budget-versus-actual variance decomposition, but not the requested forecast-bias grouping and compact JSON output.",
+      "source_anchor": "Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-284897FE44BED298",
+      "missing_material_requirement_or_null": "Diagnose recurring forecast over- or under-estimation against actual outcomes by owner, customer group, and pipeline step.",
+      "rationale": "It forecasts quota attainment from stage and historical conversion rather than diagnosing systematic forecast estimation bias.",
+      "source_anchor": "Purpose"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-59FDAEFBB0DDA2C9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers systematic forecast bias by rep, segment, and stage and calls for a concise actionable structured report.",
+      "source_anchor": "sales-forecast-bias-checker"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-765101D2DB8D36D2",
+      "missing_material_requirement_or_null": "Analyze aggregate opportunity forecast-versus-actual bias and recommend corrective actions in a compact JSON report.",
+      "rationale": "It generates individual customer-facing sales assets rather than analyzing aggregate forecast-versus-actual estimation patterns.",
+      "source_anchor": "Create an Asset"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A057E0B633F29D18",
+      "missing_material_requirement_or_null": "Analyze forecast bias by owner, customer group, and pipeline step and return the requested compact JSON report with corrective actions.",
+      "rationale": "It can surface grouped metric anomalies, but its detection brief does not require the requested forecast-bias dimensions or JSON report.",
+      "source_anchor": "Return one compact detection brief"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E3EB4BCDBF70489E",
+      "missing_material_requirement_or_null": "Evaluate opportunity forecasts against actual outcomes for over- or under-estimation patterns by the requested dimensions.",
+      "rationale": "It compares forecast assumptions over time rather than assessing opportunity forecast accuracy against actual outcomes.",
+      "source_anchor": "forecast-assumption-drift-checker"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F28DC5C571801AB3",
+      "missing_material_requirement_or_null": "Produce a compact JSON forecast-bias analysis rather than a spreadsheet-file deliverable.",
+      "rationale": "It is scoped to spreadsheet-file work and does not provide the requested forecast-bias analysis in JSON.",
+      "source_anchor": "The deliverable must be a spreadsheet file."
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1214",
+  "batch_input_sha256": "6751871e160a111a7e6c43a7af16d77d0cc878e8ac49ea1c772c213e92b69e56",
+  "blind_packet_id": "P-490838B73DBBC8C134",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8b92379d9929d1169517dcede2458082d14c24ca781b81066d2d498d7acda414"
+}
