@@ -1,0 +1,18 @@
+{
+  "assessments":[
+    {"adequacy":"INADEQUATE","candidate_token":"C-056A752A75D8B56E","missing_material_requirement_or_null":"dependency upgrade planning and migration risk analysis","rationale":"This skill organizes project structure and boundaries; it does not classify dependency updates, plan staged upgrades, or provide rollback and test strategy for package changes.","source_anchor":"## When to use this skill"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-3641374C0BAE2F81","missing_material_requirement_or_null":"dependency-specific compatibility classification and migration notes","rationale":"This DevOps automation route is relevant to staged maintenance and operational workflows, but it does not directly analyze declared and resolved dependencies or classify package compatibility risk.","source_anchor":"## Overview"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-619928D79A1E9B83","missing_material_requirement_or_null":"dependency inventory, compatibility classification and staged upgrade plan","rationale":"This skill contributes a risk-based release test strategy and validation gates, but it does not produce the dependency update classification, migration notes, or rollback plan requested here.","source_anchor":"# Testing Strategies"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-7B750BCF94758BD3","missing_material_requirement_or_null":"non-security compatibility, migration and staged rollback planning","rationale":"This skill detects stale and vulnerable packages and reports outdated versions, but its scope is an audit and security/outdatedness report rather than the complete staged upgrade, migration, rollback and per-stage testing plan.","source_anchor":"# Dependency Audit"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9F263D2790B1BB31","missing_material_requirement_or_null":"dependency upgrade risk and rollback plan","rationale":"This skill performs GSVA or ssGSEA pathway analysis on expression data, unrelated to application dependency maintenance.","source_anchor":"# GSVA Analysis And Visualization"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-B756D63F2CCFCD23","missing_material_requirement_or_null":null,"rationale":"This skill directly analyzes declared and resolved dependencies, breaking changes and vulnerabilities, then produces ordered upgrades with migration steps; it is the direct route for a staged maintenance-release dependency upgrade plan.","source_anchor":"# Dependency Updater"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A2A353602C52CFDD","missing_material_requirement_or_null":"dependency inventory and upgrade plan","rationale":"This skill configures authentication and does not address package updates, compatibility risk, migration notes, rollback points, or dependency testing.","source_anchor":"# Authentication Setup"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-FFD2F927B3CD9FEC","missing_material_requirement_or_null":"staged non-security dependency migration and rollback plan","rationale":"This skill audits npm dependencies for vulnerabilities, staleness and unused packages, but it does not provide the complete compatibility-led staged upgrade plan requested and is limited toward security auditing.","source_anchor":"## Instructions"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0567",
+  "batch_input_sha256":"2b4fbc93d5d77cf1224aba599faa1b70da6e7d004621b18cf0662bc22b1d5b1d",
+  "blind_packet_id":"P-66F3B62698E83D2BEC",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"fbb22afb09004a108e0688046090df65e8891f79f39492b2f4902e2f3e899d3d"
+}
