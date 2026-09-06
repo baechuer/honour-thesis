@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0160",
+  "blind_packet_id": "P-475FF8AC7D082DE153",
+  "batch_input_sha256": "fcb304808fa63e9a6ae2127305cd5a2f342b35d87a3a92a75a73c424018dcd3d",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1693B59A70F4115E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Build the container image",
+      "missing_material_requirement_or_null": "Archive-based serverless packaging and alias-based function-version traffic shifting without containers.",
+      "rationale": "This is a Kubernetes pipeline that builds and pushes a container image, conflicting with the required archive-based function release."
+    },
+    {
+      "candidate_token": "C-301DEC5167266EBB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Print Layout",
+      "missing_material_requirement_or_null": "An event-function delivery pipeline with packaging, scanning, version deployment, canary release, and rollback.",
+      "rationale": "This source prepares commercial-print layouts and does not provide a software delivery workflow."
+    },
+    {
+      "candidate_token": "C-48A9B8F23AC70200",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "immutable machine-image baking",
+      "missing_material_requirement_or_null": "Archive/layer packaging and serverless function-version alias traffic shifting.",
+      "rationale": "It supplies a CI/CD route with security gates, but its VM image and blue-green deployment mechanics do not satisfy the required serverless archive and version rollout."
+    },
+    {
+      "candidate_token": "C-6739E014242764E5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "cli-spec-to-goal",
+      "missing_material_requirement_or_null": "A CI/CD pipeline for packaging and releasing the event-driven function.",
+      "rationale": "This source turns a CLI specification into planning artifacts rather than providing a deployment pipeline."
+    },
+    {
+      "candidate_token": "C-9CB550FA834DF547",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Vercel Deploy Pipeline",
+      "missing_material_requirement_or_null": "Archive-based event-function packaging, function-version publication, and alias traffic shifting.",
+      "rationale": "It covers staged deployment and rollback, but is a Next.js Vercel release workflow rather than the requested archive-based function pipeline."
+    },
+    {
+      "candidate_token": "C-C20C9BBE9F1488D2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "missing_material_requirement_or_null": "A CI/CD pipeline that packages, scans, deploys, verifies, and rolls back the event-driven function.",
+      "rationale": "This source facilitates sprint retrospectives and does not address software deployment."
+    },
+    {
+      "candidate_token": "C-D12C1A64247D8569",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Canary10Percent5Minutes",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides zip/layer artifact packaging, SAST/SCA gates, artifact upload, immutable function-version deployment, weighted alias canary release, verification, and automatic rollback without containers or cluster deployment."
+    },
+    {
+      "candidate_token": "C-F84255B60F34D5BF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "user-research-prior-art-survey",
+      "missing_material_requirement_or_null": "A deployment pipeline configuration for the event-driven function.",
+      "rationale": "This source governs a published user-research evidence survey, not build or release automation."
+    }
+  ],
+  "reviewer_output_sha256": "b17272e0ff4223fbba70e3d4c73da13282e58d10363ed51998d84dbd1c9d512f"
+}
