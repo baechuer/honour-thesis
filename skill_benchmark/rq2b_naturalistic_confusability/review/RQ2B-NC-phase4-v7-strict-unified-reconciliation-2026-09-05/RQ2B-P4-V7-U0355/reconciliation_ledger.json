@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0355",
+  "blind_packet_id": "P-A4A4E36C167119B126",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-21DB26441EF23E07",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# DataHub Lineage",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# DataHub Lineage"
+    },
+    {
+      "candidate_token": "C-31F992DCC4E54DB2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# OT Security Assessment",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# OT Security Assessment"
+    },
+    {
+      "candidate_token": "C-38D5EFEA31F930AA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Nmap Network Reconnaissance",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Nmap Network Reconnaissance"
+    },
+    {
+      "candidate_token": "C-57CBB83BF4BBAEC3",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# SOC 2 Evidence Helper",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# SOC 2 Evidence Helper"
+    },
+    {
+      "candidate_token": "C-C798A9CE77116C4F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Growth Model",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Growth Model"
+    },
+    {
+      "candidate_token": "C-C996AE3E5C756007",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Slack Bot Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "candidate_token": "C-E34A71DC2CA9E878",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Read External Files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## When To Read External Files"
+    },
+    {
+      "candidate_token": "C-FAFB413EE3FAEB3E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "reviewer_A_return_sha256": "92d391a83d13c42f82ca7d731e91317446826fdb568da89d6f11f712ea6de95d",
+  "reviewer_B_return_sha256": "b5f3cd8573f80b7c43569f37b4c66c472a0136cd4319d9147d58162edf9845f0",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
