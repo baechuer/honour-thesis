@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-008270B38A3352A9",
+      "missing_material_requirement_or_null": "A webhook-specific operational integration runbook covering subscription, delivery handling, recovery, monitoring, and handoff.",
+      "rationale": "This is a test-driven development procedure, not a route for planning or operating payment-event webhooks.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-082EC7B3249EFBC6",
+      "missing_material_requirement_or_null": "An implementation/integration runbook for payment-webhook delivery and operations.",
+      "rationale": "This surveys published user-research evidence and does not address webhook integration or operations.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4C552FDE9D25ADBB",
+      "missing_material_requirement_or_null": "A concrete operational runbook for downstream action handling and dead-letter storage.",
+      "rationale": "It covers webhook signing, retries, deduplication, ordering, health, and monitoring, but lacks the requested operational handling for downstream actions and dead letters.",
+      "source_anchor": "### Phase 10: Async, Streaming, and Event-Driven Patterns"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-633CF7269DB9FAAA",
+      "missing_material_requirement_or_null": "A webhook operational workflow covering subscriptions, delivery processing, retries, ordering, dead letters, monitoring, and handoff.",
+      "rationale": "This specifies REST API surfaces and explicitly excludes inbound webhook endpoint planning, so it cannot produce the requested operational workflow.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C576B3FC71441E04",
+      "missing_material_requirement_or_null": "A payment-webhook implementation and operations runbook.",
+      "rationale": "This concerns App Store promotional event cards rather than payment-event webhook processing.",
+      "source_anchor": "## Event Types"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D6944A3A618E6472",
+      "missing_material_requirement_or_null": "A server-side payment-webhook operational integration workflow.",
+      "rationale": "This handles PixiJS client input events, not payment webhooks or their operational lifecycle.",
+      "source_anchor": "## Quick Start"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E8ADAA55394AF1A8",
+      "missing_material_requirement_or_null": "A payment-webhook flow runbook with event delivery, processing, monitoring, and handoff.",
+      "rationale": "This addresses database schema migrations rather than payment-event webhook integration and operation.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-ECF06CD8683E51BB",
+      "missing_material_requirement_or_null": "The webhook operational workflow: subscriptions, signature handling, idempotent processing, retries and ordering, downstream triggers, dead-letter storage, monitoring, and handoff.",
+      "rationale": "It can validate a service boundary, but produces contract-testing artifacts rather than the requested end-to-end webhook operations runbook.",
+      "source_anchor": "## Deliverable"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0803",
+  "batch_input_sha256": "2cd478f0dc96d237cf637b35fea0832a87bc76c78b5e572e550c779700ea88aa",
+  "blind_packet_id": "P-EC1A03339D3786823B",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "3a6f554a86c20fcc0094af78335a07f98f483ac6075ac65ee8a14bec227ba339"
+}

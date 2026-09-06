@@ -1,0 +1,10 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_batch_validation_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-018",
+  "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+  "groups_validated": 4,
+  "a_b_returns_validated": 8,
+  "coordinator_cases_validated": 5,
+  "validation_checks": {"machine_b_manifest_identity":"PASS","packet_hashes":"PASS","independent_return_schema":"PASS","reviewer_blindness_bindings":"PASS","a_b_completeness":"PASS","source_anchor_validation":"PASS","sealed_coordinator_trigger_completeness":"PASS","sealed_coordinator_schema_and_bindings":"PASS"},
+  "overall":"PASS_MACHINE_B_BATCH_018"
+}

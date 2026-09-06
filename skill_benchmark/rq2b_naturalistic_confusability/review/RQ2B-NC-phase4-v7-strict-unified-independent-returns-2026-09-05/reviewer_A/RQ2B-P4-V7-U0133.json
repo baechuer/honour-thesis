@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0CA1ED3A17A54B4C",
+      "missing_material_requirement_or_null": "A Zendesk automation workflow for ticket triage, tagging, macros, assignments, and escalation rules.",
+      "rationale": "This source only migrates React string refs and does not address support-ticket automation.",
+      "source_anchor": "# React 18 String Refs Migration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2F9D01A0C2466045",
+      "missing_material_requirement_or_null": "A Zendesk automation workflow for ticket triage, tagging, macros, assignments, and escalation rules.",
+      "rationale": "This source builds Slack bots, while the requested scope expressly excludes Slack automation.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4D05331621C93C64",
+      "missing_material_requirement_or_null": "Zendesk-specific ticket triage, tagging, macro, assignment, and escalation configuration.",
+      "rationale": "Its generic scripts and workflows could support automation, but it supplies no Zendesk-specific support-ticket workflow or configuration.",
+      "source_anchor": "# Windmill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8FBA630427E2E67C",
+      "missing_material_requirement_or_null": "A Zendesk automation workflow for ticket triage, tagging, macros, assignments, and escalation rules.",
+      "rationale": "This source installs a Slack channel integration, which is outside the requested Zendesk-only scope.",
+      "source_anchor": "# Add Slack Channel"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AF6919B7BC7407FA",
+      "missing_material_requirement_or_null": "Automated Zendesk ticket triage, tagging, macro application, assignment, and escalation rules.",
+      "rationale": "It gives a useful procedure for replying to an individual support ticket, but not automation or ticket-management rules.",
+      "source_anchor": "# Support Ticket Reply"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D02D4C1F21EA01D8",
+      "missing_material_requirement_or_null": "Zendesk automation for triage, tags, macros, assignments, and escalation rules.",
+      "rationale": "It covers support macros and escalation guidance, but not Zendesk ticket automation or configuration.",
+      "source_anchor": "# MENA Customer Support"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DCBD56A87E86CEB6",
+      "missing_material_requirement_or_null": "A Zendesk automation workflow for ticket triage, tagging, macros, assignments, and escalation rules.",
+      "rationale": "This source facilitates engineering sprint retrospectives rather than support-ticket automation.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FA1370C5D4C02652",
+      "missing_material_requirement_or_null": "A Zendesk automation workflow for ticket triage, tagging, macros, assignments, and escalation rules.",
+      "rationale": "This source surveys documented UI conventions and does not provide a support-ticket automation route.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0133",
+  "batch_input_sha256": "8a02b0d867de0a53ce0ae4cca3173387a0b7b20b128ba5e015e6680729582867",
+  "blind_packet_id": "P-227454ACAF85C57F96",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1bde3eb494687fdd12362819664e6089a740bf227429b772040015fa4b30bd2e"
+}

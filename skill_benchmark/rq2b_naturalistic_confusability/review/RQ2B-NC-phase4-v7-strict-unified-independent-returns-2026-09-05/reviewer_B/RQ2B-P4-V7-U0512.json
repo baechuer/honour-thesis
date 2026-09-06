@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-201F11C882B1CB5C",
+      "missing_material_requirement_or_null": "A focused handler-level security review of redirect validation, authorization, and concrete exploit fixes.",
+      "rationale": "Atlassian project-tracking MCP guidance is unrelated to reviewing a redirect handler for exploit paths.",
+      "source_anchor": "# Atlassian MCP Expert"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7B754D257159A026",
+      "missing_material_requirement_or_null": "A focused handler-level security review of redirect validation, authorization, and concrete exploit fixes.",
+      "rationale": "Idempotency and replay design does not assess redirect validation or authorization exploit paths.",
+      "source_anchor": "# Idempotency Enforcer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7F7F0931F385D5D5",
+      "missing_material_requirement_or_null": "Concrete handler-level security analysis and focused exploit fixes.",
+      "rationale": "This is a plan-level scope review, not a route for concrete handler security findings.",
+      "source_anchor": "# CEO Plan Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7FF9940513A58AE4",
+      "missing_material_requirement_or_null": "A security review workflow for the API handler and its redirect handling.",
+      "rationale": "Presentation-generation instructions provide no route to review the handler's security.",
+      "source_anchor": "SlideCraft"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-86FA135105EA2AED",
+      "missing_material_requirement_or_null": "A security review workflow for the API handler and its redirect handling.",
+      "rationale": "Gene-set enrichment analysis is unrelated to code-level API handler security review.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9F8CA55CF96E9628",
+      "missing_material_requirement_or_null": "A focused handler-level analysis of redirect validation, authorization, and concrete exploit paths.",
+      "rationale": "Its broad code review can surface some security defects, but it mandates general PR quality, architecture, and test review rather than the requested focused handler-security analysis.",
+      "source_anchor": "# Code Reviewer"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A9CB9267CC22B237",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly reviews untrusted handler inputs, authorization and URL/redirect validation, and requires focused exploitable findings with concrete fixes.",
+      "source_anchor": "### Step 3: Authorization - the highest-value check"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-FB39CCF62082FBF7",
+      "missing_material_requirement_or_null": "A focused handler-level security analysis of redirect validation, authorization, and concrete exploit fixes.",
+      "rationale": "It can inspect API design, but its required architecture scoring and report do not deliver the requested focused handler-security review.",
+      "source_anchor": "# Software Architecture Fitness Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0512",
+  "batch_input_sha256": "97d57eb313ff190f0a68a467cafc87597c2178bc90e1cbd81e96d7d62c33474b",
+  "blind_packet_id": "P-5BD00899E000E0F895",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "6eb6c4b7e68ca089e3c48625b11e315c4a853d4133ca34a6a29bd55454332c6f"
+}
