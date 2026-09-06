@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-02442E2242389DE4",
+      "missing_material_requirement_or_null": "Python 3.10-to-3.13 runtime migration scope",
+      "rationale": "Handles major framework upgrades with reversible CI-gated batches, but is scoped to frameworks rather than Python runtime migration.",
+      "source_anchor": "Drives a major-version framework bump"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-62C24363A959FD3B",
+      "missing_material_requirement_or_null": "Python runtime compatibility inventory and migration verification",
+      "rationale": "Facilitates sprint retrospectives and action items, not runtime migration.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-770E91C07004E998",
+      "missing_material_requirement_or_null": "Runtime migration and dual-version behaviour verification",
+      "rationale": "Provides adversarial review of decisions, without migration or runtime compatibility procedures.",
+      "source_anchor": "Subjects every non-trivial decision to a fresh-context adversarial review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8774F28496600805",
+      "missing_material_requirement_or_null": "Python runtime migration and compatibility testing",
+      "rationale": "Runs AWS Security Agent diff scans on changed code, not language-version migration.",
+      "source_anchor": "Run a fast AWS Security Agent diff scan"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-CB8068D4E1CD3238",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Ports codebases across breaking language or runtime versions using shims, batched transforms, dual-runtime CI, output diffing, cutover, and rollback.",
+      "source_anchor": "Ports a codebase across a breaking language or runtime version"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E4104A7CC7B91650",
+      "missing_material_requirement_or_null": "General Python runtime migration and dual-runtime verification",
+      "rationale": "Provides safe zero-downtime schema migration steps, but targets database schema changes rather than Python runtime migration.",
+      "source_anchor": "Rewrite a schema migration into independently deployable, zero-downtime steps"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E450EC6B67C4002D",
+      "missing_material_requirement_or_null": "Concrete Python compatibility inventory and dual-runtime verification",
+      "rationale": "Manages deprecation and migration of systems or APIs, but lacks the specific runtime-break inventory and both-runtime verification workflow.",
+      "source_anchor": "Manages deprecation and migration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E70D2EDDFF632033",
+      "missing_material_requirement_or_null": "Python runtime migration and compatibility testing",
+      "rationale": "Guides side-project launch and MVP validation, unrelated to runtime-version migration.",
+      "source_anchor": "Takes a side project from idea to shipped launch"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0395",
+  "batch_input_sha256": "95c83d0f048a81f9c43d2134266ec8ddc29a7869332138060117bd58b51b138a",
+  "blind_packet_id": "P-3702C781A3D0C17761",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "3f9640bbfe439db9d83b5eb06c03fbc1395d6398c377acc66ba95fab9618b087"
+}

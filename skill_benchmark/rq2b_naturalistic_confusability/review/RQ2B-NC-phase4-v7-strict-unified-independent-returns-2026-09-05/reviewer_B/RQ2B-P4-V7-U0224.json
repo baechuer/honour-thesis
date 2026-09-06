@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2878D823D527F5D1",
+      "missing_material_requirement_or_null": "Post-earnings share-price move and complete quarterly recap",
+      "rationale": "Analyzes analyst estimates and revision trends, supporting expectation context but not the requested post-announcement recap and price move.",
+      "source_anchor": "Deep-dive into analyst estimates and revision trends"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-524A9B20741D3F1B",
+      "missing_material_requirement_or_null": "NVIDIA earnings comparison and share-price analysis",
+      "rationale": "Integrates Atlassian products for project tracking and documentation, unrelated to financial results.",
+      "source_anchor": "Integrates with Atlassian products"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A4EA43E49AB824C1",
+      "missing_material_requirement_or_null": "Reported-quarter results and post-announcement analysis",
+      "rationale": "Generates pre-earnings briefings for upcoming reports, not a recap of the most recently reported quarter.",
+      "source_anchor": "Generate a pre-earnings briefing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AAD5DC5C4B15B6DE",
+      "missing_material_requirement_or_null": "Quarterly financial results and market reaction",
+      "rationale": "Facilitates sprint retrospectives rather than analyzing company earnings.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B477F667E4F393C0",
+      "missing_material_requirement_or_null": "Quarterly financial results, expectations, and share-price move",
+      "rationale": "Tailors resumes and does not provide financial or earnings analysis.",
+      "source_anchor": "name: resume-tailor"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-BCA962123A6EC410",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Generates post-earnings analysis for a stock, directly matching a reported-quarter recap and its market reaction; the source also specifies Yahoo Finance data.",
+      "source_anchor": "Generate a post-earnings analysis for any stock"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C9837C8EE7AC8902",
+      "missing_material_requirement_or_null": "NVIDIA quarterly earnings and market reaction",
+      "rationale": "Runs pathway-level GSVA or ssGSEA analysis from expression data, unrelated to earnings reporting.",
+      "source_anchor": "run GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E735C44513841951",
+      "missing_material_requirement_or_null": "Quarterly earnings comparison and share-price reaction",
+      "rationale": "Builds M&A accretion/dilution workbooks, not a post-earnings company recap.",
+      "source_anchor": "Build M&A accretion/dilution workbooks"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0224",
+  "batch_input_sha256": "6ef0e8a7bbd0d56f2271eae8e1530743b67fb396f7fb56b05df59221aba2fac3",
+  "blind_packet_id": "P-09CBA4A6D275BF484E",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "441307b8989d8cc492bb5da1986050c6aa05a2656c32501b6115b0e2cc7625ba"
+}

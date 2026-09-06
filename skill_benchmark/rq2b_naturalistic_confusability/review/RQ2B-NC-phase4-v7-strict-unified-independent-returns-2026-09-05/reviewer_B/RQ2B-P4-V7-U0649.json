@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1F6E5A33E8C917F5",
+      "missing_material_requirement_or_null": "Event task and guest-registration status digest",
+      "rationale": "Surveys security prior art and threat vocabulary for products, not community-event tasks or registration counts.",
+      "source_anchor": "surveying documented security prior art for a product"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8BBBB4F2E844138C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly reports overdue or due-soon event tasks grouped by owner and read-only Luma registration statistics for events with pages.",
+      "source_anchor": "Report task status for an AAIF chapter or online series"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8D172E0122CC956D",
+      "missing_material_requirement_or_null": "Read-only event task and registration digest",
+      "rationale": "Facilitates sprint retrospectives and action items, not event tracker or registration reporting.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ACD518E66F6C27B2",
+      "missing_material_requirement_or_null": "Read-only event task and registration digest",
+      "rationale": "Creates new AAIF events and can create Luma pages, whereas the prompt requests a read-only status digest for existing events.",
+      "source_anchor": "Create a new event in an AAIF chapter or online series"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DBD3CA70D8855A75",
+      "missing_material_requirement_or_null": "Direct access to event task and registration data",
+      "rationale": "Can compress reports into an executive summary, but does not retrieve event tasks or Luma registration counts itself.",
+      "source_anchor": "Compresses long reports, memos, and analyses into a decision-ready one-page summary"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F1237EA40FD19A67",
+      "missing_material_requirement_or_null": "Event Tracker and guest-registration status retrieval",
+      "rationale": "Provides Google Tasks task management, not the specified event tracker and Luma registration digest.",
+      "source_anchor": "Task management for small businesses"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F9327DB7D257D15C",
+      "missing_material_requirement_or_null": "Event task and registration status digest",
+      "rationale": "Repurposes content across platforms and does not operate on event tasks or registration pages.",
+      "source_anchor": "Content Repurposing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FA7CCF1DA808D269",
+      "missing_material_requirement_or_null": "Read-only event task and registration digest",
+      "rationale": "Updates AAIF event details and dates, rather than producing the requested read-only upcoming-events digest.",
+      "source_anchor": "Apply a change to an existing AAIF event"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0649",
+  "batch_input_sha256": "f9adde2f712a6c539fb33005d11ecfa25f34f1e39af399b7c886ab206c048606",
+  "blind_packet_id": "P-3371B9E30CC589141D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c3d9674bf5752f81c8f76c87a1e73f863f8c8dcc9bc22c841285a144950ca132"
+}
