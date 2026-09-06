@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0142024B6A403B78",
+      "missing_material_requirement_or_null": "A podcast-specific workflow that covers recording intake, editing, show notes, podcast-host publishing, and multi-channel distribution.",
+      "rationale": "Covers YouTube video upload, scheduling, and channel analytics, but it is limited to video-channel marketing and cannot run the requested end-to-end podcast workflow.",
+      "source_anchor": "YouTube Data API v3"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-049B9E0AE34D4631",
+      "missing_material_requirement_or_null": "Capabilities for podcast recording, editing, show notes, publishing, and distribution automation.",
+      "rationale": "This is a Datadog Browser SDK migration guide and supplies no podcast-production capability.",
+      "source_anchor": "# Upgrade Datadog Browser SDK to v5"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0A931D8AAEECD1D7",
+      "missing_material_requirement_or_null": "A workflow for episode recording, editing, show notes, podcast publishing, and distribution.",
+      "rationale": "It coordinates SEO site rewrites and social promotion, not production or publication of podcast episodes.",
+      "source_anchor": "# Site audit → coordinated rewrite + social distribution"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-15620EF25CC81C46",
+      "missing_material_requirement_or_null": "Capabilities to automate the episode-production and release workflow from recording through distribution.",
+      "rationale": "It writes guest-booking pitch emails rather than producing, publishing, or distributing podcast episodes.",
+      "source_anchor": "# Podcast Pitch"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AB59B8F221672E0E",
+      "missing_material_requirement_or_null": "Integrated podcast workflow support for recording intake, editing, show notes, host publishing, and distribution beyond caption files.",
+      "rationale": "Accurate caption generation can support a narrow post-production task, but it does not perform broader episode editing, show notes, publishing, or distribution.",
+      "source_anchor": "# Captions From Transcript"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BC729E4FFA6AC042",
+      "missing_material_requirement_or_null": "Podcast recording, editing, show-notes creation, publishing, and distribution automation.",
+      "rationale": "This skill conducts security prior-art research and has no podcast production or release functions.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E19AC707CEC16F71",
+      "missing_material_requirement_or_null": "Capabilities for recording intake, episode editing, publishing to a podcast host, and distribution.",
+      "rationale": "It provides the show-notes stage of the requested workflow, but not recording, editing, podcast-host publishing, or distribution.",
+      "source_anchor": "# Show Notes Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F134EEBC7AC267DE",
+      "missing_material_requirement_or_null": "A complete podcast-production workflow covering recording, editing, show notes, publishing, and distribution.",
+      "rationale": "It downloads or transcribes YouTube captions only, which is explicitly insufficient for the requested end-to-end podcast workflow.",
+      "source_anchor": "# YouTube Transcript Downloader"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0788",
+  "batch_input_sha256": "a99ef38c8b6ae6033651f441e52c97629c5f670daf17ae18e3e0c90228dbb1d3",
+  "blind_packet_id": "P-CC0D8ABF830C7CBE2A",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0bd9c8b725e765d0f80f4d934a4af8fbe655d2ddede4e1c76c83fd3f3ee763ae"
+}

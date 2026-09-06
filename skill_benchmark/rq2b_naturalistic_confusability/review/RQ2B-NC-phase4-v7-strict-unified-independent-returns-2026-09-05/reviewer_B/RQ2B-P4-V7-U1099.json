@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-188ADCC8522E8A14",
+      "missing_material_requirement_or_null": "A workflow for multi-language code completion and repair evaluation with sampled generations, isolated tests, and grouped reporting.",
+      "rationale": "Addresses ISO 27001 and ISMS compliance rather than code-model evaluation.",
+      "source_anchor": "# ISO 27001 Compliance Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4B49942ECD48A263",
+      "missing_material_requirement_or_null": "A workflow for multi-language code completion and repair evaluation with sampled generations, isolated tests, and grouped reporting.",
+      "rationale": "Addresses ISO 27701 privacy management rather than code-model evaluation.",
+      "source_anchor": "# ISO 27701 Privacy Information Management Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6F9A4F13F964E2F6",
+      "missing_material_requirement_or_null": "Concrete multi-language completion and defect-repair task configuration, isolated test execution, and language-by-task reporting.",
+      "rationale": "Provides generic benchmark and model-comparison commands, but its code coverage is limited and omits a concrete repair and multi-language test plan.",
+      "source_anchor": "# lm-evaluation-harness - LLM Benchmarking"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-767B38708E2123D0",
+      "missing_material_requirement_or_null": "A complete multi-language completion and defect-repair workflow with isolated testing and language-by-task success reporting.",
+      "rationale": "Offers scalable comparison infrastructure and lists code benchmarks, but does not specify a complete completion-and-repair, multi-language evaluation and reporting workflow.",
+      "source_anchor": "# NeMo Evaluator SDK - Enterprise LLM Benchmarking"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A86DE5EE07392A4C",
+      "missing_material_requirement_or_null": "A workflow for comparing code-generating models across sampled completion and repair tasks in multiple languages.",
+      "rationale": "Ranks coverage gaps in an existing codebase rather than evaluating generated code from models.",
+      "source_anchor": "# Coverage Gap Finder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C2402B5FD152AC3B",
+      "missing_material_requirement_or_null": "A workflow for comparing code-generating models across sampled completion and repair tasks in multiple languages.",
+      "rationale": "Runs gene-set enrichment analysis and has no code-generation evaluation capability.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CDB9ED24D9570778",
+      "missing_material_requirement_or_null": "An executable defect-repair task configuration and a report template aggregating success and failures by language and completion/repair task.",
+      "rationale": "Provides multi-sample code-generation configuration, MultiPL-E language coverage, and Docker-based testing, but only names repair capabilities and lacks a direct repair-task workflow and language-by-task report.",
+      "source_anchor": "# BigCode Evaluation Harness - Code Model Benchmarking"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FE6C2C27BB16F0AA",
+      "missing_material_requirement_or_null": "A workflow for comparing code-generating models across sampled completion and repair tasks in multiple languages.",
+      "rationale": "Provides Python implementation practices and unit testing rather than comparative code-model evaluation.",
+      "source_anchor": "# Python Pro"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1099",
+  "batch_input_sha256": "2e2916a2ce2a46468c8127f15563972f50ba11f23c1ac409ec0b4d980492aaf5",
+  "blind_packet_id": "P-B2FA764FC94C57B940",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c404de619d450823005db5036d3b6f1aaaf5e0b8692ec9d6cb5de9c27911ff36"
+}

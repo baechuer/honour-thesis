@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-15B56715639EC2C0",
+      "missing_material_requirement_or_null": "An image-prompt workflow that supplies an appearance anchor, a base prompt, five requested reporter scenes, and consistency guidance.",
+      "rationale": "This is a pharmacogenomic reporting workflow for consumer genetic data and drug-gene guidance, not a workflow for writing illustrated character image prompts.",
+      "source_anchor": "# 💊 PharmGx Reporter"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1B250D55E37EDAD9",
+      "missing_material_requirement_or_null": "A workflow that writes reusable character appearance anchors and complete scene-specific image prompts.",
+      "rationale": "The source surveys documented UI and interaction conventions and produces research artifacts; it does not generate image prompts or manage a recurring character across scenes.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2D440245B0FAFAD1",
+      "missing_material_requirement_or_null": "A separately labeled base prompt and an explicit rule to repeat one detailed reporter appearance anchor verbatim across every requested scene.",
+      "rationale": "It creates a coordinated multi-image prompt batch, a shared visual anchor, varied scenes, and seed-continuity advice, but its prescribed output does not require the requested character-specific base prompt or immutable appearance block.",
+      "source_anchor": "## Output Format"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3017A5FC7BB6536B",
+      "missing_material_requirement_or_null": "Copy-ready image-prompt generation with a reusable visual appearance anchor and cross-scene consistency workflow.",
+      "rationale": "This source writes prose fiction scenes with narrative craft guidance; it does not create image-generation prompts or control visual character continuity.",
+      "source_anchor": "# Fiction Scene Writer"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-3838EA02DB09666B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly produces a verbatim character anchor, a base prompt, three to five scene variations, seed guidance, optional image-reference guidance, and requires at least one non-portrait scene; the supplied five reporter scenes fit that structure.",
+      "source_anchor": "## Output Format"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-451CF1E125D916C0",
+      "missing_material_requirement_or_null": "An illustrated-character image-prompt workflow covering a reusable appearance anchor, base prompt, scene prompts, and seed or image-reference continuity.",
+      "rationale": "This source develops sales ICP scorecards and buyer personas, which cannot produce the requested fictional reporter image prompt set.",
+      "source_anchor": "# Build Your ICP & Buyer Personas"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4EC20861AF466E02",
+      "missing_material_requirement_or_null": "An explicit character appearance anchor and base prompt plus the fixed five reporter scenes rather than prompt variants organized by platform format.",
+      "rationale": "It writes coordinated image prompts, a shared style anchor, and a seed workflow, so it can support consistency, but its required structure is multi-format cover assets rather than one recurring character in the requested scenes.",
+      "source_anchor": "## Output Format"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-914D1FA5F1E80AF9",
+      "missing_material_requirement_or_null": "A copy-ready illustrated-character image-prompt workflow with a reusable appearance anchor, base prompt, specified scenes, and consistency guidance.",
+      "rationale": "This is a facilitation process for sprint retrospectives and action items, not an image-generation or character-consistency skill.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0910",
+  "batch_input_sha256": "f87ce256a067b3c32ae149da8702e39d3e9611aa0f51afaa36c8f2497311e759",
+  "blind_packet_id": "P-59EA800528C208BAA8",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "3e577a3c320b9db12bbd33b9aa4f46aa84ad8892fe940c0b6680e11b3c6163e5"
+}

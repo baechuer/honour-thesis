@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-15B56715639EC2C0",
+      "missing_material_requirement_or_null": "Image-prompt authoring for a recurring illustrated reporter, including appearance anchor, scene prompts, seed guidance, and optional image-reference guidance.",
+      "rationale": "This skill produces pharmacogenomic reports from consumer genetic data, not image-generation prompts or character-consistency instructions.",
+      "source_anchor": "# 💊 PharmGx Reporter"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1B250D55E37EDAD9",
+      "missing_material_requirement_or_null": "A workflow that writes copy-ready image prompts for a recurring character across specified scenes and explains seed/reference consistency.",
+      "rationale": "This is a documentation-based UI-convention survey; it does not generate visual prompts, character descriptions, or scene prompt sets.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2D440245B0FAFAD1",
+      "missing_material_requirement_or_null": "A verbatim reusable character-appearance anchor, an explicit base prompt, and optional image-reference consistency guidance.",
+      "rationale": "It can produce five coordinated complete image prompts and provides a shared visual anchor with seed-continuity advice, but its contract centers campaign styling rather than a fixed person's appearance and does not require the requested base/reference workflow.",
+      "source_anchor": "# Social Media Visual Batch"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3017A5FC7BB6536B",
+      "missing_material_requirement_or_null": "Copy-ready image prompts, a reusable visual appearance anchor, and seed/reference-image consistency instructions.",
+      "rationale": "This skill writes prose fiction scenes and craft notes, not image-generation prompt sets.",
+      "source_anchor": "# Fiction Scene Writer"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-3838EA02DB09666B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The workflow expressly creates a verbatim character anchor, base prompt, multiple scene-specific complete prompts including non-portrait action, and explains both seed and optional --cref image-reference consistency.",
+      "source_anchor": "# Character Consistency Prompt"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-451CF1E125D916C0",
+      "missing_material_requirement_or_null": "Image-prompt production for a recurring illustrated character across five scenes, with an appearance anchor and generation-consistency workflow.",
+      "rationale": "This skill develops B2B ideal-customer profiles and buyer personas rather than visual or image-generation prompts.",
+      "source_anchor": "# Build Your ICP & Buyer Personas"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4EC20861AF466E02",
+      "missing_material_requirement_or_null": "A fixed character-appearance anchor and base portrait prompt reused across the five requested scenes, with optional image-reference guidance.",
+      "rationale": "It provides complete coordinated prompts, a shared style anchor, and seed-based consistency across variants, but is designed for platform formats and does not require a persistent person-specific anchor, base prompt, or reference-image workflow.",
+      "source_anchor": "# Cover Image Pipeline"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-914D1FA5F1E80AF9",
+      "missing_material_requirement_or_null": "Copy-ready image prompts for a recurring reporter, including an appearance anchor and seed/reference-image consistency instructions.",
+      "rationale": "This is a facilitation procedure for agile sprint retrospectives, with no image-generation prompting capability.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0910",
+  "batch_input_sha256": "f87ce256a067b3c32ae149da8702e39d3e9611aa0f51afaa36c8f2497311e759",
+  "blind_packet_id": "P-59EA800528C208BAA8",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f2a06717b95927bd02cbf4d8df9ea80edee10194db62c497fc5e7ed51835f0fa"
+}
