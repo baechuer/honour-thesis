@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0118C44803A8F72E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides TypeORM expertise for TypeScript models, relations, validation, queries, transactions, migrations, soft deletion, and production settings.",
+      "source_anchor": "expert in TypeORM, the ORM for TypeScript and JavaScript"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-31FD81E520A6B9E6",
+      "missing_material_requirement_or_null": "TypeScript relational data-model implementation",
+      "rationale": "Facilitates sprint retrospectives, unrelated to database service design.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-33EE39B0FEEEEE18",
+      "missing_material_requirement_or_null": "ORM model relations and selected soft deletion",
+      "rationale": "Provides Knex query-builder expertise relevant to pagination, transactions, and migrations, but not the full ORM model and relation workflow.",
+      "source_anchor": "expert in Knex.js, the flexible SQL query builder"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-581AC34BC2470E41",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides Sequelize ORM expertise suitable for TypeScript-related models, validation, associations, paginated queries, transactions, migrations, deletion, and pool settings.",
+      "source_anchor": "expert in Sequelize, the promise-based ORM for Node.js"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-58B427D8B138A068",
+      "missing_material_requirement_or_null": "TypeScript ORM and relational database rollout",
+      "rationale": "Routes web-scraping work, unrelated to service data models.",
+      "source_anchor": "Route web-scraping work"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-828177E5302B2F0A",
+      "missing_material_requirement_or_null": "Transactional TypeScript service data models",
+      "rationale": "Masters dbt analytics transformation patterns, not application ORM design.",
+      "source_anchor": "Master dbt (data build tool) for analytics engineering"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A1B3421C870F48A3",
+      "missing_material_requirement_or_null": "TypeScript relational data-model implementation",
+      "rationale": "Surveys security prior art, unrelated to ORM implementation.",
+      "source_anchor": "surveying documented security prior art for a product"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E7422366278DF02F",
+      "missing_material_requirement_or_null": "Concrete ORM models, transactions, and migration code",
+      "rationale": "Explains existing data architecture and storage, but does not itself provide the requested implementation patterns.",
+      "source_anchor": "Explain an existing codebase's data architecture"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1072",
+  "batch_input_sha256": "55d75c687f013ce4bb2a614609ad008fc44a14dbe67a02aacb06514fb2be96fb",
+  "blind_packet_id": "P-2F051659D34709D25F",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9e7654f2070598f0f11affc5f2b2ddc275ecd14d5a86587cbed6090c07a030ae"
+}

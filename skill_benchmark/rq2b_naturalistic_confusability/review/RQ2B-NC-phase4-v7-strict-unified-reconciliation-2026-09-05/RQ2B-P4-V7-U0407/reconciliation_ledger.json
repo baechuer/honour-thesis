@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0407",
+  "blind_packet_id": "P-B8C15C21C62B44D05A",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0D1333D407F9BFB1",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# @json-render/xstate",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "XState Store adapter for json-render's StateStore interface"
+    },
+    {
+      "candidate_token": "C-4C7B1B58838A7D71",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# @json-render/redux",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Redux adapter for json-render's StateStore interface"
+    },
+    {
+      "candidate_token": "C-636C4BE88D7F7105",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# GSVA Analysis And Visualization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "run GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "candidate_token": "C-D309D71A7D179511",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Mobile Offline Sync",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Builds local-first mobile storage"
+    },
+    {
+      "candidate_token": "C-D3D517F0C2916A65",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# @json-render/zustand",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Zustand adapter for json-render's StateStore interface"
+    },
+    {
+      "candidate_token": "C-E69C5FC0AFE5C512",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-EF21D32900D5709F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Localize an app with Multilocale",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "End-to-end recipe for translating a whole application"
+    },
+    {
+      "candidate_token": "C-F773AE7654147FE4",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# State Management",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Choose the smallest viable React/fullstack state owner"
+    }
+  ],
+  "reviewer_A_return_sha256": "c68f99628520941aab05e44daebc7335c18b83f8e28d1e6bfe61a85829822560",
+  "reviewer_B_return_sha256": "470f32341422b0fd9cad275837904a0922b19d098f3ded6654de27388247d668",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

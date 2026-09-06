@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1D7BDE9EB80F06AF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Runs a full WCAG 2.2 audit covering keyboard, screen-reader semantics, labels, focus, and contrast, directly matching the requested settings-page audit.",
+      "source_anchor": "Runs a full WCAG 2.2 accessibility audit of an interface"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1FBEB95C44BF53F3",
+      "missing_material_requirement_or_null": "WCAG settings-page audit",
+      "rationale": "Builds Slack bots and integrations, unrelated to accessibility auditing.",
+      "source_anchor": "Builds Slack bots and integrations using the Slack API"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9BE5D66D70A4EAC6",
+      "missing_material_requirement_or_null": "Keyboard, focus order, contrast, and screen-reader audit",
+      "rationale": "Audits product copy including labels and errors, relevant to label quality but not the complete WCAG interaction and semantics audit.",
+      "source_anchor": "Audits an existing corpus of product copy"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A81FB0616D41B1E3",
+      "missing_material_requirement_or_null": "WCAG accessibility audit",
+      "rationale": "Facilitates sprint retrospectives, unrelated to accessibility.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B9460C20AEC6ADC9",
+      "missing_material_requirement_or_null": "WCAG settings-page audit",
+      "rationale": "Builds Telegram bots, unrelated to accessibility auditing.",
+      "source_anchor": "Builds Telegram bots using the Bot API"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D100F747622C6769",
+      "missing_material_requirement_or_null": "WCAG settings-page audit",
+      "rationale": "Runs gene-set enrichment analysis, unrelated to UI accessibility.",
+      "source_anchor": "run GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D1666B28FDB6F9CA",
+      "missing_material_requirement_or_null": "WCAG labels, focus, contrast, and screen-reader semantics",
+      "rationale": "Drives Jetpack Compose UI from tests with non-touch input, relevant to keyboard interaction testing but not a full WCAG audit or web settings page.",
+      "source_anchor": "drive Jetpack Compose UI from tests with non-touch input"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E68A4D2E7A760099",
+      "missing_material_requirement_or_null": "WCAG settings-page audit",
+      "rationale": "Finds MCP directories and registries, unrelated to accessibility.",
+      "source_anchor": "find, rank, or shortlist directories and registries"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1184",
+  "batch_input_sha256": "353455fa79ae1790f3035a6e977ac7f8a6ff674b978167fd004e7dc6cd110757",
+  "blind_packet_id": "P-6C6E2531AA35DCB529",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "702dbc4516670adc48202ae9795dce873e20f24b7893e0680e05c17ee0c3ab38"
+}
