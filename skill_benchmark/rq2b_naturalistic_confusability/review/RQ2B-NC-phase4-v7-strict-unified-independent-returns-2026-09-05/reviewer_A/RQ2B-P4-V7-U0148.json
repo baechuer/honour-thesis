@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3B8F5465CC24BD08",
+      "missing_material_requirement_or_null": "authentication flow security review",
+      "rationale": "It builds Slack bots and integrations, not login, token, password-reset, or session-expiry security reviews.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-3DE2979AA58A9931",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers authentication lifecycle, credential and token handling, account recovery, brute-force protection, audit logging and security governance.",
+      "source_anchor": "# Skills"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-54318B569559BB57",
+      "missing_material_requirement_or_null": "flow-specific auth-state and refresh-token security review",
+      "rationale": "It provides broad secure-development principles, but does not specifically focus on the requested authentication state transitions and token handling.",
+      "source_anchor": "# Secure Development Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7FB327A0E72D3555",
+      "missing_material_requirement_or_null": "token-specific security analysis and authentication implementation",
+      "rationale": "It can map auth flow transitions, errors and edge cases, but does not itself provide token-handling security analysis.",
+      "source_anchor": "# User Flow Mapper"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A161813E405F6E49",
+      "missing_material_requirement_or_null": "authentication security review",
+      "rationale": "It handles Unreal animation state transitions, unrelated to authentication and token handling.",
+      "source_anchor": "# Unreal 5.8 Animation Blending"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A7CD61A1A20AB5C7",
+      "missing_material_requirement_or_null": "authentication security review",
+      "rationale": "It facilitates retrospectives and does not review authentication flows.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C6844E532C3E80A1",
+      "missing_material_requirement_or_null": "authentication security review",
+      "rationale": "It performs GO/KEGG enrichment and dot-chart generation, not auth-state or token review.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DE8EA5B91462DC2E",
+      "missing_material_requirement_or_null": "security-specific token and session analysis",
+      "rationale": "It addresses interface state transitions and validation feedback, but not security weaknesses in authentication tokens or sessions.",
+      "source_anchor": "# Microinteractions Framework"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0148",
+  "batch_input_sha256": "a96ea76393fc6faf84336c3dd74aa676be9bd080c43686ac526d9efb65b676ed",
+  "blind_packet_id": "P-F44CA1B8166A42CF08",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "619a6f91446c1b35e99ccd15e209a31321d365a6726c1d8e22634cb50498976f"
+}
