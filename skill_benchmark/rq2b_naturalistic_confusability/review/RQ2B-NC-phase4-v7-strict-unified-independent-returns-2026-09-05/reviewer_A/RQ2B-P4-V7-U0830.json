@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3FEAA007DD844B47",
+      "missing_material_requirement_or_null": "VM delivery pipeline and infrastructure rollout workflow",
+      "rationale": "It performs biological GO/KEGG enrichment, not VM delivery-pipeline construction.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-67A1DAB9A97B2748",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly targets empty-repository VM CI/CD, hardened machine images, gradual replacement, health safeguards, rollout, rollback and serving checks.",
+      "source_anchor": "# Complete CI/CD Pipeline Deployment for VM-Based Workloads, From Scratch"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-80A700BA816D2ACE",
+      "missing_material_requirement_or_null": "complete CI/CD pipeline and VM rollout workflow",
+      "rationale": "It contributes OT security assessment and safe scanning, but does not itself build the requested VM delivery pipeline or rollout.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8D9AC3180FFA651B",
+      "missing_material_requirement_or_null": "VM-based rather than Kubernetes deployment pipeline",
+      "rationale": "It provides a complete deployment pipeline but targets Kubernetes, not the requested long-lived VM fleet and machine-image replacement.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8DE7687E0C22C8A4",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers VM-based delivery with security gates, hardened artifacts and controlled rollout safeguards.",
+      "source_anchor": "# Complete DevSecOps Pipeline Deployment for VM-Based Workloads, From Scratch"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9A5AC3D86FF6351E",
+      "missing_material_requirement_or_null": "VM image delivery and fleet rollout",
+      "rationale": "It is explicitly for serverless function-package deployment, which the prompt excludes.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9D02D92FAB269E7C",
+      "missing_material_requirement_or_null": "VM CI/CD pipeline deployment",
+      "rationale": "It designs personal habit plans and is unrelated to infrastructure delivery.",
+      "source_anchor": "# Habit Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A9BBBF476326847E",
+      "missing_material_requirement_or_null": "VM CI/CD pipeline deployment",
+      "rationale": "It facilitates retrospectives and does not build or roll out VM infrastructure.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0830",
+  "batch_input_sha256": "39ad00613e10cce9008735862647b6ced2ee76734333d42ae37135dd7fc4c8cf",
+  "blind_packet_id": "P-76A524BAC045E95194",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f8b05dfb411f859b223d93f5f01a3de06e4c0dff4a884608ee6588829acffaef"
+}
