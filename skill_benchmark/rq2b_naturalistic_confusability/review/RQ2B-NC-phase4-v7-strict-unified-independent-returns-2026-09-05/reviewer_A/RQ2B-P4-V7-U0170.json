@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-030F71A52789935F",
+      "missing_material_requirement_or_null": "React global-store hook design, field-level subscriptions avoiding unrelated rerenders, CRUD/filter/async actions, persistence, devtools inspection, draft-style nested updates, and non-component access/subscription",
+      "rationale": "This skill is related to frontend state or UI engineering, but it does not provide the complete global React store and performance, persistence, devtools, and non-component access requirements.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0BF0C71A833737AF",
+      "missing_material_requirement_or_null": "React global-store hook design, field-level subscriptions avoiding unrelated rerenders, CRUD/filter/async actions, persistence, devtools inspection, draft-style nested updates, and non-component access/subscription",
+      "rationale": "This skill does not implement the requested React global todo store, selective subscriptions, actions, persistence, development inspection, and draft-style updates.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1A87DFAD280A138F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly implements compact reactive state stores for React with selectors/subscriptions and the requested persistence, actions, inspection, and update patterns.",
+      "source_anchor": "# MobX — Reactive State Management"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AC35B64775B308D5",
+      "missing_material_requirement_or_null": "React global-store hook design, field-level subscriptions avoiding unrelated rerenders, CRUD/filter/async actions, persistence, devtools inspection, draft-style nested updates, and non-component access/subscription",
+      "rationale": "This skill does not implement the requested React global todo store, selective subscriptions, actions, persistence, development inspection, and draft-style updates.",
+      "source_anchor": "# Database Schema Migration with Liquibase and Flyway"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-C85D8E88EB71AF04",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly implements compact reactive state stores for React with selectors/subscriptions and the requested persistence, actions, inspection, and update patterns.",
+      "source_anchor": "# Zustand — Minimal React State Management"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D65CA9F63E05D52F",
+      "missing_material_requirement_or_null": "React global-store hook design, field-level subscriptions avoiding unrelated rerenders, CRUD/filter/async actions, persistence, devtools inspection, draft-style nested updates, and non-component access/subscription",
+      "rationale": "This skill is related to frontend state or UI engineering, but it does not provide the complete global React store and performance, persistence, devtools, and non-component access requirements.",
+      "source_anchor": "# Frontend UI Engineering"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D6CC206563390EE8",
+      "missing_material_requirement_or_null": "React global-store hook design, field-level subscriptions avoiding unrelated rerenders, CRUD/filter/async actions, persistence, devtools inspection, draft-style nested updates, and non-component access/subscription",
+      "rationale": "This skill does not implement the requested React global todo store, selective subscriptions, actions, persistence, development inspection, and draft-style updates.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-F43A74BEABC4D2EB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly implements compact reactive state stores for React with selectors/subscriptions and the requested persistence, actions, inspection, and update patterns.",
+      "source_anchor": "# Valtio"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0170",
+  "batch_input_sha256": "41021c0795105701f2fe923f80f5a18db81d0ad4471e60552c49892570cc8b8a",
+  "blind_packet_id": "P-4E4078758484E1495B",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "70260a154e4266f5967b231a7d23123e9bb64c2bc5886602daece016a30c888c"
+}
