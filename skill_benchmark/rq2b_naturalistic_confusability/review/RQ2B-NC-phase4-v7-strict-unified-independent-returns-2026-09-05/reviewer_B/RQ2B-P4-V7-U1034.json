@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-02AE445239160D93",
+      "missing_material_requirement_or_null": "Live incident command with severity, assigned response roles, mitigation control, and resolution handoff.",
+      "rationale": "This skill produces competitive research and sales battlecards, not an outage-response procedure.",
+      "source_anchor": "Competitive Intelligence"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E65DB8730C61DCA",
+      "missing_material_requirement_or_null": "Live incident command with severity, assigned response roles, mitigation control, and resolution handoff.",
+      "rationale": "This is a pre-build security prior-art research workflow rather than a procedure for coordinating a customer outage.",
+      "source_anchor": "`security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-33E512DEF93A320A",
+      "missing_material_requirement_or_null": "An initial severity call grounded in customer impact.",
+      "rationale": "It supplies the requested response roles, fixed cadence, decision log, mitigation-first posture, and stand-down handoff, but does not direct the requested initial impact-based severity decision.",
+      "source_anchor": "War room protocol"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4CF06505A0EA681F",
+      "missing_material_requirement_or_null": "A direct human operations-lead assignment rather than an agent-team orchestration dependency.",
+      "rationale": "It covers commander-led severity, communications cadence, mitigation, logging, and resolution, but frames execution as spawning a multi-agent investigation team instead of directly conducting the requested incident-command response.",
+      "source_anchor": "Incident response team of agents"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6D0EF059C9761825",
+      "missing_material_requirement_or_null": "Live outage command, response roles, mitigation decisions, and resolution criteria.",
+      "rationale": "This is a sprint-retrospective facilitation workflow, not a live incident-response procedure.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-74D56985FF756B82",
+      "missing_material_requirement_or_null": "Internal incident-command role assignment and mitigation decision control.",
+      "rationale": "It provides customer-facing outage-update cadence and resolution communications, but not the requested commander-led coordination, role assignment, decision log, and mitigation direction.",
+      "source_anchor": "Status Page Update"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8068C21AB0D3B95B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly runs a live outage response: severity from impact, explicit operations/comms/scribe roles, fixed updates, mitigation before root cause, recorded go/no-go calls, and a resolution-to-postmortem handoff.",
+      "source_anchor": "Incident commander role"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93DB0F6686442F71",
+      "missing_material_requirement_or_null": "Live outage command, response roles, mitigation decisions, and resolution criteria.",
+      "rationale": "This skill configures Obsidian database views and has no incident-response capability.",
+      "source_anchor": "Obsidian Bases Skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1034",
+  "batch_input_sha256": "dd3e721ec49687080589070c4d807839a6614ef1a147df3b58003ce555839a5e",
+  "blind_packet_id": "P-FE4F41B2822EA77698",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "088802c1598e2762d3ca3cbdb9d84db53b2616b2f27589a890d1033341fa7b0c"
+}

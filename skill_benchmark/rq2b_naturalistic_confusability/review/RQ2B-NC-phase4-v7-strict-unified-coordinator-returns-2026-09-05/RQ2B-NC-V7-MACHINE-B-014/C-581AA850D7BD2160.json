@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-EDD3AA3A1D9DA0E455",
+  "candidate_token": "C-106305997341F822",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "coordinator_output_sha256": "7775ccf2a0a99d7cbdd4e2c1b8d48a452d78a7b16649c8bc4a5359b3d41f67f2",
+  "fresh_source_render_sha256": "5636b7fba5940034ab690058fd42f406fcedb6cc1889c97c178a692b19c909ae",
+  "rationale": "The source is limited to JVM-embedded Kafka Streams and expressly excludes plain producer/consumer work; it does not provide the requested Python Kafka consumer with schema-registry deserialization and explicit offset and retry handling.",
+  "reviewer_a_return_sha256": "7c67c27012cf664b472d90da6f5591911055a3bd3c948cda1168574d3cea47b4",
+  "reviewer_b_return_sha256": "e634b3e723ee2de399cb9febb81aa7daa33f50287194e05c4a811e40dc7a8dc1",
+  "source_anchor": "JVM-embedded stream processing library with no separate cluster."
+}

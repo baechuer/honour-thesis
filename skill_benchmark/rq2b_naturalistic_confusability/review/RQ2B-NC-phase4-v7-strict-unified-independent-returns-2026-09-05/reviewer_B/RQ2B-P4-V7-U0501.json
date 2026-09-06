@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-131F5928A91B78AB",
+      "missing_material_requirement_or_null": "Architecture-specific assessment of cohesion, layering, modularity, and public-interface design.",
+      "rationale": "It provides evidence-based maintainability scoring and addresses coupling, but its stated dimensions omit several requested architecture dimensions and interface design.",
+      "source_anchor": "## Scoring Dimensions (1-10 each)"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-14CAADFA203055FA",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directs an evidence-based architecture review covering coupling, cohesion, layering, modularity, naming, API design, maintainability, confidence filtering, and prioritized actions.",
+      "source_anchor": "## Scoring Dimensions (1-10 each)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-74E6F309CF9B9E69",
+      "missing_material_requirement_or_null": "An architecture review with the requested structural dimensions, evidence, scores, and design changes.",
+      "rationale": "This is an accessibility audit procedure rather than a route for assessing the application's architecture or public-interface extension readiness.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8246094741DF3488",
+      "missing_material_requirement_or_null": "An architecture review of the application with structural scores and file-and-line findings.",
+      "rationale": "It is a user-research prior-art survey workflow, not a plausible method for the requested codebase architecture assessment.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8E3E6E2CADAC2EDE",
+      "missing_material_requirement_or_null": "A whole-application architecture assessment scored across the requested dimensions.",
+      "rationale": "Its design-and-readability pass can surface design and public-interface concerns, but it is a diff-focused review and does not require the requested architecture scoring.",
+      "source_anchor": "### Pass 2 - Design and readability"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A3DC808EEBBDAB5E",
+      "missing_material_requirement_or_null": "Evidence-based scoring of the requested architecture dimensions and five prioritized design changes.",
+      "rationale": "It can document and explain an existing system's architecture, components, and extension points, but it does not conduct the requested evaluative scoring review.",
+      "source_anchor": "## Mode: explain or design"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F3AE9DB1DE872B83",
+      "missing_material_requirement_or_null": "A codebase architecture review covering and scoring coupling, cohesion, layering, and modularity with file-and-line findings.",
+      "rationale": "It materially supports public API and interface design, including contracts and naming, but it does not assess the broader requested architecture dimensions.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FAE18456FD3DD29A",
+      "missing_material_requirement_or_null": "An architecture review that evaluates and scores the requested structural and interface-design dimensions.",
+      "rationale": "This testing-fitness review is not a plausible route for the central architecture assessment requested.",
+      "source_anchor": "# Software Testing Fitness Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0501",
+  "batch_input_sha256": "9b83a989c7faf222de9a5ab17dcad55bd8cec7d79f141dcdbc5b734a076d3565",
+  "blind_packet_id": "P-5031917337CBCD9ADD",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "811af67223f5ba9ab9bcc26d58687f7cd44f301851b6e4089d364c0b9860f13a"
+}

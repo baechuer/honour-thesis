@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-106305997341F822",
+      "missing_material_requirement_or_null": "A Python implementation for consuming the managed topic.",
+      "rationale": "It provides Kafka Streams JVM application guidance, including schema and configuration workflows, but not the requested Python consumer.",
+      "source_anchor": "Build Mode"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2DBB52D41D22CB10",
+      "missing_material_requirement_or_null": "Retryable-failure handling and explicit safe offset commit or recording behavior.",
+      "rationale": "It targets confluent-kafka Python consumers with Schema Registry, environment configuration, testing, a producer, and run guidance, but it does not specify a retryable-failure policy or safe offset-recording or commit behavior.",
+      "source_anchor": "consumer.py Pattern"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2F3C353C4BDB0635",
+      "missing_material_requirement_or_null": "A Python consumer with retryable-failure handling.",
+      "rationale": "It gives a Schema Registry consumer design, environment configuration, producer, and explicit commits, but is for Java and does not cover the requested Python implementation or retryable-failure handling.",
+      "source_anchor": "Consumer Pattern"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-44DCB50BB9CBB774",
+      "missing_material_requirement_or_null": "A Python Kafka consumer using a registered schema, retry handling, safe offsets, environment configuration, test producer, and run instructions.",
+      "rationale": "This is a gene-set enrichment analysis workflow rather than message-topic consumption.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-577855CB0086865F",
+      "missing_material_requirement_or_null": "A Python Kafka consumer using a registered schema, retry handling, safe offsets, environment configuration, test producer, and run instructions.",
+      "rationale": "This covers LLM tracing and evaluation rather than Kafka message consumption.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BE0829CD372197DF",
+      "missing_material_requirement_or_null": "A Python Kafka consumer using a registered schema, retry handling, safe offsets, environment configuration, test producer, and run instructions.",
+      "rationale": "This is a Python smart-contract development workflow rather than message-topic consumption.",
+      "source_anchor": "Algorand Python"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EB17F5EC6D229F54",
+      "missing_material_requirement_or_null": "A Python Kafka consumer using a registered schema, retry handling, safe offsets, environment configuration, test producer, and run instructions.",
+      "rationale": "This addresses database schema migrations rather than consuming messages from a managed topic.",
+      "source_anchor": "Database Schema Migration with Liquibase and Flyway"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-EC38995D4FD36920",
+      "missing_material_requirement_or_null": "A managed Kafka consumer and Schema Registry workflow, including retryable-failure and safe offset behavior.",
+      "rationale": "It helps with general Python implementation and testing but provides no Kafka or Schema Registry consumer workflow.",
+      "source_anchor": "Core Workflow"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1081",
+  "batch_input_sha256": "c0440de5246b54be9372675c48f5b16cba58c7297de9ebad378ce550a9b7c7ca",
+  "blind_packet_id": "P-EDD3AA3A1D9DA0E455",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "375ef5e35ba1ca5e25638328dfb7622bcd648c7ba4092f7b471321f67e1062fa"
+}

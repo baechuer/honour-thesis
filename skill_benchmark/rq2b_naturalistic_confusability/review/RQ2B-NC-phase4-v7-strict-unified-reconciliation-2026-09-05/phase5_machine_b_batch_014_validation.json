@@ -1,0 +1,46 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_batch_validation_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-014",
+  "claim_boundary": "This log validates only the four current Machine B manifest records and their newly created independent reviewer and sealed-coordinator returns. It makes no claim about Machine A, target identity, rank, provenance joins, retrieval outcomes, or metrics.",
+  "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+  "groups": [
+    {
+      "batch_id": "RQ2B-P4-V7-U1034",
+      "independent_returns": "PASS",
+      "coordinator_cases": 0,
+      "coordinator_validation": "NOT_REQUIRED"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0501",
+      "independent_returns": "PASS",
+      "coordinator_cases": 1,
+      "coordinator_validation": "PASS"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U1081",
+      "independent_returns": "PASS",
+      "coordinator_cases": 2,
+      "coordinator_validation": "PASS"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0850",
+      "independent_returns": "PASS",
+      "coordinator_cases": 3,
+      "coordinator_validation": "PASS"
+    }
+  ],
+  "groups_validated": 4,
+  "a_b_returns_validated": 8,
+  "coordinator_cases_validated": 6,
+  "validation_checks": {
+    "machine_b_manifest_identity": "PASS",
+    "packet_hashes": "PASS",
+    "independent_return_schema": "PASS",
+    "reviewer_blindness_bindings": "PASS",
+    "a_b_completeness": "PASS",
+    "source_anchor_validation": "PASS",
+    "sealed_coordinator_trigger_completeness": "PASS",
+    "sealed_coordinator_schema_and_bindings": "PASS"
+  },
+  "overall": "PASS_MACHINE_B_BATCH_014"
+}

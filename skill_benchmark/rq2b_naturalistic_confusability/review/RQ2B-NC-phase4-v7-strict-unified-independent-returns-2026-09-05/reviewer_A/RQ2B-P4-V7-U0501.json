@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-131F5928A91B78AB",
+      "missing_material_requirement_or_null": "Assessment of cohesion, layering, modularity, and API design.",
+      "rationale": "It performs an evidence-based codebase review and touches coupling, naming, and maintainability, but lacks the requested cohesion, layering, modularity, and API-design assessment.",
+      "source_anchor": "# Maintainability & Understandability Fitness Review"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-14CAADFA203055FA",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly analyzes and scores coupling, cohesion, layering, modularity, naming, API design, and maintainability with file-and-line evidence and prioritized actions.",
+      "source_anchor": "# Software Architecture Fitness Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-74E6F309CF9B9E69",
+      "missing_material_requirement_or_null": "An architecture assessment of the codebase and public-API extension readiness.",
+      "rationale": "This is a WCAG interface accessibility audit, not an assessment of application architecture or public-API extension readiness.",
+      "source_anchor": "# Accessibility Audit"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8246094741DF3488",
+      "missing_material_requirement_or_null": "An architecture assessment of the codebase and public-API extension readiness.",
+      "rationale": "This produces published user-research survey artifacts rather than an architecture assessment of the application.",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8E3E6E2CADAC2EDE",
+      "missing_material_requirement_or_null": "An application-wide architecture assessment across coupling, cohesion, layering, modularity, naming, and interface design.",
+      "rationale": "This is a diff-oriented code-review procedure and does not assess the requested application-wide architecture dimensions.",
+      "source_anchor": "# Code Review Checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A3DC808EEBBDAB5E",
+      "missing_material_requirement_or_null": "Architecture fitness scoring with structural violations, file-and-line evidence, and five prioritized design changes.",
+      "rationale": "It can reverse-engineer an existing system's architecture, but produces documentation rather than the requested architecture fitness review and recommendations.",
+      "source_anchor": "# System Architecture"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F3AE9DB1DE872B83",
+      "missing_material_requirement_or_null": "An evidence-based assessment of the existing application's broader architecture, including coupling, cohesion, layering, and modularity.",
+      "rationale": "It provides useful public-interface design guidance but does not audit the existing application across the requested architecture dimensions.",
+      "source_anchor": "# API and Interface Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FAE18456FD3DD29A",
+      "missing_material_requirement_or_null": "An architecture assessment of the codebase and public-API extension readiness.",
+      "rationale": "This evaluates testing fitness rather than application architecture or public-interface design readiness.",
+      "source_anchor": "# Software Testing Fitness Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0501",
+  "batch_input_sha256": "9b83a989c7faf222de9a5ab17dcad55bd8cec7d79f141dcdbc5b734a076d3565",
+  "blind_packet_id": "P-5031917337CBCD9ADD",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "a7850fb4ca5b0250592def6b4dc040a90dc099429e7c64840f6f0db0d66a9e40"
+}

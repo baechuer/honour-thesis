@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-02AE445239160D93",
+      "missing_material_requirement_or_null": "Live incident-command coordination for the checkout outage, including severity, roles, 15-minute cadence, mitigation decisions, and resolution handoff.",
+      "rationale": "It produces competitive-analysis matrices and battlecards, not a live outage command response.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E65DB8730C61DCA",
+      "missing_material_requirement_or_null": "Live incident-command coordination for the checkout outage, including severity, roles, 15-minute cadence, mitigation decisions, and resolution handoff.",
+      "rationale": "It surveys pre-build security prior art and produces research artifacts, not a live incident response.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-33E512DEF93A320A",
+      "missing_material_requirement_or_null": "An impact-based initial severity call and two concrete next coordination messages.",
+      "rationale": "It coordinates roles, a decision log, mitigation, and stand-down, but does not prescribe an impact-based severity call or the requested two coordination messages.",
+      "source_anchor": "## Method"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4CF06505A0EA681F",
+      "missing_material_requirement_or_null": "A direct incident-commander response with an explicit 15-minute cadence and the next two coordination messages.",
+      "rationale": "It provides an agent-orchestration model and covers coordination, but makes delivery dependent on spawning parallel investigators and does not supply the requested two immediate coordination messages or an explicit 15-minute cadence.",
+      "source_anchor": "## Run it"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6D0EF059C9761825",
+      "missing_material_requirement_or_null": "Live incident-command coordination for the checkout outage, including severity, roles, 15-minute cadence, mitigation decisions, and resolution handoff.",
+      "rationale": "It is sprint retrospective facilitation and expressly excludes a SEV or outage.",
+      "source_anchor": "## Do NOT"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-74D56985FF756B82",
+      "missing_material_requirement_or_null": "Incident-command leadership with role assignments, go/no-go decision record, mitigation coordination, and two coordination messages.",
+      "rationale": "It supplies customer-status communications and monitoring criteria, but not command ownership, role assignments, decision coordination, or the internal mitigation response.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8068C21AB0D3B95B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directs an impact-based SEV1 call for a full outage, assigns operations, communications, and scribe roles, keeps the IC off the fix, runs the required cadence, prioritizes mitigation, logs decisions, and hands off after verified recovery.",
+      "source_anchor": "## Method"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93DB0F6686442F71",
+      "missing_material_requirement_or_null": "Live incident-command coordination for the checkout outage, including severity, roles, 15-minute cadence, mitigation decisions, and resolution handoff.",
+      "rationale": "It creates Obsidian database views and has no route to run a live outage response.",
+      "source_anchor": "# Obsidian Bases Skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1034",
+  "batch_input_sha256": "dd3e721ec49687080589070c4d807839a6614ef1a147df3b58003ce555839a5e",
+  "blind_packet_id": "P-FE4F41B2822EA77698",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c79079a9d8d1df11d7980039cbec806f5657d851fcadcbf03d9d83ea74065763"
+}

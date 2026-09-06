@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0BA1D7D40D378DE4",
+      "missing_material_requirement_or_null": "A provider-facing payments integration plan that maps the external provider's auth, calls, secrets, and verification cases without producing or reviewing the app's own OpenAPI contract.",
+      "rationale": "Covers auth, pagination, rate limits, idempotency, retry, testing, and endpoint design, but its prescribed output is an API design/OpenAPI for the app rather than a third-party payments-provider integration plan.",
+      "source_anchor": "### Phase 16: Architecture Output and Deliverables"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-10BFD67E4FCE71F9",
+      "missing_material_requirement_or_null": "A payments-provider integration plan with payment operation calls, pagination, idempotency, and verification cases.",
+      "rationale": "Provides a blueprint for an external API integration with setup, tokens, endpoints, and rate-limit handling, but it is Slack-specific and omits payment-provider calls, pagination, and payment idempotency.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1422C0B49C72273D",
+      "missing_material_requirement_or_null": "A payments-provider-specific integration plan including safe payment idempotency and verification cases.",
+      "rationale": "Provides third-party API auth, endpoints, rate limits, server-side key handling, and retry backoff, but it is stock-photo-provider-specific and lacks a payments integration's idempotency and verification plan.",
+      "source_anchor": "# Stock Photo APIs"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-19AD7A6479BAC770",
+      "missing_material_requirement_or_null": "An end-to-end third-party payments integration plan covering auth, endpoint calls, pagination, rate-limit retry, required secrets, and verification cases.",
+      "rationale": "Directly addresses payment idempotency and reconciliation for an external card charge, but expressly defers client retry policy and does not map the requested auth, endpoints, pagination, secrets, and verification coverage.",
+      "source_anchor": "# Idempotency Enforcer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9038EA39FDA161F2",
+      "missing_material_requirement_or_null": "A plan for integrating with a third-party payments API, including its auth flow, calls, rate limits, retries, idempotency, secrets, and verification cases.",
+      "rationale": "Builds a Sumble-backed CRM-cleaning review app, which does not address the requested payments-integration boundary or deliverables.",
+      "source_anchor": "# CRM Cleaning"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-99EEC52DFA4E98CB",
+      "missing_material_requirement_or_null": "A payments-provider integration plan with payment operation calls, pagination, and payment-specific idempotency and verification cases.",
+      "rationale": "Covers third-party API setup, credentials, calls, rate limits, and webhook deduplication, but is WhatsApp-specific and does not supply the requested payments integration plan.",
+      "source_anchor": "# WhatsApp Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C07ACE56CCFF448B",
+      "missing_material_requirement_or_null": "A plan for integrating with a third-party payments API, including its auth flow, calls, rate limits, retries, idempotency, secrets, and verification cases.",
+      "rationale": "Performs GO/KEGG enrichment and plotting from gene data, which is unrelated to a payments API integration plan.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F42586D5D2785374",
+      "missing_material_requirement_or_null": "A design-stage third-party payments integration plan rather than a security findings report on existing code.",
+      "rationale": "Reviews existing code for security flaws and explicitly routes design-stage questions elsewhere, so it cannot produce the requested payments integration plan.",
+      "source_anchor": "# Secure Code Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0850",
+  "batch_input_sha256": "91b8799549e3907050892be6dc77af3abb90a392b5378e5a27a1c327eba4dfaa",
+  "blind_packet_id": "P-8BC14A1C1B34CEC393",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "cfd51ac065cb8843c43bab2cfd81d3d74ed25a8a3df43c8935d78c5b3b22c900"
+}

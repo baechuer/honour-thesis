@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-106305997341F822",
+      "missing_material_requirement_or_null": "A Python Kafka consumer with schema-registry deserialization and safe explicit offset and retry handling.",
+      "rationale": "This is expressly a JVM Kafka Streams skill and excludes plain producer or consumer work, so it cannot deliver the requested Python consumer.",
+      "source_anchor": "JVM-embedded stream processing library with no separate cluster."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2DBB52D41D22CB10",
+      "missing_material_requirement_or_null": "A defined retryable-failure policy and explicit safe offset-commit or recording behavior.",
+      "rationale": "It covers Python Kafka clients, Schema Registry, local and hosted configuration, a producer, dependencies, and run guidance, but its source-visible consumer guidance does not prescribe retryable-failure handling or explicit safe offset commit or recording.",
+      "source_anchor": "### consumer.py Pattern"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2F3C353C4BDB0635",
+      "missing_material_requirement_or_null": "A Python implementation of the requested consumer.",
+      "rationale": "It creates Java Kafka client projects, rather than the requested Python consumer.",
+      "source_anchor": "# Confluent Kafka Java Client Creation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-44DCB50BB9CBB774",
+      "missing_material_requirement_or_null": "Kafka consumer, schema-registry, retry, offset, producer, and environment-configuration support.",
+      "rationale": "It performs gene-set enrichment analysis and has no route to the requested messaging-client deliverable.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-577855CB0086865F",
+      "missing_material_requirement_or_null": "Kafka consumer implementation with schema-registry deserialization, retries, offsets, and producer support.",
+      "rationale": "It is an LLM observability and evaluation skill, not a messaging-client implementation route.",
+      "source_anchor": "# LangSmith"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BE0829CD372197DF",
+      "missing_material_requirement_or_null": "Kafka consumer implementation with schema-registry deserialization, retries, offsets, and producer support.",
+      "rationale": "It concerns Algorand smart contracts and does not address the requested messaging-client deliverable.",
+      "source_anchor": "# Algorand Python"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EB17F5EC6D229F54",
+      "missing_material_requirement_or_null": "Kafka consumer implementation with schema-registry deserialization, retries, offsets, and producer support.",
+      "rationale": "It concerns relational database migration tooling and has no plausible route to the requested consumer.",
+      "source_anchor": "# Database Schema Migration with Liquibase and Flyway"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-EC38995D4FD36920",
+      "missing_material_requirement_or_null": "Kafka consumer integration, Schema Registry deserialization, retry and offset handling, local and hosted environment configuration, a producer, and Kafka run instructions.",
+      "rationale": "It can support robust typed Python code and testing, but lacks the Kafka- and Schema-Registry-specific workflow needed for the requested deliverable.",
+      "source_anchor": "# Python Pro"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1081",
+  "batch_input_sha256": "c0440de5246b54be9372675c48f5b16cba58c7297de9ebad378ce550a9b7c7ca",
+  "blind_packet_id": "P-EDD3AA3A1D9DA0E455",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0da89e51cac90abd2fbe819c7de6632dc29a69445d66a71ff5910acbc2656677"
+}

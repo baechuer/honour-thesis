@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0BA1D7D40D378DE4",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides a staged API integration design covering authentication, endpoint/request design, pagination and rate limits, retry-safe idempotency, secret handling, and testing without requiring a review of the app existing OpenAPI contract.",
+      "source_anchor": "### Phase 7: Idempotency and Safe Retry Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-10BFD67E4FCE71F9",
+      "missing_material_requirement_or_null": "A payments-provider integration plan, including payment authentication, endpoint calls, idempotency, and verification cases.",
+      "rationale": "It is a Slack-specific bot and messaging integration guide rather than a plan for integrating a third-party payments API.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1422C0B49C72273D",
+      "missing_material_requirement_or_null": "Payment-specific authentication and endpoint flow, pagination, idempotency keys, and payment verification cases.",
+      "rationale": "It supplies a general third-party API integration workflow with server-side key handling, rate-limit awareness, and retry/backoff, but it is for stock-photo providers and omits material payments integration requirements.",
+      "source_anchor": "### Step 5: Build for robustness"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-19AD7A6479BAC770",
+      "missing_material_requirement_or_null": "An end-to-end payments integration plan covering provider authentication, endpoint calls, pagination, rate limits, secrets, and verification cases.",
+      "rationale": "It directly addresses payment-safe idempotency and reconciliation for an external side effect, but omits the broader provider integration plan requested.",
+      "source_anchor": "### Step 5: Persist intent atomically, then do the work"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9038EA39FDA161F2",
+      "missing_material_requirement_or_null": "A plan for a third-party payments API integration, including payment auth, endpoint calls, retries, idempotency, secrets, and verification.",
+      "rationale": "It is a CRM account-cleaning workflow and is not a plausible route to the requested payments API integration plan.",
+      "source_anchor": "# CRM Cleaning"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-99EEC52DFA4E98CB",
+      "missing_material_requirement_or_null": "A payments-provider integration plan, including payment auth, endpoint calls, idempotency, and verification cases.",
+      "rationale": "It is a WhatsApp business messaging integration guide rather than a plan for integrating a third-party payments API.",
+      "source_anchor": "# WhatsApp Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C07ACE56CCFF448B",
+      "missing_material_requirement_or_null": "A third-party payments API integration plan with its required auth, endpoint, reliability, secret, and verification coverage.",
+      "rationale": "It is a gene-enrichment analysis and plotting workflow, not a plausible route to the requested payments API integration plan.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F42586D5D2785374",
+      "missing_material_requirement_or_null": "A third-party payments API integration plan rather than a review of application code.",
+      "rationale": "It performs secure code review and therefore neither plans a payments-provider integration nor respects the request to avoid reviewing the app own OpenAPI contract.",
+      "source_anchor": "# Secure Code Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0850",
+  "batch_input_sha256": "91b8799549e3907050892be6dc77af3abb90a392b5378e5a27a1c327eba4dfaa",
+  "blind_packet_id": "P-8BC14A1C1B34CEC393",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c25f7d11edb392ac69977c703fa9d5466cc7ed86224300699a2d68ed74024487"
+}
