@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0B8B7AFEDC020922",
+      "missing_material_requirement_or_null": "Extract the specified invoice fields from the supplied text file into a structured table.",
+      "rationale": "This skill compares a draft with ranking pages and produces a content-gap analysis, not an invoice-field extraction.",
+      "source_anchor": "# SERP Gap Analyzer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-785EF7EED7896104",
+      "missing_material_requirement_or_null": "Read the supplied .txt invoice and extract the requested fields into a structured table.",
+      "rationale": "The skill is limited to converting PDF documents to Markdown, while the input is a text invoice and the requested structured extraction remains unsupported.",
+      "source_anchor": "## When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C6BB89CF8393CBD3",
+      "missing_material_requirement_or_null": "Extract the invoice fields from the supplied text file into a structured table.",
+      "rationale": "This skill writes a freelance statement of work rather than reading an invoice and extracting its reusable fields.",
+      "source_anchor": "# Statement of Work Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CB687469E38F5006",
+      "missing_material_requirement_or_null": "Read the invoice text and produce a structured table of its requested fields.",
+      "rationale": "This skill designs software-test doubles and has no route for document field extraction or invoice tabulation.",
+      "source_anchor": "# Mock Stub Designer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CE103C40D0FF4F8C",
+      "missing_material_requirement_or_null": "Read the supplied invoice text and extract supplier, invoice number, dates, line items, totals, and payment details before designing the table.",
+      "rationale": "It can redesign a table from raw data, but it does not provide the required document-reading and field-extraction procedure for the invoice.",
+      "source_anchor": "# Data Table Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DA190EDB9B8D30C7",
+      "missing_material_requirement_or_null": "Extract the requested invoice fields from the supplied text file into a structured table.",
+      "rationale": "This skill performs GO and KEGG enrichment from gene lists, which is unrelated to invoice extraction.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E035F507249092EB",
+      "missing_material_requirement_or_null": "Read the invoice text and return a structured field table without a narrative summary.",
+      "rationale": "This skill converts SQL results into a business narrative and chart recommendation, conflicting with both the input and the no-narrative output constraint.",
+      "source_anchor": "# SQL to Insights"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ECCD50C170FA9FF2",
+      "missing_material_requirement_or_null": "Extract the specified invoice fields from the supplied text file into a structured table.",
+      "rationale": "This skill concerns durable distributed application execution, not document reading or invoice-field extraction.",
+      "source_anchor": "## When to Use"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1210",
+  "batch_input_sha256": "1952e238fe9bb598bce0117669667c86db59ff80d087d5d5019ae1aa0d15f3e1",
+  "blind_packet_id": "P-2B2DD8C247EE84F5FD",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0b28407f1619b5eeac14c90237a03cce8fd842e41baeb5fef4d3a0fd2f5025b0"
+}
