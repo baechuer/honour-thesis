@@ -1,0 +1,66 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0364",
+  "batch_input_sha256": "4053a25660e4eac07945e2c91b5d288a1497dacf057f8bdee85d71c8869b780c",
+  "blind_packet_id": "P-553CBF8327EE3D5A6C",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-15C0EF9C7E85409A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "Generic backend architecture guidance does not supply unified-memory headroom accounting, an accelerator OOM recovery sequence, or thermal and power run operations.",
+      "missing_material_requirement_or_null": "A unified-memory training operations procedure with safe-headroom calculation, ordered OOM recovery, and temperature/power monitoring thresholds."
+    },
+    {
+      "candidate_token": "C-4217084B24AEDE00",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Language Version Migrator",
+      "rationale": "This is a dual-runtime code migration workflow, not a procedure for operating a long-running accelerator training job.",
+      "missing_material_requirement_or_null": "Unified-memory capacity planning, OOM diagnosis and recovery, and temperature/power monitoring guidance for the training run."
+    },
+    {
+      "candidate_token": "C-44B68BB37EF823B1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "The source runs gene-set enrichment analysis and does not address accelerator memory, training failures, or thermal operations.",
+      "missing_material_requirement_or_null": "A training-job operations plan covering safe memory headroom, OOM recovery, and temperature and power monitoring."
+    },
+    {
+      "candidate_token": "C-6AC2A242B4301624",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Sprint retrospective facilitation supplies no operational material for accelerator memory sizing, OOM handling, or thermal and power monitoring.",
+      "missing_material_requirement_or_null": "Unified-memory training-run thresholds, monitoring actions, and an OOM recovery procedure."
+    },
+    {
+      "candidate_token": "C-85BB8362370A1FE6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Next Steps",
+      "rationale": "The source is for environment installation and ABI verification; it directs the requested memory and thermal operating concerns to other skills rather than providing them.",
+      "missing_material_requirement_or_null": "A long-running unified-memory training operations procedure with safe headroom, OOM recovery, and temperature/power thresholds and actions."
+    },
+    {
+      "candidate_token": "C-9BD90D8CB6A1FC96",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## The OOM Ladder",
+      "rationale": "It directly covers pre-launch UMA headroom budgeting, a staged OOM recovery sequence, and scheduled temperature/power monitoring with operational interpretations.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-DDDEC84100374DE7",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### G3: UMA OOM Below 128GB",
+      "rationale": "It supplies practical UMA OOM checks and cache-flush recovery plus thermal and contention diagnostics, but not a complete pre-launch safe-headroom planning and monitoring procedure.",
+      "missing_material_requirement_or_null": "A pre-launch unified-memory headroom calculation and an integrated run-monitoring plan with thresholds, monitoring cadence, and recovery actions."
+    },
+    {
+      "candidate_token": "C-F43202970178AA02",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Operating procedure",
+      "rationale": "This source monitors statistical data drift in deployed ML systems, not the resource and thermal operation of a training workstation.",
+      "missing_material_requirement_or_null": "Unified-memory headroom estimation, training OOM diagnosis and recovery, and temperature/power monitoring guidance."
+    }
+  ],
+  "reviewer_output_sha256": "bd5bdef3d46593c9163c960baa0019383a407f70b60a989a2815ed905236c56f"
+}

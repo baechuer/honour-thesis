@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C6EDC45D07868CD",
+      "missing_material_requirement_or_null": "A container deployment pipeline with source, dependency and image checks, pre-release policy enforcement, and runtime secret retrieval outside CI.",
+      "rationale": "The source is limited to reading secrets with the op CLI and supplies none of the requested deployment-security pipeline or release controls.",
+      "source_anchor": "# Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2C3E2502E7276EB1",
+      "missing_material_requirement_or_null": "Container image build and scanning plus policy-as-code enforcement before the release handoff.",
+      "rationale": "It covers SAST, SCA, signing, and runtime managed-secret retrieval, but it is explicitly a serverless package workflow rather than a container pipeline with a pre-handoff policy gate.",
+      "source_anchor": "## Step-by-step guidance"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5F9223F92E693050",
+      "missing_material_requirement_or_null": "A container deployment pipeline with source, dependency and image checks, pre-release policy enforcement, and runtime secret retrieval outside CI.",
+      "rationale": "This is a VM golden-image and Ansible workflow, not a container deployment pipeline; its secrets are applied during configuration rather than retrieved by the runtime.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8669111E858F3D98",
+      "missing_material_requirement_or_null": "A concrete container security-gated pipeline covering source, dependency and image checks, policy enforcement before release handoff, and runtime secret retrieval outside CI.",
+      "rationale": "The generic deployment examples mention build, registry push, and a broad security scan but omit the requested security gate sequence, policy enforcement, and runtime-secret design.",
+      "source_anchor": "### Deployment Pipeline"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-893FCAC8F8B58302",
+      "missing_material_requirement_or_null": "A container deployment pipeline with source, dependency and image checks, pre-release policy enforcement, and runtime secret retrieval outside CI.",
+      "rationale": "This is repository and version-control guidance, with no implementation of the requested container release security controls.",
+      "source_anchor": "## Instructions"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B9A6524FA2B87D9C",
+      "missing_material_requirement_or_null": "A container deployment pipeline with source, dependency and image checks, pre-release policy enforcement, and runtime secret retrieval outside CI.",
+      "rationale": "The source describes a published user-research survey and is unrelated to a deployment-security pipeline.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C118FDC6A7AAD765",
+      "missing_material_requirement_or_null": "A sequenced container deployment pipeline with image checks, policy enforcement before handoff, and runtime secret retrieval outside CI.",
+      "rationale": "It supplies relevant SAST, dependency-scanning, signing, and Docker integrity practices, but does not define the requested container pipeline sequence, pre-handoff policy gate, or runtime-secret model.",
+      "source_anchor": "## Policy Requirements"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-FE06498EB0BB8A0E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides the end-to-end Kubernetes container gate sequence: SAST, dependency and image scanning, a policy gate before GitOps handoff, and cluster-side runtime secret retrieval that keeps values out of CI.",
+      "source_anchor": "### Phase 4 — Policy-as-code admission gate, before the GitOps handoff"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1169",
+  "batch_input_sha256": "bed65bf235d4d22d3a4a854d46c87dbe3e20c26994d39494b1668355f69ef8c8",
+  "blind_packet_id": "P-6287F783A8A06025CE",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "b79e14736d9fc8cc4509ac9b74562100ca9bf2efa86bc80a2f12dbcc03cb3074"
+}

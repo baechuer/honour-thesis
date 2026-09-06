@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-118A864416CD9571",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Direct ClinVar workflows support gene-level pathogenic/likely-pathogenic filtering, review-status filtering, condition associations, full records with submitter assertions, and conflicting interpretations.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-47D361001E739F1B",
+      "missing_material_requirement_or_null": "A ClinVar query workflow that filters pathogenic/likely-pathogenic variants by review status and returns condition, nomenclature, and submitter assertions.",
+      "rationale": "It summarizes supplied patient records or studies rather than retrieving and filtering clinical-variant evidence.",
+      "source_anchor": "# Clinical Summary"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6983367536C11DF8",
+      "missing_material_requirement_or_null": "Clinical-variant database retrieval and reporting for pathogenicity, conditions, review status, nomenclature, submissions, and conflicts.",
+      "rationale": "This is a commercial-lease legal-review procedure with no clinical-variant retrieval or evidence-table capability.",
+      "source_anchor": "# Commercial Lease Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93E54E13D0582888",
+      "missing_material_requirement_or_null": "ClinVar classification, review-status, condition-association, submitter-assertion, and conflict-reporting retrieval.",
+      "rationale": "It provides population-frequency and constraint evidence, but states that clinical pathogenicity classifications should use ClinVar and does not supply the requested clinical evidence fields.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A2404D5EEF62ED37",
+      "missing_material_requirement_or_null": "ClinVar-level review-status thresholds, condition associations, submitter assertions, and conflicting-classification reporting.",
+      "rationale": "It can retrieve gene/rsID variants, clinical-significance strings, and coordinates, but explicitly lacks the full ClinVar fields needed for the required evidence table.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AF9D90B308A2A40B",
+      "missing_material_requirement_or_null": "A clinical-variant database query and reporting workflow.",
+      "rationale": "It surveys documented UI conventions and produces design-research artifacts, not clinical-variant evidence.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E6BFFDAC5736B916",
+      "missing_material_requirement_or_null": "A ClinVar-oriented workflow for clinical-variant evidence retrieval and filtering.",
+      "rationale": "It resolves AWS data-lake assets and has no facility for clinical-variant classifications or associated evidence.",
+      "source_anchor": "# Find Data Lake Assets"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4597B4852B95DE6",
+      "missing_material_requirement_or_null": "A clinical-variant database retrieval workflow with the requested filtering and evidence fields.",
+      "rationale": "It routes product-development workflow packets and does not query or report clinical-variant evidence.",
+      "source_anchor": "# BMAD Packet-First Router"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1006",
+  "batch_input_sha256": "29ba3cefc44b36764fafe6ca956f353c5f0fb9935fade7dd018d7594f4a83342",
+  "blind_packet_id": "P-CCD5E5916D3F49A178",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ef4174097466990c68cd72f8228a68fe50349e7f00d0b24d1ea1b31c4b52dfbc"
+}

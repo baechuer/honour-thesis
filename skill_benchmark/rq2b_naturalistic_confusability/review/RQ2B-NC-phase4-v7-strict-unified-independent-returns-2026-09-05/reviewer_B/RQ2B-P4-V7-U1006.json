@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-118A864416CD9571",
+      "missing_material_requirement_or_null": null,
+      "rationale": "ClinVar querying, review-status filtering, full record retrieval, condition data, and submitter assertions support the requested evidence table and conflict handling.",
+      "source_anchor": "Query 5: Review Status and Conflicting Interpretations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-47D361001E739F1B",
+      "missing_material_requirement_or_null": "A ClinVar variant-query workflow with pathogenicity, review-status, nomenclature, condition, and submitter fields.",
+      "rationale": "This source organizes patient records or clinical studies, not ClinVar variant evidence or classification assertions.",
+      "source_anchor": "Clinical Summary"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6983367536C11DF8",
+      "missing_material_requirement_or_null": "A ClinVar evidence-retrieval workflow for pathogenic or likely pathogenic variants and their assertions.",
+      "rationale": "This source reviews commercial leases and provides no clinical-variant retrieval or evidence-table capability.",
+      "source_anchor": "Commercial Lease Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93E54E13D0582888",
+      "missing_material_requirement_or_null": "A ClinVar-derived workflow exposing curated clinical classifications, review statuses, condition assertions, and submitters.",
+      "rationale": "The source supplies population frequencies and constraint metrics, and directs clinical pathogenicity use to ClinVar instead.",
+      "source_anchor": "gnomAD Database"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A2404D5EEF62ED37",
+      "missing_material_requirement_or_null": "A ClinVar workflow with curated pathogenicity, review-status thresholding, condition associations, and submitter-level assertions.",
+      "rationale": "dbSNP supplies identifiers and limited links, but not the required curated classification, review, and submitter evidence.",
+      "source_anchor": "dbSNP Database"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AF9D90B308A2A40B",
+      "missing_material_requirement_or_null": "A clinical-variant database workflow capable of querying and tabulating ClinVar evidence.",
+      "rationale": "This source surveys visual and interaction conventions, unrelated to clinical-variant evidence retrieval.",
+      "source_anchor": "visual-prior-art-survey"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E6BFFDAC5736B916",
+      "missing_material_requirement_or_null": "A clinical-variant database workflow capable of querying and tabulating ClinVar evidence.",
+      "rationale": "This source resolves data-lake assets rather than retrieving or evaluating clinical-variant assertions.",
+      "source_anchor": "Find Data Lake Assets"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4597B4852B95DE6",
+      "missing_material_requirement_or_null": "A clinical-variant database workflow capable of querying and tabulating ClinVar evidence.",
+      "rationale": "This source routes software-development workflow packets and has no clinical-variant evidence capability.",
+      "source_anchor": "BMAD Packet-First Router"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1006",
+  "batch_input_sha256": "29ba3cefc44b36764fafe6ca956f353c5f0fb9935fade7dd018d7594f4a83342",
+  "blind_packet_id": "P-CCD5E5916D3F49A178",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "153c626a5e634bf6de45fdc3a2fc354845b61883bfe702371355a2df32338328"
+}

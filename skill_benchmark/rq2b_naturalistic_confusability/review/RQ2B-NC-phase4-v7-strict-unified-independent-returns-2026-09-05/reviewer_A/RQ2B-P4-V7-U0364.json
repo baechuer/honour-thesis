@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-15C0EF9C7E85409A",
+      "missing_material_requirement_or_null": "A DGX Spark unified-memory headroom plan, OOM recovery procedure, and thermal/power monitoring guidance.",
+      "rationale": "It addresses general backend architecture rather than unified-memory training operations, OOM diagnosis, or thermal and power monitoring.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4217084B24AEDE00",
+      "missing_material_requirement_or_null": "A unified-memory training operations plan with headroom, OOM, and thermal/power guidance.",
+      "rationale": "It is a code-language migration procedure and does not address accelerator memory operations or long-running training monitoring.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-44B68BB37EF823B1",
+      "missing_material_requirement_or_null": "Guidance for unified-memory training capacity, OOM recovery, and thermal and power operations.",
+      "rationale": "It is a gene-set enrichment analysis workflow, not a training-platform operations guide.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6AC2A242B4301624",
+      "missing_material_requirement_or_null": "A unified-memory accelerator training operations procedure with thresholds, monitoring, and OOM recovery.",
+      "rationale": "It facilitates team sprint retrospectives and supplies none of the requested runtime operations material.",
+      "source_anchor": "## Inputs to collect"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-85BB8362370A1FE6",
+      "missing_material_requirement_or_null": "Memory-headroom estimation, OOM diagnosis and recovery, and temperature/power monitoring thresholds for a long-running job.",
+      "rationale": "It focuses on preparing a DGX Spark software environment, but does not provide the requested memory-operations and thermal monitoring plan.",
+      "source_anchor": "## Container-First Rule"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-9BD90D8CB6A1FC96",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supplies unified-memory headroom guidance, an ordered OOM ladder, and temperature/power monitoring and recovery actions for long-running Spark training.",
+      "source_anchor": "## Common Issues Quick Reference"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DDDEC84100374DE7",
+      "missing_material_requirement_or_null": "A concrete unified-memory headroom estimation workflow and operating thresholds before launch.",
+      "rationale": "It gives useful UMA OOM diagnosis and thermal/power checks, but does not establish a full safe-memory headroom plan for the job.",
+      "source_anchor": "### G3: UMA OOM Below 128GB"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F43202970178AA02",
+      "missing_material_requirement_or_null": "Unified-memory capacity, OOM-recovery, and hardware thermal/power monitoring procedures.",
+      "rationale": "It monitors statistical data drift in deployed ML systems, not the memory or thermal operation of a training workstation.",
+      "source_anchor": "## Operating procedure"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0364",
+  "batch_input_sha256": "4053a25660e4eac07945e2c91b5d288a1497dacf057f8bdee85d71c8869b780c",
+  "blind_packet_id": "P-553CBF8327EE3D5A6C",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "6a1f5db877054e705ac6b11b9e3a8a7fa276fa56f9c9bd212afc6afdae3db710"
+}
