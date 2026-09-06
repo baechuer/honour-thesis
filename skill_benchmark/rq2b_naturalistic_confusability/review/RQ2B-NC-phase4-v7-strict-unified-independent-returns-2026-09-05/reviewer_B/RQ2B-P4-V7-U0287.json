@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-3E590D05DAB369E8",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly determines whether each image use is permitted, checks attribution and release requirements, and requires a per-image permitted/restricted/rejected verdict with a completed record and concrete alternative where needed.",
+      "source_anchor": "Produce a per-image verdict"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E6EA4B6D8B6EDD3",
+      "missing_material_requirement_or_null": "Per-image licence permission, attribution, release-gap, and compliance-record assessment for the supplied images.",
+      "rationale": "This is a repo-local workflow-automation guide. It does not evaluate supplied image licences, releases, required credits, or produce image compliance records.",
+      "source_anchor": "# Workflow Automation"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4B0025AD7C41EF48",
+      "missing_material_requirement_or_null": "A determination of whether each supplied image licence permits the printed campaign, including required credit and release gaps.",
+      "rationale": "It can help source a replacement image and distinguish commercial from editorial contexts, but it explicitly routes legal-use, attribution, and model-release decisions elsewhere and cannot provide the requested compliance records.",
+      "source_anchor": "## When to use a sibling instead"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4B4254622705B719",
+      "missing_material_requirement_or_null": "Per-image permission and release assessment for supplied images in a printed campaign, with a complete compliance record and safe next step.",
+      "rationale": "It addresses provider API attribution and compliance obligations, which is adjacent to credit handling, but is for programmatic image integration and explicitly leaves the licence decision to a human using another route.",
+      "source_anchor": "a human owns that license call via image-license-rights"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6F8759F51AC35834",
+      "missing_material_requirement_or_null": "Assessment of image-use permissions, credit requirements, release gaps, and per-image campaign compliance records.",
+      "rationale": "This skill drafts customer-support replies and contains no workflow for evaluating image licences or campaign-use compliance.",
+      "source_anchor": "# Support Ticket Reply"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-716EAB53478105F5",
+      "missing_material_requirement_or_null": "Assessment of each supplied image's licence, credit, release status, and safest campaign-use action.",
+      "rationale": "This skill consumes software regression-review reports and produces development dispositions; it does not address image licences or printed-campaign usage.",
+      "source_anchor": "# Receiving Regression Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B8F2B52DAE445D06",
+      "missing_material_requirement_or_null": "Assessment of image licences, attribution, release gaps, and campaign compliance records.",
+      "rationale": "This skill routes local Git collaboration and recovery work. It does not provide an image-rights evaluation or the requested per-image outputs.",
+      "source_anchor": "# Git Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D930A2F7B623B6AD",
+      "missing_material_requirement_or_null": "Assessment of supplied image licences, required credit, release gaps, and safe campaign-use next steps.",
+      "rationale": "This skill facilitates team sprint retrospectives; it has no mechanism to assess image-use rights or create image compliance records.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0287",
+  "batch_input_sha256": "e7c2126e256064cb132ec0361db62692c42edf022004ea21b64bce7fff2dba52",
+  "blind_packet_id": "P-B03977A0F0D7A86A00",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "30ebe8e8ae8c64b87c744fd308bc0b106d92396453b3ab06982301269a9adc20"
+}
