@@ -1,0 +1,23 @@
+{
+  "blind_packet_id": "P-7FDA1F96E1686E3612",
+  "candidate_token": "C-2CB2B40FAECCD824",
+  "reviewer_a_return_sha256": "4131dd6a65054ff54f2478c9400a4348dd69ec2381b18e347b12bca8ba10dba3",
+  "reviewer_b_return_sha256": "f3435024d78f72c89c142d8bfa0d34ec1cacad6a044bb1122518b2c172208aee",
+  "fresh_source_render_sha256": "5f07096ecacbd9238fd0f7abb58263efe366edc82bf83c876947156e8818041d",
+  "reviewer_A_assessment": {
+    "adequacy": "PARTIALLY_ADEQUATE",
+    "candidate_token": "C-2CB2B40FAECCD824",
+    "missing_material_requirement_or_null": "Does not extract applicant values for a PDF form, fill or preserve the PDF form, or report uncompleted fields.",
+    "rationale": "It can clean spreadsheet data, which may support preparing the applicant spreadsheet, but it misses the central PDF form-filling output and its constraints.",
+    "source_anchor": "## Environment"
+  },
+  "reviewer_B_assessment": {
+    "adequacy": "INADEQUATE",
+    "candidate_token": "C-2CB2B40FAECCD824",
+    "missing_material_requirement_or_null": "A workflow that fills the grant application PDF from the applicant spreadsheet while preserving its form structure",
+    "rationale": "This cleans spreadsheet data but supplies no PDF form completion, structure preservation, or missing-field reporting.",
+    "source_anchor": "Workflow"
+  },
+  "fresh_source_visible_skill": "---\nname: clean-data-xls\ndescription: Clean up messy spreadsheet data — trim whitespace, fix inconsistent casing, convert numbers-stored-as-text, standardize dates, remove duplicates, and flag mixed-type columns. Use when data is messy, inconsistent, or needs prep before analysis. Triggers on \"clean this data\", \"clean up this sheet\", \"normalize this data\", \"fix formatting\", \"dedupe\", \"standardize this column\", \"this data is messy\".\n---\n\n# Clean Data\n\nClean messy data in the active sheet or a specified range.\n\n## Environment\n\n- **If running inside Excel (Office Add-in / Office JS):** Use Office JS directly (`Excel.run(async (context) => {...})`). Read via `range.values`, write helper-column formulas via `range.formulas = [[\"=TRIM(A2)\"]]`. The in-place vs helper-column decision still applies.\n- **If operating on a standalone .xlsx file:** Use Python/openpyxl.\n\n## Workflow\n\n### Step 1: Scope\n\n- If a range is given (e.g. `A1:F200`), use it\n- Otherwise use the full used range of the active sheet\n- Profile each column: detect its dominant type (text / number / date) and identify outliers\n\n### Step 2: Detect issues\n\n| Issue | What to look for |\n|---|---|\n| Whitespace | leading/trailing spaces, double spaces |\n| Casing | inconsistent casing in categorical columns (`usa` / `USA` / `Usa`) |\n| Number-as-text | numeric values stored as text; stray `$`, `,`, `%` in number cells |\n| Dates | mixed formats in the same column (`3/8/26`, `2026-03-08`, `March 8 2026`) |\n| Duplicates | exact-duplicate rows and near-duplicates (case/whitespace differences) |\n| Blanks | empty cells in otherwise-populated columns |\n| Mixed types | a column that's 98% numbers but has 3 text entries |\n| Encoding | mojibake (`Ã©`, `â€™`), non-printing characters |\n| Errors | `#REF!`, `#N/A`, `#VALUE!`, `#DIV/0!` |\n\n### Step 3: Propose fixes\n\nShow a summary table before changing anything:\n\n| Column | Issue | Count | Proposed Fix |\n|---|---|---|---|\n\n### Step 4: Apply\n\n- **Prefer formulas over hardcoded cleaned values** — where the cleaned output can be expressed as a formula (e.g. `=TRIM(A2)`, `=VALUE(SUBSTITUTE(B2,\"$\",\"\"))`, `=UPPER(C2)`, `=DATEVALUE(D2)`), write the formula in an adjacent helper column rather than computing the result in Python and overwriting the original. This keeps the transformation transparent and auditable.\n- Only overwrite in place with computed values when the user explicitly asks for it, or when no sensible formula equivalent exists (e.g. encoding/mojibake repair)\n- For destructive operations (removing duplicates, filling blanks, overwriting originals), confirm with the user first\n- After each category of fix (whitespace → casing → number conversion → dates → dedup), show the user a sample of what changed and get confirmation before moving to the next category\n- Report a before/after summary of what changed\n",
+  "coordinator_instruction": "Resolve only this A/B adequacy disagreement or UNCLEAR trigger under the frozen rubric. Do not inspect targets, main/tail role, allocation, rank, source path/provenance, historical/local reference, retrieval outcome or metric. Return only the strict coordinator schema."
+}

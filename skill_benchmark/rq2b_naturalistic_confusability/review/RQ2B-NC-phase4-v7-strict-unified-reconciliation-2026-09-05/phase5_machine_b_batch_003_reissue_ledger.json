@@ -1,0 +1,47 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-003",
+  "claim_boundary": "Machine B only. Original invalid returns are preserved; each reissue is independently target-blind and replaces no historical file.",
+  "reissues": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0759",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0759.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_1/RQ2B-P4-V7-U0759.json",
+      "error_category": "batch_identity_mismatch",
+      "status": "INVALID_PRESERVED_REISSUE_1"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0759",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_1/RQ2B-P4-V7-U0759.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_2/RQ2B-P4-V7-U0759.json",
+      "error_category": "canonical_return_hash_mismatch",
+      "status": "VALIDATED_REISSUE_2"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0293",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0293.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_1/RQ2B-P4-V7-U0293.json",
+      "error_category": "candidate_coverage_and_anchor_mismatch",
+      "status": "INVALID_PRESERVED_REISSUE_1"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0293",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_1/RQ2B-P4-V7-U0293.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_2/RQ2B-P4-V7-U0293.json",
+      "error_category": "candidate_coverage_and_anchor_mismatch",
+      "status": "INVALID_PRESERVED_REISSUE_2"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0293",
+      "role": "A",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_2/RQ2B-P4-V7-U0293.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A_reissue_3/RQ2B-P4-V7-U0293.json",
+      "error_category": "protocol_instruction_hash_mismatch",
+      "status": "VALIDATED_REISSUE_3"
+    }
+  ]
+}

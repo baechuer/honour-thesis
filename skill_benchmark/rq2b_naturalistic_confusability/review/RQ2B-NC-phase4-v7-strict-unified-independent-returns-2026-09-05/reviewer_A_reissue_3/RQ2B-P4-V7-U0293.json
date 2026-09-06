@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-2A33B515860268FA","missing_material_requirement_or_null":null,"rationale":"Directly addresses the requested Chrome DevTools MCP inspection workflow and explicitly covers DOM, console, network, runtime screenshots, and verification.","source_anchor":"Overview"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-2ACB6A0A0F6F4239","missing_material_requirement_or_null":"It does not require using Chrome DevTools MCP to inspect the local checkout and runtime.","rationale":"Provides a strong Playwright E2E testing route, but the prompt specifically requires DevTools inspection rather than merely writing tests.","source_anchor":"Core Workflow"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-3D4020A294018066","missing_material_requirement_or_null":"It is unrelated to the browser-runtime inspection task.","rationale":"This skill addresses Slack bot construction, not Chrome DevTools inspection or local browser debugging.","source_anchor":"slack-bot-builder"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-61A14E064BD78F21","missing_material_requirement_or_null":"It is unrelated to the browser-runtime inspection task.","rationale":"This skill facilitates sprint retrospectives and supplies no route for browser inspection.","source_anchor":"Sprint Retro Facilitator"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A9F9912BE7DFEFE3","missing_material_requirement_or_null":"It is unrelated to the browser-runtime inspection task.","rationale":"This skill addresses GO/KEGG enrichment rather than browser debugging or runtime inspection.","source_anchor":"gokegg-analysis"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-AD0F5025BFBD373B","missing_material_requirement_or_null":"It is unrelated to the browser-runtime inspection task.","rationale":"This skill addresses GSAP plugins, not inspecting a local browser runtime with DevTools.","source_anchor":"gsap-plugins"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-B6E1368ECC25D8CB","missing_material_requirement_or_null":"It is unrelated to the browser-runtime inspection task.","rationale":"This skill addresses database schema migrations and cannot satisfy the requested browser inspection workflow.","source_anchor":"database-schema-migration-with-liquibase-and-flyway"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-FDAAA1926FFC846A","missing_material_requirement_or_null":"It does not require the requested Chrome DevTools MCP inspection of the local checkout.","rationale":"It is a meaningful browser-testing neighbour with resilient Playwright guidance, but misses the material DevTools inspection requirement.","source_anchor":"Operating procedure"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0293",
+  "batch_input_sha256":"0892a72165a8202a440ca6c0107f4f99973c4f4742aeab324bc55ba3294d1cc5",
+  "blind_packet_id":"P-B5EC6761408B775182",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"4ae5b2af3a69591605270eb37a30c788bbb00dea2a155305d66a6e0e1eb296a7"
+}

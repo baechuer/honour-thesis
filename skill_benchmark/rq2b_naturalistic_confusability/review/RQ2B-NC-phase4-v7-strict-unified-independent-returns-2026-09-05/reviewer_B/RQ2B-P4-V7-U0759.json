@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-161B8D71A620DEA2","missing_material_requirement_or_null":"A PDF-form filling workflow that preserves form structure and records uncompleted fields","rationale":"Code Simplification is a refactoring workflow and provides no PDF-form filling or applicant-spreadsheet handling.","source_anchor":"The Simplification Process"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-16B475A1A11076EE","missing_material_requirement_or_null":"A grant-form completion workflow that uses the applicant spreadsheet and preserves the PDF form","rationale":"This user-research survey does not address completing a grant application PDF from a spreadsheet.","source_anchor":"When to activate"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-20AB45C93835EA03","missing_material_requirement_or_null":"The material PDF-form completion and preserved-form output workflow, plus reporting fields that could not be completed","rationale":"It only converts the applicant spreadsheet to Markdown and does not fill or preserve the PDF form or report uncompleted fields.","source_anchor":"Convert Excel to Markdown"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-2CB2B40FAECCD824","missing_material_requirement_or_null":"A workflow that fills the grant application PDF from the applicant spreadsheet while preserving its form structure","rationale":"This cleans spreadsheet data but supplies no PDF form completion, structure preservation, or missing-field reporting.","source_anchor":"Workflow"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9604FB6E84C5258F","missing_material_requirement_or_null":"A workflow for completing the specified grant application PDF from spreadsheet data","rationale":"This is UK immigration compliance guidance, unrelated to filling a grant PDF from an applicant spreadsheet.","source_anchor":"Analysis Framework"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-A87062B30A81917F","missing_material_requirement_or_null":"The material PDF-form filling and preserved-form output workflow, using spreadsheet data and reporting fields left incomplete","rationale":"It only extracts PDF text and images to Markdown and does not fill the form, preserve its structure, or list incomplete fields.","source_anchor":"Convert PDF to Markdown"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-AB96DE05AF25947D","missing_material_requirement_or_null":"A workflow that fills the grant application PDF directly from the applicant spreadsheet without DOCX conversion","rationale":"This skill converts Word documents and conflicts with the requested PDF form completion and no-DOCX constraint.","source_anchor":"When to use this skill"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-AF5913E1D5012FA8","missing_material_requirement_or_null":"A workflow that directly completes the grant application PDF from the applicant spreadsheet and reports incomplete fields","rationale":"This develops grant proposal prose and does not provide PDF form filling from a spreadsheet or preserved-form output.","source_anchor":"Grant Writing"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0759",
+  "batch_input_sha256":"5d9f72f07e903b6894c9fbb156e9d776bc714c4ee1c06416929297ce0dcbe4be",
+  "blind_packet_id":"P-7FDA1F96E1686E3612",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"6ae4f4dfa84346fa0c50685bfce62e12d0b2b0d01f26fb46a4924a9a92e72fce"
+}
