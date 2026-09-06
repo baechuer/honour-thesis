@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0475",
+  "blind_packet_id": "P-0DBA5D83704C15B191",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-1C6FFF493C148D58",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to read external files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## When to read external files"
+    },
+    {
+      "candidate_token": "C-56F2B3B10CB887BA",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Test Data Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Test Data Builder"
+    },
+    {
+      "candidate_token": "C-73D6DD55640C8FF4",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Seed Data Generator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Seed Data Generator"
+    },
+    {
+      "candidate_token": "C-795E8C9C742852DF",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Scaffold a new project on the Azure SQL Database container",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Scaffold a new project on the Azure SQL Database container"
+    },
+    {
+      "candidate_token": "C-91C33F1E7B0672AE",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# The Azure SQL Database container (local, Private Preview)",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# The Azure SQL Database container (local, Private Preview)"
+    },
+    {
+      "candidate_token": "C-C9568804E428553F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Java MCP Server Generator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Java MCP Server Generator"
+    },
+    {
+      "candidate_token": "C-D83BFF5AEB8EF487",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Migrate from the SQL Server image to the Azure SQL Database container",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Migrate from the SQL Server image to the Azure SQL Database container"
+    },
+    {
+      "candidate_token": "C-D8F0ACCEB5EFFA20",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Language Version Migrator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Language Version Migrator"
+    }
+  ],
+  "reviewer_A_return_sha256": "aa3b8864d93391ec08a1b0c67c4a756596bdb8171e440e63a7258a812995de01",
+  "reviewer_B_return_sha256": "9fbc80604f113cfee7c571cef8e549f45aa25fdcb45e2907276006eaee098713",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
