@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0F0C27C48A4F650A",
+      "missing_material_requirement_or_null": "Network intrusion investigation and indicator handoff",
+      "rationale": "Tracks buying signals and ICP timing, unrelated to endpoint traffic analysis.",
+      "source_anchor": "decide WHO IN YOUR ICP TO HIT NOW"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1259F0D6E84C159C",
+      "missing_material_requirement_or_null": "Network intrusion investigation",
+      "rationale": "Facilitates sprint retrospectives, unrelated to packet analysis.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3B8F9D7BD11EC94D",
+      "missing_material_requirement_or_null": "Network-flow and intrusion analysis",
+      "rationale": "Surveys visual and interaction conventions, not network evidence.",
+      "source_anchor": "surveying the DOCUMENTED visual and interaction conventions"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3EDD4B08FE4E840D",
+      "missing_material_requirement_or_null": "Network intrusion investigation",
+      "rationale": "Triages game-demo feedback, unrelated to endpoint captures.",
+      "source_anchor": "Triage mixed game demo and playtest feedback"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-719BD2EB1275980C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Captures and analyzes network traffic with Wireshark and tshark, directly supporting flow, timing, DNS, encrypted sessions, files, and volume analysis.",
+      "source_anchor": "Capture and analyze network traffic with Wireshark and tshark"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-D5237340F123BD78",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides network protocol analysis and packet-capture investigation, matching the requested suspicious-flow and indicator assessment.",
+      "source_anchor": "Network protocol analyzer and packet capture tool for traffic analysis"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-DA0D2F36512C1A0C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Analyzes packet captures and network telemetry for intrusion evidence, directly matching the investigation and handoff requirements.",
+      "source_anchor": "Analyze packet captures and network telemetry for intrusion evidence"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DD7A386F7A5E5EC9",
+      "missing_material_requirement_or_null": "Packet-capture intrusion investigation",
+      "rationale": "Routes BigQuery-backed Looker Studio stakeholder reporting, not network forensics.",
+      "source_anchor": "BigQuery-backed Looker Studio"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0646",
+  "batch_input_sha256": "4aa0d4b948a872a5434f960f1505937c39ddce5a3acd49019450c7d7f9698192",
+  "blind_packet_id": "P-62D170065B751FE225",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0d995008a4c6ef64c47825072f20134bddf3d2d6f307531e360c92dc27ad2ddf"
+}
