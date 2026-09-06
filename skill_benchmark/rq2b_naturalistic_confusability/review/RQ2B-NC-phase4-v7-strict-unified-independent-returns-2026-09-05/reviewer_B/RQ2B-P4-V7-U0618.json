@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1A13D71EF04559A4",
+      "missing_material_requirement_or_null": "Payment-support private-chat reply",
+      "rationale": "Facilitates sprint retrospectives, unrelated to customer card-charge support.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-224C956911C07083",
+      "missing_material_requirement_or_null": "Payment-specific escalation and unsafe-data guidance",
+      "rationale": "Drafts and reviews Arabic copy and dialect choices, useful for UAE localization but not payment-support handling.",
+      "source_anchor": "drafting, localizing, reviewing, or QA-checking Arabic copy"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5D2641AA36541554",
+      "missing_material_requirement_or_null": "Customer-support reply content",
+      "rationale": "Writes plans from specifications rather than a safe payment-issue support macro.",
+      "source_anchor": "Use when you have a spec or requirements for a multi-step task"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-9B6A837247C9B3FA",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides MENA customer-support macros and localized support copy, matching a UAE card-charge reply with placeholders, unknowns, escalation, and safe data handling.",
+      "source_anchor": "MENA customer support macros"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AC2560F8143A79B2",
+      "missing_material_requirement_or_null": "Payment-support reply",
+      "rationale": "Performs GO and KEGG enrichment analysis, unrelated to customer support.",
+      "source_anchor": "performing GO and KEGG enrichment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BA7863EBFB75B8A8",
+      "missing_material_requirement_or_null": "Payment-support macro",
+      "rationale": "Auto-fills document templates with data, not customer-support response drafting.",
+      "source_anchor": "Auto-fill document templates with data"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BD68E1163D359A0C",
+      "missing_material_requirement_or_null": "Customer-facing private-chat acknowledgement and prohibited-data list",
+      "rationale": "Writes escalation summaries with quantified impact and next steps, but not the complete customer reply template.",
+      "source_anchor": "Writes a tight escalation summary"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F79CCDA51CE95E51",
+      "missing_material_requirement_or_null": "Payment-support content and escalation ownership",
+      "rationale": "Handles Arab/MENA product localization and Arabic UI/RTL concerns, but not payment-support macro content.",
+      "source_anchor": "MENA product localization"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0618",
+  "batch_input_sha256": "9702bbec9c7f9c02d9f81b7d20f1814f95b1cd72e6af6968fcca32e59ecd13c9",
+  "blind_packet_id": "P-FA1B8820093038FDA2",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7451f58b9ff82bc2f078311f7e1fca1451627a5bb48683ae0b8e084b28af24b2"
+}
