@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1DE923DDA31D064B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Designs layered data-quality checks and evidence windows, suitable for anomaly watchlists and priorities.",
+      "source_anchor": "Designs layered data quality checks"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-393F520F538D24C3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides unified monitoring and observability, directly supporting anomaly detection and watchlists.",
+      "source_anchor": "unified monitoring and observability skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-62BD2ADA681EE087",
+      "missing_material_requirement_or_null": "General anomaly watchlist rather than CRM-only cleaning",
+      "rationale": "Cleans CRM data and can surface data issues, but is scoped to CRM review workflows.",
+      "source_anchor": "Build a CRM-cleaning review web app"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A2EA464E2AB42677",
+      "missing_material_requirement_or_null": "CSV anomaly watchlist",
+      "rationale": "Builds Slack bots, unrelated to anomaly analysis.",
+      "source_anchor": "Builds Slack bots and integrations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AC3FB33C093359EB",
+      "missing_material_requirement_or_null": "CSV anomaly watchlist",
+      "rationale": "Facilitates retrospectives, unrelated to anomaly detection.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AFF0CC419ADDE7BB",
+      "missing_material_requirement_or_null": "CSV evidence windows and anomaly priorities",
+      "rationale": "Monitors competitors, relevant to watchlists but not arbitrary CSV anomalies.",
+      "source_anchor": "monitor competitor apps on an ongoing basis"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B3755B03288EF6C4",
+      "missing_material_requirement_or_null": "CSV anomaly watchlist",
+      "rationale": "Surveys visual conventions, unrelated to data anomalies.",
+      "source_anchor": "surveying the DOCUMENTED visual"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F0C066615BD2763B",
+      "missing_material_requirement_or_null": "Anomaly evidence windows and priority ranking",
+      "rationale": "Builds monthly reports, but the prompt explicitly excludes a broad reporting brief.",
+      "source_anchor": "Build the monthly client report"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0316",
+  "batch_input_sha256": "5c154bd69dcf1fea112e6941289bfc6f3c016d93d6a68d33aa815112e3072ad9",
+  "blind_packet_id": "P-0D7B2A5DEA2883B66E",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "5d37e4b8fea7ddaf9412f35b81324eb092f84179cb510648c0d2b803aa3d43a8"
+}

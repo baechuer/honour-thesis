@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0908",
+  "blind_packet_id": "P-0C82A5FD50B717FB00",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-2A77AC0BD2B8ECAF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Service Mesh Observability",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Implement comprehensive observability"
+    },
+    {
+      "candidate_token": "C-37AC5DFF3F0AC6EC",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Distributed Tracing",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Implement distributed tracing"
+    },
+    {
+      "candidate_token": "C-44B2403EF4344C28",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# OpenTelemetry in Python",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "OpenTelemetry in Python"
+    },
+    {
+      "candidate_token": "C-4A66B5AF93272FB0",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# OpenTelemetry in Go",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "OpenTelemetry in Go"
+    },
+    {
+      "candidate_token": "C-875C94B6F8D58FE0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ML Pipeline Expert",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "production-grade ML"
+    },
+    {
+      "candidate_token": "C-A25EAACCF38FF5ED",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Read External Files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Use when performing GO and KEGG enrichment"
+    },
+    {
+      "candidate_token": "C-AB0D705176AFB4C5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-AFE34B93E3E729CC",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# OpenTelemetry in .NET",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "OpenTelemetry in .NET"
+    }
+  ],
+  "reviewer_A_return_sha256": "7601d45cf9b40246ea8641824a3ed435332b93653b3b7f4abb941b2b367401d5",
+  "reviewer_B_return_sha256": "a6e05137948db5e6a5b446edd50c315d00407fa1bcb7070571fdbd166fbc274c",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0483",
+  "blind_packet_id": "P-4F97E443FAA1096BA7",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0825E960E3438085",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying the PUBLISHED user-research"
+    },
+    {
+      "candidate_token": "C-1511233EACE5C0FE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# AWQ (Activation-aware Weight Quantization)",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Activation-aware weight quantization"
+    },
+    {
+      "candidate_token": "C-3652E343D9B89EB7",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Fine-Tuning Expert",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Use when fine-tuning LLMs"
+    },
+    {
+      "candidate_token": "C-41B8A7664239DAC1",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ct_segmentation_finetune_quality_v1",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "ct-segmentation-finetune"
+    },
+    {
+      "candidate_token": "C-4FD2A1A65EC5D6B4",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# GPTQ (Generative Pre-trained Transformer Quantization)",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Post-training 4-bit quantization for LLMs"
+    },
+    {
+      "candidate_token": "C-7EFD1ACA498509D3",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# EDA Playbook",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "structured exploratory data analysis"
+    },
+    {
+      "candidate_token": "C-891242F3588B7F6E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# bitsandbytes - LLM Quantization",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Quantizes LLMs to 8-bit or 4-bit"
+    },
+    {
+      "candidate_token": "C-BF9D175FDDEFB1FA",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# LLM Fine-Tuning Infrastructure",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "llm-fine-tuning"
+    }
+  ],
+  "reviewer_A_return_sha256": "b0995d54cbea6fe529159e689d6971da05e808fa617cd24c63c007e692e97c29",
+  "reviewer_B_return_sha256": "67e855f0d2143012b8309ca405c7626d2c5d54c00a239f9f1bac5004f2e0034d",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

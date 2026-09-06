@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-170BB9B75259858A",
+      "missing_material_requirement_or_null": "Booted-simulator identification, project/scheme context, runtime launch, accessibility inspection, reproducible interaction and log collection, with fallbacks for build, app-selection, and hittability failures",
+      "rationale": "This skill does not provide the requested iOS simulator runtime reproduction, accessibility inspection, logging, and fallback diagnostic workflow.",
+      "source_anchor": "# Vercel Deploy Pipeline"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-730903B862F0756A",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly supports Xcode/iOS simulator runtime diagnosis, including launch context, UI inspection, reproduction, logging, and runtime troubleshooting.",
+      "source_anchor": "# Xcode from an agent — two MCP surfaces, one workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-862242065474E172",
+      "missing_material_requirement_or_null": "Booted-simulator identification, project/scheme context, runtime launch, accessibility inspection, reproducible interaction and log collection, with fallbacks for build, app-selection, and hittability failures",
+      "rationale": "This skill does not provide the requested iOS simulator runtime reproduction, accessibility inspection, logging, and fallback diagnostic workflow.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8D239660E63E099E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly supports Xcode/iOS simulator runtime diagnosis, including launch context, UI inspection, reproduction, logging, and runtime troubleshooting.",
+      "source_anchor": "# Xcode Simulator Test"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8D702FC97C300872",
+      "missing_material_requirement_or_null": "Booted-simulator identification, project/scheme context, runtime launch, accessibility inspection, reproducible interaction and log collection, with fallbacks for build, app-selection, and hittability failures",
+      "rationale": "This skill may inform UI or accessibility checks, but it does not provide the complete iOS simulator runtime diagnostic procedure and fallback evidence collection requested.",
+      "source_anchor": "# Web Design Guidelines"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A6A7A014866BEF29",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly supports Xcode/iOS simulator runtime diagnosis, including launch context, UI inspection, reproduction, logging, and runtime troubleshooting.",
+      "source_anchor": "# iOS Debugger Agent"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D4A8351BEA98AABB",
+      "missing_material_requirement_or_null": "Booted-simulator identification, project/scheme context, runtime launch, accessibility inspection, reproducible interaction and log collection, with fallbacks for build, app-selection, and hittability failures",
+      "rationale": "This skill does not provide the requested iOS simulator runtime reproduction, accessibility inspection, logging, and fallback diagnostic workflow.",
+      "source_anchor": "## When to read external files"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FDE14F0C87F01321",
+      "missing_material_requirement_or_null": "Booted-simulator identification, project/scheme context, runtime launch, accessibility inspection, reproducible interaction and log collection, with fallbacks for build, app-selection, and hittability failures",
+      "rationale": "This skill does not provide the requested iOS simulator runtime reproduction, accessibility inspection, logging, and fallback diagnostic workflow.",
+      "source_anchor": "# Objection Handler"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0538",
+  "batch_input_sha256": "e717d2ec53cef42c4fe7e9362e7692bdb57441765a3e44c41d07f5242a2d59c8",
+  "blind_packet_id": "P-7BC846C043DE73DE50",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "de3600230f474febfbab2090b6eb095e44a2eea563213ddbbf05ef0236d8c310"
+}
