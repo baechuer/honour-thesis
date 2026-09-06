@@ -1,0 +1,18 @@
+{
+  "assessments":[
+    {"adequacy":"INADEQUATE","candidate_token":"C-0945D2279868010B","missing_material_requirement_or_null":"case-management automation plan and compiled validation","rationale":"This skill addresses LGPD compliance responses and legal structure, not modeling, compiling, and validating customer-escalation case plans.","source_anchor":"# LGPD Compliance Skill"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-5199EDA3FE2A86BA","missing_material_requirement_or_null":null,"rationale":"This skill directly authors UiPath case-management plans with stages and case-level builder methods, compiles the generated plan, and supports reference-mode case-plan authoring and editing.","source_anchor":"# UiPath Case Management — TypeScript Builder SDK (reference-mode)"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-6515F33EC7B3229A","missing_material_requirement_or_null":"case-management-specific plan modeling and data bindings","rationale":"This skill provides a TypeScript builder and compile workflow for structural BPMN processes, which is a meaningful automation-plan route, but it targets BPMN rather than the requested case-management plan and its case-specific stages and bindings.","source_anchor":"# UiPath Maestro BPMN — TypeScript Builder SDK (structural core)"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9AF9CD64C81BA1BB","missing_material_requirement_or_null":"customer-escalation case automation design and compilation","rationale":"This skill facilitates sprint retrospectives and does not model or compile case-management automation plans.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-C218BFE0297C677A","missing_material_requirement_or_null":"case-specific escalation stages and bindings","rationale":"This skill supports authoring or editing UiPath Flow sources and running the builder lifecycle, but it targets generic flows rather than the requested customer case-management plan structure.","source_anchor":"# UiPath Flow — TypeScript Builder SDK"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-DA32827D91B775AF","missing_material_requirement_or_null":"case-plan automation workflow and validation","rationale":"This skill surveys visual prior art and does not design, compile, or validate a customer-escalation case-management plan.","source_anchor":"## Overview"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-E3CF7435E22C7541","missing_material_requirement_or_null":"case-management plan stages, decisions, and compilation","rationale":"This skill converts WordPress plugin requirements into a Codex goal, not a customer-escalation case-management automation plan with compiled validation.","source_anchor":"## Inputs"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-E8A0FE53A66B24FC","missing_material_requirement_or_null":"compiled automation plan and case-stage decision rules","rationale":"This skill can model entities, properties, relationships, and views for a case-management data layer, but it does not author and validate the executable staged automation plan requested.","source_anchor":"## Operating procedure"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0645",
+  "batch_input_sha256":"4d59d3879538fe61e0e95fb1ebf7e309b43bff2b9e3aa211d7bf8a517c3eefc1",
+  "blind_packet_id":"P-EA4B82C0628B3EE6C1",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"76592743294b71bac4f801c9cec98a55a48377fe7885160644ae67ad3e6f761f"
+}
