@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1BFC87EF123C2B65",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides real-device release/profile traces and heap diffs, isolates the dominant measured cost, and remeasures scrolling, startup, and repeated-navigation acceptance checks.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E1B00A66DFB227B",
+      "missing_material_requirement_or_null": "A native-mobile real-device tracing, heap-diff, root-cause isolation, and before/after acceptance-check procedure is required.",
+      "rationale": "Covers environment-variable and secret management, not mobile frame, startup, or heap diagnosis.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-382910B28C8FF3C2",
+      "missing_material_requirement_or_null": "A native-mobile real-device trace and heap analysis workflow with frame, startup, and navigation-memory acceptance checks is required.",
+      "rationale": "Defines server traffic load testing and capacity thresholds rather than diagnosing native UI performance or navigation heap growth.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-62869659279332AD",
+      "missing_material_requirement_or_null": "A native-mobile profiling workflow that captures traces and heap snapshots, isolates costs, and verifies performance fixes is required.",
+      "rationale": "Wires mobile push notifications; it contains no procedure for performance trace collection, frame analysis, or memory-leak investigation.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-66CEC46154074B22",
+      "missing_material_requirement_or_null": "A native-mobile real-device performance tracing and heap-diff workflow with measurable acceptance checks is required.",
+      "rationale": "Conducts security prior-art research rather than mobile performance diagnosis and remediation.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7D0C276FAF8128BB",
+      "missing_material_requirement_or_null": "A procedure for collecting native-app performance traces and heap snapshots on comparable devices, then validating fixes, is required.",
+      "rationale": "Finds US software-development firms through a catalog and does not address app performance investigation.",
+      "source_anchor": "# find-software-developer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-871F7C6C0C261866",
+      "missing_material_requirement_or_null": "A native-mobile trace and heap-analysis procedure with root-cause isolation and before/after acceptance checks is required.",
+      "rationale": "Facilitates team retrospectives, not real-device mobile startup, scrolling, or heap analysis.",
+      "source_anchor": "## Inputs to collect"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F2C9E6EC38306679",
+      "missing_material_requirement_or_null": "A native mobile profiling and heap-diff procedure on real devices with frame, startup, and repeated-navigation acceptance checks is required.",
+      "rationale": "Explicitly covers browser Core Web Vitals and defers native-app jank; it cannot supply the requested native diagnosis.",
+      "source_anchor": "## Operating procedure"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0200",
+  "batch_input_sha256": "4524d49fb7164f4e3289c018875925b23ae538364c55eba2bc798d82413684fc",
+  "blind_packet_id": "P-C5338511154AE807EC",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "23228122e677ac8988331a9c3fc09742f87dcc96ab2048cfdb5fca94d6673f6a"
+}

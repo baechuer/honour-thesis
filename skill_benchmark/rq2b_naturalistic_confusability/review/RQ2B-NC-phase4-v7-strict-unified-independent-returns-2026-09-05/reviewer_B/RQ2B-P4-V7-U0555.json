@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0FEC7917BCB1317E",
+      "missing_material_requirement_or_null": "A cohort-level gene-expression workflow that performs correlation, tumour-versus-matched-normal testing, and high-versus-low overall-survival analysis.",
+      "rationale": "The source is for somatic mutation and cancer-gene queries, not the requested gene-expression correlation, matched tumour/normal comparison, or high/low overall-survival analyses.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1288715452401D07",
+      "missing_material_requirement_or_null": "An explicit reproducible per-cohort workflow that identifies matched tumour/normal samples, computes the two-gene expression correlation, and tests high-versus-low expression overall survival for each gene.",
+      "rationale": "The source supplies study-level expression and clinical data, but its documented workflows do not identify matched tumour/normal samples, calculate the requested gene-gene correlation, or conduct high-versus-low expression overall-survival tests across cohorts.",
+      "source_anchor": "### Query 5: Gene Expression Data"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-23D39325BD10695A",
+      "missing_material_requirement_or_null": "Cancer-cohort expression, correlation, differential-expression, and survival-analysis capability.",
+      "rationale": "The source designs educational quizzes and provides no cancer-cohort genomics or survival-analysis workflow.",
+      "source_anchor": "# Quiz Generator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3676456907AC655E",
+      "missing_material_requirement_or_null": "A cancer-genomics workflow that retrieves cohorts and performs expression correlation, tumour/normal, and survival analyses.",
+      "rationale": "The source audits interface usability; it provides no cohort-data retrieval or cancer expression and survival analysis.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-CEA6CC5C907ED7C5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source supplies a cancer catalogue plus tumour-versus-normal comparison, Spearman two-gene correlation, and median-split overall-survival testing with reportable statistics, enabling the requested per-cohort analysis while marking cohorts lacking sufficient data.",
+      "source_anchor": "## Core Capabilities"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DB7C8EC6FB386A91",
+      "missing_material_requirement_or_null": "A cancer-cohort analysis workflow for gene expression, tumour/normal comparisons, correlation, and survival.",
+      "rationale": "The source is a published user-research evidence-survey procedure, not a cancer-genomics analysis capability.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E3B791CFC314DB7D",
+      "missing_material_requirement_or_null": "Data-access and statistical-analysis procedures for the requested cancer-cohort expression and survival results.",
+      "rationale": "The source formats reports from supplied data but does not retrieve cancer cohorts or perform the requested correlations, comparisons, and survival tests.",
+      "source_anchor": "# Report Generator Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F35EF58CF0E11280",
+      "missing_material_requirement_or_null": "A cancer-cohort genomics analysis workflow rather than AI-model selection.",
+      "rationale": "The source selects machine-learning models from leaderboards and contains no cancer expression, tumour/normal, or survival analysis.",
+      "source_anchor": "# HuggingFace Best Model Finder"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0555",
+  "batch_input_sha256": "9bb213521d37e94eeab47c8a4c706398f3c251ba856c10c0d3dd14649c063021",
+  "blind_packet_id": "P-A4D34DBBBB74C0002D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "172b1e6ea0ef5846f50e64b9ce276b59df7fd2e2ca986d6e7c72370d4f0ef813"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0DE4C0A4261DC6BE",
+      "missing_material_requirement_or_null": "A Notion-native project knowledge-base workflow that captures mixed notes, decisions, links, observations, structured pages, tags, summaries, and backlinks.",
+      "rationale": "This defines analytics KPIs and locks metric decisions; it does not organize mixed project material into a durable Notion knowledge base.",
+      "source_anchor": "# kpi-contract"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2D3AF3026C1511C1",
+      "missing_material_requirement_or_null": "A Notion knowledge-base capture workflow rather than live competitor research.",
+      "rationale": "This performs live-web competitor intelligence and reporting, which does not address the requested durable Notion knowledge-base capture.",
+      "source_anchor": "# Competitor Intelligence"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3ABABA88C3EDD3FD",
+      "missing_material_requirement_or_null": "A Notion-native workflow for organizing mixed project material beyond resolved support-ticket articles, including tags, summaries, and backlinks.",
+      "rationale": "It produces searchable knowledge-base content, but only by converting resolved support tickets into single support articles rather than organizing mixed project notes and links.",
+      "source_anchor": "# Knowledge Base Article Writer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6D2702341179C546",
+      "missing_material_requirement_or_null": "Notion-specific pages, tagging, summaries, and backlinks for mixed project material outside BI/data-estate orientation.",
+      "rationale": "It maintains a durable knowledge base and records decisions, but is narrowly for orienting BI/data projects and does not provide the requested Notion organization features.",
+      "source_anchor": "# groundwork"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7C3C38DFF99D10E9",
+      "missing_material_requirement_or_null": "A durable Notion knowledge-base workflow; task extraction is explicitly out of scope.",
+      "rationale": "This is Google Tasks management centered on to-dos and meeting action items, whereas the prompt explicitly excludes action-item extraction.",
+      "source_anchor": "# Google Tasks"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A590E90F15AAB4D8",
+      "missing_material_requirement_or_null": "A durable Notion knowledge-base workflow that preserves mixed material without extracting meeting action items.",
+      "rationale": "This extracts meeting decisions and action items, an activity expressly excluded by the prompt, and it does not build a Notion knowledge base.",
+      "source_anchor": "# Meeting Notes to Actions"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D6898BABEBEC3799",
+      "missing_material_requirement_or_null": "A Notion knowledge-base capture workflow rather than UI-convention research.",
+      "rationale": "This surveys documented UI and interaction conventions before design work; it does not capture or organize project notes in Notion.",
+      "source_anchor": "visual-prior-art-survey"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EC7291D0FE4A1455",
+      "missing_material_requirement_or_null": "A Notion knowledge-base capture workflow rather than dimensional-model design.",
+      "rationale": "This designs logical analytical data models and model contracts, not a general project knowledge base with tagged, linked pages.",
+      "source_anchor": "# model-contract"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1156",
+  "batch_input_sha256": "98d5b56950b4d84b1d2f42ad5af48d23b786b082e362328b42f00876bfb75827",
+  "blind_packet_id": "P-8DE1F0417651A36FC7",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "606dd68e8cc08becfe4b154dfdde7c9b459e13040de6318c29d09dbe0fd54559"
+}

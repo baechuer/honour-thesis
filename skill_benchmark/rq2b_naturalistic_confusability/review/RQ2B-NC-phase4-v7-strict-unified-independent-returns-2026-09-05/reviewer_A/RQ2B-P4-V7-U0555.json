@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0FEC7917BCB1317E",
+      "missing_material_requirement_or_null": "A cohort-level gene-expression workflow for two-gene correlation, tumor-versus-matched-normal comparison, and high/low expression overall-survival testing.",
+      "rationale": "The skill is for somatic mutations, gene census, signatures, and resistance variants, not the requested expression and survival analyses.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1288715452401D07",
+      "missing_material_requirement_or_null": "An integrated cohort-by-cohort workflow that identifies matched tumor/normal samples and performs two-gene correlation plus high/low expression overall-survival tests for both genes.",
+      "rationale": "It supplies TCGA expression and clinical-data access, but its documented workflows do not provide the requested matched-normal comparison and full two-gene analysis/reporting workflow.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-23D39325BD10695A",
+      "missing_material_requirement_or_null": "A public cancer-cohort analysis workflow with expression correlation, tumor-versus-normal testing, and overall-survival analysis.",
+      "rationale": "This is a quiz-authoring procedure and contains no cancer-cohort data or gene-expression analysis capability.",
+      "source_anchor": "# Quiz Generator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3676456907AC655E",
+      "missing_material_requirement_or_null": "A public cancer-cohort analysis workflow with expression correlation, tumor-versus-normal testing, and overall-survival analysis.",
+      "rationale": "The skill evaluates UX usability heuristics rather than genomic cohorts or survival outcomes.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-CEA6CC5C907ED7C5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly supports TCGA cancer cataloguing, tumor-versus-normal differential expression, two-gene Spearman correlation, and high/low survival association with reportable cohort statistics.",
+      "source_anchor": "## Core Capabilities"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DB7C8EC6FB386A91",
+      "missing_material_requirement_or_null": "A public cancer-cohort analysis workflow with expression correlation, tumor-versus-normal testing, and overall-survival analysis.",
+      "rationale": "This skill governs a prior-art literature survey rather than analysing cancer expression cohorts.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E3B791CFC314DB7D",
+      "missing_material_requirement_or_null": "A public cancer-cohort analysis workflow with expression correlation, tumor-versus-normal testing, and overall-survival analysis.",
+      "rationale": "It formats generic data reports but provides neither cancer-cohort access nor the requested analyses.",
+      "source_anchor": "# Report Generator Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F35EF58CF0E11280",
+      "missing_material_requirement_or_null": "A public cancer-cohort analysis workflow with expression correlation, tumor-versus-normal testing, and overall-survival analysis.",
+      "rationale": "The skill selects Hugging Face models from benchmark leaderboards, not biomedical cohort analyses.",
+      "source_anchor": "# HuggingFace Best Model Finder"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0555",
+  "batch_input_sha256": "9bb213521d37e94eeab47c8a4c706398f3c251ba856c10c0d3dd14649c063021",
+  "blind_packet_id": "P-A4D34DBBBB74C0002D",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "4c6715d16e0a2fb6260a707972409c5292b842aa02bddc824cb43e496e0ae18e"
+}

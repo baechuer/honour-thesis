@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-095268F528E27D22",
+      "missing_material_requirement_or_null": "A collection-curation and per-item added/already-present/no-attachment reporting workflow.",
+      "rationale": "Covers library sync, DOI/ISBN/PMID addition, top-level listing, topic search, and open-access PDF attachment, but does not specify curating a review collection or producing the requested per-item status report.",
+      "source_anchor": "### Commands"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4562DC583EC5EA21",
+      "missing_material_requirement_or_null": "Shared-library synchronization plus attachment inventory, legal-OA retrieval, and the requested per-item attachment-status report.",
+      "rationale": "Supports collection creation, reference verification/import, and deduplication, but it does not provide the requested shared-library sync, top-level inventory, or open-full-text attachment workflow.",
+      "source_anchor": "### 2. Make the collection and add items"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6DA4419694CD00C2",
+      "missing_material_requirement_or_null": "A Zotero shared-library workflow for identifier import, collection curation, attachment auditing, legal full-text acquisition, and status reporting.",
+      "rationale": "This skill configures Sentry for TanStack Start applications and has no reference-library or paper-management capability.",
+      "source_anchor": "## Invoke This Skill When"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-70B26580DC54FABF",
+      "missing_material_requirement_or_null": "A shared-reference-library workflow covering collection curation, identifier import, search, attachment inventory, and per-item reporting.",
+      "rationale": "It resolves one DOI or arXiv identifier to a legal open-access copy transiently, but it neither manages a reference library nor supports the requested multi-item workflow.",
+      "source_anchor": "## Guardrails"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-70FCB4AE6595B2A3",
+      "missing_material_requirement_or_null": "A Zotero shared-library workflow for import, review-collection curation, attachment audit and legal full-text acquisition.",
+      "rationale": "This skill operates LM Studio models and endpoints, which is unrelated to managing research references or PDFs.",
+      "source_anchor": "# LM Studio CLI"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BF0A5E47E209C34E",
+      "missing_material_requirement_or_null": "An integrated shared-library sync, identifier-resolution/import, legal-OA attachment retrieval, and per-item status-report workflow.",
+      "rationale": "Provides programmatic Zotero item, collection, search, and attachment operations, but does not specify the requested sync, supplied-identifier ingestion, legal open-text retrieval, or outcome reporting.",
+      "source_anchor": "## Quick Start"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D30B9B12EC7AC744",
+      "missing_material_requirement_or_null": "A Zotero shared-library workflow for identifier import, collection curation, attachment auditing, legal full-text retrieval, and reporting.",
+      "rationale": "This skill consumes software hack-review reports and does not manage bibliographic references or paper attachments.",
+      "source_anchor": "# Receiving Hack Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F869F49C6BC86C90",
+      "missing_material_requirement_or_null": "A Zotero shared-library workflow for identifier import, review collection curation, attachment auditing, legal full-text retrieval, and reporting.",
+      "rationale": "This skill runs bulk-expression GSVA analysis and visualization, unrelated to reference-library management.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0933",
+  "batch_input_sha256": "1f0488215db540e0f7d81c12cd8934fec8e75dd0d7602126836c52693735ec5b",
+  "blind_packet_id": "P-55A3E5A59E1348A4A9",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d2dca7da7ae3ba4a077ff753e2259868cad78c3176df55d38b37cc2c0799555c"
+}
