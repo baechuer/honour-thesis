@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4C826C930D3D97AA",
+      "missing_material_requirement_or_null": "A Django transition plan with two separately deployable field-removal migrations, review and local-apply checks, preserved safety documentation, and a data-migration test when needed.",
+      "rationale": "It addresses consumer-provider API contracts rather than retiring a Django foreign-key field through staged migrations.",
+      "source_anchor": "# Contract Test Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5AD3D46EE446277D",
+      "missing_material_requirement_or_null": "A Django transition plan with two separately deployable field-removal migrations, review and local-apply checks, preserved safety documentation, and a data-migration test when needed.",
+      "rationale": "It is about constructing isolated test fixtures and does not supply the requested schema-transition migrations.",
+      "source_anchor": "# Test Data Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6303649FA0ACE31C",
+      "missing_material_requirement_or_null": "A Django transition plan with two separately deployable field-removal migrations, review and local-apply checks, preserved safety documentation, and a data-migration test when needed.",
+      "rationale": "It defines a published user-research survey workflow, not a Django database migration procedure.",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6EDFD6010D5E83CD",
+      "missing_material_requirement_or_null": "A Django transition plan with two separately deployable field-removal migrations, review and local-apply checks, preserved safety documentation, and a data-migration test when needed.",
+      "rationale": "It prepares customer-facing incident updates and has no migration implementation or validation guidance.",
+      "source_anchor": "# Status Page Update"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-6FD58A515A3B3F76",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It gives the required two-phase foreign-key removal: transition state removal without a physical drop, then a post-deployment physical delete, with review and local-apply steps, retained safety comments, and one data-migration test.",
+      "source_anchor": "### Deleting Columns"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-762DCC8C1C3AB2B8",
+      "missing_material_requirement_or_null": "Django-specific two-phase foreign-key removal that removes model state before physical column deletion after deployment, plus preserved safety documentation.",
+      "rationale": "It provides general Django migration review and safe large-table practices, but not the requested staged removal pattern for a legacy foreign key.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A42142629BBE0D63",
+      "missing_material_requirement_or_null": "A Django-specific two-phase foreign-key retirement procedure that removes model state before dropping the physical column after deployment, with retained generated safety documentation.",
+      "rationale": "It supplies generic PostgreSQL migration checklists and local testing, but not the requested Django compatibility transition.",
+      "source_anchor": "## Migration Checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CB5A50F0B7F540D0",
+      "missing_material_requirement_or_null": "Django-specific two-phase foreign-key removal with model-state removal before a post-deployment physical column drop and generated safety documentation.",
+      "rationale": "It covers broad schema-versioning and a compatibility-oriented rename example, but lacks the concrete Django field-retirement procedure.",
+      "source_anchor": "### Example 2: Renaming a table safely"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0503",
+  "batch_input_sha256": "dfba4a76e9bb638cf45ab7b2d14d39bd2a5acfe36165efc8afbf614654952330",
+  "blind_packet_id": "P-3A19550F66928FE9D3",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "29284e0035a10b80d07eef028bfb6984ab55219284b0b852edcb4885e16dc9c7"
+}

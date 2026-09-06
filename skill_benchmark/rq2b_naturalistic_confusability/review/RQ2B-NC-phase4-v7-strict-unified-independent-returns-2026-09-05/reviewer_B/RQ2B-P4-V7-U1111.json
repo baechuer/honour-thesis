@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21E4758F49228FF8",
+      "missing_material_requirement_or_null": "A no-configuration, platform-detection-first workflow and explicit staging environment mapping.",
+      "rationale": "It covers current-directory deployment, environment values, replicas, health checks, domains, managed PostgreSQL and preview environments, but centers a porter.yaml configuration rather than the requested detection-first workflow.",
+      "source_anchor": "### CLI Deployment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2BF154E439DF85D6",
+      "missing_material_requirement_or_null": "A managed cloud application deployment workflow with environment, domain, scaling, health-check, and database setup.",
+      "rationale": "This is endpoint incident-response and forensic collection guidance, not application deployment guidance.",
+      "source_anchor": "# Velociraptor Incident Response"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2D11C07917196C86",
+      "missing_material_requirement_or_null": "A managed cloud application deployment workflow with environment, domain, scaling, health-check, and database setup.",
+      "rationale": "This skill performs GO and KEGG enrichment for gene lists and does not address cloud deployment.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-48186328EF897A95",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides a detection-first current-directory CLI deploy, optional configuration overrides, environment variables, one-to-five instance scaling, a health endpoint, domains, managed PostgreSQL connection injection, and branch-based production, staging, and preview environments.",
+      "source_anchor": "### CLI Deployment"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-516EBFF73A221BB4",
+      "missing_material_requirement_or_null": "A provider-neutral managed relational database provisioning and automatic application-connection workflow.",
+      "rationale": "It offers Vercel-specific deployment, domains, environment-variable handling, and preview/production operations, but its stated scope assumes Vercel has already been selected and does not provide the requested managed relational database setup.",
+      "source_anchor": "## When not to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-56A23E4611FFAE28",
+      "missing_material_requirement_or_null": "A managed cloud application deployment workflow with environment, domain, scaling, health-check, and database setup.",
+      "rationale": "This skill configures Sentry monitoring for React rather than deploying a service.",
+      "source_anchor": "## Invoke This Skill When"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7DDB864B123CD66A",
+      "missing_material_requirement_or_null": "A managed-cloud, detection-first deployment workflow with automatic database connection injection and branch-based staging/review environments.",
+      "rationale": "It covers current-directory deployment, custom domains, scaling, and one-click databases, but requires operating a self-hosted Linux/Docker platform and lacks the requested automatic connection and branch-environment workflow.",
+      "source_anchor": "### Deploy Applications"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A7EBB25E33439BA4",
+      "missing_material_requirement_or_null": "Environment configuration, instance scaling, health checks, custom-domain setup, managed relational database provisioning, and branch-environment guidance.",
+      "rationale": "It supplies a current-directory Vercel deployment path with framework detection, but does not cover the other requested managed-platform operations.",
+      "source_anchor": "## Quick Start"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1111",
+  "batch_input_sha256": "3cc3a17904803d0e5fa0960238f46842d2b59ea0bc9fe17ad5f2cda6af95f412",
+  "blind_packet_id": "P-F1D2153013C536937C",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "977849e1993fc8ee315840bade6ab4891017a8f9a6bbd96a813cbd50b8b824f6"
+}

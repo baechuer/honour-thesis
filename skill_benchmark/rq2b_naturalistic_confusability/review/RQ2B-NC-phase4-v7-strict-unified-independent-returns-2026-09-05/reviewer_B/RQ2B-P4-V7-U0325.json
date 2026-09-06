@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-45D033AD0D39B9E8",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly converts an existing analytics report or dashboard export to a verified PDF while preserving reader-facing report content and charts.",
+      "source_anchor": "The expected path is static HTML -> Chrome headless print-to-PDF -> PDF verification."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-47D599E84401E7A3",
+      "missing_material_requirement_or_null": "A fixed-layout export workflow that preserves report content and charts.",
+      "rationale": "It facilitates sprint retrospectives, not conversion of analytics artifacts into a distribution document.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7ED70650E0CD0C3B",
+      "missing_material_requirement_or_null": "A fixed-layout export workflow that preserves report content and charts.",
+      "rationale": "It automates accounting workflows and financial reporting rather than exporting an existing analytics artifact.",
+      "source_anchor": "# QuickBooks Automation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8825A21129653678",
+      "missing_material_requirement_or_null": "A fixed-layout export workflow that preserves report content and charts.",
+      "rationale": "It runs pathway-level bioinformatics analysis and heatmaps, not document export of a completed analytics report.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8D342336E89FA4AA",
+      "missing_material_requirement_or_null": "A fixed-layout PDF export path for the completed report, dashboard, and inline charts.",
+      "rationale": "It preserves an existing HTML analytics report in a DOCX/Drive document, but its specified deliverable is not a fixed-layout export.",
+      "source_anchor": "The expected path is HTML -> DOCX -> Drive upload."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AB6E093647C21BE1",
+      "missing_material_requirement_or_null": "A fixed-layout report export that preserves the visible artifact without converting it into a slide deck.",
+      "rationale": "It transforms a report into a slide-native deck and explicitly tightens prose, which is not the requested faithful fixed-layout distribution artifact.",
+      "source_anchor": "The output should be a deck, not a pasted report."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DEB7B40E0DD8C0E0",
+      "missing_material_requirement_or_null": "A source-faithful fixed-layout conversion workflow that preserves the completed report and charts.",
+      "rationale": "It gives generic DOCX creation and editing guidance rather than a workflow to faithfully export an existing analytics surface.",
+      "source_anchor": "# DOCX creation, editing, and analysis"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F09CCE85F5451339",
+      "missing_material_requirement_or_null": "A fixed-layout export workflow that preserves report content and charts.",
+      "rationale": "It manages Zotero bibliographic libraries and has no report or dashboard export capability.",
+      "source_anchor": "# Pyzotero"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0325",
+  "batch_input_sha256": "ae4c03db27ea610f2877f423f4db59b33fd369c73112b8313b0eb6c69fec59f9",
+  "blind_packet_id": "P-1F014249D552B7E6DF",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7cedc1b163d525ff973c0d8cac08697500974b9379094560c7bf8acd20b6be03"
+}

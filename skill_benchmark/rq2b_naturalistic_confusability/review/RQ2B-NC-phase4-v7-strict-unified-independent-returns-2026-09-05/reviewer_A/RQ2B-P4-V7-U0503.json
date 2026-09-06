@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4C826C930D3D97AA",
+      "missing_material_requirement_or_null": "A Django two-phase field-retirement migration that preserves the column first and removes it only after deployment.",
+      "rationale": "It covers consumer-driven API contract tests, not Django schema retirement or separately deployable field-removal migrations.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5AD3D46EE446277D",
+      "missing_material_requirement_or_null": "A Django two-phase field-retirement migration plan with state/physical-column separation and deployment sequencing.",
+      "rationale": "It builds test fixtures and edge-case data rather than creating or reviewing Django field-retirement migrations.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6303649FA0ACE31C",
+      "missing_material_requirement_or_null": "Two separately deployable Django migration changes for safely retiring a foreign-key field.",
+      "rationale": "It surveys published user-research evidence and supplies no migration implementation or deployment-transition procedure.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6EDFD6010D5E83CD",
+      "missing_material_requirement_or_null": "Django migration changes and a local-apply/review procedure for staged foreign-key retirement.",
+      "rationale": "It writes customer incident status communications, not database migrations or schema-transition safeguards.",
+      "source_anchor": "# Status Page Update"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-6FD58A515A3B3F76",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It specifies a two-PR/phase removal: alter the FK safely, remove model state with MOVE_TO_PENDING, then DELETE only after deployment; it also requires review, local apply, preservation of generated safety comments, and one test for data migrations.",
+      "source_anchor": "### Deleting Columns"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-762DCC8C1C3AB2B8",
+      "missing_material_requirement_or_null": "An explicit two-phase Django foreign-key retirement that removes model state without dropping the column before a later physical deletion.",
+      "rationale": "It supplies Django migration review and PostgreSQL safety guidance, but does not prescribe the requested staged field-retirement operations or generated-document preservation.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A42142629BBE0D63",
+      "missing_material_requirement_or_null": "Django-specific, separately deployable phase-one state removal and post-deployment phase-two column deletion.",
+      "rationale": "It provides generic PostgreSQL migration precautions and a local checklist, but not the required Django transition mechanism or two-phase field-removal plan.",
+      "source_anchor": "## Migration Checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CB5A50F0B7F540D0",
+      "missing_material_requirement_or_null": "Django-specific two-step foreign-key retirement preserving the physical column until the first change is deployed.",
+      "rationale": "It offers general versioning, rollback, and migration-testing practices, but lacks the requested Django state-versus-database transition and safety-document requirements.",
+      "source_anchor": "### 3. Test migrations safely"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0503",
+  "batch_input_sha256": "dfba4a76e9bb638cf45ab7b2d14d39bd2a5acfe36165efc8afbf614654952330",
+  "blind_packet_id": "P-3A19550F66928FE9D3",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "50db0d4bd6e054d0d8dda5b0ccd187f1c93bd34fb0871ff8aefcb566df6769e6"
+}

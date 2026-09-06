@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21E4758F49228FF8",
+      "missing_material_requirement_or_null": "A managed platform workflow that defaults to framework detection without a required config file and fully specifies production, staging, and review environments.",
+      "rationale": "It covers deployment, scaling, health checks, domains, environment variables, databases, and previews, but centers on a required porter.yaml and lacks a complete staging mapping.",
+      "source_anchor": "### CLI Deployment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2BF154E439DF85D6",
+      "missing_material_requirement_or_null": "A managed cloud deployment workflow for the TypeScript service.",
+      "rationale": "This is an endpoint forensics and incident-response guide, not an application deployment workflow.",
+      "source_anchor": "# Velociraptor Incident Response"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2D11C07917196C86",
+      "missing_material_requirement_or_null": "A managed cloud deployment workflow for the TypeScript service.",
+      "rationale": "This skill performs GO and KEGG enrichment analysis and supplies no cloud deployment procedure.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-48186328EF897A95",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides current-directory framework-detected deployment, optional overrides, environment variables, one-to-five scaling, health checks, custom domains, managed PostgreSQL connection injection, and branch environments.",
+      "source_anchor": "### CLI Deployment"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-516EBFF73A221BB4",
+      "missing_material_requirement_or_null": "A provider-neutral managed relational database workflow with automatic app connection injection, framework-detection deployment, and complete environment mapping.",
+      "rationale": "It gives Vercel-specific deployment, domain, and environment-operation guidance, but lacks the requested managed relational database and general no-config deployment workflow.",
+      "source_anchor": "# Vercel Deploy"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-56A23E4611FFAE28",
+      "missing_material_requirement_or_null": "A managed cloud deployment workflow for the TypeScript service.",
+      "rationale": "This is a React Sentry observability setup guide rather than a deployment platform workflow.",
+      "source_anchor": "# Sentry React SDK"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7DDB864B123CD66A",
+      "missing_material_requirement_or_null": "Managed-cloud framework detection, automatic database connection injection, and branch-based production, staging, and review environments.",
+      "rationale": "It covers CLI deployment, environment variables, domains, and instance scaling, but it is self-hosted and omits the requested automatic detection and complete branch-environment workflow.",
+      "source_anchor": "# CapRover — Self-Hosted PaaS with One-Click Apps"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A7EBB25E33439BA4",
+      "missing_material_requirement_or_null": "Managed relational database provisioning and connection injection, scalable health configuration, and branch-based environments.",
+      "rationale": "It provides a basic Vercel CLI deployment path, but does not supply the required database, health/scaling, and full environment workflow.",
+      "source_anchor": "# Vercel Deploy"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1111",
+  "batch_input_sha256": "3cc3a17904803d0e5fa0960238f46842d2b59ea0bc9fe17ad5f2cda6af95f412",
+  "blind_packet_id": "P-F1D2153013C536937C",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "11321e29eb4bfadac406accb102eaaf3d28e713babad4559bcf05673b923a687"
+}
