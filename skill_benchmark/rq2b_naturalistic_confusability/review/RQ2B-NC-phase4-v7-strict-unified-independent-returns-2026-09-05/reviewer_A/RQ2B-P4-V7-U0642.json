@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3D7F937A934274F0",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports engineering review and quality checks, but it does not provide the complete LLM request tracing, prompt lifecycle, controlled-experiment, and evaluation-dataset workflow required.",
+      "source_anchor": "# Code Review Checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3F8E1D1237399BB0",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports code scanning and remediation workflows, but it does not provide the complete LLM prompt revision, tracing, controlled-experiment, and evaluation-dataset workflow required.",
+      "source_anchor": "# AWS Security Agent — Code Scans"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-531C09E581075FA8",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill provides package release, hacking review, generic best-practice, or gene-set analysis support, not an LLM request lifecycle, prompt revision, experiment, observability, or evaluation-dataset workflow.",
+      "source_anchor": "# `/r-package-check` — R Package Release Gate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5A96F11A77397A4C",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports security testing, but it does not provide the complete LLM request, prompt-version, experiment, cost/latency, and evaluation-dataset workflow required.",
+      "source_anchor": "# AWS Security Agent — Penetration Test"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6A3FEC5C0DDFEB9F",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill provides package release, hacking review, generic best-practice, or gene-set analysis support, not an LLM request lifecycle, prompt revision, experiment, observability, or evaluation-dataset workflow.",
+      "source_anchor": "# Receiving Hack Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E8004D31D9F55C8A",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill provides package release, hacking review, generic best-practice, or gene-set analysis support, not an LLM request lifecycle, prompt revision, experiment, observability, or evaluation-dataset workflow.",
+      "source_anchor": "# Best practices"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F19F3F653B10A6D3",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill supports operational remediation and may aid investigating failures, but it does not provide the complete LLM prompt revision, tracing, controlled-experiment, and evaluation-dataset workflow required.",
+      "source_anchor": "# Security Agent Remediation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F9B7C9E5D4C90FA5",
+      "missing_material_requirement_or_null": "Figma node context, screenshot/assets retrieval, production UI implementation, and 1:1 visual-parity verification",
+      "rationale": "This skill provides package release, hacking review, generic best-practice, or gene-set analysis support, not an LLM request lifecycle, prompt revision, experiment, observability, or evaluation-dataset workflow.",
+      "source_anchor": "## When To Read External Files"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0642",
+  "batch_input_sha256": "1fae14aa203f92a4ab644a152d5ab99d2d3667c2f289509e83ee06e9c80ce3ca",
+  "blind_packet_id": "P-F0F16C296A26603633",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8a5679789036c63968ab13cdcb92d1f7fbb426841a220d819c16fd82f5938d50"
+}

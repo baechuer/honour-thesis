@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3D7F937A934274F0",
+      "missing_material_requirement_or_null": "Repository-wide security-specific verified scan and in-progress status handling",
+      "rationale": "Performs systematic code review including security and severity-ranked findings, but does not specifically provide the requested full security scan workflow or duplicate-scan status handling.",
+      "source_anchor": "Run a systematic multi-pass code review"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-3F8E1D1237399BB0",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Runs a workspace AWS Security Agent scan and returns ranked, verified findings with code locations and remediations, matching the requested full source review output.",
+      "source_anchor": "Run an AWS Security Agent scan on the workspace"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-531C09E581075FA8",
+      "missing_material_requirement_or_null": "Repository security vulnerability review",
+      "rationale": "Runs an R package release gate and CRAN checks, not a security vulnerability scan.",
+      "source_anchor": "Run the full R package release gate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5A96F11A77397A4C",
+      "missing_material_requirement_or_null": "Repository source review rather than live web application penetration test",
+      "rationale": "Performs AWS Security Agent penetration testing with findings and remediations, but targets a live web application rather than the repository source.",
+      "source_anchor": "Run an AWS Security Agent penetration test against a live web application"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6A3FEC5C0DDFEB9F",
+      "missing_material_requirement_or_null": "Initiating and executing a repository security scan",
+      "rationale": "Consumes existing hack-review reports or feedback rather than running the requested scan.",
+      "source_anchor": "Consume a coverage-led `hack-review` Markdown report"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E8004D31D9F55C8A",
+      "missing_material_requirement_or_null": "Full repository scan execution and ranked verified findings",
+      "rationale": "Applies security and code-quality best practices and audits, but the description does not establish the requested full scan and verified finding workflow.",
+      "source_anchor": "Apply modern web development best practices"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F19F3F653B10A6D3",
+      "missing_material_requirement_or_null": "Starting and executing the repository vulnerability scan",
+      "rationale": "Drives remediation from existing AWS Security Agent findings rather than performing the requested source scan.",
+      "source_anchor": "Pull AWS Security Agent findings"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F9B7C9E5D4C90FA5",
+      "missing_material_requirement_or_null": "Repository security vulnerability review",
+      "rationale": "Performs GO and KEGG enrichment on gene lists, unrelated to source security scanning.",
+      "source_anchor": "performing GO and KEGG enrichment on a gene list"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0642",
+  "batch_input_sha256": "1fae14aa203f92a4ab644a152d5ab99d2d3667c2f289509e83ee06e9c80ce3ca",
+  "blind_packet_id": "P-F0F16C296A26603633",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c436594b029ec04a184717b3345073164346e58519b4a7fec20537c229e419cf"
+}

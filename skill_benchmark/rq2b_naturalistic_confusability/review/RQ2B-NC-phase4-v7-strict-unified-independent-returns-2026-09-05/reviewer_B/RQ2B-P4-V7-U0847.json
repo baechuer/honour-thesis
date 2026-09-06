@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-05D1580A83B1032B",
+      "missing_material_requirement_or_null": "Mobile-app-specific AI SDK and platform production controls",
+      "rationale": "Covers streaming UI and app-router lifecycle concepts, but is specifically Next.js rather than an existing mobile app platform.",
+      "source_anchor": "Builds and reviews Next.js App Router code"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-1D9E13BB0D35C5B1",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Integrates Firebase AI Logic through the direct Firebase app/client SDK lane, matching app-layer AI summaries and client-side production controls.",
+      "source_anchor": "Integrate Firebase AI Logic as the direct Firebase app/client SDK lane"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-34466746EED1760D",
+      "missing_material_requirement_or_null": "Mobile app streaming AI summary architecture and production controls",
+      "rationale": "Provides image generation, not streaming AI summaries in an app interface.",
+      "source_anchor": "Image Generation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-40D7633570A1803C",
+      "missing_material_requirement_or_null": "Mobile app AI summary UX and platform controls",
+      "rationale": "Facilitates sprint retrospectives, unrelated to in-app AI streaming.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-56219B773E2BF556",
+      "missing_material_requirement_or_null": "Mobile app AI summary implementation and controls",
+      "rationale": "Surveys visual and interaction conventions rather than implementing app-layer AI summaries.",
+      "source_anchor": "surveying the DOCUMENTED visual and interaction conventions"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5F7F424059C5A9D0",
+      "missing_material_requirement_or_null": "Client/app-layer ownership and mobile UX lifecycle",
+      "rationale": "Routes server-owned AI workflow implementation, but the prompt explicitly requires the capability to remain in the app layer.",
+      "source_anchor": "Route server-owned AI workflow work"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-69045022E4BC1447",
+      "missing_material_requirement_or_null": "Streaming AI summaries and app UX lifecycle",
+      "rationale": "Automates multi-platform social publishing, not in-app AI summary streaming.",
+      "source_anchor": "Multi-platform social media publishing automation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EB61CC2569485B72",
+      "missing_material_requirement_or_null": "Mobile app AI summary architecture",
+      "rationale": "Finds and vets US software-development firms rather than designing the requested app capability.",
+      "source_anchor": "find, shortlist, vet, or enrich US software development firms"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0847",
+  "batch_input_sha256": "b8adf7af29869c228c0106d02aa06edd445d576b5b88f35a66f9af02950c83e7",
+  "blind_packet_id": "P-B5E2487E38A322C6AD",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "50d37fe67f8d7226d37c03cd9534c16af905b00b269cccca7f6ba9c74b076a38"
+}

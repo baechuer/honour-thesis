@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0642",
+  "blind_packet_id": "P-F0F16C296A26603633",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-3D7F937A934274F0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Code Review Checklist",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Run a systematic multi-pass code review"
+    },
+    {
+      "candidate_token": "C-3F8E1D1237399BB0",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# AWS Security Agent — Code Scans",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Run an AWS Security Agent scan on the workspace"
+    },
+    {
+      "candidate_token": "C-531C09E581075FA8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# `/r-package-check` — R Package Release Gate",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Run the full R package release gate"
+    },
+    {
+      "candidate_token": "C-5A96F11A77397A4C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# AWS Security Agent — Penetration Test",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Run an AWS Security Agent penetration test against a live web application"
+    },
+    {
+      "candidate_token": "C-6A3FEC5C0DDFEB9F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Receiving Hack Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Consume a coverage-led `hack-review` Markdown report"
+    },
+    {
+      "candidate_token": "C-E8004D31D9F55C8A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Best practices",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Apply modern web development best practices"
+    },
+    {
+      "candidate_token": "C-F19F3F653B10A6D3",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Security Agent Remediation",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Pull AWS Security Agent findings"
+    },
+    {
+      "candidate_token": "C-F9B7C9E5D4C90FA5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Read External Files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "performing GO and KEGG enrichment on a gene list"
+    }
+  ],
+  "reviewer_A_return_sha256": "98bc32eeee755d25197c1448d836f836dc75fb935aa5b8b17f8b96fc81aba6b4",
+  "reviewer_B_return_sha256": "ad83a65e49b8c66027e8d0a56f1b30b5a69df513f4d8bd6ca09b94f2890b6e75",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
