@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0414",
+  "blind_packet_id": "P-46B1A9E4BD97F78874",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-02E726E62DECD695",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# UiPath Maestro BPMN — TypeScript Builder SDK (structural core)",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "TRIGGER for authoring structural-core UiPath Maestro BPMN"
+    },
+    {
+      "candidate_token": "C-3547615721AD3412",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Dependency Audit",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Check dependencies for known vulnerabilities and staleness"
+    },
+    {
+      "candidate_token": "C-3E1C5996734AD351",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Localize an app with Multilocale",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "End-to-end recipe for translating a whole application"
+    },
+    {
+      "candidate_token": "C-5B6D9FD392855878",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# UX Heuristics Framework",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Evaluate and improve interface usability using heuristic analysis"
+    },
+    {
+      "candidate_token": "C-77A7E72A7F42B1F7",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Dependency Updater",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "dependency-updater"
+    },
+    {
+      "candidate_token": "C-A31E129B2D8AED9F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Dependency Risk Audit",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Audits third-party dependencies for exploitable CVEs"
+    },
+    {
+      "candidate_token": "C-AAEA69026B7F932A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "security-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-AC2E9BA94995F6FA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Dependency Auditor",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Audit npm dependencies for security vulnerabilities"
+    }
+  ],
+  "reviewer_A_return_sha256": "8de8e7085f47ef9e93b5ed5690e763c626824a44ba06be8842aee7a4eb18a92b",
+  "reviewer_B_return_sha256": "49ba96fb558f01109ec47db925a96a8f07ff19847a28fc303bf7f4d8257a40ee",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
