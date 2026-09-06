@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0298",
+  "blind_packet_id": "P-95D95CC6762A800F0C",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-1E6FAD01C2B3DC33",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Distributed Tracing",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Distributed Tracing"
+    },
+    {
+      "candidate_token": "C-32065B2DAEA89606",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# OpenTelemetry in .NET",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# OpenTelemetry in .NET"
+    },
+    {
+      "candidate_token": "C-65A257600B5D69DF",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# OpenTelemetry in Go",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# OpenTelemetry in Go"
+    },
+    {
+      "candidate_token": "C-736BB03B7AD30C07",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-7586EA2DA2340CDD",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Service Mesh Observability",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Service Mesh Observability"
+    },
+    {
+      "candidate_token": "C-9E4BBD5188003CEF",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# OpenTelemetry in Python",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# OpenTelemetry in Python"
+    },
+    {
+      "candidate_token": "C-CCBA9E4761EE34C0",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "candidate_token": "C-FABA606ADAFD7DD2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# ML Pipeline Expert",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# ML Pipeline Expert"
+    }
+  ],
+  "reviewer_A_return_sha256": "5f83e51a460d1446ea121faac710964a91d6e289a9d433deb5d42eea6b07d1b1",
+  "reviewer_B_return_sha256": "9ecd887a279c9ef6408d6f91c4e66ca7385da64a5f820ae54df608a30e7b3fbd",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
