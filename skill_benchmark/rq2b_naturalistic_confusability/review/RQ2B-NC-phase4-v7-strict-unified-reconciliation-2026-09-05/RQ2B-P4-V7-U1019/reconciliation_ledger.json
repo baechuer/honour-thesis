@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1019",
+  "blind_packet_id": "P-CD25E765DE59C53B7B",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-237CE6F29E2CB7D2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# GSVA Analysis And Visualization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "candidate_token": "C-4FFFE32552EF2C21",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Site audit → coordinated rewrite + social distribution",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Site audit → coordinated rewrite + social distribution"
+    },
+    {
+      "candidate_token": "C-65B6C2EAE84A222D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# WAS Cluster",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# WAS Cluster"
+    },
+    {
+      "candidate_token": "C-6BBA2A2975546FEE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Coverage Gap Finder",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Coverage Gap Finder"
+    },
+    {
+      "candidate_token": "C-A8438F66CBC79ACE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Repo Code Reviewer",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Repo Code Reviewer"
+    },
+    {
+      "candidate_token": "C-C72E1FF2F6D1B265",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Code Reviewer",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Code Reviewer"
+    },
+    {
+      "candidate_token": "C-CCB616B13B7C1716",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Mutation Test Runner",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Mutation Test Runner"
+    },
+    {
+      "candidate_token": "C-F9ED91C9B1F7D1F0",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Characterization Test Writer",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Characterization Test Writer"
+    }
+  ],
+  "reviewer_A_return_sha256": "3e7db260238b60aaebdb157d0ccf6e2b4d89731a0bf9e9237353cff408659574",
+  "reviewer_B_return_sha256": "6b3e7d65c1c87478ba9f987cd49fe186cff484e394de336f6abad2ee1776828a",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
