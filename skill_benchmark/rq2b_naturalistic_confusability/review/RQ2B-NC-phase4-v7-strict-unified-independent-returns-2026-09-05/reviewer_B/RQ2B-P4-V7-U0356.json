@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-50845E34D506995D",
+      "missing_material_requirement_or_null": "Credential retrieval",
+      "rationale": "Surveys security prior art, not credential-store access.",
+      "source_anchor": "surveying documented security"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-695975D166723232",
+      "missing_material_requirement_or_null": "Credential retrieval",
+      "rationale": "Reviews data-processing agreements, unrelated to vault reads.",
+      "source_anchor": "Review a supplied Data Processing Agreement"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-836626C12321BA32",
+      "missing_material_requirement_or_null": "Reading existing credential field",
+      "rationale": "Creates 1Password secrets rather than retrieving one.",
+      "source_anchor": "Creates secrets in 1Password"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8FEC1F6211B7807B",
+      "missing_material_requirement_or_null": "Read-only retrieval of named field",
+      "rationale": "Updates existing 1Password secrets, but does not specifically retrieve and return a field.",
+      "source_anchor": "Updates existing secrets in 1Password"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A6BF5A9C6D47BB8B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Reads secrets from 1Password using the op CLI, directly matching credential-store retrieval and source confirmation.",
+      "source_anchor": "Reads secrets from 1Password"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B45381BC454ABCF0",
+      "missing_material_requirement_or_null": "Credential retrieval",
+      "rationale": "Debugs iOS applications, unrelated to vault access.",
+      "source_anchor": "AI agent for building, running"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EB5A8724A1E2EE1B",
+      "missing_material_requirement_or_null": "Credential retrieval",
+      "rationale": "Facilitates retrospectives, unrelated to credential stores.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F9F13BC8A127B16B",
+      "missing_material_requirement_or_null": "Credential retrieval",
+      "rationale": "Covers database schema migration tooling, unrelated to vault reads.",
+      "source_anchor": "schema migration tooling"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0356",
+  "batch_input_sha256": "2a40a43f24a59f095b1284a2b7a5348ea247eb6f5bcf918f1a639ec143c2a0d0",
+  "blind_packet_id": "P-54DA5415E57D891A2B",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "537cad5d6c0eec0c4dc2be484eeb61b73a0df77ec68694a47c586dd6369f822b"
+}

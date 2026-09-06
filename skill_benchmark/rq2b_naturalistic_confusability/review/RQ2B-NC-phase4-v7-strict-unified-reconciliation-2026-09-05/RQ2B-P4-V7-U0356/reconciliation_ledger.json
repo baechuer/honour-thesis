@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0356",
+  "blind_packet_id": "P-54DA5415E57D891A2B",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-50845E34D506995D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying documented security"
+    },
+    {
+      "candidate_token": "C-695975D166723232",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# DPA Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Review a supplied Data Processing Agreement"
+    },
+    {
+      "candidate_token": "C-836626C12321BA32",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Overview",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Creates secrets in 1Password"
+    },
+    {
+      "candidate_token": "C-8FEC1F6211B7807B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Overview",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Updates existing secrets in 1Password"
+    },
+    {
+      "candidate_token": "C-A6BF5A9C6D47BB8B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Overview",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Reads secrets from 1Password"
+    },
+    {
+      "candidate_token": "C-B45381BC454ABCF0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# iOS Debugger Agent",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "AI agent for building, running"
+    },
+    {
+      "candidate_token": "C-EB5A8724A1E2EE1B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-F9F13BC8A127B16B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Database Schema Migration with Liquibase and Flyway",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "schema migration tooling"
+    }
+  ],
+  "reviewer_A_return_sha256": "63d411f93fd20a6c5ef9520481ec4769f09e9ae2764bff2b80c223e11f923cf2",
+  "reviewer_B_return_sha256": "ea3e8899a1c1939211d1fa2240e8facda971d1ab01764b8119de34b0e7bdd5ab",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

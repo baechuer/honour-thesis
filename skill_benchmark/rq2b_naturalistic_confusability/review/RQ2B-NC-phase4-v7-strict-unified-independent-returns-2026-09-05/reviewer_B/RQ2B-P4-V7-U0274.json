@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-33974BEE41F1F015",
+      "missing_material_requirement_or_null": "Backend architecture boundary review",
+      "rationale": "Inspects rendered interfaces, not backend module ownership or dependencies.",
+      "source_anchor": "Rendered-interface inspection procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4607200041606DEE",
+      "missing_material_requirement_or_null": "Backend architecture review",
+      "rationale": "Builds Slack bots, unrelated to module boundaries.",
+      "source_anchor": "Builds Slack bots and integrations"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5F44FF69AD162154",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Analyzes software architecture fitness, directly matching ownership, dependencies, coupling, responsibilities, and refactoring sequence.",
+      "source_anchor": "Analyzes code for software architecture fitness"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8A53F7964C462FBD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides unified backend architecture guidance, directly matching module boundaries and safe refactoring.",
+      "source_anchor": "unified, end-to-end backend architecture skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CA02423E77084BFA",
+      "missing_material_requirement_or_null": "Backend architecture review",
+      "rationale": "Facilitates retrospectives, unrelated to code architecture.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D3357E3759822550",
+      "missing_material_requirement_or_null": "Backend architecture review",
+      "rationale": "Runs gene-set enrichment analysis, unrelated to backend modules.",
+      "source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E32FF9B772C3985E",
+      "missing_material_requirement_or_null": "Module ownership and refactoring sequence",
+      "rationale": "Audits third-party dependency exposure and risk, relevant to dependency direction but not complete architecture review.",
+      "source_anchor": "Audits third-party dependencies"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F6D7F17EFA0B8D51",
+      "missing_material_requirement_or_null": "Backend architecture review",
+      "rationale": "Provides user-facing writing procedures, unrelated to service modules.",
+      "source_anchor": "User-facing Writer-in-Residence procedure"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0274",
+  "batch_input_sha256": "fe822b8de484b3c59d0dbccc5778e2670b3894b602b00f0b17c585ce8b793ba0",
+  "blind_packet_id": "P-6D1339BF4D7FCB93B9",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ae8537105e8991ae49899f66b8e731499ff2088cc5c134954e00afa2bbc74e96"
+}
