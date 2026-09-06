@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0A3DE77E06F10AA1",
+      "missing_material_requirement_or_null": "Meeting transcript notes",
+      "rationale": "Facilitates sprint retrospectives, not general transcript-to-notes conversion.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0C46A6D1C22431C3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Converts meeting notes or transcripts into four-part summaries with decisions, actions, owners, and due dates.",
+      "source_anchor": "Converts raw meeting notes or transcripts"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-180F3383EB0350A8",
+      "missing_material_requirement_or_null": "Meeting notes and action extraction",
+      "rationale": "Analyzes software architecture fitness, unrelated to meeting transcripts.",
+      "source_anchor": "Analyzes code for software architecture fitness"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8BE3E7DC3523B14A",
+      "missing_material_requirement_or_null": "Transcript decisions and action extraction",
+      "rationale": "Structures recurring 1:1 agendas, relevant to meeting organization but not transcript summarization.",
+      "source_anchor": "Structures recurring manager-report 1:1s"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CBB109ED43DDAEF4",
+      "missing_material_requirement_or_null": "Meeting notes generation",
+      "rationale": "Builds Slack bots and integrations, unrelated to transcript notes.",
+      "source_anchor": "Builds Slack bots and integrations using the Slack API"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EA8509DAAB84E34F",
+      "missing_material_requirement_or_null": "Meeting transcript notes",
+      "rationale": "Builds lesson plans, unrelated to meetings.",
+      "source_anchor": "Builds a complete single-lesson plan"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4A4042B6C4DA06D",
+      "missing_material_requirement_or_null": "Meeting transcript notes",
+      "rationale": "Runs GSEA on ranked gene lists, unrelated to meeting summaries.",
+      "source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-FF8DAAFB3FF4CE8C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Produces meeting notes from transcripts or raw notes, matching concise decisions, actions, owners, and due dates without raw transcription.",
+      "source_anchor": "given a meeting transcript or raw notes"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1141",
+  "batch_input_sha256": "de2320d6762881baa43d96142ef69bff87073b4e0a60238aa21ada2195dfe433",
+  "blind_packet_id": "P-2FF41E81D0AA8B06D5",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1f9121444cb2b132fdbb408061cc41a18dcfb409c06556d3683ed54124ae8ae3"
+}
