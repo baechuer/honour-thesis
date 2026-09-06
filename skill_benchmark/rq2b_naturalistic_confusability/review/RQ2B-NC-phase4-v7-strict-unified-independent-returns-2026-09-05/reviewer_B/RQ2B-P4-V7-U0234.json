@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-02D46D4EA6238236","missing_material_requirement_or_null":"The source does not operate on the supplied reimbursement PDF or employee details and does not produce a field-entry checklist.","rationale":"This is a literature-survey workflow, not a document field-entry workflow.","source_anchor":"## When to activate"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-2CA3E11DBE6BFD3B","missing_material_requirement_or_null":"It does not instruct the reviewer to inspect the supplied reimbursement PDF or supplied employee details and identify the packet's still-blank required fields.","rationale":"Its expense-policy domain is relevant to reimbursement context, but its requested artifact is a policy with limits, approvals, documentation, and deadlines rather than a PDF field-entry checklist.","source_anchor":"# Expense and Approval Policy"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-33E56B1F44CBE80F","missing_material_requirement_or_null":"The source does not inspect a reimbursement packet or identify required blanks from supplied employee details.","rationale":"It produces customer-facing incident updates, which is unrelated to reimbursement form field entry.","source_anchor":"## Inputs to collect"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-4A8DA796A61FA216","missing_material_requirement_or_null":"The source does not inspect the reimbursement PDF or produce a required-blank checklist using employee details.","rationale":"It is scoped to faithful clinical or study summaries and explicitly excludes unrelated document field-entry work.","source_anchor":"# Clinical Summary"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6222E24F401B3EE1","missing_material_requirement_or_null":"The source does not read a reimbursement PDF, use employee details, or identify missing required fields.","rationale":"It builds Slack bots and integrations rather than completing or auditing a reimbursement packet.","source_anchor":"## Inputs to collect"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A09D0B9DD8CD09E8","missing_material_requirement_or_null":"The source does not inspect the supplied reimbursement packet or identify required blank values.","rationale":"It facilitates sprint retrospectives and action items, unrelated to PDF field-entry checklist generation.","source_anchor":"## Inputs to collect"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D1E25DDF0D24B7C4","missing_material_requirement_or_null":"The source reviews design-partner agreements rather than inspecting a reimbursement PDF and employee details for required blank fields.","rationale":"Its commercial-contract review boundary is unrelated to the requested reimbursement packet checklist.","source_anchor":"# Design Partner Review"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-FCECA89FD2C99818","missing_material_requirement_or_null":"The source targets tldraw SDK documentation and does not inspect the reimbursement PDF or identify required blanks.","rationale":"Its documentation-review workflow cannot satisfy the reimbursement field-entry task.","source_anchor":"# Review documentation"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0234",
+  "batch_input_sha256":"b1286a284b0406cf8cc44f4795638cd89641a662cd0e51ad525476f2b6813ccc",
+  "blind_packet_id":"P-0BD2EF3ACED42911D3",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"3e520968aa3de59d815abee72b8a1b918c47cb4a5541d6a1a31619c118752aa4"
+}

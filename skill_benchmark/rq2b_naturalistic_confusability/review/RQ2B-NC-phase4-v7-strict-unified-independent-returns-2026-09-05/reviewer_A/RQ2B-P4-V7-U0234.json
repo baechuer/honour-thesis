@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-02D46D4EA6238236","missing_material_requirement_or_null":"A reimbursement-PDF field-entry checklist identifying blanks and using supplied employee details.","rationale":"This skill performs user-research literature surveying and does not process a supplied PDF or produce a field-entry checklist.","source_anchor":"## Overview"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-2CA3E11DBE6BFD3B","missing_material_requirement_or_null":"Direct PDF inspection and a checklist of still-blank fields populated from the supplied employee details.","rationale":"Its expense and reimbursement-policy domain is meaningfully adjacent, but it drafts policy and approval procedures rather than extracting required blanks from the supplied reimbursement form.","source_anchor":"# Expense and Approval Policy"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-33E56B1F44CBE80F","missing_material_requirement_or_null":"PDF field extraction, employee-detail application, and a reimbursement blank checklist.","rationale":"This skill produces incident status-page updates and has no route for reimbursement-form inspection or checklist output.","source_anchor":"## Inputs to collect"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-4A8DA796A61FA216","missing_material_requirement_or_null":"Reimbursement PDF review and identification of required blank fields using employee details.","rationale":"This skill is for clinical-record or clinical-study summaries, not financial-form field completion or checklist preparation.","source_anchor":"# Clinical Summary"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6222E24F401B3EE1","missing_material_requirement_or_null":"Inspection of the reimbursement PDF and production of a required-blanks checklist.","rationale":"This skill builds Slack bots; it does not address document field extraction, employee details, or reimbursement packets.","source_anchor":"# Slack Bot Builder"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A09D0B9DD8CD09E8","missing_material_requirement_or_null":"Reimbursement-form parsing and checklist of required missing values.","rationale":"This skill facilitates sprint retrospectives and action items, which is unrelated to the requested reimbursement packet field-entry task.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D1E25DDF0D24B7C4","missing_material_requirement_or_null":"Review of the reimbursement PDF, use of employee details, and a blank-field checklist.","rationale":"This skill reviews design-partner agreements and commercial risk, not reimbursement forms or field-entry requirements.","source_anchor":"## Scope gate"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-FCECA89FD2C99818","missing_material_requirement_or_null":"Reimbursement PDF field inspection and checklist output.","rationale":"This skill reviews tldraw SDK documentation against documentation guides and cannot fulfill the requested reimbursement packet workflow.","source_anchor":"# Review documentation"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0234",
+  "batch_input_sha256":"b1286a284b0406cf8cc44f4795638cd89641a662cd0e51ad525476f2b6813ccc",
+  "blind_packet_id":"P-0BD2EF3ACED42911D3",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"a55cbb0e571823a54b506426a6b4e05cc1322646a3f6320978c3bc463a5139a9"
+}

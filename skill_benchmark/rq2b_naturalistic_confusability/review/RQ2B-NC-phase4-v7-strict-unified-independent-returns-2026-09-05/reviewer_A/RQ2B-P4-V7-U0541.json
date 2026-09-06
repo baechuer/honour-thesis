@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-24CC568C80B81070",
+      "missing_material_requirement_or_null": "Kafka Streams topology for joining orders and customer updates, one-hour spend aggregation, interactive lookup state, and topology-specific failure tests.",
+      "rationale": "This skill is for consumer-driven API contract testing and does not provide a stream-processing topology or the requested windowed aggregation and lookup state.",
+      "source_anchor": "Contract Test Writer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3B073CD1AFA9377E",
+      "missing_material_requirement_or_null": "Kafka client scaffolding does not cover Kafka Streams joins, one-hour windowed aggregation, state stores for interactive lookup, or focused TopologyTestDriver tests.",
+      "rationale": "It is a JVM Kafka skill with serialization and client configuration material, so it is a neighbouring route, but it addresses producers and consumers rather than the requested Kafka Streams topology and tests.",
+      "source_anchor": "Confluent Kafka Java Client Creation"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-59905EBD6AE20A96",
+      "missing_material_requirement_or_null": "Clean/hexagonal architecture guidance does not specify Kafka Streams join semantics, one-hour windows, state-store lookup exposure, serialization choices, or stream-specific failure and rebalance tests.",
+      "rationale": "The architecture patterns could help structure a solution, but they are a general backend architecture route and omit the central stream-processing design and verification requirements.",
+      "source_anchor": "Architecture Patterns"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5D1D7749A868A575",
+      "missing_material_requirement_or_null": "No JVM stream-processing topology, order/customer join, windowed spend aggregation, state-store lookup, or relevant tests.",
+      "rationale": "This is a GO/KEGG gene-enrichment analysis skill and is not a plausible route for the requested Kafka Streams pipeline.",
+      "source_anchor": "When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5FBD61A949B2869A",
+      "missing_material_requirement_or_null": "Contract-template material does not provide Kafka Streams topology design, windowed aggregation, lookup state, serialization configuration, or topology tests.",
+      "rationale": "The source is a generic contract-template skill, unrelated to the requested JVM stream-processing task.",
+      "source_anchor": "Contract Template Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-79D5990F4B58293D",
+      "missing_material_requirement_or_null": "Caching guidance does not define the Kafka Streams order/customer join, one-hour event-time aggregation, stream state-store topology, or requested rebalance and deserialization tests.",
+      "rationale": "It contains relevant neighbouring concerns such as serialization, state consistency, and failure handling, but it is a caching architecture lifecycle rather than a Kafka Streams implementation route.",
+      "source_anchor": "Phase 9: Serialization and Memory Optimization"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-B4C8A4DD8205204F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly targets Kafka Streams and explicitly covers topology architecture, joins, windows and aggregations, interactive queries/state stores, serialization, and topology testing and production failure concerns. It is the complete route for the requested pipeline.",
+      "source_anchor": "Kafka Streams — Architect, Build, Debug"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E51921F517A0D692",
+      "missing_material_requirement_or_null": "Python Kafka client guidance cannot provide the requested JVM Kafka Streams topology, state-store lookup, or Java topology tests.",
+      "rationale": "The skill is specifically for confluent-kafka-python producers and consumers, so it does not address the JVM stream-processing boundary.",
+      "source_anchor": "Confluent Kafka Python Client Creation"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0541",
+  "batch_input_sha256": "abaadc5032f9d86d81d0007dbbafa7aac6267fc13c28c24bd2f1d12e1f792160",
+  "blind_packet_id": "P-FCB3CB7D897FC6F679",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1d6a10e5d3f99c0cf27afa46351d612fb1b29472ff9026552f4c8fbbc0c8e7ac"
+}
