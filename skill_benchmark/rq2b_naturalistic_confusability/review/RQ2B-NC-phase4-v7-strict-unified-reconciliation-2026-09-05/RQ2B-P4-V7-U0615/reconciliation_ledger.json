@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0615",
+  "blind_packet_id": "P-DDB03A70CC77BF8080",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-3BDDF26EDD7147FE",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Databricks → Microsoft Fabric Migration",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Databricks → Microsoft Fabric Migration"
+    },
+    {
+      "candidate_token": "C-52B2FE45DFAA5E72",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Synapse Analytics → Microsoft Fabric Migration",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Synapse Analytics → Microsoft Fabric Migration"
+    },
+    {
+      "candidate_token": "C-68B9A5BAF8CD828F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to read external files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## Scope"
+    },
+    {
+      "candidate_token": "C-B8BA3CE5864E0E63",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Sentry NestJS SDK",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sentry NestJS SDK"
+    },
+    {
+      "candidate_token": "C-C1042A4E9FC7969A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# DAG Template Generate Skill",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# DAG Template Generate Skill"
+    },
+    {
+      "candidate_token": "C-C1E2A3822A1562BB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ═══════════════════════════════════════════════════════════════════════════════",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Basic Information"
+    },
+    {
+      "candidate_token": "C-C7C8A341810CBACB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Synapse Pipelines → Microsoft Fabric Data Factory Migration",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "# Synapse Pipelines → Microsoft Fabric Data Factory Migration"
+    },
+    {
+      "candidate_token": "C-CE249AF88AC81C7E",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Coverage Gap Finder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Coverage Gap Finder"
+    }
+  ],
+  "reviewer_A_return_sha256": "14258b5c06ddc7eb3a2b54a45bbc28a4674b4db23b777261fcc1b18e6f5b074a",
+  "reviewer_B_return_sha256": "2d24d74040ff074d054f9b18ba11ffff05b2db3a9e160f506c2ebe307571a783",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
