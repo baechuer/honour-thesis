@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-02367D6ABA079581",
+      "missing_material_requirement_or_null": "A workflow that extracts a presentation's narrative and tables into a clean repository text document.",
+      "rationale": "It maps existing pull-request review threads to code actions; it does not convert slide content.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-37DA3746E4FB28E5",
+      "missing_material_requirement_or_null": "A converter that extracts an existing slide deck's text and tables into a repository-friendly document.",
+      "rationale": "It builds deck artifacts and expressly routes prose-document work elsewhere; it does not extract an existing deck.",
+      "source_anchor": "## When not to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5141629EF9B752C9",
+      "missing_material_requirement_or_null": "A presentation-to-text conversion workflow that preserves narrative, tables, and heading structure.",
+      "rationale": "It generates synthetic brain-MRI volumes, which is unrelated to converting a slide deck into documentation.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-51B514BBD56AC70E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It accepts PowerPoint, emits Markdown with slides as sections, handles tables, and supports version-controlled text output.",
+      "source_anchor": "### PowerPoint Conversion"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B4905C013A9C8901",
+      "missing_material_requirement_or_null": "A workflow for converting presentation content and tables into a clean text document.",
+      "rationale": "It explains diminishing-musharaka finance and accounting rather than converting presentation files.",
+      "source_anchor": "## THE STRUCTURE"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C4B3DF29B07A9661",
+      "missing_material_requirement_or_null": "A PowerPoint-to-text or Markdown conversion workflow for repository documentation.",
+      "rationale": "It converts PDF files to editable Word documents and does not handle a slide deck or repository text output.",
+      "source_anchor": "# PDF to Word Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E028E55E18DD3339",
+      "missing_material_requirement_or_null": "A workflow that extracts an existing slide deck's narrative and tables into a clean text document.",
+      "rationale": "It designs the narrative of new decks rather than converting an existing deck into searchable documentation.",
+      "source_anchor": "# Slide Deck Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E6F1B964CCE5C11E",
+      "missing_material_requirement_or_null": "A workflow that converts slide narrative and tables into a structured text document.",
+      "rationale": "It audits visual quality and layout of an existing deck rather than extracting its content.",
+      "source_anchor": "# Slide Deck Visual Auditor"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0478",
+  "batch_input_sha256": "d15812dca47b5625e90b990c71f3de2f977c96b1425fdf0caf72652b83f04858",
+  "blind_packet_id": "P-38D361111E1DF497AF",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "89d6be4ca5ef807b2f02590630597ea9da2e225c256c9e0459ae64f279efd98d"
+}

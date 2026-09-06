@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2F79EDAA277FE837",
+      "missing_material_requirement_or_null": "A process that inventories and recommends project-wide instruction documents, including modernization findings.",
+      "rationale": "It inventories local skills, compares remote versions, and avoids duplicate recommendations, but it operates on skills rather than project-wide instruction documents.",
+      "source_anchor": "## Process"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4363EE7400E92000",
+      "missing_material_requirement_or_null": "A repository-instruction audit that recommends document additions, identifies duplicates, and flags obsolete guidance.",
+      "rationale": "It supplies broad engineering guidance useful to coding assistants, but it does not inspect a repository instruction set for gaps, duplication, or modernization.",
+      "source_anchor": "## Development Lifecycle Phases"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-68F69522FF012CE0",
+      "missing_material_requirement_or_null": "Direct discovery, comparison, and recommendation of project-wide instruction documents.",
+      "rationale": "It analyzes repository context and compares existing agent files, but custom-agent recommendations are not the requested project-wide instruction documents.",
+      "source_anchor": "## Process"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6AC6DA56CAD1855B",
+      "missing_material_requirement_or_null": "A project-level instruction inventory, gap analysis, duplication check, and modernization workflow.",
+      "rationale": "This is narrowly scoped to pandas transformations and provides no repository-wide instruction-document review or maintenance method.",
+      "source_anchor": "# Pandas Expert"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-90034B3D7B59E23E",
+      "missing_material_requirement_or_null": "A project-level instruction inventory, recommendation, duplication, and modernization workflow.",
+      "rationale": "It documents Hugging Face CLI commands, not how to review a software project and its coding-assistant instruction documents.",
+      "source_anchor": "## Commands"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AD7E500A68F156DF",
+      "missing_material_requirement_or_null": "A general instruction-document review process that inventories existing guidance, avoids duplication, and flags modernization needs.",
+      "rationale": "It can inform one repository-wide guardrail topic, but it is a hook-installation workflow rather than an audit and recommendation process for instruction documents.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C86565ADE123DDFE",
+      "missing_material_requirement_or_null": "A repository-wide instruction-document inventory, gap analysis, duplication check, and modernization workflow.",
+      "rationale": "It is a specialized security prior-art research method, not guidance for reviewing and recommending project-wide coding-assistant instruction documents.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-FD53CACA4345C1F6",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly inventories existing instruction files, compares remote versions, recommends gaps without duplication, and identifies outdated guidance.",
+      "source_anchor": "## Process"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1020",
+  "batch_input_sha256": "fcaabde2dd91b10fd19a8bd8632a23fd3e8df80b1f0f072cebc9b34abd1b781e",
+  "blind_packet_id": "P-64CB0C77FB3ECD251D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "48ade00d28b8fa6a4aace2c9e7ae3441afc7d5352db9e61875f51a29c7566368"
+}

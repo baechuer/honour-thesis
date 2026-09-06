@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-233BF51CC6FE2AC0",
+      "missing_material_requirement_or_null": "A code-review method that assesses a patch for defects and test gaps.",
+      "rationale": "It is a published user-research literature-survey workflow, not a procedure for examining a code change.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-31C71E2FEFD17660",
+      "missing_material_requirement_or_null": "Concrete diff-review steps for bug detection and assessing missing tests.",
+      "rationale": "It recognizes PR and code-review workflows, but supplies high-level repository governance rather than a method to inspect this patch for defects or test gaps.",
+      "source_anchor": "### Phase 5 — Collaboration Workflows and Code Review"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-7FFA11C5CF99D2C9",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It gives a diff-oriented multi-pass review covering correctness and tests, with explicit red flags and a findings report structure.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-998654F2F523A358",
+      "missing_material_requirement_or_null": "A focused diff-review procedure with explicit defect and missing-test checks.",
+      "rationale": "It includes a code-review stage in a full delivery lifecycle, but its review guidance is brief and does not provide a focused patch-review method for locating defects and test gaps.",
+      "source_anchor": "### 10. Code Review"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A55049F9730C73AE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It provides ordered passes for logic, security, tests, maintainability, and integration, plus severity and finding formats suited to a diff review.",
+      "source_anchor": "## Review Execution Order"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B3BEBFBCA468F176",
+      "missing_material_requirement_or_null": "General correctness and missing-test review criteria in addition to the security-focused checks.",
+      "rationale": "It gives a concrete security review of a diff, but the requested review also requires general bugs and missing tests, which it does not comprehensively cover.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CD2D0D63E9B33B50",
+      "missing_material_requirement_or_null": "A direct code-diff review procedure for finding defects and absent tests.",
+      "rationale": "It triages findings from completed AWS Security Agent scans and does not direct a fresh inspection of the supplied patch.",
+      "source_anchor": "# Security Agent Remediation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E5A85690D70671DC",
+      "missing_material_requirement_or_null": "A code-review workflow for detecting patch bugs and missing tests.",
+      "rationale": "It is an external incident-communications workflow and provides no process for reviewing code changes.",
+      "source_anchor": "## Operating procedure"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0434",
+  "batch_input_sha256": "db5eccf996058e8c9c31bce3a1205388062b82a9e80b347bb26b6c0836de6da6",
+  "blind_packet_id": "P-4EA1981E80189BC1E3",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ee590ca7cfc5aa72f211e26930b77d0d51182483d37dffa7fb72117916a116ee"
+}
