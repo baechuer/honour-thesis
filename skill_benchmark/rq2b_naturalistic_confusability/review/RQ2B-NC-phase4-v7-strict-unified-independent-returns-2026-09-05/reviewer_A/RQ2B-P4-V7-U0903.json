@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E601A553649E95B",
+      "missing_material_requirement_or_null": "A React Native UI implementation workflow covering the supplied screens, component architecture, theming, accessibility, and mobile navigation.",
+      "rationale": "This is an API versioning and deprecation policy skill, not a workflow for implementing the requested mobile UI.",
+      "source_anchor": "# API Versioning Strategist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-52CD873F7100CEDD",
+      "missing_material_requirement_or_null": "A React Native UI construction workflow for the supplied screens, including reusable components, theme, navigation, list rendering, and accessibility.",
+      "rationale": "It is for building, running, and debugging an existing iOS app with Xcode simulator tooling, not for producing the requested React Native interface.",
+      "source_anchor": "# iOS Debugger Agent"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-53085B405D448C16",
+      "missing_material_requirement_or_null": "A React Native screen implementation workflow with native component, theme, navigation, accessibility, and virtualized-list guidance.",
+      "rationale": "The material concerns privacy-first web analytics installation and reporting rather than constructing the mobile account and activity UI.",
+      "source_anchor": "# Plausible Analytics"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-6B9486E6CFBD70A1",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly converts supplied designs to React Native, requires modular components, hooks and decoupled static data, extracts a theme from the current design, specifies safe areas, navigation, accessibility labels, and FlatList for long lists, and requires permission before packager or simulator use.",
+      "source_anchor": "### Architectural Rules"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9C22CCEBBAE2C027",
+      "missing_material_requirement_or_null": "React Native-specific implementation guidance for native components, safe areas, navigation, accessibility labels, and virtualized activity lists.",
+      "rationale": "Its design-system advice can help establish hierarchy and a consistent theme, but it is a web UI audit and styling guide rather than a workflow for building the requested native mobile UI.",
+      "source_anchor": "# Refactoring UI Design System"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A61B8236A30E3993",
+      "missing_material_requirement_or_null": "React Native primitives and mobile-specific safe-area, navigation, accessibility-label, and FlatList implementation guidance.",
+      "rationale": "It usefully requires modular components, custom hooks, separated static data, and extracted design tokens, but it targets Vite and web React routing/Tailwind rather than the requested React Native application.",
+      "source_anchor": "## Phase 3: Architectural rules"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CA5816598DA147BB",
+      "missing_material_requirement_or_null": "A React Native mobile UI implementation path with native components, safe areas, mobile navigation, accessibility labels, and virtualized-list behavior.",
+      "rationale": "It offers transferable component, hook, and token organization, but is explicitly a React plus Vite web-dashboard workflow and lacks the requested native mobile implementation requirements.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CD2410C969717765",
+      "missing_material_requirement_or_null": "A React Native implementation workflow for converting the supplied screens into components, hooks, a current-design theme, navigation, accessibility, and a virtualized feed.",
+      "rationale": "This skill performs documentation-based UI-convention research before design work and explicitly does not author the UI artifacts requested here.",
+      "source_anchor": "## When to activate"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0903",
+  "batch_input_sha256": "35035c39080a817674ca2063f11eabbc1d17ee74d4ba6187f418402a077914b3",
+  "blind_packet_id": "P-768CF7B9C5842CA3B4",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8462b810521559bfca5923ae6444e0bb71c57202ba8825544092898c9bf93dae"
+}

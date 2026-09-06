@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-173B4553FB804599",
+      "missing_material_requirement_or_null": "Browser-widget lifecycle, engagement-state, embedded-frame messaging, CSP/origin, and recovery-test guidance.",
+      "rationale": "The source is an LLM observability and evaluation guide, not a browser customer-engagement integration guide.",
+      "source_anchor": "# LangSmith"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-608BD16589C443A0",
+      "missing_material_requirement_or_null": "Browser-widget lifecycle, engagement-state, embedded-frame messaging, CSP/origin, and recovery-test guidance.",
+      "rationale": "The source specifies a security prior-art research workflow rather than implementation guidance for an embedded customer-engagement widget.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-878B1086063CD0D7",
+      "missing_material_requirement_or_null": "Web SDK readiness and state handling, iframe postMessage contract, CSP/origin checks, and browser recovery tests.",
+      "rationale": "The source addresses native iOS Contact Center SDK lifecycle and channel operations, not a browser embed.",
+      "source_anchor": "# Zoom Contact Center SDK - iOS"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A22D5EA50B4FA662",
+      "missing_material_requirement_or_null": "Browser-widget integration, lifecycle/state handling, embedded-frame messaging, CSP/origin checks, and recovery tests.",
+      "rationale": "The source is a general Python code-review checklist and does not address the requested browser engagement integration.",
+      "source_anchor": "# Python Anti-Patterns Checklist"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A85E2A397520C25A",
+      "missing_material_requirement_or_null": "A source-visible event and recovery test plan, including test cases for readiness, context changes, backgrounding, and cross-window messages.",
+      "rationale": "It directly covers web engagement modes, ready gating, engagementId state, context/background behavior, Smart Embed postMessage, CSP/allow-lists, and feature flags, but gives no concrete test plan.",
+      "source_anchor": "## Hard Guardrails"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ACDC703EA2B2C2C2",
+      "missing_material_requirement_or_null": "Browser-widget lifecycle, engagement-state, iframe messaging, CSP/origin configuration, and implementation guidance.",
+      "rationale": "The source routes backend test planning and explicitly excludes frontend/browser testing; it cannot supply the requested widget design.",
+      "source_anchor": "# Backend Testing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C338B5F0FD5C7E5F",
+      "missing_material_requirement_or_null": "Browser-widget lifecycle, engagement-state, iframe messaging, CSP/origin configuration, and event/recovery functional tests.",
+      "rationale": "The source concerns capacity load testing, not functional implementation of a customer-engagement web widget.",
+      "source_anchor": "# Load Testing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FE44B7ED37BF68A0",
+      "missing_material_requirement_or_null": "Web SDK readiness and state handling, iframe postMessage contract, CSP/origin checks, and browser recovery tests.",
+      "rationale": "The source addresses native Android Contact Center SDK setup and teardown, not browser-based embedded-widget behavior.",
+      "source_anchor": "# Zoom Contact Center SDK - Android"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1113",
+  "batch_input_sha256": "dc49cc7e432b1888f4af5ccebce72de0989c7bcaba832a9c8d918af345a8ad85",
+  "blind_packet_id": "P-09912442532BC24512",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d9705c5c2a40b56a7f388828be249f2a6b6f22f7815f5d3e176434a08e5aeaf4"
+}

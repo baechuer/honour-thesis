@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-39EB5F2C7C279B88",
+      "missing_material_requirement_or_null": "Official OpenAI API documentation access and guidance for model parameters, tool calling, and migration.",
+      "rationale": "This skill is limited to packet capture and PCAP analysis; it does not locate or synthesize OpenAI API documentation.",
+      "source_anchor": "# Wireshark"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-71DFCF61DEE3ADAA",
+      "missing_material_requirement_or_null": "Current official OpenAI documentation lookup with model-parameter, tool-calling, and migration-specific guidance and links.",
+      "rationale": "Provides general API documentation, versioning, and asynchronous-pattern guidance, but it neither retrieves current official OpenAI documentation nor covers OpenAI-specific model parameters or tool-calling behavior.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8C3EB69F7701B555",
+      "missing_material_requirement_or_null": "Official OpenAI API documentation access and guidance for model parameters, tool calling, and migration.",
+      "rationale": "Reverse-engineers a local codebase; it does not retrieve or summarize current official OpenAI API documentation.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-968D3750A1AA3037",
+      "missing_material_requirement_or_null": "Official OpenAI API documentation access and guidance for model parameters, tool calling, and migration.",
+      "rationale": "This source is an Ensembl genomics REST-API guide, not OpenAI API documentation.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ABBC545F5FEE3AD4",
+      "missing_material_requirement_or_null": "Official OpenAI API documentation access and guidance for model parameters, tool calling, and migration.",
+      "rationale": "This source runs gene-set enrichment analysis and is unrelated to API documentation research.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D38467781F9A36DA",
+      "missing_material_requirement_or_null": "Official OpenAI API documentation access and guidance for model parameters, tool calling, and migration.",
+      "rationale": "This source concerns database-schema migrations and does not address current OpenAI API documentation, model parameters, or tool calling.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F3EE6595ECBFC056",
+      "missing_material_requirement_or_null": "Official OpenAI API documentation access and guidance for model parameters, tool calling, and migration.",
+      "rationale": "This source generates Django/Sentry database migrations and cannot look up or summarize OpenAI API guidance.",
+      "source_anchor": "# Generate Django Database Migrations"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F8B47487016616E3",
+      "missing_material_requirement_or_null": "Current official OpenAI documentation lookup with model-parameter, tool-calling, and migration-specific guidance and links.",
+      "rationale": "Provides strong writing guidance for API reference material, but not access to current official OpenAI documentation or OpenAI-specific technical content.",
+      "source_anchor": "## When to Use"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0828",
+  "batch_input_sha256": "0bbe7606b9808c9eb27a7f94ad4ed1a140c9d24a7c56d3e14d24587c6498572c",
+  "blind_packet_id": "P-5392629D220677E0BA",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8a8bdab9477d48187c796ac5c053c70e5d4de88ba0d2cc8dc3cdecb7d1630faf"
+}

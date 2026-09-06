@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E601A553649E95B",
+      "missing_material_requirement_or_null": "A native mobile implementation of the supplied screens with reusable components, hooks, theme, navigation, accessibility labels, safe areas, and a virtualized feed.",
+      "rationale": "It governs API-version lifecycle policy rather than mobile UI implementation.",
+      "source_anchor": "# API Versioning Strategist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-52CD873F7100CEDD",
+      "missing_material_requirement_or_null": "A native mobile implementation of the supplied screens with reusable components, hooks, theme, navigation, accessibility labels, safe areas, and a virtualized feed.",
+      "rationale": "It operates and debugs an existing iOS simulator app but does not translate supplied screens into native UI.",
+      "source_anchor": "# iOS Debugger Agent"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-53085B405D448C16",
+      "missing_material_requirement_or_null": "A native mobile implementation of the supplied screens with reusable components, hooks, theme, navigation, accessibility labels, safe areas, and a virtualized feed.",
+      "rationale": "It adds web analytics rather than implementing the supplied mobile screens.",
+      "source_anchor": "# Plausible Analytics"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-6B9486E6CFBD70A1",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly prescribes React Native conversion, reusable components and hooks, externalized data and theme, SafeAreaView/navigation, accessibility labels, FlatList, and permission before packager or simulator work.",
+      "source_anchor": "### Architectural Rules"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9C22CCEBBAE2C027",
+      "missing_material_requirement_or_null": "A native mobile implementation of the supplied screens with reusable components, hooks, theme, navigation, accessibility labels, safe areas, and a virtualized feed.",
+      "rationale": "It is a generic web visual-design system and does not implement a native mobile app.",
+      "source_anchor": "# Refactoring UI Design System"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A61B8236A30E3993",
+      "missing_material_requirement_or_null": "React Native primitives and mobile-specific safe-area, native-navigation, accessible-image, and FlatList implementation.",
+      "rationale": "It supplies reusable React components, hooks, external data, theming, and permission-gated validation, but targets Vite web UI rather than native mobile.",
+      "source_anchor": "## Phase 3: Architectural rules"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CA5816598DA147BB",
+      "missing_material_requirement_or_null": "React Native primitives and mobile-specific safe-area, native-navigation, accessible-image, and FlatList implementation.",
+      "rationale": "It covers component and hook organization for Vite web dashboards, but lacks the requested native-mobile stack and primitives.",
+      "source_anchor": "# Stitch to React + Vite Dashboard"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CD2410C969717765",
+      "missing_material_requirement_or_null": "A native mobile implementation of the supplied screens with reusable components, hooks, theme, navigation, accessibility labels, safe areas, and a virtualized feed.",
+      "rationale": "It researches documented UI conventions and expressly does not author screens or hi-fi UI.",
+      "source_anchor": "## What this survey does NOT give you"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0903",
+  "batch_input_sha256": "35035c39080a817674ca2063f11eabbc1d17ee74d4ba6187f418402a077914b3",
+  "blind_packet_id": "P-768CF7B9C5842CA3B4",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "02db59ed65be3895ade003ff43ea90630893f0d00a1579475979df86ccaf1ed9"
+}

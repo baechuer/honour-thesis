@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-173B4553FB804599",
+      "missing_material_requirement_or_null": "Browser-widget lifecycle, engagement-state, embedded-frame messaging, configuration checks, and recovery-test guidance.",
+      "rationale": "LLM tracing and evaluation guidance does not specify the requested browser integration behavior or its operational checks.",
+      "source_anchor": "# LangSmith"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-608BD16589C443A0",
+      "missing_material_requirement_or_null": "Concrete browser-widget integration, lifecycle handling, cross-window message contract, and event/recovery test plan.",
+      "rationale": "This is a security prior-art research workflow, not implementation guidance for the requested web engagement integration.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-878B1086063CD0D7",
+      "missing_material_requirement_or_null": "Web SDK readiness, browser state/context behavior, CSP/origin checks, iframe messaging, and browser event/recovery testing.",
+      "rationale": "The material addresses a native iOS Contact Center SDK, so its lifecycle guidance does not cover the browser-specific integration requested.",
+      "source_anchor": "# Zoom Contact Center SDK - iOS"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A22D5EA50B4FA662",
+      "missing_material_requirement_or_null": "Web engagement SDK integration, readiness and state handling, CSP/origin configuration, cross-window contract, and recovery tests.",
+      "rationale": "General Python code-review anti-patterns do not provide the requested browser-widget design or its integration-specific safeguards.",
+      "source_anchor": "# Python Anti-Patterns Checklist"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A85E2A397520C25A",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers web embeds, readiness gating, engagement-keyed state, context and background behavior, iframe postMessage, CSP/origin settings, and relevant operational testing routes.",
+      "source_anchor": "## Hard Guardrails"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-ACDC703EA2B2C2C2",
+      "missing_material_requirement_or_null": "Browser SDK lifecycle and engagement-context implementation, CSP/permitted-origin checks, and an embedded-frame message contract.",
+      "rationale": "Its test-planning structure can inform a recovery test plan, but it is expressly backend-focused and omits the central web-integration requirements.",
+      "source_anchor": "# Backend Testing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C338B5F0FD5C7E5F",
+      "missing_material_requirement_or_null": "Web engagement integration and its lifecycle, security-configuration, cross-window contract, and functional recovery coverage.",
+      "rationale": "Load-test methodology is not a design or functional test plan for the requested browser-based engagement behavior.",
+      "source_anchor": "# Load Testing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FE44B7ED37BF68A0",
+      "missing_material_requirement_or_null": "Web SDK readiness, browser engagement state/context, CSP/origin checks, iframe messaging, and browser event/recovery testing.",
+      "rationale": "The material addresses a native Android Contact Center SDK rather than the requested browser-based widget.",
+      "source_anchor": "# Zoom Contact Center SDK - Android"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1113",
+  "batch_input_sha256": "dc49cc7e432b1888f4af5ccebce72de0989c7bcaba832a9c8d918af345a8ad85",
+  "blind_packet_id": "P-09912442532BC24512",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "718269da1b6c09909c12e11281364c87f7fc7ec21ef4a1ab10c8613aaea99303"
+}

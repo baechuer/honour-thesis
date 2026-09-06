@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-39EB5F2C7C279B88",
+      "missing_material_requirement_or_null": "An OpenAI-API-specific official-documentation lookup workflow covering current model parameters, tool calling, migration notes, and source links.",
+      "rationale": "The skill concerns packet capture and PCAP analysis, not official OpenAI API documentation or the requested API guidance.",
+      "source_anchor": "Capture and analyze network traffic"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-71DFCF61DEE3ADAA",
+      "missing_material_requirement_or_null": "A workflow to retrieve and cite current official OpenAI documentation specifically for model parameters, tool-calling behavior, and migration notes.",
+      "rationale": "It supplies general API design and documentation considerations, but does not retrieve or summarize the current provider-specific guidance requested.",
+      "source_anchor": "API Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8C3EB69F7701B555",
+      "missing_material_requirement_or_null": "An official OpenAI API documentation lookup and synthesis workflow for current parameters, tool calling, migration notes, and links.",
+      "rationale": "This skill extracts specifications from an existing codebase and does not address external OpenAI API documentation.",
+      "source_anchor": "Reverse-engineering specialist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-968D3750A1AA3037",
+      "missing_material_requirement_or_null": "An OpenAI-API-specific official-documentation lookup workflow covering current model parameters, tool calling, migration notes, and source links.",
+      "rationale": "The source is a genomics database client and offers no material for OpenAI API documentation or the requested subject matter.",
+      "source_anchor": "Ensembl Genome Database"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-ABBC545F5FEE3AD4",
+      "missing_material_requirement_or_null": "An OpenAI-API-specific official-documentation lookup workflow covering current model parameters, tool calling, migration notes, and source links.",
+      "rationale": "The skill runs gene-set enrichment analysis and is unrelated to the requested API documentation research and summary.",
+      "source_anchor": "Running GSEA on a gene list"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D38467781F9A36DA",
+      "missing_material_requirement_or_null": "An OpenAI-API-specific official-documentation lookup workflow covering current model parameters, tool calling, migration notes, and source links.",
+      "rationale": "Database schema migration procedures do not provide the requested OpenAI API documentation research or guidance.",
+      "source_anchor": "database schema versioning"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F3EE6595ECBFC056",
+      "missing_material_requirement_or_null": "An OpenAI-API-specific official-documentation lookup workflow covering current model parameters, tool calling, migration notes, and source links.",
+      "rationale": "This source is limited to Django migrations for Sentry and does not address OpenAI API documentation or the requested topics.",
+      "source_anchor": "Generate Django Database Migrations"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F8B47487016616E3",
+      "missing_material_requirement_or_null": "A workflow to retrieve and cite current official OpenAI documentation specifically for model parameters, tool-calling behavior, and migration notes.",
+      "rationale": "It supports writing and accuracy review for technical documentation, but lacks the provider-specific current-source lookup and substantive API guidance required.",
+      "source_anchor": "Content Accuracy"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0828",
+  "batch_input_sha256": "0bbe7606b9808c9eb27a7f94ad4ed1a140c9d24a7c56d3e14d24587c6498572c",
+  "blind_packet_id": "P-5392629D220677E0BA",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "be1c6024a4cd0d96861169dc18ada39951ff4b98c0e69cb2f31a4d2606f134ba"
+}
