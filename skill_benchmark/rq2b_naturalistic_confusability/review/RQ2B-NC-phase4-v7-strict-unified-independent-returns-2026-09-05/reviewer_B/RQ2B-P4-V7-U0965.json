@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-02DEC872C97A9557",
+      "missing_material_requirement_or_null": "Managed Kubernetes cluster in own cloud account",
+      "rationale": "Provides CapRover PaaS guidance and deployment, but not the requested managed Kubernetes architecture.",
+      "source_anchor": "Expert guidance for CapRover"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0D5D0B750E23ADA4",
+      "missing_material_requirement_or_null": "Kubernetes deployment configuration",
+      "rationale": "Ports language/runtime versions, unrelated to cluster deployment.",
+      "source_anchor": "Ports a codebase across a breaking language"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-38AEC39DC47C48D4",
+      "missing_material_requirement_or_null": "Managed-cloud account billing and preview environment",
+      "rationale": "Provides GitOps ArgoCD deployment on premises, but the prompt requires managed Kubernetes in the user's cloud account.",
+      "source_anchor": "complete-gitops-argocd-deployment-on-prem-from-scratch"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3C74286A7D84B8A3",
+      "missing_material_requirement_or_null": "Kubernetes application deployment",
+      "rationale": "Runs GO and KEGG enrichment, unrelated to infrastructure deployment.",
+      "source_anchor": "Use when performing GO and KEGG enrichment"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-77394E4EA5942F13",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides complete GitOps ArgoCD deployment on GKE, directly matching managed Kubernetes in a cloud account, configuration, health, scaling, secrets, migrations, and previews.",
+      "source_anchor": "complete-gitops-argocd-deployment-on-gke-from-scratch"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AB6DD985EE678752",
+      "missing_material_requirement_or_null": "Kubernetes deployment, autoscaling, and cloud-resource billing",
+      "rationale": "Provides Python background-job patterns, useful for worker configuration but not the full managed deployment.",
+      "source_anchor": "Python background job patterns"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-CB7E3408905D8411",
+      "missing_material_requirement_or_null": "Managed Kubernetes and preview environment",
+      "rationale": "Provides Porter platform guidance, relevant to deployment but not the requested Kubernetes-specific configuration.",
+      "source_anchor": "Expert guidance for Porter"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E3CDC605157CBEE6",
+      "missing_material_requirement_or_null": "Kubernetes-specific configuration and preview database",
+      "rationale": "Provides Zeabur cloud deployment guidance, but not the requested managed Kubernetes setup.",
+      "source_anchor": "Expert guidance for Zeabur"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0965",
+  "batch_input_sha256": "7291e756adfea670588a3db227f0c358d5605b40a98dfb45d84ad1e12de95905",
+  "blind_packet_id": "P-5CBBF2F9CFB29737C9",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ba428f7f4291044b06db684e3438b7550c14c1d0cbf983fca99913d131d4a9f5"
+}

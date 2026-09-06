@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-207ACF7671715425",
+      "missing_material_requirement_or_null": "Coding-agent safety guardrail table",
+      "rationale": "Runs GSEA, unrelated to agent safety enforcement.",
+      "source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2616B17DE6F29811",
+      "missing_material_requirement_or_null": "Coding-agent safety guardrails",
+      "rationale": "Generates quizzes and assessments, unrelated to tool permissions or confirmation gates.",
+      "source_anchor": "Writes quizzes and assessments"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-29C28E412683542E",
+      "missing_material_requirement_or_null": "Agent-specific permission and external-text guardrails",
+      "rationale": "Diagnoses bugs and regressions using disciplined workflows, but does not define coding-agent safety bounds.",
+      "source_anchor": "Disciplined diagnosis loop"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-2F464E006F883EBD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Designs LLM-agent guardrails covering permissions, irreversible actions, validation gates, and treating external text as data.",
+      "source_anchor": "Design guardrails for an LLM agent"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-375CB1185C2DA7C8",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Implements AI safety guardrails, directly supporting blocked actions and validation of agent outputs.",
+      "source_anchor": "Implement safety guardrails for AI systems"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-762E9B1B28931C2F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Applies agentic guardrails wherever an LLM agent acts, directly matching the requested decision bounds and enforcement points.",
+      "source_anchor": "Apply agentic guardrails to every step where an LLM agent acts"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-81E8792FE95755AD",
+      "missing_material_requirement_or_null": "Coding-agent safety controls",
+      "rationale": "Designs primary research protocols, unrelated to agent permissions and validators.",
+      "source_anchor": "Designs a rigorous primary research protocol"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-BB194DCC0CEF1034",
+      "missing_material_requirement_or_null": "Agent guardrail and irreversible-action policy details",
+      "rationale": "Creates architecture documentation, useful for recording enforcement points but not defining safety controls.",
+      "source_anchor": "Create or update a living ARCHITECTURE.md"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0449",
+  "batch_input_sha256": "736dbd06eb800de28d7b177b149a3d6589f14862d3b203f122e1f4749719ef86",
+  "blind_packet_id": "P-5083A4842E110E5730",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d4315644fd4dcbdcb0543c015a9cfa9508a49bedafe95ce8fb36bce73c176173"
+}

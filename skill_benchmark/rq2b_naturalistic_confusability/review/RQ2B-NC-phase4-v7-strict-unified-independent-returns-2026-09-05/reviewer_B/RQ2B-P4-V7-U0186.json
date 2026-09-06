@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-02C9447B58BC7604",
+      "missing_material_requirement_or_null": "Agreement-specific exposure analysis and buyer-side change recommendations",
+      "rationale": "Provides contract templates, but the prompt requires review of a supplied supplier agreement.",
+      "source_anchor": "name: contract-template"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-204C11E1C94918DC",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Analyzes contracts for risks, completeness, and actionable recommendations, directly matching buyer-side commercial and legal exposure review.",
+      "source_anchor": "Analyze contracts for risks"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-27465D42C15CE0B3",
+      "missing_material_requirement_or_null": "Contract exposure analysis",
+      "rationale": "Clarifies user intent but does not review supplier-agreement provisions.",
+      "source_anchor": "Extracts what the user actually wants"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-29E2F6DE3B063FF0",
+      "missing_material_requirement_or_null": "Contract review",
+      "rationale": "Researches foundation funders, unrelated to supplier agreements.",
+      "source_anchor": "Finds and qualifies foundation funders"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2D5AE48CE648C8DE",
+      "missing_material_requirement_or_null": "Contract exposure analysis",
+      "rationale": "Surveys published user research, unrelated to legal contract review.",
+      "source_anchor": "surveying the PUBLISHED user-research"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3437790A0CFB938B",
+      "missing_material_requirement_or_null": "Legal and commercial contract risk analysis",
+      "rationale": "Generates sales assets, not agreement review.",
+      "source_anchor": "Generates customized sales assets"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3A38E9549F266331",
+      "missing_material_requirement_or_null": "Contract provision exposure analysis",
+      "rationale": "Writes news briefings, unrelated to contracts.",
+      "source_anchor": "Turns one or more provided news items into a concise briefing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B7B3DA34DA15CA49",
+      "missing_material_requirement_or_null": "Contract review",
+      "rationale": "Facilitates sprint retrospectives, unrelated to supplier-agreement analysis.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0186",
+  "batch_input_sha256": "6353da6a4edd4ed11b60c15b3aab86bb61b2eb14019458c38b79045fd62f7dc5",
+  "blind_packet_id": "P-66F38FB711F801DDED",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e99d2f6f8cd86f5a2626dc6d3bd382e152eee6eb227d62c95c249676b6ef752c"
+}

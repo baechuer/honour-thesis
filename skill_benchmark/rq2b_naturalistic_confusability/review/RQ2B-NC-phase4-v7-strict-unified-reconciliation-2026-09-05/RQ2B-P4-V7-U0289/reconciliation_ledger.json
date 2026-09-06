@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0289",
+  "blind_packet_id": "P-79959144E79DD7B7CE",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-67094944AF5728B1",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying documented security prior art"
+    },
+    {
+      "candidate_token": "C-906999557639CFC2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Model Evaluation Report",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Produces a rigorous, honest evaluation report"
+    },
+    {
+      "candidate_token": "C-A2C64D6A09326060",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# NV-Generate-CT (rflow-ct)",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "generating synthetic CT volumes and masks"
+    },
+    {
+      "candidate_token": "C-A865ACB44DD2BB7A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Model Card Writer",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Produces a complete model card"
+    },
+    {
+      "candidate_token": "C-B406C4ED96DE393D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# bitsandbytes - LLM Quantization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Quantizes LLMs to 8-bit or 4-bit"
+    },
+    {
+      "candidate_token": "C-EF108A1CB838B302",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Fine-Tuning Expert",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Use when fine-tuning LLMs"
+    },
+    {
+      "candidate_token": "C-F2FD2EA6BCB0B8E7",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-FE682B5B674CDE7F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Slack Bot Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Builds Slack bots and integrations"
+    }
+  ],
+  "reviewer_A_return_sha256": "43dc8ca49b29ce3e924ec66ceef24e9b8996e45d3da76f640e975dded6425441",
+  "reviewer_B_return_sha256": "3994afd7c0ed8a4489e658eeabb1cb3f99a703210af9cc4e754e74e82342b025",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

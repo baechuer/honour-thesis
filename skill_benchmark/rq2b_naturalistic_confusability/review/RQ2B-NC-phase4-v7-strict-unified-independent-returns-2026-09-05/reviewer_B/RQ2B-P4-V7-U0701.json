@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-065FD2BA32E06CC5",
+      "missing_material_requirement_or_null": "Security tabletop guide",
+      "rationale": "Surveys user research, unrelated to attacker progression and defensive controls.",
+      "source_anchor": "surveying the PUBLISHED user-research"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-2A6DEE7C31252B32",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Designs red-team attack scenarios, threat models, and ATT&CK/OWASP approaches, matching the requested non-destructive attacker progression guide.",
+      "source_anchor": "Designing red team attack scenarios, threat models"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-50E169E2042C248F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Applies agentic guardrails and safe decision bounds, supporting scoped, non-destructive tabletop validation.",
+      "source_anchor": "Apply agentic guardrails to every step where an LLM agent acts"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6F98C70B2266868D",
+      "missing_material_requirement_or_null": "Security attack-phase tabletop guide",
+      "rationale": "Facilitates sprint retrospectives, unrelated to security analysis.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A75C9CCC23B0AC9D",
+      "missing_material_requirement_or_null": "Defensive security tabletop guide",
+      "rationale": "Provides binary exploitation techniques for CTF challenges, not a scoped analyst tabletop guide.",
+      "source_anchor": "Provides binary exploitation techniques for CTF challenges"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-B31FA0B229820725",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides repository-grounded threat modeling with trust boundaries, directly supporting phase objectives, evidence sources, gaps, and defensive improvements.",
+      "source_anchor": "Repository-grounded threat modeling"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-DE4A9D120D1654EE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Covers red-team tactics and ATT&CK attack phases, matching reconnaissance, initial access, escalation, evasion, and lateral movement.",
+      "source_anchor": "Red team tactics principles based on MITRE ATT&CK"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-FAC2A68AAE639AA6",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Plans authorized red-team engagements, supporting in-scope, non-destructive proof-of-concept validation and reporting.",
+      "source_anchor": "Authorized red team engagement planning"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0701",
+  "batch_input_sha256": "6a600e73ce0a8cbdd7d9622450c81a2195017ed3a050c8d55c25c32885dff5ac",
+  "blind_packet_id": "P-249833571EF3CB41B0",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0d08d2a6a17d30decc9dee6fd610a0b20d70a9094aac6fb4aa5a99fcf81a0966"
+}

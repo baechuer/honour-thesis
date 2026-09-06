@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-11D55F0CD5AF5651",
+      "missing_material_requirement_or_null": "Technology decision technical review",
+      "rationale": "Reviews proposals from a CMO perspective, not architecture and engineering risk.",
+      "source_anchor": "cmo-reviewer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1A0F5204B391A498",
+      "missing_material_requirement_or_null": "Decision pressure-test and approval questions",
+      "rationale": "Generates technology stack blueprints, relevant to architecture fit but not review findings and risk questions.",
+      "source_anchor": "Comprehensive technology stack blueprint"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3908863823A0B565",
+      "missing_material_requirement_or_null": "Technical architecture and security review",
+      "rationale": "Reviews proposals from an operations perspective, not the requested technology decision assessment.",
+      "source_anchor": "coo-reviewer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-41D132C24D4B4BA7",
+      "missing_material_requirement_or_null": "Technology decision review",
+      "rationale": "Provides office/image functionality, unrelated to architecture risk assessment.",
+      "source_anchor": "CLAUDE OFFICE SKILL"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-853E040A49359FA5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Reviews technology proposals from a CTO perspective, matching architecture, security, integration, migration, reliability, capability, debt, and delivery-risk findings.",
+      "source_anchor": "cto-reviewer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-973C4A080081D572",
+      "missing_material_requirement_or_null": "Technology decision review",
+      "rationale": "Surveys visual and interaction conventions, unrelated to technical proposals.",
+      "source_anchor": "surveying the DOCUMENTED visual and interaction"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C17B5D95E1F2325C",
+      "missing_material_requirement_or_null": "Architecture and delivery-risk pressure test",
+      "rationale": "Builds document template libraries, not technology decision reviews.",
+      "source_anchor": "Builds a maintained library of reusable document"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E33CED9F854FCA08",
+      "missing_material_requirement_or_null": "Architecture, security, and delivery-risk review",
+      "rationale": "Writes and reviews strict TypeScript, not broad technology proposal assessment.",
+      "source_anchor": "Write and review TypeScript as if strict mode"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1054",
+  "batch_input_sha256": "d7b73607388dd4d1170c8eb3e131f9d51badd9398893fbfb5a9acb19929cfbcf",
+  "blind_packet_id": "P-8C8B5EB18AB93C6C09",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "309e251a395fdee57cbd081e77d2ce9f5d568f889cb1eb432c1fdd012aeb0c32"
+}

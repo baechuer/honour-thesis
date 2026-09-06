@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0701",
+  "blind_packet_id": "P-249833571EF3CB41B0",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-065FD2BA32E06CC5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying the PUBLISHED user-research"
+    },
+    {
+      "candidate_token": "C-2A6DEE7C31252B32",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Breach",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Designing red team attack scenarios, threat models"
+    },
+    {
+      "candidate_token": "C-50E169E2042C248F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Guardrails",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Apply agentic guardrails to every step where an LLM agent acts"
+    },
+    {
+      "candidate_token": "C-6F98C70B2266868D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-A75C9CCC23B0AC9D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# CTF Binary Exploitation (Pwn)",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Provides binary exploitation techniques for CTF challenges"
+    },
+    {
+      "candidate_token": "C-B31FA0B229820725",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Threat Model Source Code Repo",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Repository-grounded threat modeling"
+    },
+    {
+      "candidate_token": "C-DE4A9D120D1654EE",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Red Team Tactics",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Red team tactics principles based on MITRE ATT&CK"
+    },
+    {
+      "candidate_token": "C-FAC2A68AAE639AA6",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Red Team Operations & Engagement Planning",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Authorized red team engagement planning"
+    }
+  ],
+  "reviewer_A_return_sha256": "2c98bf2812a40e180f88fe708f330e163d84235b004714d588ef33b7bc400521",
+  "reviewer_B_return_sha256": "1f8dc4238a0ab49ede233a27038fbac28bf4e4d19c17de44367c957a6a57aad8",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
