@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1065",
+  "blind_packet_id": "P-D5865FE44C414A4DE3",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0B203A9DF984257F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Find Data Lake Assets",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Resolve data lake and lakehouse asset references"
+    },
+    {
+      "candidate_token": "C-2C9C43C6F3B6C361",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Commercial Lease Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Review the uploaded commercial lease"
+    },
+    {
+      "candidate_token": "C-30B7CAF3E6D67CFE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# GSVA Analysis And Visualization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Use this skill to run GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "candidate_token": "C-73CAAC0CDEA64479",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Twitter Skill (Read-Only)",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Read Twitter/X for financial research"
+    },
+    {
+      "candidate_token": "C-A67666CF3C04413E",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# LinkedIn Skill (Read-Only)",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Read LinkedIn for financial research"
+    },
+    {
+      "candidate_token": "C-C7D1B3D18809DA35",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Earnings Recap Skill",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Generate a post-earnings analysis for any stock"
+    },
+    {
+      "candidate_token": "C-ED7A1AA46B3C829A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Discord Skill (Read-Only)",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Read Discord for financial research"
+    },
+    {
+      "candidate_token": "C-EEC0FD38A53EEE35",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# HuggingFace Best Model Finder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "finding the best, top, or recommended model"
+    }
+  ],
+  "reviewer_A_return_sha256": "29bb24c1ccc79403afceb44de37e3e675e167f7005b2710720a6b51e538d6a53",
+  "reviewer_B_return_sha256": "8995a31706151aa9d88761263448e401bf76805a83a1e586ffdd9f5fffd14afb",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
