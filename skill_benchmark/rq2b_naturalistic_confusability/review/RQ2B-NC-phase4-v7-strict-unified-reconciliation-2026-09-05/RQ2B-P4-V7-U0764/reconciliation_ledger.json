@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0764",
+  "blind_packet_id": "P-8207FBDF2E46FC71F0",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-01A981AC96EF780D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# File Storage",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "file storage architecture and engineering"
+    },
+    {
+      "candidate_token": "C-253443CC2C88E15C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Security and Hardening",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Hardens code against vulnerabilities"
+    },
+    {
+      "candidate_token": "C-347D12C3F001C2E0",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Fetch Paper",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Fetches a legal open-access copy of a paper from its DOI or arXiv ID"
+    },
+    {
+      "candidate_token": "C-3EF2529319933EAF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to read external files",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "candidate_token": "C-4B99E45730C86A44",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Academic Paper Download",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Fetch and atomically save verified academic-paper PDFs from legal open-access sources"
+    },
+    {
+      "candidate_token": "C-8036DED9728F4F75",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Skills",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "backend security skill"
+    },
+    {
+      "candidate_token": "C-BD66FE76212C2F23",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Fulltext Retrieval Skill",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Batch download open-access PDFs by DOI using legitimate OA APIs"
+    },
+    {
+      "candidate_token": "C-EDB275F1D889B850",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Sprint Retro Facilitator"
+    }
+  ],
+  "reviewer_A_return_sha256": "f7bd14bac86906f53893f3816c629d9b4f636bb968aeded2cc4e48f38a6c4db2",
+  "reviewer_B_return_sha256": "18bcc3843ee103a40b91c51cb3b5517722d26d31ee85d3b885720ce0fe056f05",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
