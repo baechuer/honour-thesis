@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-129189EC922DE268",
+      "missing_material_requirement_or_null": "Capability to execute the checkout flow with an empty postcode and observe the resulting UI behavior.",
+      "rationale": "It can frame a specific, actionable validation message, but it does not perform the requested checkout test or compare observed behavior with the expectation.",
+      "source_anchor": "# Error Message Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-195F10DD1150CC24",
+      "missing_material_requirement_or_null": "Capability to execute the checkout flow with an empty postcode and observe and report its validation behavior.",
+      "rationale": "This skill surveys published user-research evidence and provides no procedure for exercising or inspecting a checkout form.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1DD1C400D6DA1FF4",
+      "missing_material_requirement_or_null": "Capability to execute the checkout flow with an empty postcode and observe and report its validation behavior.",
+      "rationale": "It optimizes local-business profile settings rather than testing checkout-field validation.",
+      "source_anchor": "# Google Business Profile Optimizer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-247C67542D8BEC2D",
+      "missing_material_requirement_or_null": "Capability to execute a checkout form test and inspect the empty-postcode validation result.",
+      "rationale": "It evaluates randomized experiment results, not the behavior of an individual checkout interaction.",
+      "source_anchor": "# A/B Test Analyzer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-33362267411F9847",
+      "missing_material_requirement_or_null": "Capability to execute the checkout flow with an empty postcode and observe and report its validation behavior.",
+      "rationale": "This concerns advertising-budget allocation and has no checkout testing or form-validation procedure.",
+      "source_anchor": "# Budget Pacing"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7AC147D06597B483",
+      "missing_material_requirement_or_null": "Capability to execute the checkout flow with an empty postcode and capture the actual validation result.",
+      "rationale": "It can structure a report once findings are available, but it cannot conduct the requested checkout validation test.",
+      "source_anchor": "# Formatted Report Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9D3EBB593A5AD9AF",
+      "missing_material_requirement_or_null": "Capability to execute a checkout validation test and report expected versus actual behavior.",
+      "rationale": "It specifies responsive-layout behavior across breakpoints rather than testing an empty postcode field.",
+      "source_anchor": "# Responsive Spec"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DC4EFA11A95BED6D",
+      "missing_material_requirement_or_null": "Capability to execute the checkout flow with an empty postcode and observe and report its validation behavior.",
+      "rationale": "It retrieves and triages AWS security findings, not checkout-form validation behavior.",
+      "source_anchor": "# Security Agent Remediation"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1117",
+  "batch_input_sha256": "3bea1a09a50c1ed2c46c2c4b8c9e5c6f060cbd24c7cb9a8aa42a875bc18cd7dc",
+  "blind_packet_id": "P-722511F27692A0593D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c29e7ead445072bcd652738e5adc36ce9707ada98e55d1154e3ce56cd63f5752"
+}

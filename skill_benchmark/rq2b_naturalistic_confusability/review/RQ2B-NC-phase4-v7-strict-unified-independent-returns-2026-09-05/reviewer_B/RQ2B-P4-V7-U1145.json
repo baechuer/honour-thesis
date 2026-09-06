@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-285762854DCE034B",
+      "missing_material_requirement_or_null": "Explicit phased migration definitions, accumulated-history CI coverage, and a production-scale lock-duration test.",
+      "rationale": "Provides versioned migration examples, a rename pattern, and real-database CI, but omits the requested phased definitions, accumulated-history check, and production-scale lock-duration test.",
+      "source_anchor": "### Example 2: Renaming a table safely"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-28DC085F11D1B3CF",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Covers append-only versioned history, expand/backfill/cutover/contract deployment, destructive-drop irreversibility, real-database clean and accumulated-history CI, and production-scale lock testing.",
+      "source_anchor": "### 4. Design backward-compatible migrations for rolling deploys — expand/contract, not a single atomic swap"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5601313C49276595",
+      "missing_material_requirement_or_null": "A zero-downtime database column-rename migration plan with migrations, CI, and lock testing.",
+      "rationale": "This is a generic software-debugging procedure and provides no database migration guidance.",
+      "source_anchor": "# Diagnose"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A3D60E9E17EE757D",
+      "missing_material_requirement_or_null": "Version-controlled append-only migration files, accumulated-history CI coverage, and explicit destructive-step irreversibility.",
+      "rationale": "Gives a strong expand-contract and lock-safety procedure, but lacks versioned migration definitions, accumulated-history CI, and the destructive-step reversal constraint.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BAE32D9515E6E626",
+      "missing_material_requirement_or_null": "Concrete database column-rename migrations, database CI coverage, and a lock-duration rollout test.",
+      "rationale": "This is a general feature-delivery workflow rather than guidance for the requested database migration.",
+      "source_anchor": "# SDLC Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BBE3817507744FC3",
+      "missing_material_requirement_or_null": "Concrete database column-rename migrations, database CI coverage, and a lock-duration rollout test.",
+      "rationale": "It addresses application modernization broadly, not a concrete schema column rename with the requested migration and database safeguards.",
+      "source_anchor": "## Core Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BC004D1710AC51D1",
+      "missing_material_requirement_or_null": "A zero-downtime database column-rename migration plan with migrations, CI, and lock testing.",
+      "rationale": "This skill is for GSVA pathway analysis and does not address database migrations.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F8FE9F4F7A7A4FE1",
+      "missing_material_requirement_or_null": "Append-only history validation in CI, explicit destructive-step irreversibility, and a production-scale lock-duration test.",
+      "rationale": "Provides an expand-contract column migration and staging CI guidance, but omits the requested accumulated-history CI, irreversible cleanup explanation, and production-scale lock-duration test.",
+      "source_anchor": "## Workflow"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1145",
+  "batch_input_sha256": "90e065fa38071a4f22df71e4e3851c4d44d6bac4c596490ee38676b09711bf68",
+  "blind_packet_id": "P-DA164B69CAD1AE32A7",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "b4f6c3f3306e27fa24b75034e88be4dd74ae81b618eba16375f349632fea7ffb"
+}

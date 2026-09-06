@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1C023ADA5759A72E",
+      "missing_material_requirement_or_null": "A workflow for classifying and routing engineering intake reports, including security handling, ownership, release buckets, and queue metrics.",
+      "rationale": "Client-engagement onboarding does not triage engineering reports or produce the requested queue board.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2018BB7C59A3D1BE",
+      "missing_material_requirement_or_null": "A queue-level workflow covering the requested categories, ownership and release assignment, private security escalation, and board metrics.",
+      "rationale": "It classifies and researches one GitHub issue, but its categories and output omit key intake-board, private-security, ownership, and release-bucket requirements.",
+      "source_anchor": "### Step 2: Classify the Issue"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-238C8F9081666494",
+      "missing_material_requirement_or_null": "A complete intake-triage workflow for multiple reports with classification, routing, private security handling, and queue metrics.",
+      "rationale": "This is an end-to-end issue implementation workflow rather than a board-ready intake-triage process.",
+      "source_anchor": "# Implement Issue"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-2F4368181CA49C5D",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It checks duplication and missing information, supplies the requested type, priority, area/status, assignment and release decisions, privately routes security matters, and defines queue metrics.",
+      "source_anchor": "## Triage Process"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-704AE41456D21BDF",
+      "missing_material_requirement_or_null": "A workflow for triaging new engineering reports and assigning their current handling, rather than documenting shipped releases.",
+      "rationale": "Release-history writing does not classify or route incoming engineering reports.",
+      "source_anchor": "# Changelog Maintenance"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-87EE48937E324EAB",
+      "missing_material_requirement_or_null": "A unified intake workflow for non-security as well as security reports, with the requested categories, board output, and private security escalation.",
+      "rationale": "It offers detailed severity, ownership, due-date, and metric handling for vulnerability findings only, not the full mixed engineering intake queue.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9B9734054F952918",
+      "missing_material_requirement_or_null": "An engineering intake workflow that classifies individual reports, assigns ownership and release buckets, and handles security privately.",
+      "rationale": "This detects repeated technical patterns and routes analysis; it does not triage or manage an engineering intake queue.",
+      "source_anchor": "## When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E80FF0A69F2BF5B5",
+      "missing_material_requirement_or_null": "An engineering intake-triage and queue-management workflow.",
+      "rationale": "Gene-set enrichment analysis is unrelated to engineering report triage.",
+      "source_anchor": "## Scope"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0863",
+  "batch_input_sha256": "bc235b5dfaf65d92713cadede27087ada03a5e282b92626e6044e38bbb5f277e",
+  "blind_packet_id": "P-9257D0F03C92675074",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "fdecf528781975656354fbf34a1d9d1f4defbe35555820694fe7e5481acf3775"
+}

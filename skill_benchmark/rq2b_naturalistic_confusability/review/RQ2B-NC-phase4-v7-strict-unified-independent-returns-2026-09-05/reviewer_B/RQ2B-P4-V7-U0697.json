@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-216E0C7F5B1B24D8",
+      "missing_material_requirement_or_null": "Repository safeguards for secret commits and confirmation-gated destructive Git operations.",
+      "rationale": "This skill builds Slack bots and does not provide repository safeguards.",
+      "source_anchor": "## Guidelines"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2347AFD794E5197A",
+      "missing_material_requirement_or_null": "Repository safeguards for secret commits and confirmation-gated destructive Git operations.",
+      "rationale": "This skill facilitates sprint retrospectives rather than repository controls.",
+      "source_anchor": "## Do NOT"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7B9286C4E9F3B994",
+      "missing_material_requirement_or_null": "Repository-local secret scanning or commit prevention and confirmation-gated destructive Git-operation safeguards.",
+      "rationale": "It centralizes and rotates secrets, but does not establish commit safeguards or destructive-Git confirmation controls.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8D743A24E57FF156",
+      "missing_material_requirement_or_null": "Implementation guidance for repository secret-commit prevention and destructive Git confirmation safeguards.",
+      "rationale": "This is a security prior-art survey method, not a repository safeguard implementation.",
+      "source_anchor": "## Rules"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9ED8146735A19870",
+      "missing_material_requirement_or_null": "Concrete secret scanning or commit prevention and confirmation-gated destructive Git-operation safeguards.",
+      "rationale": "It provides contributor governance and CI controls, but lacks the requested safeguards for secrets and destructive Git commands.",
+      "source_anchor": "## Contributor Policies"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9FD450894CB773A4",
+      "missing_material_requirement_or_null": "Repository safeguards for secret commits and confirmation-gated destructive Git operations.",
+      "rationale": "This skill concerns revenue operations, not repository management or Git safeguards.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A3832593FFEE61D3",
+      "missing_material_requirement_or_null": "Repository safeguards for secret commits and confirmation-gated destructive Git operations.",
+      "rationale": "This skill concerns commercial print preparation rather than repository controls.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DADB2B4741B321B4",
+      "missing_material_requirement_or_null": "Repository safeguards for secret commits and confirmation-gated destructive Git operations.",
+      "rationale": "This skill concerns local search visibility and social content, not repository safeguards.",
+      "source_anchor": "## Process"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0697",
+  "batch_input_sha256": "fe8e4d2d9a33c3e3e62544800aa4b511f509a10095a5f670b7e3bfb66faca535",
+  "blind_packet_id": "P-B20DC0FE0D9291AFDC",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "42cbcd1d1348fd5c4bf6393270f73c358bd66e95fa65fe9a3a4abac6aaf71d71"
+}
