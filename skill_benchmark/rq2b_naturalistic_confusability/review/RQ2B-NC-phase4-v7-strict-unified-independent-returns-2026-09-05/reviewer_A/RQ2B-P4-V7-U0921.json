@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-355136D1D6FDFD56",
+      "missing_material_requirement_or_null": "SOC 2 audit-evidence collection workflow for the requested access, change-approval, and backup-test artifacts.",
+      "rationale": "LGPD legal and privacy guidance does not provide the required request-register, evidence-collection, hashing, or control-inventory workflow.",
+      "source_anchor": "LGPD Compliance Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5A9EEEA42872569C",
+      "missing_material_requirement_or_null": "Point-in-time audit-evidence packaging rather than continuous monitoring and alerting.",
+      "rationale": "The skill expressly excludes one-time audit-evidence packaging and centres scheduled drift monitoring and alerts, which the prompt excludes.",
+      "source_anchor": "Continuous Control Monitoring (CCM)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-88DAC9F66388BB1A",
+      "missing_material_requirement_or_null": "SOC 2 evidence package with a request register, integrity hashes, redaction, and a control-linked inventory.",
+      "rationale": "This is Indian DPDPA legal-compliance guidance, not a workflow for collecting the requested SOC 2 administrative, change-approval, and backup-test evidence.",
+      "source_anchor": "Foundational Rules"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-99F951664727B937",
+      "missing_material_requirement_or_null": "Evidence-collection execution and integrity packaging without determining audit scope.",
+      "rationale": "The workflow starts with scope definition and explicitly directs screenshots and exports to another skill, contrary to the requested collection-only boundary.",
+      "source_anchor": "Step 1: Report scope definition"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-9C82B2B4EF38622F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It covers request intake, screenshots, read-only exports and policy documents, redaction, UTC dating, SHA-256 hashes, interval samples, control mapping, and documented collection gaps without requiring scope determination or ongoing alerting.",
+      "source_anchor": "Step 1: Evidence request intake"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD6F418F50232F5B",
+      "missing_material_requirement_or_null": "SOC 2 audit-evidence collection and the requested artifact package.",
+      "rationale": "ISO 42001 AIMS governance, risk assessment, and certification preparation do not collect or package the requested administrative evidence.",
+      "source_anchor": "ISO 42001 AI Management System (AIMS) Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CB2EE3C2807BCD95",
+      "missing_material_requirement_or_null": "SOC 2 audit-evidence collection workflow and control-linked inventory.",
+      "rationale": "The skill performs gene-set enrichment analysis and produces biological enrichment outputs, not compliance evidence.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FC3E0B572EC2979B",
+      "missing_material_requirement_or_null": "SOC 2 audit-evidence collection package for the requested controls and period.",
+      "rationale": "This is an Indian website data-protection implementation workflow, rather than collection and integrity packaging of the requested audit materials.",
+      "source_anchor": "When to use"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0921",
+  "batch_input_sha256": "49e6e97ca6ea1fd2e9343731755df3e6855dd116fd132d14e5dd6bf9af72f00b",
+  "blind_packet_id": "P-02E0B1D025DE8077CA",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "87694163ff29a2abff794ae7d665d6e2a5823934c4c469d64ddefcb9bf9e399b"
+}

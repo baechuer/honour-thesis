@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-355136D1D6FDFD56",
+      "missing_material_requirement_or_null": "A dated, hashed, redacted evidence-register and collection workflow for the requested controls.",
+      "rationale": "It provides Brazil-specific privacy-law advice rather than an evidence-collection workflow for administrator access, production approvals, and backup-test support.",
+      "source_anchor": "LGPD Compliance Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5A9EEEA42872569C",
+      "missing_material_requirement_or_null": "One-time evidence collection and packaging without ongoing monitoring or alerting.",
+      "rationale": "It implements ongoing control monitoring and alert routing, which the prompt excludes, and it expressly excludes a one-time evidence binder.",
+      "source_anchor": "One-time audit evidence packaging"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-88DAC9F66388BB1A",
+      "missing_material_requirement_or_null": "A dated, hashed, redacted evidence-register and collection workflow for the requested controls.",
+      "rationale": "It is an India privacy-law advisory and does not gather or package the requested administrator, change-approval, and backup-test audit evidence.",
+      "source_anchor": "India DPDPA — Digital Personal Data Protection Act, 2023 Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-99F951664727B937",
+      "missing_material_requirement_or_null": "A read-only evidence-collection workflow that gathers, redacts, dates, hashes, inventories, and flags gaps for the requested two-quarter samples.",
+      "rationale": "It can relate controls to evidence sources, but it focuses on control scoping and mapping rather than executing the requested evidence collection and packaging.",
+      "source_anchor": "SOC 2 Trust Services Criteria"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-9C82B2B4EF38622F",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It specifies a request register, screenshots, exports and policies, redaction, timestamps and hashes, period sampling, exceptions, and control cross-reference without requiring scope selection or ongoing alerting.",
+      "source_anchor": "SOC 2 Evidence Collection"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD6F418F50232F5B",
+      "missing_material_requirement_or_null": "A dated, hashed, redacted evidence-register and collection workflow for the requested controls.",
+      "rationale": "It addresses AI management-system governance and certification rather than collecting and packaging the specified audit-support evidence.",
+      "source_anchor": "ISO 42001 AI Management System (AIMS) Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CB2EE3C2807BCD95",
+      "missing_material_requirement_or_null": "A dated, hashed, redacted evidence-register and collection workflow for the requested controls.",
+      "rationale": "It runs gene-set enrichment analysis and produces scientific-analysis outputs, not audit evidence for access, approvals, or backup testing.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FC3E0B572EC2979B",
+      "missing_material_requirement_or_null": "A dated, hashed, redacted evidence-register and collection workflow for the requested controls.",
+      "rationale": "It engineers Indian website privacy compliance rather than gathering and inventorying the requested audit evidence.",
+      "source_anchor": "When to use"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0921",
+  "batch_input_sha256": "49e6e97ca6ea1fd2e9343731755df3e6855dd116fd132d14e5dd6bf9af72f00b",
+  "blind_packet_id": "P-02E0B1D025DE8077CA",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "a487f38e4df573bd912ba22960e3afbb2f843a8968d7ce0ebb0b9a6382e93283"
+}

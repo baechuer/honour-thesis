@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E0C25E54C3CB482",
+      "missing_material_requirement_or_null": "Figma published-component-to-code mapping and approved link creation.",
+      "rationale": "LLM observability and evaluation workflow, not a route to identify coded UI components or create design-to-code links.",
+      "source_anchor": "# LangSmith"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-39C7A403CC78B2EA",
+      "missing_material_requirement_or_null": "Figma published-component-to-code mapping and approved link creation.",
+      "rationale": "Backend test planning does not address Figma components, existing frontend-component matching, or recording approved mappings.",
+      "source_anchor": "# Backend Testing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-477E86BDFD042CBF",
+      "missing_material_requirement_or_null": "Figma published-component-to-code mapping and approved link creation.",
+      "rationale": "Pathway-analysis workflow is unrelated to frontend design components and cannot produce the required design-to-code links.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-4FBA4163606CF250",
+      "missing_material_requirement_or_null": "A workflow to inspect selected published Figma components, match them to existing code, and create approved property-aware links.",
+      "rationale": "It can frame shared design-system rules, but it does not establish mappings from selected published Figma components to existing coded components.",
+      "source_anchor": "# Design System"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C48094D5A9259CD2",
+      "missing_material_requirement_or_null": "Figma published-component-to-code matching with approved property-aware links.",
+      "rationale": "JSON Canvas describes canvas-file construction rather than Figma component discovery, codebase matching, or Code Connect mapping.",
+      "source_anchor": "# JSON Canvas Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D744DAB6C894AD12",
+      "missing_material_requirement_or_null": "Figma published-component inspection and approved mapping creation between each selected component and its existing code counterpart.",
+      "rationale": "Reusable-component architecture guidance is adjacent to the component-identification problem but does not create the requested design-to-code links.",
+      "source_anchor": "# UI Component Patterns"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DCBE47C60B8B30FC",
+      "missing_material_requirement_or_null": "An approved Code Connect-style mapping from each selected published Figma component to an existing coded component, preserving properties.",
+      "rationale": "It translates Figma designs into implementation, but the requested outcome is linking already-existing code components to published design components.",
+      "source_anchor": "# Implement Design"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-F72C55A0F0FE0CD4",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It obtains selected published-component suggestions, scans the codebase for matching components, presents matches for approval, and creates mappings with property-aware component links.",
+      "source_anchor": "# Code Connect Components"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0772",
+  "batch_input_sha256": "75dee18b4ab853d8043cfacb4d1f777ac48530e6f20f9a471ccc6f7a708676e8",
+  "blind_packet_id": "P-B196BF2EAEAD957863",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "e6c5ea94ddeb58180efd8db237301a0ef899895f60a3df6876da517007adf91e"
+}

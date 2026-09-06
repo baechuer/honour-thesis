@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-19608B9FA005ADD9",
+      "missing_material_requirement_or_null": "A workflow for reading the supplied PR-comment file and producing a resolution plan plus reviewer reply.",
+      "rationale": "This skill operates Jira and Confluence rather than consuming PR comments or drafting dispositions.",
+      "source_anchor": "# Atlassian REST API Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3DE442A81E92E841",
+      "missing_material_requirement_or_null": "A comment-by-comment plan tied to the supplied review-comments file and concise replies to reviewers.",
+      "rationale": "It recognizes code-review findings and CI gates, but supplies a broad delivery lifecycle rather than a procedure to consume existing comments and plan responses.",
+      "source_anchor": "### 10. Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-41C36FC2051FE673",
+      "missing_material_requirement_or_null": "An existing-comment consumption and response-planning workflow that avoids initiating a fresh general code review.",
+      "rationale": "It performs a security vulnerability review and does not translate the provided PR comments into planned resolutions and replies.",
+      "source_anchor": "## Do NOT"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-53697B33B57EDA4E",
+      "missing_material_requirement_or_null": "A workflow for consuming software PR comments, planning their resolution, and drafting reviewer replies.",
+      "rationale": "It evaluates scientific manuscripts and grants rather than software PR comments.",
+      "source_anchor": "## When to Use This Skill"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5A7BB2FF434721A1",
+      "missing_material_requirement_or_null": "A workflow for general PR-comment intake rather than its specified hack-risk report and coverage-led ledger.",
+      "rationale": "It offers evidence-based dispositions and response style for review feedback, but its required input and process are specifically a hack-review gate, not ordinary PR comments.",
+      "source_anchor": "## Skill Boundary"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5B0B6C9AFCEF98D7",
+      "missing_material_requirement_or_null": "A plan-and-response workflow that consumes the supplied comments without conducting a new broad PR review.",
+      "rationale": "It initiates automated multi-lens PR code review and posts reviewer findings, contrary to the request to work from existing comments rather than perform a general review.",
+      "source_anchor": "Automated PR Review & Code Quality"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-645801ECDE7BABD9",
+      "missing_material_requirement_or_null": "A workflow for consuming software PR comments, planning their resolution, and drafting reviewer replies.",
+      "rationale": "It surveys documented UI conventions and has no relation to PR-comment resolution.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6E25B664E4DD8811",
+      "missing_material_requirement_or_null": "A workflow for consuming software PR comments, planning their resolution, and drafting reviewer replies.",
+      "rationale": "It covers MySQL and MariaDB clustering operations, not PR-comment resolution.",
+      "source_anchor": "## Purpose"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0580",
+  "batch_input_sha256": "257741b2f879167d63dba6e2c8d83c5845db625f6a1c7f5bdd17cc0d539d9c89",
+  "blind_packet_id": "P-146565DC2720F6F469",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "39604525564713fc18ddb5c940b5cbbc4f0ff22ce3c7e25403ea70e03a1c98f0"
+}
