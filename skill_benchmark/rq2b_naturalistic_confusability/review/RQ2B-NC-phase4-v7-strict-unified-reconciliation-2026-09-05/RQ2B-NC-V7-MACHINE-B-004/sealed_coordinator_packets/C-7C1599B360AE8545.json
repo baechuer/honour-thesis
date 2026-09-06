@@ -1,0 +1,23 @@
+{
+  "blind_packet_id": "P-94E8554F01E8B529A9",
+  "candidate_token": "C-7C1599B360AE8545",
+  "reviewer_a_return_sha256": "a090bf2f9149d9f8127592625f598556ee48026fe6bc532d6698ee842fa1dba2",
+  "reviewer_b_return_sha256": "11033f6ed3909f586f8a18c16b4ff43e0515e4ce63c4aa7396a4b5bfa3fc1ad9",
+  "fresh_source_render_sha256": "0af56e597c552e9ee0aeab07e0cc9734869bc075cbd6a790b7e5f08547175b84",
+  "reviewer_A_assessment": {
+    "adequacy": "PARTIALLY_ADEQUATE",
+    "candidate_token": "C-7C1599B360AE8545",
+    "missing_material_requirement_or_null": "Provides usage and an example test script but lacks the required explanation, captured-field display, and refinement/debugging workflow.",
+    "rationale": "It is regex-adjacent and may support testing, but is too sparse to satisfy the full requested output and iterative task.",
+    "source_anchor": "## Example Test Script"
+  },
+  "reviewer_B_assessment": {
+    "adequacy": "FULLY_ACCEPTABLE",
+    "candidate_token": "C-7C1599B360AE8545",
+    "missing_material_requirement_or_null": null,
+    "rationale": "It explicitly covers clarifying the regex requirement, executing positive and negative tests, displaying capture groups, iterating on failures, and presenting the final pattern, explanation, and results.",
+    "source_anchor": "## Usage"
+  },
+  "fresh_source_visible_skill": "---\nname: regex-tester\ndescription: Validate, test, and debug regular expressions by executing them against sample inputs. Use when asked to build, verify, or explain a regex pattern.\n---\n\n## Usage\n\nWhen the user asks you to create, validate, or debug a regular expression:\n\n1. **Understand the requirement** — clarify what the pattern should match and what it should reject.\n2. **Consult the cheatsheet** — review `references/regex-cheatsheet.md` for syntax reminders if needed.\n3. **Write and execute test code** — use the `execute_code` tool to run Python code that:\n   - Compiles the regex with `re.compile()`\n   - Tests it against a set of positive examples (should match) and negative examples (should not match)\n   - Extracts and displays any capturing groups\n   - Reports pass/fail for each test case\n4. **Iterate** — if any test fails, refine the pattern and re-run until all cases pass.\n5. **Present the result** — give the user the final pattern, explain what each part does, and show the test results.\n\n## Example Test Script\n\n```python\nimport re\n\npattern = re.compile(r'^[\\w.+-]+@[\\w-]+\\.[\\w.-]+$')\n\npositives = [\"user@example.com\", \"first.last+tag@sub.domain.org\"]\nnegatives = [\"@missing.com\", \"no-at-sign\", \"spaces in@address.com\"]\n\nfor s in positives:\n    assert pattern.match(s), f\"FAIL: expected match for '{s}'\"\nfor s in negatives:\n    assert not pattern.match(s), f\"FAIL: expected no match for '{s}'\"\n\nprint(\"All tests passed!\")\n```\n",
+  "coordinator_instruction": "Resolve only this A/B adequacy disagreement or UNCLEAR trigger under the frozen rubric. Do not inspect targets, main/tail role, allocation, rank, source path/provenance, historical/local reference, retrieval outcome or metric. Return only the strict coordinator schema."
+}

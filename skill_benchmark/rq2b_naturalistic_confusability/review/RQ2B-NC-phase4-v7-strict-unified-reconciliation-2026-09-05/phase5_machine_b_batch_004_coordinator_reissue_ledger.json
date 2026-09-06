@@ -1,0 +1,21 @@
+{
+  "schema_version": "rq2b_nc_phase5_machine_b_coordinator_reissue_ledger_v1",
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-004",
+  "claim_boundary": "Machine B only. Invalid coordinator returns are preserved; reissues receive only their original sealed packet and frozen coordinator schema.",
+  "reissues": [
+    {
+      "candidate_token": "C-5EDB76129E8FCD9E",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-004/C-5EDB76129E8FCD9E.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-004/coordinator_reissue_1/C-5EDB76129E8FCD9E.json",
+      "error_category": "sealed_hash_binding_mismatch",
+      "status": "VALIDATED_REISSUE_1"
+    },
+    {
+      "candidate_token": "C-5F783A1E29328117",
+      "original_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-004/C-5F783A1E29328117.json",
+      "reissue_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-coordinator-returns-2026-09-05/RQ2B-NC-V7-MACHINE-B-004/coordinator_reissue_1/C-5F783A1E29328117.json",
+      "error_category": "sealed_hash_binding_mismatch",
+      "status": "VALIDATED_REISSUE_1"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-22513FB7C2C302FF","missing_material_requirement_or_null":"Does not address exporting design variables into a portable token package.","rationale":"This is a presentation-generation skill; its central input and output boundary is unrelated to design-token extraction.","source_anchor":"# Slidev Presentation Generator"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-5011E922029541E5","missing_material_requirement_or_null":"Does not perform design-file variable export or token package generation.","rationale":"This skill provides TypeScript coding conventions rather than the requested design-variable transformation workflow.","source_anchor":"# TypeScript Strict Standard"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-5EDB76129E8FCD9E","missing_material_requirement_or_null":"Does not export design variables or generate token files.","rationale":"A security prior-art survey is not a plausible route for the requested token extraction and conversion task.","source_anchor":"## Workflow"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-5F783A1E29328117","missing_material_requirement_or_null":"Does not provide the requested design-variable token export and conversion outputs.","rationale":"Open Design describes local-first design artifact generation, not extracting variables while preserving token semantics.","source_anchor":"# open-design — local-first design artifact generation"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-62519A0D0AF813A9","missing_material_requirement_or_null":"Does not perform design-variable extraction or token-file generation.","rationale":"OSS publication hygiene concerns repository release artifacts and quality gates, not design-token export.","source_anchor":"# oss-publish - OSS Publication And Release Hygiene"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-AB83E8BC988B290C","missing_material_requirement_or_null":"Exports in the reverse direction and does not extract variables from a design file into portable token files.","rationale":"It handles token-source import into Figma, aliases, modes, and collections, but misses the requested design-file export boundary and CSS/theme outputs.","source_anchor":"# figma-import-tokens — design tokens → Figma variables"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-EB9731F53078BEA3","missing_material_requirement_or_null":null,"rationale":"It explicitly exports local Figma variables to DTCG and multiple portable formats, preserving collections, modes, aliases, scopes, and units, with deterministic conversion warnings and reporting.","source_anchor":"# figma-export-tokens — Figma variables → design tokens"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-F43C4253A1F66C99","missing_material_requirement_or_null":"Does not establish the requested design-file extraction and portable token package generation workflow.","rationale":"It audits and syncs existing token sources and consumers, which is adjacent, but does not perform the requested export of local design variables into JSON, CSS, and theme configuration.","source_anchor":"## Workflow"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0596",
+  "batch_input_sha256":"50dea60599edec848ef4ecc96ce00667adc79f5fc7e7a2ab79fc2e6550d7b35a",
+  "blind_packet_id":"P-7B1F85474E22DD1555",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"1f710fcb204df9719dba9ebede7650de1402bb294f3fc2f8217e5ca10498bd64"
+}

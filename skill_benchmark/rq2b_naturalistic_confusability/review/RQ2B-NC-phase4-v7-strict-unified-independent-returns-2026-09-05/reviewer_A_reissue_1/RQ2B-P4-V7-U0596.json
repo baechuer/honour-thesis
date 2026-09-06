@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-22513FB7C2C302FF",
+      "missing_material_requirement_or_null": "Does not address design-token export or preservation of Figma variables; it is a presentation generator.",
+      "rationale": "The candidate's central boundary is generating Slidev presentations, not reading a design file and emitting token formats.",
+      "source_anchor": "# Slidev Presentation Generator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5011E922029541E5",
+      "missing_material_requirement_or_null": "Provides TypeScript coding standards but no design-file extraction, canonical token JSON, CSS variables, theme configuration, or collision reporting.",
+      "rationale": "It is a general implementation-quality aid that could support code around an exporter, but it does not supply the requested export workflow or outputs.",
+      "source_anchor": "# TypeScript Strict Standard"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5EDB76129E8FCD9E",
+      "missing_material_requirement_or_null": "Focuses on security prior-art research and does not define token extraction, format generation, preservation, or warnings.",
+      "rationale": "The research workflow is unrelated to the central design-token export task, though it could provide generic research procedure structure.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5F783A1E29328117",
+      "missing_material_requirement_or_null": "Describes a broad design-artifact generation tool but does not specify exporting local design variables into canonical JSON, CSS variables, and theme configuration.",
+      "rationale": "It is adjacent to design tooling, but lacks the required variable-level extraction and preservation contract.",
+      "source_anchor": "# open-design — local-first design artifact generation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-62519A0D0AF813A9",
+      "missing_material_requirement_or_null": "Contains repository publication and release hygiene guidance, with no design-token export behavior or requested files.",
+      "rationale": "The candidate addresses open-source release preparation rather than conversion of design-file variables.",
+      "source_anchor": "# oss-publish - OSS Publication And Release Hygiene"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AB83E8BC988B290C",
+      "missing_material_requirement_or_null": "Runs in the reverse direction (tokens/code into Figma) rather than exporting local design variables from a design file to token JSON, CSS, and theme outputs.",
+      "rationale": "It covers related token concepts, aliases, modes, and collections, but its direction and deliverables are opposite to the requested export.",
+      "source_anchor": "# figma-import-tokens — design tokens → Figma variables"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-EB9731F53078BEA3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly exports every local Figma variable, makes DTCG JSON canonical, derives CSS and other formats, and explicitly preserves aliases, collections, modes, scopes, units, and reports collisions and warnings.",
+      "source_anchor": "# figma-export-tokens — Figma variables → design tokens"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F43C4253A1F66C99",
+      "missing_material_requirement_or_null": "Audits and synchronizes existing token sources and downstream code, but does not define extracting local design variables or generating the requested canonical JSON, CSS, and theme package from a design file.",
+      "rationale": "It is relevant to downstream token synchronization and drift, yet misses the primary export operation and complete requested output set.",
+      "source_anchor": "# Design Tokens Sync"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0596",
+  "batch_input_sha256": "50dea60599edec848ef4ecc96ce00667adc79f5fc7e7a2ab79fc2e6550d7b35a",
+  "blind_packet_id": "P-7B1F85474E22DD1555",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d06690fb918c2a29cb746ed062b1e4c458022f42d9d4918b362c935f454cc785"
+}

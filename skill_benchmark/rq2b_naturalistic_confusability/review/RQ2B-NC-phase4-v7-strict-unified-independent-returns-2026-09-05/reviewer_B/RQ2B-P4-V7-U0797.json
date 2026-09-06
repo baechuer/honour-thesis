@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-30E53EFD949556D1","missing_material_requirement_or_null":"The skill is for competitive analysis and provides no translation-project workflow for adding, correcting, exporting, or auditing locale keys.","rationale":"It addresses competitor research rather than the central localization task.","source_anchor":"# Competitive Analysis Skill"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-33CC2A11D8E50289","missing_material_requirement_or_null":null,"rationale":"This is an executable Multilocale workflow for an existing i18n project: it adds and machine-translates a source phrase, updates one French translation, downloads dictionaries, and runs duplicate and unused-key audits without changing application code.","source_anchor":"# Localize an app with Multilocale"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-67023134E8351712","missing_material_requirement_or_null":"The skill covers Appwrite backend deployment and data services, not translation management or locale dictionary export.","rationale":"It is unrelated to the requested localization operations.","source_anchor":"# Appwrite"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-82567827F3B0AF64","missing_material_requirement_or_null":"The skill is for Playwright browser testing and has no translation, locale, or dictionary workflow.","rationale":"Browser QA cannot perform the central translation-project task.","source_anchor":"# Playwright Interactive Skill"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-CEA7B7D9F73596CE","missing_material_requirement_or_null":"The connector cannot write repository dictionary files and cannot run the local unused-key scan; the requested mobile/web exports and unused-key report therefore cannot be completed by this skill alone.","rationale":"It can manage translation data, add phrases, correct translations, export previews, and find duplicate source copy, but explicitly lacks local codebase/file operations.","source_anchor":"## What this connector can and cannot do"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-D71C877DF7DB7DFE","missing_material_requirement_or_null":"The source-visible skill is a generic analysis/plot workflow and contains no translation-project commands or locale handling.","rationale":"It does not provide a plausible route to the requested inputs and outputs.","source_anchor":"## Scope"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-DE62C0DC935CC592","missing_material_requirement_or_null":"The skill manages Payload CMS models and migrations, not localized phrases, French corrections, dictionary exports, or translation audits.","rationale":"It is a CMS operator workflow unrelated to the central task.","source_anchor":"# payloadcms — Payload CMS operator"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-E730BAD82741D6A9","missing_material_requirement_or_null":null,"rationale":"The CLI skill directly supports adding a phrase with machine translation to all project locales, updating only the French translation, downloading locale dictionaries, and reporting duplicate and unused keys while leaving application code untouched.","source_anchor":"# Multilocale CLI"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0797",
+  "batch_input_sha256":"2aa56abbd28542c1e1e94b6c2ce813ccb6e5eac92566eb12dcd94abc7098b5ed",
+  "blind_packet_id":"P-395F98C56994AD827A",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"f0e7093469caa1aba72c43ab6d0ffd57e29d622142b34c6e64f11f98009ac1d6"
+}

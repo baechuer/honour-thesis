@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-2E87BE916BD8ADBD","missing_material_requirement_or_null":"Does not address regex construction, execution of positive and negative tests, captured fields, or refinement.","rationale":"This is a product architecture workflow and is not a plausible route for the requested regex task.","source_anchor":"## When to use"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-45ABB2ED16C37404","missing_material_requirement_or_null":null,"rationale":"Directly covers regex analysis, plain-English explanation, visual breakdown, test cases, capture groups, refinement, and flavor-specific behavior, matching the requested pattern validation workflow.","source_anchor":"## Test Results"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-58E67D77691B05D0","missing_material_requirement_or_null":"Does not provide regex construction or executable positive/negative tests with captured fields.","rationale":"A generic loop orchestration process is not a plausible route for the central regex task.","source_anchor":"## Overview"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6155ADD30B251A6A","missing_material_requirement_or_null":"Does not address regex patterns, matching, test execution, or capture groups.","rationale":"This skill produces FAQs from reviews and is unrelated to the requested regex workflow.","source_anchor":"## Operating procedure"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-7C1599B360AE8545","missing_material_requirement_or_null":"Provides usage and an example test script but lacks the required explanation, captured-field display, and refinement/debugging workflow.","rationale":"It is regex-adjacent and may support testing, but is too sparse to satisfy the full requested output and iterative task.","source_anchor":"## Example Test Script"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-A170D685F5FBF31D","missing_material_requirement_or_null":"Provides no regex-specific pattern design or positive/negative matching and capture-field analysis.","rationale":"This is a browser automation skill; although it can execute commands, it does not supply the regex reasoning and test interpretation required.","source_anchor":"## Core workflow"},
+    {"adequacy":"FULLY_ACCEPTABLE","candidate_token":"C-A36FB3F29D1F4D62","missing_material_requirement_or_null":null,"rationale":"Directly instructs iterative regex construction against real samples, named capture groups, and showing matches and rejected cases; this supports the requested final pattern and test outcomes.","source_anchor":"## Test a pattern against samples"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-EBC6805749A2DF2A","missing_material_requirement_or_null":"Does not address order-ID regex construction, matching tests, or captured fields.","rationale":"This is a GSVA pathway-analysis workflow and is unrelated to the central regex task.","source_anchor":"## When to Use"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U1134",
+  "batch_input_sha256":"b77f8bf42fd73eeabb5849132ee091c51f2d8c85958aecd368a620ae33069610",
+  "blind_packet_id":"P-94E8554F01E8B529A9",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"6df96702ae36bcae392b48ced73ffd92f1d205cac8a854947db06a3238b7cb66"
+}
