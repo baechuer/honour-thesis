@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-04EF5546128816B0",
+      "missing_material_requirement_or_null": "code maintainability assessment and metrics",
+      "rationale": "It facilitates retrospectives and does not analyze code structure, dependencies, or smells.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-89C5EA076A78181E",
+      "missing_material_requirement_or_null": "code maintainability assessment",
+      "rationale": "It surveys published user-research evidence and does not inspect code maintainability.",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CD8849CA047E2ED5",
+      "missing_material_requirement_or_null": "code maintainability scoring and remediation",
+      "rationale": "It maps organizational controls to SOC 2 criteria, not code complexity or maintainability.",
+      "source_anchor": "# SOC 2 Trust Services Criteria"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DF4B2917499920E8",
+      "missing_material_requirement_or_null": "structural maintainability, coupling and code-smell analysis",
+      "rationale": "It provides confidence-gated software testing fitness scores, but does not cover the requested maintainability dimensions comprehensively.",
+      "source_anchor": "# Software Testing Fitness Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E49BCB3E3C86093F",
+      "missing_material_requirement_or_null": "codebase maintainability review",
+      "rationale": "It builds teaching lesson plans and is unrelated to code assessment.",
+      "source_anchor": "# Lesson Plan Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F20B80BD4505040F",
+      "missing_material_requirement_or_null": "code maintainability assessment",
+      "rationale": "It exports design tokens from Figma rather than analyzing code maintainability.",
+      "source_anchor": "# figma-export-tokens — Figma variables → design tokens"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-F6E56833E71D26C3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly scores structural complexity, comprehensibility, technical debt indicators, coupling/dependency depth and code-smell density with confidence filtering.",
+      "source_anchor": "# Maintainability & Understandability Fitness Review"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-FD8703116CFB7913",
+      "missing_material_requirement_or_null": "technical-debt signals and code-smell density beyond architecture fitness",
+      "rationale": "It scores coupling, cohesion, layering, modularity, naming, API design and maintainability, but does not directly cover every requested metric such as code-smell density.",
+      "source_anchor": "# Software Architecture Fitness Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0673",
+  "batch_input_sha256": "57230a1ef3a9e80a693f5a782a7a67afd05e01762f354a49fd39a2542037776d",
+  "blind_packet_id": "P-370B4363CB99E5C062",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1e82b2f62264b7e09b440434fa8e4e663f942a11366106f3410b9cec5632322f"
+}
