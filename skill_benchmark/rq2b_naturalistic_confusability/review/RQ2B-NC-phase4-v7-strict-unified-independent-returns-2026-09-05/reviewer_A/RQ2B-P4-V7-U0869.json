@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-0C43F596C6527351","missing_material_requirement_or_null":"A CI-failure diagnosis procedure that reads CI output, isolates the first real error, explains its cause, and specifies the smallest rerun sequence.","rationale":"The skill covers orienting in an unfamiliar repository and respecting CI gates, which is a neighbouring concern, but it does not provide the requested CI-output diagnosis or minimal rerun sequence.","source_anchor":"## The Engagement Arc"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-58DBD5F523C139FB","missing_material_requirement_or_null":"A CI-failure diagnosis procedure based on the first real error and a minimal rerun sequence.","rationale":"This skill facilitates sprint retrospectives and action items; it is not a route for diagnosing a failed build from CI output.","source_anchor":"## Deliverable"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6F26993632899D43","missing_material_requirement_or_null":"A procedure to inspect CI output, identify the first build error, explain cause, and prescribe the smallest rerun.","rationale":"Characterization testing is about pinning legacy behavior before refactoring, not investigating a failed CI build or determining rerun steps.","source_anchor":"## Operating procedure"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-7A13643212E9A0B0","missing_material_requirement_or_null":"A CI-log-first build failure diagnosis and minimal rerun sequence.","rationale":"EXPLAIN Plan Reader targets SQL execution-plan bottlenecks, which does not address CI output or build failure diagnosis.","source_anchor":"# EXPLAIN Plan Reader"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-7CCA7F2EFAEFD63B","missing_material_requirement_or_null":"A method for reading CI output, isolating the first build error, explaining cause, and rerunning minimally.","rationale":"This skill surveys visual prior art and UI conventions; it has no relevant build or CI failure troubleshooting route.","source_anchor":"## Workflow"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A496541D00EE1C0B","missing_material_requirement_or_null":"A procedure to diagnose the first real CI build error and give the smallest rerun sequence.","rationale":"Coverage Gap Finder ranks untested code paths from coverage and churn data, not failed CI output or build reruns.","source_anchor":"## Operating procedure"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-EA819E53DFEBBA0E","missing_material_requirement_or_null":"A CI-output diagnosis workflow identifying the first real error, likely cause, and minimal rerun.","rationale":"SERP Clusters performs keyword clustering using search results or embeddings; it is unrelated to CI build failure analysis.","source_anchor":"## How It Works"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-F3DCBCCF875EFA70","missing_material_requirement_or_null":"A build-failure troubleshooting workflow based on CI output and a minimal rerun sequence.","rationale":"Slack Bot Builder concerns Slack application implementation and deployment, but does not diagnose CI output or identify the first build error.","source_anchor":"## Deployment"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0869",
+  "batch_input_sha256":"77022c35b46079615bc0cd648c700795c410026a015d4ed9c6be9f2f8e90ba9c",
+  "blind_packet_id":"P-FBED7E0B7C31119746",
+  "reviewer_blind_id":"A",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"cfbfb3c5fb1f8813bc6935044d84f51e00976b331d6a9ef8bd81cb089f5a3ea8"
+}

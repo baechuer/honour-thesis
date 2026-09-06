@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-0C43F596C6527351","missing_material_requirement_or_null":"Must specifically inspect CI output, identify the first real error and cause, and provide the smallest rerun sequence.","rationale":"This skill includes CI orientation and SDLC gate awareness, but it is an embedded-codebase engagement guide rather than a CI failure diagnosis procedure.","source_anchor":"## ORIENT — Recon Before Code (the distinctive core)"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-58DBD5F523C139FB","missing_material_requirement_or_null":"Must diagnose the first CI error, explain its likely cause, and specify a minimal rerun sequence.","rationale":"A sprint retrospective facilitation process does not address CI output analysis or rerun troubleshooting.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-6F26993632899D43","missing_material_requirement_or_null":"Must inspect CI output and prescribe the first-error cause and minimal rerun steps.","rationale":"Characterization testing concerns pinning legacy behavior before refactoring, not diagnosing a failed build.","source_anchor":"## Operating procedure"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-7A13643212E9A0B0","missing_material_requirement_or_null":"Must operate on CI output and include the smallest rerun sequence after identifying the first build error.","rationale":"This is a focused diagnostic workflow, but it is limited to SQL EXPLAIN ANALYZE bottleneck nodes and cannot address CI build failures.","source_anchor":"## Workflow"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-7CCA7F2EFAEFD63B","missing_material_requirement_or_null":"Must analyze CI output, explain the first real error, and give executable minimal rerun steps.","rationale":"A visual prior-art survey has no relevant build-failure or CI troubleshooting procedure.","source_anchor":"## Overview"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A496541D00EE1C0B","missing_material_requirement_or_null":"Must identify the first CI failure and its cause, then prescribe the smallest rerun sequence.","rationale":"Coverage-gap analysis ranks untested code paths from coverage and churn data; it does not diagnose build logs or reruns.","source_anchor":"## Operating procedure"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-EA819E53DFEBBA0E","missing_material_requirement_or_null":"Must read CI output and troubleshoot the first build error with a minimal rerun sequence.","rationale":"SERP keyword clustering is unrelated to CI failure diagnosis.","source_anchor":"## How It Works"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-F3DCBCCF875EFA70","missing_material_requirement_or_null":"Must analyze the failed CI output, identify likely cause, and specify the minimal rerun sequence.","rationale":"Slack bot implementation guidance does not provide a method for diagnosing failed builds from CI output.","source_anchor":"## Guidelines"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0869",
+  "batch_input_sha256":"77022c35b46079615bc0cd648c700795c410026a015d4ed9c6be9f2f8e90ba9c",
+  "blind_packet_id":"P-FBED7E0B7C31119746",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"6b0dbeeb0572b2fea98c8988d8d4ff869ab33b7e8290cd79c4bad2dfe6991189"
+}
