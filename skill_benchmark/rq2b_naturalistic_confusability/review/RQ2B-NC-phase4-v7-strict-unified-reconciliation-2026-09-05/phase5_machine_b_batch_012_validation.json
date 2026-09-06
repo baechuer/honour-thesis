@@ -1,0 +1,17 @@
+{
+  "schema_version":"rq2b_nc_phase5_machine_b_batch_validation_v1",
+  "batch_id":"RQ2B-NC-V7-MACHINE-B-012",
+  "claim_boundary":"Machine B only; newly produced independent target-blind returns and sealed coordinator returns for current pending groups.",
+  "machine_b_manifest_git_blob_sha256":"cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+  "groups":[
+    {"batch_id":"RQ2B-P4-V7-U0969","pending_state":"UNSTARTED","packet_hash_schema_blindness":"PASS","a_b_returns":"PASS","coordinator_cases":0,"coordinator_returns":"NOT_REQUIRED"},
+    {"batch_id":"RQ2B-P4-V7-U0529","pending_state":"UNSTARTED","packet_hash_schema_blindness":"PASS","a_b_returns":"PASS","coordinator_cases":0,"coordinator_returns":"NOT_REQUIRED"},
+    {"batch_id":"RQ2B-P4-V7-U1097","pending_state":"UNSTARTED","packet_hash_schema_blindness":"PASS","a_b_returns":"PASS","coordinator_cases":1,"coordinator_returns":"PASS"},
+    {"batch_id":"RQ2B-P4-V7-U1213","pending_state":"UNSTARTED","packet_hash_schema_blindness":"PASS","a_b_returns":"PASS","coordinator_cases":0,"coordinator_returns":"NOT_REQUIRED"}
+  ],
+  "groups_validated":4,
+  "a_b_returns_validated":8,
+  "coordinator_cases_validated":1,
+  "validation_checks":{"machine_b_assignment_and_pending_state":"PASS","source_family_disjoint_batch_selection":"PASS","packet_hash_schema_and_blindness":"PASS","a_b_completeness_and_return_validation":"PASS","sealed_coordinator_packet_and_return_validation":"PASS"},
+  "overall":"PASS_MACHINE_B_BATCH_012"
+}

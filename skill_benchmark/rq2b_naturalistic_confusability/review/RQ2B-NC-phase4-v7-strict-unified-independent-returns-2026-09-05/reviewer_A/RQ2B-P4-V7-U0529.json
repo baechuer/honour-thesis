@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-54F643E22EC2D556",
+      "missing_material_requirement_or_null": "Hybrid MCP-app implementation that preserves standalone behavior while adding host rendering.",
+      "rationale": "This is a published user-research survey workflow, not a route for extending a web interface into an inline host application.",
+      "source_anchor": "When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-5ED483FDAD5776EB",
+      "missing_material_requirement_or_null": "Handling unavailable browser storage and preserving an existing standalone web-app data path.",
+      "rationale": "It covers app-tool and resource registration, single-file bundling, text fallback, CSP domains, lifecycle order, host styling and display modes, but does not address unavailable sandboxed browser storage or a preserved standalone path.",
+      "source_anchor": "CSP Configuration"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-77EB376F075190B8",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It supplies a hybrid initialization that preserves standalone rendering, mandates a pre-build inventory of network, font, asset and nested-frame origins, registers the tool and bundled resource with text fallback, handles sandboxed storage, host context and lifecycle order, and verifies both modes.",
+      "source_anchor": "Step 2: Investigate CSP Requirements"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-894BCA8AB976C4C2",
+      "missing_material_requirement_or_null": "Preserving an existing standalone app with an alternate host-data path, an exhaustive CSP origin inventory, and sandboxed-storage handling.",
+      "rationale": "It gives general MCP tool/resource, bundling, lifecycle, styling, safe-area and fallback guidance, but lacks the hybrid conversion path and required isolation and storage analysis for an existing standalone interface.",
+      "source_anchor": "Core Concept: Tool + Resource"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A6C6EFD51DD8E49B",
+      "missing_material_requirement_or_null": "MCP host integration with a server tool/resource, hybrid data path, and inline rendering.",
+      "rationale": "This is a browser-network performance framework and does not provide an MCP application conversion or host integration route.",
+      "source_anchor": "The High Performance Browser Networking Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C3C790EB2FEE26B3",
+      "missing_material_requirement_or_null": "MCP host integration with a server tool/resource, hybrid data path, and inline rendering.",
+      "rationale": "This skill produces debt repayment plans and has no plausible implementation path for the requested web and host integration.",
+      "source_anchor": "Debt Payoff Planner"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EA42378D2D529130",
+      "missing_material_requirement_or_null": "MCP host integration with a server tool/resource, hybrid data path, and inline rendering.",
+      "rationale": "This creates legal-operations acceptance tests rather than implementing or adapting the requested interface for an inline host.",
+      "source_anchor": "Legal Ops Acceptance Test Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FF55A67F424C4348",
+      "missing_material_requirement_or_null": "MCP host integration with a server tool/resource, hybrid data path, and inline rendering.",
+      "rationale": "This is spreadsheet-file guidance and does not provide a route for the requested interface and host integration.",
+      "source_anchor": "XLSX creation, editing, and analysis"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0529",
+  "batch_input_sha256": "bc3495c98d68625f8bc596a7f476ee2da3b1f25bfe133e033599dacd80a1df85",
+  "blind_packet_id": "P-3017C9D8A4F04C12DC",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c6ae13d67babd85714c4fcdf404ecbf79cba9b6f034cdbde64ad2b88b9806977"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-04AD74A7B51A7125",
+      "missing_material_requirement_or_null": "Ghost repository-specific Admin API implementation covering routes, controllers, permissions, and tests.",
+      "rationale": "This is a Laravel Livewire component workflow, not a route-to-test implementation path for a Ghost Admin API endpoint.",
+      "source_anchor": "## When to use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0D4F248DE08C1FA6",
+      "missing_material_requirement_or_null": "Ghost repository-specific route, controller, permissions, and test implementation.",
+      "rationale": "It can shape a REST contract, but the requested work is an implementation under established Ghost Admin API conventions rather than generic API design.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4EA1F6340F4C244E",
+      "missing_material_requirement_or_null": "Ghost repository-specific Admin API implementation covering routes, controllers, permissions, and tests.",
+      "rationale": "The prescribed .NET application workflow does not address the Ghost codebase or its Admin API conventions.",
+      "source_anchor": "# C# Developer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5C3A3DE231EF8271",
+      "missing_material_requirement_or_null": "Ghost repository-specific Admin API implementation covering routes, controllers, permissions, and tests.",
+      "rationale": "Rust ownership and error-design guidance is unrelated to adding an endpoint within Ghost's Admin API.",
+      "source_anchor": "# Rust Patterns"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7E55D9145460AC31",
+      "missing_material_requirement_or_null": "Ghost repository-specific Admin API implementation covering routes, controllers, permissions, and tests.",
+      "rationale": "The .NET Core implementation workflow is for a different runtime and provides no Ghost-specific endpoint path.",
+      "source_anchor": "# .NET Core Expert"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B7662636C76DC505",
+      "missing_material_requirement_or_null": "Ghost repository-specific Admin API implementation covering routes, controllers, permissions, and tests.",
+      "rationale": "Microservice boundary design does not provide a route, controller, permissions, and test implementation for the requested Ghost endpoint.",
+      "source_anchor": "# Microservices Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C2903B9720123E65",
+      "missing_material_requirement_or_null": "Ghost repository-specific Admin API implementation covering routes, controllers, permissions, and tests.",
+      "rationale": "Shopify theme and application guidance is unrelated to implementing an Admin API endpoint in Ghost.",
+      "source_anchor": "# Shopify Expert"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-EB77286CA0167EA3",
+      "missing_material_requirement_or_null": "Ghost repository-specific route, controller, permissions, and test implementation.",
+      "rationale": "It supplies broad API-design guidance, but does not implement the endpoint using Ghost's existing route, controller, permission, and test patterns.",
+      "source_anchor": "## When to use"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1213",
+  "batch_input_sha256": "0be0ff9786d74a84d2eb090c303f19318487efdd15ff5d714bde343f1ee6236d",
+  "blind_packet_id": "P-67425D5B8CC6BD1CBB",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "db9d207b02476b6dc0e5ed33ba89e46ac50422af77c0040df728b69aa18c5b70"
+}
