@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0820",
+  "blind_packet_id": "P-64CF8BA2CE20BF8502",
+  "batch_input_sha256": "faad3c9b563eaead243b344f547105b862ac4d23898615e364624cbb42ef81fe",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0EA341127DE6F129",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 4: Injection surfaces",
+      "rationale": "This is a relevant secure-code-review route that checks authorization and path traversal, but it does not provide dedicated review coverage for upload content-type spoofing, file-size abuse, or unsafe temporary-file handling.",
+      "missing_material_requirement_or_null": "Explicit upload-handler checks for content-type spoofing, file-size limits, and safe temporary-file paths."
+    },
+    {
+      "candidate_token": "C-21B4C95B6920AB0B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Timeboxed agenda (60 minutes)",
+      "rationale": "This facilitates sprint retrospectives rather than reviewing upload-handler security controls.",
+      "missing_material_requirement_or_null": "A security review of upload handling for traversal, spoofing, size, temporary paths, and authorization."
+    },
+    {
+      "candidate_token": "C-387B5455D66A5A97",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Instructions",
+      "rationale": "This implements guardrails for AI systems, not a code-level audit of a file upload handler.",
+      "missing_material_requirement_or_null": "Upload-handler security review procedures and findings."
+    },
+    {
+      "candidate_token": "C-42E0071CF57FBC0B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots and contains no route for auditing upload handler vulnerabilities.",
+      "missing_material_requirement_or_null": "A security review of the upload handler."
+    },
+    {
+      "candidate_token": "C-6651F37E35C00057",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Step 1: Identify Target Entity",
+      "rationale": "This traces data lineage in DataHub rather than evaluating a web upload handler's security controls.",
+      "missing_material_requirement_or_null": "Upload-handler vulnerability analysis and concrete remediation."
+    },
+    {
+      "candidate_token": "C-B38ADB1077DC742C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Overview",
+      "rationale": "This surveys documented UI and interaction conventions, not security weaknesses in server-side upload handling.",
+      "missing_material_requirement_or_null": "A code-level upload-handler security review."
+    },
+    {
+      "candidate_token": "C-C9CBDAA59FB5BBD1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## How It Works",
+      "rationale": "This downloads and transcribes YouTube subtitles rather than reviewing file-upload security.",
+      "missing_material_requirement_or_null": "Security analysis of the upload handler."
+    },
+    {
+      "candidate_token": "C-F8BC3CECC9D3A1AC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## First-Pass Workflow",
+      "rationale": "This is an offensive CTF exploitation guide, not a bounded production code-review procedure for the named upload-handler controls.",
+      "missing_material_requirement_or_null": "A defensive code review with concrete findings for traversal, spoofing, size, temporary paths, and authorization."
+    }
+  ],
+  "reviewer_output_sha256": "2c64daf3ca25af3fdb253985ce833609a719e293816dcfad2399dab6f5e9ec3f"
+}

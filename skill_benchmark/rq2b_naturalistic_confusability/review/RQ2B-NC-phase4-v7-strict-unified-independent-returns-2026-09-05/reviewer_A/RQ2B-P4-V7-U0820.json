@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0EA341127DE6F129",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly performs secure code review and covers the requested upload-handler security weaknesses.",
+      "source_anchor": "# Secure Code Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-21B4C95B6920AB0B",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill does not review upload-handler path traversal, content-type spoofing, file-size abuse, temporary-path safety, and authorization checks.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-387B5455D66A5A97",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill addresses related security or adversarial concerns, but it does not provide the complete upload-handler review across traversal, spoofing, size abuse, temp paths, and authorization.",
+      "source_anchor": "# AI Guardrails"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-42E0071CF57FBC0B",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill does not review upload-handler path traversal, content-type spoofing, file-size abuse, temporary-path safety, and authorization checks.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6651F37E35C00057",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill does not review upload-handler path traversal, content-type spoofing, file-size abuse, temporary-path safety, and authorization checks.",
+      "source_anchor": "# DataHub Lineage"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B38ADB1077DC742C",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill does not review upload-handler path traversal, content-type spoofing, file-size abuse, temporary-path safety, and authorization checks.",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C9CBDAA59FB5BBD1",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill does not review upload-handler path traversal, content-type spoofing, file-size abuse, temporary-path safety, and authorization checks.",
+      "source_anchor": "# YouTube Transcript Downloader"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F8BC3CECC9D3A1AC",
+      "missing_material_requirement_or_null": "Upload-handler review for path traversal, content-type spoofing, file-size abuse, unsafe temporary paths, and authorization gaps",
+      "rationale": "This skill addresses related security or adversarial concerns, but it does not provide the complete upload-handler review across traversal, spoofing, size abuse, temp paths, and authorization.",
+      "source_anchor": "# CTF Web Exploitation"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0820",
+  "batch_input_sha256": "faad3c9b563eaead243b344f547105b862ac4d23898615e364624cbb42ef81fe",
+  "blind_packet_id": "P-64CF8BA2CE20BF8502",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "18b5e2966a0e73de3c4c0f4419883a2019ff79d2f13ebd0681e2ab62ddc4eb5f"
+}

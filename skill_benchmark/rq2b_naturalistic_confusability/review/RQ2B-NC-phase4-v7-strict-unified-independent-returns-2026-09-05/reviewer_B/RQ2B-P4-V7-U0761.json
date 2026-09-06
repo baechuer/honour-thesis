@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0761",
+  "blind_packet_id": "P-04790A9DBF9801643D",
+  "batch_input_sha256": "e597935b50d413ad808972b000a47d6a0b5ac7b4b2160200540be0966002aa40",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-135E5E872B26F9CC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Influencer Marketing",
+      "rationale": "This is a marketing-campaign planning skill, not a method for examining programme-evaluation evidence or the support for outcome claims.",
+      "missing_material_requirement_or_null": "A procedure to decompose the claimed outcomes, trace the cited evidence, appraise its quality and independence, and issue calibrated conclusions."
+    },
+    {
+      "candidate_token": "C-32D6C87D49E80DE3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Nonprofit Board Pack",
+      "rationale": "The source structures board materials and meeting decisions rather than auditing whether cited evidence supports health-service, financial, and health outcome assertions.",
+      "missing_material_requirement_or_null": "Evidence-chain tracing, methodological appraisal, and claim-specific confidence judgments."
+    },
+    {
+      "candidate_token": "C-36947A78A00E098C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Motion Spec",
+      "rationale": "This source specifies interface animation behavior and has no process for evaluating evidence or causal outcome claims in a report.",
+      "missing_material_requirement_or_null": "A claim-evidence audit that traces citations, identifies inferential gaps, and assesses confidence."
+    },
+    {
+      "candidate_token": "C-4EC5E17D76044F9B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Claims Verifier",
+      "rationale": "It directly decomposes compound claims, traces each through the citation chain to primary evidence, tests source independence and method quality, flags evidentiary gaps, and provides proposition-level verdicts with calibrated confidence.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-84F8571A3034A737",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Animation System",
+      "rationale": "The source defines product motion tokens and choreography, which is unrelated to appraisal of programme-evaluation conclusions.",
+      "missing_material_requirement_or_null": "A method to evaluate cited outcome evidence, causal reasoning, and overall confidence."
+    },
+    {
+      "candidate_token": "C-88886834586B454D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Retrospective facilitation may surface process issues but does not establish whether cited evaluation evidence supports external outcome claims.",
+      "missing_material_requirement_or_null": "Citation-chain analysis, evidence appraisal, and claim-level conclusions with confidence."
+    },
+    {
+      "candidate_token": "C-C1FCF36DE17643EA",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Model Evaluation Report",
+      "rationale": "Its baseline, uncertainty, and failure-slice checks could inform scrutiny of a quantitative evaluation, but it is specifically designed for ML model performance and does not trace cited sources or assess the wider health and public-cost reasoning chain.",
+      "missing_material_requirement_or_null": "Primary-source citation tracing and claim-specific appraisal of causal, health, and public-cost evidence."
+    },
+    {
+      "candidate_token": "C-EB22196FE25BFB00",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Fact Checker",
+      "rationale": "It can split the conclusion into discrete propositions, seek independent sources, and give calibrated verdicts, but it explicitly does not perform the required citation-chain tracing and detailed study-method appraisal.",
+      "missing_material_requirement_or_null": "Tracing the report's cited evidence to primary sources and assessing the methodology and inferential chain for each outcome claim."
+    }
+  ],
+  "reviewer_output_sha256": "b9de52d035d2d4d8614772a6beb1515c92ee16a14d0563fc8bcbf7fef0cd5d2a"
+}

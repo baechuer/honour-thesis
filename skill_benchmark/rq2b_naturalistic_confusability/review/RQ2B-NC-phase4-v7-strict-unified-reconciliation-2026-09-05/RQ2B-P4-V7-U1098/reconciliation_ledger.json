@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1098",
+  "blind_packet_id": "P-6683D17B1774A11750",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0D96CACE910B356A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# iOS Debugger Agent",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Logs & Console Output"
+    },
+    {
+      "candidate_token": "C-247555EBBD7862FD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Xcode Simulator Test",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "A completed run reports overall"
+    },
+    {
+      "candidate_token": "C-4CC3EBE43E94670D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# shadcn/ui",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# shadcn/ui"
+    },
+    {
+      "candidate_token": "C-84A3836214BA1A81",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "A security prior-art survey"
+    },
+    {
+      "candidate_token": "C-86E451935B5CFAC2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-A72E4E5FADC06F41",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Create MCP App",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## Core Concept: Tool + Resource"
+    },
+    {
+      "candidate_token": "C-ADD405CA43D550B0",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Xcode from an agent — two MCP surfaces, one workflow",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## XcodeBuildMCP: session defaults first, then one-shot run"
+    },
+    {
+      "candidate_token": "C-BF6654160C4E798B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# cli-spec-to-goal — Vague CLI Idea → Codex /goal Bundle",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Vague CLI Idea"
+    }
+  ],
+  "reviewer_A_return_sha256": "fd1ea8b8d02b99d74d6924d562e5cbfb4609334052a32a96209600041847d883",
+  "reviewer_B_return_sha256": "07f3028fee8a65fa9cb9cd643eee1ed34cc942050598923f80d5d4dcc3630843",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

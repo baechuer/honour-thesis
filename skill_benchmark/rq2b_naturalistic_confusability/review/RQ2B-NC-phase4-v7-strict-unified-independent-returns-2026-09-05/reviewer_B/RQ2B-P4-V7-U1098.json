@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0D96CACE910B356A",
+      "missing_material_requirement_or_null": "An evidence-backed handoff report with completed outcomes for each named filter surface, explicit unperformed status, and the required failure/retest reporting rule.",
+      "rationale": "It provides a simulator build, UI-interaction, and logging workflow, but does not define the requested per-surface handoff report or its status semantics.",
+      "source_anchor": "## Logs & Console Output"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-247555EBBD7862FD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly defines the project, scheme, simulator, build, log-capture and evidence-report fields; its per-surface statuses, retest handling, and launch failure gate satisfy the requested report constraints.",
+      "source_anchor": "A completed run reports overall"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4CC3EBE43E94670D",
+      "missing_material_requirement_or_null": "A simulator-based iOS test workflow and evidence-backed handoff report for the specified filter interactions.",
+      "rationale": "This is guidance for composing shadcn web UI components, not for running an iOS simulator test or reporting its outcomes.",
+      "source_anchor": "# shadcn/ui"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-84A3836214BA1A81",
+      "missing_material_requirement_or_null": "A simulator-based iOS test workflow and evidence-backed handoff report for the specified filter interactions.",
+      "rationale": "This skill performs security prior-art research, which does not address building, exercising, or reporting an iOS filter screen.",
+      "source_anchor": "A security prior-art survey"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-86E451935B5CFAC2",
+      "missing_material_requirement_or_null": "A simulator-based iOS test workflow and evidence-backed handoff report for the specified filter interactions.",
+      "rationale": "This facilitates a team retrospective rather than testing an iOS application or recording test evidence.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A72E4E5FADC06F41",
+      "missing_material_requirement_or_null": "A simulator-based iOS test workflow and evidence-backed handoff report for the specified filter interactions.",
+      "rationale": "This skill concerns construction of interactive MCP apps and does not provide an iOS simulator test or the required test report.",
+      "source_anchor": "## Core Concept: Tool + Resource"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-ADD405CA43D550B0",
+      "missing_material_requirement_or_null": "An evidence-backed handoff report with completed outcomes for opening, applying, clearing, and returning, including the required per-surface status and retest rule.",
+      "rationale": "It offers a relevant simulator build-and-run workflow and mentions runtime logs, but it does not specify exercising the named filter surfaces or producing their constrained evidence report.",
+      "source_anchor": "## XcodeBuildMCP: session defaults first, then one-shot run"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BF6654160C4E798B",
+      "missing_material_requirement_or_null": "A simulator-based iOS test workflow and evidence-backed handoff report for the specified filter interactions.",
+      "rationale": "This turns a CLI idea into planning documents, not an iOS simulator test run and report.",
+      "source_anchor": "Vague CLI Idea"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1098",
+  "batch_input_sha256": "19e7084c9683ffe4355166dcb65595f7ca7a5cb16912198205eac5975ca9f9d6",
+  "blind_packet_id": "P-6683D17B1774A11750",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "df533dbdb27ac809069d77b81cdd02d407c36e74c893807a38cbb582d96b93d5"
+}

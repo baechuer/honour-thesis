@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0D96CACE910B356A",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly supports iOS/Xcode simulator testing and diagnostics, matching the requested evidence-gated handoff report and interaction-surface outcomes.",
+      "source_anchor": "# iOS Debugger Agent"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-247555EBBD7862FD",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly supports iOS/Xcode simulator testing and diagnostics, matching the requested evidence-gated handoff report and interaction-surface outcomes.",
+      "source_anchor": "# Xcode Simulator Test"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4CC3EBE43E94670D",
+      "missing_material_requirement_or_null": "iOS project and simulator context, build result, launch-with-diagnostics gate, surface-by-surface filter interaction outcomes, retest-aware status, and distinction between failed, unperformed, and passing checks",
+      "rationale": "This skill does not provide the requested iOS change handoff report with simulator/build context, diagnostic launch gate, retest-aware surface results, and explicit unperformed checks.",
+      "source_anchor": "# shadcn/ui"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-84A3836214BA1A81",
+      "missing_material_requirement_or_null": "iOS project and simulator context, build result, launch-with-diagnostics gate, surface-by-surface filter interaction outcomes, retest-aware status, and distinction between failed, unperformed, and passing checks",
+      "rationale": "This skill does not provide the requested iOS change handoff report with simulator/build context, diagnostic launch gate, retest-aware surface results, and explicit unperformed checks.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-86E451935B5CFAC2",
+      "missing_material_requirement_or_null": "iOS project and simulator context, build result, launch-with-diagnostics gate, surface-by-surface filter interaction outcomes, retest-aware status, and distinction between failed, unperformed, and passing checks",
+      "rationale": "This skill does not provide the requested iOS change handoff report with simulator/build context, diagnostic launch gate, retest-aware surface results, and explicit unperformed checks.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A72E4E5FADC06F41",
+      "missing_material_requirement_or_null": "iOS project and simulator context, build result, launch-with-diagnostics gate, surface-by-surface filter interaction outcomes, retest-aware status, and distinction between failed, unperformed, and passing checks",
+      "rationale": "This skill does not provide the requested iOS change handoff report with simulator/build context, diagnostic launch gate, retest-aware surface results, and explicit unperformed checks.",
+      "source_anchor": "# Create MCP App"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-ADD405CA43D550B0",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly supports iOS/Xcode simulator testing and diagnostics, matching the requested evidence-gated handoff report and interaction-surface outcomes.",
+      "source_anchor": "# Xcode from an agent — two MCP surfaces, one workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BF6654160C4E798B",
+      "missing_material_requirement_or_null": "iOS project and simulator context, build result, launch-with-diagnostics gate, surface-by-surface filter interaction outcomes, retest-aware status, and distinction between failed, unperformed, and passing checks",
+      "rationale": "This skill does not provide the requested iOS change handoff report with simulator/build context, diagnostic launch gate, retest-aware surface results, and explicit unperformed checks.",
+      "source_anchor": "# cli-spec-to-goal — Vague CLI Idea → Codex /goal Bundle"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1098",
+  "batch_input_sha256": "19e7084c9683ffe4355166dcb65595f7ca7a5cb16912198205eac5975ca9f9d6",
+  "blind_packet_id": "P-6683D17B1774A11750",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "69c190f97158089caa0db5fcc2a959990f075bd6742d64dfa25458d97460af39"
+}

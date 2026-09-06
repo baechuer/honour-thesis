@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5A7F025285B51FC3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly writes release notes or user-facing changelogs and supports grouping shipped changes and upgrade guidance.",
+      "source_anchor": "# Write release notes"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-61476203FD3F1E77",
+      "missing_material_requirement_or_null": "PR-to-release-note grouping by features, fixes, and breaking changes, with upgrade notes where required",
+      "rationale": "This skill provides dependency analysis or updates that may supply release context, but it does not turn merged PRs into grouped release notes with breaking-change and upgrade sections.",
+      "source_anchor": "# Dependency Auditor"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-79C91E338484BFA6",
+      "missing_material_requirement_or_null": "PR-to-release-note grouping by features, fixes, and breaking changes, with upgrade notes where required",
+      "rationale": "This skill does not turn a merged PR list into feature, fix, and breaking-change release notes with upgrade guidance.",
+      "source_anchor": "## When to read external files"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-979B0F076CE94F14",
+      "missing_material_requirement_or_null": null,
+      "rationale": "This skill directly writes release notes or user-facing changelogs and supports grouping shipped changes and upgrade guidance.",
+      "source_anchor": "# User-Facing Changelog"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BE6C4DC8D296587B",
+      "missing_material_requirement_or_null": "PR-to-release-note grouping by features, fixes, and breaking changes, with upgrade notes where required",
+      "rationale": "This skill does not turn a merged PR list into feature, fix, and breaking-change release notes with upgrade guidance.",
+      "source_anchor": "# Language Version Migrator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C277945470FF2502",
+      "missing_material_requirement_or_null": "PR-to-release-note grouping by features, fixes, and breaking changes, with upgrade notes where required",
+      "rationale": "This skill does not turn a merged PR list into feature, fix, and breaking-change release notes with upgrade guidance.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D62910D3C7369711",
+      "missing_material_requirement_or_null": "PR-to-release-note grouping by features, fixes, and breaking changes, with upgrade notes where required",
+      "rationale": "This skill provides dependency analysis or updates that may supply release context, but it does not turn merged PRs into grouped release notes with breaking-change and upgrade sections.",
+      "source_anchor": "# Dependency Updater"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FA52E1E89F6C765F",
+      "missing_material_requirement_or_null": "PR-to-release-note grouping by features, fixes, and breaking changes, with upgrade notes where required",
+      "rationale": "This skill does not turn a merged PR list into feature, fix, and breaking-change release notes with upgrade guidance.",
+      "source_anchor": "# Slack Bot Builder"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0411",
+  "batch_input_sha256": "1b52642a12f913e4732ea64f85a43882ee873ccfab4c1ba90cd20b3e45a3a7ef",
+  "blind_packet_id": "P-43BFD2C0535E66B401",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "a800389e49a894bd3d9cbf48b7347b0e4748f70a4fd34555d02da80d22b66c36"
+}

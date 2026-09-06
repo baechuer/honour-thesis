@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0411",
+  "blind_packet_id": "P-43BFD2C0535E66B401",
+  "batch_input_sha256": "1b52642a12f913e4732ea64f85a43882ee873ccfab4c1ba90cd20b3e45a3a7ef",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-5A7F025285B51FC3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### 6. Write a migration guide for every breaking change",
+      "rationale": "This provides a strong release-note structure, breaking-change migration guidance, and verification, but it is specifically scoped to tldraw SDK release files and first reconstructs PR lists instead of directly transforming the supplied generic merged-PR list.",
+      "missing_material_requirement_or_null": "A repository-agnostic workflow that consumes the given merged PR list directly."
+    },
+    {
+      "candidate_token": "C-61476203FD3F1E77",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Instructions",
+      "rationale": "This audits and updates dependencies rather than producing release notes from merged PRs.",
+      "missing_material_requirement_or_null": "Release-note generation grouped by features, fixes, and breaking changes with upgrade notes."
+    },
+    {
+      "candidate_token": "C-79C91E338484BFA6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This runs gene-set enrichment analysis and has no route to synthesize merged PRs into release notes.",
+      "missing_material_requirement_or_null": "Release notes derived from the merged PR list."
+    },
+    {
+      "candidate_token": "C-979B0F076CE94F14",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Categories (group entries)",
+      "rationale": "This directly turns raw PR titles into categorized user-facing changelog entries and mentions migration links, but its categories do not require a distinct breaking-changes group or the requested upgrade notes.",
+      "missing_material_requirement_or_null": "Explicit breaking-change classification with concrete upgrade notes where needed."
+    },
+    {
+      "candidate_token": "C-BE6C4DC8D296587B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Operating procedure",
+      "rationale": "This plans a language/runtime migration rather than documenting the changes already merged in a release.",
+      "missing_material_requirement_or_null": "Release-note synthesis from merged PRs."
+    },
+    {
+      "candidate_token": "C-C277945470FF2502",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Timeboxed agenda (60 minutes)",
+      "rationale": "This facilitates sprint retrospectives, not release-note authoring.",
+      "missing_material_requirement_or_null": "Feature, fix, and breaking-change release notes with upgrade notes."
+    },
+    {
+      "candidate_token": "C-D62910D3C7369711",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Overview",
+      "rationale": "This creates dependency-upgrade plans rather than release notes from a merged PR list.",
+      "missing_material_requirement_or_null": "Release-note grouping and upgrade guidance for the release's merged PRs."
+    },
+    {
+      "candidate_token": "C-FA52E1E89F6C765F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots and has no route to produce release notes.",
+      "missing_material_requirement_or_null": "Release notes grouped by features, fixes, and breaking changes."
+    }
+  ],
+  "reviewer_output_sha256": "f3f6735312dcd5879a4a7ea020f207ad5297831f00317d719c6d4983aed7cd96"
+}
