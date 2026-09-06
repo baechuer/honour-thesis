@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4D06D5849881E0D2",
+      "missing_material_requirement_or_null": "It does not review Go remote-resource lookup, polling, cleanup, data-source, or paginated-list behavior.",
+      "rationale": "This skill runs gene-set enrichment analysis and generates biological result tables and plots, so it is not a plausible route for the requested Go code review.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-66BBB7A66E0F798E",
+      "missing_material_requirement_or_null": "It does not cover finder error normalization, shared status polling, complete paginated cleanup, or list/data-source review requirements.",
+      "rationale": "It reviews non-test Terraform AWS Provider resource lifecycle code and includes related CRUD error and flattening checks, but misses most of the specified helper and listing behaviors.",
+      "source_anchor": "## CRUD step order"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-72FC85A3DEA20CA4",
+      "missing_material_requirement_or_null": "It does not review Go implementations of remote resource operations or the requested helper behaviors.",
+      "rationale": "This skill designs microservice boundaries and distributed-system architecture rather than reviewing Terraform-style lookup, polling, cleanup, and listing code.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-785F17D1380DE5FC",
+      "missing_material_requirement_or_null": "It is limited to test helpers and omits production-code review of normalized finders, shared waiters, complete sweepers, data-source lookup fields, and list translation.",
+      "rationale": "It is a Terraform AWS Provider review skill with relevant existence and destroy-test guidance, but its scope is test helpers rather than the supplied production remote-operation code.",
+      "source_anchor": "## Exists / Destroy helpers"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-99545990B27D43CB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers normalized finder errors, status functions that reuse finders, paginator-based sweepers with propagated errors, data-source search criteria, and paginated lists with display names and shared read/list flattening.",
+      "source_anchor": "## Finders, status, waiters"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A3DFB8186D982219",
+      "missing_material_requirement_or_null": "It does not review Go remote-resource operations, error normalization, polling, cleanup, or listing behavior.",
+      "rationale": "This skill creates and validates Obsidian Bases YAML files, which is unrelated to the requested code-review task.",
+      "source_anchor": "# Obsidian Bases Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AFDCFD2B82ED3869",
+      "missing_material_requirement_or_null": "It does not assess the requested Go remote-resource implementation behaviors.",
+      "rationale": "This workflow installs repository guardrail hooks and produces safety configuration rather than reviewing lookup, polling, cleanup, data-source, and list routines.",
+      "source_anchor": "## When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F2C9067B6922A2D0",
+      "missing_material_requirement_or_null": "It does not provide the specified remote-resource helper, cleanup, data-source, or paginated-list review criteria.",
+      "rationale": "This skill consumes structural quality reports and plans codebase follow-up, not a focused review of the supplied Go remote-operation behavior.",
+      "source_anchor": "# Receiving Thermo Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1030",
+  "batch_input_sha256": "733ac89991a084114d6f7521d336c30fe92ad19ff65fc01d7c86d702cad68920",
+  "blind_packet_id": "P-B47B0C13EE40C1BF2F",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9810688fdf6d7e5b9136fbd713197b6361d85922e4fc7c105000886971edf511"
+}

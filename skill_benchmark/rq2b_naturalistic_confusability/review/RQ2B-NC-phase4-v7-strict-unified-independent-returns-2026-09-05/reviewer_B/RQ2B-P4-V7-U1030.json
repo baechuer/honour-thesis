@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4D06D5849881E0D2",
+      "missing_material_requirement_or_null": "Review criteria for Go resource lookup, polling, cleanup, data-source, and paginated-list implementation.",
+      "rationale": "This is a GSEA analysis and plotting guide, not a review route for remote Go resource operations.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-66BBB7A66E0F798E",
+      "missing_material_requirement_or_null": "Finder/status, sweeper, data-source search-criteria, and paginated list-review requirements.",
+      "rationale": "It covers resource lifecycle ordering and Read missing-object handling, but omits the helper, cleanup, data-source, and list duties central to the prompt.",
+      "source_anchor": "## CRUD step order"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-72FC85A3DEA20CA4",
+      "missing_material_requirement_or_null": "Concrete Go resource-operation review rules for lookup, polling, cleanup, data sources, and lists.",
+      "rationale": "This is an architecture-design guide for microservice boundaries, not a route for reviewing the specified provider helper code.",
+      "source_anchor": "# Microservices Design"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-785F17D1380DE5FC",
+      "missing_material_requirement_or_null": "Production implementation review rules for finders, polling, sweepers, data-source fields, and shared list flattening.",
+      "rationale": "It supplies related test-helper checks for missing objects, destruction, and list resources, but not the requested non-test implementation review.",
+      "source_anchor": "## Exists / Destroy helpers"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-99545990B27D43CB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers normalized not-found lookup errors, status reuse for polling, paginator-based cleanup with error propagation, data-source search fields, and paginated lists with display names, per-item logging, and Read-shared flattening.",
+      "source_anchor": "## List resources"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A3DFB8186D982219",
+      "missing_material_requirement_or_null": "Concrete Go resource-operation review rules for lookup, polling, cleanup, data sources, and lists.",
+      "rationale": "This concerns Obsidian .base configuration and cannot review the stated remote-resource Go routines.",
+      "source_anchor": "# Obsidian Bases Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AFDCFD2B82ED3869",
+      "missing_material_requirement_or_null": "Concrete Go resource-operation review rules for lookup, polling, cleanup, data sources, and lists.",
+      "rationale": "This is a repository guardrail and hook-installation workflow, not a provider helper-code review route.",
+      "source_anchor": "# Repo Guardrail Hook Installer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F2C9067B6922A2D0",
+      "missing_material_requirement_or_null": "Concrete Go resource-operation review rules for lookup, polling, cleanup, data sources, and lists.",
+      "rationale": "This processes structural quality reports and lacks the requested remote resource-operation review criteria.",
+      "source_anchor": "# Receiving Thermo Review"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1030",
+  "batch_input_sha256": "733ac89991a084114d6f7521d336c30fe92ad19ff65fc01d7c86d702cad68920",
+  "blind_packet_id": "P-B47B0C13EE40C1BF2F",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "2dbbf8a3306925dfdd3b5ffb528833c2c7541048b0242d8cfb685d67603c7aec"
+}
