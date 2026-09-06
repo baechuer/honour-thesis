@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-192D3EB639A77FBD",
+      "missing_material_requirement_or_null": "Native iOS Contact Center SDK APIs for context, item-created channel sessions, lifecycle forwarding, and video rejoin.",
+      "rationale": "Covers Contact Center concepts and engagement state, but it is a web SDK and does not supply the requested native iOS lifecycle or service integration.",
+      "source_anchor": "Hard Guardrails"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-37CCC4F35E7B453E",
+      "missing_material_requirement_or_null": "Native iOS Contact Center SDK integration and lifecycle-test guidance.",
+      "rationale": "Provides n8n JavaScript workflow guidance, not native iOS contact-center channel or lifecycle integration.",
+      "source_anchor": "JavaScript Code Node"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-504CE91BAD114D9E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly names iOS chat, ZVA, video, and scheduled callbacks and prescribes context setup, item initialization, lifecycle forwarding, and video rejoin handling.",
+      "source_anchor": "Hard Guardrails"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5B6A81CA6EAD1C91",
+      "missing_material_requirement_or_null": "iOS Contact Center SDK surface and lifecycle/rejoin implementation guidance independent of an Android source.",
+      "rationale": "Generic Android-to-iOS parity process assumes Android source and lacks Contact Center APIs or lifecycle patterns.",
+      "source_anchor": "Step 0: Gather Context"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-69071FD5E4D5E146",
+      "missing_material_requirement_or_null": "Native iOS Contact Center implementation and lifecycle test plan.",
+      "rationale": "Provides gene-set enrichment CLI and plot guidance rather than mobile customer-engagement integration.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-805FB89E6ED7E98F",
+      "missing_material_requirement_or_null": "iOS SDK-specific context, lifecycle forwarding, scheduled callback, and video rejoin APIs.",
+      "rationale": "Relevant Contact Center channel services and items, but it defines Android APIs and teardown rather than iOS lifecycle forwarding and iOS video rejoin implementation.",
+      "source_anchor": "SDK Surface Summary"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD5E6BBC7AB53569",
+      "missing_material_requirement_or_null": "Native iOS Contact Center implementation and lifecycle test guidance.",
+      "rationale": "Generates written social-post hooks, unrelated to the requested customer-engagement integration.",
+      "source_anchor": "Social Hook Generator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C518BD6A807A2FEB",
+      "missing_material_requirement_or_null": "Native iOS Contact Center channel/lifecycle implementation plus mobile-specific lifecycle test cases.",
+      "rationale": "Could help formulate a generic test strategy, but explicitly excludes mobile/frontend testing and does not provide iOS Contact Center implementation guidance.",
+      "source_anchor": "When to use"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1058",
+  "batch_input_sha256": "4980a97b82662d5c5cc7ce68339f9593480988c5908c67421fb4b76627a13834",
+  "blind_packet_id": "P-C909358064CFDA2EB7",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "0e96bcd3570c89cffb73b56436fd73f7f250fd969598a17d9f3ebb6b9de66f83"
+}

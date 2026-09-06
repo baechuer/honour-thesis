@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-25E820CF737CC22C",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source produces engineering design documents rather than implementing a command-line interface; its stated deliverable is a spec.",
+      "source_anchor": "# Technical Spec Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4E6C944B623364DB",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source designs REST API surfaces and endpoint specifications, while the prompt forbids designing the API and asks for a CLI.",
+      "source_anchor": "# REST API Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5126A5DA1A554652",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source builds interactive MCP App UIs around an MCP tool and resource, not a command-line interface; the prompt also excludes an MCP server.",
+      "source_anchor": "# Create MCP App"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6733F6B5D86948AD",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source is documentation-writing guidance for a specific docs location, not an implementation workflow for a CLI.",
+      "source_anchor": "# Write documentation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-85AEF144F008E8C5",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source generates image-based presentations from slide outlines and does not address command-line interface construction.",
+      "source_anchor": "# Slidegen — AI Image Presentation Generator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD633101B3AD765E",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source designs API contracts across API styles rather than building a CLI, and the prompt explicitly excludes API design.",
+      "source_anchor": "# API Design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D852C28CD9C095D0",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source assembles image-backed slide presentations rather than a command-line interface.",
+      "source_anchor": "# SlideCraft — Two-Layer Presentation Generator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FFCCE3821BB93192",
+      "missing_material_requirement_or_null": "A workflow that builds the requested composable CLI from the supplied API materials, including subcommands, contract, auth/config, and runtime choices.",
+      "rationale": "This source is a security prior-art survey workflow and does not provide CLI construction from API materials.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0926",
+  "batch_input_sha256": "05036b1d868e80a0d7d01009c27a6df631c65ef766ff2844ad95213a791777de",
+  "blind_packet_id": "P-998D1E6B8385FE5468",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "4eb3de349411d017c801ff16f60976324a216a6da80a69779752da87accf3720"
+}

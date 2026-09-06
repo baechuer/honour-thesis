@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0747C0EA9C672B95",
+      "missing_material_requirement_or_null": "A workflow for revising an existing skill's selection boundary and preventing document-summary misfires.",
+      "rationale": "This skill is limited to building Slack bots and does not address skill descriptions or selection boundaries.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-19982D4B670086E4",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly rewrites a skill description with concrete triggers and negative scope, which addresses the requested over-broad activation boundary.",
+      "source_anchor": "# Skill Description Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8C48C14E5D3E1E4B",
+      "missing_material_requirement_or_null": "A method for narrowing a skill description's trigger and exclusion boundary.",
+      "rationale": "This source is for GO and KEGG enrichment analysis, not for revising skill selection behavior.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8C85638C8096C57B",
+      "missing_material_requirement_or_null": "A method for narrowing a skill description's trigger and exclusion boundary.",
+      "rationale": "This source produces thematic academic literature reviews and does not provide a skill-description revision workflow.",
+      "source_anchor": "# Literature Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B8321F408FB37553",
+      "missing_material_requirement_or_null": "A method for narrowing a skill description's trigger and exclusion boundary.",
+      "rationale": "This source concerns Jetpack Compose UI test actions rather than defining a skill's invocation boundary.",
+      "source_anchor": "# Clicking and Scrolling — Drive the UI Without a Gesture Builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C1280F2ED429E990",
+      "missing_material_requirement_or_null": "A description-only selection-boundary rewrite that explicitly excludes document-summary requests.",
+      "rationale": "It can diagnose a misfiring whole skill and produce a rewrite, but it explicitly routes description-only tightening to another skill and therefore is broader than the stated need.",
+      "source_anchor": "## Procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CEF5116F8367EB78",
+      "missing_material_requirement_or_null": "A method for narrowing a skill description's trigger and exclusion boundary.",
+      "rationale": "This source handles AWS security-finding remediation, not changes to a skill's triggering description.",
+      "source_anchor": "# Security Agent Remediation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F69FB4011A3BDBD9",
+      "missing_material_requirement_or_null": "A method for narrowing a skill description's trigger and exclusion boundary.",
+      "rationale": "This source facilitates sprint retrospectives and does not revise skill selection criteria.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0932",
+  "batch_input_sha256": "173706f646386d23f6708def95f35c0ee9d399ddf2345e2bb354a8d9fc621b03",
+  "blind_packet_id": "P-1711C3AA973162991A",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "05c47c822e193daac479459bd1b99c7b263bef426d0018fd9d6633af941eb134"
+}

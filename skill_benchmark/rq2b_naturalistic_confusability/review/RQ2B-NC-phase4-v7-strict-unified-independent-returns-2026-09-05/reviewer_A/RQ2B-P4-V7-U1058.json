@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-192D3EB639A77FBD",
+      "missing_material_requirement_or_null": "Native iOS Contact Center SDK APIs and iOS lifecycle/rejoin guidance.",
+      "rationale": "It addresses Contact Center integration, but its web SDK modes and web-event guidance do not supply the native iOS service and lifecycle implementation requested.",
+      "source_anchor": "## Integration Modes"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-37CCC4F35E7B453E",
+      "missing_material_requirement_or_null": "Native iOS Contact Center integration and lifecycle guidance.",
+      "rationale": "This source is limited to JavaScript inside n8n Code nodes and provides no mobile Contact Center implementation material.",
+      "source_anchor": "# JavaScript Code Node"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-504CE91BAD114D9E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The native iOS SDK surface and guardrails directly cover engagement context, item-based chat/ZVA/video/callback services, lifecycle forwarding, and video rejoin handling needed for the plan and checklist.",
+      "source_anchor": "## Hard Guardrails"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5B6A81CA6EAD1C91",
+      "missing_material_requirement_or_null": "Native iOS Contact Center SDK APIs, channel sessions, lifecycle handling, and video rejoin guidance.",
+      "rationale": "It describes porting an existing Android feature to iOS and requires Android source material; it does not document the requested Contact Center integration.",
+      "source_anchor": "# Android to iOS: Feature Parity Implementation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-69071FD5E4D5E146",
+      "missing_material_requirement_or_null": "Native iOS customer-engagement and Contact Center SDK implementation guidance.",
+      "rationale": "This source concerns gene-set enrichment analysis and has no relevant mobile or channel-service material.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-805FB89E6ED7E98F",
+      "missing_material_requirement_or_null": "The native iOS Contact Center SDK surface with iOS lifecycle, scheduled callback, and rejoin handling.",
+      "rationale": "It covers similar Contact Center channels but is Android-specific, so its initialization and lifecycle guidance cannot supply the requested native iOS implementation.",
+      "source_anchor": "# Zoom Contact Center SDK - Android"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD5E6BBC7AB53569",
+      "missing_material_requirement_or_null": "Native iOS customer-engagement and Contact Center SDK implementation guidance.",
+      "rationale": "This source only generates written social-post opening lines and contains no applicable technical integration material.",
+      "source_anchor": "# Social Hook Generator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-C518BD6A807A2FEB",
+      "missing_material_requirement_or_null": "Native iOS Contact Center SDK APIs and lifecycle/channel-service integration guidance.",
+      "rationale": "It can inform generic test-planning considerations, but it expressly excludes mobile testing and provides none of the iOS channel implementation material needed for the requested plan.",
+      "source_anchor": "Do NOT activate this skill for frontend/UI testing, mobile testing, or manual QA processes"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1058",
+  "batch_input_sha256": "4980a97b82662d5c5cc7ce68339f9593480988c5908c67421fb4b76627a13834",
+  "blind_packet_id": "P-C909358064CFDA2EB7",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "faeb6fd778b706b2bd7956702125dc8661d6126775d10f859a006c31ff4acaf3"
+}
