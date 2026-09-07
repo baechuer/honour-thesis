@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1103",
+  "blind_packet_id":"P-52A97B97A87EF18118",
+  "batch_input_sha256":"39f2b1aa077e6a2b6b6e8a0144592edb8289e50c599a640d9e993f4bc9538d0c",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-069999DA1812E9EC","adequacy":"INADEQUATE","source_anchor":"name: user-research-prior-art-survey","rationale":"This surveys user research rather than designing a fundraising deck.","missing_material_requirement_or_null":"Seed-round deck narrative and slide outline."},
+    {"candidate_token":"C-3ECA17BFCE871692","adequacy":"FULLY_ACCEPTABLE","source_anchor":"create, review, or restructure a fundraising pitch deck for seed or Series A", "rationale":"It directly covers seed fundraising decks and slide structure, supporting the requested investor narrative outline.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-5E0A7B6FEC2636B4","adequacy":"INADEQUATE","source_anchor":"Systematic six-phase debugging methodology", "rationale":"This debugs technical issues rather than creating a fundraise story.","missing_material_requirement_or_null":"Seed-round deck outline with investor questions."},
+    {"candidate_token":"C-5FC0C846FA47A951","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Output is a single .pptx", "rationale":"It produces an investor deck artifact, but the requested deliverable is a structured Markdown outline rather than a presentation file.","missing_material_requirement_or_null":"Markdown slide outline with assertion titles and investor questions."},
+    {"candidate_token":"C-7C0423B941DCB7DB","adequacy":"INADEQUATE","source_anchor":"name: Investor Update Writer","rationale":"This writes updates for existing investors, not a seed fundraising deck.","missing_material_requirement_or_null":"Fundraising slide narrative and structure."},
+    {"candidate_token":"C-A8577885ED0CEFAD","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than investor storytelling.","missing_material_requirement_or_null":"Seed-round deck outline."},
+    {"candidate_token":"C-CD2823E0CBBAC621","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"SaaS business metrics analysis", "rationale":"It can support the MRR and investor metrics, but does not produce the required deck narrative.","missing_material_requirement_or_null":"Fundraising slide structure and investor-question coverage."},
+    {"candidate_token":"C-E856A40D4F60B26E","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"pitch, investor deck, fundraising, pitch deck", "rationale":"It is relevant to investor pitch narratives but does not establish the requested structured 10–12-slide Markdown specification.","missing_material_requirement_or_null":"Detailed seed-deck outline with per-slide investor questions and visual suggestions."}
+  ],
+  "reviewer_output_sha256":"9af7c330a1f7d1ffe84061f1a199514721c040ce45854bce39210ea1fc0980cd"
+}

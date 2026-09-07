@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0942",
+  "blind_packet_id":"P-178C18BCBD84E45BE7",
+  "batch_input_sha256":"c0629bb972b2d756cdb913457fcda7b1ab96e79a088412ac59b06d1b17b98eda",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-403A9C9E18F72453","adequacy":"INADEQUATE","source_anchor":"nonprofit's annual or program impact report", "rationale":"This writes nonprofit outcome reports rather than data-consumer impact analysis.","missing_material_requirement_or_null":"Downstream data lineage, consumer criticality, owners, and mitigations."},
+    {"candidate_token":"C-53756A455031F5C8","adequacy":"INADEQUATE","source_anchor":"name: user-research-prior-art-survey","rationale":"This surveys user research rather than table-consumer dependencies.","missing_material_requirement_or_null":"Downstream lineage impact report."},
+    {"candidate_token":"C-54AC41729A0A6E94","adequacy":"INADEQUATE","source_anchor":"name: nx-workspace-patterns","rationale":"This configures Nx workspaces rather than data consumers.","missing_material_requirement_or_null":"Data lineage and pre-change consumer impact analysis."},
+    {"candidate_token":"C-5978E749FAE466AE","adequacy":"FULLY_ACCEPTABLE","source_anchor":"explore lineage, trace data dependencies, perform impact analysis", "rationale":"It directly supports downstream data dependency discovery and change impact assessment for the renamed column.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-881E74D4E72C3143","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than lineage analysis.","missing_material_requirement_or_null":"Downstream consumer discovery and impact report."},
+    {"candidate_token":"C-A4C12DAED554F820","adequacy":"INADEQUATE","source_anchor":"Trace upstream data lineage", "rationale":"This traces data origins, while the request expressly focuses on downstream consumers.","missing_material_requirement_or_null":"Downstream consumer, owner, criticality, and mitigation analysis."},
+    {"candidate_token":"C-E7548D7AE3866315","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Trace downstream data lineage and impact analysis", "rationale":"It directly identifies what depends on the data and assesses change risk before modifying it.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-F587B77975BACFC1","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Rewrite a schema migration", "rationale":"It makes a rename safer operationally, but does not find downstream consumers or their owners.","missing_material_requirement_or_null":"Downstream lineage impact report with criticality and owners."}
+  ],
+  "reviewer_output_sha256":"b9452b487c3c85b9a385d43e5917c1236ed2ea5dc306cd7d7862dd30519faf31"
+}

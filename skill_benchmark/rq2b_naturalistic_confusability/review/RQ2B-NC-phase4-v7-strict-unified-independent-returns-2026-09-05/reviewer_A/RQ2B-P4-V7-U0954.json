@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0954",
+  "blind_packet_id": "P-56232BFFF8BB759263",
+  "batch_input_sha256": "1953eb52395287f18053d98cd4b63d0d1aea2945201123d4be36503092444916",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0F1F7189C665BAA7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When Not to Use",
+      "rationale": "This skill is explicitly limited to bulk-expression GSVA/ssGSEA analysis and heatmaps, not language-model comparison or checkpoint evaluation.",
+      "missing_material_requirement_or_null": "A reproducible comparative language-model evaluation plan covering the requested question sets, artifacts, table, and checkpoint reviews is absent."
+    },
+    {
+      "candidate_token": "C-3A230C05844216A9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# The 1-Page Marketing Plan Framework",
+      "rationale": "This is a customer-journey marketing planning framework rather than a model-evaluation workflow.",
+      "missing_material_requirement_or_null": "A reproducible comparative language-model evaluation plan covering the requested question sets, artifacts, table, and checkpoint reviews is absent."
+    },
+    {
+      "candidate_token": "C-6C373948AE240E23",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "### Workflow 2: Track training progress",
+      "rationale": "It specifies standardized factual, quantitative, and commonsense benchmarks; model settings, hardware guidance, output files, a multi-model table, and a periodic checkpoint workflow.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-9AFE15792A5C50DD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Task Selection",
+      "rationale": "It covers relevant benchmark task selection, local backend choices, smoke tests, and hardware guidance, but not a full comparison reporting workflow or checkpoint cadence.",
+      "missing_material_requirement_or_null": "A recurring checkpoint-evaluation plan and a defined comparison-table/result-artifact workflow are absent."
+    },
+    {
+      "candidate_token": "C-9E2AF5172741C905",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Grant Proposal Writer",
+      "rationale": "This source concerns nonprofit grant proposals, budgets, and logic models rather than model benchmarking.",
+      "missing_material_requirement_or_null": "A reproducible comparative language-model evaluation plan covering the requested question sets, artifacts, table, and checkpoint reviews is absent."
+    },
+    {
+      "candidate_token": "C-C03EA718C1224A7F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Workflow 3: Compare Multiple Models",
+      "rationale": "It supports reproducible multi-model benchmarking, configuration, compute execution, and result export, but does not provide a recurring checkpoint-evaluation procedure.",
+      "missing_material_requirement_or_null": "A small recurring evaluation plan for fine-tuning checkpoints is absent."
+    },
+    {
+      "candidate_token": "C-C9D41E4A3B01D68B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# CLAUDE OFFICE SKILL - Competitive Analysis",
+      "rationale": "This source is for competitive intelligence on companies and products, not language-model evaluation.",
+      "missing_material_requirement_or_null": "A reproducible comparative language-model evaluation plan covering the requested question sets, artifacts, table, and checkpoint reviews is absent."
+    },
+    {
+      "candidate_token": "C-CF19D08386D5F39E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# BigCode Evaluation Harness - Code Model Benchmarking",
+      "rationale": "It is specialized for code-generation benchmarks and does not cover the requested shared factual, commonsense, and quantitative evaluation sets.",
+      "missing_material_requirement_or_null": "Coverage of shared factual, commonsense, and quantitative language-model question sets is absent."
+    }
+  ],
+  "reviewer_output_sha256": "235a838c39c6325dedeb8f0538c7649db238e05393bacc47b50e13207aa9556b"
+}

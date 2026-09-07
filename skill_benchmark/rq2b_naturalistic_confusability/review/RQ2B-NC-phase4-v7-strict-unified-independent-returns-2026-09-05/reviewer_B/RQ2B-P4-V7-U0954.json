@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0954",
+  "blind_packet_id":"P-56232BFFF8BB759263",
+  "batch_input_sha256":"1953eb52395287f18053d98cd4b63d0d1aea2945201123d4be36503092444916",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-0F1F7189C665BAA7","adequacy":"INADEQUATE","source_anchor":"name: gsva-analysis-and-visualization","rationale":"This evaluates biological pathways rather than language models.","missing_material_requirement_or_null":"Reproducible multi-model LLM evaluation plan."},
+    {"candidate_token":"C-3A230C05844216A9","adequacy":"INADEQUATE","source_anchor":"name: one-page-marketing","rationale":"This creates a marketing plan rather than a model comparison.","missing_material_requirement_or_null":"LLM benchmark, result, and checkpoint-evaluation plan."},
+    {"candidate_token":"C-6C373948AE240E23","adequacy":"FULLY_ACCEPTABLE","source_anchor":"benchmarking model quality, comparing models, reporting academic results, or tracking training progress", "rationale":"It evaluates LLMs on shared academic benchmark suites and supports reproducible comparisons and fine-tuning progress tracking.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-9AFE15792A5C50DD","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Run evaluations for Hugging Face Hub models", "rationale":"It supports local hardware evaluation and backend choice, but does not establish the requested comparison design and result artifacts across all task types.","missing_material_requirement_or_null":"Full reproducible model-comparison and fine-tuning checkpoint plan."},
+    {"candidate_token":"C-9E2AF5172741C905","adequacy":"INADEQUATE","source_anchor":"name: grant-proposal-writer","rationale":"This writes nonprofit grants rather than evaluating language models.","missing_material_requirement_or_null":"LLM benchmark comparison and checkpoint evaluation."},
+    {"candidate_token":"C-C03EA718C1224A7F","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Evaluates LLMs across 100+ benchmarks", "rationale":"It supports reproducible multi-backend benchmarking, benchmark selection, and scalable results for model comparison.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-C9D41E4A3B01D68B","adequacy":"INADEQUATE","source_anchor":"name: competitive-analysis","rationale":"This analyzes market competitors rather than language models.","missing_material_requirement_or_null":"LLM benchmark and checkpoint evaluation plan."},
+    {"candidate_token":"C-CF19D08386D5F39E","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Evaluates code generation models", "rationale":"It benchmarks code models, but the request requires broader factual, common-sense, reasoning, and quantitative evaluation.","missing_material_requirement_or_null":"Broad language-model comparison across the specified task sets."}
+  ],
+  "reviewer_output_sha256":"a9304662ccd3dcbb111ec8b00e9fca9d6e630091ac71bb1c781870b30b1a2c7f"
+}
