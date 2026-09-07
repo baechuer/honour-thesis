@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0362",
+  "blind_packet_id": "P-E77D56A303197B8B43",
+  "batch_input_sha256": "d291422f9e462da4e3e2b1ebeea97ea44d12c9230d5aefd4498f222dd673adca",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-096135A95F74EF1F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to Use This Skill",
+      "rationale": "Covers GSAP animation plugins, not Hugging Face dataset metadata inspection.",
+      "missing_material_requirement_or_null": "A Hugging Face dataset-inspection capability for splits, schema or labels, example rows, and licence caveats."
+    },
+    {
+      "candidate_token": "C-427C1551187C06A0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Estimate Analysis Skill",
+      "rationale": "Analyzes stock analyst estimates using Yahoo Finance rather than a ticket dataset on Hugging Face.",
+      "missing_material_requirement_or_null": "A Hugging Face dataset-inspection capability for splits, schema or labels, example rows, and licence caveats."
+    },
+    {
+      "candidate_token": "C-42D188893C338631",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates sprint retrospectives and provides no dataset inspection workflow.",
+      "missing_material_requirement_or_null": "A Hugging Face dataset-inspection capability for splits, schema or labels, example rows, and licence caveats."
+    },
+    {
+      "candidate_token": "C-46BB584E7238367F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack API integrations, not a Hugging Face ticket-dataset inspection.",
+      "missing_material_requirement_or_null": "A Hugging Face dataset-inspection capability for splits, schema or labels, example rows, and licence caveats."
+    },
+    {
+      "candidate_token": "C-781F5C33C85250A7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Open Source Project Maintainer",
+      "rationale": "Covers repository governance and project licensing, not inspection of a Hugging Face dataset or its dataset-card licence terms.",
+      "missing_material_requirement_or_null": "A Hugging Face dataset-inspection capability for splits, schema or labels, example rows, and licence caveats."
+    },
+    {
+      "candidate_token": "C-880EE0810C4C1CE6",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Quick Start: QLoRA Fine-Tuning",
+      "rationale": "It can load a Hugging Face dataset before training, but does not provide the requested pre-model inspection of Hub splits, columns or labels, row examples, and licence caveats.",
+      "missing_material_requirement_or_null": "Explicit Hugging Face dataset-card and DatasetDict inspection steps covering splits, columns or labels, examples, and licence caveats."
+    },
+    {
+      "candidate_token": "C-CA88D67124B984AB",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Core Workflow",
+      "rationale": "It requires dataset validation before training, but its workflow targets local training data and omits Hugging Face dataset information, split or label inspection, sample rows, and licensing caveats.",
+      "missing_material_requirement_or_null": "Explicit Hugging Face dataset-card and DatasetDict inspection steps covering splits, columns or labels, examples, and licence caveats."
+    },
+    {
+      "candidate_token": "C-D34305274DE1BB4B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "Performs bulk-expression pathway analysis rather than inspection of a ticket dataset on Hugging Face.",
+      "missing_material_requirement_or_null": "A Hugging Face dataset-inspection capability for splits, schema or labels, example rows, and licence caveats."
+    }
+  ],
+  "reviewer_output_sha256": "566154bf9b274af6e9d0cafbaeecfcfd2c7684a95ca2db8090c8800d2516f25b"
+}

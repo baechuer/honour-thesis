@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0360",
+  "blind_packet_id": "P-A131111C354FE667E4",
+  "batch_input_sha256": "10e8928e3b008e03564db83d1e7b366a92450257fc46b73f50cd08acc8d39a7b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-25CFD648AD109719",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Privacy and data-handling note:",
+      "rationale": "This is a bulk-expression GSVA workflow; its anonymisation note does not support reviewing analytics-event fields, sensitive paths, or consent design.",
+      "missing_material_requirement_or_null": "Analytics-event data inventory and privacy/consent review guidance"
+    },
+    {
+      "candidate_token": "C-64C59EE4F40B1766",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Consent Requirements (Art. 8)",
+      "rationale": "It can assess sensitive data and purpose-specific consent, but the source is explicitly an LGPD/Brazil compliance advisor while the request supplies no jurisdiction.",
+      "missing_material_requirement_or_null": "Jurisdiction-neutral or applicable-jurisdiction analytics-event privacy review"
+    },
+    {
+      "candidate_token": "C-654129C26A90ED01",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Phase 1: Inventory (establish what data is collected)",
+      "rationale": "It explicitly inventories analytics and tracking collection points, classifies personal and sensitive data, and engineers contextual notices and consent controls.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-69E07D0283DEDF9C",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Workflow 1 — Compliance Gap Analysis",
+      "rationale": "It supports data-category mapping and per-purpose consent review, but it is a Vietnam PDPL workflow and the request gives no applicable jurisdiction.",
+      "missing_material_requirement_or_null": "Jurisdiction-neutral or applicable-jurisdiction analytics-event privacy review"
+    },
+    {
+      "candidate_token": "C-B2269894652BEA57",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Step 4 - Turn on zero data retention where data is sensitive",
+      "rationale": "It can reduce retention for sensitive LLM traffic, but it does not provide a general analytics-event identifier audit or consent-minimisation workflow.",
+      "missing_material_requirement_or_null": "General analytics-event data inventory, minimisation, and consent review"
+    },
+    {
+      "candidate_token": "C-CB63CEFCE63A9E18",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This source builds Slack integrations and does not supply privacy assessment, data-minimisation, or consent guidance for analytics events.",
+      "missing_material_requirement_or_null": "Analytics-event privacy and consent review capability"
+    },
+    {
+      "candidate_token": "C-F6073A07286C9FE2",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Section 6 — Consent",
+      "rationale": "It covers consent, notices, retention, and rights, but it is scoped to India's DPDPA and the request does not establish that legal context.",
+      "missing_material_requirement_or_null": "Jurisdiction-neutral or applicable-jurisdiction analytics-event privacy review"
+    },
+    {
+      "candidate_token": "C-F6E28D740C78BC45",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source facilitates agile retrospectives and cannot assess personal-data collection, identifier minimisation, or consent.",
+      "missing_material_requirement_or_null": "Analytics-event privacy and consent review capability"
+    }
+  ],
+  "reviewer_output_sha256": "eef217b65ddf2f445328f00de7c45c6f71e3df758a1189957371f8e1fae1ef9e"
+}
