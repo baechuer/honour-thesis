@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0380",
+  "blind_packet_id": "P-4B45724C260797B5BE",
+  "batch_input_sha256": "b74ef64ede3c895d8114a298074ca20a3c4679913d4cc1e39cb15edcd7e4725f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1A0F594563209462",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Configuring JUnit4 on Android — The Right Runner, Registry, and Matrix",
+      "rationale": "It covers AndroidJUnit4 setup and size selection, but is principally a JVM/unit-test skill and directs on-device instrumentation, orchestrator, permissions, and animation details elsewhere.",
+      "missing_material_requirement_or_null": "Complete Android device-instrumentation configuration with orchestrator, permission, animation, and SDK handling"
+    },
+    {
+      "candidate_token": "C-2C2FBB28B7C3F293",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "This source provides Node.js and TypeScript development practice rather than Android instrumentation-test source sets, runners, or emulator reliability controls.",
+      "missing_material_requirement_or_null": "Android instrumentation test configuration and runnable device-test example"
+    },
+    {
+      "candidate_token": "C-383BE260779746CF",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Running Instrumented Tests with AndroidJUnit4 — Get the Runner Stack Right",
+      "rationale": "It directly provides the androidTest source setup, AndroidJUnitRunner wiring, Test Orchestrator, runtime permission rule, size filters, SDK suppression, animation control, and runnable commands/tests requested.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-5109EE1ADFD5429C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source structures team retrospective meetings and cannot configure Android device or emulator instrumentation tests.",
+      "missing_material_requirement_or_null": "Android instrumentation test configuration and runnable device-test example"
+    },
+    {
+      "candidate_token": "C-776CAB2817BCA2D2",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Migrating Off android.test.* — From the Platform's Legacy Test Classes to AndroidX Test",
+      "rationale": "It can migrate legacy Android tests to AndroidJUnitRunner and AndroidX size annotations, but assumes obsolete android.test classes and does not supply the requested full isolation, permission, animation, and SDK-control setup.",
+      "missing_material_requirement_or_null": "Complete current Android instrumentation configuration with orchestrator, permission, animation, and SDK handling"
+    },
+    {
+      "candidate_token": "C-85FF3257D83D932E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Local + Google Business Profile visibility",
+      "rationale": "This source handles local-search ranking and Google Business Profile content, not Android instrumentation testing.",
+      "missing_material_requirement_or_null": "Android instrumentation test configuration and runnable device-test example"
+    },
+    {
+      "candidate_token": "C-90207DD487DF5472",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "rationale": "This source reviews published user-research evidence and provides no Android test runner, device, or emulator configuration.",
+      "missing_material_requirement_or_null": "Android instrumentation test configuration and runnable device-test example"
+    },
+    {
+      "candidate_token": "C-B9929800EFD7BDE7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Print Layout",
+      "rationale": "This source prepares design files for commercial print and cannot configure or run Android instrumentation tests.",
+      "missing_material_requirement_or_null": "Android instrumentation test configuration and runnable device-test example"
+    }
+  ],
+  "reviewer_output_sha256": "c14ee9d2a0c7805d86e05f9f030b4eb41a65a72f689b63c32155ef2185ffd811"
+}
