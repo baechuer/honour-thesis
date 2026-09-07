@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0733",
+  "blind_packet_id": "P-E2FC762BF6AE46A51A",
+  "batch_input_sha256": "d160831674bc39d18faa8c6d97c94d184cabd8a64e5b85647ff0eefc371cfe27",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-25EA1B32D482E8E0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Works through the legal tax-reduction sequence",
+      "rationale": "Personal tax planning is unrelated to training or evaluating a retrieval model.",
+      "missing_material_requirement_or_null": "A sentence-transformer fine-tuning plan with pair splits, retrieval losses, and retrieval metrics."
+    },
+    {
+      "candidate_token": "C-2E4684526E5DA74C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "find, rank, or shortlist directories and listing sites",
+      "rationale": "Finding AI-product directories does not address model fine-tuning or retrieval evaluation.",
+      "missing_material_requirement_or_null": "A sentence-transformer training and retrieval-evaluation setup."
+    },
+    {
+      "candidate_token": "C-33121CEC7FCC94B7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Turns a vague request into a structured, reliable prompt",
+      "rationale": "Prompt design is not a plan for training a sentence-transformer retriever on labelled pairs and hard negatives.",
+      "missing_material_requirement_or_null": "Training losses, data splits, and retrieval metrics for a sentence-transformer model."
+    },
+    {
+      "candidate_token": "C-7E39A95B06189259",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Structures and facilitates sprint retrospectives",
+      "rationale": "Sprint-retrospective facilitation is unrelated to machine-learning fine-tuning or retrieval evaluation.",
+      "missing_material_requirement_or_null": "A sentence-transformer fine-tuning and retrieval-evaluation plan."
+    },
+    {
+      "candidate_token": "C-A907DB6C7D69C586",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "performing GO and KEGG enrichment on a gene list",
+      "rationale": "Gene-set enrichment analysis does not cover sentence-transformer training or agent-skill retrieval metrics.",
+      "missing_material_requirement_or_null": "A retriever fine-tuning setup for labelled skill-query pairs and hard negatives."
+    },
+    {
+      "candidate_token": "C-B4CD8DF9A99E4647",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Covers dataset prep, training runs, and model export.",
+      "rationale": "This provides useful generic dataset, training, held-out validation, and infrastructure guidance, but it is specifically for causal LLM fine-tuning rather than sentence-transformer retrieval training.",
+      "missing_material_requirement_or_null": "Sentence-transformer-specific contrastive or ranking losses, pair-safe splits, hard-negative handling, and retrieval metrics such as Recall@k, MRR, and nDCG."
+    },
+    {
+      "candidate_token": "C-D1B8E7E1C375CFB1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Builds Slack bots and integrations using the Slack API",
+      "rationale": "Slack-bot implementation does not provide a model fine-tuning or retrieval-evaluation workflow.",
+      "missing_material_requirement_or_null": "A sentence-transformer training and retrieval-metrics plan."
+    },
+    {
+      "candidate_token": "C-F7252FC5B97E8369",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Dataset preparation",
+      "rationale": "The generic fine-tuning workflow usefully covers dataset validation, held-out evaluation, and hyperparameter documentation, but it is written for causal LLM adapter tuning rather than sentence-transformer retrieval.",
+      "missing_material_requirement_or_null": "Sentence-transformer objectives and pair construction, leakage-safe query/pair splits, hard-negative treatment, and retrieval metrics."
+    }
+  ],
+  "reviewer_output_sha256": "0d934364a5efecb553646f054f511bf02696c97e150a05e0a5804301355bdafb"
+}
