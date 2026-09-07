@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "inadequate",
+      "candidate_token": "C-286FAA9409CA2FAB",
+      "missing_material_requirement_or_null": "CanDoItAll workflow API operations for external-key resolution, idempotent workflow-run launch, and workflow run evidence.",
+      "rationale": "This retrospective facilitation guide does not provide any HTTP API procedure for resolving or operating the requested workflow.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "fully",
+      "candidate_token": "C-5150EB67B939F20C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers stable workflow identity, lifecycle readback, idempotency-keyed workflow starts, run-detail/events/artifacts, SSE signals, and workflow analytics.",
+      "source_anchor": "## Runtime Work"
+    },
+    {
+      "adequacy": "partial",
+      "candidate_token": "C-517D5913C2F2A329",
+      "missing_material_requirement_or_null": "Workflow-specific external-key resolution, idempotency-safe workflow run start, and workflow artifact retrieval.",
+      "rationale": "It supplies related process launch, state, SSE, and analytics procedures, but its contract is for process runs rather than the requested workflow definition and run APIs.",
+      "source_anchor": "## Current Commands"
+    },
+    {
+      "adequacy": "inadequate",
+      "candidate_token": "C-6110FA75A2FE9B72",
+      "missing_material_requirement_or_null": "CanDoItAll HTTP API workflow lookup, lifecycle, idempotent run, signal, artifact, and analytics operations.",
+      "rationale": "This guide is limited to local Git collaboration and does not address the requested automation-service workflow operation.",
+      "source_anchor": "# Git Workflow"
+    },
+    {
+      "adequacy": "inadequate",
+      "candidate_token": "C-812F09E05F2AA9E3",
+      "missing_material_requirement_or_null": "CanDoItAll HTTP API workflow lookup, lifecycle, idempotent run, signal, artifact, and analytics operations.",
+      "rationale": "This skill surveys documented visual and interaction conventions and contains no workflow-service runtime procedure.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "inadequate",
+      "candidate_token": "C-A587FC918FFE6883",
+      "missing_material_requirement_or_null": "CanDoItAll HTTP API workflow lookup, lifecycle, idempotent run, signal, artifact, and analytics operations.",
+      "rationale": "This test-double design guide does not provide instructions for finding or operating an automation-service workflow.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "partial",
+      "candidate_token": "C-A763501092B5C888",
+      "missing_material_requirement_or_null": "Workflow-definition external-key resolution, workflow lifecycle inspection, and workflow-run operations rather than agent execution-run operations.",
+      "rationale": "It has analogous API guidance for agent external keys, idempotency, execution evidence, and SSE, but those routes govern agents, not the requested workflow.",
+      "source_anchor": "## Catalog And Configuration"
+    },
+    {
+      "adequacy": "inadequate",
+      "candidate_token": "C-DEEE109D375903F0",
+      "missing_material_requirement_or_null": "CanDoItAll HTTP API workflow lookup, lifecycle, idempotent run, signal, artifact, and analytics operations.",
+      "rationale": "This is a repo-local automation design guide, not an operational HTTP API contract for a named workflow run.",
+      "source_anchor": "## When to use this skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0907",
+  "batch_input_sha256": "6f28f4648101d976f34d57ec4d6f44c3fd5e4384343222c27298085463ba1f7f",
+  "blind_packet_id": "P-4E7FAA27859E1420B4",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1102ec34d8a07504312997a2d404c89a96c1f60387385659145eec1bd4d57e8f"
+}

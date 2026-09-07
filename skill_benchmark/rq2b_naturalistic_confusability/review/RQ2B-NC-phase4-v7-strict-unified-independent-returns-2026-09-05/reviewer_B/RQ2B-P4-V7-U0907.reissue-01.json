@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-286FAA9409CA2FAB",
+      "missing_material_requirement_or_null": "Workflow API identity lookup, idempotent run start, and run evidence retrieval.",
+      "rationale": "It facilitates sprint retrospectives, not workflow API operations.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5150EB67B939F20C",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It covers stable workflow identity, lifecycle readback, idempotent starts, SSE signals, artifacts, and analytics.",
+      "source_anchor": "## Runtime Work"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-517D5913C2F2A329",
+      "missing_material_requirement_or_null": "Workflow-definition external-key lookup, idempotent workflow start, and workflow artifact retrieval.",
+      "rationale": "It can observe and launch process runs with signals and analytics, but addresses processes rather than workflows.",
+      "source_anchor": "## Current Commands"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6110FA75A2FE9B72",
+      "missing_material_requirement_or_null": "CanDoItAll workflow HTTP API operations.",
+      "rationale": "It is limited to local Git collaboration and recovery.",
+      "source_anchor": "# Git Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-812F09E05F2AA9E3",
+      "missing_material_requirement_or_null": "CanDoItAll workflow HTTP API operations.",
+      "rationale": "It surveys documented UI conventions rather than operating workflows.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A587FC918FFE6883",
+      "missing_material_requirement_or_null": "CanDoItAll workflow HTTP API operations.",
+      "rationale": "It designs test doubles and provides no workflow runtime control.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A763501092B5C888",
+      "missing_material_requirement_or_null": "Workflow-definition external-key lookup, lifecycle control, and workflow run start.",
+      "rationale": "It supports agent runs, signals, artifacts, and execution evidence, but not workflow entities or their lifecycle.",
+      "source_anchor": "## Chat And Execution"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DEEE109D375903F0",
+      "missing_material_requirement_or_null": "CanDoItAll workflow HTTP API operations.",
+      "rationale": "It designs repository automation command surfaces rather than operating service workflows.",
+      "source_anchor": "# Workflow Automation"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0907",
+  "batch_input_sha256": "6f28f4648101d976f34d57ec4d6f44c3fd5e4384343222c27298085463ba1f7f",
+  "blind_packet_id": "P-4E7FAA27859E1420B4",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "d45d26f43ba5b1712910192c4b9e82908c7c0e04d262288ad55cb5510d679d94"
+}
