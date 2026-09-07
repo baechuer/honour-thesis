@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0730",
+  "blind_packet_id": "P-60E8EF60E185A6A9B7",
+  "batch_input_sha256": "51b2649d4ee14cbfd4b0ed337f0ced5f211fd053b326c9643102316bd0ddb087",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-10F789F713E0EB12",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Datadog Google Cloud integration",
+      "rationale": "The source configures Datadog monitoring access in Google Cloud and does not establish Argo CD GitOps on a self-managed Kubernetes cluster.",
+      "missing_material_requirement_or_null": "An on-prem GitOps deployment with Kubernetes-native access control, private registry, internal ingress, and multi-site rollout."
+    },
+    {
+      "candidate_token": "C-32991340A08B1A45",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Azure AKS cluster",
+      "rationale": "The source is explicitly for AKS and Azure AD Workload Identity, which conflicts with the stated self-managed environment that has no cloud identity layer.",
+      "missing_material_requirement_or_null": "Kubernetes-native service-account and RBAC access plus non-cloud private-registry and internal-ingress setup."
+    },
+    {
+      "candidate_token": "C-35387CB8EFF79C26",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "commercial print",
+      "rationale": "The source prepares artwork for commercial printing rather than configuring Kubernetes GitOps infrastructure.",
+      "missing_material_requirement_or_null": "A self-managed Kubernetes Argo CD GitOps deployment procedure."
+    },
+    {
+      "candidate_token": "C-6B0BDFE30664FA05",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "sprint retrospectives",
+      "rationale": "The source facilitates team retrospective meetings and does not configure Kubernetes, registry access, ingress, or GitOps rollout.",
+      "missing_material_requirement_or_null": "A self-managed Kubernetes Argo CD GitOps deployment procedure."
+    },
+    {
+      "candidate_token": "C-78356CB1D90F6DBA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "self-managed on-prem or bare-metal Kubernetes cluster with no cloud IAM",
+      "rationale": "The source directly covers Argo CD on a self-managed cluster without cloud IAM, using scoped ServiceAccount and RBAC access, private registry authentication, MetalLB plus ingress, and ApplicationSet multi-environment rollout.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8DB4CA70098CDD52",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "translating a whole application",
+      "rationale": "The source localizes application content and does not provide Kubernetes GitOps deployment or infrastructure configuration.",
+      "missing_material_requirement_or_null": "A self-managed Kubernetes Argo CD GitOps deployment procedure."
+    },
+    {
+      "candidate_token": "C-96093827412CF0DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Google GKE cluster",
+      "rationale": "The source requires GKE and Workload Identity Federation, which conflicts with the stated self-managed cluster and absence of a cloud identity layer.",
+      "missing_material_requirement_or_null": "Kubernetes-native service-account and RBAC access plus non-cloud private-registry and internal-ingress setup."
+    },
+    {
+      "candidate_token": "C-ACFFC55DCB1EAFD6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "GSVA or ssGSEA",
+      "rationale": "The source performs pathway-level expression analysis and does not address Kubernetes GitOps deployment.",
+      "missing_material_requirement_or_null": "A self-managed Kubernetes Argo CD GitOps deployment procedure."
+    }
+  ],
+  "reviewer_output_sha256": "1a74667ed0a3767e17b462131af675e539cc1e24190edfc7766faa5732f9101e"
+}

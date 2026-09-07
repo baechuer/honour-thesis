@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0730",
+  "blind_packet_id": "P-60E8EF60E185A6A9B7",
+  "batch_input_sha256": "51b2649d4ee14cbfd4b0ed337f0ced5f211fd053b326c9643102316bd0ddb087",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-10F789F713E0EB12",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Set up the Datadog Google Cloud integration with Terraform",
+      "rationale": "This configures Datadog monitoring in GCP rather than an on-prem Argo CD GitOps deployment.",
+      "missing_material_requirement_or_null": "A self-managed Kubernetes GitOps runbook with private registry, internal ingress, multi-site rollout, and least-privilege service-account access."
+    },
+    {
+      "candidate_token": "C-32991340A08B1A45",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "existing Azure AKS cluster",
+      "rationale": "This runbook depends on AKS and Azure AD Workload Identity, conflicting with the self-managed environment without a cloud identity layer.",
+      "missing_material_requirement_or_null": "A cloud-independent, self-managed Kubernetes GitOps deployment using Kubernetes-native service-account and RBAC access."
+    },
+    {
+      "candidate_token": "C-35387CB8EFF79C26",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Prepares a design for commercial print",
+      "rationale": "Commercial print preparation is unrelated to Kubernetes GitOps deployment or infrastructure configuration.",
+      "missing_material_requirement_or_null": "An Argo CD GitOps deployment runbook for the specified self-managed Kubernetes environment."
+    },
+    {
+      "candidate_token": "C-6B0BDFE30664FA05",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Structures and facilitates sprint retrospectives",
+      "rationale": "Sprint-retrospective facilitation does not provide a Kubernetes GitOps implementation.",
+      "missing_material_requirement_or_null": "A technical Argo CD deployment runbook covering access, registry, ingress, and multi-site rollout."
+    },
+    {
+      "candidate_token": "C-78356CB1D90F6DBA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "self-managed on-prem or bare-metal Kubernetes cluster with no cloud IAM shortcut available",
+      "rationale": "This directly covers an end-to-end Argo CD deployment for the specified self-managed setting, including ServiceAccount/RBAC-scoped access, private registry authentication, MetalLB and internal ingress, and ApplicationSet-based multi-environment rollout.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8DB4CA70098CDD52",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "End-to-end recipe for translating a whole application with Multilocale",
+      "rationale": "Application localization is unrelated to deploying GitOps infrastructure on Kubernetes.",
+      "missing_material_requirement_or_null": "A self-managed Kubernetes Argo CD deployment procedure."
+    },
+    {
+      "candidate_token": "C-96093827412CF0DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "existing Google GKE cluster",
+      "rationale": "This runbook relies on GKE Workload Identity Federation and Artifact Registry, which do not meet the no-cloud-identity, self-managed constraints.",
+      "missing_material_requirement_or_null": "A cloud-independent GitOps procedure using service-account/RBAC access and on-prem registry and ingress components."
+    },
+    {
+      "candidate_token": "C-ACFFC55DCB1EAFD6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "GSVA or ssGSEA pathway-level differential analysis",
+      "rationale": "Pathway enrichment analysis is unrelated to Kubernetes or GitOps configuration.",
+      "missing_material_requirement_or_null": "An end-to-end Argo CD GitOps deployment runbook for a self-managed Kubernetes environment."
+    }
+  ],
+  "reviewer_output_sha256": "285e1363bb4829b569a7975ac72d44beb13099e6e1dcc9afc03033fde3277994"
+}
