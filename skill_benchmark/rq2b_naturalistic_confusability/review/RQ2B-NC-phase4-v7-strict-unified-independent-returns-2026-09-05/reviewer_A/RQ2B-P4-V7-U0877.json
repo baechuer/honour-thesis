@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0877",
+  "blind_packet_id": "P-DB7FDA630637204157",
+  "batch_input_sha256": "f5683f9a779c413265c79a35fd9aff5e92a21e8b4b66242f5dde1dccf9e77f22",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-17492E022DE0F665",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "playwright-expert",
+      "rationale": "It can capture screenshots but also targets broader testing.",
+      "missing_material_requirement_or_null": "Minimal artifact-only capture workflow."
+    },
+    {
+      "candidate_token": "C-32C290322A9A321B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Playwright Testing",
+      "rationale": "It can capture pages but is broader than artifact-only capture.",
+      "missing_material_requirement_or_null": "Minimal artifact-only capture workflow."
+    },
+    {
+      "candidate_token": "C-3C88EDC8CEBD2513",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "evaluating-code-models",
+      "rationale": "It does not capture screenshots.",
+      "missing_material_requirement_or_null": "Local-page screenshot capture."
+    },
+    {
+      "candidate_token": "C-42F8CE7A901060FA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Test & Placeholder Data APIs",
+      "rationale": "It does not capture screenshots.",
+      "missing_material_requirement_or_null": "Local-page screenshot capture."
+    },
+    {
+      "candidate_token": "C-4C3F9914F0E9D0CC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "was-cluster",
+      "rationale": "It does not capture screenshots.",
+      "missing_material_requirement_or_null": "Local-page screenshot capture."
+    },
+    {
+      "candidate_token": "C-65A86142194292EB",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "frontend-craft",
+      "rationale": "It can work with frontend pages but not a focused capture artifact flow.",
+      "missing_material_requirement_or_null": "Local-page screenshot capture."
+    },
+    {
+      "candidate_token": "C-D59E7803810C4A4D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "GSVA",
+      "rationale": "It does not capture screenshots.",
+      "missing_material_requirement_or_null": "Local-page screenshot capture."
+    },
+    {
+      "candidate_token": "C-F9AC965D813DD359",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Redline Annotation",
+      "rationale": "It annotates artifacts rather than captures screenshots.",
+      "missing_material_requirement_or_null": "Local-page screenshot capture."
+    }
+  ],
+  "reviewer_output_sha256": "f91ddd81e9209799a385302f8b8d44b860b3e71dd7e989007cab58924c096e59"
+}

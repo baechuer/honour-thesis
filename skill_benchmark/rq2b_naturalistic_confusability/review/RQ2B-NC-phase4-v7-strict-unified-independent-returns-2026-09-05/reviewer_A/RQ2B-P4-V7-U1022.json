@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1022",
+  "blind_packet_id": "P-81B1ABF934B3836501",
+  "batch_input_sha256": "233a3009bad6ac523caf57cce7106abf436940e772bdf77794c089b7b3d03dc8",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-32BD8447907CE59A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "gokegg-analysis",
+      "rationale": "It does not convert documents to Markdown.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    },
+    {
+      "candidate_token": "C-5F12BC6D6A1C97D3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "slidev",
+      "rationale": "It supports Markdown presentation authoring but not faithful conversion of text-form layout cues.",
+      "missing_material_requirement_or_null": "Document layout-preserving Markdown conversion."
+    },
+    {
+      "candidate_token": "C-61DC19173C10210E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "nv-generate-ct-rflow",
+      "rationale": "It does not convert documents to Markdown.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    },
+    {
+      "candidate_token": "C-817AF0D2F3726940",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "It does not convert documents to Markdown.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    },
+    {
+      "candidate_token": "C-898686A03788B691",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "nature-polishing",
+      "rationale": "It can edit text but not preserve form-style layout cues during Markdown conversion.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    },
+    {
+      "candidate_token": "C-ABE911BDE65E7E3F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "paper-writing",
+      "rationale": "It structures technical documents but not source-layout faithful form conversion.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    },
+    {
+      "candidate_token": "C-DB90C3D42FE1F013",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "slack-bot-builder",
+      "rationale": "It does not convert documents to Markdown.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    },
+    {
+      "candidate_token": "C-DF78EA33985A6B56",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Captions From Transcript",
+      "rationale": "It transforms text into structured captions but not layout-faithful form Markdown.",
+      "missing_material_requirement_or_null": "Layout-preserving text-to-Markdown conversion."
+    }
+  ],
+  "reviewer_output_sha256": "35993be8e9d7c9adda36b2c9467f253df3755d8e0e493af017198bc75eb557bd"
+}

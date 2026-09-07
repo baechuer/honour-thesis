@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0851",
+  "blind_packet_id": "P-9DE5D8C4D042C91AC9",
+  "batch_input_sha256": "2fa27eea16939521fee3de95341f0117f3e51321981c8ec14c10139a80c8fdef",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0CE82615CE6A7A2C",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Flaky Test Detangler",
+      "rationale": "It helps test reliability but not the complete mobile E2E setup.",
+      "missing_material_requirement_or_null": "Mobile platform configuration, selectors, and CI journey tests."
+    },
+    {
+      "candidate_token": "C-36C4CF68E516CC76",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "find-software-developer",
+      "rationale": "It does not set up mobile E2E tests.",
+      "missing_material_requirement_or_null": "Mobile E2E test setup."
+    },
+    {
+      "candidate_token": "C-50FAD0D0FFAE24D6",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "maestro",
+      "rationale": "It supports readable mobile end-to-end journeys, reset, selectors, and CI execution.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-60E2B90C20253E01",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "appium",
+      "rationale": "It supports cross-platform iOS and Android native E2E automation with accessibility selectors.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-648D814AFBC68E73",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "ios-to-android",
+      "rationale": "It does not provide E2E testing setup.",
+      "missing_material_requirement_or_null": "Mobile E2E test setup."
+    },
+    {
+      "candidate_token": "C-827756E48ABBB03A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "playwright-expert",
+      "rationale": "It supports testing but is not for native mobile app E2E.",
+      "missing_material_requirement_or_null": "Native mobile iOS and Android E2E setup."
+    },
+    {
+      "candidate_token": "C-9F235E826B653FAC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual-prior-art-survey",
+      "rationale": "It does not set up mobile E2E tests.",
+      "missing_material_requirement_or_null": "Mobile E2E test setup."
+    },
+    {
+      "candidate_token": "C-EEF1F84AC50EA7B3",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "detox",
+      "rationale": "It directly supports JavaScript-native mobile E2E testing with synchronization and isolation.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "9c10e985ea2c9c31ae2421b07550e2a6ad9aeae6d2375da3eb698291551abf71"
+}
