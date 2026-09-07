@@ -1,0 +1,63 @@
+{
+  "claim_boundary": "Mechanical intake, validator replay, and target-blind routing only. No coordinator conclusion, opaque target join, acceptable set, library update, retrieval, metric, or thesis result is created.",
+  "frozen_inputs": {
+    "frozen_protocol_path": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "frozen_protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "machine_a_manifest_path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2_fresh_v20/machine_a_manifest.jsonl",
+    "machine_a_manifest_sha256": "068d7adcda5c81c8d5ec6c8cedfe48c2b5fbbd11a4da367d907f58d7056a9770",
+    "machine_a_source_commit": "71fb10eb297f4a9c5ae8d8bb4bec8dc8b955a0d8",
+    "machine_b_manifest_path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2_fresh_v20/machine_b_manifest.jsonl",
+    "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "machine_b_selection_ledger_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-full-raw-collection-validation-2026-09-08-v3/return_selection_replay.jsonl",
+    "machine_b_selection_ledger_sha256": "38d132b37bfc7bf9c95e679f83a79d8e717afe379298fab602fc03ec04d278ee",
+    "machine_b_source_commit": "ab7ea5a5a72d22c2e06fcdbcad2d2a0d70b0cbee",
+    "v7_unified_manifest_path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/unified_prompt_group_batch_manifest.jsonl",
+    "v7_unified_manifest_sha256": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55"
+  },
+  "mechanical_replay": {
+    "active_return_count": 2125,
+    "audit_replay_canonical_sha256": "ebbfe9a691a0a096e55dae4c755c088d798a807a0310db8d10a93af7fe03e58c",
+    "audit_replay_item_count": 3,
+    "audit_replay_passed": true,
+    "execution_replay_canonical_sha256": "94cb502bb35416d3bcd651a0b72f04f344e7adaeed0aa2213d29b9027d10bb7b",
+    "execution_replay_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS",
+    "machine_b_finalised_groups_created": 0,
+    "machine_b_ready_for_reconciliation_groups": 532,
+    "packet_hash_k6_two_tail_blindness_replay": "PASS",
+    "retained_invalid_or_missing_return_count": 7,
+    "return_validation_counts": {
+      "INVALID_RETAINED": 2,
+      "MISSING_RETAINED": 3,
+      "NO_APPROVED_ACTIVE_RETURN": 2,
+      "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION": 2125
+    },
+    "unselected_validator_passing_return_count": 2
+  },
+  "prohibitions_honoured": [
+    "no raw return copied or overwritten",
+    "no target join",
+    "no coordinator conclusion",
+    "no acceptable set",
+    "no library update",
+    "no K=8 amendment"
+  ],
+  "routing": {
+    "direct_reconciliation_eligible_groups": 228,
+    "gate_docket_groups": 6,
+    "group_route_counts": {
+      "DIRECT_RECONCILIATION_ELIGIBLE": 228,
+      "GATE_DOCKET": 6,
+      "SEALED_COORDINATOR_ELIGIBLE": 832
+    },
+    "sealed_coordinator_eligible_groups": 832
+  },
+  "schema_version": "rq2b_nc_phase5_v7_mechanical_integration_report_v1",
+  "scope_checks": {
+    "combined_pending_groups": 1066,
+    "machine_a_groups": 533,
+    "machine_b_groups": 533,
+    "machine_scope_coverage_complete": true,
+    "machine_scope_disjoint": true,
+    "v7_unified_manifest_identical_across_source_commits": true
+  }
+}
