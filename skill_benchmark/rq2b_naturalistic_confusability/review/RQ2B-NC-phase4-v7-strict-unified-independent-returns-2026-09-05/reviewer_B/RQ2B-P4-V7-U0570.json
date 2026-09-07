@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0570",
+  "blind_packet_id": "P-C46DE56283C03D113A",
+  "batch_input_sha256": "edc8a3a53c8d0bc103acc573df8c115c17ab7e3193d4f6e3e46df607ac9d895c",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2FC30FEA918B6272",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "It builds Slack bots and recommends hosts such as Render, ECS, Cloud Run, or AWS Lambda, not publication of a worker and static assets to Cloudflare Pages or Workers.",
+      "missing_material_requirement_or_null": "Cloudflare Pages or Workers deployment configuration and required Wrangler or Cloudflare platform checks."
+    },
+    {
+      "candidate_token": "C-4E49FB33EF599A8F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Vercel Firewall and BotID",
+      "rationale": "It configures Vercel edge security after a Vercel deployment, which neither publishes the requested assets and worker nor meets the explicit Cloudflare-only platform constraint.",
+      "missing_material_requirement_or_null": "Deployment of the worker and static assets to Cloudflare Pages or Workers with Wrangler or Cloudflare validation."
+    },
+    {
+      "candidate_token": "C-7066B25CBD0C67EB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Remotion Compose",
+      "rationale": "It writes a Remotion video composition for local preview and does not provide a Cloudflare deployment route for a worker or static assets.",
+      "missing_material_requirement_or_null": "Cloudflare Pages or Workers publication and required platform checks."
+    },
+    {
+      "candidate_token": "C-84E9EBB8B4315E14",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Overview",
+      "rationale": "It is a security prior-art research methodology that produces survey artifacts rather than deploying application assets to Cloudflare.",
+      "missing_material_requirement_or_null": "Cloudflare Pages or Workers deployment configuration and required Wrangler or Cloudflare platform checks."
+    },
+    {
+      "candidate_token": "C-93B064C62BB7811E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Vercel Rendering and Caching",
+      "rationale": "It selects caching and rendering strategies for an already deployed Vercel application, a platform expressly excluded by the request, and does not publish a Cloudflare worker or static assets.",
+      "missing_material_requirement_or_null": "Cloudflare Pages or Workers deployment with Wrangler or Cloudflare platform validation."
+    },
+    {
+      "candidate_token": "C-994D57758B922169",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Phase 4 — Cloudflare Markdown for Agents",
+      "rationale": "It contains a Cloudflare-specific configuration and verification path for Markdown edge conversion, but it does not deploy the requested worker and static assets or perform the required Wrangler platform checks.",
+      "missing_material_requirement_or_null": "Cloudflare Pages or Workers publication of the worker and static assets, including Wrangler or platform deployment validation."
+    },
+    {
+      "candidate_token": "C-D60B806CF65A000D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "It facilitates sprint retrospectives and action tracking, not deployment of application assets or workers to Cloudflare.",
+      "missing_material_requirement_or_null": "Cloudflare Pages or Workers deployment with required Wrangler or platform checks."
+    },
+    {
+      "candidate_token": "C-F0C0948ED987B7F0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Umami",
+      "rationale": "It configures privacy-focused website analytics and discusses unrelated hosting options, but provides no Cloudflare Pages or Workers publication workflow.",
+      "missing_material_requirement_or_null": "Cloudflare deployment of the worker and static assets with Wrangler or platform validation."
+    }
+  ],
+  "reviewer_output_sha256": "bbbf550b975e6936cd4d545045aa78404bd3c5ec45b07e2bd28ade2b40dbe765"
+}
