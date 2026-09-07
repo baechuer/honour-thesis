@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0652",
+  "blind_packet_id": "P-CCC8402716695C13CE",
+  "batch_input_sha256": "299577d4974f1b558d423994a4bda39990ecf03dba10790e42d5338a88dbdc24",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1479913E174E0567",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Complete CI/CD Pipeline Deployment for Kubernetes, From Scratch",
+      "rationale": "This skill builds a Kubernetes CI/CD pipeline and has no commerce catalog, appointment booking, or Wix backend setup capability.",
+      "missing_material_requirement_or_null": "Commerce and appointment backend configuration, seeded products and sessions, and a frontend SDK integration handoff for a separately hosted application."
+    },
+    {
+      "candidate_token": "C-3A611EC94D405904",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This skill facilitates team retrospectives and does not configure business commerce or booking capabilities.",
+      "missing_material_requirement_or_null": "Commerce and appointment backend configuration, seeded products and sessions, and a frontend SDK integration handoff for a separately hosted application."
+    },
+    {
+      "candidate_token": "C-3C4F94E1DA9E29EF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Wix Vibe Headless — client-only REST connectors",
+      "rationale": "It can guide a separate frontend through live Wix Stores and Bookings REST integration, but it is deliberately read-only and never installs apps or provisions the initial catalog and bookable sessions.",
+      "missing_material_requirement_or_null": "Backend capability installation and initial product and booking-session provisioning."
+    },
+    {
+      "candidate_token": "C-45E1AA2594409676",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Wix Headless",
+      "rationale": "Its backend-only flow installs the needed Wix business apps, seeds backend content, and emits an SDK guide with capability call shapes, seeded IDs, and packages while leaving frontend, build, and hosting ownership to the separate team.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8A6B892BBB370EED",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# OpenContext",
+      "rationale": "This skill manages project memory and handoff context, not commerce or booking system configuration.",
+      "missing_material_requirement_or_null": "Commerce and appointment backend configuration, seeded products and sessions, and a frontend SDK integration handoff for a separately hosted application."
+    },
+    {
+      "candidate_token": "C-9D3D5FE412B7A912",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Wix Headless Fast",
+      "rationale": "It can deploy supported Wix commerce and booking code and seed the backend, but it is a managed frontend-building path and explicitly routes backend-only or self-managed work to Wix Headless rather than producing the required independent-team handoff.",
+      "missing_material_requirement_or_null": "A backend-only setup flow that emits the SDK integration handoff without owning the frontend or hosting."
+    },
+    {
+      "candidate_token": "C-9F07A9C11CBA3EE6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "This skill surveys documented UI conventions and does not configure an operational commerce or appointment backend.",
+      "missing_material_requirement_or_null": "Commerce and appointment backend configuration, seeded products and sessions, and a frontend SDK integration handoff for a separately hosted application."
+    },
+    {
+      "candidate_token": "C-E0D5AF0F40888B43",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UX Heuristics Framework",
+      "rationale": "This skill audits interface usability and does not set up commerce, booking, or backend integration services.",
+      "missing_material_requirement_or_null": "Commerce and appointment backend configuration, seeded products and sessions, and a frontend SDK integration handoff for a separately hosted application."
+    }
+  ],
+  "reviewer_output_sha256": "426d22f0e67ea9c198c8bd2e81599565f0676fafabf0e9d2a12211f069523442"
+}

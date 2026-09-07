@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0651",
+  "blind_packet_id": "P-97A0C7BD2E2D370BD4",
+  "batch_input_sha256": "c7bc20218d6ae5bec9f9ac3fc6563048c82109c61dd636abc463b13533c452b0",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2F58F48076AEF900",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When to Use",
+      "rationale": "This runs pathway-level gene-expression analysis and heatmap generation, not Node.js CLI requirement design.",
+      "missing_material_requirement_or_null": "Actionable CLI feature brief with focused clarification, acceptance scenarios, machine-readable behavior, exit statuses, and dry-run design."
+    },
+    {
+      "candidate_token": "C-455E9BF1B846330C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Overview",
+      "rationale": "This converts documents and files into Markdown rather than specifying or validating a customer-duplicate reporting CLI.",
+      "missing_material_requirement_or_null": "Node.js CLI feature specification with output and error contracts, acceptance scenarios, and delivery checklist."
+    },
+    {
+      "candidate_token": "C-8106BC8F2A831590",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "wp-requirements-to-goals",
+      "rationale": "It turns requirements into clarification-driven, verifiable goal plans with delivery scaffolding, but it is constrained to multi-goal WordPress plugins rather than Node.js CLI design and machine-readable CLI conventions.",
+      "missing_material_requirement_or_null": "Node.js CLI-focused feature brief with structured output, stdout and stderr separation, exit statuses, and dry-run behavior."
+    },
+    {
+      "candidate_token": "C-BAA3E756D8E7EA88",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Multilocale CLI",
+      "rationale": "This operates a specific localization service CLI and does not turn a rough product requirement into a new tool's feature brief.",
+      "missing_material_requirement_or_null": "CSV duplicate-reporting CLI requirements, acceptance tests, and delivery checklist."
+    },
+    {
+      "candidate_token": "C-C155AC5E3B81E3D4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Core flow",
+      "rationale": "It converts vague specifications into clarification-led and verifiable goal artifacts, but is WordPress-specific and relies on plugin and browser verification rather than Node.js CLI output contracts.",
+      "missing_material_requirement_or_null": "Machine-oriented Node.js CLI behavior for JSON output, stdout and stderr separation, exit statuses, and dry-run mode."
+    },
+    {
+      "candidate_token": "C-C6E59B895A6FCA43",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "cli-spec-to-goal",
+      "rationale": "It directly converts a rough Node.js CLI specification into a clarification-led, verifiable feature bundle and explicitly bakes in JSON output, stdout and stderr separation, meaningful exit codes, structured errors, and dry-run behavior.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-D6A37C66D0494117",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This facilitates sprint retrospectives and does not design command-line tools or their verifiable contracts.",
+      "missing_material_requirement_or_null": "Node.js CLI requirements, machine-readable output contract, acceptance scenarios, delivery checklist, and dry-run semantics."
+    },
+    {
+      "candidate_token": "C-E10A48E294AD68EB",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Workflow",
+      "rationale": "It diagnoses and deduplicates CSV data while preserving data-loss accounting, which informs duplicate-detection behavior, but it does not specify a reusable Node.js CLI interface or delivery criteria.",
+      "missing_material_requirement_or_null": "Feature brief with focused behavior questions, machine-readable CLI output, stderr and exit-code contract, dry-run, acceptance scenarios, and checklist."
+    }
+  ],
+  "reviewer_output_sha256": "bd0e847c2fa2e63bea97b84d6533ba5487367370ee88da42e1e5adc549cdedc8"
+}

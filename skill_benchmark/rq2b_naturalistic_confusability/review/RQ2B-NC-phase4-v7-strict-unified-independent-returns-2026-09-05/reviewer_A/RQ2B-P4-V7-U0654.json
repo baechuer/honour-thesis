@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0654",
+  "blind_packet_id": "P-42003793FE761E5DED",
+  "batch_input_sha256": "2638dcfd05f12a9c6b55102672aaf41d550f254b09e1094ec04658a88fc1ac14",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-01322296E9860397",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When to Use",
+      "rationale": "This performs gene-expression pathway analysis and heatmap generation, not legal-document extraction into a comparison workbook.",
+      "missing_material_requirement_or_null": "Shareholder-agreement field extraction using fixed columns, supported values, and checkable source locations."
+    },
+    {
+      "candidate_token": "C-0693AB2FE8466A54",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Skill Capabilities",
+      "rationale": "It programmatically edits existing Excel workbooks, which supports updating the fixed template, but lacks shareholder-agreement field extraction, controlled values, and legal source references.",
+      "missing_material_requirement_or_null": "Document-grounded shareholder-agreement extraction using the workbook's prescribed columns and retained clause locations."
+    },
+    {
+      "candidate_token": "C-0D8F4ECDF555A3BF",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Shareholder Agreement Tabular Review",
+      "rationale": "It independently extracts shareholder-agreement information into the predefined tabular columns, uses only document-supported values, retains clause and section references, and exports the completed workbook.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-0FC128C51A18BDA0",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Preserve Existing Templates",
+      "rationale": "It preserves existing workbook formats and conventions when editing a spreadsheet, but does not extract shareholder-agreement terms or determine supported legal values and citations.",
+      "missing_material_requirement_or_null": "Legal-document review mapped to each existing comparison column with document-grounded locations."
+    },
+    {
+      "candidate_token": "C-2E4E07E5F8416D30",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This facilitates sprint retrospectives rather than completing a legal-comparison workbook.",
+      "missing_material_requirement_or_null": "Shareholder-agreement term extraction, fixed-column population, evidence-supported values, and clause locations."
+    },
+    {
+      "candidate_token": "C-603DF442329557E4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Instructions",
+      "rationale": "It performs a substantive shareholder-agreement legal review with clause references, but produces a party-specific risk table rather than completing the investment team's fixed workbook columns using supported values.",
+      "missing_material_requirement_or_null": "Predefined-column extraction into the existing workbook and traceable source locations for every populated entry."
+    },
+    {
+      "candidate_token": "C-C26F82F79165BA24",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Invoke This Skill When",
+      "rationale": "This configures error-monitoring SDK support for a React Router application, unrelated to legal agreement review or spreadsheets.",
+      "missing_material_requirement_or_null": "Shareholder-agreement extraction into a fixed workbook with supported values and evidence locations."
+    },
+    {
+      "candidate_token": "C-E346FCBDC0274F01",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This evaluates delivery, morale, and clarity for a team, not corporate agreements or financial workbook fields.",
+      "missing_material_requirement_or_null": "Shareholder-agreement comparison values, fixed template completion, and clause-level verification locations."
+    }
+  ],
+  "reviewer_output_sha256": "671ee3bb3cc2d10a83ff76d2a1bda19c051d811174d08d7faace226208289316"
+}
