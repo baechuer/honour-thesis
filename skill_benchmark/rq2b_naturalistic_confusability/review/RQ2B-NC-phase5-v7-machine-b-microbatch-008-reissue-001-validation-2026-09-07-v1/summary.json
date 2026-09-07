@@ -1,0 +1,21 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_008_reissue_001_validation_v1",
+  "scope": "Machine B V7 target-blind reissue validation only.",
+  "status": "PARTIAL_INVALID_PRESERVE_ORIGINAL_LANE_B_REISSUE_REQUIRED",
+  "batch_id": "RQ2B-P4-V7-U0527",
+  "lanes": {
+    "A": {
+      "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_REISSUE_RETURN_VALIDATION",
+      "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-001-2026-09-07-v1/returns/reviewer_A/RQ2B-P4-V7-U0527.json",
+      "raw_return_sha256": "2fae5f7a8f5472e115a2a39171683ca13393819b41e56cba9db345dfafaebb5a",
+      "reviewer_output_sha256": "1f90eb5d37c8f3fbd172485ff2bcbfd33a04c962a169e4777b3f6f52159994b5"
+    },
+    "B": {
+      "validation": "INVALID_PRESERVE_ORIGINAL_REISSUE_REQUIRED",
+      "failure_reason": "V7 assessment adequacy, source-anchor or rationale drift",
+      "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-001-2026-09-07-v1/returns/reviewer_B/RQ2B-P4-V7-U0527.json",
+      "raw_return_sha256": "92846f8bc0c39269a25ba071e526b94a411aae89f6a641db631e14aac4cd8ab2"
+    }
+  },
+  "claim_boundary": "No reconciliation, final disposition, opaque target join, acceptable set, main-tail designation, retrieval claim, or library claim is materialised."
+}\n

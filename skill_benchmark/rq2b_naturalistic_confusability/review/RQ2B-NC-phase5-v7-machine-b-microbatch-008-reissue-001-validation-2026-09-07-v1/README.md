@@ -1,0 +1,1 @@
+# V7 Machine B M8 reissue 001 validation\n\nThe A reissue return validates. The B reissue return is preserved but invalid, so only B receives a traceable reissue. This preserves the valid A return and does not open reconciliation.\n
