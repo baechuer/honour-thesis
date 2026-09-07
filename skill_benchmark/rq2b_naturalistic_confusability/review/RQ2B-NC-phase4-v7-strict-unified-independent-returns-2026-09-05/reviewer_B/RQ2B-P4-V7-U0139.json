@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-05A383FDBD012850",
+      "missing_material_requirement_or_null": "A scheduled source-ingestion and summary-notification workflow that preserves the existing workbook layout.",
+      "rationale": "It supports row appends, range formulas, and charts, but does not define scheduled multi-source ingestion or summary delivery.",
+      "source_anchor": "This skill enables programmatic creation, editing, and manipulation of Microsoft Excel (.xlsx) spreadsheets using the **openpyxl** library."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0833C130978CD66E",
+      "missing_material_requirement_or_null": "A scheduled spreadsheet workflow for source appends, formulas, chart refresh, and summary delivery.",
+      "rationale": "It converts WordPress requirements into goal-project files rather than automating a spreadsheet workflow.",
+      "source_anchor": "# wp-requirements-to-goals — Full WP Plugin Requirements → Codex /goal Project"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-413994B538760FD5",
+      "missing_material_requirement_or_null": "Spreadsheet data ingestion, formula maintenance, chart refresh, and scheduled notification capabilities.",
+      "rationale": "It converts Markdown into Office documents and does not automate workbook updates or reporting.",
+      "source_anchor": "This skill enables conversion from Markdown to various Office formats using **Pandoc**"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5C71EFF9D226C948",
+      "missing_material_requirement_or_null": "A scheduled spreadsheet data pipeline with formula, chart, and summary operations.",
+      "rationale": "It focuses on marketing assessment funnels rather than spreadsheet synchronization or reporting.",
+      "source_anchor": "# Scorecard Marketing Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-86FA2E70BE5515D4",
+      "missing_material_requirement_or_null": "A scheduled spreadsheet workflow for operational sources, formulas, charts, and summaries.",
+      "rationale": "It performs gene-set enrichment analysis and provides no relevant workbook automation.",
+      "source_anchor": "Run GSEA on a ranked gene list and produce the enrichment table, running-score table, and enrichment plots."
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-95DE66F18F8C9C32",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It describes scheduled multi-source appends, spreadsheet formula patterns, chart refresh, and Slack or email summaries for reporting workflows.",
+      "source_anchor": "Automated data sync from multiple sources"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9E7CCD17F0B640B7",
+      "missing_material_requirement_or_null": "A spreadsheet automation workflow that ingests data, maintains formulas and charts, and sends summaries.",
+      "rationale": "It facilitates team retrospectives and contains no spreadsheet data-processing workflow.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-AA7D5468F12B0C97",
+      "missing_material_requirement_or_null": "Direct support for preserving and updating an existing grid-and-range-formula spreadsheet workbook.",
+      "rationale": "It covers scheduled database automations, reporting, and formulas, but is oriented to Airtable rather than the stated cell-based workbook structure.",
+      "source_anchor": "# Airtable Automation"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0139",
+  "batch_input_sha256": "f1c7a33f8cf032af83417e601c1ce239b47adcb864579b3a31c01eb341a0865b",
+  "blind_packet_id": "P-107B5D19AD63DA75DC",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8e670adcc34e1c1fe8e342dd4d758ab3a8150f2523deb9009d1524d5170ea117"
+}

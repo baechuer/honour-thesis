@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-05A383FDBD012850",
+      "missing_material_requirement_or_null": "A scheduled source-integration and notification step that safely preserves the existing workbook layout.",
+      "rationale": "It covers loading an existing workbook, appending rows, formulas, and chart creation, but not recurring source ingestion or summary delivery.",
+      "source_anchor": "XLSX Manipulation Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0833C130978CD66E",
+      "missing_material_requirement_or_null": "A workbook automation workflow for scheduled row appends, range-based weekly totals, chart refresh, and summary delivery.",
+      "rationale": "This is a WordPress-plugin project-scaffolding workflow, not a workbook data-synchronization or reporting workflow.",
+      "source_anchor": "wp-requirements-to-goals — Full WP Plugin Requirements → Codex /goal Project"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-413994B538760FD5",
+      "missing_material_requirement_or_null": "A scheduled workbook data-ingestion, formula-maintenance, chart-refresh, and notification workflow.",
+      "rationale": "It is a Markdown-to-Office conversion skill and does not provide the requested recurring workbook automation.",
+      "source_anchor": "Markdown to Office Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5C71EFF9D226C948",
+      "missing_material_requirement_or_null": "A scheduled workbook data-ingestion, formula-maintenance, chart-refresh, and notification workflow.",
+      "rationale": "It designs marketing scorecard funnels rather than spreadsheet or workbook automation.",
+      "source_anchor": "Scorecard Marketing Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-86FA2E70BE5515D4",
+      "missing_material_requirement_or_null": "A scheduled workbook data-ingestion, formula-maintenance, chart-refresh, and notification workflow.",
+      "rationale": "It is scoped to gene-set enrichment analysis on ranked gene lists, not business-workbook automation.",
+      "source_anchor": "Running GSEA on a gene list ranked by a statistic"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-95DE66F18F8C9C32",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It supplies scheduled multi-source ingestion, append-row updates, automatic chart refresh, summaries, and weekly reporting across sales, marketing, and support sheets.",
+      "source_anchor": "Multi-Source Data Aggregation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9E7CCD17F0B640B7",
+      "missing_material_requirement_or_null": "A scheduled workbook data-ingestion, formula-maintenance, chart-refresh, and notification workflow.",
+      "rationale": "It facilitates sprint retrospectives and owned actions, not spreadsheet data or reporting automation.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AA7D5468F12B0C97",
+      "missing_material_requirement_or_null": "A cell-based workbook automation workflow that appends rows while retaining formulas and charts, calculates weekly totals, and sends summaries.",
+      "rationale": "It is an Airtable-base automation skill rather than a workflow for the existing cell-based workbook and its grid formulas.",
+      "source_anchor": "Airtable Automation"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0139",
+  "batch_input_sha256": "f1c7a33f8cf032af83417e601c1ce239b47adcb864579b3a31c01eb341a0865b",
+  "blind_packet_id": "P-107B5D19AD63DA75DC",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "b73db8fdf3cb40968245da7c2772894acf706db8fe22ec7c2e557e5ed4793a29"
+}
