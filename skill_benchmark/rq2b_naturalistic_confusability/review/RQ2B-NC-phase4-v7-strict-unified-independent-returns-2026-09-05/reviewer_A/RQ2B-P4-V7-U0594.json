@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E7FBCDBFB6AD292",
+      "missing_material_requirement_or_null": "Wix managed-store build, data seeding, and release workflow",
+      "rationale": "Facilitates sprint retrospectives only; it provides no ecommerce implementation or hosting.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-49D90278C3763FEC",
+      "missing_material_requirement_or_null": "Ready-made typed storefront integration building blocks",
+      "rationale": "It can create, seed, build, and release a managed Wix storefront, but says the frontend is built ad-hoc rather than from shipped typed blocks.",
+      "source_anchor": "There is no Designer or template library"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-91EFE67B4D645CF5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly supports managed Astro storefronts with shipped typed SDK code, seed scripts, product and cart/checkout surfaces, editable SEO, and release.",
+      "source_anchor": "The model"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B201743CC3A470A8",
+      "missing_material_requirement_or_null": "Managed Astro commerce storefront with seeded products, cart, checkout, and publication",
+      "rationale": "Performs gene-list enrichment and dot-chart reporting, unrelated to storefront construction.",
+      "source_anchor": "When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C0340B677B47DD94",
+      "missing_material_requirement_or_null": "Wix managed storefront implementation and publication",
+      "rationale": "Sequences Azure MLOps deployment and contains no ecommerce or Astro/Wix workflow.",
+      "source_anchor": "Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D10AA8C16374154C",
+      "missing_material_requirement_or_null": "Managed Astro commerce storefront with seeded products, cart, checkout, and publication",
+      "rationale": "Provides mobile UI test flows, not construction, seeding, or release of a commerce site.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E2D68F4B40B32952",
+      "missing_material_requirement_or_null": "Wix managed storefront implementation with Astro, product seeding, hosted checkout, and publication",
+      "rationale": "Automates Amazon marketplace operations, not a Wix-hosted customer storefront.",
+      "source_anchor": "Core Workflows"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F25BD171B05E8502",
+      "missing_material_requirement_or_null": "Managed Wix Astro build with seeded products and a published site",
+      "rationale": "It is REST-only wiring for an existing front end, explicitly excludes SDK/CLI new-site creation, provisioning, and publishing.",
+      "source_anchor": "When NOT to use this skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0594",
+  "batch_input_sha256": "17499588fd5f62c59ccae988e190ebf20fd07e5f0850dc8e68a8c162f77d54d2",
+  "blind_packet_id": "P-9615E2384C0A6E4345",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "34be635383451c87152f42fb8c2e3e3ab8068fbfe5d052ce26c841220f8ee218"
+}
