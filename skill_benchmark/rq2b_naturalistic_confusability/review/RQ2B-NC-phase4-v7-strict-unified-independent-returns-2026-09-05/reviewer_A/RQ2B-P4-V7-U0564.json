@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0564",
+  "blind_packet_id": "P-1259370D721C87EA8D",
+  "batch_input_sha256": "ffc0aaf34f3e22971e95e710c4814221acc40aff89118080ba3fbfe823463209",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3D42506443DCF0E2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Bond Futures Basis Analysis",
+      "rationale": "This analyzes a bond future, its delivery basket, and cheapest-to-deliver mechanics, rather than comparing two corporate cash bonds for relative value and credit-spread stress.",
+      "missing_material_requirement_or_null": "A two-corporate-bond relative-value workflow with credit-spread decomposition, expected cashflows, and the requested rate and spread stresses."
+    },
+    {
+      "candidate_token": "C-4E0C8173F24382E8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This runs gene-set enrichment analysis on ranked gene lists and has no fixed-income pricing, spread, or scenario-analysis capability.",
+      "missing_material_requirement_or_null": "Corporate-bond relative-value analysis using price, yield, curves, spreads, cashflows, and stress scenarios."
+    },
+    {
+      "candidate_token": "C-54F123D492345BA6",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Fixed Income Portfolio Analysis",
+      "rationale": "This can price multiple bonds, project cashflows, obtain rate-curve context, and run rate scenarios, but it is a portfolio-review workflow rather than a corporate-bond relative-value decomposition with the requested credit-spread widening stress.",
+      "missing_material_requirement_or_null": "A documented two-bond richness-versus-cheapness decomposition using credit-spread comparison and a 30-basis-point spread-widening scenario."
+    },
+    {
+      "candidate_token": "C-60C5F3572BDC73EC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# AI SEO",
+      "rationale": "This optimizes website content for AI search visibility and cannot price or compare corporate bonds.",
+      "missing_material_requirement_or_null": "Fixed-income relative-value analytics and bond stress testing."
+    },
+    {
+      "candidate_token": "C-65ADDD0AC4FB8309",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# RE Negotiation Prep",
+      "rationale": "This prepares real-estate offer negotiations and does not perform bond pricing, curve, spread, or cashflow analysis.",
+      "missing_material_requirement_or_null": "Corporate-bond relative-value analysis with rate and credit-spread scenarios."
+    },
+    {
+      "candidate_token": "C-6A4F81D926142F6C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSAP Core",
+      "rationale": "This is a JavaScript animation-library skill and has no financial-instrument analytical workflow.",
+      "missing_material_requirement_or_null": "Pricing, curve, credit-spread, cashflow, and scenario analysis for corporate bonds."
+    },
+    {
+      "candidate_token": "C-A2EE83C705C19EBA",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Bond Relative Value Analysis",
+      "rationale": "This directly supports corporate-bond richness-versus-cheapness analysis using prices, curves, credit spreads, and rate scenarios, but its documented workflow does not provide expected cashflows or the requested 30-basis-point credit-spread-widening stress.",
+      "missing_material_requirement_or_null": "Expected cashflow analysis and a documented spread-widening scenario for both bonds."
+    },
+    {
+      "candidate_token": "C-EF2E05137CE96113",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This structures team retrospectives and cannot conduct fixed-income pricing or relative-value analysis.",
+      "missing_material_requirement_or_null": "Corporate-bond price, yield, curve, spread, cashflow, and stress-test analysis."
+    }
+  ],
+  "reviewer_output_sha256": "b38b31dad7a96c0f8c5f8696440c75ff6709ef8151686be6bea47b6e5989c790"
+}

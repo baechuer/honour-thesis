@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0564",
+  "blind_packet_id": "P-1259370D721C87EA8D",
+  "batch_input_sha256": "ffc0aaf34f3e22971e95e710c4814221acc40aff89118080ba3fbfe823463209",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3D42506443DCF0E2",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Bond Futures Basis Analysis",
+      "rationale": "It evaluates fixed-income relative value using cash-bond pricing, curves, and credit context, but its workflow is for a futures-versus-cheapest-to-deliver basis trade rather than comparing two corporate bonds.",
+      "missing_material_requirement_or_null": "A two-corporate-bond richness comparison including expected cashflows and the specified rate and credit-spread shocks."
+    },
+    {
+      "candidate_token": "C-4E0C8173F24382E8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "It runs gene-set enrichment analysis and produces biological enrichment outputs, not fixed-income relative-value analysis or bond stress testing.",
+      "missing_material_requirement_or_null": "Corporate-bond pricing, curve and credit-spread decomposition, cashflow analysis, and rate and spread stress testing."
+    },
+    {
+      "candidate_token": "C-54F123D492345BA6",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Fixed Income Portfolio Analysis",
+      "rationale": "It prices multiple bonds, projects cashflows, provides curve context, and runs rate scenarios, but it is a portfolio workflow rather than a two-bond richness comparison and does not specify the required credit-spread-widening test.",
+      "missing_material_requirement_or_null": "A relative credit-spread decomposition and richness-versus-cheapness conclusion for the two bonds under a 30-basis-point spread widening."
+    },
+    {
+      "candidate_token": "C-60C5F3572BDC73EC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# AI SEO",
+      "rationale": "It optimizes web content for citation by AI search systems, with no bond valuation, credit analysis, or fixed-income scenario methodology.",
+      "missing_material_requirement_or_null": "Corporate-bond relative-value analysis using prices, yields, curves, credit spreads, cashflows, and the specified stress tests."
+    },
+    {
+      "candidate_token": "C-65ADDD0AC4FB8309",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# RE Negotiation Prep",
+      "rationale": "It supports real-estate offer and inspection negotiations rather than valuing or comparing corporate bonds.",
+      "missing_material_requirement_or_null": "Corporate-bond relative-value analysis and rate and credit-spread stress testing."
+    },
+    {
+      "candidate_token": "C-6A4F81D926142F6C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSAP Core",
+      "rationale": "It documents a JavaScript animation library and contains no fixed-income pricing, credit-spread, cashflow, or scenario-analysis route.",
+      "missing_material_requirement_or_null": "Corporate-bond relative-value analysis with the requested decomposition and stress testing."
+    },
+    {
+      "candidate_token": "C-A2EE83C705C19EBA",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Bond Relative Value Analysis",
+      "rationale": "It directly supports bond price, yield-curve, credit-curve, and residual-spread analysis with rate scenarios and a rich-or-cheap conclusion, but its specified scenarios are parallel rate shifts and it does not supply expected-cashflow analysis or the required 30-basis-point spread-widening test.",
+      "missing_material_requirement_or_null": "Expected-cashflow decomposition and an explicit 30-basis-point credit-spread-widening stress test for both bonds."
+    },
+    {
+      "candidate_token": "C-EF2E05137CE96113",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "It facilitates sprint retrospective meetings and action tracking, not fixed-income comparison or market-risk analysis.",
+      "missing_material_requirement_or_null": "Corporate-bond pricing, relative-value decomposition, and rate and credit-spread stress testing."
+    }
+  ],
+  "reviewer_output_sha256": "d0d2f4bcb00d8d6d861fe65afc95333f712b95484bd78b5f3fc2ef7cea5e8aed"
+}
