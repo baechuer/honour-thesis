@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0892",
+  "blind_packet_id": "P-348AE15EB7FEC27E09",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0087098ECAAD0755",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# SDLC Workflow",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Commit"
+    },
+    {
+      "candidate_token": "C-5102850E835EDD6E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Receiving Thermo Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "receiving-thermo-review"
+    },
+    {
+      "candidate_token": "C-80143190C14C2029",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Import and Evolve Workflow",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "rudder-import-and-evolve"
+    },
+    {
+      "candidate_token": "C-9094C9D4BF060832",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# CapRover — Self-Hosted PaaS with One-Click Apps",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "caprover"
+    },
+    {
+      "candidate_token": "C-9FACFF6A81A7333D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Receiving Hack Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "receiving-hack-review"
+    },
+    {
+      "candidate_token": "C-D65CEEEFFF1F3817",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Use when performing GO and KEGG enrichment",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "gokegg-analysis"
+    },
+    {
+      "candidate_token": "C-E330A41E31C4D0A0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Skills",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Commit Practices and History Management"
+    },
+    {
+      "candidate_token": "C-F00A6C638597CF1E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Receiving Regression Review",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "receiving-regression-review"
+    }
+  ],
+  "reviewer_A_return_sha256": "99ec6ee5f51f2eac80769f3d89eceddaa89612e3c4f74cbf6f2cac379504602e",
+  "reviewer_B_return_sha256": "9ea1088276ada4848a741fb6d2e8e9532ae9d3700d7b810f6b5a56c1c610e130",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0892",
+  "blind_packet_id": "P-348AE15EB7FEC27E09",
+  "batch_input_sha256": "217212114248e801695f5fdfdbe633dfccfe2627b24ad412e8860c7874f0a4ed",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0087098ECAAD0755","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Commit","rationale":"This includes intentional conventional commits, push, and pull-request creation for current local changes; its broader lifecycle context does not require review-comment work or CI-log debugging for this task.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-5102850E835EDD6E","adequacy":"INADEQUATE","source_anchor":"receiving-thermo-review","rationale":"This is for processing review findings, which the request explicitly excludes.","missing_material_requirement_or_null":"commit, push, and draft pull-request workflow"},
+    {"candidate_token":"C-80143190C14C2029","adequacy":"INADEQUATE","source_anchor":"rudder-import-and-evolve","rationale":"RudderStack resource import does not package current changes and create a GitHub draft pull request.","missing_material_requirement_or_null":"commit, push, and draft pull-request workflow"},
+    {"candidate_token":"C-9094C9D4BF060832","adequacy":"INADEQUATE","source_anchor":"caprover","rationale":"CapRover deployment management does not create the requested commit and draft pull request.","missing_material_requirement_or_null":"commit, push, and draft pull-request workflow"},
+    {"candidate_token":"C-9FACFF6A81A7333D","adequacy":"INADEQUATE","source_anchor":"receiving-hack-review","rationale":"This processes review findings, which the request expressly says not to address.","missing_material_requirement_or_null":"commit, push, and draft pull-request workflow"},
+    {"candidate_token":"C-D65CEEEFFF1F3817","adequacy":"INADEQUATE","source_anchor":"gokegg-analysis","rationale":"GO/KEGG enrichment is unrelated to version-control publication.","missing_material_requirement_or_null":"commit, push, and draft pull-request workflow"},
+    {"candidate_token":"C-E330A41E31C4D0A0","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Commit Practices and History Management","rationale":"This explicitly covers repository operations, branch practices, atomic commits, collaboration through pull requests, and safe execution with validation.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-F00A6C638597CF1E","adequacy":"INADEQUATE","source_anchor":"receiving-regression-review","rationale":"This is for processing regression-review feedback, not publishing current local changes while excluding review and CI work.","missing_material_requirement_or_null":"commit, push, and draft pull-request workflow"}
+  ],
+  "reviewer_output_sha256": "7296b67d38e876f4895c23a45e31d22661c89cdbf54340aa005e0836f4b9538b"
+}
