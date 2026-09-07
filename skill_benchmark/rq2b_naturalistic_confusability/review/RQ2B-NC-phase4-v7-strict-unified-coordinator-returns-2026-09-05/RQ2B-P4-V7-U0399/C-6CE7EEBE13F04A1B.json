@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-7F051E0C392B72EFA0",
+  "candidate_token": "C-6CE7EEBE13F04A1B",
+  "reviewer_a_return_sha256": "2a348188773e06624f3ef9dd8331a43181c8e62b6a56447e058590ac31b0635e",
+  "reviewer_b_return_sha256": "feef19228b281b9c5559d83125125f7f731e84bac9040e9a52e19eb0e1a7aa39",
+  "fresh_source_render_sha256": "325bf78973a4d6c5b2db739fdda45a4b70aeea496bde7002c30e1143250776c9",
+  "coordinator_decision": "CONFIRMED_PARTIALLY_ADEQUATE",
+  "source_anchor": "## Worked artifact: cursor pagination contract",
+  "rationale": "The source gives a concrete opaque cursor, stable ordering, bounded limits, explicit completion signal, response shape, and replay rules, but it is scoped to paging and one-way synchronization and leaves the identified public-endpoint total-count policy and conditional backward-navigation contract unspecified.",
+  "coordinator_output_sha256": "10b0d2396e7db927ba6bf13c800670daed1df5afdc2708239ee89d8e2b271694"
+}

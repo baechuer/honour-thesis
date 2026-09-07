@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0399",
+  "blind_packet_id": "P-7F051E0C392B72EFA0",
+  "batch_input_sha256": "7ba40469f775ded14bc948dda110d93b2cf695cc373589612631c80c31faec11",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-036286B8CF537057",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Break Down Your Spend with Well",
+      "rationale": "This source calculates financial cost-category breakdowns and cannot define an API pagination contract.",
+      "missing_material_requirement_or_null": "Cursor-pagination API request, response, and client-use contract"
+    },
+    {
+      "candidate_token": "C-0A55AA1623DE66CA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Offer Letter Generator",
+      "rationale": "This source creates employment offer letters and contains no API or pagination design guidance.",
+      "missing_material_requirement_or_null": "Cursor-pagination API request, response, and client-use contract"
+    },
+    {
+      "candidate_token": "C-49A5A4DB370D110A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This source performs gene-set enrichment analysis and cannot design a public list-endpoint pagination contract.",
+      "missing_material_requirement_or_null": "Cursor-pagination API request, response, and client-use contract"
+    },
+    {
+      "candidate_token": "C-52B21605074550BC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Pagination performance",
+      "rationale": "It explains stable keyset ordering, opaque cursors, and total-count trade-offs, but it is performance-focused and lacks the requested complete public API envelope, example, and client-consumption rules.",
+      "missing_material_requirement_or_null": "Complete public pagination request/response contract and client rules"
+    },
+    {
+      "candidate_token": "C-6553CF5060385992",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Phase 4: Request and Response Design",
+      "rationale": "It designs public endpoint payloads and consistent response envelopes, with cursor pagination, bounded page sizes, and documented client-facing contract rules.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-6CE7EEBE13F04A1B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Worked artifact: cursor pagination contract",
+      "rationale": "It directly defines opaque cursor encoding, a total stable order, bounded limits, an explicit null end signal, a response example, and client rules for reusing cursors.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-814818CD3833B76E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source facilitates sprint retrospective meetings and cannot specify endpoint pagination semantics.",
+      "missing_material_requirement_or_null": "Cursor-pagination API request, response, and client-use contract"
+    },
+    {
+      "candidate_token": "C-FB91FBFB42E2671B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# API pagination design",
+      "rationale": "It directly covers stable cursor ordering, opaque directional cursors, page-size bounds, optional or estimated totals, response-envelope fields, and conditional backward navigation.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "c3ed7335465be453f2cf6ab73ab10f0b61224e6f8a15d44abe1a73d351025a25"
+}

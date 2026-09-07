@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-7F051E0C392B72EFA0",
+  "candidate_token": "C-6553CF5060385992",
+  "reviewer_a_return_sha256": "2a348188773e06624f3ef9dd8331a43181c8e62b6a56447e058590ac31b0635e",
+  "reviewer_b_return_sha256": "feef19228b281b9c5559d83125125f7f731e84bac9040e9a52e19eb0e1a7aa39",
+  "fresh_source_render_sha256": "d304fa64cb59df7831c82faccf0f16441e8ada0761cab011d0aa52f2c814e423",
+  "coordinator_decision": "CONFIRMED_PARTIALLY_ADEQUATE",
+  "source_anchor": "### Phase 6: Pagination, Filtering, Sorting, and Search",
+  "rationale": "The source supports cursor pagination, bounded page sizes, consistent response design, and API documentation, but it does not itself define the full concrete cursor contract needed for this disagreement, including an opaque token form, an explicit end signal, total-count treatment, and client replay rules.",
+  "coordinator_output_sha256": "6ef993838fe105c82133826ac34336640418f6f1b4d3123151162597c1ce8fdd"
+}
