@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-051FDD4A6C963E9A95",
+  "candidate_token": "C-72839450C808F241",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "coordinator_output_sha256": "8e7a6b75adeb319b08e7e5338effb9ecfabe35c6b48a44fa014d385440d438b3",
+  "fresh_source_render_sha256": "431ff578b743885b3c4509bf7c01750a98a9fc4f54b83486c04b7ee97b8b39df",
+  "rationale": "The source explicitly excludes database connection-pool sizing, while both reviewer returns identify database-pool diagnosis, aggregate pool budgeting, and PostgreSQL-specific configuration as material requirements absent from the source.",
+  "reviewer_a_return_sha256": "f8811a1d58d358423f2a2638efe295ab19572e6f02a2d3148ba8fd0580c6d4e3",
+  "reviewer_b_return_sha256": "c5d04ecc0912b8a2bf0d6400a5092ad66f2d7327ff08cc777f46f598e958a8bf",
+  "source_anchor": "do NOT use to size a database connection pool - use connection-pool-tuner instead."
+}
