@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0939",
+  "blind_packet_id": "P-0D7D81094BE4781873",
+  "batch_input_sha256": "94e8e3c2d9168882bdb6411741c9afb99e767dd2dcf896e1bb852ef4212fda16",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-2B2EEF48D13EE5B7","adequacy":"INADEQUATE","source_anchor":"When to read external files","rationale":"It runs gene-set enrichment analysis rather than forecasting service capacity risk.","missing_material_requirement_or_null":"A service-capacity risk forecasting workflow is required."},
+    {"candidate_token":"C-2FD98BE4C27C3DE5","adequacy":"INADEQUATE","source_anchor":"Error Budget Policy","rationale":"It defines SLO error-budget governance and automatic responses, while the task explicitly excludes deciding current SLO breach and asks for prospective capacity risk.","missing_material_requirement_or_null":"A prospective capacity, saturation, queue, and bottleneck-risk assessment workflow is required."},
+    {"candidate_token":"C-4BCE1824989E9944","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Alerting & On-Call","rationale":"It identifies latency, error-rate, and capacity-near-limit alert conditions, but it does not forecast future saturation, queue growth, headroom, or bottleneck progression from the service snapshot.","missing_material_requirement_or_null":"A prospective capacity-risk and headroom forecasting workflow is required."},
+    {"candidate_token":"C-5721ECDE8330612F","adequacy":"INADEQUATE","source_anchor":"CSAT Root Cause Analysis","rationale":"It analyzes customer-satisfaction causes rather than operational capacity risk.","missing_material_requirement_or_null":"A service-capacity risk forecasting workflow is required."},
+    {"candidate_token":"C-741496BC4167D2DF","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Chaos Engineer","rationale":"It can test resilience under induced failure and load, but it does not assess the given service snapshot for future capacity pressure or queue and headroom risk.","missing_material_requirement_or_null":"A snapshot-based capacity-risk forecasting workflow is required."},
+    {"candidate_token":"C-8A50E82C34424432","adequacy":"INADEQUATE","source_anchor":"Slack Bot Builder","rationale":"It builds Slack integrations rather than assessing capacity risk.","missing_material_requirement_or_null":"A service-capacity risk forecasting workflow is required."},
+    {"candidate_token":"C-A198AAA9CCA03483","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"It facilitates sprint retrospectives rather than forecasting operational capacity risk.","missing_material_requirement_or_null":"A service-capacity risk forecasting workflow is required."},
+    {"candidate_token":"C-E59FE9916B39F216","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Circuit Breaker Builder","rationale":"It explains how a slow dependency can consume threads and capacity and how to isolate it, but it is a remediation design rather than a forecast of saturation, queue growth, and headroom risk from the snapshot.","missing_material_requirement_or_null":"A prospective capacity-risk forecasting workflow is required."}
+  ],
+  "reviewer_output_sha256": "211b6f40faf61be3bb17113baf484c3e377d5ecd784853e868392eb6cdb79bdc"
+}

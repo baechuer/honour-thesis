@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0939",
+  "blind_packet_id": "P-0D7D81094BE4781873",
+  "batch_input_sha256": "94e8e3c2d9168882bdb6411741c9afb99e767dd2dcf896e1bb852ef4212fda16",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2B2EEF48D13EE5B7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run GSEA on a ranked gene list",
+      "rationale": "This performs gene-set analysis.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    },
+    {
+      "candidate_token": "C-2FD98BE4C27C3DE5",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Error Budget Policy",
+      "rationale": "It governs error budgets but does not forecast capacity risk from operational signals.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    },
+    {
+      "candidate_token": "C-4BCE1824989E9944",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Alerting & On-Call",
+      "rationale": "It supports operational signal interpretation, risk assessment, and response planning without requiring a root-cause or SLO-breach conclusion.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-5721ECDE8330612F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# CSAT Root Cause Analysis",
+      "rationale": "This analyzes customer satisfaction causes.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    },
+    {
+      "candidate_token": "C-741496BC4167D2DF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Chaos Engineer",
+      "rationale": "It tests resilience but does not forecast the supplied service-capacity pattern.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    },
+    {
+      "candidate_token": "C-8A50E82C34424432",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    },
+    {
+      "candidate_token": "C-A198AAA9CCA03483",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    },
+    {
+      "candidate_token": "C-E59FE9916B39F216",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Circuit Breaker Builder",
+      "rationale": "It designs a resilience mechanism but does not forecast the broader capacity risk.",
+      "missing_material_requirement_or_null": "Forward-looking capacity, saturation, queue, headroom, and bottleneck risk forecast."
+    }
+  ],
+  "reviewer_output_sha256": "3c0ca3ee4c57ea1bf5b39fbd2f42fff94cd5c42e04d22202bf9cbc6efd18cc50"
+}
