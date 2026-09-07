@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0621",
+  "blind_packet_id": "P-AF9F3570FD2706F8AC",
+  "batch_input_sha256": "6f869e5894bc92415af5d950f418d210a4e924c0eaf66173a6da8440ba5deba4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-00705B6E187929D8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Foundational Rules",
+      "rationale": "This is an advisor for India personal-data-protection compliance, not Kubernetes admission policy authoring or rollout.",
+      "missing_material_requirement_or_null": "Parameterized container-image admission rule, audit reporting, rollback, enforcement rollout, and alternative policy-language guidance."
+    },
+    {
+      "candidate_token": "C-0880452FE0EA5B22",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This runs gene-set enrichment analysis and has no Kubernetes policy or admission-control capability.",
+      "missing_material_requirement_or_null": "Container-image admission validation, configurable registry allowlist, observation-mode reports, and staged enforcement controls."
+    },
+    {
+      "candidate_token": "C-1DC9649E1294E122",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This improves a local service business's search rankings and is unrelated to Kubernetes resource admission.",
+      "missing_material_requirement_or_null": "Kubernetes policy rule, namespace scope, audit-mode violations, rollback testing, and policy-language alternatives."
+    },
+    {
+      "candidate_token": "C-3907375EFA6FC574",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Purpose",
+      "rationale": "It authors parameterized Kyverno admission validation rules, supports audit versus enforce rollout and PolicyReport inspection, and explains the YAML-native approach relative to Rego-based alternatives.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-729F599058D06B9F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This is a sprint-retrospective facilitation workflow rather than a Kubernetes security-policy implementation.",
+      "missing_material_requirement_or_null": "Admission rule configuration, non-blocking violation review, rollback, and later policy authoring guidance."
+    },
+    {
+      "candidate_token": "C-91F2386852468F54",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Purpose",
+      "rationale": "It configures reusable Kubewarden admission policies with monitor-before-enforce rollout and supports later custom rule authoring in multiple languages including Rego, Rust, and Go.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-9EAE1F81B1B3EC32",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Purpose",
+      "rationale": "It authors reusable parameterized Gatekeeper ConstraintTemplates and Constraints, supports dry-run audit before deny, debugging and rollout safety, and compares Rego policies with Kyverno alternatives.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E7F09B833F60BC66",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Overview",
+      "rationale": "This designs repository CI workflows and Docker release automation, not Kubernetes admission-controller rules or cluster policy reports.",
+      "missing_material_requirement_or_null": "Admission-policy resource and configurable image registry validation with audit, rollback, and enforcement controls."
+    }
+  ],
+  "reviewer_output_sha256": "13d56c7a1fac2583da6b2792c3b372af9cbc12624dea887e567bebd51e136822"
+}

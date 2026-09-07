@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0621",
+  "blind_packet_id": "P-AF9F3570FD2706F8AC",
+  "batch_input_sha256": "6f869e5894bc92415af5d950f418d210a4e924c0eaf66173a6da8440ba5deba4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-00705B6E187929D8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# India DPDPA — Digital Personal Data Protection Act, 2023 Skill",
+      "rationale": "This is an Indian data-protection compliance guide and contains no Kubernetes admission-policy implementation or rollout material.",
+      "missing_material_requirement_or_null": "A configurable Kubernetes admission rule for approved image registries, with observation, violation review, testing, rollback, enforcement, and alternative-language authoring guidance."
+    },
+    {
+      "candidate_token": "C-0880452FE0EA5B22",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This skill runs gene-set enrichment analysis on ranked gene lists and has no Kubernetes policy content.",
+      "missing_material_requirement_or_null": "A configurable Kubernetes admission rule for approved image registries, with observation, violation review, testing, rollback, enforcement, and alternative-language authoring guidance."
+    },
+    {
+      "candidate_token": "C-1DC9649E1294E122",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Local SEO Playbook",
+      "rationale": "This skill concerns local search ranking for service businesses, not Kubernetes admission control.",
+      "missing_material_requirement_or_null": "A configurable Kubernetes admission rule for approved image registries, with observation, violation review, testing, rollback, enforcement, and alternative-language authoring guidance."
+    },
+    {
+      "candidate_token": "C-3907375EFA6FC574",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Kyverno Policy Management",
+      "rationale": "It provides YAML-native admission-policy mechanics, audit-first rollout, PolicyReport review, testing, rollback, and a Rego alternative, but its examples do not implement the requested configurable image-registry allowlist.",
+      "missing_material_requirement_or_null": "A concrete, parameterized Kyverno rule that evaluates container image registries against an approved allowlist."
+    },
+    {
+      "candidate_token": "C-729F599058D06B9F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This skill structures team retrospectives and offers no Kubernetes admission-control design or implementation.",
+      "missing_material_requirement_or_null": "A configurable Kubernetes admission rule for approved image registries, with observation, violation review, testing, rollback, enforcement, and alternative-language authoring guidance."
+    },
+    {
+      "candidate_token": "C-91F2386852468F54",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Kubewarden Admission Policy Configuration",
+      "rationale": "Its worked example configures a parameterized approved-registry policy for Pods in monitor mode, scopes namespaces, tests with a disallowed image, reviews violations, promotes to protection with a documented rollback, and describes custom Rust, Go, or Rego-WASM policy authoring.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-9EAE1F81B1B3EC32",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# OPA Gatekeeper Policy Authoring",
+      "rationale": "Its worked example supplies a reusable Rego ConstraintTemplate with configurable registry parameters, a dry-run Constraint, namespace scoping, unit and bundle tests, violation inspection, deny promotion, and rollback guidance; it also positions the YAML-native alternative.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E7F09B833F60BC66",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GitHub Actions Engineering",
+      "rationale": "This skill designs CI/CD workflows and does not provide Kubernetes admission-policy authoring or enforcement procedures.",
+      "missing_material_requirement_or_null": "A configurable Kubernetes admission rule for approved image registries, with observation, violation review, testing, rollback, enforcement, and alternative-language authoring guidance."
+    }
+  ],
+  "reviewer_output_sha256": "dfbd89b52820f62653942d777215e365e8f262cda1cd03e108a56a7ea6466dcb"
+}
