@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0439",
+  "blind_packet_id": "P-4F84A81ECF5D2CC3CB",
+  "batch_input_sha256": "3d876f752721041146f1cf4f448bd3ef4b223105a51cf9b82ebbd337d2d87cb4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0C1A3E82E32FD225",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Show Notes Writer",
+      "rationale": "Creates podcast show notes from episode material, not a concise executive brief from a weekly performance CSV.",
+      "missing_material_requirement_or_null": "Read the supplied weekly channel data and produce a reporting headline, evidence-backed takeaways and caveat."
+    },
+    {
+      "candidate_token": "C-0FA05C802D2FCB8D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Headlines as takeaways",
+      "rationale": "Provides a useful upward-facing headline and evidence-selection structure, but it is a slide-deck narrative skill rather than a workflow to inspect the supplied CSV, calculate supporting numbers and state a data caveat.",
+      "missing_material_requirement_or_null": "Read and summarize the specified CSV with selected channel-performance figures and an explicit caveat in a short reporting brief."
+    },
+    {
+      "candidate_token": "C-1B8FE86DCB8A694F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys security threats and prior art rather than preparing a weekly channel-performance report.",
+      "missing_material_requirement_or_null": "Analyze the supplied performance CSV and present concise executive takeaways with supporting numbers."
+    },
+    {
+      "candidate_token": "C-2972C178E44BCED1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack integrations and has no reporting-brief analysis workflow.",
+      "missing_material_requirement_or_null": "Read the supplied CSV and create an upward-facing performance brief with evidence and caveat."
+    },
+    {
+      "candidate_token": "C-4205820860718CC0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Open Source Project Maintainer",
+      "rationale": "Covers open-source governance and releases, not weekly channel-performance reporting.",
+      "missing_material_requirement_or_null": "Analyze the specified channel-performance data and report the key numbers and caveat concisely."
+    },
+    {
+      "candidate_token": "C-62D7E2F9A334795B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates a sprint retrospective rather than turning a CSV into an executive report.",
+      "missing_material_requirement_or_null": "Read the data and produce a concise performance headline, takeaways, supporting figures and caveat."
+    },
+    {
+      "candidate_token": "C-B2FC8604F3336D5B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Podcast Pitch",
+      "rationale": "Writes podcast-guest outreach emails and does not analyze weekly channel-performance data.",
+      "missing_material_requirement_or_null": "Analyze the supplied CSV and create an executive reporting brief."
+    },
+    {
+      "candidate_token": "C-E6BC15231A827798",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "Appropriately audits assumptions in data before a number is presented, but explicitly stops short of computing or writing the requested reporting brief.",
+      "missing_material_requirement_or_null": "Produce the requested concise executive brief from the CSV after any necessary assumption checks."
+    }
+  ],
+  "reviewer_output_sha256": "2d6e14532e9aba6cb59f117c24ac96e440ac1fb48d2eb25583fe920c1dfae5bc"
+}

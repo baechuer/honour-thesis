@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0439",
+  "blind_packet_id": "P-4F84A81ECF5D2CC3CB",
+  "batch_input_sha256": "3d876f752721041146f1cf4f448bd3ef4b223105a51cf9b82ebbd337d2d87cb4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0C1A3E82E32FD225",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Show Notes Writer",
+      "rationale": "Creates podcast notes from transcripts or episode outlines rather than extracting an executive reporting brief from a CSV.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-0FA05C802D2FCB8D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Headlines as takeaways",
+      "rationale": "It can shape an upward-facing narrative with takeaway headlines, but it does not read the supplied CSV, calculate supporting numbers, or formulate a data-quality caveat.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-1B8FE86DCB8A694F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys security prior art rather than analyzing channel-performance data.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-2972C178E44BCED1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack integrations rather than reading a CSV or writing an executive reporting brief.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-4205820860718CC0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Open Source Project Maintainer",
+      "rationale": "Covers open-source repository governance and release management, not business-data reporting.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-62D7E2F9A334795B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates a team retrospective rather than analyzing a channel-performance CSV.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-B2FC8604F3336D5B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Podcast Pitch",
+      "rationale": "Writes outreach pitches to podcast hosts rather than data-backed executive reporting.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    },
+    {
+      "candidate_token": "C-E6BC15231A827798",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# audit-my-assumptions",
+      "rationale": "It can surface and grade inherited data assumptions before a figure is presented, which helps form a caveat, but it is explicitly read-only and does not calculate or write the requested executive brief.",
+      "missing_material_requirement_or_null": "A CSV-reading reporting workflow that calculates the supporting numbers and turns them into a concise executive headline, takeaways, and evidence-based caveat."
+    }
+  ],
+  "reviewer_output_sha256": "195b7e920fec9413c8ae50c8673c600e350b852bdfafd4117c5178e708a64593"
+}

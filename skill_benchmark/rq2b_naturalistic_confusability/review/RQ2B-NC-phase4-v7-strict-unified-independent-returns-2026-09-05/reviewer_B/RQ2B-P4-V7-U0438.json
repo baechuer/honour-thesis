@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0438",
+  "blind_packet_id": "P-C8BFA1470232B3B6F5",
+  "batch_input_sha256": "80da5ad1e91a51687f691741681b2f0affe780a9ae2a48364d37d49b7967aff3",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1021C8F7A51B0849",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source facilitates sprint retrospectives and cannot resolve a scholarly identifier to a lawful open-access copy.",
+      "missing_material_requirement_or_null": "Single-work lawful open-access resolution with provenance and version information"
+    },
+    {
+      "candidate_token": "C-1936274C90A8090C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# ReMap Database",
+      "rationale": "This source retrieves transcription-factor ChIP-seq data, not scholarly papers or their lawful open-access versions.",
+      "missing_material_requirement_or_null": "Single-work lawful open-access resolution with provenance and version information"
+    },
+    {
+      "candidate_token": "C-50B5795108A30561",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Academic Paper Download",
+      "rationale": "It resolves a single paper from legal OA sources with access and licence provenance, but its workflow atomically saves the PDF to a final output directory rather than keeping any inspection copy temporary and outside the project.",
+      "missing_material_requirement_or_null": "Transient, non-retained inspection handling"
+    },
+    {
+      "candidate_token": "C-ABCBD8C32D547E73",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Fetch Paper",
+      "rationale": "It resolves one DOI or arXiv identifier through legal OA sources, reports source, licence, access links, and manuscript-version warnings, and permits only transient reading without storing paper text in the repository.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-AF3D9E9753B548AD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Fulltext Retrieval Skill",
+      "rationale": "This source is a batch-download pipeline that stores PDFs and optionally converts them to Markdown, conflicting with the request for a single transient, non-retained retrieval.",
+      "missing_material_requirement_or_null": "Single-work transient open-access resolution without retention"
+    },
+    {
+      "candidate_token": "C-B3593BBC2A4CFF23",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Nature-Style Scientific Writing — Router",
+      "rationale": "This source drafts and structures scientific manuscripts rather than locating lawful open-access versions of identified papers.",
+      "missing_material_requirement_or_null": "Single-work lawful open-access resolution with provenance and version information"
+    },
+    {
+      "candidate_token": "C-B907FC04E5A59B10",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UX Heuristics Framework",
+      "rationale": "This source audits interface usability and has no scholarly identifier or open-access retrieval workflow.",
+      "missing_material_requirement_or_null": "Single-work lawful open-access resolution with provenance and version information"
+    },
+    {
+      "candidate_token": "C-BEDE309C964AE7E4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "rationale": "This source conducts evidence surveys by topic and does not provide a single-identifier lawful access-resolution workflow with licence and version outcome reporting.",
+      "missing_material_requirement_or_null": "Single-work lawful open-access resolution with provenance and version information"
+    }
+  ],
+  "reviewer_output_sha256": "567c39e9c0fac7869a21042d7c40d0f3cb17aaaa040460b63c325c852ef9a893"
+}
