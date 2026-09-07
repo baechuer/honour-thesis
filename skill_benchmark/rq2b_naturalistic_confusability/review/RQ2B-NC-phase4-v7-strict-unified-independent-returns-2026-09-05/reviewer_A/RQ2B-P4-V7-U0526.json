@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0526",
+  "blind_packet_id": "P-44855A7D33A2682F67",
+  "batch_input_sha256": "983f9fbda379caac65913254417a86c6ac71baaac1d8fcc4cbd77d2b32110c1d",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2A35EC2532E87732",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Overview",
+      "rationale": "The source can create a customer-facing proposal with an executive summary and timeline, but lacks an ROI summary constrained to supplied figures and a stakeholder-owned renewal MAP.",
+      "missing_material_requirement_or_null": "An ROI summary using only supplied figures and a mutual action plan with stakeholders, dependencies and next decisions."
+    },
+    {
+      "candidate_token": "C-2F50C020BAD412EE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "The source surveys security research before product development and cannot produce the requested customer-facing renewal package.",
+      "missing_material_requirement_or_null": "An executive summary, supplied-figures-only ROI summary, and stakeholder-owned mutual action plan for the renewal."
+    },
+    {
+      "candidate_token": "C-32C3C1CE0ED6D90E",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Structure",
+      "rationale": "The source can format a professional customer-facing document with a data-backed executive summary, but does not provide a sales ROI method or a mutual action plan with deal stakeholders and dependencies.",
+      "missing_material_requirement_or_null": "A sales ROI summary constrained to supplied figures and a stakeholder-owned mutual action plan for the renewal."
+    },
+    {
+      "candidate_token": "C-60F1E6BDDDB52A71",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Competitive Analysis Skill",
+      "rationale": "The source analyzes competitors and markets, rather than creating an account-specific renewal package.",
+      "missing_material_requirement_or_null": "An executive summary, supplied-figures-only ROI summary, and stakeholder-owned mutual action plan for the renewal."
+    },
+    {
+      "candidate_token": "C-933125593727F388",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The source facilitates engineering retrospectives and does not prepare sales assets or renewal planning documents.",
+      "missing_material_requirement_or_null": "An executive summary, supplied-figures-only ROI summary, and stakeholder-owned mutual action plan for the renewal."
+    },
+    {
+      "candidate_token": "C-9D719206C3085666",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Company Research Skill",
+      "rationale": "The source conducts company research and due diligence, not a customer-facing renewal package from a supplied account record.",
+      "missing_material_requirement_or_null": "An executive summary, supplied-figures-only ROI summary, and stakeholder-owned mutual action plan for the renewal."
+    },
+    {
+      "candidate_token": "C-A74DD5C49CA8FD06",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Mutual Action Plan",
+      "rationale": "The source directly creates a stakeholder-owned, milestone-based MAP, but cannot produce the accompanying executive and ROI summaries.",
+      "missing_material_requirement_or_null": "A customer-facing executive summary and ROI summary based only on supplied figures."
+    },
+    {
+      "candidate_token": "C-B61CFF7F97CE85AE",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Create an Asset",
+      "rationale": "The source directly generates executive summaries, ROI summaries and mutual action plans from account context, including stakeholders, open items and milestones, while flagging missing data.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "483c4dbcc24b6c694b9cf75456efc47b60916c8cf018dd5a33e4629237884ea4"
+}

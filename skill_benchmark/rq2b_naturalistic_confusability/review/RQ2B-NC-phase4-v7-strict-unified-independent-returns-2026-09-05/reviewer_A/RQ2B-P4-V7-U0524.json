@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0524",
+  "blind_packet_id": "P-1640ECD096498B8D2B",
+  "batch_input_sha256": "9081828d9c041e43736d68343c1062e41797690f1a0e9ea004991783cabcd2d2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-187A5DFA90DEBF17",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "user research prior art",
+      "rationale": "The skill surveys published user-research evidence before interface design and does not carry out browser form completion.",
+      "missing_material_requirement_or_null": "Delegated browser-based form entry with a pre-submission pause."
+    },
+    {
+      "candidate_token": "C-2EFD49311EA30C17",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UX Heuristics Framework",
+      "rationale": "The source audits usability and produces scores and fixes, whereas the request is to enter supplied details in a signup form rather than evaluate the interface.",
+      "missing_material_requirement_or_null": "Delegated browser-based form entry with an account-creation safety pause."
+    },
+    {
+      "candidate_token": "C-5B47875C47EB44B5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Growth Strategy",
+      "rationale": "The skill develops product-growth strategy and does not operate a browser signup form.",
+      "missing_material_requirement_or_null": "Browser form completion using supplied sample details."
+    },
+    {
+      "candidate_token": "C-692EA0541533DD42",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Clicking and Scrolling — Drive the UI Without a Gesture Builder",
+      "rationale": "The source describes Jetpack Compose test actions for clicks and scrolling; it neither drives a browser form nor covers entering form values and pausing before a consequential submission.",
+      "missing_material_requirement_or_null": "Browser-based text-field completion and a pre-submission safety pause."
+    },
+    {
+      "candidate_token": "C-83FD9D52CDAA5B72",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# dbSNP Database",
+      "rationale": "The source queries genetic-variant records and has no browser form-completion capability.",
+      "missing_material_requirement_or_null": "Delegated browser signup-form completion."
+    },
+    {
+      "candidate_token": "C-8D3788DF25F0D631",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# gnomAD Database",
+      "rationale": "The skill queries population genetic-variant frequencies and does not operate browser forms.",
+      "missing_material_requirement_or_null": "Delegated browser signup-form completion."
+    },
+    {
+      "candidate_token": "C-AD0FE519796C8B3E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# User Flow Mapper",
+      "rationale": "The source maps a user flow before design or build, rather than executing the current signup flow and entering provided values.",
+      "missing_material_requirement_or_null": "Browser form completion with a report of entered fields and a pre-submission pause."
+    },
+    {
+      "candidate_token": "C-C99544DF3EA9A272",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UiPath Case Management — TypeScript Builder SDK (reference-mode)",
+      "rationale": "The skill authors UiPath case-plan definitions, not interactive browser signup-form completion.",
+      "missing_material_requirement_or_null": "Delegated browser form entry with a pre-submission safety pause."
+    }
+  ],
+  "reviewer_output_sha256": "9b47d6d70a9868086b23883f9e1b9921229844e18e08d1a00d4ca4d920eba723"
+}
