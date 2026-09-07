@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0390",
+  "blind_packet_id": "P-96BF2A805005348D45",
+  "batch_input_sha256": "fb1b71485ee20b6c7ecb4c8a57e274dd1564fbc863c6f8bb0ee4a8a8f829b2bb",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-35445EBD9AFFBB15",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Print Layout",
+      "rationale": "This source prepares commercial-print files and cannot configure Claude Code hooks that block destructive git commands.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    },
+    {
+      "candidate_token": "C-4435AE441234F384",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# 1:1 Agenda",
+      "rationale": "This source structures manager-report meetings and provides no git-operation interception or Claude Code configuration.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    },
+    {
+      "candidate_token": "C-710D694FD1E7B92D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Screencast Capture",
+      "rationale": "This source records screen footage and cannot prevent force-push, hard reset, clean, or branch deletion before execution.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    },
+    {
+      "candidate_token": "C-7416930DDB836BC0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This source builds Slack integrations rather than configuring local git-operation safety hooks for Claude Code.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    },
+    {
+      "candidate_token": "C-8DE588A5D1FA361A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Secrets Hygiene",
+      "rationale": "It recognises force-push as an unsafe response and covers secret-scanning pre-commit hooks, but does not provide hooks that intercept the requested destructive git operations before they run.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution hooks blocking force-push, reset --hard, clean, and branch deletion"
+    },
+    {
+      "candidate_token": "C-B37606752F7578BD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source facilitates a team retrospective and cannot implement command-level git guardrails.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    },
+    {
+      "candidate_token": "C-C3AC7721F6C3EA61",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Local + Google Business Profile visibility",
+      "rationale": "This source handles local-search visibility and social posting, not source-control operation interception.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    },
+    {
+      "candidate_token": "C-C3C4989446314167",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This source runs gene-set enrichment analysis and cannot configure or test git safety hooks.",
+      "missing_material_requirement_or_null": "Claude Code pre-execution git-command guardrail hooks"
+    }
+  ],
+  "reviewer_output_sha256": "d3df3f0b556944213f6697fcc422f86b085c1c94352a6dac182e31d186b108cb"
+}
