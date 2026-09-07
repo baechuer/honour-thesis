@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1082",
+  "blind_packet_id": "P-7D322040629387B420",
+  "batch_input_sha256": "4a8432723d3620a2ddcc9da0b4923376ef787a2c48560bddf8581b021d70bc09",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-4EBD5189D72EBE5C","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"pm-org","rationale":"This can investigate prior artifacts and public team evidence, distinguish confirmed from inferred claims, and validate assumptions through sequential questions.","missing_material_requirement_or_null":"mission, long-term vision, behavior-bound principles, stage assessment, and highest-impact belief definition"},
+    {"candidate_token":"C-71EE6511237D4B30","adequacy":"INADEQUATE","source_anchor":"user-research-prior-art-survey","rationale":"User-research prior-art surveying does not define company purpose, vision, principles, and stage.","missing_material_requirement_or_null":"mission-and-vision definition workflow"},
+    {"candidate_token":"C-7E5A7580A7BEA49A","adequacy":"INADEQUATE","source_anchor":"code-simplification","rationale":"Code simplification is unrelated to defining a company's purpose and long-term direction.","missing_material_requirement_or_null":"mission-and-vision definition workflow"},
+    {"candidate_token":"C-C48FEE88C3F064BD","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Claims Verifier","rationale":"This can trace and distinguish supported claims from assumptions when validating evidence.","missing_material_requirement_or_null":"a workflow that develops and preserves mission, vision, principles, stage, and the first belief to test"},
+    {"candidate_token":"C-CCD45B2D3FE42039","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation does not define a company's mission, vision, or company stage.","missing_material_requirement_or_null":"mission-and-vision definition workflow"},
+    {"candidate_token":"C-D2778F67F891B4AE","adequacy":"INADEQUATE","source_anchor":"xlsx","rationale":"Spreadsheet work is unrelated to defining company purpose and direction.","missing_material_requirement_or_null":"mission-and-vision definition workflow"},
+    {"candidate_token":"C-D828F2BBC34B2A47","adequacy":"FULLY_ACCEPTABLE","source_anchor":"The One Belief","rationale":"This exactly reverse-engineers or interviews for mission, 3-5 year vision, observable values, company stage, and the load-bearing belief, preserves valid prior definitions, validates inferences one question at a time, and separates evidence from assumptions.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-DAF54DF7405CDF31","adequacy":"INADEQUATE","source_anchor":"pm-personas","rationale":"Persona definition does not provide the requested company mission, vision, value, stage, and belief artifact.","missing_material_requirement_or_null":"mission-and-vision definition workflow"}
+  ],
+  "reviewer_output_sha256": "6ad69b33ab349be17de31bed7e0f42846cd20fbc5514014385f13f78a209fd8c"
+}
