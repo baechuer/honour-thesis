@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1A46A046FD5F3D60",
+      "missing_material_requirement_or_null": "Commercial CRM-augmentation design covering account ownership, deal stages, renewal risk, pricing-exception approvals, and forecasting.",
+      "rationale": "The source is exclusively for gene-set enrichment analysis and plotting, not commercial-operations workspace design.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-242EC3968E762A74",
+      "missing_material_requirement_or_null": "A commercial data model and workflows for CRM boundaries, accounts, deals, renewals, pricing exceptions, and forecasting.",
+      "rationale": "It can inform usable management views and interaction clarity, but does not specify a sales-operations workspace or its commercial workflows.",
+      "source_anchor": "UX Heuristics Framework"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3B213CBFF6EF66A4",
+      "missing_material_requirement_or_null": "Sales-specific account ownership, opportunity progression, renewal-risk, pricing-exception, and forecast design alongside the existing CRM.",
+      "rationale": "It provides scoped Airtable operations and CRM-integration guidance, but its schemas and workflows are for marketing rather than the requested commercial sales operation.",
+      "source_anchor": "Marketing operations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E2CDCF627922861",
+      "missing_material_requirement_or_null": "A commercial workspace schema, CRM boundary, account and deal workflows, permissions, and forecasting views.",
+      "rationale": "The source facilitates sprint retrospectives and action items rather than designing a B2B commercial-operations workspace.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-45170D0C8E9882DF",
+      "missing_material_requirement_or_null": "An operational data model and workflows for core-CRM boundaries, ownership, deal progression, renewals, pricing approvals, permissions, and forecasts.",
+      "rationale": "It is commercial-facing and can structure proposal content, but it does not provide the requested ongoing sales-operations workspace design.",
+      "source_anchor": "Sales Proposal Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-472957E8A587892B",
+      "missing_material_requirement_or_null": "A commercial operations schema and workflows for CRM-linked accounts, deals, renewals, pricing exceptions, and weekly forecasting.",
+      "rationale": "The source monitors competitors and creates sales talking points rather than specifying the requested operations workspace.",
+      "source_anchor": "Competitive Intel Monitor Agent"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7CF6F6552D9A443C",
+      "missing_material_requirement_or_null": "Sales-specific account, opportunity, renewal-risk, pricing-exception, and forecast workflows that augment the existing CRM.",
+      "rationale": "It offers adaptable operations schemas, permissions, and management views, but its scope is product roadmaps and delivery rather than commercial sales operations.",
+      "source_anchor": "Product and roadmap management"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A7247C88E1B14C91",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly covers CRM-augmenting sales operations, including accounts, opportunities, renewals, deal-desk pricing workflows, permissions, and forecast rollups after scoping the CRM boundary.",
+      "source_anchor": "Sales operations and CRM workflows"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0208",
+  "batch_input_sha256": "42d16a6d1770308fe7444a075e7facc3ba4cc9e581149aef579ee316404f8f1c",
+  "blind_packet_id": "P-69349A4E8D910616F8",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "4ab099840eddeaad0d546cd447062972e91044cdc9423873fe2878410f129e7d"
+}

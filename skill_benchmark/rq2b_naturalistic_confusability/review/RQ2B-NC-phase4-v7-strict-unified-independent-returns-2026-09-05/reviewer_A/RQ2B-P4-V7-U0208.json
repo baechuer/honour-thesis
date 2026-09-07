@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1A46A046FD5F3D60",
+      "missing_material_requirement_or_null": "A commercial-operations workspace design that establishes the existing-CRM boundary and specifies sales entities, workflows, permissions, management views, renewal risk, pricing exceptions, and forecasting.",
+      "rationale": "The source runs gene-set enrichment analysis on ranked gene lists and does not provide a route to design a commercial workspace or its operating model.",
+      "source_anchor": "## Scope"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-242EC3968E762A74",
+      "missing_material_requirement_or_null": "A commercial-operations workspace design that establishes the existing-CRM boundary and specifies sales entities, workflows, permissions, management views, renewal risk, pricing exceptions, and forecasting.",
+      "rationale": "The source is a usability-evaluation framework; it does not define the commercial data model, workflows, or operational controls requested.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-3B213CBFF6EF66A4",
+      "missing_material_requirement_or_null": "Commercial sales operations coverage for account ownership, opportunity progression, renewal-risk management, pricing-exception approvals, and weekly sales forecasting alongside the core CRM.",
+      "rationale": "The source can scope and scaffold an Airtable operations base with fields, workflows, views, and permissions, but its schemas and operating model are for marketing rather than the requested commercial-sales workflow.",
+      "source_anchor": "# Marketing operations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3E2CDCF627922861",
+      "missing_material_requirement_or_null": "A commercial-operations workspace design that establishes the existing-CRM boundary and specifies sales entities, workflows, permissions, management views, renewal risk, pricing exceptions, and forecasting.",
+      "rationale": "The source facilitates sprint retrospectives and action follow-up, not a sales-operation workspace or the requested business records and controls.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-45170D0C8E9882DF",
+      "missing_material_requirement_or_null": "A commercial-operations workspace design that establishes the existing-CRM boundary and specifies sales entities, workflows, permissions, management views, renewal risk, pricing exceptions, and forecasting.",
+      "rationale": "The source produces an individual B2B proposal or statement of work, rather than a workspace with sales entities, workflows, permissions, and management views.",
+      "source_anchor": "# Sales Proposal Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-472957E8A587892B",
+      "missing_material_requirement_or_null": "A commercial-operations workspace design that establishes the existing-CRM boundary and specifies sales entities, workflows, permissions, management views, renewal risk, pricing exceptions, and forecasting.",
+      "rationale": "The source monitors competitors and formats a competitive-intelligence briefing; it does not provide the requested commercial operations workspace or its data and approval model.",
+      "source_anchor": "# Competitive Intel Monitor Agent"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7CF6F6552D9A443C",
+      "missing_material_requirement_or_null": "Commercial sales operations coverage for account ownership, opportunity progression, renewal-risk management, pricing-exception approvals, and weekly sales forecasting alongside the core CRM.",
+      "rationale": "The source can scope and scaffold an Airtable workspace with typed records, workflows, interfaces, and permissions, but it is designed for product and roadmap operations rather than commercial sales operations.",
+      "source_anchor": "# Product and roadmap management"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-A7247C88E1B14C91",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source explicitly asks about the existing CRM and primary commercial workflow, then provides sales-operations schemas and controls for accounts, opportunities, owners, stages, forecasts, renewal-risk monitoring, pricing-exception deal desk review, permissions, and management views.",
+      "source_anchor": "## Before scaffolding: ask scope"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0208",
+  "batch_input_sha256": "42d16a6d1770308fe7444a075e7facc3ba4cc9e581149aef579ee316404f8f1c",
+  "blind_packet_id": "P-69349A4E8D910616F8",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7774260b196a84b6a5d32f79b717a9647b9dbe3081195ab0186b2943329e7bed"
+}
