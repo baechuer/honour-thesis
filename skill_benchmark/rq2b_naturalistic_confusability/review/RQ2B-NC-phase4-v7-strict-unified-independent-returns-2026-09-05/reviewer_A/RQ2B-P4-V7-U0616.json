@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0616",
+  "blind_packet_id": "P-54AF597D9CD802622B",
+  "batch_input_sha256": "5d7b29364046317517eea47d4fcdb957b3b723b9024c98862465939c8226ef23",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3D4143A683BFF777",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Parse the NOFO/FOA",
+      "rationale": "It explicitly supports SBIR and STTR mechanisms and covers funding-notice parsing, page budgeting, milestone-driven aims, commercialization requirements, and a pre-submission checklist.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-41AA0E56C51E48DF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This designs employment-interview questions and scoring anchors, not biomedical grant planning or application compliance.",
+      "missing_material_requirement_or_null": "Funding-notice parsing, small-business research aims, commercialization planning, and submission compliance review."
+    },
+    {
+      "candidate_token": "C-776F310C3F9F246D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Social Search Audit",
+      "rationale": "This assesses social-media search as a growth channel and does not create research-grant plans or funding-application materials.",
+      "missing_material_requirement_or_null": "Biomedical grant application planning, milestones, commercialization material, and pre-submission compliance checks."
+    },
+    {
+      "candidate_token": "C-8BC015238B414C3B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This runs gene-set enrichment analysis on an existing ranked gene list, rather than planning or drafting a small-business research application.",
+      "missing_material_requirement_or_null": "Funding-notice analysis, page allocation, milestone-driven aims, commercialization outline, and application compliance checklist."
+    },
+    {
+      "candidate_token": "C-A8F28662CC0F0CAB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This facilitates team sprint retrospectives, which is unrelated to biomedical grant application preparation.",
+      "missing_material_requirement_or_null": "Small-business biomedical funding-call interpretation, research-plan drafting, commercialization content, and compliance review."
+    },
+    {
+      "candidate_token": "C-D26D8567840598DD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Phase 1: Decode the funding call",
+      "rationale": "It supports medical-project funding-call decoding, page-format compliance, aims, and measurable milestones, but is tailored to national and Korean government grant formats rather than small-business biomedical commercialization requirements.",
+      "missing_material_requirement_or_null": "Mechanism-specific small-business commercialization material and a complete SBIR or STTR pre-submission compliance package."
+    },
+    {
+      "candidate_token": "C-D789D124DF772F7D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Start with the funder and constraints",
+      "rationale": "It provides general grant-proposal planning with sponsor fit, aims, milestones, and factual safeguards, but does not specify the small-business biomedical mechanism, page plan, commercialization package, or compliance checklist.",
+      "missing_material_requirement_or_null": "Funding-notice-specific page allocation, commercialization requirements, quantitative go or no-go thresholds, and pre-submission compliance checklist."
+    },
+    {
+      "candidate_token": "C-F9ECF660E361D57D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Build the compliance matrix",
+      "rationale": "It maps solicitation requirements, page limits, and compliance checks, but is designed for commercial RFP responses rather than biomedical research aims, scientific milestones, and commercialization-plan content.",
+      "missing_material_requirement_or_null": "Small-business biomedical research-plan structure with milestone-driven aims and required commercialization material."
+    }
+  ],
+  "reviewer_output_sha256": "2d584c772671b1a43769558229b6e621fdc970c40f298839b840a1e922275d71"
+}
