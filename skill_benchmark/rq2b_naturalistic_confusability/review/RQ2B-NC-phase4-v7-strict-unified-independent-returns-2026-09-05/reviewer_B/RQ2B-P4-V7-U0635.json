@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0635",
+  "blind_packet_id": "P-6CACD05439D632EADF",
+  "batch_input_sha256": "11e729271e8ad28295ba5f02b04275f04e1c89d39ccb04221b5723a3e2669941",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-46915EBE6D2B76E1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating Contract",
+      "rationale": "This retrieves papers to construct an academic researcher profile, not API module boundaries or frontend-backend request and response contracts.",
+      "missing_material_requirement_or_null": "REST resource and module design plus typed request and response contract specification before implementation."
+    },
+    {
+      "candidate_token": "C-55F08926CD2DE606",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When to Use",
+      "rationale": "This batch-redlines legal contracts in Word documents and does not design software HTTP interfaces.",
+      "missing_material_requirement_or_null": "Stable REST boundaries and typed frontend-backend data contracts."
+    },
+    {
+      "candidate_token": "C-5F60381D99DA5A36",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Routing",
+      "rationale": "It supports Express REST routes, middleware, and request and response handling, but is primarily an implementation framework guide rather than a pre-implementation boundary and typed cross-layer contract design method.",
+      "missing_material_requirement_or_null": "Framework-independent module boundaries and explicitly typed frontend-backend request and response contracts before coding."
+    },
+    {
+      "candidate_token": "C-86584074EF0A5553",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Overview",
+      "rationale": "This builds Go-backed desktop applications with generated bindings, not stable REST modules between a web frontend and backend.",
+      "missing_material_requirement_or_null": "REST module boundary design and typed HTTP request and response contracts."
+    },
+    {
+      "candidate_token": "C-A87997028310DCDF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Core Workflow",
+      "rationale": "It can produce a technical design across frontend and backend and considers API flows, but is an implementation-oriented full-stack workflow without a dedicated contract-first REST boundary method.",
+      "missing_material_requirement_or_null": "Explicit stable REST resource boundaries and typed request and response contract definitions prior to implementation."
+    },
+    {
+      "candidate_token": "C-CA2812E95D582522",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "API Design",
+      "rationale": "It is a contract-first API design workflow that produces resource models, endpoint definitions, typed payload schemas, error contracts, and governance rules before implementation.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-D222618F266BB29D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Step 1: Update SDK version",
+      "rationale": "This is a narrow migration guide for a browser monitoring SDK version, unrelated to designing new REST contracts.",
+      "missing_material_requirement_or_null": "REST module boundaries and typed frontend-backend request and response contract design."
+    },
+    {
+      "candidate_token": "C-F49E93FA5DE678D3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When To Use",
+      "rationale": "This performs GO and KEGG enrichment analysis from biological gene lists rather than software API design.",
+      "missing_material_requirement_or_null": "REST resource boundaries and typed request and response contracts for frontend-backend integration."
+    }
+  ],
+  "reviewer_output_sha256": "cc9172718018c32abb9b62d215a8401edaded7389a73055a56b88bc7392d606c"
+}
