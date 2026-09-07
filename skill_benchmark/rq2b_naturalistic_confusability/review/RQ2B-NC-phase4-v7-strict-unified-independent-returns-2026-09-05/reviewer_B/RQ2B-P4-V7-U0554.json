@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0554",
+  "blind_packet_id": "P-02C8D0B20865B110B2",
+  "batch_input_sha256": "e8558a1ee5497e1172805ed3570491aa7112eca13257dde654c9981983ee7e73",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-050F41497E43BE7B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Generates Angular code and provides architectural guidance.",
+      "rationale": "This skill covers Angular component generation, dependency injection, project-aware guidance, and component testing, so it can add the preferences panel in the existing Angular feature while preserving local module and test conventions.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-4011E79D93CCDC44",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Designs the minimal set of test doubles for a unit or integration test",
+      "rationale": "It can advise on isolating an account-data dependency in a supporting test, but it does not implement the Angular preferences panel, use the existing component metadata, or preserve repository module and component-test conventions.",
+      "missing_material_requirement_or_null": "An Angular component implementation workflow that follows the existing feature's module and test conventions."
+    },
+    {
+      "candidate_token": "C-45B0F1CA129332BE",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Based on Vue 3.5. Always use Composition API with `<script setup lang=\"ts\">`.",
+      "rationale": "It can build a component-level UI, but its Vue Composition API and SFC conventions do not satisfy the Angular `@Component`, `inject(AccountService)`, module, and component-test requirements.",
+      "missing_material_requirement_or_null": "Angular-specific component, dependency-injection, module, and test-convention support."
+    },
+    {
+      "candidate_token": "C-479D26D83EF5CAAE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Linkerd Patterns",
+      "rationale": "This skill configures Kubernetes service-mesh traffic and security policies, not frontend components or their tests.",
+      "missing_material_requirement_or_null": "An Angular component implementation workflow that follows the existing feature's module and test conventions."
+    },
+    {
+      "candidate_token": "C-708E8287FF865E64",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Before anyone designs a screen or writes a requirement",
+      "rationale": "This skill surveys published user-research evidence before design and produces research artifacts; it does not change an existing Angular component or its tests.",
+      "missing_material_requirement_or_null": "An Angular component implementation workflow that follows the existing feature's module and test conventions."
+    },
+    {
+      "candidate_token": "C-7EBF0848B87F8815",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# React Expert",
+      "rationale": "It can implement and test a frontend component, but its React component and hook model is incompatible with the stated Angular metadata, `inject(AccountService)`, and Angular repository conventions.",
+      "missing_material_requirement_or_null": "Angular-specific component, dependency-injection, module, and test-convention support."
+    },
+    {
+      "candidate_token": "C-7FA50A309223B451",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is a retrospective facilitation process and provides no frontend implementation or component-test capability.",
+      "missing_material_requirement_or_null": "An Angular component implementation workflow that follows the existing feature's module and test conventions."
+    },
+    {
+      "candidate_token": "C-96B6CED2F3B1D0A4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# PCI-DSS Encryption and Key Management",
+      "rationale": "This is a PCI account-data encryption and key-management audit workflow, not an Angular UI component or test implementation route.",
+      "missing_material_requirement_or_null": "An Angular component implementation workflow that follows the existing feature's module and test conventions."
+    }
+  ],
+  "reviewer_output_sha256": "a7e5f8ca9e198f3149e4e6f199f76f76b88cca6434479b22ff6ed3bb533ba5d2"
+}

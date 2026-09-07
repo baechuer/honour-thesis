@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-02C8D0B20865B110B2",
+  "candidate_token": "C-45B0F1CA129332BE",
+  "reviewer_a_return_sha256": "ce57adcc5e593e46a2bc96ab130f2bb257d5c4642d4b80be6c861358692a95c6",
+  "reviewer_b_return_sha256": "09cfdae5f5b558831160f247b09b90876d74bfb027488e90a05645f953b31ed3",
+  "fresh_source_render_sha256": "bc55ebe2b741995a8393d9f8531fb1b298b148136844c0aab592061025b40f4c",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "source_anchor": "Based on Vue 3.5. Always use Composition API with `<script setup lang=\"ts\">`.",
+  "rationale": "The skill's source-visible workflow and code conventions are for Vue Composition API and single-file components. They cannot implement the requested Angular component, dependency injection, module conventions, and associated tests, so this fails the central framework boundary.",
+  "coordinator_output_sha256": "f226fd9faa54d059f6f7eb265da32ba71db85951c0732e14d59c881007aa6d5a"
+}
