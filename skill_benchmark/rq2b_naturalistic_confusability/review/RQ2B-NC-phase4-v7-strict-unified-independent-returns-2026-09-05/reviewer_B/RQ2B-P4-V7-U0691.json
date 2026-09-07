@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0691",
+  "blind_packet_id": "P-2A4B963AE115A57886",
+  "batch_input_sha256": "a15fbe77f5cdfef306c07edd91fa5baea58525200e51ea1fc4e4362f3f108ab6",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-25835CEB5D082B4C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Writing Plans",
+      "rationale": "This creates implementation plans for coding work, rather than a conceptual subscription-renewal reporting model with a source-grain gate and fact-and-lookup design.",
+      "missing_material_requirement_or_null": "A logical dimensional-model design that declares grain, evaluates source-grain risks, and lays out facts and dimensions without DDL."
+    },
+    {
+      "candidate_token": "C-27955E8A7BEF73AE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "The expert hand who walks you",
+      "rationale": "It can inspect supplied data-estate material, surface unknowns, and record granularity-related questions, which helps the requested pre-design assessment. However, it explicitly remains an orientation workflow and does not produce the required fact-and-lookup model or modelling-fork design.",
+      "missing_material_requirement_or_null": "A logical reporting-model design with fact grain, dimensional structure, historical treatment, shared entities, late-arrival handling, and an explicit modelling decision register."
+    },
+    {
+      "candidate_token": "C-3462FD2B8EC69B3E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Two procedures. Route by what you were asked for:",
+      "rationale": "This surveys documented UI and interaction conventions for product design; it provides no subscription-renewal reporting-model or source-granularity design method.",
+      "missing_material_requirement_or_null": "A dimensional reporting-model procedure that gates on source grain and designs facts, dimensions, historical behavior, and late-arrival handling."
+    },
+    {
+      "candidate_token": "C-3F93914DFC32FBE8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "A GraphQL schema is a public contract",
+      "rationale": "This designs a GraphQL API schema and resolver layer, and explicitly excludes the underlying data-model design requested here.",
+      "missing_material_requirement_or_null": "A conceptual fact-and-lookup reporting model with source-grain, duplication, join-expansion, and historical-coverage assessment."
+    },
+    {
+      "candidate_token": "C-7C4B2EAFFE6D3B1A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "The analytics engineer who won't let a metric mean two things.",
+      "rationale": "It usefully makes metric-definition choices explicit, recommends options, and preserves unresolved owner decisions. But it intentionally defines a KPI rather than designing the mart's fact and lookup structure, source-grain gate, and dimensional history treatment.",
+      "missing_material_requirement_or_null": "A logical fact-and-dimension design covering source granularity, keys, repeated records, join expansion, shared entities, historical coverage, and late arrivals."
+    },
+    {
+      "candidate_token": "C-940509CC16B6C5F3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "A well-modeled Notion database scales",
+      "rationale": "This structures Notion workspaces and their views, not a conceptual analytical reporting model for subscription renewals.",
+      "missing_material_requirement_or_null": "A data-warehouse-style logical model with stated grain, source-risk assessment, facts, dimensions, and open modelling choices."
+    },
+    {
+      "candidate_token": "C-AC53B9DFA12ED5AF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Wire an existing front end to a live Wix site",
+      "rationale": "This wires a client front end to Wix REST services; it does not assess source grain or design a subscription-renewal reporting model.",
+      "missing_material_requirement_or_null": "A conceptual dimensional-model workflow producing a fact-and-lookup design and decision register without live-data access or DDL."
+    },
+    {
+      "candidate_token": "C-DFE9008ABEE2B527",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "The data architect who won't let you build a star",
+      "rationale": "The skill directly designs a logical dimensional reporting model: it declares target grain, blocks structure until source grain, keys, duplication and fan-out risks are resolved or open, covers measures, conformed dimensions, SCD/history, late arrivals and null members, supplies a fact-and-dimension layout and fork log, preserves owner decisions as open, and prohibits live access and DDL.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "b58efdca545a87c23a8a67186d7123b08e5ce74a047116d717e6a958944a30d5"
+}
