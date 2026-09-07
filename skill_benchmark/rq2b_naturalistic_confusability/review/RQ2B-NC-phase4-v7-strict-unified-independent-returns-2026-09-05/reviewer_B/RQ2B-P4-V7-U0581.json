@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0581",
+  "blind_packet_id": "P-B9BE0A55B03B76D638",
+  "batch_input_sha256": "af9257ee646e0ea08eb38728a535ffb539907f01428b2a1ab8d4a5d07512d2a4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-07B69112680C3A30",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# find-engineering-firm",
+      "rationale": "It searches and enriches US real-world engineering firms, specifically supports structural and MEP disciplines plus hospital and PE keywords, screens quality evidence and ratings, and retrieves detailed contact information for a selected shortlist.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-49292381700D4B57",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# find-software-developer",
+      "rationale": "It shortlists US software-development firms and explicitly excludes hardware and civil engineering, so it cannot identify building structural and services engineers.",
+      "missing_material_requirement_or_null": "US structural and building-services engineering firms with hospital or complex-building evidence, contact details, and construction coordination capability."
+    },
+    {
+      "candidate_token": "C-83F7BAF01805AC7F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "It facilitates team retrospectives and action tracking rather than sourcing engineering firms for a hospital expansion.",
+      "missing_material_requirement_or_null": "A shortlist of qualifying US structural and building-services engineering firms with project-fit evidence and contacts."
+    },
+    {
+      "candidate_token": "C-9EE5E10E4F78E502",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "It performs gene-set enrichment analysis and produces biological analysis outputs, not engineering-firm procurement information.",
+      "missing_material_requirement_or_null": "US structural and building-services engineering firm discovery, project-fit evidence, ratings, and contact details."
+    },
+    {
+      "candidate_token": "C-E10012F85E1CC765",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# High-Converting Portfolio Builder",
+      "rationale": "It structures an individual developer or designer portfolio and does not identify or evaluate engineering firms for construction work.",
+      "missing_material_requirement_or_null": "A shortlist of US structural and building-services engineering firms with hospital or complex-building evidence and contacts."
+    },
+    {
+      "candidate_token": "C-EA825311C7805ECC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# find-web-developer",
+      "rationale": "It procures US web-development firms and explicitly routes work beyond websites elsewhere; it cannot supply building-engineering or permit-drawing services.",
+      "missing_material_requirement_or_null": "US structural and building-services engineering firms that can provide permit-ready drawings and construction coordination."
+    },
+    {
+      "candidate_token": "C-F296E023682B516D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Resume Tailor Skill",
+      "rationale": "It tailors an individual's resume to a job application, not a procurement shortlist of construction-engineering firms.",
+      "missing_material_requirement_or_null": "A vetted US structural and building-services engineering-firm shortlist with project-fit evidence, ratings, and contacts."
+    },
+    {
+      "candidate_token": "C-FE41A399B99388EC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Authentication Setup",
+      "rationale": "It designs product authentication for web applications and APIs, with no route to identify or evaluate building-engineering firms.",
+      "missing_material_requirement_or_null": "US structural and building-services engineering firm discovery with healthcare or complex-building fit and contact details."
+    }
+  ],
+  "reviewer_output_sha256": "8ddb14a1cb1acb133b9be77d5d7f86b9a7b122dcc1eace0a0a440acb79265424"
+}
