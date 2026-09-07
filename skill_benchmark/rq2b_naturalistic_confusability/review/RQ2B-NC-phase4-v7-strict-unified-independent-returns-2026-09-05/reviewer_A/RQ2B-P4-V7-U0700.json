@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0700",
+  "blind_packet_id": "P-61B33498668E2E8963",
+  "batch_input_sha256": "095b1c71b8dd1cd2de1de5d0f89fa7a8217faa0a5326608b58b4ff8fd5d42323",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-34FB02AA14A5B5CE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "System Architecture",
+      "rationale": "The skill produces C4-style software architecture documentation rather than restructures and revises an academic research manuscript.",
+      "missing_material_requirement_or_null": "A claim-led paper outline, an edit plan, and revised methods and results prose preserving notation, citations, values, and author voice."
+    },
+    {
+      "candidate_token": "C-412A5E2F70B3399A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "research-paper-writing",
+      "rationale": "It supports claim-evidence mapping and paper-section drafting for research manuscripts, but its prescribed output is a stage-specific paper packet rather than the requested combined edit plan and revisions with explicit preservation of the supplied voice and all notation, citations, and values.",
+      "missing_material_requirement_or_null": "A combined edit plan and revised methods and results sections that explicitly preserve the supplied notation, citations, reported values, and preferred voice."
+    },
+    {
+      "candidate_token": "C-9B5896BEBF23F82F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "The skill structures software-team retrospective sessions and action items rather than academic manuscript revision.",
+      "missing_material_requirement_or_null": "Research-paper outlining and revision of methods and results into direct technical prose."
+    },
+    {
+      "candidate_token": "C-AEC439788C2C98FC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Nature-Style Scientific Writing — Router",
+      "rationale": "It can plan and draft scientific manuscript sections from supplied claims and results, but it is oriented to Nature-style manuscript workflows rather than explicitly preserving the author's preferred voice and all existing notation, citations, and reported values in the requested combined deliverable.",
+      "missing_material_requirement_or_null": "A combined edit plan and section revisions explicitly preserving the supplied voice, notation, citations, and reported values."
+    },
+    {
+      "candidate_token": "C-C0C11FCE24ACF457",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "MSA Review",
+      "rationale": "The skill reviews commercial services agreements and contract redlines, not technical research papers.",
+      "missing_material_requirement_or_null": "Claim-led research-paper restructuring and revised methods and results prose."
+    },
+    {
+      "candidate_token": "C-C44F84AB35D5B422",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Nature-Style Academic Polishing — Router",
+      "rationale": "It can restructure and polish methods and results while preserving factual and citation boundaries, but it is a Nature-leaning polishing workflow and does not explicitly provide the requested claim-led whole-paper outline and preservation of the author's preferred voice.",
+      "missing_material_requirement_or_null": "A claim-led outline spanning the paper and revisions explicitly preserving the supplied preferred voice."
+    },
+    {
+      "candidate_token": "C-DB59DBC172C0AECA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Paper Writing",
+      "rationale": "It directly plans, restructures, and revises technical research papers with claim-led sections, direct technical prose, and explicit preservation of claims, notation, evidence, citations, and author voice.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F023A118AD6964C4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When To Use",
+      "rationale": "The skill performs GO and KEGG enrichment analysis on gene lists and does not outline or revise a sensor-based activity-recognition paper.",
+      "missing_material_requirement_or_null": "A claim-led paper outline, edit plan, and revised methods and results prose preserving manuscript evidence and voice."
+    }
+  ],
+  "reviewer_output_sha256": "78d4e1344f078d113062f9cf4fc3832a2330e64e7750708704d3205cc55af2d9"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0700",
+  "blind_packet_id": "P-61B33498668E2E8963",
+  "batch_input_sha256": "095b1c71b8dd1cd2de1de5d0f89fa7a8217faa0a5326608b58b4ff8fd5d42323",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-34FB02AA14A5B5CE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "System Architecture",
+      "rationale": "This skill creates C4-style system-architecture documentation, not a claim-led technical research-paper outline and manuscript revision.",
+      "missing_material_requirement_or_null": "A research-manuscript restructuring and revision workflow that preserves notation, citations, reported values, and author voice."
+    },
+    {
+      "candidate_token": "C-412A5E2F70B3399A",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "research-paper-writing",
+      "rationale": "It plans and revises research-paper sections with claim-evidence alignment, direct technical methods and results prose, and explicit preservation of scope and evidence boundaries.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-9B5896BEBF23F82F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This skill facilitates team retrospectives and action items rather than restructuring or editing a technical research manuscript.",
+      "missing_material_requirement_or_null": "A research-manuscript restructuring and revision workflow that preserves notation, citations, reported values, and author voice."
+    },
+    {
+      "candidate_token": "C-AEC439788C2C98FC",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Nature-Style Scientific Writing — Router",
+      "rationale": "It explicitly routes manuscript restructuring and drafting across abstract, methods, results, and discussion while requiring evidence-bounded prose and preserving missing inputs rather than inventing them.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-C0C11FCE24ACF457",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "MSA Review",
+      "rationale": "This skill reviews commercial service agreements and contractual risk, not academic technical prose or research-paper structure.",
+      "missing_material_requirement_or_null": "A research-manuscript restructuring and revision workflow that preserves notation, citations, reported values, and author voice."
+    },
+    {
+      "candidate_token": "C-C44F84AB35D5B422",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Nature-Style Academic Polishing — Router",
+      "rationale": "It can restructure and polish Methods and Results while preserving evidence, terminology, and citation intent, but its Nature-leaning polishing focus does not fully cover a claim-led whole-paper edit plan tailored to the author's preferred voice.",
+      "missing_material_requirement_or_null": "A claim-led whole-manuscript revision plan that explicitly preserves and works within the author's preferred voice."
+    },
+    {
+      "candidate_token": "C-DB59DBC172C0AECA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Build The Argument Before The Prose",
+      "rationale": "It directly supports technical research-paper planning, claim-led section architecture, direct technical prose, and preservation of notation, citations, quantitative results, and author voice.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F023A118AD6964C4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When To Use",
+      "rationale": "This skill performs GO and KEGG enrichment analysis and does not restructure or revise a research manuscript.",
+      "missing_material_requirement_or_null": "A research-manuscript restructuring and revision workflow that preserves notation, citations, reported values, and author voice."
+    }
+  ],
+  "reviewer_output_sha256": "ed61e5d50e907781ba414bea80ed0622ad0f11fa2f648d050db8e0debc6a50a7"
+}
