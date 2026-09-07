@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3FB344D48770F10F",
+      "missing_material_requirement_or_null": "ClickUp task-update integration, overdue-item movement, time-tracking summaries, and team productivity reporting.",
+      "rationale": "This is a browser testing and debugging workflow, not an operational ClickUp automation or reporting workflow.",
+      "source_anchor": "# Browser Testing with DevTools"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-59AB04BF2378A1E2",
+      "missing_material_requirement_or_null": "ClickUp task-update integration, overdue-item movement, time-tracking summaries, and team productivity reporting.",
+      "rationale": "The skill is limited to GO/KEGG enrichment of gene lists and does not address workspace task operations or reporting.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9048C675C4D2C5C1",
+      "missing_material_requirement_or_null": "ClickUp API operations to move overdue items, retrieve time-tracking data, and generate the requested workspace productivity report.",
+      "rationale": "It provides automation and scheduled-summary patterns, but they are confined to Slack bots and do not implement the required ClickUp workflow.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-96F343DCF0F5DA26",
+      "missing_material_requirement_or_null": "Automated ClickUp updates, overdue-item movement, time-tracking summaries, and a workspace productivity report.",
+      "rationale": "It supports reviewing team actions and ownership in a retrospective, but it is a facilitation guide rather than an integration or automation for ClickUp.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9BBDC53E770D0F81",
+      "missing_material_requirement_or_null": "ClickUp access and mutation, time-tracking summaries, and a team productivity report beyond a read-only event-task digest.",
+      "rationale": "It can identify overdue tasks in a status digest, but it is read-only, scoped to an AAIF event tracker, and cannot perform the requested ClickUp updates.",
+      "source_anchor": "# AAIF Event Status"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B0BCAE080BB4B117",
+      "missing_material_requirement_or_null": "ClickUp task updates, overdue-item movement, time-tracking summaries, and team productivity reporting.",
+      "rationale": "This skill inventories AWS Glue catalog metadata and has no task-management or ClickUp automation capability.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD5251E9B5DBE694",
+      "missing_material_requirement_or_null": "ClickUp task updates, overdue-item movement, time-tracking summaries, and team productivity reporting.",
+      "rationale": "The documented automation and analytics are specific to Twitter/X content and do not operate a ClickUp workspace.",
+      "source_anchor": "# Twitter/X Marketing"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E9B7D5394C4CB76B",
+      "missing_material_requirement_or_null": "ClickUp-specific task movement and time-tracking/reporting support; the documented operations use Google Tasks instead.",
+      "rationale": "It covers task updates and reviewing overdue items, but its commands target Google Tasks and it does not provide ClickUp time summaries or the requested team productivity report.",
+      "source_anchor": "# Google Tasks"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0842",
+  "batch_input_sha256": "93ff9f6a764f798c7fdef2189becd4540e3ba295ad9cd74ecbbdefd441900ccc",
+  "blind_packet_id": "P-A61061003DAAFB0E3B",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1e3b90d549afe4777de3a5065a97d1ff87de919ea81f945d7967ef79a79f679b"
+}
