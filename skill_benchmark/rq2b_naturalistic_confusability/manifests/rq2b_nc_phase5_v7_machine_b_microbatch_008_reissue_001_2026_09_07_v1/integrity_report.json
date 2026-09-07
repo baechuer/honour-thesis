@@ -1,0 +1,20 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_008_reissue_001_v1",
+  "scope": "Machine B V7 only; reissue collection packet, no target/join/main-tail/retrieval/metric disclosure.",
+  "bound_inputs": {
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "blind_packet_id": "P-ADF5661D06B2D7CD2C",
+    "batch_input_sha256": "2468c49c6be5db67904b9cbea391215b8de21b04ef30ba7f183f42b290d6db12"
+  },
+  "checks": {
+    "K6_plus_two_tail_packet_unit_intact": true,
+    "target_blind_render_hash_and_schema_verified": true,
+    "target_blindness_verified": true,
+    "whole_group_reissue_not_candidate_split": true
+  },
+  "outputs": {
+    "reviewer_a_assignment.jsonl": "d7e983ef1e2344e11015b8a440efe60e5b95a1876b809efe8a70204f5334e41a",
+    "reviewer_b_assignment.jsonl": "5fda336d149c08e7cce5ed0a91f93220f75ad6380157ef91a5ebdda33dbc8a5e"
+  },
+  "status": "PASS_V7_MACHINE_B_WHOLE_GROUP_REISSUE_INPUT_VERIFIED"
+}

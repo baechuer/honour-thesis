@@ -1,0 +1,1 @@
+# V7 Machine B microbatch 008 independent-pair validation\n\nEleven groups have two validated raw target-blind returns. One group has two preserved but invalid raw returns and requires a traceable whole-group reissue. This checkpoint intentionally stops before reconciliation because the Machine-B coordinator-context gate is open.\n
