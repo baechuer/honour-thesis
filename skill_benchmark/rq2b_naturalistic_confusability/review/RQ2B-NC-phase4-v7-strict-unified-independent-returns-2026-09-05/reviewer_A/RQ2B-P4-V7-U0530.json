@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0530",
+  "blind_packet_id": "P-25AFB523C413B1A18A",
+  "batch_input_sha256": "1250c528d0b9c1778e0b8c77872a7da699dbc78f32773aaa6acd20e2844837f5",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-069C2F934E2B4497",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is an agile retrospective facilitation skill, unrelated to somatic cancer mutation reference queries.",
+      "missing_material_requirement_or_null": "Authenticated somatic-mutation, cancer-driver, signature, and therapy-resistance database investigation."
+    },
+    {
+      "candidate_token": "C-5AA55CB53FC4F61D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Pandas Expert",
+      "rationale": "The skill transforms supplied DataFrames but provides no authenticated cancer-mutation reference or curated cancer-driver and resistance records.",
+      "missing_material_requirement_or_null": "Somatic cancer database access for the requested mutation, driver, signature, and resistance findings."
+    },
+    {
+      "candidate_token": "C-9C9064B52452E324",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# cBioPortal Database",
+      "rationale": "It can retrieve somatic mutation records and study-specific cancer distributions, but it does not provide the requested authenticated curated driver-role, mutational-signature, and same-gene therapy-resistance coverage.",
+      "missing_material_requirement_or_null": "Curated cancer-driver role, disease-context mutational signatures, and therapy-resistance variant records."
+    },
+    {
+      "candidate_token": "C-BE2A8A92C86D7BE4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Data Analysis With Validation",
+      "rationale": "The source validates spreadsheet conclusions but cannot query a somatic-cancer mutation reference.",
+      "missing_material_requirement_or_null": "Authenticated somatic cancer mutation, driver, signature, and resistance database investigation."
+    },
+    {
+      "candidate_token": "C-D111E2EF3ABB4C44",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Portray Audience",
+      "rationale": "The skill analyses product audiences from public evidence, not cancer-genomics records.",
+      "missing_material_requirement_or_null": "Somatic cancer mutation database investigation."
+    },
+    {
+      "candidate_token": "C-E966A5ECF50E015C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Query TCGA tumor biology",
+      "rationale": "The skill focuses on TCGA gene expression, correlation, survival, and catalogue browsing rather than mutation-specific curated driver roles, signatures, and therapy-resistance records.",
+      "missing_material_requirement_or_null": "Somatic mutation, curated driver-role, mutational-signature, and therapy-resistance variant records."
+    },
+    {
+      "candidate_token": "C-ED8A8524D4C63DC9",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# COSMIC Somatic Cancer Mutations Database",
+      "rationale": "It is an authenticated somatic-cancer reference covering variant records and cancer-site distributions, Cancer Gene Census driver roles, mutational signatures by cancer context, and same-gene drug-resistance variants, with query workflows able to distinguish absent data from a negative result.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-FF9196F7495B09A2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual prior art",
+      "rationale": "This is a UI-convention research workflow and does not provide cancer-genomics data.",
+      "missing_material_requirement_or_null": "Authenticated somatic cancer mutation database investigation."
+    }
+  ],
+  "reviewer_output_sha256": "c58087a85fa53ad63d70ad9942df2551727b6e7d2087c42f0dd5c67003f3ace4"
+}
