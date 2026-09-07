@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0637",
+  "blind_packet_id": "P-B1693AFC1C719BD0EC",
+  "batch_input_sha256": "7fdf8884bdfcc83fdc3a1476664ef94558afb899819309a61c5a09da829afcfe",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0FB43321659A845A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Core Workflow",
+      "rationale": "This designs ML training and model-lifecycle pipelines rather than diagnosing a frontend deployment build failure from a log.",
+      "missing_material_requirement_or_null": "Build-log root-cause analysis, environment and configuration assumption identification, and minimal deploy rerun sequence."
+    },
+    {
+      "candidate_token": "C-1ED2716B30625464",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Input",
+      "rationale": "This is a repository-specific GitHub-issue triage workflow that requires an issue identifier and does not analyze a supplied Netlify build log.",
+      "missing_material_requirement_or_null": "Direct deployment log diagnosis, environment configuration analysis, and smallest safe rerun steps."
+    },
+    {
+      "candidate_token": "C-3D82C436CC72F950",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Core Workflow",
+      "rationale": "It systematically parses errors and logs, isolates the failure, tests root-cause hypotheses, identifies remediation assumptions, and establishes minimal reproduction and verification steps.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-4BCCB9616D63DF0D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This prioritizes security-vulnerability findings by exploitability and remediation SLA, not a hosting-platform build failure.",
+      "missing_material_requirement_or_null": "Build-log analysis, missing deployment environment or configuration assumptions, and minimal rerun sequence."
+    },
+    {
+      "candidate_token": "C-7E8F59B5A858041C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This runs team retrospectives and explicitly is not a technical incident or error-triage method.",
+      "missing_material_requirement_or_null": "Deployment build diagnosis, configuration assessment, and rerun instructions."
+    },
+    {
+      "candidate_token": "C-97A7A04B5AD780E6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Data preparation",
+      "rationale": "This analyzes customer-satisfaction text to prioritize product themes, not software build logs or deployment configuration.",
+      "missing_material_requirement_or_null": "Netlify build-log root-cause diagnosis, environment assumptions, and minimal deployment rerun plan."
+    },
+    {
+      "candidate_token": "C-BD113305ABC767EE",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "When to use",
+      "rationale": "It can diagnose measured frontend performance problems and inspect bundles or browser behavior, but it does not focus on hosting build-log failures or deployment environment configuration.",
+      "missing_material_requirement_or_null": "Build-log error interpretation, Netlify environment and build configuration analysis, and smallest rerun sequence."
+    },
+    {
+      "candidate_token": "C-D85123EA6059EEC0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When to Use",
+      "rationale": "This runs pathway-level gene-expression analyses and visualizations, unrelated to web deployment debugging.",
+      "missing_material_requirement_or_null": "Build-log inspection, root-cause and configuration diagnosis, plus minimal rerun instructions."
+    }
+  ],
+  "reviewer_output_sha256": "81c9d6a2ca4ea90e8957871b20fa927ead119abffaaa4aa5b21855223e152506"
+}

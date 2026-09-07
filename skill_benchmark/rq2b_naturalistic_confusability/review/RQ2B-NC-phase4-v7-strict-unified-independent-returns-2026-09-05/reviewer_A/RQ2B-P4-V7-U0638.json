@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0638",
+  "blind_packet_id": "P-C64C125100ACF26C5B",
+  "batch_input_sha256": "cb6766f59b2d1179b49b44d3aa8577ebf387e98a0e5b8b4d5e9317e87c66bc4a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-098D5AADBEC212BB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This skill builds Slack integrations and does not audit web accessibility, performance, SEO, best practices, or user-facing quality risks.",
+      "missing_material_requirement_or_null": "A prioritized broad web-quality audit across accessibility, performance, SEO, best practices, and user-facing risks."
+    },
+    {
+      "candidate_token": "C-241013EA753ABFE0",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# High Performance Browser Networking Framework",
+      "rationale": "It provides a substantial browser-networking and Core Web Vitals diagnostic for web performance, but it does not assess accessibility, SEO, best practices, or the broader user-facing quality risks required by the audit.",
+      "missing_material_requirement_or_null": "Accessibility, SEO, best-practices, and user-facing quality-risk audit coverage integrated into one prioritized report."
+    },
+    {
+      "candidate_token": "C-6418001CCC2914A4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Web Performance",
+      "rationale": "It gives a rigorous Core Web Vitals audit and remediation process, but it is explicitly a performance-only workflow rather than the requested cross-category quality audit.",
+      "missing_material_requirement_or_null": "Accessibility, SEO, best-practices, and user-facing quality-risk audit coverage integrated into one prioritized report."
+    },
+    {
+      "candidate_token": "C-6BE81A35F46C1DB9",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "It can survey documented interaction and accessibility conventions for a product domain, but it does not audit a web site’s actual accessibility, performance, SEO, or best-practice state.",
+      "missing_material_requirement_or_null": "An evidence-based audit of the site across accessibility, performance, SEO, best practices, and user-facing risks, prioritized in one report."
+    },
+    {
+      "candidate_token": "C-7DF7626434C31397",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# SEO Audit",
+      "rationale": "It produces a prioritized technical, on-page, content, and Core Web Vitals SEO report, but it does not provide a full accessibility or user-facing-quality audit beyond SEO-related checks.",
+      "missing_material_requirement_or_null": "Accessibility and broader user-facing best-practice and quality-risk coverage in the same prioritized report."
+    },
+    {
+      "candidate_token": "C-92C9E7AB5B67B370",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# SEO Optimizer",
+      "rationale": "It audits one page for organic search, crawl hygiene, schema, and Core Web Vitals, but is intentionally narrow and does not cover a broad site-quality review across accessibility and user-facing risks.",
+      "missing_material_requirement_or_null": "A broad site-level audit covering accessibility, performance, SEO, best practices, and user-facing quality risks in one prioritized report."
+    },
+    {
+      "candidate_token": "C-B96C9FB5919E720E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Azure Landing Zone Setup",
+      "rationale": "This skill designs Azure cloud-tenant governance and does not audit web quality.",
+      "missing_material_requirement_or_null": "A prioritized broad web-quality audit across accessibility, performance, SEO, best practices, and user-facing risks."
+    },
+    {
+      "candidate_token": "C-FFFFC49FDCFB4D78",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This skill facilitates sprint retrospectives and does not assess web quality categories.",
+      "missing_material_requirement_or_null": "A prioritized broad web-quality audit across accessibility, performance, SEO, best practices, and user-facing risks."
+    }
+  ],
+  "reviewer_output_sha256": "0f3fabf6bd77046fbc3c5150c4e0221dc7b85921504051d9be2882c81944c00c"
+}
