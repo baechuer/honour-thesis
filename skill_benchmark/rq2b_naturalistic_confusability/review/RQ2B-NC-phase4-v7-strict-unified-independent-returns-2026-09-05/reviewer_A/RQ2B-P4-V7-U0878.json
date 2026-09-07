@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0878",
+  "blind_packet_id": "P-60B47A0505C9F64524",
+  "batch_input_sha256": "520c9b8c4d4844c7f51520bb8dec57f9eb6e5916990aa2e6e99fa8a1e20f3323",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1515F2164F751BDF",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## What This Skill Does",
+      "rationale": "It translates complete press releases while preserving corporate terminology, regulatory phrasing, and target-market newswire formatting, matching the required release-preserving translation.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-435019205939BAE7",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Quote Translator",
+      "rationale": "It preserves speaker voice and attribution when translating quotations, but covers only quoted passages rather than the complete release and its required structure.",
+      "missing_material_requirement_or_null": "Translation and preservation of the non-quotation release sections, legal disclaimer, and media contacts"
+    },
+    {
+      "candidate_token": "C-4861BCCB210C0B05",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## What This Skill Does",
+      "rationale": "It translates news and feature articles with journalistic precision, but does not specifically preserve press-release terminology, legal language, wire structure, boilerplate, and contacts.",
+      "missing_material_requirement_or_null": "Press-release-specific preservation of approved names, legal disclaimer, wire structure, boilerplate, and media contacts"
+    },
+    {
+      "candidate_token": "C-6899EE8083DA71BD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# US Business English",
+      "rationale": "It supplies appropriate US English style guidance, but does not translate the French source or preserve the complete release's named terms, legal text, and newswire structure.",
+      "missing_material_requirement_or_null": "Complete French-to-US-English press-release translation with terminology and structure preservation"
+    },
+    {
+      "candidate_token": "C-78249E3250DF8642",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Overview",
+      "rationale": "This is a visual prior-art survey process and has no capability to translate or preserve a corporate press release.",
+      "missing_material_requirement_or_null": "French-to-US-English press-release translation with structure and terminology preservation"
+    },
+    {
+      "candidate_token": "C-78EB761D002C64C6",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 7: Verify and package",
+      "rationale": "It can supply and check press-release wire structure, but does not translate the French source or preserve its approved terminology and legal language.",
+      "missing_material_requirement_or_null": "Faithful French-to-US-English translation preserving approved names and legal disclaimer"
+    },
+    {
+      "candidate_token": "C-AF880D9C939E9B6B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Press Release Structure",
+      "rationale": "It provides general app PR and press-release structure guidance, but cannot translate the attached French release or preserve its exact legal and corporate terminology.",
+      "missing_material_requirement_or_null": "Complete French-to-US-English translation with exact terminology and disclaimer preservation"
+    },
+    {
+      "candidate_token": "C-F9EB7847F72B3A08",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Sprint retrospective facilitation is unrelated to translating corporate announcements.",
+      "missing_material_requirement_or_null": "French-to-US-English press-release translation and release-structure preservation"
+    }
+  ],
+  "reviewer_output_sha256": "b7ec80b27dab0973e63b0915deadb0d6dc52f9450b9c03eb122b930abe0ed2cc"
+}

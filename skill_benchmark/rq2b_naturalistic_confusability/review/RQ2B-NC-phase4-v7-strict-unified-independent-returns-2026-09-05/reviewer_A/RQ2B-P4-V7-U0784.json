@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0784",
+  "blind_packet_id": "P-806E1972A49541C793",
+  "batch_input_sha256": "781de1c51f0f2e8e6196d150e78185b4851fc73ce6c719db3970bed4414c1a9e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-672E7102D9D04B89",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# 1:1 Agenda",
+      "rationale": "This skill organizes manager-report meetings and does not collect, deduplicate, group, or evidence search-result questions.",
+      "missing_material_requirement_or_null": "SERP question mining with thematic grouping, source counts, and machine-readable output"
+    },
+    {
+      "candidate_token": "C-80ED0C884BD44154",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# SERP Clusters",
+      "rationale": "It can cluster an existing SERP-derived set, but does not mine People Also Ask questions, remove duplicates, or report question-level source-count evidence.",
+      "missing_material_requirement_or_null": "PAA collection, deduplication, source-count evidence, and a question-bank output"
+    },
+    {
+      "candidate_token": "C-A13E1E0B5D43A9EE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to activate",
+      "rationale": "This is a visual prior-art survey workflow and does not gather or organize recurring Google search-result questions for an FAQ.",
+      "missing_material_requirement_or_null": "SERP PAA mining, thematic question grouping, counts, and machine-readable output"
+    },
+    {
+      "candidate_token": "C-A65AB5B790C1094A",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## CSV Output Columns",
+      "rationale": "Its iterative workflow mines PAA questions from SERPs, deduplicates them, tracks overlap across SERPs, supports topical clustering, and provides CSV and JSON output suitable for the requested question bank.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-AECFEA37207D6560",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Multilocale CLI",
+      "rationale": "Translation-management operations do not collect or analyze search-result questions.",
+      "missing_material_requirement_or_null": "SERP question mining, grouping, evidence counts, and machine-readable question-bank output"
+    },
+    {
+      "candidate_token": "C-B6BCBD20E8C463B9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Interview Question Kit",
+      "rationale": "The skill creates hiring-interview questions from competencies, not a question bank based on recurring SERP questions.",
+      "missing_material_requirement_or_null": "Collection and grouping of People Also Ask questions with search-result evidence"
+    },
+    {
+      "candidate_token": "C-CB4E7F531833BE0B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## How It Works",
+      "rationale": "It fetches PAA questions for supplied keywords, deduplicates them, tracks which keywords produced each question, optionally clusters by topic, and provides a structured FAQ question bank plus raw JSON.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F977B7B56463EDEB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Sprint retrospective facilitation is unrelated to mining, grouping, and evidencing search-result questions.",
+      "missing_material_requirement_or_null": "SERP PAA collection and structured FAQ question-bank generation"
+    }
+  ],
+  "reviewer_output_sha256": "7a862f5bdc0e0cdf26a8f7f7ce1ecd350449fe92048da32846907e7fcf0c09e4"
+}

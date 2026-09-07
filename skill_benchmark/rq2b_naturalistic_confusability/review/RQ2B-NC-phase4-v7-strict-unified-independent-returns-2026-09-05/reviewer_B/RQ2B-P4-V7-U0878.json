@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0878",
+  "blind_packet_id":"P-60B47A0505C9F64524",
+  "batch_input_sha256":"520c9b8c4d4844c7f51520bb8dec57f9eb6e5916990aa2e6e99fa8a1e20f3323",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-1515F2164F751BDF","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Translates a complete press release", "rationale":"It directly preserves corporate terminology, regulatory phrasing, and newswire formatting conventions for target-market release translation.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-435019205939BAE7","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Translates individual quotes or quoted passages", "rationale":"It preserves quotations well but does not translate the full release structure or legal and corporate terminology.","missing_material_requirement_or_null":"Complete press-release translation with preserved structure and disclaimer."},
+    {"candidate_token":"C-4861BCCB210C0B05","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Translates a news or feature article", "rationale":"It can translate journalistic prose, but does not specifically preserve press-release formatting, legal disclaimers, and approved terminology.","missing_material_requirement_or_null":"Newswire structure, legal disclaimer, and controlled corporate-name handling."},
+    {"candidate_token":"C-6899EE8083DA71BD","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"American business English writing style", "rationale":"It can apply US-English business style but does not translate the complete French release or preserve its formal structure.","missing_material_requirement_or_null":"Full French-to-US-English press-release translation."},
+    {"candidate_token":"C-78249E3250DF8642","adequacy":"INADEQUATE","source_anchor":"name: visual-prior-art-survey","rationale":"This surveys visual conventions rather than translating a release.","missing_material_requirement_or_null":"French-to-US-English corporate release translation."},
+    {"candidate_token":"C-78EB761D002C64C6","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Writes announcement press releases", "rationale":"It preserves press-release structure but drafts a new release rather than translating the supplied French text.","missing_material_requirement_or_null":"Faithful French-to-US-English translation and controlled terminology preservation."},
+    {"candidate_token":"C-AF880D9C939E9B6B","adequacy":"INADEQUATE","source_anchor":"name: press-and-pr","rationale":"This handles PR strategy and coverage rather than a complete translation.","missing_material_requirement_or_null":"Structured French-to-US-English release translation."},
+    {"candidate_token":"C-F9EB7847F72B3A08","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than translating media releases.","missing_material_requirement_or_null":"Press-release translation and terminology notes."}
+  ],
+  "reviewer_output_sha256":"7156e7d81075680f3701ca8eb4df8911db3fa22c6000db20c81cb6b80a603f41"
+}

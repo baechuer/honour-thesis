@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0784",
+  "blind_packet_id":"P-806E1972A49541C793",
+  "batch_input_sha256":"781de1c51f0f2e8e6196d150e78185b4851fc73ce6c719db3970bed4414c1a9e",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-672E7102D9D04B89","adequacy":"INADEQUATE","source_anchor":"name: 1:1 Agenda","rationale":"This organizes manager-report meetings rather than search-result questions.","missing_material_requirement_or_null":"PAA question mining, thematic grouping, and source-count output."},
+    {"candidate_token":"C-80ED0C884BD44154","adequacy":"INADEQUATE","source_anchor":"Cluster keywords by SERP similarity", "rationale":"It groups keywords by shared results, not People Also Ask questions with per-question source evidence.","missing_material_requirement_or_null":"Question extraction, deduplication, source counts, and FAQ grouping."},
+    {"candidate_token":"C-A13E1E0B5D43A9EE","adequacy":"INADEQUATE","source_anchor":"name: visual-prior-art-survey","rationale":"This surveys visual conventions rather than PAA questions.","missing_material_requirement_or_null":"Search-question mining and structured FAQ results."},
+    {"candidate_token":"C-A65AB5B790C1094A","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Questions (People Might Ask)","rationale":"It expands seeds and mines PAA questions with source tracking, but does not provide a focused PAA-question bank and source-count report as directly as required.","missing_material_requirement_or_null":"Dedicated PAA question extraction, deduplication, thematic grouping, and question-level source counts."},
+    {"candidate_token":"C-AECFEA37207D6560","adequacy":"INADEQUATE","source_anchor":"name: multilocale","rationale":"This manages translations rather than search-result questions.","missing_material_requirement_or_null":"PAA mining and FAQ question-bank generation."},
+    {"candidate_token":"C-B6BCBD20E8C463B9","adequacy":"INADEQUATE","source_anchor":"name: Interview Question Kit","rationale":"This writes hiring-interview questions rather than mining public search questions.","missing_material_requirement_or_null":"SERP-derived question extraction and source evidence."},
+    {"candidate_token":"C-CB4E7F531833BE0B","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Tracks which keywords each question appeared for", "rationale":"It mines PAA questions from multiple seed SERPs, deduplicates and clusters them, reports source distribution, and offers raw JSON.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-F977B7B56463EDEB","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than mining search questions.","missing_material_requirement_or_null":"SERP question mining and FAQ-bank output."}
+  ],
+  "reviewer_output_sha256":"a21ad582a981e35cbf4094d77794c478e4e3d18ab65f1140f0dd6b201ae48788"
+}

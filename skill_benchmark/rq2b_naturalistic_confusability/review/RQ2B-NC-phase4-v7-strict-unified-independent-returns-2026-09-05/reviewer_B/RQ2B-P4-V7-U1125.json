@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1125",
+  "blind_packet_id":"P-3356254FF3B00F1B12",
+  "batch_input_sha256":"acfcf6cde96a82ec9872256cb9dc689494a0442ac22acdfb50451bc4048cecc7",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-03D797BF4CE210D5","adequacy":"INADEQUATE","source_anchor":"name: competitor-tracking","rationale":"This monitors competitor apps, not domain SEO visibility across a keyword set.","missing_material_requirement_or_null":"Weighted domain visibility, competitor comparison, and trend analysis."},
+    {"candidate_token":"C-2F9BC2D44C24E0D9","adequacy":"INADEQUATE","source_anchor":"name: gokegg-analysis","rationale":"This performs biological enrichment analysis rather than SEO measurement.","missing_material_requirement_or_null":"Keyword-ranking visibility analysis."},
+    {"candidate_token":"C-3550290822122B12","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Tracks visibility over time and compares against competitors.","rationale":"It calculates weighted position-based domain visibility, compares named competitors, stores snapshots, and reports trends.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-3B19988A4925A0C6","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Track competitor domains across keyword sets", "rationale":"It compares competitor rankings and changes, but does not calculate a weighted visibility score for the requested domain.","missing_material_requirement_or_null":"Weighted visibility score and domain trend reporting."},
+    {"candidate_token":"C-5CB81045846EA171","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Build and track local search visibility", "rationale":"It tracks local business visibility but is not the requested domain-wide keyword-set weighted comparison.","missing_material_requirement_or_null":"Weighted domain visibility, competitor comparison, and longitudinal trend."},
+    {"candidate_token":"C-629DACADCE4843B1","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than tracking SEO visibility.","missing_material_requirement_or_null":"Keyword-set visibility score and competitor trend analysis."},
+    {"candidate_token":"C-7332EBF73630B2E7","adequacy":"INADEQUATE","source_anchor":"name: Search Intent Classifier","rationale":"This classifies keyword intent rather than tracking rankings and visibility.","missing_material_requirement_or_null":"Weighted position score, competitors, and trend."},
+    {"candidate_token":"C-F7CCC87AEB747B25","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Track keyword ranking positions for a domain over time", "rationale":"It tracks positions and trends but does not calculate weighted visibility or compare competitor visibility.","missing_material_requirement_or_null":"Weighted score calculation and competitor comparison."}
+  ],
+  "reviewer_output_sha256":"9b1f35e46a54e8121b4a6058c551213e24cff14e171a799eec4ce7886dd88060"
+}
