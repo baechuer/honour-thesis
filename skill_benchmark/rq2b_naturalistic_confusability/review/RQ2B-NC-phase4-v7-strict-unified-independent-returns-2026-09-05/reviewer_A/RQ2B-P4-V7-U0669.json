@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0669",
+  "blind_packet_id": "P-91257011A94CA09700",
+  "batch_input_sha256": "4821efa86408798a27b35b430974ece21172d074797e5d4e9e55998ed2e89aa0",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-178FBDF81DC582CF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Earnings Recap Skill",
+      "rationale": "It supports post-earnings profitability, growth, and price-reaction discussion, but its scope is an earnings recap rather than the requested complete investment-research memo.",
+      "missing_material_requirement_or_null": "Balance-sheet-strength assessment, peer-multiple valuation, technical key levels, and bull/bear cases for the company."
+    },
+    {
+      "candidate_token": "C-232A84DC97DE8E0F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "The skill runs gene-set enrichment analysis on ranked gene lists and has no public-equity research workflow.",
+      "missing_material_requirement_or_null": "An investment-research memo assessing a listed company's fundamentals, valuation, technical levels, and bull/bear cases."
+    },
+    {
+      "candidate_token": "C-A02DAD75C9E914BB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Retirement Projection",
+      "rationale": "The skill projects an individual's retirement readiness from savings, spending, and withdrawal assumptions rather than analyzing a listed company.",
+      "missing_material_requirement_or_null": "Company profitability, growth, balance-sheet, valuation, technical, and bull/bear analysis."
+    },
+    {
+      "candidate_token": "C-AAC42C6E6347ADC7",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Crypto Report Skill",
+      "rationale": "It supplies a research-report structure with peer valuation and bull/bear cases, but its methods and inputs are for cryptocurrency tokens and on-chain projects rather than a listed industrial company.",
+      "missing_material_requirement_or_null": "Analysis of a listed industrial company's financial statements, balance-sheet strength, and price-volume technical levels."
+    },
+    {
+      "candidate_token": "C-B148057F269D6A9B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Investment Basics",
+      "rationale": "The skill produces a personal-investing starter plan and explicitly centers diversified funds rather than research on a specific listed company.",
+      "missing_material_requirement_or_null": "A company-specific investment-research memo using financial statements, peer valuation, technical levels, and bull/bear cases."
+    },
+    {
+      "candidate_token": "C-D55F32B7290DFA89",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Stock Analysis Skill",
+      "rationale": "It directly provides fundamental profitability, growth, and financial-health analysis; valuation and peer comparison; technical levels; and bull/bear investment-thesis reporting without investment advice.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E1A381B996B6C193",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Month-End Close",
+      "rationale": "The skill controls accounting close procedures and explicitly does not construct or interpret financial statements for an investment-research memo.",
+      "missing_material_requirement_or_null": "Company profitability, growth, valuation, technical-level, and bull/bear analysis."
+    },
+    {
+      "candidate_token": "C-E7D0725DC35443CA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "The skill facilitates software-team retrospectives and does not analyze listed companies or financial-market data.",
+      "missing_material_requirement_or_null": "An investment-research memo assessing company fundamentals, valuation, technical levels, and bull/bear cases."
+    }
+  ],
+  "reviewer_output_sha256": "a31873e93961ca8d292c332c2997edd07d27c34658ce1cf593029c0f4259372c"
+}

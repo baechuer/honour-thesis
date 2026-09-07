@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0669",
+  "blind_packet_id": "P-91257011A94CA09700",
+  "batch_input_sha256": "4821efa86408798a27b35b430974ece21172d074797e5d4e9e55998ed2e89aa0",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-178FBDF81DC582CF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Earnings Recap Skill",
+      "rationale": "It analyzes a single post-earnings event and stock reaction with financial context, but does not produce the requested three-year profitability, leverage, peer valuation, technical-level, and bull-bear research memo.",
+      "missing_material_requirement_or_null": "Integrated multi-year fundamental, balance-sheet, peer-multiple, technical-level, and thesis-case analysis."
+    },
+    {
+      "candidate_token": "C-232A84DC97DE8E0F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This performs gene-set enrichment analysis and does not analyze public companies or securities.",
+      "missing_material_requirement_or_null": "Fundamental, valuation, technical, and bull-bear investment-research memo for a listed industrial company."
+    },
+    {
+      "candidate_token": "C-A02DAD75C9E914BB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This models an individual's retirement readiness and portfolio needs, not a listed company's financial and market characteristics.",
+      "missing_material_requirement_or_null": "Company profitability, growth, balance-sheet, valuation, technical-level, and bull-bear analysis."
+    },
+    {
+      "candidate_token": "C-AAC42C6E6347ADC7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "capabilities",
+      "rationale": "This analyzes cryptocurrency tokenomics and on-chain projects rather than publicly listed industrial equities.",
+      "missing_material_requirement_or_null": "Public-equity financial-statement, peer-multiple, price-volume, valuation, and investment-case analysis."
+    },
+    {
+      "candidate_token": "C-B148057F269D6A9B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Investment Basics",
+      "rationale": "This provides general personal investing and allocation education and explicitly discourages single-stock selection, not company-specific research.",
+      "missing_material_requirement_or_null": "Listed-company research memo with financial, valuation, technical, and bull-bear assessment."
+    },
+    {
+      "candidate_token": "C-D55F32B7290DFA89",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "stock-analysis",
+      "rationale": "It produces listed-stock research with fundamental analysis, technical analysis, valuation metrics, peer comparison, and market-specific report outputs, matching the requested non-personal-advice memo.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E1A381B996B6C193",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This controls a company's accounting month-end close and reconciliation process rather than analyzing an external public equity.",
+      "missing_material_requirement_or_null": "Public-company financial trend, valuation, technical, and bull-bear research analysis."
+    },
+    {
+      "candidate_token": "C-E7D0725DC35443CA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This facilitates development-team retrospectives, unrelated to equity research.",
+      "missing_material_requirement_or_null": "Company financial, valuation, price-volume, and bull-bear investment-research memo."
+    }
+  ],
+  "reviewer_output_sha256": "0279d4c34d15056a5c26d9b23785ae6d33103d5a2c1c65df7ac778886f14e036"
+}
