@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-016FFF701F835663",
+      "missing_material_requirement_or_null": "Daily keyword-position snapshots and gained/lost/stable reporting.",
+      "rationale": "Audits SEO issues and recommends fixes, but does not track keyword positions over time or report ranking changes.",
+      "source_anchor": "# SEO Audit"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-0BB1355CC1E54C08",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Tracks domain keyword positions, saves dated snapshots, compares prior snapshots, and reports improved, declined, and stable results.",
+      "source_anchor": "# Rank Tracker"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-269968307ACCE698",
+      "missing_material_requirement_or_null": "Per-keyword gained, lost, and stable ranking report.",
+      "rationale": "Stores dated keyword-position snapshots and compares them, but reports an aggregate visibility score rather than the requested per-keyword gained/lost/stable outcomes.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-426C455CD9912B38",
+      "missing_material_requirement_or_null": "Keyword rank tracking, daily snapshots, and ranking-change reporting.",
+      "rationale": "Surveys security prior art and produces security research artifacts, not SEO ranking monitoring.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-66964AFD0BE02BD1",
+      "missing_material_requirement_or_null": "Keyword rank tracking, daily snapshots, and ranking-change reporting.",
+      "rationale": "Manages agency client-churn risk and save calls, not search ranking positions.",
+      "source_anchor": "# Client Churn Save"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7D5706B0E4CCFD79",
+      "missing_material_requirement_or_null": "Keyword rank tracking, daily snapshots, and ranking-change reporting.",
+      "rationale": "Provides OpenAI product documentation guidance, not SEO rank monitoring.",
+      "source_anchor": "# OpenAI Docs"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A44E28FFB73962DD",
+      "missing_material_requirement_or_null": "Own-domain per-keyword gained, lost, and stable ranking report.",
+      "rationale": "Saves and compares keyword snapshots, but is designed for competitor domains and does not provide the requested own-domain per-keyword gained/lost/stable report.",
+      "source_anchor": "# Competitor Tracker"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B652067F2F00E76F",
+      "missing_material_requirement_or_null": "Keyword rank tracking, daily snapshots, and ranking-change reporting.",
+      "rationale": "Facilitates sprint retrospectives and action tracking, not SEO ranking monitoring.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1025",
+  "batch_input_sha256": "ecb9ea67d449a32fb7ab5355bb6967c3451d60c3079608dba3a756faf6347b7e",
+  "blind_packet_id": "P-F721FCA364692BF5C3",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "97d3e41354d0d63775e1856cdf32fcfe7a1adad1ba10bbb0328808199bed93d3"
+}
