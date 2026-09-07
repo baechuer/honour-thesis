@@ -1,0 +1,30 @@
+{
+  "counts": {
+    "coordinator_decisions": {
+      "CONFIRMED_FULLY_ACCEPTABLE": 2,
+      "CONFIRMED_INADEQUATE": 46,
+      "CONFIRMED_PARTIALLY_ADEQUATE": 48
+    },
+    "coordinator_packets_expected_and_validated": 96,
+    "coordinator_returns_covered": 96,
+    "finalised_coordinator_groups": 64,
+    "finalised_exact_agreement_groups": 55,
+    "finalised_valid_pair_groups": 119,
+    "remaining_machine_b_groups_requiring_initial_or_reissue_review": 414,
+    "unclear_or_reopen_gates": 0
+  },
+  "inputs": {
+    "prior_existing_return_audit_ledger": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-audit-ledger-2026-09-07-v1/summary.json",
+    "prior_existing_return_audit_ledger_sha256": "84077b54a6565a818cf79a7aea81613247541c9c75b6303f6bc13dae6f91e09c",
+    "sealed_coordinator_packet_root": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-coordinator-packet-repair-2026-09-07-v1",
+    "sealed_coordinator_packet_set_sha256": "633ac9c8247198c2bc2ad4210f34ebc40e316f160ddd13475846e912b271fe38"
+  },
+  "outputs": {
+    "coordinator_return_set_sha256": "19305e76847454a8f0c5b83b661b25953502da3b650cc7bb4622000a96a15f5f",
+    "final_disposition_set_sha256": "e1b40014e55bf47db2cc303aa8c5367a6ce1d53c2908c59f894831345b67f9b8"
+  },
+  "replay": "For each sealed packet run the frozen protocol validate-coordinator command, then finalise only its reconciliation group. A nonzero unclear_or_reopen_gates value is method-gating, not a library conclusion.",
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_coordinator_closure_v1",
+  "scope": "Machine B only; V7 frozen delivery only. This is target-blind source-adequacy evidence and does not open the opaque token join, form an acceptable set, make a retrieval claim, or make a library-level closure claim.",
+  "status": "PASS_V7_MACHINE_B_EXISTING_VALID_PAIRS_FINALISED"
+}
