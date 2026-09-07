@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1173",
+  "blind_packet_id": "P-C7E3C86ACFE8D81993",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0827F98E8D38A306",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# EDA Playbook",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "schema audit, target analysis, feature profiling"
+    },
+    {
+      "candidate_token": "C-385E58A56490581C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Core Workflow",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: fine-tuning-expert"
+    },
+    {
+      "candidate_token": "C-48021DFF2249DE23",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Use",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: gokegg-analysis"
+    },
+    {
+      "candidate_token": "C-4F7AAB2390D466F2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Schema Versioning",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: schema-versioning"
+    },
+    {
+      "candidate_token": "C-5C875534E3492E6E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Purpose",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: ct-segmentation-finetune-quality-v1"
+    },
+    {
+      "candidate_token": "C-782BCE90FD005AD2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Product Hunt Launch",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Product Hunt Launch"
+    },
+    {
+      "candidate_token": "C-B46823D891A09A05",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# ZINC Chemical Library Database",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "zinc-database"
+    },
+    {
+      "candidate_token": "C-E2D865B6EA1FE833",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### Step 3: Training data",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Model Card Writer"
+    }
+  ],
+  "reviewer_A_return_sha256": "a27856955f2b13c349edf067b3a147e25ded8300f9296dd6f44756f5d9d02d02",
+  "reviewer_B_return_sha256": "e9962c23a2a9a2aa32b1f1fb56e2e4b2677acf80a0977e3480aacb0e8a90f086",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

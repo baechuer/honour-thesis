@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0951",
+  "blind_packet_id": "P-F6FD7C36E1D1751ADE",
+  "batch_input_sha256": "abbb170ea2245ead7253a81aff4e6f9e0e9c80d959be07bef0d33fef5e22d5ba",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-104B5BB891DE7634","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Animation System","rationale":"It defines reusable motion tokens and choreography, but does not implement the requested responsive plain-page animation and reduced-motion fallback.","missing_material_requirement_or_null":"Implementation of timed and staggered page transitions with responsive reduced-motion behavior"},
+    {"candidate_token":"C-3E0AA4D792270A21","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Motion Spec","rationale":"It specifies duration, easing, trigger, and intent, but lacks an implementation workflow for the requested accessible plain web-page animation.","missing_material_requirement_or_null":"Working plain-page animation code with timed transitions, stagger, and reduced-motion fallback"},
+    {"candidate_token":"C-4A72A5FDFF32C525","adequacy":"INADEQUATE","source_anchor":"# GSAP with Vue, Svelte, and Other Frameworks","rationale":"This GSAP guidance is scoped to Vue, Svelte, and related frameworks rather than the requested plain web page.","missing_material_requirement_or_null":"Framework-agnostic plain-page animation implementation with reduced-motion support"},
+    {"candidate_token":"C-62F505FC97FDE085","adequacy":"INADEQUATE","source_anchor":"# Instagram Curator","rationale":"Instagram content curation does not implement page animations.","missing_material_requirement_or_null":"Responsive accessible web-page animation implementation"},
+    {"candidate_token":"C-80CDC03F3D3B0210","adequacy":"INADEQUATE","source_anchor":"# Defuddle","rationale":"Web-page content extraction does not create animations or motion fallbacks.","missing_material_requirement_or_null":"Timed page animation with easing, stagger, and reduced-motion behavior"},
+    {"candidate_token":"C-AEE5F986C6B216B2","adequacy":"INADEQUATE","source_anchor":"# GSAP with React","rationale":"This GSAP skill is scoped to React and Next.js rather than a plain web page.","missing_material_requirement_or_null":"Framework-agnostic plain-page animation implementation"},
+    {"candidate_token":"C-BC28BFEE503F646A","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation is unrelated to web animation implementation.","missing_material_requirement_or_null":"Accessible responsive page-animation implementation"},
+    {"candidate_token":"C-F0D4E1D75A7A949D","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# GSAP Core","rationale":"GSAP core supports vanilla pages, timed animations, easing, stagger, responsive behavior, and prefers-reduced-motion handling through matchMedia.","missing_material_requirement_or_null":null}
+  ],
+  "reviewer_output_sha256": "7d0b5e4844f9cc8a648cd6c1cd250c8f2041fc0aa6475b0c900e01424705552b"
+}

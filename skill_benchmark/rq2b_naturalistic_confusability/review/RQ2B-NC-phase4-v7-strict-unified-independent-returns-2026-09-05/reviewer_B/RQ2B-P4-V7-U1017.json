@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1017",
+  "blind_packet_id":"P-67965BF65AF49B3B7A",
+  "batch_input_sha256":"889d162bbae96ef7862a772212821e10495c9199571eb4d960a85d9a4d2cdba2",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-44309B401A00DEB6","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack bots rather than inspecting Hugging Face dataset metadata.","missing_material_requirement_or_null":"Dataset Viewer metadata inspection for splits, schema, rows, and size."},
+    {"candidate_token":"C-608CB45BF5849341","adequacy":"INADEQUATE","source_anchor":"name: quantizing-models-bitsandbytes","rationale":"This quantizes models rather than inspecting dataset metadata.","missing_material_requirement_or_null":"Hugging Face Dataset Viewer metadata access."},
+    {"candidate_token":"C-72717F66CF56DDCC","adequacy":"INADEQUATE","source_anchor":"name: llm-fine-tuning","rationale":"This sets up fine-tuning, which the request explicitly excludes.","missing_material_requirement_or_null":"Dataset subset, split, schema, sample-row, and size inspection."},
+    {"candidate_token":"C-77B4A0C2B298BD71","adequacy":"INADEQUATE","source_anchor":"name: judge-bug-hunter","rationale":"This reviews code diffs rather than dataset metadata.","missing_material_requirement_or_null":"Hugging Face Dataset Viewer inspection."},
+    {"candidate_token":"C-9760667FE91D3F9A","adequacy":"INADEQUATE","source_anchor":"name: fine-tuning-expert","rationale":"This trains or adapts models, which the request explicitly excludes.","missing_material_requirement_or_null":"Dataset Viewer metadata inspection."},
+    {"candidate_token":"C-9A31ECC75FCBA90C","adequacy":"INADEQUATE","source_anchor":"name: flux","rationale":"This covers Livewire UI components rather than dataset metadata.","missing_material_requirement_or_null":"Dataset splits, features, rows, and size inspection."},
+    {"candidate_token":"C-D6C4DAD4573C6E09","adequacy":"INADEQUATE","source_anchor":"name: security-prior-art-survey","rationale":"This surveys security prior art rather than a dataset card.","missing_material_requirement_or_null":"Hugging Face Dataset Viewer metadata retrieval."},
+    {"candidate_token":"C-F6A2E93DCB525E07","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than analyzing datasets.","missing_material_requirement_or_null":"Dataset Viewer split, schema, sample, and size inspection."}
+  ],
+  "reviewer_output_sha256":"66579d313eaa2c81affb781334278d12c8f621e9783492e708819234bc0e9e41"
+}

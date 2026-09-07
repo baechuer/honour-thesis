@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1173",
+  "blind_packet_id": "P-C7E3C86ACFE8D81993",
+  "batch_input_sha256": "0bc97659f426ca6a010643af789083b23295b53a967102cf858ef67530b2b105",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0827F98E8D38A306",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# EDA Playbook",
+      "rationale": "It provides a pre-modeling schema, target, feature, missingness, and leakage audit, but it does not systematically audit a dataset card's documented subsets, train-validation-test split, and example rows.",
+      "missing_material_requirement_or_null": "A dataset-card audit procedure that explicitly verifies subset inventory, train-validation-test splits, feature schema, representative example rows, labels, and documented caveats."
+    },
+    {
+      "candidate_token": "C-385E58A56490581C",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Core Workflow",
+      "rationale": "It requires dataset validation before fine-tuning and names quality checks, but it does not provide a dataset-card review covering documented subsets, splits, examples, labels, and caveats.",
+      "missing_material_requirement_or_null": "A dataset-card audit procedure covering subset inventory, train-validation-test splits, feature schema, example rows, labels, and data caveats before training."
+    },
+    {
+      "candidate_token": "C-48021DFF2249DE23",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "This performs GO and KEGG enrichment from a gene list and does not audit a machine-learning dataset card before training.",
+      "missing_material_requirement_or_null": "A pre-training dataset-card audit procedure for subsets, splits, feature schema, example rows, labels, and caveats."
+    },
+    {
+      "candidate_token": "C-4F7AAB2390D466F2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Schema Versioning",
+      "rationale": "This manages database migration schemas and rollbacks, not dataset documentation or pre-training data auditing.",
+      "missing_material_requirement_or_null": "A pre-training dataset-card audit procedure for subsets, splits, feature schema, example rows, labels, and caveats."
+    },
+    {
+      "candidate_token": "C-5C875534E3492E6E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Purpose",
+      "rationale": "This is a post-finetune verifier for a narrow CT-segmentation evidence pack, not a pre-training audit of a general dataset card.",
+      "missing_material_requirement_or_null": "A pre-training dataset-card audit procedure that verifies subsets, splits, feature schema, example rows, labels, and caveats."
+    },
+    {
+      "candidate_token": "C-782BCE90FD005AD2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Product Hunt Launch",
+      "rationale": "This prepares Product Hunt launch materials and has no dataset or model-training audit capability.",
+      "missing_material_requirement_or_null": "A pre-training dataset-card audit procedure for subsets, splits, feature schema, example rows, labels, and caveats."
+    },
+    {
+      "candidate_token": "C-B46823D891A09A05",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# ZINC Chemical Library Database",
+      "rationale": "This queries chemical compound libraries for docking and does not review dataset-card documentation for model training.",
+      "missing_material_requirement_or_null": "A pre-training dataset-card audit procedure for subsets, splits, feature schema, example rows, labels, and caveats."
+    },
+    {
+      "candidate_token": "C-E2D865B6EA1FE833",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 3: Training data",
+      "rationale": "It documents training-data provenance, preprocessing, and known gaps for a model card, but it is a post-training model-documentation workflow and lacks a complete pre-training dataset-card audit.",
+      "missing_material_requirement_or_null": "A pre-training dataset-card audit procedure that explicitly checks subsets, train-validation-test splits, feature schema, example rows, labels, and data caveats."
+    }
+  ],
+  "reviewer_output_sha256": "850fba99739c45a947959976eeef7fabe3fb45da5a17c03fd41aa7c87ad54a95"
+}

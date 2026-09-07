@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1017",
+  "blind_packet_id": "P-67965BF65AF49B3B7A",
+  "batch_input_sha256": "889d162bbae96ef7862a772212821e10495c9199571eb4d960a85d9a4d2cdba2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-44309B401A00DEB6","adequacy":"INADEQUATE","source_anchor":"# Slack Bot Builder","rationale":"Slack bot construction cannot inspect Hugging Face Dataset Viewer metadata.","missing_material_requirement_or_null":"Dataset Viewer inspection of splits, schema, samples, and size"},
+    {"candidate_token":"C-608CB45BF5849341","adequacy":"INADEQUATE","source_anchor":"# bitsandbytes - LLM Quantization","rationale":"LLM quantization does not inspect dataset metadata and conflicts with the request not to choose a local model.","missing_material_requirement_or_null":"Hugging Face Dataset Viewer metadata inspection"},
+    {"candidate_token":"C-72717F66CF56DDCC","adequacy":"INADEQUATE","source_anchor":"# LLM Fine-Tuning Infrastructure","rationale":"LLM fine-tuning infrastructure does not provide a Dataset Viewer metadata workflow and conflicts with the request not to fine-tune embeddings.","missing_material_requirement_or_null":"Dataset split, feature, sample-row, and size inspection via Hugging Face Dataset Viewer"},
+    {"candidate_token":"C-77B4A0C2B298BD71","adequacy":"INADEQUATE","source_anchor":"# judge-bug-hunter","rationale":"Diff correctness review does not inspect Hugging Face datasets.","missing_material_requirement_or_null":"Dataset Viewer metadata inspection"},
+    {"candidate_token":"C-9760667FE91D3F9A","adequacy":"INADEQUATE","source_anchor":"# Fine-Tuning Expert","rationale":"Fine-tuning guidance does not inspect Dataset Viewer metadata and is outside the requested pre-loader inspection scope.","missing_material_requirement_or_null":"Dataset Viewer inspection of splits, schema, rows, and size"},
+    {"candidate_token":"C-9A31ECC75FCBA90C","adequacy":"INADEQUATE","source_anchor":"# flux","rationale":"Flux component guidance does not access Hugging Face dataset metadata.","missing_material_requirement_or_null":"Hugging Face Dataset Viewer metadata workflow"},
+    {"candidate_token":"C-D6C4DAD4573C6E09","adequacy":"INADEQUATE","source_anchor":"## Overview","rationale":"A security prior-art survey does not inspect Dataset Viewer split, feature, sample, or size metadata.","missing_material_requirement_or_null":"Dataset Viewer metadata inspection"},
+    {"candidate_token":"C-F6A2E93DCB525E07","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation is unrelated to dataset metadata inspection.","missing_material_requirement_or_null":"Hugging Face Dataset Viewer inspection workflow"}
+  ],
+  "reviewer_output_sha256": "be8241ac7772759a037b0dd7b1159c8e5c1f21fba8e6b4c41f5e971b52a717d0"
+}

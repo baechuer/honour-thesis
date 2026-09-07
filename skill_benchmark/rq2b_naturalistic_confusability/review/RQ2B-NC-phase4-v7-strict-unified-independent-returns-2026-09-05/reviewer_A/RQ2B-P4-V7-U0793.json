@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0793",
+  "blind_packet_id": "P-3884A8BE552B8EB6BD",
+  "batch_input_sha256": "98f7c0d7948d3e3e674cb5c773896abc0acf104a876d3ad0220430d634f50ea2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-10CD7E22F391DA63","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# RFP Response Writer","rationale":"It can organize responses to security questionnaires, but does not review and negotiate the supplied privacy addendum and security schedule from the service-provider position.","missing_material_requirement_or_null":"Provider-side DPA and security-schedule review with ranked negotiation points and fallback language"},
+    {"candidate_token":"C-1767EDA2AECB73DB","adequacy":"INADEQUATE","source_anchor":"# DPA Draft","rationale":"It explicitly excludes review or negotiation of counterparty DPA paper and instead drafts a new provider-side agreement.","missing_material_requirement_or_null":"Review and negotiation of the supplied privacy addendum and security schedule"},
+    {"candidate_token":"C-404FD52559B5A179","adequacy":"INADEQUATE","source_anchor":"# Clean Data","rationale":"Spreadsheet cleaning does not assess contractual privacy or security provisions.","missing_material_requirement_or_null":"Provider-side DPA and security-schedule negotiation review"},
+    {"candidate_token":"C-936237A5B9AE42E0","adequacy":"INADEQUATE","source_anchor":"# Porter — PaaS on Your Own Cloud","rationale":"Cloud deployment guidance does not review privacy or security contract language.","missing_material_requirement_or_null":"Provider-side review of supplied DPA and security schedule with edits and fallback language"},
+    {"candidate_token":"C-9D1C7E545155AFDB","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation is unrelated to privacy-addendum negotiation.","missing_material_requirement_or_null":"DPA and security-schedule review from the service-provider position"},
+    {"candidate_token":"C-CC0841F7D0A45042","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# DPA Review","rationale":"It directly reviews supplied DPAs, privacy addenda, and security schedules for legal and commercial issues, prioritizes findings, and supports negotiation against the supplied document.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-DDA2BC2737742F49","adequacy":"INADEQUATE","source_anchor":"## Overview","rationale":"A security prior-art survey does not negotiate a customer's privacy addendum or security schedule.","missing_material_requirement_or_null":"Provider-side contractual privacy and security review with edits and fallback language"},
+    {"candidate_token":"C-F046D85AC6701AF7","adequacy":"INADEQUATE","source_anchor":"# AWS Security Agent — Penetration Test","rationale":"Runtime penetration testing does not assess or negotiate contract wording.","missing_material_requirement_or_null":"Review of contractual privacy and security provisions with negotiation language"}
+  ],
+  "reviewer_output_sha256": "49e9c5167e6861ab559aba77e81fe41881ff6bb440cfb149d849b57e9d377dd5"
+}
