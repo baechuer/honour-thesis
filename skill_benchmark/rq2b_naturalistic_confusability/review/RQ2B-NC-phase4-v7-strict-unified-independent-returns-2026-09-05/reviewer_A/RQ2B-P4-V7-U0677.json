@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0677",
+  "blind_packet_id": "P-2D7F0E0864AF902A61",
+  "batch_input_sha256": "452b5b6bb787710836fd5ac602b5d2de51c249f540c69946633fe3a7ce9d1116",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0FFC4C181A1B8951",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "User Flow Mapper",
+      "rationale": "It maps user flows, decision branches, and edge-case recovery, which supports part of the requested behavioral analysis, but it does not analyze code, data structures, state, network contracts, or implement an Android feature.",
+      "missing_material_requirement_or_null": "Analysis and idiomatic Android implementation of the native iPhone feature's state, data structures, network contracts, and compatibility behavior."
+    },
+    {
+      "candidate_token": "C-1C491B1CA1989B58",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "PURPOSE",
+      "rationale": "The skill produces a CTO-style review of a proposal or plan rather than implementing feature parity between mobile platforms.",
+      "missing_material_requirement_or_null": "Analysis of an iPhone feature and an idiomatic Android implementation that preserves its behavior and compatibility."
+    },
+    {
+      "candidate_token": "C-2703ACADB17FCAD5",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "iOS to Android: Feature Parity Implementation",
+      "rationale": "It directly analyzes an iOS reference's behavior, user flow, state, data structures, network contracts, and edge cases, then implements an idiomatic Android equivalent following the target codebase's patterns.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-817FE6DD3EDB20EF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Android to iOS: Feature Parity Implementation",
+      "rationale": "The skill is the reverse migration: it treats Android as the reference and implements iOS code, which cannot fulfill the requested iPhone-to-Android implementation.",
+      "missing_material_requirement_or_null": "An iPhone-source-to-Android-target feature-parity implementation workflow."
+    },
+    {
+      "candidate_token": "C-9FC70B9F9AEF606F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "ZAI CLI",
+      "rationale": "The skill provides generic vision, search, web-reading, and repository-exploration commands, not a platform-porting or Android-implementation workflow.",
+      "missing_material_requirement_or_null": "Analysis of the iPhone reference and idiomatic Android feature implementation preserving behavior and compatibility."
+    },
+    {
+      "candidate_token": "C-D349516C997DC36E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual-prior-art-survey",
+      "rationale": "The skill surveys documented UI conventions before design work and does not port a native iPhone feature into Android code.",
+      "missing_material_requirement_or_null": "Source-feature analysis and implementation of an equivalent Android feature using target-app patterns."
+    },
+    {
+      "candidate_token": "C-DC0E42C2BE3A1301",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Site audit → coordinated rewrite + social distribution",
+      "rationale": "The skill coordinates SEO auditing, web-copy rewrites, and social distribution rather than mobile feature implementation.",
+      "missing_material_requirement_or_null": "An iPhone-to-Android feature-parity analysis and implementation workflow."
+    },
+    {
+      "candidate_token": "C-E9FE853795C608DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "React to iOS: Feature Parity Implementation",
+      "rationale": "The skill ports React or React Native code to iOS, not an existing native iPhone feature to Android.",
+      "missing_material_requirement_or_null": "An iOS-source-to-Android-target implementation that follows Android-app patterns."
+    }
+  ],
+  "reviewer_output_sha256": "5a4842dc1bb4b53475a53c1c34e48cdb03f02234950304d7b982337894b0615a"
+}

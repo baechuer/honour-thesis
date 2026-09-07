@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0677",
+  "blind_packet_id": "P-2D7F0E0864AF902A61",
+  "batch_input_sha256": "452b5b6bb787710836fd5ac602b5d2de51c249f540c69946633fe3a7ce9d1116",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0FFC4C181A1B8951",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "User Flow Mapper",
+      "rationale": "It can document the reference feature's flow and edge-case recovery, but it does not analyze source code or deliver an Android implementation aligned to the target app.",
+      "missing_material_requirement_or_null": "Analysis and idiomatic Android implementation of the reference feature's state, data structures, network contracts, and compatibility behavior."
+    },
+    {
+      "candidate_token": "C-1C491B1CA1989B58",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "PURPOSE",
+      "rationale": "It conducts a CTO review of a business artifact rather than porting a native feature across mobile platforms.",
+      "missing_material_requirement_or_null": "An iPhone-reference analysis and an Android feature-parity implementation workflow."
+    },
+    {
+      "candidate_token": "C-2703ACADB17FCAD5",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "iOS to Android: Feature Parity Implementation",
+      "rationale": "It explicitly analyzes the iOS feature's behavior, user flow, state, data structures, network contracts, and edge cases, then implements the equivalent in Android using target-codebase patterns.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-817FE6DD3EDB20EF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Android to iOS: Feature Parity Implementation",
+      "rationale": "It directs the opposite migration, using Android as source and producing iOS code, so it cannot implement the requested iPhone-reference feature in Android.",
+      "missing_material_requirement_or_null": "An iOS-source-to-Android-target feature-parity implementation workflow."
+    },
+    {
+      "candidate_token": "C-9FC70B9F9AEF606F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "ZAI CLI",
+      "rationale": "It offers generic CLI capabilities for visual analysis, search, reading, and repository exploration, not cross-platform feature implementation.",
+      "missing_material_requirement_or_null": "An Android implementation derived from analysis of an existing iPhone feature."
+    },
+    {
+      "candidate_token": "C-D349516C997DC36E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual-prior-art-survey",
+      "rationale": "It researches documented UI conventions before design and does not analyze or port a feature between iOS and Android codebases.",
+      "missing_material_requirement_or_null": "Analysis of the iPhone feature and an idiomatic Android implementation preserving behavior and compatibility."
+    },
+    {
+      "candidate_token": "C-DC0E42C2BE3A1301",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Site audit → coordinated rewrite + social distribution",
+      "rationale": "It coordinates SEO audit remediation and social distribution rather than mobile-platform feature parity.",
+      "missing_material_requirement_or_null": "An iPhone-to-Android feature analysis and implementation workflow."
+    },
+    {
+      "candidate_token": "C-E9FE853795C608DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "React to iOS: Feature Parity Implementation",
+      "rationale": "It ports React or React Native code to iOS, which does not provide the requested native iPhone-to-Android migration.",
+      "missing_material_requirement_or_null": "An implementation workflow using a native iPhone feature as source and Android as target."
+    }
+  ],
+  "reviewer_output_sha256": "c5dcba826f0beb99cb3273722e60b3b83b23ee64c4ffe7712be8c0abeea88cfe"
+}

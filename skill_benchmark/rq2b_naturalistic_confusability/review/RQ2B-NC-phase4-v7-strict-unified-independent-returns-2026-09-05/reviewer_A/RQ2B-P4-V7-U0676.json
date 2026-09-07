@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0676",
+  "blind_packet_id": "P-F16EF29F0D906B4D3F",
+  "batch_input_sha256": "e0ae25afc0bd08b12903769c4adde7a03c7b6e37e20e8a7d5e0978a2ecdf89b1",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3E15238FD6773B36",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "In-App Events",
+      "rationale": "This skill plans and submits App Store event cards, not a vendor onboarding form with supplied contact details.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    },
+    {
+      "candidate_token": "C-5A8EB9217DCB720C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Growth Strategy",
+      "rationale": "This is a strategic growth-planning playbook and provides no workflow for entering verified details into a vendor form and submitting it.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    },
+    {
+      "candidate_token": "C-5F7BFB0E2821A1D1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Core Workflow",
+      "rationale": "The workflow creates and executes software tests, whereas the request explicitly excludes a regression-test or snapshot task.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    },
+    {
+      "candidate_token": "C-801DDF066F784368",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This skill runs gene-set enrichment analysis on ranked gene data and has no connection to vendor onboarding.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    },
+    {
+      "candidate_token": "C-9661E6B0A02C7E67",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Playwright Expert",
+      "rationale": "Its browser automation guidance could operate form controls, but it is framed around creating and debugging E2E test artefacts rather than completing a one-off delegated submission.",
+      "missing_material_requirement_or_null": "A verified one-off vendor-onboarding submission workflow that does not create or run regression-test artefacts."
+    },
+    {
+      "candidate_token": "C-B7CF2B7FB3592C47",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "ux-heuristics",
+      "rationale": "This skill evaluates user-experience heuristics rather than entering contact values and submitting a vendor onboarding form.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    },
+    {
+      "candidate_token": "C-BBC10EA67E632F40",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "RFP Response Writer",
+      "rationale": "This skill assembles response packages for RFPs, not an interactive vendor onboarding form submission.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    },
+    {
+      "candidate_token": "C-C968885269029433",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When to use",
+      "rationale": "This skill designs third-party integration architecture and operations rather than performing the requested form-filling task.",
+      "missing_material_requirement_or_null": "Verified delegated vendor-onboarding form completion and submission using the supplied contact details."
+    }
+  ],
+  "reviewer_output_sha256": "99b95e1c60190565917df3bcd5a18ed2efad8b6095254445acfc9756298ea8a4"
+}

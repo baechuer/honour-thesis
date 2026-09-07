@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0676",
+  "blind_packet_id": "P-F16EF29F0D906B4D3F",
+  "batch_input_sha256": "e0ae25afc0bd08b12903769c4adde7a03c7b6e37e20e8a7d5e0978a2ecdf89b1",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3E15238FD6773B36",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "In-App Events",
+      "rationale": "This plans App Store event cards and does not complete or submit vendor onboarding forms.",
+      "missing_material_requirement_or_null": "Verified contact-detail form filling and one intentional vendor-onboarding submission."
+    },
+    {
+      "candidate_token": "C-5A8EB9217DCB720C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Growth Strategy",
+      "rationale": "This develops product-growth strategy rather than performing a delegated transactional form submission.",
+      "missing_material_requirement_or_null": "Verified field completion and submission of the vendor onboarding form."
+    },
+    {
+      "candidate_token": "C-5F7BFB0E2821A1D1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Core Workflow",
+      "rationale": "This creates and executes software quality tests, while the request explicitly says it is not a regression-test task.",
+      "missing_material_requirement_or_null": "Delegated contact-detail form completion, verification, and live submission."
+    },
+    {
+      "candidate_token": "C-801DDF066F784368",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This runs gene-set enrichment analysis and cannot fill vendor onboarding forms.",
+      "missing_material_requirement_or_null": "Contact-detail validation, vendor form completion, and one submitted onboarding record."
+    },
+    {
+      "candidate_token": "C-9661E6B0A02C7E67",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Core Workflow",
+      "rationale": "This writes and maintains Playwright E2E tests and is a testing workflow, not delegated live form completion.",
+      "missing_material_requirement_or_null": "Verified form entry and submission rather than test automation or page snapshots."
+    },
+    {
+      "candidate_token": "C-B7CF2B7FB3592C47",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "UX Heuristics Framework",
+      "rationale": "This audits and improves interface usability, not submitting a vendor onboarding form.",
+      "missing_material_requirement_or_null": "Contact-data form filling, field verification, and a single live submission."
+    },
+    {
+      "candidate_token": "C-BBC10EA67E632F40",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This prepares RFP and security-questionnaire responses rather than filling an external onboarding form.",
+      "missing_material_requirement_or_null": "Verified vendor onboarding form completion and submission."
+    },
+    {
+      "candidate_token": "C-C968885269029433",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "When to use",
+      "rationale": "It supports third-party data mapping, authentication, validation, and integration testing, which can inform handling of vendor contact data, but it is an integration-engineering design workflow rather than delegated browser form filling and submission.",
+      "missing_material_requirement_or_null": "Direct verified completion of the vendor onboarding form and one intentional submission."
+    }
+  ],
+  "reviewer_output_sha256": "e2dbbefda9601af85e5d4e853ed8564660cc93feecc62ed93c078b535d2a34d6"
+}
