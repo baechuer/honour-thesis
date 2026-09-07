@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1224",
+  "blind_packet_id": "P-954783393FFFFF7804",
+  "batch_input_sha256": "d142018c3109fe19179b57aec973f30e6757b2f7c6d21ddb69a3f475fc187108",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0590D11521C70ECF","adequacy":"INADEQUATE","source_anchor":"# Causal Inference","rationale":"Causal-identification methods do not design a controlled capacity and tail-latency traffic experiment.","missing_material_requirement_or_null":"Gradual load-test design with concurrency, p95, error, and saturation monitoring"},
+    {"candidate_token":"C-06E4B3CA69583672","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"## Safety Checklist","rationale":"Chaos engineering supplies controlled experiments, rollback, and blast-radius safeguards, but does not provide a capacity load-test plan to assess 600 users, p95 latency, and first resource saturation.","missing_material_requirement_or_null":"Realistic gradual load-testing with 600-user and p95 thresholds plus bottleneck interpretation"},
+    {"candidate_token":"C-1122A06423777387","adequacy":"INADEQUATE","source_anchor":"## Do NOT","rationale":"This frontend Core Web Vitals skill explicitly routes concurrent server-capacity testing to load testing.","missing_material_requirement_or_null":"API capacity load-test design with gradual concurrency, percentile thresholds, and saturation analysis"},
+    {"candidate_token":"C-A89DA307438B544F","adequacy":"INADEQUATE","source_anchor":"# Social Search Audit","rationale":"Social-search channel analysis is unrelated to API traffic capacity testing.","missing_material_requirement_or_null":"A gradual API load-test experiment with capacity, latency, error, and resource metrics"},
+    {"candidate_token":"C-D2A26319C985BA22","adequacy":"FULLY_ACCEPTABLE","source_anchor":"### Step 4: Encode pass/fail thresholds in the script","rationale":"It designs smoke, load, stress, soak, and spike tests with realistic ramps, percentile thresholds, error monitoring, and bottleneck reading, directly supporting the requested safe 600-user capacity experiment.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-DAE64BCE14037816","adequacy":"INADEQUATE","source_anchor":"## Overview","rationale":"A user-research prior-art survey cannot test API capacity or tail latency.","missing_material_requirement_or_null":"Gradual load testing with concurrency, p95, errors, and saturation diagnostics"},
+    {"candidate_token":"C-F2059ADA4F90BB27","adequacy":"INADEQUATE","source_anchor":"# Mobile Perf Profiler","rationale":"Mobile UI profiling does not measure server API capacity under concurrent traffic.","missing_material_requirement_or_null":"API load-test design and bottleneck monitoring"},
+    {"candidate_token":"C-F6F72B6AB479C77D","adequacy":"INADEQUATE","source_anchor":"# Add MCP App Support to a Web App","rationale":"MCP App conversion does not design a production-safe API capacity test.","missing_material_requirement_or_null":"A gradual load-test experiment with capacity and tail-latency thresholds"}
+  ],
+  "reviewer_output_sha256": "05838fb4117822ecd59b597c4304b1464231bf58c1d7ba275d285153b4b38c15"
+}

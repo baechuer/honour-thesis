@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1002",
+  "blind_packet_id": "P-CFC7A6846066849034",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-298B5D1379DBD9DE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Receiving Regression Review",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "coverage-gap items"
+    },
+    {
+      "candidate_token": "C-6A0B1B5644C30ADC",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to activate",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: security-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-7E64332EEFDC4072",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Using Agent Skills",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: using-agent-skills"
+    },
+    {
+      "candidate_token": "C-AAAFAC35C8D57E05",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# rtk - Rust Token Killer for AI Coding Agents",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: rtk"
+    },
+    {
+      "candidate_token": "C-AD64DB53A2887C03",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Steps",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: implement-issue"
+    },
+    {
+      "candidate_token": "C-B64E7D7690FBBDE4",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Receiving Hack Review",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Complete Hack-Risk Index"
+    },
+    {
+      "candidate_token": "C-CAFB2D956D7C18AB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Boundary",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Complete Findings Index"
+    },
+    {
+      "candidate_token": "C-ED3BDD1A2D1F322C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Apple Shortcuts Integration",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Apple Shortcuts Integration"
+    }
+  ],
+  "reviewer_A_return_sha256": "a20370bd882371d881bfd19b53d84cba4f94baf6648913b23a1777d1965df89f",
+  "reviewer_B_return_sha256": "c59e2089a0abd50fb536b3bddeaccf883b38e0828957ad71d6595f5ce4665337",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

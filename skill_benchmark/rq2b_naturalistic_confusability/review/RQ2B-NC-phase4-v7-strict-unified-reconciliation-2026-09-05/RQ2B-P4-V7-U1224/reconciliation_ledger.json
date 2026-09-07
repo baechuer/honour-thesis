@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1224",
+  "blind_packet_id": "P-954783393FFFFF7804",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0590D11521C70ECF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Causal Inference",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Causal Inference"
+    },
+    {
+      "candidate_token": "C-06E4B3CA69583672",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Safety Checklist",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Designs chaos experiments"
+    },
+    {
+      "candidate_token": "C-1122A06423777387",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Do NOT",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT use for testing server capacity under concurrent traffic"
+    },
+    {
+      "candidate_token": "C-A89DA307438B544F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Social Search Audit",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "TikTok or Instagram search traffic"
+    },
+    {
+      "candidate_token": "C-D2A26319C985BA22",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "### Step 4: Encode pass/fail thresholds in the script",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "realistic ramp profiles, percentile-based pass/fail thresholds"
+    },
+    {
+      "candidate_token": "C-DAE64BCE14037816",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Overview",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: user-research-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-F2059ADA4F90BB27",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Mobile Perf Profiler",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Mobile Perf Profiler"
+    },
+    {
+      "candidate_token": "C-F6F72B6AB479C77D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Add MCP App Support to a Web App",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: convert-web-app"
+    }
+  ],
+  "reviewer_A_return_sha256": "8e9f5516c26d8c430ea300fb91b678f9a5ae91f10e3aaddd9f3d0fc8b4b75175",
+  "reviewer_B_return_sha256": "033dd1bcaf6bfc20a5841880a0a460a059b6cddad61fed691c05eb8eb4319aa8",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

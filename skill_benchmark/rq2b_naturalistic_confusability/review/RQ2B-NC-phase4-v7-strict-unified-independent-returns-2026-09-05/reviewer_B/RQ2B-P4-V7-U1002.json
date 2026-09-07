@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1002",
+  "blind_packet_id":"P-CFC7A6846066849034",
+  "batch_input_sha256":"6e0984ba7cffef3afa75276dbdd346aeed8ac1925e46917bbac320001bd9cebf",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-298B5D1379DBD9DE","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"coverage-gap items", "rationale":"It can disposition a regression-review coverage ledger without staging, but is scoped to regression reports rather than the reported implementation-risk categories.","missing_material_requirement_or_null":"Verification and disposition of shortcuts, ownership concerns, intentional exceptions, and uncovered implementation boundaries."},
+    {"candidate_token":"C-6A0B1B5644C30ADC","adequacy":"INADEQUATE","source_anchor":"name: security-prior-art-survey","rationale":"This surveys security prior art rather than assessing current implementation risks.","missing_material_requirement_or_null":"Current-checkout implementation-risk disposition ledger."},
+    {"candidate_token":"C-7E64332EEFDC4072","adequacy":"INADEQUATE","source_anchor":"name: using-agent-skills","rationale":"This discovers skills rather than reviewing implementation risks.","missing_material_requirement_or_null":"Evidence-backed disposition and ownership-coverage ledger."},
+    {"candidate_token":"C-AAAFAC35C8D57E05","adequacy":"INADEQUATE","source_anchor":"name: rtk","rationale":"This installs a token optimization tool rather than reviewing code-risk reports.","missing_material_requirement_or_null":"Implementation-risk verification and ownership ledger."},
+    {"candidate_token":"C-AD64DB53A2887C03","adequacy":"INADEQUATE","source_anchor":"name: implement-issue","rationale":"This implements a GitHub issue end to end rather than assessing every report finding.","missing_material_requirement_or_null":"Complete evidence-backed risk disposition ledger."},
+    {"candidate_token":"C-B64E7D7690FBBDE4","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Complete Hack-Risk Index", "rationale":"It exactly verifies and dispositions the stated report categories against the current checkout while leaving Git staging untouched.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-CAFB2D956D7C18AB","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Complete Findings Index", "rationale":"It creates structural-quality dispositions and ledgers without staging, but is tailored to thermo-review structural gates rather than implementation-risk reports.","missing_material_requirement_or_null":"Implementation-risk review of shortcuts, ownership, exceptions, and uncovered boundaries."},
+    {"candidate_token":"C-ED3BDD1A2D1F322C","adequacy":"INADEQUATE","source_anchor":"name: Apple Shortcuts Integration","rationale":"This creates Apple Shortcuts rather than reviewing implementation risk.","missing_material_requirement_or_null":"Evidence-backed risk disposition and ownership ledger."}
+  ],
+  "reviewer_output_sha256":"59c7db399b442e9cf9985aa4fa9800e36e0f31870be4f64315ab59642a434287"
+}

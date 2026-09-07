@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1045",
+  "blind_packet_id": "P-C27D1D2DEBCFBED8C9",
+  "batch_input_sha256": "5342b6e8f1623428b2895d74a8952dc048062a1af659bc0684ca53d1dc40eb8e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0260FDDDF7328A0E","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation does not review a borrowing facility or identify default, restriction, cost, and negotiation risks.","missing_material_requirement_or_null":"Borrower-side credit-agreement review with clause citations and negotiation positions"},
+    {"candidate_token":"C-091770438520F582","adequacy":"INADEQUATE","source_anchor":"# Dependency Audit","rationale":"Dependency vulnerability and staleness checks do not analyze facility terms or borrower obligations.","missing_material_requirement_or_null":"Borrower-side credit-agreement risk analysis with cited terms and negotiation positions"},
+    {"candidate_token":"C-2ABA92FD7DDDAE1C","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"### Step 6: Build the review table and negotiation frame","rationale":"It offers clause review and recommended asks, but is limited to employment agreements and lacks credit-facility covenants, default, and pricing expertise.","missing_material_requirement_or_null":"Borrower-specific credit-agreement analysis of covenants, defaults, costs, and facility negotiation"},
+    {"candidate_token":"C-5F109DB8656ECDAE","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Credit Agreement Tabular Review","rationale":"It extracts credit-agreement information into predefined table columns, but does not provide the requested borrower-side risk analysis, cited negotiation positions, or focus on unexpected defaults and costs.","missing_material_requirement_or_null":"Borrower-side substantive analysis of restrictive terms, default and cost risks, and realistic negotiation positions"},
+    {"candidate_token":"C-79DD1CF433B46BA5","adequacy":"INADEQUATE","source_anchor":"# Game Build Log Triage","rationale":"Game-engine log triage does not analyze loan-facility terms.","missing_material_requirement_or_null":"Credit-agreement review with borrower risk identification and negotiation advice"},
+    {"candidate_token":"C-95DE01C2DB2388FD","adequacy":"FULLY_ACCEPTABLE","source_anchor":"## Review Checklist","rationale":"It directly reviews an uploaded credit agreement for the represented party, cites relevant provisions, and structures recommended changes, supporting borrower-side restriction, default, cost, and negotiation review.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-D405C0EACF609F7B","adequacy":"INADEQUATE","source_anchor":"# Frontend Debugger","rationale":"Frontend debugging cannot interpret legal facility provisions or prepare negotiation positions.","missing_material_requirement_or_null":"Borrower-side credit-agreement review with cited restrictive terms and negotiation recommendations"},
+    {"candidate_token":"C-E60C10496F9492D7","adequacy":"INADEQUATE","source_anchor":"# Clean Data","rationale":"Spreadsheet data cleaning does not review borrowing-facility legal terms.","missing_material_requirement_or_null":"Credit-agreement risk analysis and negotiation positions"}
+  ],
+  "reviewer_output_sha256": "0a2da8a62986e903e20cef02f312d9575236bf7ed279e0e046cec6639dd098a3"
+}

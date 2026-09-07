@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1224",
+  "blind_packet_id":"P-954783393FFFFF7804",
+  "batch_input_sha256":"d142018c3109fe19179b57aec973f30e6757b2f7c6d21ddb69a3f475fc187108",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-0590D11521C70ECF","adequacy":"INADEQUATE","source_anchor":"name: Causal Inference","rationale":"This estimates causal effects rather than testing server capacity.","missing_material_requirement_or_null":"Gradual load experiment with p95, errors, and saturation analysis."},
+    {"candidate_token":"C-06E4B3CA69583672","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Designs chaos experiments", "rationale":"It controls blast radius and rollback for resilience experiments, but does not design concurrency capacity and latency testing.","missing_material_requirement_or_null":"Traffic ramp, p95 threshold, capacity, and bottleneck test design."},
+    {"candidate_token":"C-1122A06423777387","adequacy":"INADEQUATE","source_anchor":"Do NOT use for testing server capacity under concurrent traffic", "rationale":"It explicitly routes concurrent server-capacity testing elsewhere.","missing_material_requirement_or_null":"Load-testing experiment for capacity and p95 latency."},
+    {"candidate_token":"C-A89DA307438B544F","adequacy":"INADEQUATE","source_anchor":"TikTok or Instagram search traffic", "rationale":"This audits social search growth, not API capacity.","missing_material_requirement_or_null":"Order API load-testing plan."},
+    {"candidate_token":"C-D2A26319C985BA22","adequacy":"FULLY_ACCEPTABLE","source_anchor":"realistic ramp profiles, percentile-based pass/fail thresholds", "rationale":"It directly produces a gradual load-test plan with p95 thresholds, error monitoring, and bottleneck reading.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-DAE64BCE14037816","adequacy":"INADEQUATE","source_anchor":"name: user-research-prior-art-survey","rationale":"This surveys user-research evidence rather than server load.","missing_material_requirement_or_null":"API capacity and latency experiment plan."},
+    {"candidate_token":"C-F2059ADA4F90BB27","adequacy":"INADEQUATE","source_anchor":"name: Mobile Perf Profiler","rationale":"This profiles mobile UI performance rather than order API capacity.","missing_material_requirement_or_null":"Concurrent server load testing."},
+    {"candidate_token":"C-F6F72B6AB479C77D","adequacy":"INADEQUATE","source_anchor":"name: convert-web-app","rationale":"This adds MCP App support rather than testing API capacity.","missing_material_requirement_or_null":"Gradual traffic experiment and saturation evidence."}
+  ],
+  "reviewer_output_sha256":"90a46bdfc17d18b9fbc061a33dd411f51a4fc9cf4ce647c70e12f15a9a6847cf"
+}

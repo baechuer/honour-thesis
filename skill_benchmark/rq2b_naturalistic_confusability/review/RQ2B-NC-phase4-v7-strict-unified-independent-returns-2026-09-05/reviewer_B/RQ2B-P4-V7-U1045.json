@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1045",
+  "blind_packet_id":"P-C27D1D2DEBCFBED8C9",
+  "batch_input_sha256":"5342b6e8f1623428b2895d74a8952dc048062a1af659bc0684ca53d1dc40eb8e",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-0260FDDDF7328A0E","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than reviewing a credit facility.","missing_material_requirement_or_null":"Borrower-side facility risk review, source citations, and negotiation positions."},
+    {"candidate_token":"C-091770438520F582","adequacy":"INADEQUATE","source_anchor":"name: deps-audit","rationale":"This audits software dependencies rather than financing terms.","missing_material_requirement_or_null":"Credit agreement restriction and default-cost review."},
+    {"candidate_token":"C-2ABA92FD7DDDAE1C","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Reviews an employment agreement clause by clause", "rationale":"It demonstrates a contract-review and negotiation-ask workflow, but is specialized for employment terms rather than borrower financing risk.","missing_material_requirement_or_null":"Credit-agreement covenant, default, fee, and borrower-side review expertise."},
+    {"candidate_token":"C-5F109DB8656ECDAE","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"review uploaded documents and extract structured information", "rationale":"It extracts credit-agreement details into a defined table, but does not establish the requested borrower risk analysis and negotiation positions.","missing_material_requirement_or_null":"Borrower-side restriction/default-cost analysis and realistic negotiation recommendations."},
+    {"candidate_token":"C-79DD1CF433B46BA5","adequacy":"INADEQUATE","source_anchor":"name: game-build-log-triage","rationale":"This diagnoses game build logs rather than finance documents.","missing_material_requirement_or_null":"Credit-facility review and negotiation analysis."},
+    {"candidate_token":"C-95DE01C2DB2388FD","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Review the uploaded credit agreement", "rationale":"It directly reviews a credit agreement from the represented party's perspective in a comprehensive table-based legal review.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-D405C0EACF609F7B","adequacy":"INADEQUATE","source_anchor":"name: frontend-debugger","rationale":"This diagnoses browser behavior rather than credit facilities.","missing_material_requirement_or_null":"Borrower-side legal and financial-term review."},
+    {"candidate_token":"C-E60C10496F9492D7","adequacy":"INADEQUATE","source_anchor":"name: clean-data-xls","rationale":"This cleans spreadsheet data rather than assessing financing documents.","missing_material_requirement_or_null":"Credit agreement risk and negotiation review."}
+  ],
+  "reviewer_output_sha256":"c1f97c042bd2c4d567efc7c4a8638f06e09b8da49e98ee8f9b002769897a3120"
+}
