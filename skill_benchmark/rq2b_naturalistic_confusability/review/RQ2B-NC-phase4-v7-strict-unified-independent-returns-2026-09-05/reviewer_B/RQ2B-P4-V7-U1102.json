@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1102",
+  "blind_packet_id":"P-5C79E5E6E65A7AA94C",
+  "batch_input_sha256":"973ff2088dc90fc506a9e20cb7ff923cbde1aec4b325d3614aa8c7de0464eb88",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-17AFEF817CEF64C4","adequacy":"INADEQUATE","source_anchor":"name: Channel Strategy","rationale":"This selects growth channels rather than detecting anomalous channel metrics.","missing_material_requirement_or_null":"Metric anomaly and concentrated-deviation analysis."},
+    {"candidate_token":"C-44529977109BEA3A","adequacy":"INADEQUATE","source_anchor":"name: gsva-analysis-and-visualization","rationale":"This analyzes biological pathways rather than weekly channel metrics.","missing_material_requirement_or_null":"Channel-metric outlier detection."},
+    {"candidate_token":"C-5ED4F64158C3E030","adequacy":"INADEQUATE","source_anchor":"name: llm-inference-scaling","rationale":"This scales inference infrastructure rather than examining channel-data anomalies.","missing_material_requirement_or_null":"Weekly channel metric spike/drop and outlier analysis."},
+    {"candidate_token":"C-607567CC3D204664","adequacy":"INADEQUATE","source_anchor":"name: analyzing-network-traffic","rationale":"This analyzes packet captures rather than marketing channel metrics.","missing_material_requirement_or_null":"Channel-performance anomaly analysis."},
+    {"candidate_token":"C-66B03BD1917DC54F","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack bots rather than analyzing metrics.","missing_material_requirement_or_null":"Outlier and deviation detection in channel data."},
+    {"candidate_token":"C-E4172424A759C381","adequacy":"INADEQUATE","source_anchor":"name: Conflict Resolution","rationale":"This mediates workplace conflict rather than metric anomalies.","missing_material_requirement_or_null":"Channel-metric anomaly scanning."},
+    {"candidate_token":"C-E50A2A4444110E84","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than scanning metrics.","missing_material_requirement_or_null":"Weekly channel outlier analysis."},
+    {"candidate_token":"C-F26F3A415865FA09","adequacy":"INADEQUATE","source_anchor":"name: figma-import-tokens","rationale":"This synchronizes design tokens rather than channel metrics.","missing_material_requirement_or_null":"Spike, drop, outlier, and concentration detection."}
+  ],
+  "reviewer_output_sha256":"76ee85cfbba7a8503f0d5aaac8123cae4812ca9f631c5d36d40e1f91da9aaea4"
+}

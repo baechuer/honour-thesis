@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0808",
+  "blind_packet_id":"P-A9908D85B499D563D3",
+  "batch_input_sha256":"5f58ffee5d38a1057d8d4345675be75f03f220c5b5cbe48b3a90a71b5668cbd4",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-1E9ED82BA6886C98","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Guides Stripe integration decisions", "rationale":"It is dedicated to Stripe integration choices and supports payment operations, billing events, and reporting integration.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-5159B49607D35740","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack integrations rather than Stripe billing operations.","missing_material_requirement_or_null":"Stripe payments, subscriptions, invoices, and status reporting."},
+    {"candidate_token":"C-A2096D1FEC03CAAA","adequacy":"INADEQUATE","source_anchor":"name: restate","rationale":"This builds durable distributed applications rather than Stripe payment processing.","missing_material_requirement_or_null":"Stripe payment and subscription operations."},
+    {"candidate_token":"C-A247696FA66F58E8","adequacy":"INADEQUATE","source_anchor":"name: Threat Model STRIDE","rationale":"This threat-models a design rather than automating Stripe operations.","missing_material_requirement_or_null":"Stripe payments, invoices, and reporting automation."},
+    {"candidate_token":"C-C79804777494E765","adequacy":"INADEQUATE","source_anchor":"name: gsea","rationale":"This performs gene-set analysis rather than billing work.","missing_material_requirement_or_null":"Stripe payment operations."},
+    {"candidate_token":"C-DD3AC3B5CA5A2BD2","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Implements Stripe payments, subscriptions, and webhooks", "rationale":"It directly implements Stripe payment and subscription flows with webhook correctness and billing-state handling.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-E7FE31F2F9110175","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than billing processing.","missing_material_requirement_or_null":"Stripe payment and invoice automation."},
+    {"candidate_token":"C-FF976D10CA437E18","adequacy":"INADEQUATE","source_anchor":"name: vibe-legal-batch-redliner","rationale":"This redlines contracts rather than handling Stripe payments.","missing_material_requirement_or_null":"Stripe payment, subscription, invoice, and reporting operations."}
+  ],
+  "reviewer_output_sha256":"d95b812faacf6e48fac19a912931729e1b60d6f3945ab03ba1ece6aa710cf8ae"
+}

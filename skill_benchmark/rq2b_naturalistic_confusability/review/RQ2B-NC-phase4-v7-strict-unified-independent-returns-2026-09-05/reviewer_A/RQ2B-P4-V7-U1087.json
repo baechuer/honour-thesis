@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1087",
+  "blind_packet_id": "P-88B4B801B9B076E091",
+  "batch_input_sha256": "41dcba832149bf277231854ca12dbf4a14aa1640a710766f1933c0251e5b1cc7",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-19835F172369129C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# TikTok Ads",
+      "rationale": "This audits TikTok advertising rather than a Microsoft search-ad account.",
+      "missing_material_requirement_or_null": "A Microsoft Ads account audit covering UET and MSCLKID, search, feed, Google import, LinkedIn targeting, syndicated brand traffic, and prioritized impact."
+    },
+    {
+      "candidate_token": "C-3CC6C74992AD2159",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Usability Test Plan",
+      "rationale": "This plans usability testing, not search-ad operations.",
+      "missing_material_requirement_or_null": "A Microsoft Ads account audit and optimization workflow."
+    },
+    {
+      "candidate_token": "C-45E0F05A191522B6",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Workflow: Full Account Audit",
+      "rationale": "It directly audits UET and MSCLKID before recommendations, match types, queries, negatives, RSA assets, extensions, pacing, feed errors, Google import freshness, LinkedIn targeting tests, brand syndication exclusion, and prioritized expected-ROAS actions.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A5215BB386F01DF7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Launch Strategy",
+      "rationale": "This plans a launch rather than auditing search advertising.",
+      "missing_material_requirement_or_null": "A Microsoft Ads account audit workflow."
+    },
+    {
+      "candidate_token": "C-A91814FCD991B86F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives, not ad-account audits.",
+      "missing_material_requirement_or_null": "A Microsoft Ads account audit workflow."
+    },
+    {
+      "candidate_token": "C-AFB19637573907D1",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Meta Ads (Facebook & Instagram)",
+      "rationale": "It provides a paid-media audit structure but targets Meta rather than Microsoft search and its unique tracking, import, syndication, and LinkedIn controls.",
+      "missing_material_requirement_or_null": "Microsoft Ads-specific audit coverage for UET, MSCLKID, search terms, Google imports, LinkedIn targeting, and brand-syndication exclusion."
+    },
+    {
+      "candidate_token": "C-C336952D70AB2043",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to read external files",
+      "rationale": "This performs gene-set enrichment analysis, not paid-search auditing.",
+      "missing_material_requirement_or_null": "A Microsoft Ads account audit workflow."
+    },
+    {
+      "candidate_token": "C-EFE7F7A035F4F77F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Budget Pacing",
+      "rationale": "It handles cross-channel budget pacing, but omits the account, tracking, search, feed, import, and audience audit required here.",
+      "missing_material_requirement_or_null": "A Microsoft Ads account audit with tracking verification and campaign-quality checks before pacing recommendations."
+    }
+  ],
+  "reviewer_output_sha256": "792f80a988de05a9d249f5d7423af806ac5085ecbab6bf3f1ec2ba17a2828bb8"
+}

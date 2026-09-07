@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1104",
+  "blind_packet_id": "P-9F0A3418B3B90E0539",
+  "batch_input_sha256": "d4141a752b0d659e6f4160c0b8826161c4322e607bdf1b4352530a4e9eac106a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2484ED9F087FAEAA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to activate",
+      "rationale": "This source surveys documented visual and interaction conventions for product design, not source-code security changes.",
+      "missing_material_requirement_or_null": "A diff-only cloud security-review workflow with job persistence, polling, and severity reporting is absent."
+    },
+    {
+      "candidate_token": "C-362CE41949CCA58E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Skill Boundary",
+      "rationale": "This skill consumes an existing hack-review report and explicitly directs creation or refresh of that report to another workflow.",
+      "missing_material_requirement_or_null": "A diff-only cloud security-review workflow with job persistence, polling, and severity reporting is absent."
+    },
+    {
+      "candidate_token": "C-4C5BAA31AA1B9BD8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Updating Skills from Upstream",
+      "rationale": "This source updates a skills repository from upstream and does not review application changes for security issues.",
+      "missing_material_requirement_or_null": "A diff-only cloud security-review workflow with job persistence, polling, and severity reporting is absent."
+    },
+    {
+      "candidate_token": "C-6EE8464B5133F2DA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Workflow",
+      "rationale": "It defaults uncommitted work to HEAD, stops for an empty diff, packages and uploads the workspace and patch to the configured cloud service, persists the job and base ref, polls every two minutes, and emits severity-grouped findings.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A337976EB60CBE10",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## HIGH-LEVEL WORKFLOW",
+      "rationale": "It supports a diff-scoped security review with severity-graded reporting, but uses an internal multi-lens review rather than the requested configured cloud review job workflow.",
+      "missing_material_requirement_or_null": "Packaging and submitting the workspace and patch to the configured cloud service, retaining the job and comparison reference, and two-minute status polling are absent."
+    },
+    {
+      "candidate_token": "C-D8D01527EE8F5759",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Segmentation Strategy",
+      "rationale": "This source designs lifecycle-marketing segments and campaign rules, not software security reviews.",
+      "missing_material_requirement_or_null": "A diff-only cloud security-review workflow with job persistence, polling, and severity reporting is absent."
+    },
+    {
+      "candidate_token": "C-D915FA5F679E142B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Review Execution Order",
+      "rationale": "It provides a structured security review of code changes and severity-classified findings, but does not implement the requested configured cloud diff-review job lifecycle.",
+      "missing_material_requirement_or_null": "Packaging and submitting the workspace and patch to the configured cloud service, retaining the job and comparison reference, and two-minute status polling are absent."
+    },
+    {
+      "candidate_token": "C-FEDEBFF0F649AFA9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Boundary",
+      "rationale": "This skill consumes a pre-existing structural thermo-review report and does not perform a new security scan.",
+      "missing_material_requirement_or_null": "A diff-only cloud security-review workflow with job persistence, polling, and severity reporting is absent."
+    }
+  ],
+  "reviewer_output_sha256": "d6af8ede1d2b661c123e9d4e36b49f44f0e0bbad1a55d10bc3ca88775d893f31"
+}

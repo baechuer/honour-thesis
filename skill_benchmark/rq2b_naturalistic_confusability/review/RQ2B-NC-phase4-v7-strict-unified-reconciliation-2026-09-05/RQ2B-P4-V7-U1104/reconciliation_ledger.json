@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1104",
+  "blind_packet_id": "P-9F0A3418B3B90E0539",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-2484ED9F087FAEAA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to activate",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: visual-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-362CE41949CCA58E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Skill Boundary",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: receiving-hack-review"
+    },
+    {
+      "candidate_token": "C-4C5BAA31AA1B9BD8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Updating Skills from Upstream",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Pulling Updates from Skills Repository"
+    },
+    {
+      "candidate_token": "C-6EE8464B5133F2DA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "## Workflow",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Run a fast AWS Security Agent diff scan on only the changed code since a git ref"
+    },
+    {
+      "candidate_token": "C-A337976EB60CBE10",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## HIGH-LEVEL WORKFLOW",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: pr-review"
+    },
+    {
+      "candidate_token": "C-D8D01527EE8F5759",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Segmentation Strategy",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Segmentation Strategy"
+    },
+    {
+      "candidate_token": "C-D915FA5F679E142B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Review Execution Order",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Review code changes for bugs, security issues"
+    },
+    {
+      "candidate_token": "C-FEDEBFF0F649AFA9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Boundary",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: receiving-thermo-review"
+    }
+  ],
+  "reviewer_A_return_sha256": "2da4857a2157b50a80fb5842b16cc66095eaca0b0544ca4eadfd8b607bba1177",
+  "reviewer_B_return_sha256": "8431d511811decd5722066f88878980ca493303c5a8c6e08d1c85b243b25c0dd",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

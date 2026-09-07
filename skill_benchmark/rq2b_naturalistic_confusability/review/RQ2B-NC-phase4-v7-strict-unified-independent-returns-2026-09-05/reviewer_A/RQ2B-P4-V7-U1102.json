@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1102",
+  "blind_packet_id": "P-5C79E5E6E65A7AA94C",
+  "batch_input_sha256": "973ff2088dc90fc506a9e20cb7ff923cbde1aec4b325d3614aa8c7de0464eb88",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-17AFEF817CEF64C4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Channel Strategy",
+      "rationale": "It analyzes channel economics and concentration, but does not scan weekly metrics for statistical anomalies or deviations needing follow-up.",
+      "missing_material_requirement_or_null": "A weekly channel-metrics anomaly detection workflow for spikes, drops, outliers, and concentrated deviations."
+    },
+    {
+      "candidate_token": "C-44529977109BEA3A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "This analyzes biological pathway scores, not channel metrics.",
+      "missing_material_requirement_or_null": "A weekly channel-metrics anomaly detection workflow."
+    },
+    {
+      "candidate_token": "C-5ED4F64158C3E030",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# LLM Inference Scaling",
+      "rationale": "It may analyze inference performance metrics, but does not inspect marketing or business channel metrics for anomalous weekly deviations.",
+      "missing_material_requirement_or_null": "A channel-metrics anomaly scan that identifies spikes, drops, outliers, and concentration for follow-up."
+    },
+    {
+      "candidate_token": "C-607567CC3D204664",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Analyzing Network Traffic",
+      "rationale": "It detects anomalous network-traffic patterns, but its data source and investigative methods do not apply to weekly channel metrics.",
+      "missing_material_requirement_or_null": "A weekly business-channel metric anomaly detection workflow."
+    },
+    {
+      "candidate_token": "C-66B03BD1917DC54F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots rather than analyzing channel metrics.",
+      "missing_material_requirement_or_null": "A weekly channel-metrics anomaly detection workflow."
+    },
+    {
+      "candidate_token": "C-E4172424A759C381",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Conflict Resolution",
+      "rationale": "This resolves interpersonal conflict, not metric anomalies.",
+      "missing_material_requirement_or_null": "A weekly channel-metrics anomaly detection workflow."
+    },
+    {
+      "candidate_token": "C-E50A2A4444110E84",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates team retrospectives, not metric anomaly analysis.",
+      "missing_material_requirement_or_null": "A weekly channel-metrics anomaly detection workflow."
+    },
+    {
+      "candidate_token": "C-F26F3A415865FA09",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# figma-import-tokens — design tokens → Figma variables",
+      "rationale": "This imports design tokens into Figma and does not analyze channel metrics.",
+      "missing_material_requirement_or_null": "A weekly channel-metrics anomaly detection workflow."
+    }
+  ],
+  "reviewer_output_sha256": "be85138ff069a06e2363628cefc5fb658d03797ce2bf348d151719321e590148"
+}

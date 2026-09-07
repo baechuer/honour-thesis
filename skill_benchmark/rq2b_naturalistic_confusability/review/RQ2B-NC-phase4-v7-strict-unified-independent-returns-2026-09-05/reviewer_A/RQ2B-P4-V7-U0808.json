@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0808",
+  "blind_packet_id": "P-A9908D85B499D563D3",
+  "batch_input_sha256": "5f58ffee5d38a1057d8d4345675be75f03f220c5b5cbe48b3a90a71b5668cbd4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1E9ED82BA6886C98",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Integration routing",
+      "rationale": "It guides Stripe integration decisions, subscriptions, payments, and webhooks, but does not provide a complete Stripe payment-operations automation workflow and status reporting implementation.",
+      "missing_material_requirement_or_null": "An executable Stripe operations workflow for payment events, subscription billing, invoices, payment-status reporting, and verified lifecycle automation."
+    },
+    {
+      "candidate_token": "C-5159B49607D35740",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots and does not automate Stripe payment operations.",
+      "missing_material_requirement_or_null": "A Stripe-specific payment, subscription, invoice, webhook, and status-reporting automation workflow."
+    },
+    {
+      "candidate_token": "C-A2096D1FEC03CAAA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Restate",
+      "rationale": "This is not a Stripe payment-operations integration.",
+      "missing_material_requirement_or_null": "A Stripe-specific payment, billing-event, invoice, and status-reporting automation workflow."
+    },
+    {
+      "candidate_token": "C-A247696FA66F58E8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Threat Model STRIDE",
+      "rationale": "This models security threats rather than Stripe billing operations.",
+      "missing_material_requirement_or_null": "A Stripe payment-operations automation workflow."
+    },
+    {
+      "candidate_token": "C-C79804777494E765",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to read external files",
+      "rationale": "This performs gene-set enrichment analysis, not Stripe operations.",
+      "missing_material_requirement_or_null": "A Stripe payment-operations automation workflow."
+    },
+    {
+      "candidate_token": "C-DD3AC3B5CA5A2BD2",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Stripe Expert",
+      "rationale": "It implements Stripe Checkout, verified idempotent billing webhooks, subscription state, invoice-failure handling, lifecycle events, and testing, which together support payment operations and status reporting without substituting other platforms.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E7FE31F2F9110175",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives, not Stripe payment operations.",
+      "missing_material_requirement_or_null": "A Stripe payment-operations automation workflow."
+    },
+    {
+      "candidate_token": "C-FF976D10CA437E18",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Vibe Legal Server — Batch Contract Redlining",
+      "rationale": "This redlines contracts, not Stripe billing events or invoices.",
+      "missing_material_requirement_or_null": "A Stripe payment-operations automation workflow."
+    }
+  ],
+  "reviewer_output_sha256": "6b0d099d7db72367117a2e86e1b600668d3c497593572256719eaaf737bc5426"
+}

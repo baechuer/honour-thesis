@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1087",
+  "blind_packet_id":"P-88B4B801B9B076E091",
+  "batch_input_sha256":"41dcba832149bf277231854ca12dbf4a14aa1640a710766f1933c0251e5b1cc7",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-19835F172369129C","adequacy":"INADEQUATE","source_anchor":"name: tiktok-ads","rationale":"This audits TikTok advertising rather than a search-ad account.","missing_material_requirement_or_null":"Search-ad platform audit with tracking and syndication checks."},
+    {"candidate_token":"C-3CC6C74992AD2159","adequacy":"INADEQUATE","source_anchor":"name: Usability Test Plan","rationale":"This designs user studies rather than ad-account audits.","missing_material_requirement_or_null":"Conversion tracking, keyword, asset, and budget account audit."},
+    {"candidate_token":"C-45E0F05A191522B6","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Audit campaigns, keywords, audiences, and UET tracking", "rationale":"It directly covers Microsoft search ads, UET conversion tracking, LinkedIn audience targeting, imported campaigns, and account optimization.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A5215BB386F01DF7","adequacy":"INADEQUATE","source_anchor":"name: launch-strategy","rationale":"This plans product launches rather than auditing search advertising.","missing_material_requirement_or_null":"Search-ad tracking and optimization review."},
+    {"candidate_token":"C-A91814FCD991B86F","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than advertising review.","missing_material_requirement_or_null":"Search-ad account audit."},
+    {"candidate_token":"C-AFB19637573907D1","adequacy":"INADEQUATE","source_anchor":"name: facebook-ads","rationale":"This audits Meta advertising rather than search-ad accounts.","missing_material_requirement_or_null":"Microsoft search-ad audit and tracking checks."},
+    {"candidate_token":"C-C336952D70AB2043","adequacy":"INADEQUATE","source_anchor":"name: gsea","rationale":"This performs gene-set analysis rather than advertising optimization.","missing_material_requirement_or_null":"Search-ad account audit."},
+    {"candidate_token":"C-EFE7F7A035F4F77F","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Paces and reallocates ad budget", "rationale":"It addresses budget pacing, but not the comprehensive search-account and tracking audit.","missing_material_requirement_or_null":"Conversion, keyword, asset, audience, feed, and partner-traffic checks."}
+  ],
+  "reviewer_output_sha256":"45008beebbe1c07df65c87e7e595b0290b64783844a13f85aae351637d70ff7d"
+}
