@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0505",
+  "blind_packet_id": "P-49B97FBA66F14890B0",
+  "batch_input_sha256": "5aa5d77ebb79342c46e72ad048e4fde224086b9d504a2eae2d3542610ad4389b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0856674FEAD605E2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "The skill builds Slack bots and integrations, not browser screenshot comparisons.",
+      "missing_material_requirement_or_null": "Baseline-versus-current screenshot regression analysis."
+    },
+    {
+      "candidate_token": "C-0D0DADB21B595695",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The source facilitates agile retrospectives and does not inspect visual UI regressions.",
+      "missing_material_requirement_or_null": "Screenshot comparison for clipping, spacing, overflow, and contrast regressions."
+    },
+    {
+      "candidate_token": "C-0EF5C05ECB7DD5AB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Visual Asset Curation",
+      "rationale": "The skill curates stock-image selections for visual consistency rather than comparing baseline and current browser screenshots for layout regressions.",
+      "missing_material_requirement_or_null": "Baseline-versus-current screenshot regression analysis."
+    },
+    {
+      "candidate_token": "C-2B1C41BFE80C24ED",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "The source performs gene-set enrichment analysis and has no visual UI analysis capability.",
+      "missing_material_requirement_or_null": "Screenshot comparison for visual regressions."
+    },
+    {
+      "candidate_token": "C-3992402B2AD818C2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sound and Music Sync",
+      "rationale": "The skill directs audio and music timing for video, not desktop and mobile UI screenshot regression review.",
+      "missing_material_requirement_or_null": "Visual screenshot regression analysis."
+    },
+    {
+      "candidate_token": "C-52B454561D6DB4A5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# CTF Binary Exploitation (Pwn)",
+      "rationale": "The skill provides CTF binary-exploitation techniques and does not compare UI screenshots.",
+      "missing_material_requirement_or_null": "Baseline-versus-current screenshot regression analysis."
+    },
+    {
+      "candidate_token": "C-A86A7AC6E67375C5",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## The Refactoring UI Framework",
+      "rationale": "It can assess visual hierarchy, spacing, typography, color, and layout problems in a UI, which overlaps with several requested symptoms, but it does not define a baseline-versus-current screenshot comparison workflow or a regression-reporting method.",
+      "missing_material_requirement_or_null": "A paired baseline/current screenshot-regression comparison procedure."
+    },
+    {
+      "candidate_token": "C-AA43A1F76C88F245",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Media Monitor",
+      "rationale": "The skill monitors brand mentions and sentiment across media sources, not visual differences in browser screenshots.",
+      "missing_material_requirement_or_null": "Screenshot comparison for clipping, spacing, overflow, and contrast regressions."
+    }
+  ],
+  "reviewer_output_sha256": "ad0df1d12735c8c6d13f14ed2f29740fa57ca6367eb59c15e19683d73eff3409"
+}

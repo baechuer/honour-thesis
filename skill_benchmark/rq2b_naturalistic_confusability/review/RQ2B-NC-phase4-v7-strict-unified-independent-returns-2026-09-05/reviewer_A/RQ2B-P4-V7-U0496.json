@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0496",
+  "blind_packet_id": "P-EAB1EAE16D15126BFD",
+  "batch_input_sha256": "dc918ca3d06824b5533d6219261b589219d705914328c3a9d750a7731041e720",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1338CB838FE6F7C6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Generate TypeScript MCP Server",
+      "rationale": "Generates a new TypeScript MCP server rather than debugging an intermittent local feature failure.",
+      "missing_material_requirement_or_null": "Freeze the failure, create a minimal reproducer, isolate the behaviour boundary and propose an evidence-backed first fix."
+    },
+    {
+      "candidate_token": "C-225EDE69181C6C94",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys security prior art before a product is built, not local feature behaviour.",
+      "missing_material_requirement_or_null": "Debug the local failure with a reproducible case, boundary isolation and evidence-backed first fix."
+    },
+    {
+      "candidate_token": "C-37A362142BF5B622",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Clean Data",
+      "rationale": "Cleans spreadsheet data rather than diagnosing a software feature that intermittently returns a wrong result.",
+      "missing_material_requirement_or_null": "Create the minimal failure reproducer and isolate the behaviour change boundary."
+    },
+    {
+      "candidate_token": "C-B5971AF3F08260CB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Automated PR Review & Code Quality",
+      "rationale": "Performs broad PR and code-quality review, which the request explicitly excludes, rather than a focused local debugging packet.",
+      "missing_material_requirement_or_null": "Freeze the specific failure and isolate it through a smallest local reproducer without a broad code-quality review."
+    },
+    {
+      "candidate_token": "C-B6965D5D68C1EE99",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# SDLC Workflow",
+      "rationale": "Runs a full delivery workflow with branches, PRs and CI, not local failure diagnosis.",
+      "missing_material_requirement_or_null": "Debug the feature using a minimal reproducer and evidence-backed first fix without GitHub CI work."
+    },
+    {
+      "candidate_token": "C-BD0D0DE883504371",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 5: Pick the smallest test per path and order the list",
+      "rationale": "Encourages small, risk-focused tests, which can inform a reproducer, but it maps untested coverage paths rather than freezing and diagnosing an observed intermittent failure.",
+      "missing_material_requirement_or_null": "Define the observed failure, reproduce it minimally, isolate the behaviour boundary and propose the first evidence-backed fix."
+    },
+    {
+      "candidate_token": "C-D3CCD3484EACD809",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Core Principles",
+      "rationale": "Uses evidence to verify and disposition reported implementation risks before changes, but is for receiving a hack-review report rather than debugging a local intermittent wrong result.",
+      "missing_material_requirement_or_null": "Build the smallest reproducer and isolate the boundary where the feature behaviour changes."
+    },
+    {
+      "candidate_token": "C-E7F294C59BDF0766",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Secure Code Review",
+      "rationale": "Reviews security flaw classes, not generic local feature debugging, and is a code-review workflow excluded by the request.",
+      "missing_material_requirement_or_null": "Diagnose the intermittent feature failure through a bounded reproducer and evidence-backed first fix."
+    }
+  ],
+  "reviewer_output_sha256": "60c6fdd7531b777d0ce6dd4ec9825c2e0568c6b48daf657954d74cd584bfcf8c"
+}

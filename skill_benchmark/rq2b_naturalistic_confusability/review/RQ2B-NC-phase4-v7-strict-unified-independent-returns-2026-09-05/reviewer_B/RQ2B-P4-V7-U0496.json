@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0496",
+  "blind_packet_id": "P-EAB1EAE16D15126BFD",
+  "batch_input_sha256": "dc918ca3d06824b5533d6219261b589219d705914328c3a9d750a7731041e720",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1338CB838FE6F7C6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Generate TypeScript MCP Server",
+      "rationale": "The skill scaffolds a new MCP server project and does not provide a diagnostic workflow for a pre-existing intermittent local failure.",
+      "missing_material_requirement_or_null": "Failure definition, smallest reproducer, behaviour-boundary isolation, and evidence-backed first fix."
+    },
+    {
+      "candidate_token": "C-225EDE69181C6C94",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "security prior art",
+      "rationale": "The source surveys external security prior art before a product is built, rather than debugging an observed local feature failure.",
+      "missing_material_requirement_or_null": "A local failure-reproduction and boundary-isolation debugging procedure."
+    },
+    {
+      "candidate_token": "C-37A362142BF5B622",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Clean Data",
+      "rationale": "The skill normalises spreadsheet data and does not establish or reproduce the behaviour of an intermittently incorrect feature.",
+      "missing_material_requirement_or_null": "A debugging packet with a minimal reproducer and evidence-backed fix."
+    },
+    {
+      "candidate_token": "C-B5971AF3F08260CB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Automated PR Review & Code Quality",
+      "rationale": "This is a multi-lens PR and code-quality review process, whereas the request explicitly requires focused local debugging rather than code-quality review.",
+      "missing_material_requirement_or_null": "A local failure-reproduction and boundary-isolation debugging procedure."
+    },
+    {
+      "candidate_token": "C-B6965D5D68C1EE99",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# SDLC Workflow",
+      "rationale": "The skill orchestrates a complete feature-development lifecycle and does not focus on isolating a current intermittent local behaviour.",
+      "missing_material_requirement_or_null": "A debugging packet that freezes the failure, builds a minimal reproducer, and isolates the changing boundary."
+    },
+    {
+      "candidate_token": "C-BD0D0DE883504371",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Do NOT use to pin the current behavior of legacy code before a refactor",
+      "rationale": "The skill ranks gaps in coverage reports and explicitly does not pin current behaviour; it cannot investigate the reported intermittent failure or establish the smallest reproducer.",
+      "missing_material_requirement_or_null": "Failure reproduction, behaviour-boundary isolation, and an evidence-backed first fix."
+    },
+    {
+      "candidate_token": "C-D3CCD3484EACD809",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Receiving Hack Review",
+      "rationale": "This source consumes an existing hack-risk review artifact and is not a fresh debugging procedure for an observed intermittent result.",
+      "missing_material_requirement_or_null": "A local failure-reproduction and boundary-isolation debugging procedure."
+    },
+    {
+      "candidate_token": "C-E7F294C59BDF0766",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Secure Code Review",
+      "rationale": "The skill searches code for security vulnerabilities and is not designed to reproduce, isolate, and fix a local functional failure without conducting code review.",
+      "missing_material_requirement_or_null": "A focused debugging packet for the intermittent functional failure."
+    }
+  ],
+  "reviewer_output_sha256": "8e8625fa5cc326a730149ea084bec5a4ddfb275b52ad85d31dbf8b3559b906de"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0505",
+  "blind_packet_id": "P-49B97FBA66F14890B0",
+  "batch_input_sha256": "5aa5d77ebb79342c46e72ad048e4fde224086b9d504a2eae2d3542610ad4389b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0856674FEAD605E2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack integrations and does not compare web-page screenshots for visual regressions.",
+      "missing_material_requirement_or_null": "Compare baseline and current desktop and mobile screenshots for clipping, spacing, overflow and contrast regressions."
+    },
+    {
+      "candidate_token": "C-0D0DADB21B595695",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates sprint retrospectives rather than visual browser QA.",
+      "missing_material_requirement_or_null": "Inspect baseline and current screenshots and report visual regressions across desktop and mobile."
+    },
+    {
+      "candidate_token": "C-0EF5C05ECB7DD5AB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Visual Asset Curation",
+      "rationale": "Curates stock-image sets for a visual system rather than comparing baseline and current UI screenshots for regressions.",
+      "missing_material_requirement_or_null": "Compare the two screenshot states and identify clipping, spacing, overflow and contrast changes."
+    },
+    {
+      "candidate_token": "C-2B1C41BFE80C24ED",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "Runs gene-set enrichment analysis and does not perform screenshot QA.",
+      "missing_material_requirement_or_null": "Compare baseline and current desktop and mobile UI screenshots for visual regressions."
+    },
+    {
+      "candidate_token": "C-3992402B2AD818C2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sound and Music Sync",
+      "rationale": "Edits audio for video and does not inspect webpage screenshots.",
+      "missing_material_requirement_or_null": "Identify visual differences between baseline and current UI screenshots."
+    },
+    {
+      "candidate_token": "C-52B454561D6DB4A5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# CTF Binary Exploitation (Pwn)",
+      "rationale": "Covers CTF binary exploitation rather than browser visual regression review.",
+      "missing_material_requirement_or_null": "Compare UI screenshots for clipping, spacing, text overflow and contrast changes."
+    },
+    {
+      "candidate_token": "C-A86A7AC6E67375C5",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Refactoring UI Design System",
+      "rationale": "Can audit visual hierarchy, spacing and color/contrast in a web UI, but does not perform a baseline-versus-current screenshot comparison or systematically identify regressions across responsive states.",
+      "missing_material_requirement_or_null": "Compare the supplied baseline and current desktop and mobile screenshots and report state-specific visual regressions."
+    },
+    {
+      "candidate_token": "C-AA43A1F76C88F245",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Media Monitor",
+      "rationale": "Monitors brand mentions rather than visual changes in a web page.",
+      "missing_material_requirement_or_null": "Inspect and compare browser screenshots for UI visual regressions."
+    }
+  ],
+  "reviewer_output_sha256": "b884aab10adb320a671c65e2855ab861cd78ea6346148b6b22d667ad8122dead"
+}
