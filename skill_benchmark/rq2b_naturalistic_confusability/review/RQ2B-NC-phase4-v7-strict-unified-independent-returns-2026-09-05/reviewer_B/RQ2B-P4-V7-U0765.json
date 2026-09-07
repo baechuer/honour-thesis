@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-626FA07AE304616D",
+      "missing_material_requirement_or_null": "Jira and Confluence issue and documentation operations.",
+      "rationale": "This is an R-package release checklist workflow for GitHub issues, not an installed project-tracking integration that can inspect a sprint defect, create and transition Jira work, and search and publish team documentation.",
+      "source_anchor": "# Create an R Package Release Checklist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-644A741F0443B45E",
+      "missing_material_requirement_or_null": "Jira and Confluence operations.",
+      "rationale": "This skill validates commercial ideas with public internet research and does not provide the requested project-tracking, issue-transition, or team-documentation capabilities.",
+      "source_anchor": "# Verify Idea"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-6F1BA7B91D5FB122",
+      "missing_material_requirement_or_null": "Concrete executable commands or tool-call procedures for the requested Jira and Confluence actions.",
+      "rationale": "It identifies Jira and Confluence as its domain and supplies JQL and CQL examples, but it remains an implementation-oriented MCP guide rather than a complete operational procedure for viewing the export failure, creating and transitioning the issue, and publishing the follow-up page.",
+      "source_anchor": "## Core Workflow"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-84A8588F11C16458",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The installed Jira and Confluence command wrappers cover issue search and detail retrieval, issue creation and transition, Confluence search, and creation of the requested short follow-up page.",
+      "source_anchor": "## Jira Operations"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD9C4BC616CD31D3",
+      "missing_material_requirement_or_null": "Jira and Confluence operational integration.",
+      "rationale": "This is a facilitation guide for sprint retrospectives and provides no mechanism to inspect defects, manage issue state, or search and publish team documentation.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CBB36073315624F2",
+      "missing_material_requirement_or_null": "Project-tracking and team-documentation operations.",
+      "rationale": "This skill converts local files into Markdown and does not search or modify sprint issues or team documentation in the requested systems.",
+      "source_anchor": "# MarkItDown - File to Markdown Conversion"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-DC993CE443B0E06D",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Its Jira and Confluence REST command procedures support querying current-sprint defects and issue details, creating a follow-up, listing and applying the appropriate transition, searching documentation, and creating a concise follow-up page.",
+      "source_anchor": "# Atlassian REST API Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E07C5A0709F0E8E4",
+      "missing_material_requirement_or_null": "Jira and Confluence project-tracking and documentation operations.",
+      "rationale": "This is a bulk expression pathway-analysis workflow and has no capability for sprint issue management, defect inspection, or documentation search and authoring.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0765",
+  "batch_input_sha256": "06df1a160fcd18167b69492e1e14bdb43f9eaf4e5f0ae81c588945983e5934ed",
+  "blind_packet_id": "P-ACE4257A9EF8B83BB5",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "6caa4caf8a283e075d91e7cc797a6083215c68798e766fa1949d4e7d8cc3d9cb"
+}
