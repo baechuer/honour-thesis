@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0641",
+  "blind_packet_id": "P-034E362FE077CD9504",
+  "batch_input_sha256": "2deb7fb1b5a6b70c8ae3cefcd82d391b11eac17482c64b557ae3fd64ae84c50e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-351CEF6E74A6EAD9",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Action items",
+      "rationale": "It converts a raw bullet dump into verb-first action items and explicitly surfaces absent owners, dates, and unresolved threads without inventing completion or scheduling details.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-44DA350697D8E173",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Quick Start",
+      "rationale": "This explains PixiJS rendering internals and provides no task-list extraction or action clarification capability.",
+      "missing_material_requirement_or_null": "Concrete action-item extraction with missing details, without a calendar or meeting-record framing."
+    },
+    {
+      "candidate_token": "C-5F41430F1E2678EC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Workflow",
+      "rationale": "It extracts action items and missing owners or dates from notes, but frames the input as a completed meeting record and requires a summary, decisions, risks, and follow-up email beyond the requested plain list.",
+      "missing_material_requirement_or_null": "A lightweight action-only output that treats the text as rough uncompleted notes rather than meeting minutes."
+    },
+    {
+      "candidate_token": "C-A532598556C15FDF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This creates ready-to-build Jira stories with acceptance criteria and estimation guidance, while the request expressly asks for a plain action list rather than tickets.",
+      "missing_material_requirement_or_null": "Simple action extraction with missing details and no ticketing or scheduling conversion."
+    },
+    {
+      "candidate_token": "C-BA3F820C51143F9A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When To Use",
+      "rationale": "This performs GO and KEGG enrichment analysis on gene lists, not work-item organization.",
+      "missing_material_requirement_or_null": "Action-item list generation and missing-detail identification from rough notes."
+    },
+    {
+      "candidate_token": "C-BF12F066673A4C62",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This prepares customer-success quarterly business reviews, agendas, and account health scoring rather than a concise personal action list.",
+      "missing_material_requirement_or_null": "Concrete extracted actions, missing details, and no calendar or meeting-plan output."
+    },
+    {
+      "candidate_token": "C-CB3EA8AD00745247",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "What This Skill Does",
+      "rationale": "This configures a multi-agent swarm for runtime work distribution, not a personal task-list transformation.",
+      "missing_material_requirement_or_null": "Plain action-item extraction and clarification of missing details from rough notes."
+    },
+    {
+      "candidate_token": "C-E43F90B7ABBAC87B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Core principle",
+      "rationale": "This structures recurring manager-report one-to-one agendas and explicitly sets a meeting cadence, contrary to the requested non-calendar action list.",
+      "missing_material_requirement_or_null": "Concrete actions and missing details without scheduling or meeting-agenda framing."
+    }
+  ],
+  "reviewer_output_sha256": "8f8f4b6bbf2dbf7cef620f27e29b441c4f9790f05ab4d1af3c11428d1f6c4ecd"
+}
