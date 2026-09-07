@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0374",
+  "blind_packet_id": "P-8BF66FBE5879EB554D",
+  "batch_input_sha256": "f7f8f989183050c0d887b77e41c90e475f78861df5c5120e175f8706b583fbd2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-333A67CD6F2846A3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### 6. SHIP",
+      "rationale": "It supplies generic lifecycle loops, verification, review, and stop conditions, but lacks a concrete staging-to-production promotion packet with deployment verification and rollback actions.",
+      "missing_material_requirement_or_null": "A release-execution procedure for staging-to-production promotion, operational verification, explicit stop conditions, and rollback or recovery."
+    },
+    {
+      "candidate_token": "C-47D06294AFFF68B7",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 5: Build the workflow automation packet",
+      "rationale": "It can make workflow invariants and automation guardrails visible, but does not provide the requested production promotion, verification, stop-condition, and rollback release packet.",
+      "missing_material_requirement_or_null": "A release-execution procedure for staging-to-production promotion, operational verification, explicit stop conditions, and rollback or recovery."
+    },
+    {
+      "candidate_token": "C-4EF84A18DBCE50D5",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Release Packet",
+      "rationale": "Directly covers staging-to-production promotion, rollout planning, preconditions, verification, rollback or recovery, and release-execution stop conditions in a release packet.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-5DD489715D328D5A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# wp-spec-to-goal — Vague WP Plugin Idea → Codex /goal Bundle",
+      "rationale": "Converts a WordPress feature idea into planning files rather than documenting production promotion and rollback operations.",
+      "missing_material_requirement_or_null": "A release-execution procedure for staging-to-production promotion, operational verification, explicit stop conditions, and rollback or recovery."
+    },
+    {
+      "candidate_token": "C-981DAB3C283A1223",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys published user-research literature, not software deployment promotion.",
+      "missing_material_requirement_or_null": "A release-execution procedure for staging-to-production promotion, operational verification, explicit stop conditions, and rollback or recovery."
+    },
+    {
+      "candidate_token": "C-9EFAF0C1F7742F29",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Create an R Package Release Checklist",
+      "rationale": "Provides an R-package release checklist, but is package-specific and does not establish a staging-to-production promotion process, operational gates, stop conditions, or rollback path.",
+      "missing_material_requirement_or_null": "A production deployment release packet with staging-to-production promotion, verification gates, stop conditions, and rollback steps."
+    },
+    {
+      "candidate_token": "C-C2EB79FCAAAE1EF1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates retrospective meetings rather than defining a production release procedure.",
+      "missing_material_requirement_or_null": "A release-execution procedure for staging-to-production promotion, operational verification, explicit stop conditions, and rollback or recovery."
+    },
+    {
+      "candidate_token": "C-ED58E86C62BD65BB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When not to use this skill",
+      "rationale": "It creates release-history and communication artifacts and explicitly routes rollout execution to deployment automation rather than supplying a promotion and rollback packet.",
+      "missing_material_requirement_or_null": "A release-execution procedure for staging-to-production promotion, operational verification, explicit stop conditions, and rollback or recovery."
+    }
+  ],
+  "reviewer_output_sha256": "9569bd729c45b0da107eb261932aa9783d0c8bd4854cd5c00bfe3eb9e93957e6"
+}

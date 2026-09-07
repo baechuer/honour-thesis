@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0374",
+  "blind_packet_id": "P-8BF66FBE5879EB554D",
+  "batch_input_sha256": "f7f8f989183050c0d887b77e41c90e475f78861df5c5120e175f8706b583fbd2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-333A67CD6F2846A3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "6. SHIP",
+      "rationale": "It supplies evidence-based stop conditions, independent verification, and a generic rollback check, but delegates deployment specifics and lacks a concrete staging-to-production promotion packet.",
+      "missing_material_requirement_or_null": "Environment-promotion gates and an operational deployment rollback procedure"
+    },
+    {
+      "candidate_token": "C-47D06294AFFF68B7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When not to use this skill",
+      "rationale": "This source explicitly routes preview/staging/production promotion and rollback design to deployment automation rather than handling the requested release execution.",
+      "missing_material_requirement_or_null": "Staging-to-production promotion and rollback release-packet workflow"
+    },
+    {
+      "candidate_token": "C-4EF84A18DBCE50D5",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Release Packet",
+      "rationale": "It directly covers staging-to-production promotion, preconditions, verification, explicit stop conditions, and rollback or recovery in an operator-ready release packet.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-5DD489715D328D5A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "wp-spec-to-goal — Vague WP Plugin Idea → Codex /goal Bundle",
+      "rationale": "This source turns a WordPress feature idea into goal files and does not document or execute staging-to-production release promotion and rollback.",
+      "missing_material_requirement_or_null": "Staging-to-production promotion and rollback release-packet workflow"
+    },
+    {
+      "candidate_token": "C-981DAB3C283A1223",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "rationale": "This source synthesises published user-research evidence and cannot create production release gates, operational verification, or rollback instructions.",
+      "missing_material_requirement_or_null": "Staging-to-production promotion and rollback release-packet workflow"
+    },
+    {
+      "candidate_token": "C-9EFAF0C1F7742F29",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Create an R Package Release Checklist",
+      "rationale": "It can generate a release checklist, but is specific to R packages and omits a deployment-promotion path, stop conditions, and operational rollback.",
+      "missing_material_requirement_or_null": "General staging-to-production promotion and rollback release-packet workflow"
+    },
+    {
+      "candidate_token": "C-C2EB79FCAAAE1EF1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source facilitates a team retrospective and provides no deployment release process, promotion gates, verification, or rollback path.",
+      "missing_material_requirement_or_null": "Staging-to-production promotion and rollback release-packet workflow"
+    },
+    {
+      "candidate_token": "C-ED58E86C62BD65BB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Step 6: Keep record, communication, and promotion separate",
+      "rationale": "This source writes changelogs and explicitly routes rollout, promotion, and rollback mechanics to deployment automation.",
+      "missing_material_requirement_or_null": "Staging-to-production promotion and rollback release-packet workflow"
+    }
+  ],
+  "reviewer_output_sha256": "f4d1f42f31e3f36ac7134b7cb660860be6d78e51eeb6715cdeefb7bad4b6073a"
+}
