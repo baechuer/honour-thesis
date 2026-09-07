@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0815",
+  "blind_packet_id":"P-E4952DBE0BFF710B4B",
+  "batch_input_sha256":"7ed19199b2a767d6a1cc624239a0eeb1908a47644a9d141dd8686128e9da6ba6",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-4EEE98F0A64AF40F","adequacy":"INADEQUATE","source_anchor":"name: gsea","rationale":"This performs gene-set enrichment analysis rather than debugging a browser interaction.","missing_material_requirement_or_null":"Browser console, network, DOM, and screenshot evidence collection."},
+    {"candidate_token":"C-637C6C7E0F00E53A","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"end-to-end Playwright tests", "rationale":"It can build resilient browser tests, but the task expressly requires DevTools-style runtime evidence rather than assertions alone.","missing_material_requirement_or_null":"Console, network, DOM, and screenshot inspection."},
+    {"candidate_token":"C-6C9658207A414C20","adequacy":"INADEQUATE","source_anchor":"name: appium","rationale":"This automates mobile tests, not Chrome DevTools evidence collection.","missing_material_requirement_or_null":"Chrome console, network, DOM, and screenshot inspection."},
+    {"candidate_token":"C-8E11FE8D197E2B50","adequacy":"FULLY_ACCEPTABLE","source_anchor":"inspect the DOM, capture console errors, analyze network requests", "rationale":"It directly uses Chrome DevTools MCP for all requested runtime evidence, including visual output capture.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A38940D4274D858A","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack integrations rather than debugging checkout in a browser.","missing_material_requirement_or_null":"Chrome DevTools runtime evidence collection."},
+    {"candidate_token":"C-B1AE3821543FC39E","adequacy":"INADEQUATE","source_anchor":"name: gsap-plugins","rationale":"This is for GSAP animation plugins rather than browser debugging.","missing_material_requirement_or_null":"Console, network, DOM, and screenshot investigation."},
+    {"candidate_token":"C-F04502B1B27A315C","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"debugging flaky browser tests", "rationale":"It can debug or write Playwright tests, but does not provide the required DevTools-style console, network, DOM, and screenshot evidence.","missing_material_requirement_or_null":"Chrome DevTools runtime-evidence inspection."},
+    {"candidate_token":"C-F2D64E980BF9194C","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates team retrospectives rather than diagnosing checkout behavior.","missing_material_requirement_or_null":"Browser runtime evidence collection."}
+  ],
+  "reviewer_output_sha256":"202198c24f6af4c8144f03192cc381568a28b1cc70371dd17d9aab30dde20beb"
+}

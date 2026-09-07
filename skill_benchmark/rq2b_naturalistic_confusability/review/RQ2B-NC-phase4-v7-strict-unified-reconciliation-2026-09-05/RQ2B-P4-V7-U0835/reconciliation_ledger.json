@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0835",
+  "blind_packet_id": "P-19D59CC36DED00E721",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0B3F5EE6F358BC3E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Migration Safety Checker",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "independently deployable, zero-downtime steps"
+    },
+    {
+      "candidate_token": "C-1400E5B952BCE90A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "database performance",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "lock and contention resolution"
+    },
+    {
+      "candidate_token": "C-270DBB0D8493FE96",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "SQL Query Rewriter",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: SQL Query Rewriter"
+    },
+    {
+      "candidate_token": "C-7D5B22A3AD891B75",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Database Schema Migration with Liquibase and Flyway",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "forward-only vs. reversible migration design"
+    },
+    {
+      "candidate_token": "C-B006B22837EC6285",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Index Advisor",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT use when the table is too large and needs partitioning"
+    },
+    {
+      "candidate_token": "C-B08EB22C2E973B1C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "local-seo-playbook",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: local-seo-playbook"
+    },
+    {
+      "candidate_token": "C-B69135DF09D2112F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GSVA",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: gsva-analysis-and-visualization"
+    },
+    {
+      "candidate_token": "C-F7AD859BB1D11CE6",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Table Partition Planner",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "the retention operation (which partitions get dropped and when)"
+    }
+  ],
+  "reviewer_A_return_sha256": "2ecdfaadadad0cfbf3c9fefde6bbf9b8388ad6c601999b19156a3d60dcda7b78",
+  "reviewer_B_return_sha256": "6127ac237ce2ed6be62c395d1b1da036d6a7ffc107e92133f0f5401fb23bcc11",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

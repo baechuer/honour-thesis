@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0815",
+  "blind_packet_id": "P-E4952DBE0BFF710B4B",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-4EEE98F0A64AF40F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Input format",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: gsea"
+    },
+    {
+      "candidate_token": "C-637C6C7E0F00E53A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Playwright Testing",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "end-to-end Playwright tests"
+    },
+    {
+      "candidate_token": "C-6C9658207A414C20",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "appium",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: appium"
+    },
+    {
+      "candidate_token": "C-8E11FE8D197E2B50",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Browser Testing with DevTools",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "inspect the DOM, capture console errors, analyze network requests"
+    },
+    {
+      "candidate_token": "C-A38940D4274D858A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Slack Bot Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: slack-bot-builder"
+    },
+    {
+      "candidate_token": "C-B1AE3821543FC39E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GSAP Plugins",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: gsap-plugins"
+    },
+    {
+      "candidate_token": "C-F04502B1B27A315C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Playwright Expert",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "debugging flaky browser tests"
+    },
+    {
+      "candidate_token": "C-F2D64E980BF9194C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Sprint Retro Facilitator"
+    }
+  ],
+  "reviewer_A_return_sha256": "e7970b5953e2103ad68de12ed5348708726fbb6867f942158c811690b99b9d0e",
+  "reviewer_B_return_sha256": "fcbc5685c1c91e6120b118fbc57eda4bb9533c5ca056ffdcac888bc5f1198a0c",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
