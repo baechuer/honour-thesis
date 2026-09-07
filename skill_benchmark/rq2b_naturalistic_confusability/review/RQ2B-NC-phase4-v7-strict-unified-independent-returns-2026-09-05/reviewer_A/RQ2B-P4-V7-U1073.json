@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1073",
+  "blind_packet_id": "P-E5A1C9BF4924C12639",
+  "batch_input_sha256": "52edc67e8f664658be8ff387996c373f51529674efdf497c3c2f2d5ca0c0caf4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0203530A00FC2076",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Use when performing GO and KEGG enrichment",
+      "rationale": "This performs biological enrichment analysis.",
+      "missing_material_requirement_or_null": "Migration of agent instructions, skills, and environment notes to Codex conventions."
+    },
+    {
+      "candidate_token": "C-21F080B779D4963C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots.",
+      "missing_material_requirement_or_null": "Migration of agent instructions, skills, and environment notes to Codex conventions."
+    },
+    {
+      "candidate_token": "C-338284B22634089E",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Skill Auditor",
+      "rationale": "It audits skills but does not migrate an existing agent setup into Codex conventions.",
+      "missing_material_requirement_or_null": "Migration of instructions, skills, and environment notes without creating or installing skills."
+    },
+    {
+      "candidate_token": "C-43C60137346F1A51",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Skill Creator",
+      "rationale": "This creates skills, which is outside the requested migration boundary.",
+      "missing_material_requirement_or_null": "Migration of instructions, skills, and environment notes without creating or installing skills."
+    },
+    {
+      "candidate_token": "C-9CE9E89640187AD1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives.",
+      "missing_material_requirement_or_null": "Migration of agent instructions, skills, and environment notes to Codex conventions."
+    },
+    {
+      "candidate_token": "C-D5B5A5BF37C2E381",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Suggest Awesome GitHub Copilot Instructions",
+      "rationale": "It addresses instruction files but does not migrate the complete existing setup to Codex conventions.",
+      "missing_material_requirement_or_null": "Migration of skills and environment notes alongside local instructions."
+    },
+    {
+      "candidate_token": "C-DE59A80FB8B84CA8",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Skill Sync",
+      "rationale": "It is directly concerned with synchronizing skill setups across agent conventions.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-DFDA16B309060905",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Database Migration",
+      "rationale": "This performs schema migrations.",
+      "missing_material_requirement_or_null": "Migration of agent instructions, skills, and environment notes to Codex conventions."
+    }
+  ],
+  "reviewer_output_sha256": "1857c44d47b6bfb1aa6a787ee8c712d7ca7f31c2f5f9a20c6b7ccaca8e4e7362"
+}
