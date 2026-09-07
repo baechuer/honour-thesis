@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0448",
+  "blind_packet_id": "P-A6DB81CD9729564B87",
+  "batch_input_sha256": "fadd341a61aaa359b44b13f4fe5b1b5b965b2b0a9fc55cdb8551488f5b32f068",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2A4D6B358A739703",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Service Mesh Observability",
+      "rationale": "Covers metrics and observability patterns, but not infrastructure-as-code for an external service to assume a cloud read role, inventory resources or collect security posture.",
+      "missing_material_requirement_or_null": "Create the external-identifier-protected cross-account integration role, published read permissions and verification checklist without log forwarding."
+    },
+    {
+      "candidate_token": "C-2C68415F28800D15",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "Performs biological GO and KEGG enrichment analysis, not cloud observability integration.",
+      "missing_material_requirement_or_null": "Provide cloud integration infrastructure with a protected cross-account read role and observability verification."
+    },
+    {
+      "candidate_token": "C-9D1FF95B45207C28",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates sprint retrospectives and does not configure cloud observability.",
+      "missing_material_requirement_or_null": "Implement the requested cloud-account observability integration and verification checklist."
+    },
+    {
+      "candidate_token": "C-A70D42F3DE28A1DA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Datadog AWS Integration",
+      "rationale": "Directly creates the Datadog AWS cross-account IAM read role with an external ID, published permissions and Terraform verification for metrics, resource inventory and CSPM, while excluding log forwarding and long-lived credentials.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-B558591EE62BADC1",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Datadog Azure Integration",
+      "rationale": "Implements an analogous Terraform observability integration without credentials or log forwarding, but uses Azure Entra identities and subscriptions rather than the requested AWS-style cross-account role and external identifier.",
+      "missing_material_requirement_or_null": "Implement the requested cloud account cross-account read role with an external identifier and published read permissions."
+    },
+    {
+      "candidate_token": "C-C8ED5EA70BC1B9DD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Porter — PaaS on Your Own Cloud",
+      "rationale": "Deploys applications to managed Kubernetes and does not configure a cross-account external observability integration.",
+      "missing_material_requirement_or_null": "Create the protected observability read role, permissions and verification checklist."
+    },
+    {
+      "candidate_token": "C-DC4F94114FC727F9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Cloudflare Deploy",
+      "rationale": "Deploys workloads to Cloudflare rather than connecting an account to an external observability service with a cloud read role.",
+      "missing_material_requirement_or_null": "Provision the cross-account observability integration and verify metrics, inventory and security findings."
+    },
+    {
+      "candidate_token": "C-F6352D5DB441B911",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Datadog GCP Integration",
+      "rationale": "Implements an analogous Datadog Terraform integration without service-account keys or log forwarding, but relies on GCP service-account impersonation rather than the requested AWS-style cross-account role and external identifier.",
+      "missing_material_requirement_or_null": "Implement the requested cloud account external-identifier-protected cross-account read role and permissions."
+    }
+  ],
+  "reviewer_output_sha256": "256b9f9ec64f26048e2f4404b25e40cc7324f420ad8672beee2cf3beb6bc9a99"
+}

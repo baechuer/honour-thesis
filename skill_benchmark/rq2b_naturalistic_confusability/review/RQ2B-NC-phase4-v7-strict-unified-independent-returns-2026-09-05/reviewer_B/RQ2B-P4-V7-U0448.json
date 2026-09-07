@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0448",
+  "blind_packet_id": "P-A6DB81CD9729564B87",
+  "batch_input_sha256": "fadd341a61aaa359b44b13f4fe5b1b5b965b2b0a9fc55cdb8551488f5b32f068",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2A4D6B358A739703",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Service Mesh Observability",
+      "rationale": "The skill covers observability inside Istio or Linkerd service meshes; it does not create a cloud-to-external-service cross-account read integration or the requested IAM protections.",
+      "missing_material_requirement_or_null": "Terraform for a cloud-account observability integration with an external-ID-protected read role and published permissions."
+    },
+    {
+      "candidate_token": "C-2C68415F28800D15",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "This is a gene-ontology and pathway-enrichment analysis skill, unrelated to infrastructure-as-code or cloud observability integration.",
+      "missing_material_requirement_or_null": "Cloud integration Terraform and a security-conscious verification checklist."
+    },
+    {
+      "candidate_token": "C-9D1FF95B45207C28",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The skill facilitates agile retrospectives and has no cloud IAM or Terraform integration capability.",
+      "missing_material_requirement_or_null": "Cloud observability integration infrastructure-as-code."
+    },
+    {
+      "candidate_token": "C-A70D42F3DE28A1DA",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Datadog AWS Integration",
+      "rationale": "It expressly provisions the Terraform-based AWS-to-Datadog integration requested: an externally identified cross-account assumed role, published read permissions, metrics, resource inventory, security-posture collection, no long-lived credentials, and no log forwarding.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-B558591EE62BADC1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Datadog Azure Integration",
+      "rationale": "This integration is for Azure and uses an Entra application and service principal rather than the required cross-account read role protected by an external identifier.",
+      "missing_material_requirement_or_null": "The requested cross-account role and external-identifier implementation."
+    },
+    {
+      "candidate_token": "C-C8ED5EA70BC1B9DD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Porter — PaaS on Your Own Cloud",
+      "rationale": "The skill deploys applications through the Porter PaaS and does not configure an external observability integration or its least-privilege cross-account access.",
+      "missing_material_requirement_or_null": "Terraform-based external observability integration with the required IAM role and verification."
+    },
+    {
+      "candidate_token": "C-DC4F94114FC727F9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Cloudflare Deploy",
+      "rationale": "The skill deploys workloads and infrastructure on Cloudflare, rather than connecting a cloud account to an external observability service with the stipulated IAM pattern.",
+      "missing_material_requirement_or_null": "Cloud-account observability integration Terraform with external-ID-protected read access."
+    },
+    {
+      "candidate_token": "C-F6352D5DB441B911",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Datadog GCP Integration",
+      "rationale": "This is a GCP-specific Datadog integration based on service-account impersonation, not the requested cross-account read role and external-identifier mechanism.",
+      "missing_material_requirement_or_null": "The requested cross-account role and external-identifier implementation."
+    }
+  ],
+  "reviewer_output_sha256": "77736c7e5f80b04f88139d3aa53e766efb26ced2e8dd8915b1a13888fa0dbbcc"
+}

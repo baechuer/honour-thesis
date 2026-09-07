@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0470",
+  "blind_packet_id": "P-3E15FAAA6C808A0333",
+  "batch_input_sha256": "044c595b7cc2b6fdb9b397634d906841652319198944e7e8126506a87c8e6fba",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-00C70DDDA66CE4DC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Receiving Thermo Review",
+      "rationale": "The skill consumes structural code-review findings and does not analyse scanned document pages or reconstruct their reading sequence.",
+      "missing_material_requirement_or_null": "Document-layout region detection, structural-role classification, and reading-order output."
+    },
+    {
+      "candidate_token": "C-17E655517D938BFF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Mines documentation, never screenshots.",
+      "rationale": "This is a research workflow for documented visual and interaction conventions, explicitly not an image-based page-layout analysis procedure.",
+      "missing_material_requirement_or_null": "Analysis of the scanned page's regions, structural roles, geometry, and reading order."
+    },
+    {
+      "candidate_token": "C-3715B44D3DFA7691",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UX Heuristics Framework",
+      "rationale": "The skill evaluates interface usability with heuristic criteria; it neither detects document regions nor determines reading order.",
+      "missing_material_requirement_or_null": "Scanned-document layout analysis with structural-role labels and reading order."
+    },
+    {
+      "candidate_token": "C-60F52F9B954B779B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Tech Debt Prioritizer",
+      "rationale": "The source prioritises software technical debt and has no document-image processing capability.",
+      "missing_material_requirement_or_null": "Scanned-page region detection, role classification, and reading-sequence reconstruction."
+    },
+    {
+      "candidate_token": "C-62B4B84363BD7220",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Text Layout Reconstruction",
+      "rationale": "It extracts OCR text with bounding boxes and can sort or reconstruct basic positional text layout, but it does not classify all page regions into structural roles or produce a robust document reading-order analysis for non-prose elements.",
+      "missing_material_requirement_or_null": "Structural-region classification and complete geometry-aware reading-order output."
+    },
+    {
+      "candidate_token": "C-81B067201D641119",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Track Buying Signals & Trigger Events",
+      "rationale": "The skill ranks sales accounts by commercial signals, not document regions or reading order.",
+      "missing_material_requirement_or_null": "Scanned-document layout analysis with structural-role labels and reading order."
+    },
+    {
+      "candidate_token": "C-B3D4135286DB0E2D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# File Organization",
+      "rationale": "This is a repository-structure refactoring skill and does not process page images or infer document layout.",
+      "missing_material_requirement_or_null": "Page-region geometry, role classification, and reading-sequence extraction."
+    },
+    {
+      "candidate_token": "C-D441267854D4E1F8",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Layout Analyzer Skill",
+      "rationale": "It explicitly detects text blocks, tables, figures, headings, and other page regions with bounding boxes, classifies their roles, and determines reading order for complex document pages.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "289dcafb7741b56927b80ee09ebd9770c1ff8fa8f33c961ae46a3d4ea47fff66"
+}

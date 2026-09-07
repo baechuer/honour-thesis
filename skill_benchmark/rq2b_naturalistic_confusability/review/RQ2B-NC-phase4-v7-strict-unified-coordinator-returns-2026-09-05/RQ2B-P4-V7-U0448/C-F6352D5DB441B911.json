@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-A6DB81CD9729564B87",
+  "candidate_token": "C-F6352D5DB441B911",
+  "reviewer_a_return_sha256": "0f5259f1d92ab6abd708cc2993f380c4150a9fd952c4fa3ec8efc1c0f73d6fbf",
+  "reviewer_b_return_sha256": "2986848f766acae41442ff3cb422f4e5cffbb7bcdf4d06f41483959165372b6b",
+  "fresh_source_render_sha256": "504dfbbc9c13df8f6b0221f9eb67b442213c857b9b8efd54908d15275939dc0c",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "source_anchor": "# Datadog GCP Integration",
+  "rationale": "The source uses GCP service-account impersonation, not the requested external-ID-protected cross-account read role and permissions.",
+  "coordinator_output_sha256": "19e0c873fcf4c474e9f798ac1685c2c402995b4fa92b6279380c8977b2040ebd"
+}
