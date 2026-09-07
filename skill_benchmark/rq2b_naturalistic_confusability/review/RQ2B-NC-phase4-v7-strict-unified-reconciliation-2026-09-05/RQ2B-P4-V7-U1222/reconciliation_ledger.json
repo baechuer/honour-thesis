@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1222",
+  "blind_packet_id": "P-6749DCAEFB5A256D1C",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-16672F24E537FBB9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### OCR a Document",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "OCR a Document"
+    },
+    {
+      "candidate_token": "C-3CDDE6112E93BE66",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Report To PDF",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "report-to-pdf"
+    },
+    {
+      "candidate_token": "C-49D8841222511BC6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Convert PDF to Markdown",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "MarkItDown does not perform OCR"
+    },
+    {
+      "candidate_token": "C-574F589979BA5878",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Convert Word to Markdown",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "convert-word-to-md"
+    },
+    {
+      "candidate_token": "C-78E1C9CB0DFBC873",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Run GSEA on a ranked gene list",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "gsea"
+    },
+    {
+      "candidate_token": "C-795737CA86BD6F37",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Convert Excel to Markdown",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "convert-excel-to-md"
+    },
+    {
+      "candidate_token": "C-B2CD025611DFF3F3",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# UX Heuristics Framework",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "ux-heuristics"
+    },
+    {
+      "candidate_token": "C-B493CB097B0AC2C4",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Decision Making",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Decision Making"
+    }
+  ],
+  "reviewer_A_return_sha256": "2d5b0490d858db6182803dc58e33f5286ba84602b68289da5361cdb14686ce0a",
+  "reviewer_B_return_sha256": "743b3c08e69383820819fccef0707cf2fe93dafdf027ab73f3d75e713e03e666",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}
