@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1182",
+  "blind_packet_id": "P-F77A1F8F8D0C014E3D",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-29D7129455BEB17F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# TRL Training on Hugging Face Jobs",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Dataset Validation"
+    },
+    {
+      "candidate_token": "C-4249F55037E36EEF",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Unsloth Skill",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Unsloth Skill"
+    },
+    {
+      "candidate_token": "C-5C39254C730A8B57",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When To Use",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "gokegg-analysis"
+    },
+    {
+      "candidate_token": "C-673EF0AE32B7D88C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Trackio - Experiment Tracking for ML Training",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "huggingface-trackio"
+    },
+    {
+      "candidate_token": "C-6A53920BF89928FD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Causal Inference",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Causal Inference"
+    },
+    {
+      "candidate_token": "C-6F29F2D70EF08B71",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# LLM Fine-Tuning Infrastructure",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Launch 4-GPU DeepSpeed training"
+    },
+    {
+      "candidate_token": "C-862D678DF87A73C9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Complete MLOps Platform Deployment On AWS From Scratch",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "complete-mlops-platform-deployment-on-aws-from-scratch"
+    },
+    {
+      "candidate_token": "C-A505B2F850043B13",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# LoRA & QLoRA Recipes",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "LoRA & QLoRA Recipes"
+    }
+  ],
+  "reviewer_A_return_sha256": "959974bdab1b32f7707ea787ae18ca4a0c20b85526ad23087b33a3cdcc1a940d",
+  "reviewer_B_return_sha256": "23940922ac320c65bdf84cd69c95b347869642df3eb30f533d86928efdab2d5a",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
