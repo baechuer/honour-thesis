@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0961",
+  "blind_packet_id": "P-C8A344435B9F8015EC",
+  "batch_input_sha256": "5edcb68a4c8be719957226e6a39e8ddef421b8228179d269a73fe6153bf8fa2e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token": "C-211C1005CFA74CAC", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "Skills", "rationale": "It provides credential and secret-management safeguards that inform protection against secret exposure.", "missing_material_requirement_or_null": "Git hook and configuration guardrails for push, reset, and secret commits are required."},
+    {"candidate_token": "C-3DFABF97EC44BF01", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "Environment Manager", "rationale": "It can audit hardcoded and exposed secrets and establish safe secret-handling practices.", "missing_material_requirement_or_null": "Git hook and configuration controls to block pushes, hard resets, and secret commits are required."},
+    {"candidate_token": "C-3E2D5EE2F134F57B", "adequacy": "INADEQUATE", "source_anchor": "Scope", "rationale": "This skill performs gene-set enrichment analysis, unrelated to repository safety controls.", "missing_material_requirement_or_null": "It lacks Git guardrail and secret-commit prevention capabilities."},
+    {"candidate_token": "C-4BFFACE121C39FC5", "adequacy": "INADEQUATE", "source_anchor": "Porter — PaaS on Your Own Cloud", "rationale": "This skill concerns application deployment on Kubernetes, not repository guardrails.", "missing_material_requirement_or_null": "It lacks Git hook, configuration, and repository-safety guidance."},
+    {"candidate_token": "C-61D71755ECE5C086", "adequacy": "INADEQUATE", "source_anchor": "Spring Boot Engineer", "rationale": "This skill develops Spring Boot applications rather than repository safety controls.", "missing_material_requirement_or_null": "It lacks Git hook, configuration, and repository-safety guidance."},
+    {"candidate_token": "C-667F654DE90E1002", "adequacy": "INADEQUATE", "source_anchor": "User Flow Mapper", "rationale": "This skill maps product user flows and does not implement Git guardrails.", "missing_material_requirement_or_null": "It lacks Git hook, configuration, and repository-safety guidance."},
+    {"candidate_token": "C-BB249D7915A36A8D", "adequacy": "INADEQUATE", "source_anchor": "Design a Multi-Channel Outreach Sequence", "rationale": "This skill designs sales outreach cadences, unrelated to repository safety.", "missing_material_requirement_or_null": "It lacks Git hook, configuration, and repository-safety guidance."},
+    {"candidate_token": "C-D331173603E15339", "adequacy": "FULLY_ACCEPTABLE", "source_anchor": "Skills", "rationale": "It directly covers version-control security, Git hooks, secret-commit prevention, repository policy controls, safety and reversibility, and validation of repository operations.", "missing_material_requirement_or_null": null}
+  ],
+  "reviewer_output_sha256": "8cd1a996782a0ec4887c68ee217dc3371ea16b2a6c7219d11eadca038da36d65"
+}

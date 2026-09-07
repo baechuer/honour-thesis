@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1067",
+  "blind_packet_id": "P-4B7D3DC09FEEE07FF9",
+  "batch_input_sha256": "a99975efc7360df5e65db95190fb27893ca163e7060840cea142d3f108715a78",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0C4D4732143CD68F","adequacy":"INADEQUATE","source_anchor":"Operate LM Studio's `lms` CLI","rationale":"Local model-server operations do not perform an authorized runtime security test.","missing_material_requirement_or_null":"Domain verification endpoint-scoped pentest and findings workflow"},
+    {"candidate_token":"C-296E7FCCE483D2B9","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Pull AWS Security Agent findings","rationale":"Provides secure handling triage and remediation of pentest findings, but does not create and run the requested test.","missing_material_requirement_or_null":"Target-domain registration and endpoint-scoped active pentest execution"},
+    {"candidate_token":"C-326B22E720523329","adequacy":"INADEQUATE","source_anchor":"generating synthetic CT volumes and masks","rationale":"Medical-image synthesis is unrelated to active web security testing.","missing_material_requirement_or_null":"Authorized endpoint-scoped pentest workflow"},
+    {"candidate_token":"C-7A7B2C89427567D4","adequacy":"INADEQUATE","source_anchor":"Run an AWS Security Agent scan on the workspace","rationale":"This is a source-workspace scan rather than the requested live endpoint test.","missing_material_requirement_or_null":"Target-domain verification and live endpoint pentest execution"},
+    {"candidate_token":"C-8430A0DFEF6280C0","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Register target domain","rationale":"Explicitly verifies the target domain, tests supplied endpoints, and reports verified findings by severity with endpoint and remediation details.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-BD3E3B3B54A19379","adequacy":"INADEQUATE","source_anchor":"user-research-prior-art-survey","rationale":"A prior-art survey is not a live authorized security test.","missing_material_requirement_or_null":"Target-domain verification endpoint testing and findings reporting"},
+    {"candidate_token":"C-D5B2429318F7E207","adequacy":"INADEQUATE","source_anchor":"pattern-detection","rationale":"Pattern detection does not establish an authorized endpoint-scoped penetration-test workflow.","missing_material_requirement_or_null":"Live pentest execution and verified findings workflow"},
+    {"candidate_token":"C-E968D3E8CF925B58","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Prioritizes vulnerability findings","rationale":"It supports severity prioritization and remediation planning after findings exist, but cannot run the requested test.","missing_material_requirement_or_null":"Target-domain verification and endpoint-scoped active pentest execution"}
+  ],
+  "reviewer_output_sha256": "PENDING"
+}

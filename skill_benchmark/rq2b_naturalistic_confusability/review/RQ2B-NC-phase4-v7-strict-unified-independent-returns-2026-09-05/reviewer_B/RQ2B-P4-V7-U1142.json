@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1142",
+  "blind_packet_id": "P-948D90CF16C451DF34",
+  "batch_input_sha256": "d5cec4161519861e94e67cb6009a62760c1705cf5defe9b59e537bb6c8dab940",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-20CE8D0EB27B1772",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Power BI Consumption — FabricIQ Skill",
+      "rationale": "It consumes Power BI models but does not author the requested model change.",
+      "missing_material_requirement_or_null": "Semantic-model measure authoring, validation, description, and issue review."
+    },
+    {
+      "candidate_token": "C-42C926BA124EB1AA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Repo Scaffold",
+      "rationale": "This scaffolds repositories.",
+      "missing_material_requirement_or_null": "Semantic-model measure authoring, validation, description, and issue review."
+    },
+    {
+      "candidate_token": "C-564BE693F79DEE65",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Expansion Revenue",
+      "rationale": "This concerns revenue growth.",
+      "missing_material_requirement_or_null": "Semantic-model measure authoring, validation, description, and issue review."
+    },
+    {
+      "candidate_token": "C-8C37FC8A0CA1753F",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Power BI Semantic Modeling",
+      "rationale": "It directly models Power BI semantic measures and dependencies.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A2B3735D651BA502",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "This surveys security literature.",
+      "missing_material_requirement_or_null": "Semantic-model measure authoring, validation, description, and issue review."
+    },
+    {
+      "candidate_token": "C-A874AD64DF4C863A",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Power BI Semantic Model Authoring — CLI Skill",
+      "rationale": "It directly authors and validates semantic-model changes.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-CE1DF8CABB1073D0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# FreeCAD Scripts",
+      "rationale": "This writes CAD scripts.",
+      "missing_material_requirement_or_null": "Semantic-model measure authoring, validation, description, and issue review."
+    },
+    {
+      "candidate_token": "C-D231C5C77333B8EF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Implement Design",
+      "rationale": "This implements Figma design.",
+      "missing_material_requirement_or_null": "Semantic-model measure authoring, validation, description, and issue review."
+    }
+  ],
+  "reviewer_output_sha256": "471727c0ec5479dbd0da91bffe7cb458ac075fd618891dbb812c931ffe19f463"
+}

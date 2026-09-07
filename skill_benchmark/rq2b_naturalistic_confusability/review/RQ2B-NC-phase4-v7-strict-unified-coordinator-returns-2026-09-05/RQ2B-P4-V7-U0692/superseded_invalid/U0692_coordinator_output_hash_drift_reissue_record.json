@@ -1,0 +1,15 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0692",
+  "preserved_returns": [
+    {
+      "candidate_token": "C-C124A0A80E333863",
+      "original_canonical_path": "C-C124A0A80E333863.json",
+      "preserved_path": "superseded_invalid/C-C124A0A80E333863_df0f0e498c0bbcbc.json",
+      "sha256": "df0f0e498c0bbcbcd484f066d3cc0c36ffe443b3041210dcf013eb976714cf4f"
+    }
+  ],
+  "reason": "frozen validator rejected canonical coordinator return with V7 coordinator output-hash drift",
+  "required_next_action": "independent traceable coordinator reissue against the unchanged sealed binding envelope; do not overwrite this preservation record",
+  "schema": "rq2b_nc_v7_invalid_coordinator_return_preservation_v1",
+  "validation_status": "INVALID_OUTPUT_HASH_DRIFT"
+}

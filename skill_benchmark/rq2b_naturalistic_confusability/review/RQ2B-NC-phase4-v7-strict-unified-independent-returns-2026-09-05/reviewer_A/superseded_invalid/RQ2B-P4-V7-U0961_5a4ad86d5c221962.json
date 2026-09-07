@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0961",
+  "blind_packet_id": "P-C8A344435B9F8015EC",
+  "batch_input_sha256": "5edcb68a4c8be719957226e6a39e8ddef421b8228179d269a73fe6153bf8fa2e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-211C1005CFA74CAC","adequacy":"INADEQUATE","source_anchor":"A unified, end-to-end authentication skill","rationale":"Addresses application identity and authentication rather than repository-operation guardrails.","missing_material_requirement_or_null":"Git hook and repository-policy controls for push reset and secret commits"},
+    {"candidate_token":"C-3DFABF97EC44BF01","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Manage environment variables and secrets","rationale":"Covers secret auditing and rotation, but not the requested Git hooks or controls blocking destructive operations.","missing_material_requirement_or_null":"Git hook and repository-policy controls for push and reset operations"},
+    {"candidate_token":"C-3E2D5EE2F134F57B","adequacy":"INADEQUATE","source_anchor":"Run GSEA on a ranked gene list","rationale":"Gene-set enrichment analysis does not address repository governance.","missing_material_requirement_or_null":"Repository guardrail configuration and verification"},
+    {"candidate_token":"C-4BFFACE121C39FC5","adequacy":"INADEQUATE","source_anchor":"Expert guidance for Porter","rationale":"Deployment-platform guidance is not a workflow for enforcing Git operation or commit guardrails.","missing_material_requirement_or_null":"Git hook and repository-policy controls"},
+    {"candidate_token":"C-61D71755ECE5C086","adequacy":"INADEQUATE","source_anchor":"Generates Spring Boot 3.x configurations","rationale":"Application engineering guidance does not establish repository safeguards.","missing_material_requirement_or_null":"Repository guardrail configuration and verification"},
+    {"candidate_token":"C-667F654DE90E1002","adequacy":"INADEQUATE","source_anchor":"Maps a feature's complete user flow","rationale":"User-flow mapping does not configure Git safeguards.","missing_material_requirement_or_null":"Git hook and repository-policy controls"},
+    {"candidate_token":"C-BB249D7915A36A8D","adequacy":"INADEQUATE","source_anchor":"design the cadence/sequence structure","rationale":"Sales-outreach sequencing is unrelated to repository-operation protections.","missing_material_requirement_or_null":"Repository guardrail configuration and verification"},
+    {"candidate_token":"C-D331173603E15339","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Access Control, Security, and Repository Governance","rationale":"Directly covers Git hooks plus security practices including preventing secret commits, within a repository-governance workflow.","missing_material_requirement_or_null":null}
+  ],
+  "reviewer_output_sha256": "PENDING"
+}

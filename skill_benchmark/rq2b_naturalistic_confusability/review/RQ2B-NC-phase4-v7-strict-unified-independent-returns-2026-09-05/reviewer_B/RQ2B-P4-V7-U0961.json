@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0961",
+  "blind_packet_id": "P-C8A344435B9F8015EC",
+  "batch_input_sha256": "5edcb68a4c8be719957226e6a39e8ddef421b8228179d269a73fe6153bf8fa2e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-211C1005CFA74CAC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Skills",
+      "rationale": "This concerns authentication.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-3DFABF97EC44BF01",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Environment Manager",
+      "rationale": "It manages environment configuration but not Git guardrails.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-3E2D5EE2F134F57B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run GSEA on a ranked gene list",
+      "rationale": "This performs biological analysis.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-4BFFACE121C39FC5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Porter — PaaS on Your Own Cloud",
+      "rationale": "This deploys applications.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-61D71755ECE5C086",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Spring Boot Engineer",
+      "rationale": "This builds Spring applications.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-667F654DE90E1002",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# User Flow Mapper",
+      "rationale": "This maps user flows.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-BB249D7915A36A8D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Design a Multi-Channel Outreach Sequence",
+      "rationale": "This designs outreach.",
+      "missing_material_requirement_or_null": "Repository hooks and configuration to guard dangerous Git operations and secrets."
+    },
+    {
+      "candidate_token": "C-D331173603E15339",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Skills",
+      "rationale": "It comprehensively handles version-control policies, hooks, commits, and repository safeguards.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "6e7733ab3e7400643d041f1d42e5fca843b7e15c419ab5b34bd901450df595ce"
+}
