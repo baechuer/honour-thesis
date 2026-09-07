@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1196",
+  "blind_packet_id": "P-7641C664AF9FE4D69C",
+  "batch_input_sha256": "70f4ed8bab11e9b52b3e2226d720f07493debed35a610503c622bdd529cc437e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1062005F7597163D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Overview",
+      "rationale": "This updates secrets.",
+      "missing_material_requirement_or_null": "Structured field extraction with evidence snippets."
+    },
+    {
+      "candidate_token": "C-6E4C1586184C1D6D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Analyze inline code (escape $ as \\$)",
+      "rationale": "This handles Svelte code.",
+      "missing_material_requirement_or_null": "Structured field extraction with evidence snippets."
+    },
+    {
+      "candidate_token": "C-833BEAC4C75EE673",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives.",
+      "missing_material_requirement_or_null": "Structured field extraction with evidence snippets."
+    },
+    {
+      "candidate_token": "C-88C37F893ADC168C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "This performs biological analysis.",
+      "missing_material_requirement_or_null": "Structured field extraction with evidence snippets."
+    },
+    {
+      "candidate_token": "C-A0D663747D2A9359",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots.",
+      "missing_material_requirement_or_null": "Structured field extraction with evidence snippets."
+    },
+    {
+      "candidate_token": "C-B09B112ED1CD13E7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Overview",
+      "rationale": "This creates secrets.",
+      "missing_material_requirement_or_null": "Structured field extraction with evidence snippets."
+    },
+    {
+      "candidate_token": "C-D0AD05BBD0A06298",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Clinical Summary",
+      "rationale": "It structures source information but produces clinical narrative rather than a general field table.",
+      "missing_material_requirement_or_null": "General field-value table with source evidence snippets."
+    },
+    {
+      "candidate_token": "C-E132DC91189DABDC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Analyzing Network Traffic",
+      "rationale": "It extracts evidence from a specialized source but not a general structured field table.",
+      "missing_material_requirement_or_null": "General field-value table with source evidence snippets."
+    }
+  ],
+  "reviewer_output_sha256": "d48627a9c805be0f7cf93afc50b90dacd1ebbeebb9ac119a7ffb9272763bae57"
+}

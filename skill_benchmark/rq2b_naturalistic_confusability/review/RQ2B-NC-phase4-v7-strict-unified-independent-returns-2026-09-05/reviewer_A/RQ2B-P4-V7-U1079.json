@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1079",
+  "blind_packet_id": "P-51C1AD160E3136B050",
+  "batch_input_sha256": "968018989cca2ca357ae27c557f0ef8537eb5cb69384e792f2bdc93d51789081",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-2034E8AD2DE696A8","adequacy":"FULLY_ACCEPTABLE","source_anchor":"User-Facing Changelog","rationale":"It directly translates raw engineering changes into benefit-first, user-facing release notes with improved and fixed categories and symptom-based bug wording.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-2C3D3ABF156AEC5B","adequacy":"INADEQUATE","source_anchor":"Slack Bot Builder","rationale":"It builds Slack apps rather than writing release notes.","missing_material_requirement_or_null":"A user-facing release-notes writing workflow is required."},
+    {"candidate_token":"C-34E5023E3779216F","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Changelog Generator","rationale":"It can rewrite commit history into user-facing CHANGELOG entries, but it is a repository and semantic-versioning workflow rather than a direct user-facing release-note response from supplied changes.","missing_material_requirement_or_null":"A direct benefit-first user-facing release-notes writing workflow is required."},
+    {"candidate_token":"C-52A9A2FD61AE793C","adequacy":"INADEQUATE","source_anchor":"visual-prior-art-survey","rationale":"It surveys documented visual interaction conventions rather than writing release notes.","missing_material_requirement_or_null":"A user-facing release-notes writing workflow is required."},
+    {"candidate_token":"C-6783BB600BF804C8","adequacy":"INADEQUATE","source_anchor":"Rudder CLI Development Workflow","rationale":"It covers CLI development workflow rather than user-facing release-note writing.","missing_material_requirement_or_null":"A user-facing release-notes writing workflow is required."},
+    {"candidate_token":"C-97C1F5EC3AEA49FA","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"It facilitates sprint retrospectives rather than writing release notes.","missing_material_requirement_or_null":"A user-facing release-notes writing workflow is required."},
+    {"candidate_token":"C-EBC50B94C03417B1","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Write release notes","rationale":"It provides detailed tldraw SDK release-documentation guidance, but its repository-specific process and scope do not directly fit a general user-facing update announcement.","missing_material_requirement_or_null":"A general-purpose benefit-first user-facing release-notes workflow is required."},
+    {"candidate_token":"C-FFAB0C0F8B290ECD","adequacy":"INADEQUATE","source_anchor":"Secrets Hygiene","rationale":"It handles leaked-secret response and prevention rather than release-note writing.","missing_material_requirement_or_null":"A user-facing release-notes writing workflow is required."}
+  ],
+  "reviewer_output_sha256": "6592beda90765ff0c8aa451a97392f0e9b7e0e4b3821160f7622c9d95874cf9d"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1051",
+  "blind_packet_id": "P-45324F0F5739975B2E",
+  "batch_input_sha256": "132354ac6da3b76fbce9b9127943e5a396e08f7bee958dec572f3ef8fa310fae",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-339C1A15B08371D5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "This surveys UI conventions.",
+      "missing_material_requirement_or_null": "Parallel incident command, evidence cards, approved updates, timeline, and mitigation workflow."
+    },
+    {
+      "candidate_token": "C-7D2F7001ECF2A541",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Incident commander role",
+      "rationale": "It covers overall incident leadership but not the complete parallel-agent delegation and passive-recording protocol.",
+      "missing_material_requirement_or_null": "Parallel investigator cards, approved-status drafting, and passive timeline workflow."
+    },
+    {
+      "candidate_token": "C-8FFF131DC14C227E",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Incident response team of agents",
+      "rationale": "It directly supports delegated parallel incident investigation and coordinated response roles.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A2577F1BACBCFA1B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# War room protocol",
+      "rationale": "It structures a war room but does not provide the complete agent role and evidence-card workflow.",
+      "missing_material_requirement_or_null": "Parallel investigator cards, approved-status drafting, and passive timeline workflow."
+    },
+    {
+      "candidate_token": "C-D8463EB9031D9381",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Status Page Update",
+      "rationale": "It drafts status updates but does not coordinate the outage response.",
+      "missing_material_requirement_or_null": "Incident lead, parallel investigation, timeline, mitigation, and resolution workflow."
+    },
+    {
+      "candidate_token": "C-E6B50F82CB4FEAC8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Characterization Test Writer",
+      "rationale": "This writes tests.",
+      "missing_material_requirement_or_null": "Parallel incident command and response workflow."
+    },
+    {
+      "candidate_token": "C-EC887109CD793491",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives.",
+      "missing_material_requirement_or_null": "Parallel incident command and response workflow."
+    },
+    {
+      "candidate_token": "C-F22C3ED928D6914F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# agentation",
+      "rationale": "It concerns agents but does not provide a dedicated incident-response structure.",
+      "missing_material_requirement_or_null": "Incident command roles, evidence cards, mitigation, and resolution workflow."
+    }
+  ],
+  "reviewer_output_sha256": "12e338a995318b5ea094cde943f98df337395f1931fd2ec46642f7f84eae6cda"
+}

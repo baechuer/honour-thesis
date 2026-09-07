@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1051",
+  "blind_packet_id": "P-45324F0F5739975B2E",
+  "batch_input_sha256": "132354ac6da3b76fbce9b9127943e5a396e08f7bee958dec572f3ef8fa310fae",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-339C1A15B08371D5","adequacy":"INADEQUATE","source_anchor":"# `visual-prior-art-survey` — SKILL.md","rationale":"This skill surveys visual-design precedents rather than coordinating an active outage.","missing_material_requirement_or_null":"An incident command structure with parallel investigation, human-gated communication, and timeline recording."},
+    {"candidate_token":"C-7D2F7001ECF2A541","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Incident commander role","rationale":"It defines a single incident commander, comms lead, scribe, mitigation selection, and resolution calls, but not the required parallel investigator-card workflow.","missing_material_requirement_or_null":"Parallel investigators with separate hypotheses and symptom, hypothesis, test, and result cards."},
+    {"candidate_token":"C-8FFF131DC14C227E","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Incident response team of agents","rationale":"It directly specifies one commander, parallel disjoint investigators with required cards, human-approved status drafts, a passive timestamped scribe, safe mitigation, and written resolution criteria.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A2577F1BACBCFA1B","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# War room protocol","rationale":"It provides command, communications, a timestamped log, mitigation focus, and stand-down criteria, but lacks the specified parallel investigator-card process and human approval gate.","missing_material_requirement_or_null":"Parallel hypothesis investigators returning structured cards and human approval before external status publication."},
+    {"candidate_token":"C-D8463EB9031D9381","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Status Page Update","rationale":"It supplies customer-facing incident update cadence and templates, but does not coordinate the required response-team roles or investigation workflow.","missing_material_requirement_or_null":"A single-lead, parallel-investigator, passive-recorder incident command process."},
+    {"candidate_token":"C-E6B50F82CB4FEAC8","adequacy":"INADEQUATE","source_anchor":"# Characterization Test Writer","rationale":"This skill writes regression tests rather than managing an active payment outage.","missing_material_requirement_or_null":"An active incident command, investigation, communication, and mitigation workflow."},
+    {"candidate_token":"C-EC887109CD793491","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This skill facilitates post-sprint reflection rather than live incident response.","missing_material_requirement_or_null":"An active outage command structure with parallel investigations and mitigation decisions."},
+    {"candidate_token":"C-F22C3ED928D6914F","adequacy":"INADEQUATE","source_anchor":"# agentation","rationale":"This skill supports browser-based feedback tooling rather than incident response coordination.","missing_material_requirement_or_null":"An outage command and investigation workflow with communications and a timeline."}
+  ],
+  "reviewer_output_sha256": "b80ec9c0d63cbc29cbaf2db466f4d8872a567d9b78f88fa301c772b2089e915f"
+}

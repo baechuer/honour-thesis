@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1079",
+  "blind_packet_id": "P-51C1AD160E3136B050",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-2034E8AD2DE696A8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "User-Facing Changelog",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# User-Facing Changelog"
+    },
+    {
+      "candidate_token": "C-2C3D3ABF156AEC5B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Slack Bot Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "candidate_token": "C-34E5023E3779216F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Changelog Generator",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Changelog Generator"
+    },
+    {
+      "candidate_token": "C-52A9A2FD61AE793C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "visual-prior-art-survey",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# `visual-prior-art-survey` — SKILL.md"
+    },
+    {
+      "candidate_token": "C-6783BB600BF804C8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Rudder CLI Development Workflow",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Rudder CLI Development Workflow"
+    },
+    {
+      "candidate_token": "C-97C1F5EC3AEA49FA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-EBC50B94C03417B1",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Write release notes",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Write release notes"
+    },
+    {
+      "candidate_token": "C-FFAB0C0F8B290ECD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Secrets Hygiene",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "# Secrets Hygiene"
+    }
+  ],
+  "reviewer_A_return_sha256": "d20a78361dae7c4d36e9e38af77db24acde112de2817f5666fb6d2ebbab74f5f",
+  "reviewer_B_return_sha256": "97f1e79c264576b6799231066e6164e30dc692a8b7df3b9560f249064d65c7e3",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

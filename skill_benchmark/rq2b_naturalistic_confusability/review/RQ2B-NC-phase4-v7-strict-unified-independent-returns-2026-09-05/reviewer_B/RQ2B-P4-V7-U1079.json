@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1079",
+  "blind_packet_id": "P-51C1AD160E3136B050",
+  "batch_input_sha256": "968018989cca2ca357ae27c557f0ef8537eb5cb69384e792f2bdc93d51789081",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2034E8AD2DE696A8",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# User-Facing Changelog",
+      "rationale": "It directly writes user-facing update notes.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-2C3D3ABF156AEC5B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots.",
+      "missing_material_requirement_or_null": "User-facing release-note writing."
+    },
+    {
+      "candidate_token": "C-34E5023E3779216F",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Changelog Generator",
+      "rationale": "It generates changelog content for updates.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-52A9A2FD61AE793C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "This surveys UI conventions.",
+      "missing_material_requirement_or_null": "User-facing release-note writing."
+    },
+    {
+      "candidate_token": "C-6783BB600BF804C8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Rudder CLI Development Workflow",
+      "rationale": "This manages Rudder CLI resources.",
+      "missing_material_requirement_or_null": "User-facing release-note writing."
+    },
+    {
+      "candidate_token": "C-97C1F5EC3AEA49FA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives.",
+      "missing_material_requirement_or_null": "User-facing release-note writing."
+    },
+    {
+      "candidate_token": "C-EBC50B94C03417B1",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Write release notes",
+      "rationale": "It directly writes release notes.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-FFAB0C0F8B290ECD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Secrets Hygiene",
+      "rationale": "This manages secrets.",
+      "missing_material_requirement_or_null": "User-facing release-note writing."
+    }
+  ],
+  "reviewer_output_sha256": "65cb3c3ef32e98a093001d9733235dbfb20e18fb00e8cb82fbaaabea295441e3"
+}
