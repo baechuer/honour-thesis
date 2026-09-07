@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1088",
+  "blind_packet_id": "P-3B7FF81E61E6F4F086",
+  "batch_input_sha256": "9461ee9d82b0c3aeffbfe0013651eadbf2c4d0e104e214dfb8bd78b557ce4071",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-28F7600EAEDD1026","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This skill facilitates sprint retrospectives rather than machine-learning environment setup.","missing_material_requirement_or_null":"An ARM64 CUDA training environment plan with installation and compatibility diagnostics."},
+    {"candidate_token":"C-5E046D62F309B785","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Spark Memory & Thermal Ops","rationale":"It supports memory and thermal operations for accelerator training jobs, but assumes a working launch-time environment.","missing_material_requirement_or_null":"Container or package-install guidance for training libraries and CUDA wheel compatibility."},
+    {"candidate_token":"C-6E8F16F21A1A126F","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# System & Environment Setup","rationale":"It provides a reproducible environment-planning framework, but lacks ARM64 CUDA-specific library installation and ABI diagnosis.","missing_material_requirement_or_null":"CUDA-stack-specific installation and wheel or runtime-library compatibility troubleshooting."},
+    {"candidate_token":"C-793564EFF2AB58F5","adequacy":"INADEQUATE","source_anchor":"# Repo Guardrail Hook Installer","rationale":"This skill installs repository guardrail hooks rather than ML training environments.","missing_material_requirement_or_null":"A reproducible ARM64 CUDA training environment with library installation and verification."},
+    {"candidate_token":"C-85C42CF50D1B40DD","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Spark Environment Setup","rationale":"It directly covers choosing containers versus bare pip, installing the named training and inference libraries, diagnosing CUDA ABI failures, and verification on ARM64 CUDA hardware.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-AB78B8DA276812DB","adequacy":"INADEQUATE","source_anchor":"# MarkItDown - File to Markdown Conversion","rationale":"This skill converts files to Markdown rather than configuring ML training software.","missing_material_requirement_or_null":"An ARM64 CUDA environment plan with ML library installation and runtime verification."},
+    {"candidate_token":"C-B6AB86A5F9E01DA3","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Spark Training Gotchas","rationale":"It diagnoses CUDA ABI and container-related training failures, but does not provide the full reproducible library-installation plan.","missing_material_requirement_or_null":"A complete container or package installation plan for the requested training and inference libraries."},
+    {"candidate_token":"C-BE366B1F19BF2A6F","adequacy":"INADEQUATE","source_anchor":"## When To Use","rationale":"This is a gene-ontology analysis workflow, unrelated to machine-learning environment setup.","missing_material_requirement_or_null":"An ARM64 CUDA environment plan with library installation and compatibility verification."}
+  ],
+  "reviewer_output_sha256": "bf71da14276caf90e4b4b990ee7b23d2ccfbffb0eb04b2386e4304e966a84eb6"
+}

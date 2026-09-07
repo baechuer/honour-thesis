@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1216",
+  "blind_packet_id": "P-05A90B46182416B14E",
+  "batch_input_sha256": "6d1dac34799eebd478f66be4167423e39c78d6fb6822927ed4600feadbc7ecbb",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-10293716BD76C0CD","adequacy":"INADEQUATE","source_anchor":"Barba.js","rationale":"It implements web-page transitions, not an iOS declarative list screen.","missing_material_requirement_or_null":"A SwiftUI state-ownership, scoped-invalidation, list-performance, and animation workflow is required."},
+    {"candidate_token":"C-636142BC42890E99","adequacy":"INADEQUATE","source_anchor":"Flutter Widget Architect","rationale":"It is explicitly for Flutter widget trees, not iOS SwiftUI views.","missing_material_requirement_or_null":"A SwiftUI state-ownership, scoped-invalidation, list-performance, and animation workflow is required."},
+    {"candidate_token":"C-65BCE275F6B41415","adequacy":"INADEQUATE","source_anchor":"State Management","rationale":"It chooses ownership patterns for React/fullstack applications and explicitly routes performance work out; it does not address SwiftUI list invalidation or transitions.","missing_material_requirement_or_null":"A SwiftUI-specific state, scrolling, redraw, and transition-refactoring workflow is required."},
+    {"candidate_token":"C-874EB76972810BFC","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"It facilitates sprint retrospectives rather than declarative iOS UI refactoring.","missing_material_requirement_or_null":"A SwiftUI screen-refactoring workflow is required."},
+    {"candidate_token":"C-9152439719501314","adequacy":"INADEQUATE","source_anchor":"Cannibalization Check","rationale":"It checks product-market cannibalization rather than iOS UI state and list behavior.","missing_material_requirement_or_null":"A SwiftUI screen-refactoring workflow is required."},
+    {"candidate_token":"C-B3E7C31D16807CFF","adequacy":"INADEQUATE","source_anchor":"Clicking and Scrolling — Drive the UI Without a Gesture Builder","rationale":"It concerns UI interaction testing rather than SwiftUI state ownership, scoped redraws, list scrolling, and transitions.","missing_material_requirement_or_null":"A SwiftUI screen-refactoring workflow is required."},
+    {"candidate_token":"C-C702B3FF2DC949AE","adequacy":"INADEQUATE","source_anchor":"Jetpack Compose Builder","rationale":"It is explicitly for Android Jetpack Compose rather than iOS SwiftUI.","missing_material_requirement_or_null":"A SwiftUI state-ownership, scoped-invalidation, list-performance, and animation workflow is required."},
+    {"candidate_token":"C-E90541DFE17F9D5E","adequacy":"FULLY_ACCEPTABLE","source_anchor":"SwiftUI Expert","rationale":"It directly covers narrow SwiftUI state ownership, scoped invalidation, stable lazy lists and frame budgets, plus state-driven scoped animations.","missing_material_requirement_or_null":null}
+  ],
+  "reviewer_output_sha256": "69cb76d7dec1d4b2e9e9ff59c8ac8e94c486770c3f5122f797edbbc7fb6e58ae"
+}

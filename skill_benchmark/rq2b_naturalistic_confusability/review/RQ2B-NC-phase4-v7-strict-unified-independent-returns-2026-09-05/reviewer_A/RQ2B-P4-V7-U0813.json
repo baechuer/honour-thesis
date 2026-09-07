@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0813",
+  "blind_packet_id": "P-90A492DB0724B0032E",
+  "batch_input_sha256": "b86bba35063bd6f113e4c1270974f22f930e8dcb1ef5047179c129a557f4708b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-28B4BC240CAEFD6B","adequacy":"INADEQUATE","source_anchor":"# Slack Bot Builder","rationale":"This skill builds Slack applications rather than Facebook advertising campaigns.","missing_material_requirement_or_null":"A Facebook Ads plan covering audiences, creatives, budget, tracking, and optimization."},
+    {"candidate_token":"C-35DA10A752DC3D15","adequacy":"INADEQUATE","source_anchor":"# `user-research-prior-art-survey` — SKILL.md","rationale":"This is a research-literature survey workflow, not a paid social campaign planning method.","missing_material_requirement_or_null":"A Facebook Ads campaign plan with targeting, tracking, budget, and optimization guidance."},
+    {"candidate_token":"C-4727BFABEB01363E","adequacy":"INADEQUATE","source_anchor":"# Print Layout","rationale":"This skill prepares documents for print rather than planning paid social campaigns.","missing_material_requirement_or_null":"A Facebook Ads campaign plan with audiences, creative, tracking, and optimization checks."},
+    {"candidate_token":"C-6C57E0B474666CCF","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This skill facilitates sprint retrospectives rather than advertising campaign setup.","missing_material_requirement_or_null":"A Facebook Ads campaign plan with targeting, creative, tracking, and optimization."},
+    {"candidate_token":"C-6C6B2E50D9381824","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Facebook Marketing","rationale":"It covers Facebook ad creation, targeting, budget, creative, and UTM tracking, but lacks a complete tracking-event and optimization-check framework.","missing_material_requirement_or_null":"A complete pixel or CAPI event plan and campaign optimization checks."},
+    {"candidate_token":"C-B4DEB233DFDB92D6","adequacy":"INADEQUATE","source_anchor":"# Local + Google Business Profile visibility","rationale":"This is a local-search visibility workflow, not a Facebook Ads campaign planning skill.","missing_material_requirement_or_null":"A Facebook Ads campaign plan with audience, creative, tracking, budget, and optimization guidance."},
+    {"candidate_token":"C-BFB4D184BF5CAC01","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Audience Targeting","rationale":"It provides detailed audience segmentation, sizing, exclusions, and saturation checks, but not the requested Meta creative, tracking-event, and budget-split plan.","missing_material_requirement_or_null":"A Facebook-specific creative, tracking-event, and budget-allocation plan."},
+    {"candidate_token":"C-E7B9088688803166","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Meta Ads (Facebook & Instagram)","rationale":"It directly covers campaign structure, audience and creative strategy, budget and bidding, Pixel and CAPI tracking, and optimization checks.","missing_material_requirement_or_null":null}
+  ],
+  "reviewer_output_sha256": "21f3b36718c2c2c2b4ea025389951df5e21c71a8266ada033eb916c758d4c10f"
+}
