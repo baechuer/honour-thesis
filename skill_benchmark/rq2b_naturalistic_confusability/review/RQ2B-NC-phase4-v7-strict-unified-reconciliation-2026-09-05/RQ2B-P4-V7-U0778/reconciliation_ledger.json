@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0778",
+  "blind_packet_id": "P-142D6DD139A4CDE5A5",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-6424D6899BB97FFB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "customer-journey-gap-analyzer",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Analyze a CSV of funnel stages and drop-offs"
+    },
+    {
+      "candidate_token": "C-6AE987FFDECECFAD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "causal-matching",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Implements matching, propensity scores, IPW"
+    },
+    {
+      "candidate_token": "C-790D350F328C0B42",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "VC Pitch Email",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Writes cold investor outreach"
+    },
+    {
+      "candidate_token": "C-95036F5A661312A1",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GSVA or ssGSEA",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "candidate_token": "C-ADC39C9B2882D193",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "customer-journey-mapping",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "identify drop-off points"
+    },
+    {
+      "candidate_token": "C-BD9B0298CC33060C",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "powerbi-modeling",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Power BI semantic modeling assistant"
+    },
+    {
+      "candidate_token": "C-E517E6122F2902A0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Core Web Vitals",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Optimize Core Web Vitals"
+    },
+    {
+      "candidate_token": "C-F3AFF33E6F4CC37A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "customer-journey-mapping-workshop",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Run a customer journey mapping workshop"
+    }
+  ],
+  "reviewer_A_return_sha256": "245149ac87b444452459697fc8f6623317a31c2a635f78aeb9a146764c678de8",
+  "reviewer_B_return_sha256": "27e15d25221640a7ca00e30ce789495ffda459610a78a6b9e2a774bbc15aba65",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
