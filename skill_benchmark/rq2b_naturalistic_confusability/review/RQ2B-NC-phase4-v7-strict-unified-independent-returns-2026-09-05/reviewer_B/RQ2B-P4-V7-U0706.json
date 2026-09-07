@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0706",
+  "blind_packet_id": "P-335E46B55D30F138B9",
+  "batch_input_sha256": "b92494cc7576be6b38cccb365e1f723be4858014ce1fa69e7865c76e4f3f7a72",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-5E1532517DAD96E4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Review immigration-related documents",
+      "rationale": "This is an immigration and visa compliance review, not a civil-witness-evidence review for statement support, hearsay, exhibits, statement-of-truth compliance, and argumentative material.",
+      "missing_material_requirement_or_null": "England and Wales witness-statement review organized by paragraph with evidential, procedural, and exhibit risks."
+    },
+    {
+      "candidate_token": "C-9A1EED5A5937B379",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "This is clinical documentation support",
+      "rationale": "This summarizes clinical records or studies and is not suited to legal witness-statement evidence, hearsay, exhibit, or statement-of-truth review.",
+      "missing_material_requirement_or_null": "A prioritized England and Wales witness-evidence risk report grounded in paragraphs, sources, and applicable procedural checks."
+    },
+    {
+      "candidate_token": "C-AC26C79C467E7C20",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Two procedures. Route by what you were asked for:",
+      "rationale": "This is a UI-pattern prior-art survey and does not review legal witness evidence or generate the requested evidence-risk report.",
+      "missing_material_requirement_or_null": "Witness-statement analysis of source support, chronology, exhibits, hearsay, statement-of-truth requirements, and argumentative material."
+    },
+    {
+      "candidate_token": "C-C6521A6B42C09DB7",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "A user has a draft witness statement",
+      "rationale": "This directly reviews England and Wales draft witness statements before service: it maps paragraphs, ties factual assertions to sources, identifies chronology conflicts and missing or vague exhibits, flags hearsay, argument, legal conclusions and procedural requirements including statement-of-truth issues, and emits a prioritized paragraph-level evidence-risk report while preserving rule uncertainty for verification.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E3AED00BC31EDDE3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "This skill reviews pleading sufficiency and structure.",
+      "rationale": "This evaluates Particulars of Claim and pleading elements, not the evidential support and compliance of a witness statement.",
+      "missing_material_requirement_or_null": "Paragraph-level witness-evidence review covering hearsay, exhibits, chronology, statement-of-truth requirements, and argument."
+    },
+    {
+      "candidate_token": "C-F6CDE8FA3E6C4594",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Most retros produce the same three actions",
+      "rationale": "This facilitates agile sprint retrospectives rather than reviewing legal witness evidence before service.",
+      "missing_material_requirement_or_null": "An England and Wales witness-statement evidence and procedural risk review."
+    },
+    {
+      "candidate_token": "C-F794579BF48DF945",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "This skill is a quality-control workflow.",
+      "rationale": "This quality-controls disclosure lists and inspection or privilege issues, rather than reviewing the content and procedural compliance of a witness statement.",
+      "missing_material_requirement_or_null": "A witness-statement-specific review of paragraph support, chronology, exhibits, hearsay, statement-of-truth requirements, and argumentative material."
+    },
+    {
+      "candidate_token": "C-FA24C11AC076F834",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Use this skill when the job is not generic prose cleanup",
+      "rationale": "This prepares ML and systems research-paper manuscripts, not an England and Wales witness-statement evidence-risk report.",
+      "missing_material_requirement_or_null": "A legal witness-evidence workflow with source pinpoints, procedural checks, and prioritized risks before service."
+    }
+  ],
+  "reviewer_output_sha256": "7aabac01daba9a0b35e010cf8fd0af85fdf3322ab927d41ca98ee104d1591363"
+}

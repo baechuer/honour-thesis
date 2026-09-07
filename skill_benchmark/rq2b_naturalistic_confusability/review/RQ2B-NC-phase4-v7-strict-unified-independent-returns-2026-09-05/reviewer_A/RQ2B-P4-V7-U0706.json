@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0706",
+  "blind_packet_id": "P-335E46B55D30F138B9",
+  "batch_input_sha256": "b92494cc7576be6b38cccb365e1f723be4858014ce1fa69e7865c76e4f3f7a72",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-5E1532517DAD96E4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Immigration & Visa Compliance",
+      "rationale": "This skill reviews UK immigration and visa compliance, not civil-litigation witness evidence before service.",
+      "missing_material_requirement_or_null": "An England and Wales witness-statement review covering source support, chronology, exhibits, hearsay, statement-of-truth, and argument risks."
+    },
+    {
+      "candidate_token": "C-9A1EED5A5937B379",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Clinical Summary",
+      "rationale": "This skill faithfully summarizes clinical records or studies, but it does not assess England and Wales witness-evidence or procedural compliance risks.",
+      "missing_material_requirement_or_null": "An England and Wales witness-statement review covering source support, chronology, exhibits, hearsay, statement-of-truth, and argument risks."
+    },
+    {
+      "candidate_token": "C-AC26C79C467E7C20",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual-prior-art-survey",
+      "rationale": "This skill surveys documented UI conventions and has no workflow for legal witness-statement evidence review.",
+      "missing_material_requirement_or_null": "An England and Wales witness-statement review covering source support, chronology, exhibits, hearsay, statement-of-truth, and argument risks."
+    },
+    {
+      "candidate_token": "C-C6521A6B42C09DB7",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Check drafting and compliance risks",
+      "rationale": "It directly reviews England and Wales witness statements before service for source conflicts, chronology, exhibits, hearsay, argument, PD 57AC and statement-of-truth issues, and outputs a prioritized paragraph-level report.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-E3AED00BC31EDDE3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Surface litigation risks",
+      "rationale": "It provides an England and Wales source-support and chronology-risk review, but it is tailored to Particulars of Claim rather than witness evidence and omits the needed hearsay, exhibit, and witness-statement compliance checks.",
+      "missing_material_requirement_or_null": "Witness-statement-specific checks for hearsay, exhibit references, statement of truth, and argumentative evidence."
+    },
+    {
+      "candidate_token": "C-F6CDE8FA3E6C4594",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This skill facilitates team retrospectives and does not assess legal evidence or procedural witness-statement requirements.",
+      "missing_material_requirement_or_null": "An England and Wales witness-statement review covering source support, chronology, exhibits, hearsay, statement-of-truth, and argument risks."
+    },
+    {
+      "candidate_token": "C-F794579BF48DF945",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Check coverage",
+      "rationale": "It can identify document-source, privilege, and coverage gaps in England and Wales disclosure material, but it does not review the witness statement itself for hearsay, argumentative material, or statement-of-truth compliance.",
+      "missing_material_requirement_or_null": "Witness-statement-specific checks for hearsay, argument, statement of truth, and paragraph-level evidence support."
+    },
+    {
+      "candidate_token": "C-FA24C11AC076F834",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "research-paper-writing",
+      "rationale": "This skill drafts and revises academic research papers rather than reviewing legal witness evidence and England and Wales procedure.",
+      "missing_material_requirement_or_null": "An England and Wales witness-statement review covering source support, chronology, exhibits, hearsay, statement-of-truth, and argument risks."
+    }
+  ],
+  "reviewer_output_sha256": "d0928b254adfc6a4abd20984b93897d1f554764f165ad799893a3402caf62bec"
+}
