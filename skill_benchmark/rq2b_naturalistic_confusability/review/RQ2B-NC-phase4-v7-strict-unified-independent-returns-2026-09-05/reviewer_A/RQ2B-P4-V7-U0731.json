@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0731",
+  "blind_packet_id": "P-F1D48A42E9DC95D811",
+  "batch_input_sha256": "e9d8bab47d213f3b49de47f8c803acbf6da2a0b555b1a3e5d97b4b0680f54a17",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-050ECE57CCD053BC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Inherited is not verified.",
+      "rationale": "The source provides a pre-use trust gate that surfaces and tests inherited assumptions before relying on an export. It does not perform the requested export-level checks for duplicates, missing values, inconsistent labels, impossible dates, or formula-like errors.",
+      "missing_material_requirement_or_null": "A data-quality profiling and validation procedure for the specified export-level error classes."
+    },
+    {
+      "candidate_token": "C-35767392B2BFA8A8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Slack Bot Builder",
+      "rationale": "The source builds Slack bots and integrations, not a data-quality audit of a KPI export.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    },
+    {
+      "candidate_token": "C-50B276E8DC60CD5D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "SciAtlas Trend Report",
+      "rationale": "The source produces literature trend reports from paper search, not a trust report for data in a KPI export.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    },
+    {
+      "candidate_token": "C-53493DFADB270DD1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run GSEA on a ranked gene list",
+      "rationale": "The source runs gene-set enrichment analysis on ranked genes, which does not audit the requested KPI-export data-quality conditions.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    },
+    {
+      "candidate_token": "C-58D1496C17944E77",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Atlassian REST API Skill",
+      "rationale": "The source operates Jira and Confluence through REST APIs, not data-quality validation of a supplied KPI export.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    },
+    {
+      "candidate_token": "C-7160A523959516D4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "initial dataset exploration and profiling - use eda-playbook instead.",
+      "rationale": "The source designs leakage-safe ML features and explicitly routes initial data exploration elsewhere; it does not provide the requested KPI-export audit.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    },
+    {
+      "candidate_token": "C-D2CB0CE8DD5F0AD6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "The source facilitates sprint retrospectives and action items, not a data-quality trust report for a KPI export.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    },
+    {
+      "candidate_token": "C-DE9E517618155394",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "KPI Scoreboard and Cadence",
+      "rationale": "The source sets a gym KPI operating cadence and scoreboard; it does not validate the integrity of a KPI export before use.",
+      "missing_material_requirement_or_null": "Export-level validation for duplicates, missing values, label consistency, date validity, and formula-like errors."
+    }
+  ],
+  "reviewer_output_sha256": "45a0af52416fec1037efb5332732c23fbe458bcf1a38df6db64f6c68a52c849e"
+}
