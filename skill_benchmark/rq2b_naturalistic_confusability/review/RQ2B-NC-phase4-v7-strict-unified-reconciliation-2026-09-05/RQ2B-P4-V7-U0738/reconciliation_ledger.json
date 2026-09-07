@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0738",
+  "blind_packet_id": "P-52120F9C3C2FAA8E20",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-596A46172837BBE3",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "User Flow Mapper",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Maps a feature's complete user flow"
+    },
+    {
+      "candidate_token": "C-68109A22A859C906",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Process Documentation",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Documents recurring processes as step-by-step SOPs"
+    },
+    {
+      "candidate_token": "C-686916AAFF95113C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "complete-mlops-platform-deployment-on-azure-from-scratch",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Azure-ML-vs-AKS+Kubeflow platform decision"
+    },
+    {
+      "candidate_token": "C-7EA5DA3B2E1C90EF",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "complete-mlops-platform-deployment-on-gcp-from-scratch",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Vertex-AI-vs-GKE+Kubeflow platform decision"
+    },
+    {
+      "candidate_token": "C-7FB21E30CDBD283F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-C9AA42655992CBD9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GO and KEGG enrichment",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "performing GO and KEGG enrichment"
+    },
+    {
+      "candidate_token": "C-E7A4D8EE9BDB724B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Experiment Tracking",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Sets up disciplined ML experiment tracking"
+    },
+    {
+      "candidate_token": "C-ED0BD239ECBDFB8D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "complete-mlops-platform-deployment-on-aws-from-scratch",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "SageMaker-vs-EKS+Kubeflow platform decision"
+    }
+  ],
+  "reviewer_A_return_sha256": "22d8309a16784b58c8973da81e6ca18f39a476c9243df98ac8816793f007ccbc",
+  "reviewer_B_return_sha256": "859746ae8484a5273c808830e4e63ae416dac70f9a4b34e760f377c3d80675e7",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

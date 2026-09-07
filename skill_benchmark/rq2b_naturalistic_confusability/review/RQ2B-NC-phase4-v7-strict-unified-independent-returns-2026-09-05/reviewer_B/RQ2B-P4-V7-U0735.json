@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0735",
+  "blind_packet_id": "P-C6D31876FC06A6ECF4",
+  "batch_input_sha256": "812a661fd0ebd09c68d32d699ebc32a8463072fb8899dc98a50b5cab884eabfe",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0C0C9E5D97BB9883",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "gsap-react",
+      "rationale": "This is for non-React frameworks and explicitly routes the requested React lifecycle work elsewhere.",
+      "missing_material_requirement_or_null": "A React-specific element-ref, scoped-context, and unmount-cleanup animation workflow."
+    },
+    {
+      "candidate_token": "C-3EECBD93F4E6D0F6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Add custom actions and blocks",
+      "rationale": "Shopify Admin extension development does not address React component animation lifecycle management.",
+      "missing_material_requirement_or_null": "A React animation procedure with refs, component scoping, and cleanup."
+    },
+    {
+      "candidate_token": "C-4FC2682F4613F99C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Structures and facilitates sprint retrospectives",
+      "rationale": "Sprint-retrospective facilitation is unrelated to React animation implementation.",
+      "missing_material_requirement_or_null": "A lifecycle-safe React animation workflow."
+    },
+    {
+      "candidate_token": "C-6CE24704FA0CB9ED",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Physics-based animation for React applications",
+      "rationale": "This is a different React animation library and does not provide the requested GSAP element-reference, scoped-context, and cleanup implementation.",
+      "missing_material_requirement_or_null": "The specified GSAP React pattern using refs, gsap.context(), and cleanup."
+    },
+    {
+      "candidate_token": "C-A8C193DBFA18CEAD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "GSAP runs in any framework or vanilla JS",
+      "rationale": "The core GSAP API can animate React elements, but this source defers React lifecycle and context concerns to the React-specific skill.",
+      "missing_material_requirement_or_null": "React-specific element-reference, context scoping, and unmount-cleanup guidance."
+    },
+    {
+      "candidate_token": "C-B4F6858AC2A32703",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "useGSAP hook, refs, gsap.context(), cleanup",
+      "rationale": "This directly covers React animation with element references, component-scoped GSAP context, and cleanup on unmount.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-CC1FA155D1FB13B8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "performing GO and KEGG enrichment",
+      "rationale": "Gene-set enrichment analysis is unrelated to React animation.",
+      "missing_material_requirement_or_null": "A React component animation and lifecycle-cleanup procedure."
+    },
+    {
+      "candidate_token": "C-F48B19CCBDE31312",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Capture exact React element context from a live browser UI",
+      "rationale": "Element-context capture aids debugging but does not implement lifecycle-safe animations.",
+      "missing_material_requirement_or_null": "A React animation workflow using refs, a scoped context, and cleanup."
+    }
+  ],
+  "reviewer_output_sha256": "6903cbb4eb89775b4c276ff8b098599fdf2c0705d86b0eac52ee6e38d8fbe2e6"
+}

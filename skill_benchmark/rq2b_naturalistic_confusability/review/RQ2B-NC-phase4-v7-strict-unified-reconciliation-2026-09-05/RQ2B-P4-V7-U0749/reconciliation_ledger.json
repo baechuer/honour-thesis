@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0749",
+  "blind_packet_id": "P-A38F44BAC7EAEA1DC4",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-05C8ABE1A7D5EE8E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "cfo-treasury-debt-cash-pooling",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Analyze treasury, debt, bank loans, covenants, liquidity facilities"
+    },
+    {
+      "candidate_token": "C-63A6B69B86307D66",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Stakeholder Update",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Writes project stakeholder updates"
+    },
+    {
+      "candidate_token": "C-73FC1937CD3F4EEC",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Cash Flow Forecast",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Builds a rolling 13-week and 12-month cash flow forecast with runway view."
+    },
+    {
+      "candidate_token": "C-A2CAEF81C20EFB61",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Financial Statement Builder",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Builds and interprets the income statement, balance sheet, and cash flow statement"
+    },
+    {
+      "candidate_token": "C-A35FC82953FC22D2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "cfo-cashflow-working-capital",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Analyze cash-flow, liquidity, 13-week forecasts, runway"
+    },
+    {
+      "candidate_token": "C-A91DBC32B2FC7723",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "visual-prior-art-survey",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying the DOCUMENTED visual and interaction conventions"
+    },
+    {
+      "candidate_token": "C-E5BAC11642996186",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-EB73E154525D9511",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "rudder-cli-workflow",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Validates, previews, and applies RudderStack resource changes"
+    }
+  ],
+  "reviewer_A_return_sha256": "4469324ef0bf7cf92f558c59e19819f4941c9522881871444a4fa39a5dc2a4e5",
+  "reviewer_B_return_sha256": "aba58e49dd73a41090043c16fe44b8ab72d42030a95a48849918c5d004c64f92",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
