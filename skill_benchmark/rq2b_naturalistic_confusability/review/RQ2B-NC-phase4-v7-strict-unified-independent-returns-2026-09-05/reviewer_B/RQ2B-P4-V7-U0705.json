@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0705",
+  "blind_packet_id": "P-639DC8D3EF0FEBF004",
+  "batch_input_sha256": "3d5d72704213c7c496dc3fff8d4af20eee09e15ceb173f239e2874fcfe87c20a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-09588223642FA652",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "When to Use",
+      "rationale": "This skill performs pathway enrichment and heatmap analysis on bulk expression data, not OCR recovery of a scanned receipt PDF.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-2CCE95237D93B38B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This skill facilitates team retrospectives rather than extracting text from a scanned receipt document.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-30ECFB02115BFAF0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Portray Audience",
+      "rationale": "This skill develops evidence-backed customer audience portraits and provides no document OCR capability.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-40BF5B17B89D53E1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Slack Bot Builder",
+      "rationale": "This skill builds Slack applications and integrations, not a recovery workflow for a scanned PDF.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-94F9263EF8F9DE57",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "OCR a Document",
+      "rationale": "It provides a document OCR pipeline for scanned PDFs, but its OCR example does not specify preservation of page sequence or reporting recognition-confidence notes for recovery review.",
+      "missing_material_requirement_or_null": "Page-ordered OCR recovery output with per-page or field-level recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-D15EA18C6F448C4C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Executive Summary",
+      "rationale": "This skill prepares concise summaries and does not recover text from scanned receipt pages.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-D3B7DAB7864BD673",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Verify Idea",
+      "rationale": "This skill validates commercial ideas with current public evidence rather than performing OCR on a supplied PDF.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    },
+    {
+      "candidate_token": "C-F6718BB6008F102B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Quick Start",
+      "rationale": "This skill explains PixiJS rendering architecture and does not process documents or extract scanned text.",
+      "missing_material_requirement_or_null": "A scanned-document OCR recovery workflow that preserves page order and records recognition-confidence notes."
+    }
+  ],
+  "reviewer_output_sha256": "0d57f30cc3ba22e9d863859a18efc61259cb871edae202837abce7da9fe19685"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0705",
+  "blind_packet_id": "P-639DC8D3EF0FEBF004",
+  "batch_input_sha256": "3d5d72704213c7c496dc3fff8d4af20eee09e15ceb173f239e2874fcfe87c20a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-09588223642FA652",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "gsva-analysis-and-visualization",
+      "rationale": "The skill analyzes pathway enrichment from bulk expression matrices and has no PDF OCR or receipt-recovery workflow.",
+      "missing_material_requirement_or_null": "OCR recovery of the scanned receipt PDF with page order and confidence notes."
+    },
+    {
+      "candidate_token": "C-2CCE95237D93B38B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "The skill facilitates team retrospectives and does not process scanned documents or recover OCR text.",
+      "missing_material_requirement_or_null": "An OCR workflow for a scanned receipt PDF that preserves page order and confidence notes."
+    },
+    {
+      "candidate_token": "C-30ECFB02115BFAF0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "portray-audience",
+      "rationale": "The skill researches product audiences from public internet evidence rather than extracting text from scanned receipts.",
+      "missing_material_requirement_or_null": "Ordered OCR recovery of the scanned receipt PDF with confidence notes."
+    },
+    {
+      "candidate_token": "C-40BF5B17B89D53E1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "slack-bot-builder",
+      "rationale": "The skill builds Slack bots and does not define a scanned-PDF OCR recovery workflow.",
+      "missing_material_requirement_or_null": "OCR extraction that preserves the receipt's page order and reports confidence notes."
+    },
+    {
+      "candidate_token": "C-94F9263EF8F9DE57",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "OCR a Document",
+      "rationale": "It can OCR a scanned PDF through a document-processing pipeline, but its text OCR example does not specify preservation of page order or confidence notes for recovery review.",
+      "missing_material_requirement_or_null": "A page-ordered OCR recovery record with explicit confidence notes for uncertain receipt content."
+    },
+    {
+      "candidate_token": "C-D15EA18C6F448C4C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Executive Summary",
+      "rationale": "The skill summarizes completed reports for executives and does not perform OCR or recover scanned receipt content.",
+      "missing_material_requirement_or_null": "An OCR recovery workflow for the scanned receipt PDF, including page order and confidence notes."
+    },
+    {
+      "candidate_token": "C-D3B7DAB7864BD673",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Verify Idea",
+      "rationale": "The skill validates commercial ideas with public web evidence and does not process PDFs or perform OCR.",
+      "missing_material_requirement_or_null": "Ordered, confidence-noted OCR recovery for the scanned receipt PDF."
+    },
+    {
+      "candidate_token": "C-F6718BB6008F102B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "pixijs-core-concepts",
+      "rationale": "The skill explains PixiJS rendering internals and has no document OCR or PDF-recovery capability.",
+      "missing_material_requirement_or_null": "A scanned receipt PDF OCR workflow that retains page sequence and confidence information."
+    }
+  ],
+  "reviewer_output_sha256": "7ee0e6dd89888391631fa43814cbc3039dca49ce386cfdb8359cfc9bc3560807"
+}
