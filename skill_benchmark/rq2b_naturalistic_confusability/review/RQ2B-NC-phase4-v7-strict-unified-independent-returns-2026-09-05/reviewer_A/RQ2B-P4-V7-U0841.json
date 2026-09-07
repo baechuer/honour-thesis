@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0841",
+  "blind_packet_id": "P-4C9F6AE2A7DBA77CD3",
+  "batch_input_sha256": "d752d80917a1a236136d19d8e0f173f85ffbfa775a1783f9631850eb16f1e0f1",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0ED35589249920DF","adequacy":"INADEQUATE","source_anchor":"# EDA Playbook","rationale":"This is an exploratory data-analysis workflow, not a specification for an internal support application.","missing_material_requirement_or_null":"An internal-tool design covering data connections, access control, audit logging, and versioned app export."},
+    {"candidate_token":"C-22E0C2E755CF1761","adequacy":"INADEQUATE","source_anchor":"# Coverage Gap Finder","rationale":"This prioritizes test coverage gaps and does not address construction of an internal support tool.","missing_material_requirement_or_null":"An internal-tool design covering data connections, access control, audit logging, and versioned app export."},
+    {"candidate_token":"C-771CA68E954EE300","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This facilitates team retrospectives rather than specifying a self-hosted support application.","missing_material_requirement_or_null":"An internal-tool design covering data connections, access control, audit logging, and versioned app export."},
+    {"candidate_token":"C-7B1B31A5C3B43855","adequacy":"INADEQUATE","source_anchor":"# `visual-prior-art-survey` — SKILL.md","rationale":"This surveys UI conventions and does not provide the requested internal-tool implementation and governance features.","missing_material_requirement_or_null":"An internal-tool design covering data connections, access control, audit logging, and versioned app export."},
+    {"candidate_token":"C-9522385864190702","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"## Guidelines","rationale":"It supports internal-tool construction, self-hosting, permission groups, audit logging, and Git synchronization, but does not specify the required separated environments and query caching workflow.","missing_material_requirement_or_null":"Explicit development, test, and production connections plus query caching for the searchable list."},
+    {"candidate_token":"C-B84796E9C1E3779E","adequacy":"FULLY_ACCEPTABLE","source_anchor":"## Guidelines","rationale":"It directly supports a self-hosted internal app with environment-specific connections, query caching, group permissions, audit logs, and JSON export for versioned backup.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-C1D6963F6F2508EB","adequacy":"INADEQUATE","source_anchor":"# DocuSign Automation","rationale":"This automates e-signature workflows and does not cover building the requested support application.","missing_material_requirement_or_null":"An internal-tool design covering data connections, access control, audit logging, and versioned app export."},
+    {"candidate_token":"C-C33E011B8E07DA55","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Windmill","rationale":"It can self-host code-first internal tools, but the source does not provide the required multi-environment connections, list caching, group access, audit trail, and app-export workflow.","missing_material_requirement_or_null":"The specified support-tool data, access, audit, caching, and versioned-export workflow."}
+  ],
+  "reviewer_output_sha256": "2f3d9915ee374d163bd9d918a785164a55c662cfbbe96e5bde2cd7749ea7ba59"
+}
