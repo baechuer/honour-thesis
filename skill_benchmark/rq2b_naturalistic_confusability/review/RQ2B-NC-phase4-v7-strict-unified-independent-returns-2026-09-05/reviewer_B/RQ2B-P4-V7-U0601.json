@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0601",
+  "blind_packet_id": "P-A3CF39F1FC6A8B093C",
+  "batch_input_sha256": "246c77208b33f708c1b4ef511076718e9d0f9f63d8d9d4772cfb05e3b205e7e3",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0A6CB388214A8269",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Convert PDF to Markdown",
+      "rationale": "This skill converts supplied PDF documents to Markdown and does not locate or curate public regulatory-genomics datasets.",
+      "missing_material_requirement_or_null": "A workflow to search public regulatory datasets by genomic interval and biosample and return analysis-ready track metadata and downloads."
+    },
+    {
+      "candidate_token": "C-129D7FB20C9F5D77",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## When to Use",
+      "rationale": "It retrieves region-overlapping regulatory evidence across TF binding, histone marks, accessibility, and QTLs with biosample and dataset fields, but it is not a download-oriented multi-assay track-selection workflow.",
+      "missing_material_requirement_or_null": "A process to select released analysis-ready signal or peak files across all requested assays and return their download links, file types, and direct-versus-contextual evidence labels."
+    },
+    {
+      "candidate_token": "C-1F36F040D234B972",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Query 1: Region Overlap",
+      "rationale": "It can retrieve region-overlapping TF ChIP-seq peaks with biosample information and BED downloads, but it covers only the TF-binding subset of the requested evidence.",
+      "missing_material_requirement_or_null": "Accessibility, histone-mark, and expression dataset retrieval plus a curated cross-assay download table."
+    },
+    {
+      "candidate_token": "C-24BD7A63DF2EE716",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "### Query 2: File Download — Get Metadata and Download URLs for BED/bigWig Files",
+      "rationale": "This source supports interval and biosample queries across accessibility, TF ChIP-seq, histone ChIP-seq, and RNA-seq, with released BED or bigWig file metadata, assemblies, download URLs, and region-based cCRE context.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-97334E0717408041",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This skill runs software-team retrospectives and provides no regulatory-genomics dataset search or track-curation workflow.",
+      "missing_material_requirement_or_null": "A public regulatory-dataset discovery workflow using genomic interval, biosample, assay, and processed-file criteria."
+    },
+    {
+      "candidate_token": "C-A4FB881056B2DFDF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "This skill runs GO and KEGG enrichment from a gene list and does not retrieve public regulatory tracks for a genomic interval.",
+      "missing_material_requirement_or_null": "A workflow to identify and download biosample-relevant accessibility, binding, histone, and expression datasets by region."
+    },
+    {
+      "candidate_token": "C-BC6D3A6281134F69",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Data Extractor Skill",
+      "rationale": "This skill extracts structure from documents supplied to it; it does not search genomic repositories or curate regulatory datasets and tracks.",
+      "missing_material_requirement_or_null": "A public regulatory-genomics search and selection workflow that returns processed track metadata and download links."
+    },
+    {
+      "candidate_token": "C-FE986786212380FC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Scholar Evaluation",
+      "rationale": "This skill evaluates scholarly work and does not discover, filter, or download regulatory-genomics datasets.",
+      "missing_material_requirement_or_null": "A workflow for finding and curating public processed regulatory datasets by interval and biosample."
+    }
+  ],
+  "reviewer_output_sha256": "39b064bbe4f48f4b210c73593ef6dfc046d5c10b8c32453c0a7cbb3a0d1eca38"
+}
