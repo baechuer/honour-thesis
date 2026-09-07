@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-34F0AFB485406778",
+      "missing_material_requirement_or_null": "Retrieval-specific candidate subsetting, field-aware reranking, fallback, and evaluation metrics.",
+      "rationale": "Broad UX architecture can frame user-facing search experience and evaluation, but it does not specify a retrieval architecture or ranking controls.",
+      "source_anchor": "# Skills"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4C0F0DB221207583",
+      "missing_material_requirement_or_null": "Candidate subsetting, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "It specifies behavior for a static design handoff rather than an architecture for retrieving and ranking skill candidates.",
+      "source_anchor": "# Prototype Spec"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-50445B347B35E737",
+      "missing_material_requirement_or_null": "A retrieval architecture with top-k budgets, field-aware reranking, fallback, and system evaluation metrics.",
+      "rationale": "It surveys published user-research evidence; that research workflow does not define an operational skill-retrieval and reranking system.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-89E6D92B003AD93F",
+      "missing_material_requirement_or_null": "Candidate subsetting, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "The skill creates identity-project briefs and provides no mechanism for skill candidate retrieval or ranking architecture.",
+      "source_anchor": "# Logo Brief Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8A19D69262F96D35",
+      "missing_material_requirement_or_null": "Candidate subsetting, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "It concerns building Slack integrations, not designing a skill-retrieval pipeline or ranking policy.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BAF15122A107C539",
+      "missing_material_requirement_or_null": "Candidate subsetting, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "It documents responsive UI behavior across breakpoints and does not address retrieval-system architecture.",
+      "source_anchor": "# Responsive Spec"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E5B046A9EF6063FF",
+      "missing_material_requirement_or_null": "Retrieval-specific top-k selection and field-aware reranking design with ranking evaluation metrics.",
+      "rationale": "Its service, performance, resilience, and observability phases support architecture, fallback, and metrics, but it lacks retrieval-specific candidate subsetting and field-aware reranking guidance.",
+      "source_anchor": "# Skills"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EB1B3FAB70B9A957",
+      "missing_material_requirement_or_null": "Candidate subsetting, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "It facilitates sprint retrospectives and action tracking rather than a technical retrieval and reranking architecture.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0169",
+  "batch_input_sha256": "f58787b0addc02c3ac43e1b8cfdb29730f752c5449d06e49dd8f22b82a1f1c1b",
+  "blind_packet_id": "P-DDA6DA4AB382030728",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "38e1ec4023d2806cc9486945da8a7b4dd2b380a9089c4fde8c0144b1ddf44537"
+}

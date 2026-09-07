@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-34F0AFB485406778",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline, top-k budgets, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "The UI/UX workflow does not specify a retrieval architecture or its ranking and evaluation controls.",
+      "source_anchor": "### Phase 4 — Information Architecture & Navigation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4C0F0DB221207583",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline, top-k budgets, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "This design-handoff specification process does not address retrieval-system architecture or ranking behavior.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-50445B347B35E737",
+      "missing_material_requirement_or_null": "Skill-candidate top-k budgets, field-aware reranking, and retrieval-quality evaluation metrics.",
+      "rationale": "It defines scoped candidate selection, caps, kept-versus-returned accounting, and failure handling, but only for literature surveys rather than skill retrieval.",
+      "source_anchor": "### Procedure 2 — execute one search angle"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-89E6D92B003AD93F",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline, top-k budgets, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "The logo-brief process is unrelated to designing a skill-retrieval architecture.",
+      "source_anchor": "# Logo Brief Writer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8A19D69262F96D35",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline, top-k budgets, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "Slack bot implementation guidance does not provide a candidate-subsetting or reranking design.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BAF15122A107C539",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline, top-k budgets, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "Responsive-layout rules do not address retrieval-system selection, reranking, or evaluation.",
+      "source_anchor": "# Responsive Spec"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E5B046A9EF6063FF",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline with top-k budgets, field-aware reranking, and retrieval-quality evaluation metrics.",
+      "rationale": "It offers general search, resilience, fallback, and observability guidance but omits the requested retrieval-specific selection and reranking design.",
+      "source_anchor": "### Phase 8: Reliability, Fault Tolerance, and Resilience"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EB1B3FAB70B9A957",
+      "missing_material_requirement_or_null": "Candidate-subsetting pipeline, top-k budgets, field-aware reranking, fallback, and retrieval evaluation metrics.",
+      "rationale": "Sprint retrospective facilitation does not provide a skill-retrieval architecture or ranking controls.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0169",
+  "batch_input_sha256": "f58787b0addc02c3ac43e1b8cfdb29730f752c5449d06e49dd8f22b82a1f1c1b",
+  "blind_packet_id": "P-DDA6DA4AB382030728",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "774c7b5063a21bd3101d644b8e3a5c778d3126f286470679501e50fcd3736d9c"
+}
