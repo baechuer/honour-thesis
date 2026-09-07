@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0375",
+  "blind_packet_id": "P-0F02BF06A9AF890A3E",
+  "batch_input_sha256": "92b1d994e2bfb28ce4748def677a75a5a530e1ad89da58cab2f5d504e497d93d",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1A9FA9D433B50E5D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Causal IV",
+      "rationale": "Requires a plausible instrument and implements IV or 2SLS, neither of which is provided or requested for this observational selection problem.",
+      "missing_material_requirement_or_null": "A matching or propensity-score analysis that adjusts pre-treatment confounders, checks overlap and balance, runs sensitivity analysis, and withholds an effect when gates fail."
+    },
+    {
+      "candidate_token": "C-468F6533F30F858F",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Causal Matching",
+      "rationale": "Directly implements Python matching, propensity-score or IPW adjustment with pre-treatment confounder checks, common-support and standardized-balance diagnostics, sensitivity analysis, and diagnostic gates before reporting an observational effect.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8B79B6322E569A9D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Strength Training Plan",
+      "rationale": "Designs resistance-training programs rather than estimating a causal retention effect from observational data.",
+      "missing_material_requirement_or_null": "A matching or propensity-score analysis that adjusts pre-treatment confounders, checks overlap and balance, runs sensitivity analysis, and withholds an effect when gates fail."
+    },
+    {
+      "candidate_token": "C-9E9881937D54E4D5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Portray Audience",
+      "rationale": "Profiles product audiences from public evidence rather than conducting causal analysis of employee retention.",
+      "missing_material_requirement_or_null": "A matching or propensity-score analysis that adjusts pre-treatment confounders, checks overlap and balance, runs sensitivity analysis, and withholds an effect when gates fail."
+    },
+    {
+      "candidate_token": "C-A823917466F6E5F9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "Conducts gene-list GO and KEGG enrichment rather than causal adjustment of an observational employee dataset.",
+      "missing_material_requirement_or_null": "A matching or propensity-score analysis that adjusts pre-treatment confounders, checks overlap and balance, runs sensitivity analysis, and withholds an effect when gates fail."
+    },
+    {
+      "candidate_token": "C-A9F04F63F8A84E1A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 1: Frame the estimand and draw the DAG",
+      "rationale": "It correctly rejects post-treatment controls, distinguishes observed from unmeasured confounding, and calls for sensitivity testing, but it does not provide the requested matching or propensity-score Python workflow with explicit overlap and standardized-balance gates.",
+      "missing_material_requirement_or_null": "Runnable matching or propensity-score code with common-support and standardized-balance gates that stop effect reporting on failure."
+    },
+    {
+      "candidate_token": "C-ED2A849124355805",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates team retrospectives rather than causal analysis of program completion and retention.",
+      "missing_material_requirement_or_null": "A matching or propensity-score analysis that adjusts pre-treatment confounders, checks overlap and balance, runs sensitivity analysis, and withholds an effect when gates fail."
+    },
+    {
+      "candidate_token": "C-F2F54E9B4FE78327",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Causal RDD",
+      "rationale": "Requires a treatment cutoff and running variable for regression discontinuity, neither of which is part of the supplied observational design.",
+      "missing_material_requirement_or_null": "A matching or propensity-score analysis that adjusts pre-treatment confounders, checks overlap and balance, runs sensitivity analysis, and withholds an effect when gates fail."
+    }
+  ],
+  "reviewer_output_sha256": "af79bf6af0dc2958ea00a29f57081a13cc2324cc06b60bd7123410dbedaf6aca"
+}

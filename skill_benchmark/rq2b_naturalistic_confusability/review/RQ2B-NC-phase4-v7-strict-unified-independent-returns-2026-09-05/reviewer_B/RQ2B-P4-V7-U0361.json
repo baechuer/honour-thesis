@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0361",
+  "blind_packet_id": "P-BF264B28DF6B505843",
+  "batch_input_sha256": "8427d5d7451088f76c4fdf4da612a4fe1cf7e4aae907d51a0aee89d63c6031eb",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-021299656BA7C116",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Phase 4: Resilience and Failure Handling",
+      "rationale": "Covers external API failure, connections, authentication, and trust boundaries, but is an integration-design workflow rather than a full evidence-based review of the supplied middleware service lifecycle, runtime, and request flow.",
+      "missing_material_requirement_or_null": "A Node or middleware-service code-review procedure that traces startup and shutdown, middleware order, request handling, async paths, and runtime failures from the supplied code."
+    },
+    {
+      "candidate_token": "C-1673AB640DE5F8BD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates team retrospectives, not a production incident review of an HTTP service.",
+      "missing_material_requirement_or_null": "A code-review procedure for the supplied middleware service covering runtime, request flow, async behavior, data, and authorization risks."
+    },
+    {
+      "candidate_token": "C-5BB26DE277AFAE64",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "Runs gene-set enrichment analysis rather than analyzing HTTP service behavior or incident risks.",
+      "missing_material_requirement_or_null": "A code-review procedure for the supplied middleware service covering runtime, request flow, async behavior, data, and authorization risks."
+    },
+    {
+      "candidate_token": "C-7AB8C9D932500206",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### 3. Trace request-to-response flow",
+      "rationale": "Provides a deep framework-specific request, data, security, and async review, but it is explicitly limited to Laravel and does not cover the requested Node-style event-loop and middleware-runtime concerns for an unspecified middleware service.",
+      "missing_material_requirement_or_null": "A framework-appropriate middleware-service review covering Node-style runtime, package context, middleware registration, event loop, and connection behavior."
+    },
+    {
+      "candidate_token": "C-92DE0B33463EE61D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### 3. Trace request-to-response flow",
+      "rationale": "Provides a Symfony-specific request, persistence, security, and async analysis, but it is not a general middleware-service review and omits the requested Node-style event-loop, package, and middleware-runtime checks.",
+      "missing_material_requirement_or_null": "A framework-appropriate middleware-service review covering Node-style runtime, package context, middleware registration, event loop, and connection behavior."
+    },
+    {
+      "candidate_token": "C-CB920B3B6C5D51AB",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Procedure",
+      "rationale": "Directly prescribes runtime and package identification, boot and shutdown review, middleware order, request-to-response tracing, async and event-loop checks, data and authorization boundaries, and prioritized evidence-based risks for a Node or Express-like middleware service.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-CD8036F467676992",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Phase 2 — Review checklist (defensive)",
+      "rationale": "Can produce evidence-based defensive findings for security, identity, data, and configuration risks, but does not analyze the requested application lifecycle, middleware order, request paths, async behavior, or runtime failures.",
+      "missing_material_requirement_or_null": "A full middleware-service incident review that traces boot, shutdown, request handling, async paths, and runtime behavior alongside security findings."
+    },
+    {
+      "candidate_token": "C-EDAD2CD1E81369D0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# ohmg — Gemini / Antigravity entry for oh-my-agent",
+      "rationale": "Addresses adoption of an agent harness rather than inspecting an HTTP service during a production incident.",
+      "missing_material_requirement_or_null": "A code-review procedure for the supplied middleware service covering runtime, request flow, async behavior, data, and authorization risks."
+    }
+  ],
+  "reviewer_output_sha256": "5c2758bfcb2990d1e85ce8fb4ff3eef291afc01741c4a76d7c1409daa0010b80"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0366",
+  "blind_packet_id": "P-AE87C5801C574065D0",
+  "batch_input_sha256": "caaaa662b271bf63565e5f3fde36da3fbf4d922f1226f568ab9d61ce236d6232",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-08D4C40E260B3337",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Load Testing",
+      "rationale": "This source tests service capacity and latency under traffic, not whether a language skill's activation condition is correctly bounded by an existing draft reply.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-37509E4F3CD23436",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "This source performs pathway enrichment analysis and cannot construct or evaluate prompt-trigger cases for a reply-polishing skill.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-5F2A293F885BF03A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This source builds Slack applications and does not define a method for testing a skill's activation boundary on draft versus no-draft prompts.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-651A868C0E736FC3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Patent Prior Art",
+      "rationale": "This source systematically assesses patent novelty, not whether a conversational skill fires only when a required draft input is present.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-9C743E4D26ADA0BE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Fundraising Stage Selector",
+      "rationale": "This source determines a fundraising stage and cannot generate or assess prompt-level activation tests.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-A1DC6D6A99BCA978",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Open House Follow-Up",
+      "rationale": "This source supplies a real-estate lead follow-up cadence rather than a test protocol for checking a skill's trigger gate.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-D481587A507235B7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source structures team retrospective meetings and does not assess model-skill activation behaviour or design boundary prompts.",
+      "missing_material_requirement_or_null": "Skill-trigger evaluation with near-boundary prompt cases and trigger assertions"
+    },
+    {
+      "candidate_token": "C-D5A9385778F3754A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Step 5: Build the inputs that break code",
+      "rationale": "It can help construct deterministic edge-case inputs, but explicitly does not design test cases or assertions and therefore cannot complete the requested trigger evaluation.",
+      "missing_material_requirement_or_null": "Prompt-level trigger oracle and evaluation procedure for draft-present versus draft-absent cases"
+    }
+  ],
+  "reviewer_output_sha256": "d3b713b74c192e9aa1f3c097d309c4a4e9b5732156b6da819ae8952bd6470d21"
+}
