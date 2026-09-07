@@ -1,0 +1,37 @@
+{
+  "bound_inputs": {
+    "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "checks": {
+    "K6_plus_two_tail_packet_unit_intact": true,
+    "each_group_assigned_to_A_and_B": true,
+    "render_packet_hash_and_schema_verified": true,
+    "target_blindness_verified": true
+  },
+  "outputs": {
+    "reviewer_a_assignment.jsonl": "a28dd84e4f4ed8045bb657d0db81ffc5e5c6473a21827af9e7d87e14475d1715",
+    "reviewer_b_assignment.jsonl": "30c8b64b958e075015c793d9b61d7a0dd84308fdf29d283cbc8a3f962ec2b60c"
+  },
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_initial_microbatch_003_v1",
+  "scope": "Machine B V7 only; no target/join/main-tail/retrieval/metric disclosure.",
+  "selection": {
+    "eligible_unstarted_machine_b_groups": 341,
+    "groups": [
+      "RQ2B-P4-V7-U0255",
+      "RQ2B-P4-V7-U0363",
+      "RQ2B-P4-V7-U0488",
+      "RQ2B-P4-V7-U0769",
+      "RQ2B-P4-V7-U0984",
+      "RQ2B-P4-V7-U0129",
+      "RQ2B-P4-V7-U0728",
+      "RQ2B-P4-V7-U1208",
+      "RQ2B-P4-V7-U0158",
+      "RQ2B-P4-V7-U0517",
+      "RQ2B-P4-V7-U0915",
+      "RQ2B-P4-V7-U1189"
+    ],
+    "order": "ascending SHA-256(batch_id), then batch_id"
+  },
+  "status": "PASS_V7_MACHINE_B_INITIAL_REVIEW_MICROBATCH_003_TARGET_BLIND_INPUTS_VERIFIED"
+}
