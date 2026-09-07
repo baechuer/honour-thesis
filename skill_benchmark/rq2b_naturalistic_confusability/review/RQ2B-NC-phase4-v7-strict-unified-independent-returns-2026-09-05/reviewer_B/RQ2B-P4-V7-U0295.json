@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0295",
+  "blind_packet_id": "P-576B396F165E70FD2C",
+  "batch_input_sha256": "cf5e4d20f4910c4ad769ec10ebdc76af488f3ae6c553dd321d1469efb06e5a96",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-02EF8B2DF23C6F36",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Dependency Risk Audit",
+      "rationale": "This dependency-security audit does not assess email sending identity, permissioned-list hygiene, engagement, or deliverability remediation.",
+      "missing_material_requirement_or_null": "A permissioned-email deliverability audit covering authentication, bounces, complaints, engagement, and remediation order is missing."
+    },
+    {
+      "candidate_token": "C-075E07A6946D40FA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Microservices Architect",
+      "rationale": "The distributed-systems architecture guidance does not audit newsletter sender reputation or deliverability signals.",
+      "missing_material_requirement_or_null": "A permissioned-email deliverability audit covering authentication, bounces, complaints, engagement, and remediation order is missing."
+    },
+    {
+      "candidate_token": "C-111B5812C03C566B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run GSEA on a ranked gene list",
+      "rationale": "The gene-set enrichment workflow is unrelated to newsletter deliverability, sender identity, or hygiene remediation.",
+      "missing_material_requirement_or_null": "A permissioned-email deliverability audit covering authentication, bounces, complaints, engagement, and remediation order is missing."
+    },
+    {
+      "candidate_token": "C-208E599FA9053D3C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This retrospective facilitation process does not diagnose email authentication, bounces, complaints, or subscriber engagement.",
+      "missing_material_requirement_or_null": "A permissioned-email deliverability audit covering authentication, bounces, complaints, engagement, and remediation order is missing."
+    },
+    {
+      "candidate_token": "C-392DC24A176401FE",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Cold Email Deliverability",
+      "rationale": "It covers authentication, warm-up, and bounce and complaint monitoring, but it is designed for cold outbound and explicitly excludes protection of an opted-in primary-domain marketing program.",
+      "missing_material_requirement_or_null": "Permissioned-program-specific hygiene, engagement sunsetting, and primary-domain remediation guidance is missing."
+    },
+    {
+      "candidate_token": "C-49C0AA23BD32DD4D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# notebooklm — Google NotebookLM Integration for Claude Code",
+      "rationale": "Notebook querying can retrieve source-grounded answers but does not provide a newsletter deliverability audit or remediation procedure.",
+      "missing_material_requirement_or_null": "A permissioned-email deliverability audit covering authentication, bounces, complaints, engagement, and remediation order is missing."
+    },
+    {
+      "candidate_token": "C-AAF9CCAFAFB52F8B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Email Deliverability",
+      "rationale": "It directly audits permissioned marketing sender authentication, reputation, bounce and complaint thresholds, engagement sunsetting, and prioritized remediation.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-D3152552949E3B49",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Newsletter Management",
+      "rationale": "It addresses newsletters, audience growth, and engagement metrics, but does not supply authentication, bounce and complaint thresholds, list hygiene, or a deliverability remediation sequence.",
+      "missing_material_requirement_or_null": "Sender-identity authentication, hygiene thresholds, complaint handling, and prioritized deliverability remediation are missing."
+    }
+  ],
+  "reviewer_output_sha256": "6f7802a5e0026f4340b984b090848e7dc8db1b64656b0b6803cefd64c9e6a56b"
+}
