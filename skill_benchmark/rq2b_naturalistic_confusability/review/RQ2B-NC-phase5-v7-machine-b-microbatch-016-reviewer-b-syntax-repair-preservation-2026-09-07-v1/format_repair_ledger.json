@@ -1,0 +1,129 @@
+{
+  "artifact_type": "traceable_raw_return_format_repair",
+  "scope": "Machine B V7 microbatch 016 reviewer_B only",
+  "reason": "frozen parser rejected terminal literal escaped newline outside listed JSON objects",
+  "semantic_change": "none",
+  "raw_preservation": "Original bytes are base64 archived and hash-replay verified before normalization",
+  "entries": [
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1154.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1154.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "a163c7ce3f578b35b437cc5e839cc7d37e2dac3ef580ebb478624eef42191fc3",
+      "repaired_raw_sha256": "ab556b69eb0883162f56a5b60bc2064126b748adcfd753ea7eadada8e9570d06",
+      "base64_replay_sha256": "a163c7ce3f578b35b437cc5e839cc7d37e2dac3ef580ebb478624eef42191fc3",
+      "original_byte_length": 3684,
+      "repaired_byte_length": 3682
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0763.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0763.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "86d3b2c939a892bdb26238545bfc7b9001e03b318f453253e902ac90fc003a31",
+      "repaired_raw_sha256": "1d1af175375951c58092f177cf73a0ba1bf51de82acbd2cc520b6c023573f035",
+      "base64_replay_sha256": "86d3b2c939a892bdb26238545bfc7b9001e03b318f453253e902ac90fc003a31",
+      "original_byte_length": 3324,
+      "repaired_byte_length": 3322
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0672.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0672.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "2aca2c0990fc881cdd4b0b29e423fe9d0b0e2a00a52181882f9aa8bda86e1381",
+      "repaired_raw_sha256": "ed83cf34db57f26934f1aa1156a91f11ae6adb297e0a9a07d7c61623a52a6f36",
+      "base64_replay_sha256": "2aca2c0990fc881cdd4b0b29e423fe9d0b0e2a00a52181882f9aa8bda86e1381",
+      "original_byte_length": 3454,
+      "repaired_byte_length": 3452
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0484.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0484.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "d007c98ff0df4661fdaba5b72dea9b453db92c74f39b51ac3a00cfc89684a2a3",
+      "repaired_raw_sha256": "57386f65dd4fcdf4c86490f404f49fbcb1788da26c2688a497286dfd54cbb7e6",
+      "base64_replay_sha256": "d007c98ff0df4661fdaba5b72dea9b453db92c74f39b51ac3a00cfc89684a2a3",
+      "original_byte_length": 3331,
+      "repaired_byte_length": 3329
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1052.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1052.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "62c2b8934d2527c59dc630f67ccd27ce0c6db331b6cf0488e7ac329f3a33419f",
+      "repaired_raw_sha256": "a764287d57973e091f4efc8fbf4a0bb2b869020aa829e56d48f9959e7f0dcd3d",
+      "base64_replay_sha256": "62c2b8934d2527c59dc630f67ccd27ce0c6db331b6cf0488e7ac329f3a33419f",
+      "original_byte_length": 3269,
+      "repaired_byte_length": 3267
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1162.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1162.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "4cc7ed2bef8511535f3ef1e8defb03d3360bbbb6b90b3c096d3150b1fd31435b",
+      "repaired_raw_sha256": "8f9862c5f8b00f82f12d8054c62ba885eaef53f2c330d6ce588f614ffef7075d",
+      "base64_replay_sha256": "4cc7ed2bef8511535f3ef1e8defb03d3360bbbb6b90b3c096d3150b1fd31435b",
+      "original_byte_length": 3341,
+      "repaired_byte_length": 3339
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0874.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0874.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "786ba8f7ad8f77c6c752344fe5b92248262a6dd19494a3e5895cb67ff685f0a3",
+      "repaired_raw_sha256": "555af18c88ddd2944367c78ffeb611dd23eaa181240b59f84f1ef645e62166d2",
+      "base64_replay_sha256": "786ba8f7ad8f77c6c752344fe5b92248262a6dd19494a3e5895cb67ff685f0a3",
+      "original_byte_length": 3444,
+      "repaired_byte_length": 3442
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0396.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0396.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "42376ed41d4113b02894b0e5573177d32787b4de774b3228f2bc0b56ab2cc24a",
+      "repaired_raw_sha256": "0d258862fab314f2d48bae750a433e7c439b768d1f50c28ef09b090d313d361e",
+      "base64_replay_sha256": "42376ed41d4113b02894b0e5573177d32787b4de774b3228f2bc0b56ab2cc24a",
+      "original_byte_length": 3336,
+      "repaired_byte_length": 3334
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0549.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0549.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "4982d02f8f6f6f302bad0fa1fdc26c3b4bbbf284374c8c17e6f0325112f2bdb4",
+      "repaired_raw_sha256": "60d69412a615cc3b8a63b85701aff46c75ba72f563116324eef9ed1dda744ffd",
+      "base64_replay_sha256": "4982d02f8f6f6f302bad0fa1fdc26c3b4bbbf284374c8c17e6f0325112f2bdb4",
+      "original_byte_length": 3313,
+      "repaired_byte_length": 3311
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0394.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0394.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "7037d08a2fab21ece0d89c60b6ed58170191aca424052a22fd1301215786349a",
+      "repaired_raw_sha256": "7c56a57620d4c1bef100f1a259f03bb4bbbc20e00b9d91915a3b66d307895714",
+      "base64_replay_sha256": "7037d08a2fab21ece0d89c60b6ed58170191aca424052a22fd1301215786349a",
+      "original_byte_length": 3203,
+      "repaired_byte_length": 3201
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0912.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0912.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "9ea81b711418517cf3a15a6eaa8f2e00ca9247ec7e8be13becac79a8bba993bd",
+      "repaired_raw_sha256": "27bce4d9ca5c880d1267e69575caf035ad3011fdb63ec84c6a012e39d56cf580",
+      "base64_replay_sha256": "9ea81b711418517cf3a15a6eaa8f2e00ca9247ec7e8be13becac79a8bba993bd",
+      "original_byte_length": 3260,
+      "repaired_byte_length": 3258
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0097.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-016-reviewer-b-syntax-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0097.json.base64",
+      "repair_scope": "Terminal non-JSON literal escape only: removed trailing backslash+n outside closing JSON object; appended one terminal newline",
+      "original_raw_sha256": "92c7c15b8c088878efe0b7fc0b8d234a6abbca8b86a1b15f67728bdfb5b45ccc",
+      "repaired_raw_sha256": "ef7b99e6e1d16a00e3fd60f7aa32d0367acef368db6a14a5c3c895b5d96b6fde",
+      "base64_replay_sha256": "92c7c15b8c088878efe0b7fc0b8d234a6abbca8b86a1b15f67728bdfb5b45ccc",
+      "original_byte_length": 3291,
+      "repaired_byte_length": 3289
+    }
+  ]
+}
