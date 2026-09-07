@@ -1,0 +1,40 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_initial_microbatch_017_v1",
+  "scope": "Machine B V7 only; no target/join/main-tail/retrieval/metric disclosure.",
+  "bound_inputs": {
+    "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "selection_snapshot_commit": "e8eef98"
+  },
+  "selection": {
+    "eligible_unstarted_machine_b_groups": 341,
+    "previous_initial_microbatches": 16,
+    "groups": [
+      "RQ2B-P4-V7-U0973",
+      "RQ2B-P4-V7-U0667",
+      "RQ2B-P4-V7-U0460",
+      "RQ2B-P4-V7-U0930",
+      "RQ2B-P4-V7-U0829",
+      "RQ2B-P4-V7-U0725",
+      "RQ2B-P4-V7-U1001",
+      "RQ2B-P4-V7-U0868",
+      "RQ2B-P4-V7-U0203",
+      "RQ2B-P4-V7-U0347",
+      "RQ2B-P4-V7-U0622",
+      "RQ2B-P4-V7-U0446"
+    ],
+    "order": "ascending SHA-256(batch_id), then batch_id; membership fixed by the e8eef98 Machine-B collection snapshot and excludes every group with any pre-existing A or B raw return"
+  },
+  "checks": {
+    "K6_plus_two_tail_packet_unit_intact": true,
+    "each_group_assigned_to_A_and_B": true,
+    "render_packet_hash_and_schema_verified": true,
+    "target_blindness_verified": true,
+    "no_group_reassigned_from_preexisting_raw_return_scope": true
+  },
+  "outputs": {
+    "reviewer_a_assignment.jsonl": "75b9639ed37de9c2d6f87a7ee0550bd9eca30950137d00ef46cdfc39aa9cd2a9",
+    "reviewer_b_assignment.jsonl": "fafe31da532df65906f2b4fbaa676446074265030ad02ad2a68b8717e67b94c5"
+  },
+  "status": "PASS_V7_MACHINE_B_INITIAL_REVIEW_MICROBATCH_017_TARGET_BLIND_INPUTS_VERIFIED"
+}
