@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1192",
+  "blind_packet_id": "P-05966F2C848061DDBF",
+  "batch_input_sha256": "5bd9efc2933e7dd161304aad7ccd2b1da6f0e26cfae9474bf91fd84d7c1a4779",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-1613A895CFF3C573","adequacy":"INADEQUATE","source_anchor":"# Incremental Implementation","rationale":"This gives a generic change-delivery discipline without a method to isolate a latency bottleneck or compare performance fairly.","missing_material_requirement_or_null":"Measurement-led bottleneck identification, bounded optimizations, and before-and-after latency verification."},
+    {"candidate_token":"C-2ED2EFC5645D485C","adequacy":"INADEQUATE","source_anchor":"# Game Build Log Triage","rationale":"This triages Unity and Unreal build logs, not a service or query latency regression.","missing_material_requirement_or_null":"Measurement-led bottleneck identification, bounded optimizations, and before-and-after latency verification."},
+    {"candidate_token":"C-480A4B270B7C9A5C","adequacy":"INADEQUATE","source_anchor":"# Incremental Implementation","rationale":"This gives a generic change-delivery discipline without a method to isolate a latency bottleneck or compare performance fairly.","missing_material_requirement_or_null":"Measurement-led bottleneck identification, bounded optimizations, and before-and-after latency verification."},
+    {"candidate_token":"C-75A1A471F8824050","adequacy":"INADEQUATE","source_anchor":"# Arabic Copywriting And Dialects","rationale":"This concerns Arabic copywriting and localization, not performance diagnosis.","missing_material_requirement_or_null":"Measurement-led bottleneck identification, bounded optimizations, and before-and-after latency verification."},
+    {"candidate_token":"C-99F84D42FA89AEF2","adequacy":"INADEQUATE","source_anchor":"# Segmentation Strategy","rationale":"This designs lifecycle-message segments rather than diagnosing a checkout latency regression.","missing_material_requirement_or_null":"Measurement-led bottleneck identification, bounded optimizations, and before-and-after latency verification."},
+    {"candidate_token":"C-A300204572439468","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Performance Optimization","rationale":"It is a measurement-led workflow for latency regressions that identifies one bottleneck, limits recommendations to one or two changes, and specifies like-for-like before-and-after verification.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A9239D123143FF2B","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Monitoring & Observability","rationale":"It can frame service-health telemetry and monitoring, but its own routing distinguishes that work from bottleneck tuning and bounded performance remediation.","missing_material_requirement_or_null":"Direct bottleneck identification with no more than two performance changes and fair before-and-after verification."},
+    {"candidate_token":"C-DDFFDE5B02E85D39","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This facilitates team retrospectives rather than analyzing and remedying a latency regression.","missing_material_requirement_or_null":"Measurement-led bottleneck identification, bounded optimizations, and before-and-after latency verification."}
+  ],
+  "reviewer_output_sha256": "68076d3dd6899c3748a2ee17a3c8e40ad98b0e36c94d422e7c5f1575201aadc4"
+}

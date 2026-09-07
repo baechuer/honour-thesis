@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1192",
+  "blind_packet_id": "P-05966F2C848061DDBF",
+  "batch_input_sha256": "5bd9efc2933e7dd161304aad7ccd2b1da6f0e26cfae9474bf91fd84d7c1a4779",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-1613A895CFF3C573","adequacy":"INADEQUATE","source_anchor":"incremental-implementation","rationale":"Incremental implementation provides a delivery cadence but does not identify a latency bottleneck or define fair performance verification.","missing_material_requirement_or_null":"measurement-led bottleneck analysis"},
+    {"candidate_token":"C-2ED2EFC5645D485C","adequacy":"INADEQUATE","source_anchor":"game-build-log-triage","rationale":"This triages game build and CI logs, not a checkout latency regression from a staging trace.","missing_material_requirement_or_null":"service performance bottleneck analysis"},
+    {"candidate_token":"C-480A4B270B7C9A5C","adequacy":"INADEQUATE","source_anchor":"incremental-implementation","rationale":"Incremental implementation does not supply the requested trace-led bottleneck diagnosis, bounded changes, and fair verification.","missing_material_requirement_or_null":"measurement-led bottleneck analysis"},
+    {"candidate_token":"C-75A1A471F8824050","adequacy":"INADEQUATE","source_anchor":"arabic-copywriting-dialects","rationale":"Arabic copywriting is unrelated to checkout latency diagnosis and optimization.","missing_material_requirement_or_null":"performance analysis and verification"},
+    {"candidate_token":"C-99F84D42FA89AEF2","adequacy":"INADEQUATE","source_anchor":"Segmentation Strategy","rationale":"Lifecycle-message segmentation does not identify or improve the checkout latency bottleneck.","missing_material_requirement_or_null":"performance analysis and verification"},
+    {"candidate_token":"C-A300204572439468","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Recommend one or two high-leverage changes","rationale":"This is a trace-led performance workflow that names one bottleneck, limits changes to one or two, states tradeoffs, and compares baseline and after metrics under comparable conditions.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A9239D123143FF2B","adequacy":"INADEQUATE","source_anchor":"bottleneck diagnosis or tuning","rationale":"This skill explicitly routes an existing-measurement bottleneck diagnosis and tuning task to performance optimization rather than carrying it out.","missing_material_requirement_or_null":"trace-led bottleneck diagnosis and bounded tuning"},
+    {"candidate_token":"C-DDFFDE5B02E85D39","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation does not diagnose a checkout p95 regression or verify an optimization.","missing_material_requirement_or_null":"performance analysis and verification"}
+  ],
+  "reviewer_output_sha256": "40cdfac579015a9c83214f3708948309359d5f4b314837cb832b0402251a17e1"
+}
