@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0720",
+  "blind_packet_id": "P-F3C0FD1B1B88DE552A",
+  "batch_input_sha256": "3a5ecc3c12aceedf75c1fdda54ec3b3c37474766d2a2d123c255a6593c060d7f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-10DD027C268C8465",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Produces seven populated documents",
+      "rationale": "This maps and documents a codebase; it does not extract agreement facts into one workbook row per document.",
+      "missing_material_requirement_or_null": "Batch NDA extraction into the existing workbook's columns with clause-level provenance."
+    },
+    {
+      "candidate_token": "C-1B3435DEE03D498A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "A static mockup shows one moment",
+      "rationale": "This creates interaction specifications from UI designs, not tabular fact extraction from confidentiality agreements.",
+      "missing_material_requirement_or_null": "Document-by-document NDA extraction mapped to existing workbook columns with source links."
+    },
+    {
+      "candidate_token": "C-39FF5A3F27782620",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "This skill enables programmatic creation",
+      "rationale": "This manipulates Excel workbooks programmatically but provides no agreement-review schema or method for extracting supported confidentiality-agreement facts and provenance.",
+      "missing_material_requirement_or_null": "NDA-specific extraction into the existing tracked columns, with clause or section provenance for each recorded value."
+    },
+    {
+      "candidate_token": "C-3DEA0E63144C4858",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Most retros produce the same three actions",
+      "rationale": "This facilitates sprint retrospectives and has no confidentiality-agreement extraction or spreadsheet-population workflow.",
+      "missing_material_requirement_or_null": "Batch NDA fact extraction into one provenance-linked row per document."
+    },
+    {
+      "candidate_token": "C-5BD26AE2B039B012",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Review the uploaded non-disclosure agreement",
+      "rationale": "This produces an issue-and-recommendation legal review for one represented party, rather than populating a pre-existing cross-deal workbook row for each agreement using its defined tracking columns.",
+      "missing_material_requirement_or_null": "Column-directed, document-independent batch extraction with a source reference for every recorded value."
+    },
+    {
+      "candidate_token": "C-76D09B4B38BFB4F9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Triage mixed game demo and playtest feedback",
+      "rationale": "This prioritizes game-demo feedback and does not review confidentiality agreements or populate a workbook.",
+      "missing_material_requirement_or_null": "NDA extraction into established workbook fields with document provenance."
+    },
+    {
+      "candidate_token": "C-826C00F9A194E1F1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "This skill runs an evaluation and improvement loop",
+      "rationale": "This reviews tldraw SDK documentation for style and accuracy, not confidentiality agreements for tabular portfolio tracking.",
+      "missing_material_requirement_or_null": "Agreement-by-agreement fact extraction aligned to existing workbook columns and linked to supporting clauses."
+    },
+    {
+      "candidate_token": "C-BDFB2D998A43DA4E",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Use this workflow to review uploaded documents",
+      "rationale": "This directly applies predefined tabular column prompts to each uploaded NDA independently, extracts only document-supported facts, preserves clause or section references and other source identifiers, and renders an exportable Excel workbook. That matches one row per agreement in the existing tracked-field workbook with traceable provenance.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "87e2079a83b36aa6061a8d17e4e1aad00b21f506e2308a259661e68ed2cfaa27"
+}

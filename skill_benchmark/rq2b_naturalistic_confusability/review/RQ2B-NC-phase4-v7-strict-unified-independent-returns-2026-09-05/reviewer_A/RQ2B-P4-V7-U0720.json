@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0720",
+  "blind_packet_id": "P-F3C0FD1B1B88DE552A",
+  "batch_input_sha256": "3a5ecc3c12aceedf75c1fdda54ec3b3c37474766d2a2d123c255a6593c060d7f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-10DD027C268C8465",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Acquire Codebase Knowledge",
+      "rationale": "The skill documents an existing software codebase and does not extract agreement facts into a deal-tracking workbook.",
+      "missing_material_requirement_or_null": "One-row-per-agreement tabular extraction into the existing workbook with source links."
+    },
+    {
+      "candidate_token": "C-1B3435DEE03D498A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Prototype Spec",
+      "rationale": "The skill specifies interactive product behavior from design mockups and does not review confidentiality agreements or populate a workbook.",
+      "missing_material_requirement_or_null": "Batch NDA fact extraction with row-level source references in the existing workbook."
+    },
+    {
+      "candidate_token": "C-39FF5A3F27782620",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "XLSX Manipulation Skill",
+      "rationale": "It can programmatically edit the existing Excel workbook, but it does not provide a workflow for reviewing confidentiality agreements and extracting the tracked facts with source references.",
+      "missing_material_requirement_or_null": "Agreement-text extraction and source-linked population of one row per confidentiality agreement."
+    },
+    {
+      "candidate_token": "C-3DEA0E63144C4858",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "The skill facilitates sprint retrospectives and action tracking rather than document review and spreadsheet population.",
+      "missing_material_requirement_or_null": "One-row-per-document NDA fact extraction into a source-linked workbook."
+    },
+    {
+      "candidate_token": "C-5BD26AE2B039B012",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "NDA Review",
+      "rationale": "It reviews an NDA and cites clause references in a legal-risk table, but it is a single-agreement negotiation review rather than a batch workflow that populates each existing deal-tracking workbook row.",
+      "missing_material_requirement_or_null": "Batch extraction into the existing workbook's tracked fact columns with one row per agreement."
+    },
+    {
+      "candidate_token": "C-76D09B4B38BFB4F9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "game-demo-feedback-triage",
+      "rationale": "The skill triages game-demo feedback and has no confidentiality-agreement extraction or workbook-population workflow.",
+      "missing_material_requirement_or_null": "Batch NDA fact extraction into one source-linked workbook row per document."
+    },
+    {
+      "candidate_token": "C-826C00F9A194E1F1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Review documentation",
+      "rationale": "The skill evaluates tldraw SDK documentation against style and source code, not confidentiality agreements or deal workbooks.",
+      "missing_material_requirement_or_null": "A batch agreement-review workflow that extracts tracked facts into a source-linked workbook."
+    },
+    {
+      "candidate_token": "C-BDFB2D998A43DA4E",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "NDA Tabular Review",
+      "rationale": "It reviews each uploaded agreement against defined tabular columns, extracts only supported facts with clause and section references, and produces an exportable Excel workbook.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "2f426f8e95eba54e41b48eae764c3221a91d319a482294bf4ce144386e84ec03"
+}
