@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0917",
+  "blind_packet_id":"P-398B675310EB85DEC8",
+  "batch_input_sha256":"a184748219d7bd5975c8cce48d6547028ebf937c3d0419f43fc119d1f8d54159",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-2D973AC29C212D44","adequacy":"INADEQUATE","source_anchor":"name: security-prior-art-survey","rationale":"This surveys security prior art rather than producing a service-boundary guide.","missing_material_requirement_or_null":"User-facing page, API, journey, and failure-state documentation."},
+    {"candidate_token":"C-3A1BC89FDC5459A9","adequacy":"INADEQUATE","source_anchor":"name: buying-signal-tracker","rationale":"This prioritizes sales accounts rather than documenting application experiences.","missing_material_requirement_or_null":"User-facing service guide."},
+    {"candidate_token":"C-4D2510EC082A955C","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than documenting a web service.","missing_material_requirement_or_null":"UX/API boundary guide with journeys and states."},
+    {"candidate_token":"C-6976EF57C566F118","adequacy":"INADEQUATE","source_anchor":"name: data-architecture","rationale":"This explains data storage and schemas rather than the externally visible user experience.","missing_material_requirement_or_null":"User-facing pages, requests, journeys, wording, and navigation guide."},
+    {"candidate_token":"C-8A30DB5098B7DE07","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Evaluate and improve interface usability", "rationale":"It can assess usability and navigation, but does not build the requested standalone UX and externally available request guide.","missing_material_requirement_or_null":"Full boundary guide covering pages, client requests, journeys, states, and options."},
+    {"candidate_token":"C-D8029FB0A2FCBC62","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"name: system-architecture","rationale":"It can design an application architecture, but the request explicitly focuses on external UX/API boundaries rather than implementation.","missing_material_requirement_or_null":"Standalone user-facing surface documentation."},
+    {"candidate_token":"C-EA3C604EF7036348","adequacy":"FULLY_ACCEPTABLE","source_anchor":"user-facing surface — UX/DX/API from outside", "rationale":"It directly designs the outward-facing experience and API surface, matching the guide's pages, client requests, journeys, states, options, and unresolved decisions.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-F571D948348D5319","adequacy":"INADEQUATE","source_anchor":"name: webapp-testing","rationale":"This tests local web applications rather than documenting the proposed service surface.","missing_material_requirement_or_null":"User-facing application guide."}
+  ],
+  "reviewer_output_sha256":"01c0caeac6627e955104a373fdd449c25984501c6f50c4848afdaa1372828b0a"
+}

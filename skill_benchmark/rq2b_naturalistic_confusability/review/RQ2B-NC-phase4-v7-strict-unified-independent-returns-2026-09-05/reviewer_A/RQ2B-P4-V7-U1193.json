@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1193",
+  "blind_packet_id": "P-808ABBC27C1F75FDCD",
+  "batch_input_sha256": "5584712aa78b235aaa74c8d5bfc36e924e0ad3e37b3af529372ec3bb9bd7a09c",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1804369CAC15A4BF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Quote Follow-Up Sequences",
+      "rationale": "This manages sales quote follow-ups, not developer-guide review.",
+      "missing_material_requirement_or_null": "A documentation-review workflow with separate style and substance assessment, durable issue tracking, scoped fixes, and reassessment."
+    },
+    {
+      "candidate_token": "C-290B5B3E4CA922F4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Write documentation",
+      "rationale": "It writes and verifies documentation but does not perform the requested structured review and tracker-driven improvement loop.",
+      "missing_material_requirement_or_null": "Separate presentation and substance assessment with scores, a durable issue tracker, prioritized findings before edits, and reassessment."
+    },
+    {
+      "candidate_token": "C-44F7A67F3F812C1D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Setup Matt Pocock's Skills",
+      "rationale": "This sets up a skill collection and issue tracker, not a technical documentation review process.",
+      "missing_material_requirement_or_null": "A developer-guide review workflow with style and technical assessments, issue tracking, scoped improvements, and reassessment."
+    },
+    {
+      "candidate_token": "C-4D9DE3527CE72E57",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Review documentation",
+      "rationale": "It directly evaluates readability, voice, completeness, and accuracy separately, records each issue with status and round, presents prioritized fixes before changes, constrains changes to tracked in-scope issues, and verifies them in later rounds.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8DAFB4767B96A338",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "This runs pathway analysis rather than reviewing developer documentation.",
+      "missing_material_requirement_or_null": "A documentation-review workflow with presentation and substance assessment, issue tracking, and reassessment."
+    },
+    {
+      "candidate_token": "C-9D32FD455CE4B6FC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Crisis Comms External",
+      "rationale": "This prepares external crisis communications, not developer-guide reviews.",
+      "missing_material_requirement_or_null": "A documentation-review workflow with technical correctness checks and durable tracked dispositions."
+    },
+    {
+      "candidate_token": "C-D1D6CC296C49611F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Primary Research Planner",
+      "rationale": "This plans primary research studies, not technical documentation review.",
+      "missing_material_requirement_or_null": "A developer-guide review workflow with guide-based presentation and substance assessments and reassessment."
+    },
+    {
+      "candidate_token": "C-DD0BCD4DD2901BA9",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Write release notes",
+      "rationale": "It authors and verifies release documentation, but does not evaluate an existing developer guide with separate scores and a durable multi-round tracker.",
+      "missing_material_requirement_or_null": "A structured developer-guide review workflow with separate presentation and substance ratings, issue tracking, scoped changes, and reassessment."
+    }
+  ],
+  "reviewer_output_sha256": "73246a484041b7c1fe9f8297fbe7ca5e79eba80ef68b1a59c65ab3e3ebd70e12"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1115",
+  "blind_packet_id":"P-319A35E2CD782811CC",
+  "batch_input_sha256":"5dbb0f2ce5c0f4244b8c0c57fc3c8c7e8a1698aacb665dd2ac29bfddc545c064",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-2715673E563E815F","adequacy":"INADEQUATE","source_anchor":"name: breach","rationale":"This designs security attack scenarios rather than writing an SLO breach narrative.","missing_material_requirement_or_null":"Incident timeline, user impact, mitigation, and follow-up narrative."},
+    {"candidate_token":"C-4E1CCC4B30D8C9C1","adequacy":"INADEQUATE","source_anchor":"Do NOT use for incident postmortems", "rationale":"It explicitly excludes incident timeline and root-cause work.","missing_material_requirement_or_null":"SLO-breach narrative with impact, mitigation, and follow-ups."},
+    {"candidate_token":"C-9EA3B0C60B54EF1E","adequacy":"FULLY_ACCEPTABLE","source_anchor":"creates error budget policies, designs incident response procedures", "rationale":"It covers SLOs, incident management, capacity and reliability processes needed to turn incident notes into an SLO breach narrative.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-D6A0D6CCD5783053","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Defines and applies an SLO error-budget policy", "rationale":"It establishes the policy response to an SLO breach, but does not create the requested incident timeline and narrative.","missing_material_requirement_or_null":"Narrative synthesis of incident timeline, impact, mitigation, and follow-ups."},
+    {"candidate_token":"C-DE551812DAAD699C","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"monitoring and observability skill", "rationale":"It designs monitoring and SLO frameworks, but does not directly synthesize supplied incident notes into the requested breach narrative.","missing_material_requirement_or_null":"Incident narrative with timeline, impact, mitigation, and actions."},
+    {"candidate_token":"C-E3DF2F43B4D3BEEC","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack integrations rather than incident narratives.","missing_material_requirement_or_null":"SLO-breach narrative from incident notes."},
+    {"candidate_token":"C-F40A01BDBC43DE1A","adequacy":"INADEQUATE","source_anchor":"name: vn-pdpl","rationale":"This advises on Vietnamese privacy law rather than SLO incidents.","missing_material_requirement_or_null":"SLO incident narrative."},
+    {"candidate_token":"C-F815787E1095F9EE","adequacy":"INADEQUATE","source_anchor":"name: user-research-prior-art-survey","rationale":"This surveys user research rather than incident notes.","missing_material_requirement_or_null":"Timeline, impact, mitigation, and follow-up narrative."}
+  ],
+  "reviewer_output_sha256":"7758305512548d206eac8bf9de9cbba70c37e7687b2e326867a17de7a04a424b"
+}

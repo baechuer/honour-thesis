@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1115",
+  "blind_packet_id": "P-319A35E2CD782811CC",
+  "batch_input_sha256": "5dbb0f2ce5c0f4244b8c0c57fc3c8c7e8a1698aacb665dd2ac29bfddc545c064",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2715673E563E815F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Trigger Guidance",
+      "rationale": "This red-team skill explicitly routes incident response and postmortems elsewhere and instead produces adversarial security assessments.",
+      "missing_material_requirement_or_null": "A procedure for producing an SLO-breach narrative from incident notes is absent."
+    },
+    {
+      "candidate_token": "C-4E1CCC4B30D8C9C1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Do NOT use for incident postmortems",
+      "rationale": "This source explicitly excludes incident postmortems with a timeline and root-cause analysis in favor of another skill.",
+      "missing_material_requirement_or_null": "A procedure for producing an SLO-breach narrative from incident notes is absent."
+    },
+    {
+      "candidate_token": "C-9EA3B0C60B54EF1E",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### MUST DO",
+      "rationale": "It requires blameless postmortems for incidents and covers SLOs, error budgets, monitoring, and incident response, but its outputs focus on implementations and runbooks rather than the requested narrative.",
+      "missing_material_requirement_or_null": "A template or procedure for synthesizing the supplied incident notes into the requested breach narrative is absent."
+    },
+    {
+      "candidate_token": "C-D6A0D6CCD5783053",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Red (budget exhausted or SLO breach active)",
+      "rationale": "It explains how teams should respond when an SLO breach is active, including mitigation and reliability follow-up, but it does not turn incident evidence into a timeline, impact narrative, and action list.",
+      "missing_material_requirement_or_null": "A procedure for synthesizing the supplied incident notes into the requested breach narrative is absent."
+    },
+    {
+      "candidate_token": "C-DE551812DAAD699C",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Phase 11 — Incident Response Integration",
+      "rationale": "It covers SLO alerting, impact assessment, remediation, and post-incident review, but it is a monitoring architecture workflow rather than a procedure for writing the requested incident narrative from notes.",
+      "missing_material_requirement_or_null": "A procedure for synthesizing the supplied incident notes into the requested breach narrative is absent."
+    },
+    {
+      "candidate_token": "C-E3DF2F43B4D3BEEC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This skill builds Slack integrations; its incident example automates a channel but does not produce an SLO breach narrative.",
+      "missing_material_requirement_or_null": "A procedure for producing an SLO-breach narrative from incident notes is absent."
+    },
+    {
+      "candidate_token": "C-F40A01BDBC43DE1A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "### Workflow 5 — Breach Notification and Response",
+      "rationale": "This workflow concerns Vietnamese personal-data-breach compliance and statutory notification, not a service SLO breach narrative.",
+      "missing_material_requirement_or_null": "A procedure for producing an SLO-breach narrative from incident notes is absent."
+    },
+    {
+      "candidate_token": "C-F815787E1095F9EE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to activate",
+      "rationale": "This source surveys published user-research evidence for product design questions, which is outside incident and SLO reporting.",
+      "missing_material_requirement_or_null": "A procedure for producing an SLO-breach narrative from incident notes is absent."
+    }
+  ],
+  "reviewer_output_sha256": "ac9ddba49f17a06f314b2ca56cdd4fcd67f338af2cd66697d52ed5161e8771d3"
+}

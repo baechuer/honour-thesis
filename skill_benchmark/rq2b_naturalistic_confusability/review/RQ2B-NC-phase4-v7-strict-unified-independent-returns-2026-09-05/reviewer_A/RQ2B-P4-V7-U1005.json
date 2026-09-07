@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1005",
+  "blind_packet_id": "P-502849780DBB1AD1D0",
+  "batch_input_sha256": "8cd8e247b2b133bdf612f1ea53cb83a1db660c0c1575892f27b35d66556fe25c",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-699A0C198885ED15",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives, not WordPress plugin delivery planning.",
+      "missing_material_requirement_or_null": "A WordPress requirements-to-staged-delivery-plan workflow with project probing, minimal clarification, dependency-aware goals, integration checks, and extension planning."
+    },
+    {
+      "candidate_token": "C-6BF9C72101A17590",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Interview Me",
+      "rationale": "It elicits unresolved intent, but does not inspect a WordPress project or produce the requested staged delivery plan.",
+      "missing_material_requirement_or_null": "A WordPress requirements-to-plan workflow with dependency-aware foundation, user stories, cross-cutting work, integration checks, and safe extensions."
+    },
+    {
+      "candidate_token": "C-6EBF0439492E4D9B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# wp-spec-to-goal — Vague WP Plugin Idea → Codex /goal Bundle",
+      "rationale": "It probes and converts a vague WordPress idea into goals, but the prompt provides full requirements requiring the more complete phased requirements workflow.",
+      "missing_material_requirement_or_null": "A full WordPress requirements decomposition that stages foundation, separate user stories, cross-cutting features, integration, and later extensions."
+    },
+    {
+      "candidate_token": "C-BBFB8E4FA71DF69E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# TypeScript Strict Mode",
+      "rationale": "This configures TypeScript strictness, not a WordPress plugin delivery plan.",
+      "missing_material_requirement_or_null": "A WordPress requirements-to-staged-delivery-plan workflow."
+    },
+    {
+      "candidate_token": "C-BDA151F1E7C8F67D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Atlassian MCP Expert",
+      "rationale": "This operates Atlassian tools, not WordPress requirements decomposition.",
+      "missing_material_requirement_or_null": "A WordPress plugin staged delivery-planning workflow."
+    },
+    {
+      "candidate_token": "C-D8519AD3D4EF592E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# cli-spec-to-goal — Vague CLI Idea → Codex /goal Bundle",
+      "rationale": "This targets CLI projects rather than a WordPress membership plugin.",
+      "missing_material_requirement_or_null": "A WordPress requirements-to-staged-delivery-plan workflow."
+    },
+    {
+      "candidate_token": "C-EBEB4F7BF15AD0C9",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# wp-requirements-to-goals — Full WP Plugin Requirements → Codex /goal Project",
+      "rationale": "It directly probes an existing WordPress project, asks only unresolved questions, decomposes full requirements into foundation, per-user-story and cross-cutting goals, adds integration verification, and supports safe extension planning.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F7C025B1D02C0865",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "This performs GO and KEGG analysis, not WordPress plugin planning.",
+      "missing_material_requirement_or_null": "A dependency-aware staged plan for a WordPress membership plugin."
+    }
+  ],
+  "reviewer_output_sha256": "5266d22adf2249aed68810914f3371f4fa7cb34fe3b30d8735c6fcc07571bf49"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0917",
+  "blind_packet_id": "P-398B675310EB85DEC8",
+  "batch_input_sha256": "a184748219d7bd5975c8cce48d6547028ebf937c3d0419f43fc119d1f8d54159",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2D973AC29C212D44",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to activate",
+      "rationale": "This surveys security prior art, not the people-facing surface of a proposed service.",
+      "missing_material_requirement_or_null": "A user-facing surface guide covering pages, requests, onboarding, journeys, states, navigation, configuration, and open decisions."
+    },
+    {
+      "candidate_token": "C-3A1BC89FDC5459A9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Track Buying Signals & Trigger Events",
+      "rationale": "This tracks sales signals rather than documenting a service boundary.",
+      "missing_material_requirement_or_null": "A standalone user-facing UX and API surface guide."
+    },
+    {
+      "candidate_token": "C-4D2510EC082A955C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates retrospectives, not service-experience documentation.",
+      "missing_material_requirement_or_null": "A guide to visible pages, external requests, journeys, states, wording, navigation, configuration, and open decisions."
+    },
+    {
+      "candidate_token": "C-6976EF57C566F118",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Data Architecture",
+      "rationale": "It documents data architecture and decisions, but focuses on data internals rather than user and connected-client experiences.",
+      "missing_material_requirement_or_null": "A boundary-focused UX and API surface guide with onboarding, journeys, states, navigation, wording, and configuration."
+    },
+    {
+      "candidate_token": "C-8A30DB5098B7DE07",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# UX Heuristics Framework",
+      "rationale": "It can assess experience quality and system states, but does not generate the requested standalone service-surface guide.",
+      "missing_material_requirement_or_null": "A structured guide mapping pages, external requests, onboarding, journeys, states, navigation, wording, options, and unresolved decisions."
+    },
+    {
+      "candidate_token": "C-D8029FB0A2FCBC62",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# System Architecture",
+      "rationale": "It can document flows and open questions, but is centered on internal system architecture rather than the experience at the boundary.",
+      "missing_material_requirement_or_null": "A user-facing UX and API surface guide focused on visible pages, requests, journeys, state, navigation, wording, and configuration."
+    },
+    {
+      "candidate_token": "C-EA3C604EF7036348",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Surface Architecture (UX / DX / API)",
+      "rationale": "It directly creates one Markdown document from the consumer boundary with a quick-reference cheat sheet, surface map, onboarding, journeys, interaction states, navigation or API ergonomics, configuration, unresolved decisions, and Mermaid diagrams when useful.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F571D948348D5319",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Web Application Testing",
+      "rationale": "This tests web applications rather than documenting their user-facing boundary.",
+      "missing_material_requirement_or_null": "A standalone guide to the proposed service's UX and external API surface."
+    }
+  ],
+  "reviewer_output_sha256": "96b258a5e129a107dc042ec54708b29ab318945006b3730a8c1c6cfaab38bdba"
+}

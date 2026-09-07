@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1193",
+  "blind_packet_id":"P-808ABBC27C1F75FDCD",
+  "batch_input_sha256":"5584712aa78b235aaa74c8d5bfc36e924e0ad3e37b3af529372ec3bb9bd7a09c",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-1804369CAC15A4BF","adequacy":"INADEQUATE","source_anchor":"name: quote-follow-up-sequences","rationale":"This creates sales quote follow-ups rather than developer-guide reviews.","missing_material_requirement_or_null":"Separate documentation assessment, issue tracker, and re-review workflow."},
+    {"candidate_token":"C-290B5B3E4CA922F4","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Writing SDK documentation for tldraw", "rationale":"It supports documentation writing guidance, but does not provide the requested separate review dimensions, durable issue tracker, and controlled reassessment loop.","missing_material_requirement_or_null":"Presentation/substance audit with tracked findings and review-round reassessment."},
+    {"candidate_token":"C-44F7A67F3F812C1D","adequacy":"INADEQUATE","source_anchor":"name: setup-matt-pocock-skills","rationale":"This sets up engineering-agent skill context rather than reviewing developer documentation.","missing_material_requirement_or_null":"Documentation review and durable issue tracking."},
+    {"candidate_token":"C-4D9DE3527CE72E57","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Review and improve tldraw SDK documentation against the voice and docs guides", "rationale":"It directly reviews documentation against guidance, scores findings, and iterates through controlled improvement and reassessment.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-8DAFB4767B96A338","adequacy":"INADEQUATE","source_anchor":"name: gsva-analysis-and-visualization","rationale":"This performs genomic pathway analysis rather than documentation review.","missing_material_requirement_or_null":"Developer-guide assessment and issue tracker."},
+    {"candidate_token":"C-9D32FD455CE4B6FC","adequacy":"INADEQUATE","source_anchor":"name: crisis-comms-external","rationale":"This writes external crisis communications rather than developer guides.","missing_material_requirement_or_null":"Documentation quality assessment and tracked fixes."},
+    {"candidate_token":"C-D1D6CC296C49611F","adequacy":"INADEQUATE","source_anchor":"name: Primary Research Planner","rationale":"This designs studies rather than reviewing technical documentation.","missing_material_requirement_or_null":"Developer documentation assessment workflow."},
+    {"candidate_token":"C-DD0BCD4DD2901BA9","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"reviewing release note quality", "rationale":"It reviews release-documentation quality, but not a general developer-guide audit with durable findings tracking.","missing_material_requirement_or_null":"Guide coverage, correctness, tracker, and reassessment workflow."}
+  ],
+  "reviewer_output_sha256":"02b69ad33275a7ce4cec8644394c0f4977544a4c769aa3f8815e6bdcd96f8bb5"
+}
