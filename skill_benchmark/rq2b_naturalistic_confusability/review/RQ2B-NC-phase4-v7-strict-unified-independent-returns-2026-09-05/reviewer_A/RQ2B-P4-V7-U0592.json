@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0592",
+  "blind_packet_id": "P-D9C88FC6D81DFB194F",
+  "batch_input_sha256": "7f7af1702a6f172b2bf1ce00f9c5a91f21f5f03a8d7a84ba62e29958cee41d16",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0CFFAC195FFB9F31",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Formatted Report Writer",
+      "rationale": "This structures a general business report but does not plan or govern an authorised adversary-simulation engagement.",
+      "missing_material_requirement_or_null": "An authorised red-team engagement plan with rules of engagement, safety controls, phase plan, and security-specific reporting."
+    },
+    {
+      "candidate_token": "C-16A2AB6EDB297BC1",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Red Team Tactics",
+      "rationale": "It provides relevant adversary phases, ethical boundaries, detection-gap reporting, and recommendations, but lacks a complete engagement-planning process with written approvals, deconfliction, operating windows, and emergency-stop controls.",
+      "missing_material_requirement_or_null": "A complete authorised-engagement governance and safety plan covering approvals, rules of engagement, deconfliction contacts, operating windows, and an emergency-stop process."
+    },
+    {
+      "candidate_token": "C-19E2F2A44F7A2A27",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Breach",
+      "rationale": "It supports red-team threat modeling, phased test design, scope and authorization framing, and detection-focused reporting, but it does not provide the requested operational safety structure for operating windows, deconfliction contacts, and an emergency-stop procedure.",
+      "missing_material_requirement_or_null": "An operationally complete authorised-engagement plan with explicit windows, deconfliction, safety controls, and emergency-stop process."
+    },
+    {
+      "candidate_token": "C-4B2527826A483E2A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Design Critique",
+      "rationale": "This critiques product design and does not plan adversary simulation or security exercise governance.",
+      "missing_material_requirement_or_null": "An authorised red-team engagement plan with rules of engagement, safety controls, phase plan, and security-specific reporting."
+    },
+    {
+      "candidate_token": "C-8DB72E8BCCE5778E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Executive Summary",
+      "rationale": "This writes a concise executive summary but does not supply the exercise plan, safety controls, timeline, or detection-gap analysis that must underlie the report.",
+      "missing_material_requirement_or_null": "An authorised red-team engagement plan with rules of engagement, safety controls, phase plan, and security-specific reporting."
+    },
+    {
+      "candidate_token": "C-BD0035F1366EF570",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Portray Audience",
+      "rationale": "This addresses audience portrayal rather than authorised security testing or adversary-simulation planning.",
+      "missing_material_requirement_or_null": "An authorised red-team engagement plan with rules of engagement, safety controls, phase plan, and security-specific reporting."
+    },
+    {
+      "candidate_token": "C-C6DE41322BD8D8B0",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Red Team Operations & Engagement Planning",
+      "rationale": "It directly provides authorised red-team engagement planning: written authorization and scope gates, rules of engagement, operating windows, deconfliction, emergency abort, operational-safety considerations, phased objectives, and a report with executive summary, timeline, detection gaps, and prioritised recommendations.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-DE4C36EAC4C2238E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This performs gene-set enrichment analysis and is unrelated to security exercise planning or reporting.",
+      "missing_material_requirement_or_null": "An authorised red-team engagement plan with rules of engagement, safety controls, phase plan, and security-specific reporting."
+    }
+  ],
+  "reviewer_output_sha256": "fb4d3cd1fbb68c84675f075100495b3ab61de5658851ec20304107b50570aff2"
+}

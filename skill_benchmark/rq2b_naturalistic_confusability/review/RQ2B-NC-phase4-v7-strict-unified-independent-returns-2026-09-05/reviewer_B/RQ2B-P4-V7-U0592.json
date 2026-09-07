@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0592",
+  "blind_packet_id": "P-D9C88FC6D81DFB194F",
+  "batch_input_sha256": "7f7af1702a6f172b2bf1ce00f9c5a91f21f5f03a8d7a84ba62e29958cee41d16",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0CFFAC195FFB9F31",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Formatted Report Writer",
+      "rationale": "This skill structures business reports but does not plan an authorised adversary-simulation engagement or its safety controls.",
+      "missing_material_requirement_or_null": "An authorised adversary-simulation plan covering scope controls, approvals, operational safety, deconfliction, and phases."
+    },
+    {
+      "candidate_token": "C-16A2AB6EDB297BC1",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## 1. MITRE ATT&CK Phases",
+      "rationale": "It supports ATT&CK-oriented credential-access and lateral-movement phases, ethical boundaries, and detection-gap reporting, but not the complete engagement-control process requested.",
+      "missing_material_requirement_or_null": "A complete authorised-engagement governance and safety process, including approval, emergency stop, operating windows, deconfliction contacts, and infrastructure constraints."
+    },
+    {
+      "candidate_token": "C-19E2F2A44F7A2A27",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Workflow",
+      "rationale": "It provides a threat-model, adversary-scenario, detection, and reporting workflow with scope and authorization references, but it does not supply the requested operational-control details.",
+      "missing_material_requirement_or_null": "A concrete authorised-engagement control process for emergency stop, operating windows, deconfliction contacts, and operational-safety planning."
+    },
+    {
+      "candidate_token": "C-4B2527826A483E2A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Design Critique",
+      "rationale": "This skill critiques product designs and has no workflow for planning a corporate-network adversary simulation.",
+      "missing_material_requirement_or_null": "A red-team engagement plan with authorization, rules of engagement, safety controls, phase design, and reporting."
+    },
+    {
+      "candidate_token": "C-8DB72E8BCCE5778E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Executive Summary",
+      "rationale": "This skill compresses an existing report into a summary; it does not create the required authorised exercise plan or operational controls.",
+      "missing_material_requirement_or_null": "A workflow for planning and governing the authorized adversary-simulation exercise and its report."
+    },
+    {
+      "candidate_token": "C-BD0035F1366EF570",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Portray Audience",
+      "rationale": "This skill analyzes commercial audiences from public evidence and is unrelated to corporate-network security exercise planning.",
+      "missing_material_requirement_or_null": "An authorised adversary-simulation planning workflow with operational safety and reporting requirements."
+    },
+    {
+      "candidate_token": "C-C6DE41322BD8D8B0",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "### 1. Engagement Planning",
+      "rationale": "The engagement-planning framework explicitly covers authorization, scope limits, rules of engagement, operating windows, deconfliction, emergency abort, operational infrastructure, attack phases, and the required report elements.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-DE4C36EAC4C2238E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This skill performs gene-set enrichment analysis and does not address adversary-simulation planning or security engagement governance.",
+      "missing_material_requirement_or_null": "An authorised red-team engagement planning and reporting workflow."
+    }
+  ],
+  "reviewer_output_sha256": "0d05396fa458620a62718f2bb59bc7468a931c7566b309f63410cba03eafd3fb"
+}
