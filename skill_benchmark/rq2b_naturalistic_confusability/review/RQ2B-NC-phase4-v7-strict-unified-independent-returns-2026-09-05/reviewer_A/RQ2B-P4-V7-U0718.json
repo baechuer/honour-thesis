@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-2206F65DF0F21994",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly requires a failing test before the minimal fix, then refactoring on green, satisfying every explicit workflow requirement.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4EBC75045D82A96B",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It facilitates sprint retrospectives rather than implementing a bug fix through tests-first red-green-refactor work.",
+      "source_anchor": "## Timeboxed agenda (60 minutes)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-702D3113291C5D28",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It provides causal-inference econometrics guidance, not a tests-first workflow for implementing a bug fix.",
+      "source_anchor": "## Pre-flight Checklist"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-79E70B985DD17FE9",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It performs GO and KEGG enrichment analysis rather than directing a failing test, minimal fix, and refactor.",
+      "source_anchor": "## Usage"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AEA00D8533A35C05",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It creates a GitHub issue from a specification, without directions to implement a bug fix using test-first red-green-refactor.",
+      "source_anchor": "## Process"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BF933EC3DAEF501F",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It creates issues for unmet requirements, without implementing a bug fix via a failing test and red-green-refactor cycle.",
+      "source_anchor": "## Process"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E4C8443535970B0A",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It designs and interprets load tests, not an implementation workflow that begins with a failing bug test and ends with refactoring.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F16B5C2089F8D21A",
+      "missing_material_requirement_or_null": "A red-green-refactor bug-fix workflow.",
+      "rationale": "It builds Slack bots and integrations rather than directing a bug fix through the requested red-green-refactor sequence.",
+      "source_anchor": "## Instructions"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0718",
+  "batch_input_sha256": "16ea34ce2ed8a717315971030b1056fd4cd93544abc4902fef8b7f400f8975d0",
+  "blind_packet_id": "P-BC04FDA4843D5447F9",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "68179377c3c5d04f22b6f9c58e17d74baee8dda32efba25dc558127b74adeed9"
+}
