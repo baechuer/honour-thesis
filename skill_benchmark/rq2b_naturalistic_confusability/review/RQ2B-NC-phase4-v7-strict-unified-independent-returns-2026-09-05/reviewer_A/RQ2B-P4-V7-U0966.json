@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-00C58A30FCE01EF9",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control protocol that holds 4°C during setup, incubates at 37°C for 20 minutes, returns to 4°C, and specifies safe shutdown.",
+      "rationale": "This is a sleep-wellness protocol and provides no laboratory sample-preparation temperature control.",
+      "source_anchor": "name: Sleep Optimizer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3321DBE1724067AD",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control protocol that holds 4°C during setup, incubates at 37°C for 20 minutes, returns to 4°C, and specifies safe shutdown.",
+      "rationale": "This source creates SEO content briefs and contains no sample-preparation thermal-control procedure.",
+      "source_anchor": "name: nod-content-brief"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-54717B33758F8003",
+      "missing_material_requirement_or_null": "A temperature-module-specific, non-cycling protocol for the requested 4°C–37°C–4°C sequence, including the 20-minute hold and safe shutdown.",
+      "rationale": "It can control a block across the requested temperatures and deactivate it, but its own scope directs simple temperature control to the Temperature Module rather than this thermocycler.",
+      "source_anchor": "- Simple temperature control needed (use Temperature Module for 4-95°C range)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5C036661DE319066",
+      "missing_material_requirement_or_null": "A cooling-capable, non-agitating temperature-control procedure for 4°C setup, 37°C for 20 minutes, return to 4°C, and safe shutdown.",
+      "rationale": "The Heater-Shaker cannot cool to 4°C and its intended operation includes orbital mixing, contrary to the requested heating-and-cooling-only workflow.",
+      "source_anchor": "- Only temperature control needed (use Temperature Module instead)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A40FA1CE052F5B82",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control protocol that holds 4°C during setup, incubates at 37°C for 20 minutes, returns to 4°C, and specifies safe shutdown.",
+      "rationale": "This is a security prior-art research method, not an automated sample-preparation or temperature-control procedure.",
+      "source_anchor": "name: security-prior-art-survey"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C4EE7C22138ACE93",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control protocol that holds 4°C during setup, incubates at 37°C for 20 minutes, returns to 4°C, and specifies safe shutdown.",
+      "rationale": "This source concerns production Kubernetes manifests and has no laboratory temperature-control material.",
+      "source_anchor": "name: Kubernetes Basics"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C836CF11BC9272E2",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control protocol that holds 4°C during setup, incubates at 37°C for 20 minutes, returns to 4°C, and specifies safe shutdown.",
+      "rationale": "This source facilitates software-team retrospectives and supplies no sample-preparation temperature-control procedure.",
+      "source_anchor": "name: Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E385DA7A982EFA77",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supports 4–95°C heating and cooling without mixing, gives blocking temperature control and 4°C/37°C/4°C examples, and specifies deactivation for safe shutdown.",
+      "source_anchor": "description: Opentrons Temperature Module - precise heating and cooling (4-95°C) for sample storage, enzyme reactions, and temperature-sensitive protocols with aluminum block adapters for plates, tubes, and PCR strips"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0966",
+  "batch_input_sha256": "0b35f828b8e6b7929eeb3193d26da9ed4cd80640ef3ed800dca1d250b30ed98d",
+  "blind_packet_id": "P-955DE7E6051A7C344D",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "95d0159de976629b7f06d47f275819183c4f7d99c7de92774c00d5fad584c109"
+}

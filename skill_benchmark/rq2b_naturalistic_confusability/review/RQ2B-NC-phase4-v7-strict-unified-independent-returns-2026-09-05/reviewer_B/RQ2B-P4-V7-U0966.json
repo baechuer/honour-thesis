@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-00C58A30FCE01EF9",
+      "missing_material_requirement_or_null": "Temperature-control and safe-shutdown procedure for the specified plate workflow.",
+      "rationale": "Sleep scheduling guidance does not provide an automated laboratory plate temperature sequence.",
+      "source_anchor": "# Sleep Optimizer"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3321DBE1724067AD",
+      "missing_material_requirement_or_null": "A 4°C-to-37°C-to-4°C laboratory temperature-control protocol with shutdown.",
+      "rationale": "SEO content-brief research is unrelated to controlling plate temperatures.",
+      "source_anchor": "# Content Brief"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-54717B33758F8003",
+      "missing_material_requirement_or_null": "A simple non-cycling, temperature-only plate workflow matching the requested module.",
+      "rationale": "This source directs simple temperature-only control to a Temperature Module rather than its thermocycling workflow.",
+      "source_anchor": "Simple temperature control needed"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5C036661DE319066",
+      "missing_material_requirement_or_null": "Active 4°C cooling before and after the 37°C hold without orbital agitation.",
+      "rationale": "The module cannot actively cool and is designed around heating with optional orbital shaking.",
+      "source_anchor": "The Heater-Shaker cannot actively cool"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A40FA1CE052F5B82",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control and shutdown procedure.",
+      "rationale": "Security prior-art survey instructions do not address plate heating or cooling.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C4EE7C22138ACE93",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control and shutdown procedure.",
+      "rationale": "Kubernetes configuration guidance is unrelated to enzyme plate temperature control.",
+      "source_anchor": "# Kubernetes Basics"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C836CF11BC9272E2",
+      "missing_material_requirement_or_null": "An automated laboratory temperature-control and shutdown procedure.",
+      "rationale": "Sprint retrospective facilitation does not provide a laboratory thermal workflow.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E385DA7A982EFA77",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supports stable 4°C storage, a blocking 37°C hold with timed delay, return to 4°C, and explicit deactivation.",
+      "source_anchor": "### Temperature-Sensitive Enzyme Reaction"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0966",
+  "batch_input_sha256": "0b35f828b8e6b7929eeb3193d26da9ed4cd80640ef3ed800dca1d250b30ed98d",
+  "blind_packet_id": "P-955DE7E6051A7C344D",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "cd7391a7ef1e4fc9feb4f35044c8786ce46f576ec6fe5f25b79d67c9ea00a5c9"
+}
