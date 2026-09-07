@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0189E20226A3D3C3",
+      "missing_material_requirement_or_null": "General-purpose prose revision for the supplied travel-request note.",
+      "rationale": "This skill is a sprint-retrospective facilitation procedure, not a workflow for revising a document into polished continuous prose.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-037861D927EC07BE",
+      "missing_material_requirement_or_null": "General-purpose prose revision for the supplied travel-request note.",
+      "rationale": "This skill runs gene-set enrichment analysis and produces analysis tables and plots; it has no document-revision capability.",
+      "source_anchor": "# Scope"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-387AD956B85F7323",
+      "missing_material_requirement_or_null": "General-purpose document editing that returns only the requested continuous prose in the original document form.",
+      "rationale": "It can polish prose while preserving facts, but its routing and stated scope are academic or scientific writing and it requires an extra detected-axis line, which conflicts with the requested travel-note output form.",
+      "source_anchor": "academic or scientific writing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3FA6E3F2F4109535",
+      "missing_material_requirement_or_null": "A workflow for revising a non-scholarly travel-request note without recasting it as a research paper.",
+      "rationale": "The skill is explicitly for technical research papers and its prescribed argument and manuscript workflow does not fit a travel-request document.",
+      "source_anchor": "# Paper Writing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5AFAEE899A7295F9",
+      "missing_material_requirement_or_null": "General-purpose prose revision for the supplied travel-request note.",
+      "rationale": "This skill builds Slack bots and integrations rather than reading and revising a prose document.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6B54A8871A6F6F79",
+      "missing_material_requirement_or_null": "A prose-revision workflow for a plain-text travel-request note.",
+      "rationale": "The skill only converts PDF files to Markdown, while the supplied input is a raw text file and the requested task is revision rather than conversion.",
+      "source_anchor": "# Convert PDF to Markdown"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AB3470A48298B535",
+      "missing_material_requirement_or_null": "General-purpose prose revision for the supplied travel-request note.",
+      "rationale": "This is a code-refactoring workflow focused on preserving program behavior, not on revising prose for a human reader.",
+      "source_anchor": "# Code Simplification"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F142F0BBB3DF948C",
+      "missing_material_requirement_or_null": "A workflow for revising a non-grant travel-request note without imposing proposal structure or sponsor analysis.",
+      "rationale": "The skill is for grant and fellowship applications, whose required funder, proposal, and milestone structure does not fit the requested document.",
+      "source_anchor": "# Grant Writing"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0624",
+  "batch_input_sha256": "63a54e9ca31ac05fbfcdda773011bef6a2e88130d2d0cb833b347d32e8d89448",
+  "blind_packet_id": "P-1165E5CA4EB89B6D70",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9ac8286c0c7fc8a66b3ad74ee3fb1b94243f9e5c8e8927a005a1fe0582d23bd1"
+}
