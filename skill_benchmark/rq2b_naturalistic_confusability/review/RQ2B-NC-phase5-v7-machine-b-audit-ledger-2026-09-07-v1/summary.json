@@ -1,0 +1,54 @@
+{
+  "bound_inputs": {
+    "machine_b_manifest": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2_fresh_v20/machine_b_manifest.jsonl",
+    "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "protocol": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "counts": {
+    "coordinator_groups_pending_or_in_progress": 64,
+    "coordinator_packets_total": 96,
+    "exact_agreement_groups_finalised": 55,
+    "existing_two_return_pairs": 192,
+    "invalid_both_lanes": 49,
+    "invalid_pair_reissue_required": 73,
+    "invalid_reviewer_a_only": 15,
+    "invalid_reviewer_b_only": 9,
+    "machine_b_assigned_groups": 533,
+    "no_return_groups_pending_initial_two_reviews": 341,
+    "reconciliation_groups_materialised": 119,
+    "valid_two_return_pairs": 119
+  },
+  "outputs": {
+    "validated_existing_return_pairs.jsonl": "c7a3fa57be1ef80632cf1a492b85c36202ccd6a1fca5c72f7a43acf9bf3f830b"
+  },
+  "previous_partial_reconciliation_artifacts": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0467",
+      "disposition": "PRESERVE_AS_PREVIOUS_PARTIAL_ARTIFACT_NOT_CURRENT_RECONCILIATION_EVIDENCE",
+      "files": [],
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-reconciliation-2026-09-05/RQ2B-P4-V7-U0467"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0740",
+      "disposition": "PRESERVE_AS_PREVIOUS_PARTIAL_ARTIFACT_NOT_CURRENT_RECONCILIATION_EVIDENCE",
+      "files": [],
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-reconciliation-2026-09-05/RQ2B-P4-V7-U0740"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0869",
+      "disposition": "PRESERVE_AS_PREVIOUS_PARTIAL_ARTIFACT_NOT_CURRENT_RECONCILIATION_EVIDENCE",
+      "files": [
+        {
+          "path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-reconciliation-2026-09-05/RQ2B-P4-V7-U0869/sealed_coordinator_packets.jsonl",
+          "sha256": "9962e345165d96e952d712744231da891514936145fb025b882f40cefccf272c"
+        }
+      ],
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-reconciliation-2026-09-05/RQ2B-P4-V7-U0869"
+    }
+  ],
+  "replay": "Run the frozen protocol validation against each ledger row; the ledger records no target or opaque join.",
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_audit_ledger_v1",
+  "scope": "Machine B only; V7 frozen package only; no target identity, opaque join, acceptable-set decision, retrieval, metric, or library-level claim.",
+  "status": "PASS_FROZEN_REPLAY_EXISTING_RETURN_AUDIT_WITH_PENDING_REVIEW_WORK"
+}

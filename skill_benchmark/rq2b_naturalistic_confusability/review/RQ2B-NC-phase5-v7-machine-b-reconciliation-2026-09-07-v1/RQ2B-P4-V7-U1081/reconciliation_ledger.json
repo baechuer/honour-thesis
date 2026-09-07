@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1081",
+  "blind_packet_id": "P-EDD3AA3A1D9DA0E455",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-106305997341F822",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "JVM-embedded stream processing library with no separate cluster.",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Build Mode"
+    },
+    {
+      "candidate_token": "C-2DBB52D41D22CB10",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### consumer.py Pattern",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "consumer.py Pattern"
+    },
+    {
+      "candidate_token": "C-2F3C353C4BDB0635",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Confluent Kafka Java Client Creation",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Consumer Pattern"
+    },
+    {
+      "candidate_token": "C-44DCB50BB9CBB774",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Scope",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Scope"
+    },
+    {
+      "candidate_token": "C-577855CB0086865F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# LangSmith",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Overview"
+    },
+    {
+      "candidate_token": "C-BE0829CD372197DF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Algorand Python",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Algorand Python"
+    },
+    {
+      "candidate_token": "C-EB17F5EC6D229F54",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Database Schema Migration with Liquibase and Flyway",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Database Schema Migration with Liquibase and Flyway"
+    },
+    {
+      "candidate_token": "C-EC38995D4FD36920",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Python Pro",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Core Workflow"
+    }
+  ],
+  "reviewer_A_return_sha256": "7c67c27012cf664b472d90da6f5591911055a3bd3c948cda1168574d3cea47b4",
+  "reviewer_B_return_sha256": "e634b3e723ee2de399cb9febb81aa7daa33f50287194e05c4a811e40dc7a8dc1",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

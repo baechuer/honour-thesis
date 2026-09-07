@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1101",
+  "blind_packet_id": "P-046C3A8F3FC2369397",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-1D69697280405EC9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "## Rule 3: partitioned table indexes require the two-step pattern",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "## Rule 3: partitioned table indexes require the two-step pattern"
+    },
+    {
+      "candidate_token": "C-209186D94A3B32C2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Apache Spark Optimization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## When to Use This Skill"
+    },
+    {
+      "candidate_token": "C-8A68739396D89A0B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "### Adding Indexes",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "### Adding Indexes"
+    },
+    {
+      "candidate_token": "C-991C48EB1A627A13",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# PostgreSQL Migrations Skill",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Migration Checklist"
+    },
+    {
+      "candidate_token": "C-C30257733E8D8AB9",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Build indexes and constraints without blocking.",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Workflow"
+    },
+    {
+      "candidate_token": "C-CE7DF0EC5D329A1D",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Index Advisor",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Deliverable"
+    },
+    {
+      "candidate_token": "C-FAD8B6CBAA72D7F2",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Schema Versioning",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "## Guidelines"
+    },
+    {
+      "candidate_token": "C-FEAE4AEB84AA5282",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Overview",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "## When to activate"
+    }
+  ],
+  "reviewer_A_return_sha256": "63424fe99098be6f7582c619c2418d713c2fd2d51c65a916cc4e4a33a5ea71dc",
+  "reviewer_B_return_sha256": "a5a35b5512b252034da84cc9b8de254127ff137840fe5e499e6fa157aaf93413",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

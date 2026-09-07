@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0085",
+  "blind_packet_id": "P-35BA12AD6AF9C3B5CA",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-2AD9A01ED8BD1474",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Overview",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: slack-bot-builder"
+    },
+    {
+      "candidate_token": "C-2FEFA6BC92B17D76",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Investigation Steps",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "name: alerting-oncall"
+    },
+    {
+      "candidate_token": "C-8E8439292DF0119B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Single Query Too Slow (Latency)",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "name: qdrant-search-speed-optimization"
+    },
+    {
+      "candidate_token": "C-8FAFCBA83586FCFF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## When to activate",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: user-research-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-C337CFD0B8BD08D8",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Core Workflow",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "name: shopify-expert"
+    },
+    {
+      "candidate_token": "C-D60055D5970F9F7E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Core Capabilities",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "name: langtrace"
+    },
+    {
+      "candidate_token": "C-D9888ACD346691B5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "## Core Workflow",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "name: chaos-engineer"
+    },
+    {
+      "candidate_token": "C-FF64EBACC125CEF6",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "## Timeboxed agenda (60 minutes)",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Sprint Retro Facilitator"
+    }
+  ],
+  "reviewer_A_return_sha256": "af0ed1700de54fb9231598c79a6caf3eb75ee6ef6901ea6fde3c9b3ae49699b2",
+  "reviewer_B_return_sha256": "f19c221004a115444517737c4429354592ab910aa0e197a6c2228ee4d49bd003",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

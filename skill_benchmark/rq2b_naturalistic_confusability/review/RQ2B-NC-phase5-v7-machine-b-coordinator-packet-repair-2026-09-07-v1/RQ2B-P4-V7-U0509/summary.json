@@ -1,0 +1,17 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0509",
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/summary.json": "adca8161bb4d79fc7e8f1af9242f42d61f36a7ca32a863394b2111e288398aea",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0509.json": "9c12e41fbba422e103370d3e9152a8dfe168148ec63002fad4ccda4a1f70c12a",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0509.json": "ae5f9e855908e21d22a11ccfb845bddf476af5d213134e471130cdb0747dfd3c",
+    "skill_benchmark/scripts/materialize_rq2b_nc_phase4_v7_coordinator_repair_2026_09_05.py": "e8e9bbacbcb68b330f6085864156df92a003793a6b7348a8ab11f033a458dda5",
+    "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "claim_boundary": "This repairs coordinator-packet dispatch only. It uses already-validated independent returns, preserves their target-blind source-only boundary, and makes no final candidate or library disposition.",
+  "coordinator_packets": 1,
+  "outputs": {
+    "strict_sealed_coordinator_packets.jsonl": "7a249a2818c4dc3792e411b85b7b1d29b1938ed433c25329d4ac81db038c9bea"
+  },
+  "reason": "The original V7 reconciliation renderer omitted reviewer-return SHA bindings from coordinator-visible packets. This V7-C2 repair rebuilds every eligible packet from the V7 protocol's independently validated return loader, includes the exact bindings required by the frozen coordinator schema, and fail-closed verifies its entire bound-input ledger.",
+  "status": "PASS_V7_COORDINATOR_PACKET_REPAIR_V2_PENDING_FRESH_COORDINATOR_RETURNS"
+}
