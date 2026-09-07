@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0575",
+  "blind_packet_id": "P-AED0B70E586BC386CF",
+  "batch_input_sha256": "169ae2b665b8c575acc536c137bbf75d458e9698ca5f3ad698680d20ce49021c",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1C6FEA6175612AD5",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Presentation Builder",
+      "rationale": "It supports creating editable decks from source material and exporting them after visual review, but it does not supply a dedicated HTML analytics-report conversion workflow that preserves the report structure and charts in native slide elements.",
+      "missing_material_requirement_or_null": "A dedicated conversion of the existing HTML analytics report into an editable native-slide deck while preserving its findings, charts, and visual hierarchy."
+    },
+    {
+      "candidate_token": "C-29A0A92F01222496",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Report To PDF",
+      "rationale": "This converts a report to a static PDF, not an editable presentation deck.",
+      "missing_material_requirement_or_null": "An editable presentation-deck conversion that preserves report charts, findings, and visual hierarchy."
+    },
+    {
+      "candidate_token": "C-3EDA87B49C4FD584",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Requirements for Outputs",
+      "rationale": "This creates and edits spreadsheet files rather than converting an HTML analytics report into slides.",
+      "missing_material_requirement_or_null": "An editable presentation-deck conversion that preserves report charts, findings, and visual hierarchy."
+    },
+    {
+      "candidate_token": "C-69250731A2A64007",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Visual Hierarchy",
+      "rationale": "This audits visual hierarchy in a layout but does not create or convert an editable presentation deck from the report.",
+      "missing_material_requirement_or_null": "An editable presentation-deck conversion that preserves report charts and findings without reinterpreting the analysis."
+    },
+    {
+      "candidate_token": "C-AA8AD8792A91CE9B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Refactoring UI Design System",
+      "rationale": "This improves web UI styling and design systems, not report-to-slide conversion or an editable deck artifact.",
+      "missing_material_requirement_or_null": "An editable presentation-deck conversion that preserves report charts, findings, and visual hierarchy."
+    },
+    {
+      "candidate_token": "C-D78789FED8BC32A7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Report To Google Doc",
+      "rationale": "This converts an HTML report into DOCX or a Google Drive document, not a presentation deck.",
+      "missing_material_requirement_or_null": "An editable presentation-deck conversion that preserves report charts, findings, and visual hierarchy."
+    },
+    {
+      "candidate_token": "C-E641313681C86FD5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This performs gene-set enrichment analysis rather than converting an existing analytics report into slides.",
+      "missing_material_requirement_or_null": "An editable presentation-deck conversion that preserves report charts, findings, and visual hierarchy."
+    },
+    {
+      "candidate_token": "C-F4F1A3228317B762",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Report To Google Slides",
+      "rationale": "It directly converts an existing HTML analytics report into an editable slide deck, preserving decision-critical findings and chart evidence, retaining slide-native editable elements where practical, and requiring visual verification before handoff.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "592683a6cd46780ea527a6be1fca5f7c64f8e849baa5bfbab8e95b7e1e3b2108"
+}
