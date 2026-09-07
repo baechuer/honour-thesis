@@ -1,0 +1,17 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_008_reissue_002_validation_v1",
+  "scope": "Machine B V7 target-blind reissue validation only.",
+  "status": "PENDING_REISSUE_REQUIRES_FRESH_TARGET_BLIND_REVIEWER",
+  "batch_id": "RQ2B-P4-V7-U0527",
+  "invalid_lane": "B",
+  "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-002-2026-09-07-v1/returns/reviewer_B/RQ2B-P4-V7-U0527.json",
+  "raw_return_sha256": "45c5d064ef545ddd41a4da20d3f2c908777f10bc1e5d70fe6b19ae3deaa53d52",
+  "failure_reason": "V7 assessment adequacy, source-anchor or rationale drift: one source anchor has fewer than four normalized characters.",
+  "historical_preservation": {
+    "original_B_return": "retained in M8 collection checkpoint",
+    "reissue_001_B_return": "retained in reissue-001 validation",
+    "reissue_002_B_return": "retained here"
+  },
+  "decision": "Do not silently edit any assessment or reassign the group to a reviewer who has already reviewed its source-visible packet. A future reissue requires a fresh target-blind reviewer independent of the retained R001 A lane.",
+  "claim_boundary": "No reconciliation, final disposition, opaque target join, acceptable set, main-tail designation, retrieval claim, or library claim is materialised."
+}

@@ -1,0 +1,19 @@
+{
+  "artifact_type": "traceable_raw_return_format_repair",
+  "scope": "Machine B V7 M8 reissue 002 reviewer_B only",
+  "reason": "git diff --check detected an extra terminal blank line",
+  "semantic_change": "none",
+  "raw_preservation": "Original bytes are base64 archived and hash-replay verified before normalization",
+  "entries": [
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-002-2026-09-07-v1/returns/reviewer_B/RQ2B-P4-V7-U0527.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-002-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0527.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "01948aaae7a7679e7900d94d8e50748b35eabe84ba58f24cdfcd3478ca3cd37b",
+      "repaired_raw_sha256": "45c5d064ef545ddd41a4da20d3f2c908777f10bc1e5d70fe6b19ae3deaa53d52",
+      "base64_replay_sha256": "01948aaae7a7679e7900d94d8e50748b35eabe84ba58f24cdfcd3478ca3cd37b",
+      "original_byte_length": 3676,
+      "repaired_byte_length": 3675
+    }
+  ]
+}

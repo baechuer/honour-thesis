@@ -1,0 +1,1 @@
+# V7 Machine B M8 reissue 002 validation\n\nThe retained R002 B return is structurally invalid because of a source-anchor rule failure. It is preserved. This one group remains pending a fresh target-blind B reissue and does not affect the eleven other validated M8 pairs.\n

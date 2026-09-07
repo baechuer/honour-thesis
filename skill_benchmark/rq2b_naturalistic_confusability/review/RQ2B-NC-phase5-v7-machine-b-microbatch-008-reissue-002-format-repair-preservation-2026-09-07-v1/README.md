@@ -1,0 +1,1 @@
+# V7 Machine B M8 reissue 002 format-repair preservation\n\nThis archive preserves the exact pre-normalisation bytes of the invalid but retained Reviewer-B reissue return. The EOF-only repair does not correct the validation failure.\n
