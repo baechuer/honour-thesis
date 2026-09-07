@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1170D09CB0B7B19E",
+      "missing_material_requirement_or_null": "Chemical identifier resolution, property retrieval, 2D structures, and analogue search.",
+      "rationale": "This skill selects AI models from benchmark leaderboards and provides no compound-analysis workflow.",
+      "source_anchor": "HuggingFace Best Model Finder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2B5EBC29AE501EAB",
+      "missing_material_requirement_or_null": "Compound resolution, chemical properties, structure images, and structural analogue search.",
+      "rationale": "This is guidance for JavaScript in n8n Code nodes, not a small-molecule data workflow.",
+      "source_anchor": "JavaScript Code Node"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-4127E110BC5B8328",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It resolves supported identifiers, batches the requested properties, downloads PNG structures, and documents thresholded similarity results capped at 20.",
+      "source_anchor": "PubChem Compound Search"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-68305F1BBBAD8FD4",
+      "missing_material_requirement_or_null": "Common-name and general registry resolution, molecular formula, and 2D structure images.",
+      "rationale": "It supports SMILES/ZINC lookup, several requested properties, and capped similarity search, but lacks essential input and output coverage.",
+      "source_anchor": "ZINC Chemical Library Database"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-989B6D6A420BF9A2",
+      "missing_material_requirement_or_null": "Compound resolution, chemical comparison properties, 2D structures, and analogue similarity search.",
+      "rationale": "This skill surveys security threats and has no molecular-data or structural-search capability.",
+      "source_anchor": "security-prior-art-survey"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9A8EDC0759BDFF34",
+      "missing_material_requirement_or_null": "Compound resolution, chemical properties, 2D structures, and analogue similarity search.",
+      "rationale": "This skill predicts genomic splice sites from DNA sequences rather than analyzing small molecules.",
+      "source_anchor": "gi-splice"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C220E00C83CFE853",
+      "missing_material_requirement_or_null": "Compound resolution, chemical properties, 2D structures, and analogue similarity search.",
+      "rationale": "This skill facilitates agile retrospectives and supplies none of the requested chemical-analysis operations.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F23FEBD80C064D9F",
+      "missing_material_requirement_or_null": "Structure-string resolution, 2D structure images, and a capped analogue retrieval workflow.",
+      "rationale": "It resolves names, DrugBank IDs, and CAS values and exposes relevant properties, but its similarity routine is pairwise rather than an analogue search.",
+      "source_anchor": "Chemical Properties and Similarity"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0585",
+  "batch_input_sha256": "cf56f2f7e77a62bc658fccd40ab025463aab909e4ac0fd444b14dd84465c85a7",
+  "blind_packet_id": "P-83A8BE2949E07B53E0",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9d266587d8be0b13137c3ef334f786a3a21a4e9943a5d9da800feff0f8ae7095"
+}
