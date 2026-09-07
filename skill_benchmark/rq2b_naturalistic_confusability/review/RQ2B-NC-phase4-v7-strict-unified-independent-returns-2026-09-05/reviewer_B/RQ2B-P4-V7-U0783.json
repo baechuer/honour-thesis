@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0783",
+  "blind_packet_id": "P-C27E2A2958F136108A",
+  "batch_input_sha256": "dcff2bbf057abe166f258a53181c3b6f7bea751f928e542a811f661a453676c2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-171F2D7EEFF54146","adequacy":"INADEQUATE","source_anchor":"Structures and facilitates sprint retrospectives","rationale":"Sprint-retrospective facilitation is unrelated to translating and polishing a scientific Results paragraph.","missing_material_requirement_or_null":"A source-faithful Chinese-to-English scientific polishing workflow."},
+    {"candidate_token":"C-1D27807B0E8E09E0","adequacy":"INADEQUATE","source_anchor":"Produces structured, faithful clinical summaries","rationale":"Clinical summarization is not translation and formal-language polishing of supplied manuscript prose.","missing_material_requirement_or_null":"A scientific manuscript translation and line-editing workflow that preserves supplied results."},
+    {"candidate_token":"C-3AD620CEF48DCA6D","adequacy":"INADEQUATE","source_anchor":"Run GSEA on a ranked gene list","rationale":"Gene-set enrichment analysis is unrelated to manuscript language polishing.","missing_material_requirement_or_null":"A Chinese-to-English scientific Results polishing workflow."},
+    {"candidate_token":"C-9B1D616F5D8CCE07","adequacy":"INADEQUATE","source_anchor":"End-to-end GitHub repository maintenance","rationale":"Repository maintenance does not revise scientific prose.","missing_material_requirement_or_null":"A source-faithful academic translation and polishing workflow."},
+    {"candidate_token":"C-AAEDDE98BB4F8790","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Plan, draft, revise, and structure technical research papers while preserving claims, notation, evidence, citations, and author voice.","rationale":"This supports revising a technical Results paragraph while retaining reported evidence, terminology, uncertainty, and citations, and it directs unresolved logical gaps to be surfaced rather than invented.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-AEE461D540425304","adequacy":"INADEQUATE","source_anchor":"Choose the smallest viable React/fullstack state owner","rationale":"React state-management guidance is unrelated to scientific manuscript editing.","missing_material_requirement_or_null":"A formal academic Chinese-to-English polishing procedure."},
+    {"candidate_token":"C-B1F92B956F07AFE5","adequacy":"FULLY_ACCEPTABLE","source_anchor":"author-provided claims, results, figures, notes, or Chinese drafts","rationale":"This directly covers manuscript Results work from Chinese drafts, applies language-specific rules, and requires missing evidence boundaries to be surfaced rather than invented.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-BD62BA1ECEFB0DF3","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Polish, restructure, or translate academic prose into concise Nature-leaning English","rationale":"This directly covers Chinese academic prose and Results polishing while preserving facts, terminology, evidence boundaries, and citation intent, and requires unresolved structural ambiguity to be flagged rather than invented.","missing_material_requirement_or_null":null}
+  ],
+  "reviewer_output_sha256": "4f7a8306df7802c069ad97298f26b141fa97cd1d33af981a5cd6788e05561891"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0783",
+  "blind_packet_id": "P-C27E2A2958F136108A",
+  "batch_input_sha256": "dcff2bbf057abe166f258a53181c3b6f7bea751f928e542a811f661a453676c2",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-171F2D7EEFF54146","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"The source facilitates sprint retrospectives rather than translating and polishing manuscript Results text.","missing_material_requirement_or_null":"Evidence-preserving Chinese-to-English scientific manuscript editing."},
+    {"candidate_token":"C-1D27807B0E8E09E0","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Clinical Summary","rationale":"The source preserves clinical-study effect sizes and limitations in structured summaries, but it does not provide the requested Chinese-to-English Results polishing workflow.","missing_material_requirement_or_null":"Concise formal scientific translation and language polishing with citation-placeholder preservation."},
+    {"candidate_token":"C-3AD620CEF48DCA6D","adequacy":"INADEQUATE","source_anchor":"Run GSEA","rationale":"The source runs gene-set enrichment analysis rather than editing manuscript prose.","missing_material_requirement_or_null":"Evidence-preserving Chinese-to-English scientific manuscript editing."},
+    {"candidate_token":"C-9B1D616F5D8CCE07","adequacy":"INADEQUATE","source_anchor":"open-source-maintainer","rationale":"The source maintains open-source repositories rather than editing scientific Results prose.","missing_material_requirement_or_null":"Evidence-preserving Chinese-to-English scientific manuscript editing."},
+    {"candidate_token":"C-AAEDDE98BB4F8790","adequacy":"FULLY_ACCEPTABLE","source_anchor":"paper-writing","rationale":"The source revises technical research-paper sections while preserving claims, notation, evidence, citations, and author voice, matching evidence-bounded Results polishing.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-AEE461D540425304","adequacy":"INADEQUATE","source_anchor":"state-management","rationale":"The source concerns application state management rather than scientific manuscript editing.","missing_material_requirement_or_null":"Evidence-preserving Chinese-to-English scientific manuscript editing."},
+    {"candidate_token":"C-B1F92B956F07AFE5","adequacy":"FULLY_ACCEPTABLE","source_anchor":"nature-writing","rationale":"The source drafts and structures Results from author-provided claims and Chinese drafts while preserving the evidence boundary for manuscript submission.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-BD62BA1ECEFB0DF3","adequacy":"FULLY_ACCEPTABLE","source_anchor":"nature-polishing","rationale":"The source directly polishes and translates academic Results prose into concise English while preserving facts, evidence boundaries, terminology, and citation intent.","missing_material_requirement_or_null":null}
+  ],
+  "reviewer_output_sha256": "02c7a23cfbb9763550c980a7bac7e6fc1c764334160eb0ff3bd345a8a4e687a5"
+}

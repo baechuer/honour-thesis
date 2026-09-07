@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0745",
+  "blind_packet_id": "P-8A63D9AB0251390F37",
+  "batch_input_sha256": "1ffbe75a08810d0ee99813894d8b8691bf2bfee73fbf81080f0a76f0dbce9bff",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-2425DCA67759C669","adequacy":"INADEQUATE","source_anchor":"Nikto Web Server Scanner","rationale":"The source scans web-server vulnerabilities rather than first inventorying a subnet and enumerating its TCP and UDP services without exploitation.","missing_material_requirement_or_null":"Authorized network host, TCP and UDP service, version, and OS reconnaissance."},
+    {"candidate_token":"C-25C08B4D1C6277F0","adequacy":"INADEQUATE","source_anchor":"slack-bot-builder","rationale":"The source builds Slack automations and does not perform network reconnaissance.","missing_material_requirement_or_null":"Authorized network host and service reconnaissance."},
+    {"candidate_token":"C-30B59B4AF6EFA718","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Nmap Network Reconnaissance","rationale":"The source directly covers authorized scope verification, host discovery, TCP and UDP service enumeration, version and OS detection, rate limits, reporting, and false-positive validation.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-45884F56C685E36F","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"OT Security Assessment","rationale":"The source includes authorized network discovery, service enumeration, and false-positive validation, but it is specialized for OT assessments and extends into vulnerability research and Metasploit work excluded by the request.","missing_material_requirement_or_null":"A general non-exploitative subnet reconnaissance workflow without OT-specific vulnerability-assessment steps."},
+    {"candidate_token":"C-8F86B899F8F8100F","adequacy":"INADEQUATE","source_anchor":"visual-prior-art-survey","rationale":"The source surveys visual interface conventions and does not inventory network hosts or services.","missing_material_requirement_or_null":"Authorized network host and service reconnaissance."},
+    {"candidate_token":"C-C57FFAC4AE87DCE3","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"The source facilitates team retrospectives and does not perform network reconnaissance.","missing_material_requirement_or_null":"Authorized network host and service reconnaissance."},
+    {"candidate_token":"C-CF9B6674E4B35B71","adequacy":"INADEQUATE","source_anchor":"Vulnerability Triage","rationale":"The source prioritizes existing findings rather than conducting the authorized observation-only network scan.","missing_material_requirement_or_null":"Authorized network host and service reconnaissance."},
+    {"candidate_token":"C-F2EF413DB97A80DF","adequacy":"INADEQUATE","source_anchor":"PCI-DSS v4.0","rationale":"The source audits payment-page scripts rather than scanning a lab subnet.","missing_material_requirement_or_null":"Authorized network host and service reconnaissance."}
+  ],
+  "reviewer_output_sha256": "85742a7ac1ebc01ee969b1ac3afe0760e7efec8cd89cdfd5470ae18d0e51b31b"
+}
