@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0561",
+  "blind_packet_id": "P-993BEAED2405021E41",
+  "batch_input_sha256": "a66bdf14300a9290a9deddb9506d313ad8705d00997b645f351f3b8efde56e2c",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-4399633DC2EB40B3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Add Telegram Channel",
+      "rationale": "It provides a concrete Chat SDK channel adapter, credentials, pairing, restart, and wiring path, but it connects Telegram rather than the requested Slack workspace.",
+      "missing_material_requirement_or_null": "A Slack-specific adapter and Slack workspace event and credential configuration."
+    },
+    {
+      "candidate_token": "C-91A864706DFA4938",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Support Ticket Reply",
+      "rationale": "It drafts the content of support replies but provides no mechanism to connect an assistant to Slack, receive conversations, or send replies through a chat framework.",
+      "missing_material_requirement_or_null": "Slack workspace integration with inbound and outbound messaging through the existing chat framework."
+    },
+    {
+      "candidate_token": "C-9D0C0D8B6398C62A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Slack Webhooks",
+      "rationale": "It describes Slack webhook inputs and outbound messages, including signing secrets, but remains a generic webhook pattern rather than integrating the existing chat framework as a Slack assistant channel.",
+      "missing_material_requirement_or_null": "A Slack Chat SDK adapter and complete workspace setup that routes customer conversations to and from the existing assistant."
+    },
+    {
+      "candidate_token": "C-A5635A4E0C42F83E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# PPT Visual Skill",
+      "rationale": "It designs presentation layouts and visual specifications, with no Slack, messaging, or chat-framework integration route.",
+      "missing_material_requirement_or_null": "A Slack workspace integration that receives and replies to customer conversations through the assistant."
+    },
+    {
+      "candidate_token": "C-A6840382DAACC192",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Add Slack Channel",
+      "rationale": "It installs and registers a Slack Chat SDK adapter, configures Slack credentials and event delivery, validates the integration, restarts the service, and supplies the wiring path for Slack DMs and channels.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-BE32CD161C49C329",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "It performs bulk expression pathway analysis and heatmap generation, which does not provide any Slack or chat-assistant integration capability.",
+      "missing_material_requirement_or_null": "A Slack workspace integration that receives and replies to customer conversations through the existing chat framework."
+    },
+    {
+      "candidate_token": "C-DF333DFE5B640A41",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "It structures sprint retrospective meetings and action tracking, not a connection between a support assistant and Slack customer conversations.",
+      "missing_material_requirement_or_null": "A Slack workspace integration with inbound and outbound customer messaging through the existing chat framework."
+    },
+    {
+      "candidate_token": "C-F3B8DA432F2A764F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Add Google Chat Channel",
+      "rationale": "It supplies an executable Chat SDK adapter integration for a chat platform, but it targets Google Chat rather than the requested Slack workspace.",
+      "missing_material_requirement_or_null": "A Slack-specific adapter and Slack workspace credentials and event-delivery configuration."
+    }
+  ],
+  "reviewer_output_sha256": "9efcfb0859a36bd3cad02ac04eb6642bd790d99b063b8009a333e162732338d6"
+}

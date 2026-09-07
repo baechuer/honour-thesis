@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0562",
+  "blind_packet_id": "P-698216DA08F0E93294",
+  "batch_input_sha256": "28420340e0fc87b6544feedf1ea4e1be9dbcbbdc1d5be09d8d87257ba8ebf71d",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0CC369A3434EB892",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates agile sprint retrospectives, not CRM account cleaning or evidence-based review of account relationships.",
+      "missing_material_requirement_or_null": "A local CRM-cleaning review application for exact external-organisation duplicate and parent-link decisions."
+    },
+    {
+      "candidate_token": "C-298A11B23D66E080",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "rationale": "This conducts a user-research prior-art survey rather than building a CRM review application or adjudicating account findings.",
+      "missing_material_requirement_or_null": "A local CRM-cleaning review application for exact external-organisation duplicate and parent-link decisions."
+    },
+    {
+      "candidate_token": "C-2DE6DFBE00CAC20D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Build a Targeted Prospect List",
+      "rationale": "It supports cleaning and deduplicating a prospect list, but does not implement the requested local reviewer workflow or use same-organisation and parent-company graph evidence for decisions.",
+      "missing_material_requirement_or_null": "A CSV-backed review application that detects duplicates only through externally matched organisation identity and adjudicates parent-company links."
+    },
+    {
+      "candidate_token": "C-2F90FE31BA1F49CD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Meeting Agenda",
+      "rationale": "This prepares meeting agendas and provides no CRM cleaning, relationship matching, or reviewer decision workflow.",
+      "missing_material_requirement_or_null": "A local CRM-cleaning review application for exact external-organisation duplicate and parent-link decisions."
+    },
+    {
+      "candidate_token": "C-3F6D11ED1602DEA2",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Territory Planning",
+      "rationale": "It supplies a local review application with accept/reject choices and CSV action export, but its evidence and decisions concern territory ownership rather than CRM duplicates and parent-company links.",
+      "missing_material_requirement_or_null": "Exact external-organisation duplicate detection and parent-company-link adjudication for CRM accounts."
+    },
+    {
+      "candidate_token": "C-53A26848D7D5DC2B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# /legal immigration — Immigration & Visa Compliance",
+      "rationale": "This addresses immigration and visa compliance rather than CRM data cleaning or account-review decisions.",
+      "missing_material_requirement_or_null": "A local CRM-cleaning review application for exact external-organisation duplicate and parent-link decisions."
+    },
+    {
+      "candidate_token": "C-8E0402B9262995C8",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# CRM Cleaning",
+      "rationale": "It directly provides the requested CRM-cleaning review web app: duplicates are restricted to accounts resolving to the same external organisation, parent-link findings are covered, reviewers can decide findings and select survivors, and only approved actions are exported as CSV.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A39118104A0CD739",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Account Scoring",
+      "rationale": "This scores accounts rather than detecting externally evidenced duplicate organisations or conflicting parent-company relationships through a review workflow.",
+      "missing_material_requirement_or_null": "Exact external-organisation duplicate detection, parent-link review, and approved-change export for CRM cleaning."
+    }
+  ],
+  "reviewer_output_sha256": "64755e6aad5fe89ba0397eb74a23ec1a4317df003f0adbc879ade18c8a61a817"
+}
