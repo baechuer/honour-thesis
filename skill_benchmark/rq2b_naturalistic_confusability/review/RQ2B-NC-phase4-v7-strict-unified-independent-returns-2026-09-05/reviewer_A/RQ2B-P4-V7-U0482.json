@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-136231698208502F",
+      "missing_material_requirement_or_null": "modern Swift application",
+      "rationale": "Rust and Cargo guidance cannot provide Swift or the installed cloud NoSQL CRUD APIs.",
+      "source_anchor": "# Rust Engineer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-31579A68982E91CC",
+      "missing_material_requirement_or_null": "async/await",
+      "rationale": "It covers Bmob CRUD in Swift, but its supplied operations use background callbacks rather than the requested async/await style.",
+      "source_anchor": "saveInBackground"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5E82F896CDF22544",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly targets the pure Swift Bmob SDK with async/await and covers CRUD plus relation queries for runnable Swift work.",
+      "source_anchor": "async/await"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-CEACFB3D2AF245B8",
+      "missing_material_requirement_or_null": "modern Swift application",
+      "rationale": "JavaScript guidance does not provide Swift cloud NoSQL model, relation, or CRUD implementation material.",
+      "source_anchor": "# JavaScript Pro"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E098793FEB68AEF1",
+      "missing_material_requirement_or_null": "modern Swift application",
+      "rationale": "Retrospective facilitation is unrelated to implementing cloud NoSQL CRUD in a Swift application.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-EE42A67FCD8B43B7",
+      "missing_material_requirement_or_null": "installed cloud NoSQL package",
+      "rationale": "It supports Swift and async/await generally but supplies no cloud NoSQL package-specific CRUD, record, or relation guidance.",
+      "source_anchor": "async/await"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F2305CCA5B7D7E99",
+      "missing_material_requirement_or_null": "modern Swift application",
+      "rationale": "The security prior-art research workflow does not provide Swift cloud NoSQL CRUD implementation examples.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F233417A039BF46C",
+      "missing_material_requirement_or_null": "modern Swift application",
+      "rationale": "Android Java/Kotlin SDK guidance cannot provide the requested modern Swift async/await implementation.",
+      "source_anchor": "io.github.bmob:android-sdk"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0482",
+  "batch_input_sha256": "86686297418f4fb88bfd4d828c700d9aaa45b232d9c3236cb283956b2c8cf196",
+  "blind_packet_id": "P-9785DCD8FAEA40DA97",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256": "2da1416048fafaad5ed5a4ed0450793f9ff295009cc43c6813efbe2229891d60"
+}
