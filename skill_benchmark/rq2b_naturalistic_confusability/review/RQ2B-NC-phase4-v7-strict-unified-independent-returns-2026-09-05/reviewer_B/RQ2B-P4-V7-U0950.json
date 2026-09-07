@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0950",
+  "blind_packet_id": "P-9E60250611CDC85465",
+  "batch_input_sha256": "de548bd40a57ee72c6bc990e46188c07106a898f3835713bb5d52523c2d8e461",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-20E6BE4F5AE7D97F","adequacy":"INADEQUATE","source_anchor":"Email Drip Builder","rationale":"Email onboarding workflows cannot submit the completed fix for code review and merge.","missing_material_requirement_or_null":"pull-request submission workflow"},
+    {"candidate_token":"C-46E6C053086DE7EA","adequacy":"INADEQUATE","source_anchor":"Characterization Test Writer","rationale":"Characterization testing is for legacy refactor safety, not submitting an already tested branch for review and merge.","missing_material_requirement_or_null":"pull-request submission workflow"},
+    {"candidate_token":"C-50BDFB0561E5F08B","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"open a pull request","rationale":"The SDLC workflow includes branch, pull-request, review, CI, and merge discipline, so it can support a portion of the requested handoff.","missing_material_requirement_or_null":"a focused pull-request workflow that presents the specific cause, change, verification, and remaining limitation"},
+    {"candidate_token":"C-6BA5B47F978E4AB3","adequacy":"INADEQUATE","source_anchor":"Secure Code Review","rationale":"Security review assesses vulnerabilities; it does not submit the completed change for teammate review and merge.","missing_material_requirement_or_null":"pull-request submission workflow"},
+    {"candidate_token":"C-8B96029C0CE2D713","adequacy":"FULLY_ACCEPTABLE","source_anchor":"creating-pull-requests","rationale":"This is the targeted workflow for opening a pull request, where the branch fix can be presented for teammate review and merge with cause, change, verification, and limitation context.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-9A50B36624073756","adequacy":"INADEQUATE","source_anchor":"creating-issues","rationale":"Creating an issue does not submit the completed branch for code review and merge.","missing_material_requirement_or_null":"pull-request submission workflow"},
+    {"candidate_token":"C-A351A9D055B197AA","adequacy":"INADEQUATE","source_anchor":"open-source-maintainer","rationale":"Repository-maintenance triage is not the focused workflow for submitting a completed branch as a teammate-review pull request.","missing_material_requirement_or_null":"pull-request submission workflow"},
+    {"candidate_token":"C-C0A2CC015179B253","adequacy":"INADEQUATE","source_anchor":"sentry-python-sdk","rationale":"Python Sentry SDK setup is unrelated to submitting the completed digest-validation fix for review.","missing_material_requirement_or_null":"pull-request submission workflow"}
+  ],
+  "reviewer_output_sha256": "be603d771c95117784973f886cc01b69a60d4ed5e8a90a2fbfc02893fb6b82f1"
+}
