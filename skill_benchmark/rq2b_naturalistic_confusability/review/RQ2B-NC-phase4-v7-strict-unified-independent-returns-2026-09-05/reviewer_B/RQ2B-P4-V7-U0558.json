@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0558",
+  "blind_packet_id": "P-97CCF1E79DC5A53CE9",
+  "batch_input_sha256": "a7dd67f8e9032ae6f9158704de5df1891daab2e0d3a373ae63dea0b7338ec9df",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-325242AAB78909B0",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# API and Interface Design",
+      "rationale": "It supplies useful generic API contracts, predictable error semantics, and pagination guidance, but does not design the requested GraphQL SDL and operations or provide relationship batching and GraphQL query-cost controls.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver plan with per-request batching, connection pagination, and depth and complexity limits."
+    },
+    {
+      "candidate_token": "C-7657FBA0F7233CFE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Before anyone designs a screen or writes a requirement",
+      "rationale": "This surveys published user-research evidence and produces research artifacts; it does not define graph API types, resolver behavior, or query execution safeguards.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver design with pagination, batching, predictable errors, and query-cost controls."
+    },
+    {
+      "candidate_token": "C-A00D863F512A5DBA",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Database Schema Designer",
+      "rationale": "It can model the underlying organisations, projects, and activity data and its query-serving indexes, but it does not define the graph endpoint, GraphQL operations, resolver batching, or abusive-query limits.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver plan with connection pagination, DataLoaders, and depth and complexity limits."
+    },
+    {
+      "candidate_token": "C-C0A9EBC9BE6DC642",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Grant-Builder Skill",
+      "rationale": "This is a medical-AI grant and proposal-writing workflow with no API, resolver, or GraphQL schema implementation capability.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver design with pagination, batching, predictable errors, and query-cost controls."
+    },
+    {
+      "candidate_token": "C-D2987AC15DE3D33B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# SQL Query Rewriter",
+      "rationale": "It can improve an underlying SQL query shape and keyset pagination, which may support activity retrieval, but it cannot define the requested graph operations or prevent resolver-level N+1 and abusive GraphQL queries.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver plan with DataLoaders, typed errors, and depth and complexity limits."
+    },
+    {
+      "candidate_token": "C-DC3E23B4D728F6D0",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# GraphQL Schema",
+      "rationale": "It designs domain-modeled GraphQL types and operations, cursor connections with caps, per-request DataLoader batching to prevent N+1, typed and safe error handling, and validation-time depth and complexity limits for expensive queries.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-DED2326B157BBCF0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates team retrospectives and has no graph API design, resolver implementation, or query-safety capability.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver design with pagination, batching, predictable errors, and query-cost controls."
+    },
+    {
+      "candidate_token": "C-E17C2A8DC1C65B29",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Feature Store Design",
+      "rationale": "This designs machine-learning feature-store infrastructure and does not provide the requested GraphQL graph, resolver, pagination, or error-contract implementation.",
+      "missing_material_requirement_or_null": "A GraphQL schema and resolver design with pagination, batching, predictable errors, and query-cost controls."
+    }
+  ],
+  "reviewer_output_sha256": "52f68e59a13656a989d9b5a089d3fbcb836547e0f40c6e495f2a416e61264be0"
+}
