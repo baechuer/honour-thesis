@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0617",
+  "blind_packet_id": "P-25C4F58FCCB49AE213",
+  "batch_input_sha256": "4d2d1ee44c71e5e898b057e81812e30603c5e02da687f72cd2f829d9cd822032",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-018203E3E4C92F85",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Mode: explain or design",
+      "rationale": "It can document existing data stores, schemas, flows, lineage, and open dependencies from supplied artifacts, supporting a portion of the workload and risk map but not the platform-specific conversion work.",
+      "missing_material_requirement_or_null": "Notebook utility and storage-access refactoring plus a stored-procedure-to-notebook conversion plan with approved mappings."
+    },
+    {
+      "candidate_token": "C-0F0A5866E90B4E41",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This maps links between website pages for search optimization, unrelated to analytics-workspace migration or procedure conversion.",
+      "missing_material_requirement_or_null": "Workload inventory, notebook and storage migration, warehouse procedure planning, and source-safe conversion controls."
+    },
+    {
+      "candidate_token": "C-2789014495EA3653",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This performs gene-set enrichment analysis and produces enrichment outputs, not workspace migration plans or notebook and SQL procedure transformations.",
+      "missing_material_requirement_or_null": "Analytics-workspace workload mapping and target-specific notebook, storage, and stored-procedure conversion planning."
+    },
+    {
+      "candidate_token": "C-71FC48DDB7122493",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This is a team sprint-retrospective facilitation method with no capabilities for data-platform migration.",
+      "missing_material_requirement_or_null": "Read-only migration assessment, notebook and storage refactoring, procedure conversion options, and approval gating."
+    },
+    {
+      "candidate_token": "C-7A6FA5CE86B60D97",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "File Organization",
+      "rationale": "This plans repository folder boundaries and code organization, but does not map analytics-platform workloads or convert notebook utilities, storage access, or SQL procedures.",
+      "missing_material_requirement_or_null": "Platform-specific workspace migration and source-safe notebook and stored-procedure conversion planning."
+    },
+    {
+      "candidate_token": "C-852CDC96DCCB2FC1",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Migration Workload Map",
+      "rationale": "It provides a workload map and detailed Databricks notebook, compute, and storage migrations to Fabric, but its source assumptions and utility mappings differ and it does not provide the required stored-procedure approval-gated plan.",
+      "missing_material_requirement_or_null": "Synapse-specific utility and linked-service mapping plus stored-procedure-to-notebook options and owner-approved mapping gate."
+    },
+    {
+      "candidate_token": "C-A20E3CC6828E7704",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Migration Workload Map",
+      "rationale": "It covers Synapse workload inventory, notebooks, linked services and OneLake shortcuts, pool and warehouse mapping, read-only source constraints, no table-row copying or procedure execution, and approval-gated one-to-one or consolidation procedure-notebook strategies.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A3FB3C8930120795",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "pipeline assessment",
+      "rationale": "This targets Synapse Data Factory pipeline JSON and expressly delegates notebook-content migration elsewhere; it does not plan warehouse stored-procedure conversion or the requested interactive workspace migration.",
+      "missing_material_requirement_or_null": "Notebook utility and storage conversion, warehouse procedure mapping options, and owner-approved conversion gate."
+    }
+  ],
+  "reviewer_output_sha256": "22295fe046d30aafd8e01ad333d676a0db1b9f6727a1fdfdbf1132514469c8c5"
+}
