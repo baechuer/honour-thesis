@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0865",
+  "blind_packet_id": "P-771F11E4A4802F2ED6",
+  "batch_input_sha256": "3b618d5a3218f3c594c1e674307ae57599a747918b058bd1c573642489a3d37f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-16CF9A2FB851461A","adequacy":"INADEQUATE","source_anchor":"GitHub Actions Engineering","rationale":"This designs and tunes GitHub Actions workflows; it does not triage a supplied failed-run log to the first meaningful failure and minimum fix.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-430F035C62DE604E","adequacy":"INADEQUATE","source_anchor":"pr-review","rationale":"The request explicitly excludes pull-request review and instead requires failed-log triage.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-458B2D5861A93174","adequacy":"INADEQUATE","source_anchor":"crisis-comms-external","rationale":"External incident communication does not locate the first meaningful CI log failure or minimal technical fix.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-4A8A253A15FB653B","adequacy":"INADEQUATE","source_anchor":"GitHub Actions","rationale":"This builds or hardens CI/CD workflows rather than analyzing a specific failed Actions log for its first meaningful error.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-61AE19D4FF489EF1","adequacy":"INADEQUATE","source_anchor":"GSVA","rationale":"GSVA pathway analysis is unrelated to CI log triage.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-E6B84679670D720B","adequacy":"INADEQUATE","source_anchor":"secure-development-policy","rationale":"Secure-development policy enforcement does not identify the first meaningful failure in a GitHub Actions run.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-F093E5D487F7B83E","adequacy":"INADEQUATE","source_anchor":"issue-triage-workflow","rationale":"GitHub issue triage is not a workflow for examining failed Actions logs.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"},
+    {"candidate_token":"C-FD1AA208A75DA5C0","adequacy":"INADEQUATE","source_anchor":"analyzing-network-traffic","rationale":"Network-traffic forensics is unrelated to GitHub Actions log analysis.","missing_material_requirement_or_null":"GitHub Actions log-failure triage"}
+  ],
+  "reviewer_output_sha256": "885659593f9a42cdd610a39198228f4711c6da2f7aa33c172e333c8b0b5749f3"
+}

@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1158",
+  "blind_packet_id": "P-ECA3BFD609E8767CDD",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-1CBC8F7BF61C0A9A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Add UI to MCP Server",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Streaming Partial Input"
+    },
+    {
+      "candidate_token": "C-4A62999B3BD94863",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# LangSmith",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "langsmith"
+    },
+    {
+      "candidate_token": "C-5E439BFC565D79FB",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "candidate_token": "C-AF20CA37B46BC2FE",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Pagination performance",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "keyset (cursor) pagination"
+    },
+    {
+      "candidate_token": "C-B1A114AB949ACC57",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Add MCP App Support to a Web App",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Add MCP App Support to a Web App"
+    },
+    {
+      "candidate_token": "C-B42C2B732209D7DF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Create MCP App",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "MCP Apps SDK patterns"
+    },
+    {
+      "candidate_token": "C-EE009A99EE52B19B",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Use when performing GO and KEGG enrichment",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "gokegg-analysis"
+    },
+    {
+      "candidate_token": "C-FB3F64C6D8722046",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Gradio",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "huggingface-gradio"
+    }
+  ],
+  "reviewer_A_return_sha256": "a2dd80e00053dd96f6ffa08b583794640d887e11cf3552900b2d59d3160cb965",
+  "reviewer_B_return_sha256": "630e43a6a0794458fe1f91e6caa06abff6e0155fe611b77bc22fd42c26db1af8",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0865",
+  "blind_packet_id": "P-771F11E4A4802F2ED6",
+  "batch_input_sha256": "3b618d5a3218f3c594c1e674307ae57599a747918b058bd1c573642489a3d37f",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-16CF9A2FB851461A","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"## When to Use","rationale":"It covers GitHub Actions workflow engineering and fixing CI configuration concerns, but not a log-first procedure for isolating the first meaningful failed step.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-430F035C62DE604E","adequacy":"INADEQUATE","source_anchor":"# Automated PR Review & Code Quality","rationale":"This source performs a multi-lens PR review, which the request explicitly excludes.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-458B2D5861A93174","adequacy":"INADEQUATE","source_anchor":"# Crisis Comms External","rationale":"This skill drafts external crisis communications rather than diagnosing a CI failure.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-4A8A253A15FB653B","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"## Operating procedure","rationale":"It provides GitHub Actions configuration and hardening guidance, including failing loudly, but does not direct analysis of a failed run log to the first meaningful failure.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-61AE19D4FF489EF1","adequacy":"INADEQUATE","source_anchor":"## When to Use","rationale":"This is a bulk-expression GSVA/ssGSEA analysis and visualization workflow, unrelated to CI logs.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-E6B84679670D720B","adequacy":"INADEQUATE","source_anchor":"## When to Use This Skill","rationale":"This skill enforces secure-development policy and security scanning practices, not failed GitHub Actions log triage.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-F093E5D487F7B83E","adequacy":"INADEQUATE","source_anchor":"# Issue Triage Workflow Skill","rationale":"This source labels and manages GitHub issues rather than diagnosing a workflow failure log.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."},
+    {"candidate_token":"C-FD1AA208A75DA5C0","adequacy":"INADEQUATE","source_anchor":"# Analyzing Network Traffic","rationale":"This skill analyzes packet captures and network telemetry, not CI execution logs.","missing_material_requirement_or_null":"A procedure to analyze the failed Actions log, identify the first meaningful failure, and state the minimal fix path is absent."}
+  ],
+  "reviewer_output_sha256": "5d42d49661cdfeae338c65bf4edd796e023244b273a60a53eb569d8a35f4c828"
+}

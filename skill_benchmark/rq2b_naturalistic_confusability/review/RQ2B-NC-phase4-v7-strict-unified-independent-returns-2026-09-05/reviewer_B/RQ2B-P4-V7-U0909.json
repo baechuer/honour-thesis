@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0909",
+  "blind_packet_id": "P-342BC4358C897570B9",
+  "batch_input_sha256": "ec6ac52af643779d4927ec1f8212fb23958f073b3bd8d24a4b56f9141766fc10",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-11760003C799A764","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Creating a new Django migration","rationale":"This provides PostgreSQL migration and index-safety guidance for Django, so it informs part of a safe schema change.","missing_material_requirement_or_null":"a rerunnable product-catalogue full-text-search migration with the requested derived field, optional extension handling, indexed query, and plan check"},
+    {"candidate_token":"C-4710C5575D8C53BF","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation does not write or verify a PostgreSQL full-text-search migration.","missing_material_requirement_or_null":"PostgreSQL migration implementation"},
+    {"candidate_token":"C-88E472A6E06BD66A","adequacy":"INADEQUATE","source_anchor":"eqtl-catalogue-region-fetch","rationale":"Fetching eQTL catalogue data is unrelated to product-catalogue schema migration work.","missing_material_requirement_or_null":"PostgreSQL migration implementation"},
+    {"candidate_token":"C-93E30145EA9812D7","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Full-Text Search","rationale":"This directly covers idempotent PostgreSQL migrations, stored weighted full-text fields over nullable and array inputs using index-safe expressions, GIN indexes, optional extension handling, indexed queries, and EXPLAIN verification.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-9CA57182E4A0D4BB","adequacy":"INADEQUATE","source_anchor":"Generate Django database migrations for Sentry","rationale":"This is scoped to Sentry Django migrations and does not provide the requested PostgreSQL full-text-search migration design.","missing_material_requirement_or_null":"PostgreSQL full-text-search migration implementation"},
+    {"candidate_token":"C-AEFBD19447A0F951","adequacy":"INADEQUATE","source_anchor":"user-research-prior-art-survey","rationale":"A user-research prior-art survey does not write or verify a database migration.","missing_material_requirement_or_null":"PostgreSQL migration implementation"},
+    {"candidate_token":"C-CB3CE5B3E5755E7E","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Generate the migration script","rationale":"This can create and stage a versioned database migration with verification and rollback discipline.","missing_material_requirement_or_null":"specific PostgreSQL full-text-search, immutable derived-field, optional-extension, and indexed-query guidance"},
+    {"candidate_token":"C-EF9232E7084BEFB8","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Build indexes and constraints without blocking","rationale":"This provides useful safe-index and migration-lock guidance relevant to deploying the requested search index.","missing_material_requirement_or_null":"the requested full-text-search field, optional extension handling, search query, and query-plan verification"}
+  ],
+  "reviewer_output_sha256": "be9d63ee535bcbabab176857f7a5984c74c119e539ee99647e653d1a205b9954"
+}

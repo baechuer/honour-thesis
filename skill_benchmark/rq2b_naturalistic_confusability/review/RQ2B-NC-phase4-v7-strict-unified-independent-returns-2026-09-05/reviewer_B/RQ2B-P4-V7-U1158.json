@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1158",
+  "blind_packet_id": "P-ECA3BFD609E8767CDD",
+  "batch_input_sha256": "d26ff56459f126572219a56fc90a4a9805462952008fdb377ba7496aef544999",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-1CBC8F7BF61C0A9A","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Streaming Partial Input","rationale":"This defines an app-enhanced callable tool with linked bundled UI, text fallback, structured results, pre-connect lifecycle handlers, host theme and safe-area handling, partial-input rendering, and verification.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-4A62999B3BD94863","adequacy":"INADEQUATE","source_anchor":"langsmith","rationale":"LLM tracing and evaluation do not build the requested host-integrated interactive application.","missing_material_requirement_or_null":"host-integrated application implementation"},
+    {"candidate_token":"C-5E439BFC565D79FB","adequacy":"INADEQUATE","source_anchor":"Sprint Retro Facilitator","rationale":"Sprint retrospective facilitation does not build an interactive host-integrated application.","missing_material_requirement_or_null":"host-integrated application implementation"},
+    {"candidate_token":"C-AF20CA37B46BC2FE","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"keyset (cursor) pagination","rationale":"Keyset pagination can support efficient progressive display of large result sets.","missing_material_requirement_or_null":"callable host operation, bundled host UI, lifecycle, host styling, and text fallback"},
+    {"candidate_token":"C-B1A114AB949ACC57","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Add MCP App Support to a Web App","rationale":"This provides host-integrated MCP App patterns with server tool and bundled-resource registration.","missing_material_requirement_or_null":"a lightweight new-app implementation path rather than converting a supplied existing web app"},
+    {"candidate_token":"C-B42C2B732209D7DF","adequacy":"FULLY_ACCEPTABLE","source_anchor":"MCP Apps SDK patterns","rationale":"This directly covers creating a host-integrated MCP App with interactive UI, tool and resource registration, lifecycle patterns, host integration, and verification.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-EE009A99EE52B19B","adequacy":"INADEQUATE","source_anchor":"gokegg-analysis","rationale":"GO/KEGG enrichment analysis does not build the requested interactive application.","missing_material_requirement_or_null":"host-integrated application implementation"},
+    {"candidate_token":"C-FB3F64C6D8722046","adequacy":"INADEQUATE","source_anchor":"huggingface-gradio","rationale":"A standalone Gradio UI workflow does not supply the required host-integrated callable operation, bundled MCP resource, and lifecycle handling.","missing_material_requirement_or_null":"host-integrated application implementation"}
+  ],
+  "reviewer_output_sha256": "4675bba7b8ded9814753957f062c739554a44978a92529782561c39e4fe338c4"
+}
