@@ -1,0 +1,26 @@
+{
+  "affected_evidence": {
+    "exact_independent_agreement_evidence": "not affected by the coordinator-context gap, but remains target-blind source-adequacy evidence only.",
+    "new_microbatch_002_coordinator_groups": 6,
+    "previous_machine_b_groups_finalised_via_coordinator": "69 retained as historical artifacts but not eligible for final-library evidence until this frozen coordinator-context defect is resolved and affected packets are re-reviewed"
+  },
+  "evidence": {
+    "all_reopen_returns_passed_frozen_schema_hash_and_binding_validation": true,
+    "frozen_protocol_path": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "frozen_protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "reopen_packet_count": 8,
+    "static_packet_construction_boundary": "coordinator_context constructs source-visible candidate plus A/B assessments and coordinator instruction, but no task prompt or task-specific requirements; an adequacy disagreement cannot therefore be resolved without an unsupported inference."
+  },
+  "outputs": {
+    "reopen_packet_ledger.jsonl": "bd9e2e59bdade9468e5bceb90185e912cd5b33da21d0a3c0947fa00c5ec61870"
+  },
+  "prohibitions_until_method_decision": {
+    "do_not_change_frozen_sources_prompts_candidates_or_K6": true,
+    "do_not_finalise_coordinator_dependent_groups": true,
+    "do_not_open_opaque_join_or_acceptable_set": true,
+    "do_not_report_retrieval_or_library_results": true
+  },
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_coordinator_context_gate_v1",
+  "scope": "Machine B V7 coordinator-dependent closure only. Independent target-blind A/B review collection may continue, but coordinator-dependent finalisation and any library-level use are paused.",
+  "status": "METHOD_GATE_OPEN_REOPEN_PACKET_CONTEXT_UNDERDETERMINATION"
+}
