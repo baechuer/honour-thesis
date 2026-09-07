@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0489",
+  "blind_packet_id": "P-E54D896F21039D5551",
+  "batch_input_sha256": "bb86c527d0d504bb01cf0e65224ad17bd4b235b69fb199dc255f3c1395d3ba88",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1128A16F5066C24E",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### 1. Local PDF Extraction (Zero LLM Involvement)",
+      "rationale": "Extracts searchable PDF content and structured page data that can support page references, but does not identify sensitive targets or formulate a redaction checklist.",
+      "missing_material_requirement_or_null": "Identify sensitive external-sharing targets and produce a redaction checklist with page anchors."
+    },
+    {
+      "candidate_token": "C-190D117E3E60B394",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 2: Inventory the categories to detect",
+      "rationale": "Provides layered PII detection and redaction planning for sharing boundaries, but is text and field oriented rather than a PDF review that lists sensitive targets with page anchors.",
+      "missing_material_requirement_or_null": "Inspect the PDF and return all sensitive redaction targets with their precise page anchors."
+    },
+    {
+      "candidate_token": "C-2D92B353AB912785",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Interview Question Kit",
+      "rationale": "Creates hiring interview questions, not a PDF redaction review.",
+      "missing_material_requirement_or_null": "Identify sensitive PDF content and provide page-anchored redaction targets for external sharing."
+    },
+    {
+      "candidate_token": "C-4C3710DAB8BD1490",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Student Feedback Writer",
+      "rationale": "Writes feedback on student work rather than a sensitive-content redaction checklist.",
+      "missing_material_requirement_or_null": "Produce a PDF redaction checklist with page anchors for sensitive targets."
+    },
+    {
+      "candidate_token": "C-54F485D52B02C787",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack bots and does not inspect PDFs for sensitive information.",
+      "missing_material_requirement_or_null": "Identify sensitive PDF targets and page anchors for external redaction."
+    },
+    {
+      "candidate_token": "C-6FDFC990BD2BDD93",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates sprint retrospectives and does not perform PDF redaction review.",
+      "missing_material_requirement_or_null": "Create a page-anchored sensitive-target redaction checklist."
+    },
+    {
+      "candidate_token": "C-B611A065D5C9A986",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Meal Planner",
+      "rationale": "Plans meals and has no PDF redaction capability.",
+      "missing_material_requirement_or_null": "Identify sensitive PDF content and list external-sharing redactions by page."
+    },
+    {
+      "candidate_token": "C-F0DD68A8CE21C9D1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "Runs pathway analysis and does not review PDF content for redaction.",
+      "missing_material_requirement_or_null": "Provide a page-anchored redaction checklist for sensitive PDF targets."
+    }
+  ],
+  "reviewer_output_sha256": "88a68d8a10093c4eba5a9c73c6cd71f265c3318fa24f99bb0ff1957f7222c73c"
+}

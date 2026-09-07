@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0489",
+  "blind_packet_id": "P-E54D896F21039D5551",
+  "batch_input_sha256": "bb86c527d0d504bb01cf0e65224ad17bd4b235b69fb199dc255f3c1395d3ba88",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1128A16F5066C24E",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### 1. Local PDF Extraction (Zero LLM Involvement)",
+      "rationale": "It extracts PDF content into structured page data that could support locating material by page, but it has no procedure for identifying sensitive targets or producing an external-sharing redaction checklist.",
+      "missing_material_requirement_or_null": "Sensitive-target detection and a page-anchored PDF redaction checklist."
+    },
+    {
+      "candidate_token": "C-190D117E3E60B394",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 2: Inventory the categories to detect",
+      "rationale": "It identifies sensitive categories and appropriate redaction modes for external sharing, but it operates on text and records and does not locate findings with PDF page anchors or produce a page-specific PDF checklist.",
+      "missing_material_requirement_or_null": "Page-anchored sensitive-target identification in the PDF."
+    },
+    {
+      "candidate_token": "C-2D92B353AB912785",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Interview Question Kit",
+      "rationale": "The skill creates hiring interview questions and does not analyse PDFs or identify redaction targets.",
+      "missing_material_requirement_or_null": "A PDF redaction checklist with sensitive targets and page anchors."
+    },
+    {
+      "candidate_token": "C-4C3710DAB8BD1490",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Student Feedback Writer",
+      "rationale": "The source writes feedback on student work, not a PDF redaction checklist.",
+      "missing_material_requirement_or_null": "Page-anchored sensitive-target identification and redaction guidance."
+    },
+    {
+      "candidate_token": "C-54F485D52B02C787",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "The skill builds Slack integrations and has no PDF review or redaction capability.",
+      "missing_material_requirement_or_null": "A PDF redaction checklist with page anchors."
+    },
+    {
+      "candidate_token": "C-6FDFC990BD2BDD93",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is an agile retrospective facilitation procedure, unrelated to document redaction.",
+      "missing_material_requirement_or_null": "A PDF redaction checklist with sensitive targets and page anchors."
+    },
+    {
+      "candidate_token": "C-B611A065D5C9A986",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Meal Planner",
+      "rationale": "The source prepares meal plans and grocery lists, not a document redaction review.",
+      "missing_material_requirement_or_null": "A PDF redaction checklist with sensitive targets and page anchors."
+    },
+    {
+      "candidate_token": "C-F0DD68A8CE21C9D1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "The skill performs biological pathway analysis and does not process or redact PDFs.",
+      "missing_material_requirement_or_null": "A PDF redaction checklist with sensitive targets and page anchors."
+    }
+  ],
+  "reviewer_output_sha256": "6f741fef2e62c8912d154184cff40fab42f4f801b777c1dffa343659b55c2733"
+}
