@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1E9C9D03B63B7E71",
+      "missing_material_requirement_or_null": "Hosted Space runtime packaging, dependency pins, GPU or queue configuration, and launch checks.",
+      "rationale": "Sprint-retrospective facilitation does not address model-demo deployment.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-213F8FCE08C987FD",
+      "missing_material_requirement_or_null": "Hosted Space runtime files, dependency pinning, queue configuration, and launch validation.",
+      "rationale": "Provides GPU-memory and quantization guidance but not deployment packaging or hosted-runtime operations.",
+      "source_anchor": "## Hardware requirements"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-74B913112A6185B7",
+      "missing_material_requirement_or_null": "Deployment runtime files, dependency pins, GPU or queue assumptions, and launch checks.",
+      "rationale": "Published user-research surveying is unrelated to packaging and launching a model demo.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-87CF6CC48F862093",
+      "missing_material_requirement_or_null": "Space-specific runtime files, pinned dependencies, queue setup, and launch checks.",
+      "rationale": "Covers GPU capacity and managed model serving, but is Azure MLOps and training-pipeline focused rather than a hosted Space package.",
+      "source_anchor": "## Prerequisites & environment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AB972FA4D4EC5C28",
+      "missing_material_requirement_or_null": "Hosted Space runtime files, dependency pins, GPU or queue assumptions, and launch checks.",
+      "rationale": "Serverless DevSecOps security gates do not package or operate a hosted model-demo Space.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B8531E221188A41C",
+      "missing_material_requirement_or_null": "Model-demo runtime packaging, dependency pins, GPU or queue configuration, and launch checks.",
+      "rationale": "Slack bot construction and deployment do not address hosted model-demo operations.",
+      "source_anchor": "## Deployment"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BB25BF173E804359",
+      "missing_material_requirement_or_null": "Hosted model-demo runtime files, GPU or queue configuration, and launch validation.",
+      "rationale": "Application localization does not address deploying a model demo.",
+      "source_anchor": "## Recipe 1 — greenfield: the app has no i18n yet"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DDB18C804763477D",
+      "missing_material_requirement_or_null": "Hosted model-demo runtime files, dependency pins, GPU or queue configuration, and launch checks.",
+      "rationale": "UX heuristic evaluation does not provide model-demo deployment guidance.",
+      "source_anchor": "## Quick Diagnostic"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1204",
+  "batch_input_sha256": "49bf32962f519cec54365e13bc397527e0b630adeb78e9bf9eca5d1c8913f0ad",
+  "blind_packet_id": "P-D9408CE96A76F9AEA2",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "2812d6ccfee8873092c8a1af6993267339ad8e76600b02885578946f0a9ef421"
+}
