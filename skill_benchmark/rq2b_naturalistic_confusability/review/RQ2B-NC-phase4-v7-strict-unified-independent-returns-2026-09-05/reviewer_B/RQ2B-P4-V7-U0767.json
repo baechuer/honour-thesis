@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-02A82DB1494863FB",
+      "missing_material_requirement_or_null": "Test-double design for the payment SDK, clock, and entitlement endpoint.",
+      "rationale": "It identifies retry anti-patterns but does not design deterministic substitutes for the three test boundaries.",
+      "source_anchor": "### Scattered Timeout/Retry Logic"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0715C601346DD574",
+      "missing_material_requirement_or_null": "Deterministic unit-test substitutes for the payment SDK, clock, and entitlement endpoint.",
+      "rationale": "It configures production incident-management services rather than isolating renewal-service dependencies in tests.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0868415061650949",
+      "missing_material_requirement_or_null": "Guidance for deterministic test doubles and retry-case testing.",
+      "rationale": "It addresses communication-visual design, not renewal-service tests or dependency isolation.",
+      "source_anchor": "# Poster & Advertising Design Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6D5F96351301A036",
+      "missing_material_requirement_or_null": "Unit-test double design for the payment SDK, clock, and entitlement endpoint.",
+      "rationale": "It focuses on consumer-provider contracts and explicitly distinguishes single-deployable calls from unit testing.",
+      "source_anchor": "## Do NOT"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-9BEF6188F0C20775",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly selects appropriate doubles for SDK, HTTP, and clock boundaries, including deterministic time and controlled failure behavior without duplicating business logic.",
+      "source_anchor": "### Step 5: Inject or freeze time and randomness"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BE1F523AB95FC863",
+      "missing_material_requirement_or_null": "Guidance for deterministic test doubles and retry-case testing.",
+      "rationale": "It facilitates team retrospectives rather than designing isolated tests for a renewal service.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C9817EF92756CB98",
+      "missing_material_requirement_or_null": "Test-double design for the payment SDK, clock, and entitlement endpoint.",
+      "rationale": "It builds domain data and expressly routes network, clock, and SDK faking to another skill.",
+      "source_anchor": "## Do NOT"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E00F1B41C8CC6E1A",
+      "missing_material_requirement_or_null": "Deterministic local test substitutes for service boundaries and retry cases.",
+      "rationale": "It supplies hosted demo data APIs, not controlled unit-test doubles for the stated dependencies.",
+      "source_anchor": "## Do NOT use - reach for X instead"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0767",
+  "batch_input_sha256": "e4e87a2b5729e201f63110971209ddc9d34c620f601eb912521ab9eaaf82f2c5",
+  "blind_packet_id": "P-92BBEDB0B27B6D2D0A",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7cb91fe0d868a441d4ea32153046f1efb17f10cd6ff7bff7e6ce136263ab9640"
+}

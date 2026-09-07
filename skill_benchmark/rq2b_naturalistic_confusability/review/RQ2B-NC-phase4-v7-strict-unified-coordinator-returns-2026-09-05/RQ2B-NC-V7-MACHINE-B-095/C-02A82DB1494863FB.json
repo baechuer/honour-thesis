@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-92BBEDB0B27B6D2D0A",
+  "candidate_token": "C-02A82DB1494863FB",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "coordinator_output_sha256": "78d04d5ab37f8a558a908992debab95c30b0661e953ce152632b625ea27ac3c6",
+  "fresh_source_render_sha256": "9fe95868199ff413296390b4747a59038ed06d6b54abb34e0144a78511c78262",
+  "rationale": "The source recognizes retry concerns and says to mock external services, but it supplies no deterministic test-double design for the payment SDK, clock, and entitlement endpoint.",
+  "reviewer_a_return_sha256": "d17667b9482bf08851df4c194f071201ed10812756ddbcc2b53f6d870f8f1dc6",
+  "reviewer_b_return_sha256": "7cb91fe0d868a441d4ea32153046f1efb17f10cd6ff7bff7e6ce136263ab9640",
+  "source_anchor": "### Over-Mocking"
+}
