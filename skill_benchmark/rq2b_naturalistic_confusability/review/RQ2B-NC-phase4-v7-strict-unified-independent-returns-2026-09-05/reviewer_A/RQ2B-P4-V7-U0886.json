@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0886",
+  "blind_packet_id": "P-22981F7644F218D95C",
+  "batch_input_sha256": "d9bec4e9653123e1cbc5e1a7ded49fa0a7094d3b3326d3b9f23375945510a591",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1855181F6253E095",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Slack Bot Builder",
+      "rationale": "This builds Slack bots and does not extract invoice rows from PDFs.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-1A7211138B29FEBD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "JTBD Extractor",
+      "rationale": "This analyzes qualitative research into jobs to be done rather than extracting invoice data.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-51D28F36297EFB92",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Input format",
+      "rationale": "This runs gene-set enrichment analysis, not PDF table extraction.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-83BB52544C2F77A1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Threat Model STRIDE",
+      "rationale": "This models security threats in a system design and does not extract invoice rows.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-9B513E26F7DEA273",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "SQL Query Rewriter",
+      "rationale": "This rewrites inefficient SQL queries rather than reading invoice tables from a PDF.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-AA4038729AE61657",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Evaluate and improve interface usability",
+      "rationale": "This assesses interface usability rather than producing structured invoice data from a PDF.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-EC8C0048212665BE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This facilitates sprint retrospectives, not document data extraction.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    },
+    {
+      "candidate_token": "C-F44F1EE581215FEB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Plan, draft, revise",
+      "rationale": "This supports technical-paper writing rather than extracting invoice rows and anchors from PDFs.",
+      "missing_material_requirement_or_null": "PDF invoice-table extraction into structured rows with page and row anchors."
+    }
+  ],
+  "reviewer_output_sha256": "68377f8f16f3e0955ad8d29ecc952c28dfcaa26ab45d6bd035c8900e3ab4a09f"
+}

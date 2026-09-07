@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0914",
+  "blind_packet_id": "P-39F202D2B043C11CDA",
+  "batch_input_sha256": "1b4947bfcf3ed7be706120b5ab9689209a5ccba1967ef1075b794f0bdc32c336",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-28E44A1CF7D46757","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Build internal tools and workflows with Windmill.","rationale":"It can orchestrate workflows with branches and Slack alerts, but does not provide Airtable-specific field, view, or native trigger design.","missing_material_requirement_or_null":"Airtable-specific schema, views, and automation-trigger configuration."},
+    {"candidate_token":"C-3B827B21C3BBE104","adequacy":"INADEQUATE","source_anchor":"name: Internal Linking Mapper","rationale":"This maps website internal links rather than automating partner requests.","missing_material_requirement_or_null":"Airtable automation and Slack-notification design."},
+    {"candidate_token":"C-3ECEF002EED27C8E","adequacy":"INADEQUATE","source_anchor":"name: Push Notification Copy","rationale":"This writes notification copy rather than building an Airtable workflow.","missing_material_requirement_or_null":"Airtable fields, views, triggers, and testing steps."},
+    {"candidate_token":"C-47BB23514FF9F74C","adequacy":"INADEQUATE","source_anchor":"name: gsea","rationale":"This is for gene-set enrichment analysis, not inbound-request automation.","missing_material_requirement_or_null":"Airtable workflow and Slack notification configuration."},
+    {"candidate_token":"C-93DB53F7D6797BC0","adequacy":"INADEQUATE","source_anchor":"name: add-slack","rationale":"This installs a Slack chat adapter but does not design an Airtable automation.","missing_material_requirement_or_null":"Airtable schema, views, conditions, and workflow testing."},
+    {"candidate_token":"C-C2DD456714810922","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"slack notification, slack automation.","rationale":"It can deliver the Slack-notification component, but does not provide Airtable field, view, or trigger-condition design.","missing_material_requirement_or_null":"Airtable-specific schema, views, and automation rules."},
+    {"candidate_token":"C-C4050B4E2A538C6D","adequacy":"INADEQUATE","source_anchor":"name: Lesson Plan Builder","rationale":"This designs classroom lessons rather than operational workflows.","missing_material_requirement_or_null":"Airtable and Slack automation design."},
+    {"candidate_token":"C-D059904BA030225F","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates sprint retrospectives, not inbound partner-request automation.","missing_material_requirement_or_null":"Airtable workflow, notification, and testing plan."}
+  ],
+  "reviewer_output_sha256": "6375394d99fe81d996cb59b42f68d5fbb696990b827096a049426bab173164b0"
+}

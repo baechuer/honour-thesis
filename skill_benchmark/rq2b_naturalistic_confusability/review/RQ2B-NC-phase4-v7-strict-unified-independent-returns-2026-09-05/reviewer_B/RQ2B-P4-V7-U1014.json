@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1014",
+  "blind_packet_id": "P-CEA85F8D60AE1C26CC",
+  "batch_input_sha256": "5ab00b5ce55a55d240d45fa31e8238e3b6d40b711bc7d746b45d342ca3289f1a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-0F59AB5CBEFCAA98","adequacy":"INADEQUATE","source_anchor":"name: fabric","rationale":"This runs reusable text transformations rather than answering a report-backed business question.","missing_material_requirement_or_null":"Read-only querying of the sales report with figures and filters."},
+    {"candidate_token":"C-22DCFE60424AFA3C","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Answers natural-language business questions over existing Power BI reports", "rationale":"It directly queries existing reports or semantic models and returns a plain-language answer without saving model changes.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-57E5B50B5EDBD844","adequacy":"INADEQUATE","source_anchor":"name: security-prior-art-survey","rationale":"This surveys security prior art rather than analyzing sales-report margins.","missing_material_requirement_or_null":"Sales-report query and period comparison capabilities."},
+    {"candidate_token":"C-6A82AE1F0272C730","adequacy":"INADEQUATE","source_anchor":"name: Paid Acquisition Audit","rationale":"This audits advertising channels rather than querying the existing sales report.","missing_material_requirement_or_null":"Read-only sales-report analysis with Q1/Q2 figures."},
+    {"candidate_token":"C-7B3D13CABBEC330D","adequacy":"INADEQUATE","source_anchor":"name: competitive-analysis","rationale":"This analyzes competitors rather than answering a sales-report question.","missing_material_requirement_or_null":"Report-backed gross-margin query and comparison."},
+    {"candidate_token":"C-B2D47B20C1E1620E","adequacy":"INADEQUATE","source_anchor":"For natural-language data questions use fabriciq", "rationale":"It manages and changes Power BI semantic models, while the task requires a read-only business answer and routes that use case elsewhere.","missing_material_requirement_or_null":"Read-only natural-language report querying."},
+    {"candidate_token":"C-B766C3BC63F4EAFA","adequacy":"INADEQUATE","source_anchor":"name: powerbi-modeling","rationale":"This focuses on building and optimizing models rather than read-only report answering.","missing_material_requirement_or_null":"Read-only business question answering over the existing report."},
+    {"candidate_token":"C-BF72474F70024182","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Generate professional data reports with charts, tables, and visualizations", "rationale":"It can analyze supplied data and produce a sales report, but does not specifically query the existing report, retain its filters, or guarantee no saved artifact.","missing_material_requirement_or_null":"Read-only existing-report query with filter-aware Q1/Q2 comparison."}
+  ],
+  "reviewer_output_sha256": "508b9815cb4fbff74d1e87a460fe371919be947573bcac9d2e8df0c3a918b59f"
+}

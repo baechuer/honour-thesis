@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0914",
+  "blind_packet_id": "P-39F202D2B043C11CDA",
+  "batch_input_sha256": "1b4947bfcf3ed7be706120b5ab9689209a5ccba1967ef1075b794f0bdc32c336",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-28E44A1CF7D46757",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Windmill",
+      "rationale": "It designs internal workflows with branching and Slack alerts, but it does not define Airtable fields, views, or Airtable-specific trigger design.",
+      "missing_material_requirement_or_null": "An Airtable-specific design for inbound-request fields, views, trigger conditions, and testing."
+    },
+    {
+      "candidate_token": "C-3B827B21C3BBE104",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Internal Linking Mapper",
+      "rationale": "This maps website internal links rather than designing an Airtable automation.",
+      "missing_material_requirement_or_null": "An Airtable inbound-partner-request automation with fields, views, triggers, Slack notification, and tests."
+    },
+    {
+      "candidate_token": "C-3ECEF002EED27C8E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Push Notification Copy",
+      "rationale": "This writes notification copy and does not design Airtable records, automations, or Slack delivery.",
+      "missing_material_requirement_or_null": "An Airtable inbound-partner-request automation with fields, views, triggers, Slack notification, and tests."
+    },
+    {
+      "candidate_token": "C-47BB23514FF9F74C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Input format",
+      "rationale": "This runs gene-set enrichment analysis rather than a request-management automation.",
+      "missing_material_requirement_or_null": "An Airtable inbound-partner-request automation with fields, views, triggers, Slack notification, and tests."
+    },
+    {
+      "candidate_token": "C-93DB53F7D6797BC0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Add Slack Channel",
+      "rationale": "This installs a Slack Chat SDK channel and does not create Airtable workflows or notification rules.",
+      "missing_material_requirement_or_null": "An Airtable inbound-partner-request automation with fields, views, triggers, Slack notification, and tests."
+    },
+    {
+      "candidate_token": "C-C2DD456714810922",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Slack Bot Builder",
+      "rationale": "It can build the Slack notification component, but it does not design the Airtable data model, views, trigger conditions, or end-to-end tests.",
+      "missing_material_requirement_or_null": "An Airtable-specific inbound-request automation design with fields, views, triggers, and testing steps."
+    },
+    {
+      "candidate_token": "C-C4050B4E2A538C6D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Lesson Plan Builder",
+      "rationale": "This creates teaching lesson plans rather than request-management automation.",
+      "missing_material_requirement_or_null": "An Airtable inbound-partner-request automation with fields, views, triggers, Slack notification, and tests."
+    },
+    {
+      "candidate_token": "C-D059904BA030225F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This facilitates team retrospectives rather than building an Airtable automation.",
+      "missing_material_requirement_or_null": "An Airtable inbound-partner-request automation with fields, views, triggers, Slack notification, and tests."
+    }
+  ],
+  "reviewer_output_sha256": "503bffb51fb1017d6f9c6a249c911f2988921bee2608985a261515b892492d2b"
+}

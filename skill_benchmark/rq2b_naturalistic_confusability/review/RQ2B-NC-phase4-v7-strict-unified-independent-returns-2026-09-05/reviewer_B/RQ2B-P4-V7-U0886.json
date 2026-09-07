@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0886",
+  "blind_packet_id": "P-22981F7644F218D95C",
+  "batch_input_sha256": "d9bec4e9653123e1cbc5e1a7ded49fa0a7094d3b3326d3b9f23375945510a591",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-1855181F6253E095","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack bots rather than extracting invoice rows from PDFs.","missing_material_requirement_or_null":"PDF table extraction with page and row anchors."},
+    {"candidate_token":"C-1A7211138B29FEBD","adequacy":"INADEQUATE","source_anchor":"name: JTBD Extractor","rationale":"This analyzes qualitative research data rather than invoice tables.","missing_material_requirement_or_null":"Structured PDF invoice-row extraction."},
+    {"candidate_token":"C-51D28F36297EFB92","adequacy":"INADEQUATE","source_anchor":"name: gsea","rationale":"This performs gene-set enrichment analysis, not document table extraction.","missing_material_requirement_or_null":"PDF row extraction with provenance anchors."},
+    {"candidate_token":"C-83BB52544C2F77A1","adequacy":"INADEQUATE","source_anchor":"name: Threat Model STRIDE","rationale":"This creates security threat models rather than extracting invoice data.","missing_material_requirement_or_null":"PDF table parsing and row-level source anchors."},
+    {"candidate_token":"C-9B513E26F7DEA273","adequacy":"INADEQUATE","source_anchor":"name: SQL Query Rewriter","rationale":"This rewrites existing SQL queries and cannot extract rows from a PDF.","missing_material_requirement_or_null":"Invoice PDF extraction to structured rows."},
+    {"candidate_token":"C-AA4038729AE61657","adequacy":"INADEQUATE","source_anchor":"name: ux-heuristics","rationale":"This evaluates interface usability instead of processing invoice documents.","missing_material_requirement_or_null":"PDF table extraction and page/row anchoring."},
+    {"candidate_token":"C-EC8C0048212665BE","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates team retrospectives rather than extracting tabular invoice content.","missing_material_requirement_or_null":"Structured invoice-row data extraction."},
+    {"candidate_token":"C-F44F1EE581215FEB","adequacy":"INADEQUATE","source_anchor":"name: paper-writing","rationale":"This drafts research manuscripts rather than returning anchored invoice rows.","missing_material_requirement_or_null":"PDF table extraction with columns, values, and source anchors."}
+  ],
+  "reviewer_output_sha256": "f310890edbfc988173e68781d4ba741e6d1265de46faac7b1ad17eb6b4868a35"
+}
