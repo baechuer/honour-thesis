@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0699",
+  "blind_packet_id": "P-E3C52E930ADC65FAF4",
+  "batch_input_sha256": "7fd6f9b6ddc56fcba7580e24cb9fa4d930c4801798d907f2c9f66392316195ef",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0B299B0EFC41A7C5",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Transloadit Media Processing",
+      "rationale": "This media-processing workflow explicitly supports text-to-speech and can generate spoken audio from supplied text without needing transcription or podcast-publishing steps.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-7ACAC73DA3C136FC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Captions From Transcript",
+      "rationale": "This skill creates timed caption tracks from existing audio or video rather than synthesizing narration into audio.",
+      "missing_material_requirement_or_null": "A text-to-speech audio-generation workflow is required."
+    },
+    {
+      "candidate_token": "C-9481A884EF317238",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Narration Script",
+      "rationale": "This skill writes or revises the narration text but does not convert supplied text into spoken audio.",
+      "missing_material_requirement_or_null": "A text-to-speech audio-generation workflow is required."
+    },
+    {
+      "candidate_token": "C-AF48F6A493F54B2F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Upgrade Datadog Browser SDK to v5",
+      "rationale": "This is a browser-observability SDK migration guide unrelated to speech synthesis.",
+      "missing_material_requirement_or_null": "It lacks text-to-speech generation capabilities."
+    },
+    {
+      "candidate_token": "C-B8CE3680F6B0D00C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "user-research-prior-art-survey",
+      "rationale": "This skill concerns prior-art research for user research rather than audio generation.",
+      "missing_material_requirement_or_null": "It lacks text-to-speech generation capabilities."
+    },
+    {
+      "candidate_token": "C-B90BE16318E3A9E7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Podcast Pitch",
+      "rationale": "This skill writes podcast guest-pitch emails, not spoken narration audio.",
+      "missing_material_requirement_or_null": "It lacks text-to-speech generation capabilities."
+    },
+    {
+      "candidate_token": "C-DA66F4E431F7D2F7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "MoviePy",
+      "rationale": "This skill edits and mixes existing media but does not synthesize speech from a supplied narration script.",
+      "missing_material_requirement_or_null": "A text-to-speech audio-generation workflow is required."
+    },
+    {
+      "candidate_token": "C-F24F1C5429441E63",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "YouTube Transcript Downloader",
+      "rationale": "This skill obtains or transcribes captions from YouTube recordings, the inverse of generating audio from text.",
+      "missing_material_requirement_or_null": "A text-to-speech audio-generation workflow is required."
+    }
+  ],
+  "reviewer_output_sha256": "0dc577d3805b49132b2fc98c879099bf8cce3126ee20bb838ea0cd802439f74f"
+}
