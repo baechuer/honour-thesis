@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0536",
+  "blind_packet_id": "P-024FC8BEEAA5536074",
+  "batch_input_sha256": "4c231f52b9fda8f34e8d982e9fefeb9d34b3692b2fba57d86f0e23ed02b95ffa",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3E0CF2D5876B9FA9",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Basic Information",
+      "rationale": "The source is metadata for a job-description generator and does not establish AI governance controls or a management-system gap assessment.",
+      "missing_material_requirement_or_null": "An AI management-system gap table covering roles, affected-person risks, operational risks, controls, and remediation."
+    },
+    {
+      "candidate_token": "C-54561F146E23E038",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# SERP Gap Analyzer",
+      "rationale": "The skill assesses content coverage against search-ranking pages, not governance for applicant-ranking and support AI systems.",
+      "missing_material_requirement_or_null": "AI management-system governance gap assessment."
+    },
+    {
+      "candidate_token": "C-55D25076C56BDE9B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Localize an app with Multilocale",
+      "rationale": "The source localises application strings and does not cover AI management-system risks or controls.",
+      "missing_material_requirement_or_null": "AI governance gap table with affected-person and system-risk controls."
+    },
+    {
+      "candidate_token": "C-592B05B1D1DB2F90",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# ISO 42001 AI Management System (AIMS) Skill",
+      "rationale": "It is expressly for ISO 42001 AIMS implementation and gap assessment, covering organisational AI governance, roles, intended use, risk and impact assessment, human oversight, data quality, Annex A control applicability, evidence, ownership, prioritisation, and remediation.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-7C50910195D0278F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Power BI Semantic Model Authoring — CLI Skill",
+      "rationale": "The skill manages Power BI semantic models and has no AI management-system governance procedure.",
+      "missing_material_requirement_or_null": "AI governance gap assessment for the two AI systems."
+    },
+    {
+      "candidate_token": "C-A91F66966764F5AC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# ISO 27001 Compliance Skill",
+      "rationale": "It can structure a security management-system gap assessment and operational risk controls, but it does not cover the AI-specific roles, affected-person impacts, intended purpose, human intervention, data-quality governance, and AI-control applicability requested.",
+      "missing_material_requirement_or_null": "AI management-system governance and impact assessment for the applicant-ranking and support systems."
+    },
+    {
+      "candidate_token": "C-B960C1940B0B799D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "The skill performs gene-set enrichment analysis and is unrelated to organisational AI governance.",
+      "missing_material_requirement_or_null": "AI management-system governance gap assessment."
+    },
+    {
+      "candidate_token": "C-D8AFD9B78A038BB6",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# ISO 27701 Privacy Information Management Skill",
+      "rationale": "It can address privacy-management and PII-risk controls relevant to the systems, but it does not supply the requested AI-management-system framework for roles, human intervention, system performance and data quality, and AI-control applicability.",
+      "missing_material_requirement_or_null": "AI management-system governance and impact assessment beyond privacy controls."
+    }
+  ],
+  "reviewer_output_sha256": "b826806fbe4fda27193fd1620f23d524be0cc3ffb80f78ae47f1977c51ee259b"
+}

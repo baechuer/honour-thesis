@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0895",
+  "blind_packet_id": "P-E3C6CDB8338D46BAC1",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-219FC2DEE779286B",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# AWS Landing Zone Setup",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "aws-landing-zone-setup"
+    },
+    {
+      "candidate_token": "C-3DCE3F39D2391D61",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# GCP Landing Zone Setup",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "gcp-landing-zone-setup"
+    },
+    {
+      "candidate_token": "C-4EA047751587CD2F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# GSVA Analysis And Visualization",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "gsva-analysis-and-visualization"
+    },
+    {
+      "candidate_token": "C-995E6A3B10939654",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Complete MLOps Platform Deployment On AWS From Scratch",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "complete-mlops-platform-deployment-on-aws-from-scratch"
+    },
+    {
+      "candidate_token": "C-9B4176B32BA25746",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "# Backend Testing",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "backend-testing"
+    },
+    {
+      "candidate_token": "C-B918988565B673C7",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Complete MLOps Platform Deployment On GCP From Scratch",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "complete-mlops-platform-deployment-on-gcp-from-scratch"
+    },
+    {
+      "candidate_token": "C-BE16E08459DFA31F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "# Azure Landing Zone Setup",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "# Azure Landing Zone Setup"
+    },
+    {
+      "candidate_token": "C-DFC8E2DC0AFA30BA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "# Complete MLOps Platform Deployment On Azure From Scratch",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "complete-mlops-platform-deployment-on-azure-from-scratch"
+    }
+  ],
+  "reviewer_A_return_sha256": "95a711967926ecc06318836d9ab6c26c979d088e0de2a05607fec39c02e72cd9",
+  "reviewer_B_return_sha256": "88459d6dbab621c31db301dbe79ca0fbf3ed15d0d269d05e6a71017f86fe11d4",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}
