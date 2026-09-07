@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-CFA9B1A8A8216C22C6",
+  "candidate_token": "C-DA811F1DC8066331",
+  "coordinator_decision": "INADEQUATE",
+  "coordinator_output_sha256": "0150962fc633a53f27e6dec1aec6018366e43bb4605365b3456daf4d9dbee8ba",
+  "fresh_source_render_sha256": "6ec7641229d7d1e58bb6335f0a156ee9d78feeac3a93687efbdf34a038b7dbad",
+  "rationale": "The source requires per-subtask design documents and subagent fan-out, which conflicts with the prompt’s lightweight sequential workflow and its instruction not to produce separate technical design documents.",
+  "reviewer_a_return_sha256": "6a2b33c536a6cfa7aebfe90542d65b086b3c33fa3242a39c667fe52c517eb1a1",
+  "reviewer_b_return_sha256": "ae0e7800eaaaa7ce7adb45df88ca9e41614466b206b5af96ba87db08d74d4bc8",
+  "source_anchor": "write per-subtask design docs, then launch one subagent per design doc and merge their results."
+}
