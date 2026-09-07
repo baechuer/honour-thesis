@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-22513FB7C2C302FF",
+      "missing_material_requirement_or_null": "Figma-variable export and deterministic token-package conversion.",
+      "rationale": "Presentation-generation workflow does not address Figma variables or token-package export.",
+      "source_anchor": "# Slidev Presentation Generator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5011E922029541E5",
+      "missing_material_requirement_or_null": "Figma-variable export and deterministic token-package conversion.",
+      "rationale": "TypeScript coding standard has no Figma-variable reading or token export workflow.",
+      "source_anchor": "# TypeScript Strict Standard"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5EDB76129E8FCD9E",
+      "missing_material_requirement_or_null": "Figma-variable export and deterministic token-package conversion.",
+      "rationale": "Security prior-art research is unrelated to exporting design tokens from Figma.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5F783A1E29328117",
+      "missing_material_requirement_or_null": "Figma-variable export and deterministic token-package conversion.",
+      "rationale": "General design-artifact generation does not specify Figma variables or deterministic token outputs.",
+      "source_anchor": "# open-design"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-62519A0D0AF813A9",
+      "missing_material_requirement_or_null": "Figma-variable export and deterministic token-package conversion.",
+      "rationale": "OSS publication hygiene does not cover Figma variables or design-token export.",
+      "source_anchor": "# oss-publish"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AB83E8BC988B290C",
+      "missing_material_requirement_or_null": "Reverse-direction Figma export and token-package generation.",
+      "rationale": "This workflow imports code tokens into Figma, the opposite of the requested export.",
+      "source_anchor": "# figma-import-tokens"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-EB9731F53078BEA3",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly exports local Figma variables to canonical DTCG plus CSS and Tailwind outputs, retaining required token metadata and reporting warnings.",
+      "source_anchor": "# figma-export-tokens"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F43C4253A1F66C99",
+      "missing_material_requirement_or_null": "Direct local-Figma-variable export and canonical DTCG conversion.",
+      "rationale": "Can audit and sync existing token sources, but does not export local Figma variables into the requested canonical package.",
+      "source_anchor": "# Design Tokens Sync"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0596",
+  "batch_input_sha256": "50dea60599edec848ef4ecc96ce00667adc79f5fc7e7a2ab79fc2e6550d7b35a",
+  "blind_packet_id": "P-7B1F85474E22DD1555",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c994ef7d8e12276480ca9b4688298b231bfffb110a83f4273faae48668046089"
+}
