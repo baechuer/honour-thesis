@@ -52,6 +52,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--microbatch", type=int, required=True)
     parser.add_argument("--version", type=int, default=1)
+    parser.add_argument("--expected-group-count", type=int, default=12)
     parser.add_argument("--batch-id", action="append", required=True)
     parser.add_argument(
         "--alternate",
@@ -62,8 +63,12 @@ def main() -> None:
     )
     args = parser.parse_args()
     batch_ids = args.batch_id
-    if len(batch_ids) != 12 or len(set(batch_ids)) != 12:
-        raise SystemExit("a Machine-B microbatch must contain exactly 12 distinct groups")
+    if (
+        args.expected_group_count < 1
+        or len(batch_ids) != args.expected_group_count
+        or len(set(batch_ids)) != args.expected_group_count
+    ):
+        raise SystemExit("batch ids must match the declared count and be distinct")
 
     destination = (
         WORKSPACE

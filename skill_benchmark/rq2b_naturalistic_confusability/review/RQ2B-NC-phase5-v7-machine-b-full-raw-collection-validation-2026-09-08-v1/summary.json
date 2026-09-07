@@ -1,0 +1,30 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_full_raw_collection_validation_v1",
+  "scope": "Deterministic V7 Machine B continuation scope; target-blind independent raw-return collection only.",
+  "frozen_protocol": {
+    "path": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "selection": {
+    "source_machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "selection_snapshot_commit": "e8eef98",
+    "pending_groups": 341,
+    "group_unit": "complete sealed packet: six main candidates plus two tails"
+  },
+  "mechanical_replay": {
+    "valid_two_return_groups": 340,
+    "started_incomplete_groups": 1,
+    "validated_lane_returns": 680,
+    "traceable_single_lane_reissues_used": 18,
+    "unresolved_raw_return_failures": 2
+  },
+  "started_incomplete": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0527",
+      "invalid_lanes": ["A", "B"],
+      "reason": "Frozen source-anchor/rationale validator failure in both retained original returns; no unused independent reviewer remains for a valid reissue.",
+      "disposition": "STARTED_INCOMPLETE_RETAINED_NO_FINAL_DISPOSITION"
+    }
+  ],
+  "closure_boundary": "No reconciliation coordinator packet, final disposition, opaque target join, acceptable set, main-tail designation, retrieval claim, or library claim is materialised here. The coordinator-context method gate remains open."
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_final_newline_preservation_repair_v1",
+  "scope": "format repair only; no review semantics or target information touched",
+  "entries": [
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-025-lane-a-reissue-001-2026-09-08-v1/returns/reviewer_A/RQ2B-P4-V7-U0597.json",
+      "preserved_raw_base64_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-025-lane-a-reissue-001-format-repair-preservation-2026-09-08-v1/raw_original_returns_base64/RQ2B-P4-V7-U0597.base64",
+      "original_sha256": "e5070ba599f15b9afbf6054945a81b69dd8f196b0adb5a455f3fdfad5c6c13fb",
+      "repaired_sha256": "53cb91fb905269f4a3c924b044198329b5d52d38c3078093daf84df38d389da9",
+      "transformation": "remove trailing blank line(s), retain exactly one final newline",
+      "semantic_change": false,
+      "archive_replay_verified": true
+    }
+  ]
+}

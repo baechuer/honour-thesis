@@ -27,34 +27,48 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--package-name", required=True)
     parser.add_argument("--return-path", action="append", required=True)
+    parser.add_argument(
+        "--complete-existing-archive",
+        action="store_true",
+        help="write a ledger for a prior interrupted run that already preserved the raw bytes",
+    )
     args = parser.parse_args()
 
     destination = REVIEW_ROOT / args.package_name
-    if destination.exists():
+    if destination.exists() and not args.complete_existing_archive:
         raise SystemExit(f"refusing to overwrite a preservation package: {destination}")
     archive = destination / "raw_original_returns_base64"
-    archive.mkdir(parents=True)
+    archive.mkdir(parents=True, exist_ok=args.complete_existing_archive)
 
     entries = []
     for raw_relative in args.return_path:
         path = WORKSPACE / raw_relative
         raw = path.read_bytes()
-        if not raw.endswith(b"\n\n"):
-            raise SystemExit(f"{path} does not have an extra terminal blank line")
-        repaired = raw.rstrip(b"\n") + b"\n"
-        json.loads(repaired.decode("utf-8"))
         archived_path = archive / f"{path.stem}.base64"
-        archived_path.write_bytes(base64.b64encode(raw) + b"\n")
-        if base64.b64decode(archived_path.read_bytes()) != raw:
-            raise RuntimeError(f"archive replay mismatch for {path}")
-        path.write_bytes(repaired)
+        preexisting = raw.endswith(b"\n") and not raw.endswith(b"\n\n")
+        if preexisting and args.complete_existing_archive and archived_path.is_file():
+            original = base64.b64decode(archived_path.read_bytes())
+            if not original.endswith(b"\n\n") or original.rstrip(b"\n") + b"\n" != raw:
+                raise RuntimeError(f"existing archive does not replay the normalisation for {path}")
+            repaired = raw
+            transformation = "prior interrupted run already removed terminal blank line(s); archive replay verified and ledger materialised"
+        else:
+            if not raw.endswith(b"\n\n"):
+                raise SystemExit(f"{path} does not have an extra terminal blank line")
+            repaired = raw.rstrip(b"\n") + b"\n"
+            json.loads(repaired.decode("utf-8"))
+            archived_path.write_bytes(base64.b64encode(raw) + b"\n")
+            if base64.b64decode(archived_path.read_bytes()) != raw:
+                raise RuntimeError(f"archive replay mismatch for {path}")
+            path.write_bytes(repaired)
+            transformation = "remove trailing blank line(s), retain exactly one final newline"
         entries.append(
             {
                 "return_path": raw_relative,
                 "preserved_raw_base64_path": str(archived_path.relative_to(WORKSPACE)),
                 "original_sha256": sha256(raw),
                 "repaired_sha256": sha256(repaired),
-                "transformation": "remove trailing blank line(s), retain exactly one final newline",
+                "transformation": transformation,
                 "semantic_change": False,
                 "archive_replay_verified": True,
             }

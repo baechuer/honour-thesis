@@ -31,6 +31,7 @@ def sha256(data: bytes) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--microbatch", type=int, required=True)
+    parser.add_argument("--version", type=int, default=1)
     parser.add_argument("--lane", choices=("A", "B"), required=True)
     parser.add_argument("--batch-id", action="append", required=True)
     args = parser.parse_args()
@@ -42,7 +43,7 @@ def main() -> None:
         WORKSPACE
         / "skill_benchmark/rq2b_naturalistic_confusability/review"
         / f"RQ2B-NC-phase5-v7-machine-b-microbatch-{args.microbatch:03d}-"
-        f"reviewer-{args.lane.lower()}-syntax-repair-preservation-2026-09-08-v1"
+        f"reviewer-{args.lane.lower()}-syntax-repair-preservation-2026-09-08-v{args.version}"
     )
     if destination.exists():
         raise SystemExit(f"refusing to overwrite a preservation package: {destination}")

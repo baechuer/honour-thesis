@@ -1,0 +1,194 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_023_independent_pair_validation_v1",
+  "scope": "Machine B V7 target-blind independent return collection only.",
+  "status": "PASS_V7_TWO_INDEPENDENT_RAW_RETURNS_COLLECTED_PENDING_METHOD_GATE",
+  "batch_ids": [
+    "RQ2B-P4-V7-U0833",
+    "RQ2B-P4-V7-U1041",
+    "RQ2B-P4-V7-U0928",
+    "RQ2B-P4-V7-U0400",
+    "RQ2B-P4-V7-U1031",
+    "RQ2B-P4-V7-U0187",
+    "RQ2B-P4-V7-U0655",
+    "RQ2B-P4-V7-U0240",
+    "RQ2B-P4-V7-U0698",
+    "RQ2B-P4-V7-U0216",
+    "RQ2B-P4-V7-U1046",
+    "RQ2B-P4-V7-U1038"
+  ],
+  "bound_inputs": {
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "execution_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS",
+    "audit_status": "PASS_PHASE4_K6_OUTCOME_BLIND_AUDIT_INPUT_MATERIALISED_PENDING_BLIND_REVIEWS",
+    "candidate_packet_rule": "each group validated as 6 main plus 2 tail candidates"
+  },
+  "lanes": {
+    "A": {
+      "validated_return_count": 12,
+      "assessment_counts": {
+        "FULLY_ACCEPTABLE": 11,
+        "INADEQUATE": 65,
+        "PARTIALLY_ADEQUATE": 20
+      },
+      "returns": [
+        {
+          "batch_id": "RQ2B-P4-V7-U0833",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0833.json",
+          "reviewer_output_sha256": "71f6d67190c42585ff7dc7b6d39d70515713179fd75e827de02ba7aec25b71bb",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1041",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-023-lane-a-reissue-001-2026-09-08-v1/returns/reviewer_A/RQ2B-P4-V7-U1041.json",
+          "reviewer_output_sha256": "999fee79b4ba3d938b1fd38bd35e77141330fcf00c88e0b30ad63b0b6074d619",
+          "return_role": "TRACEABLE_REISSUE_VALIDATED_AS_ALTERNATE",
+          "canonical_raw_return_retained": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1041.json"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0928",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0928.json",
+          "reviewer_output_sha256": "f966384558c3a4bf61c9481a395b5ae6ce8549ef0c512169c562ad2832063dda",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0400",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0400.json",
+          "reviewer_output_sha256": "d1ad761b0860a2380d6e00e646fdd7f701549eac10583702ef2dcbb280f93e8d",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1031",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1031.json",
+          "reviewer_output_sha256": "37072e7cb3884f4c7b348ea93d3bd7f2988b730d26344b6b43c11230eb80aacc",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0187",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0187.json",
+          "reviewer_output_sha256": "3210696111da58fcf3ff5034856c54f90b632f882b335f124ea48659302edeff",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0655",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0655.json",
+          "reviewer_output_sha256": "b1ad664d8f57dfa83874e3b71f707757b9d52febf0ff8e0e8b031e1f31ecf1d4",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0240",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0240.json",
+          "reviewer_output_sha256": "7c7ac882ee08abf9d5331a8aece49c1c1fb197c0dcda53e8ee924c6c3999e763",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0698",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0698.json",
+          "reviewer_output_sha256": "64b5552fa51dc0ce41794d87958eab85e7f6df5b092eb4a844707ffd319e595d",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0216",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0216.json",
+          "reviewer_output_sha256": "c9d6bda1733d5e0724a867f45fefa3b2cefe809658fe3a5fc446e4d2ed0007d5",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1046",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-023-lane-a-reissue-001-2026-09-08-v1/returns/reviewer_A/RQ2B-P4-V7-U1046.json",
+          "reviewer_output_sha256": "ea6563bc7075799da1c2c1d6f2da3986c970d9c8e5bdc55f3ca4c7541490a722",
+          "return_role": "TRACEABLE_REISSUE_VALIDATED_AS_ALTERNATE",
+          "canonical_raw_return_retained": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1046.json"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1038",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-023-lane-a-reissue-001-2026-09-08-v1/returns/reviewer_A/RQ2B-P4-V7-U1038.json",
+          "reviewer_output_sha256": "4328dac7c2d45b8ea0ca096728b61b8059e41c5b7542ac370b990e64e21f5599",
+          "return_role": "TRACEABLE_REISSUE_VALIDATED_AS_ALTERNATE",
+          "canonical_raw_return_retained": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1038.json"
+        }
+      ]
+    },
+    "B": {
+      "validated_return_count": 12,
+      "assessment_counts": {
+        "INADEQUATE": 96
+      },
+      "returns": [
+        {
+          "batch_id": "RQ2B-P4-V7-U0833",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0833.json",
+          "reviewer_output_sha256": "73c5cccd2c42cd50ab6fd4be45696a3e873399625b37c7e7a94808786e99bf98",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1041",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1041.json",
+          "reviewer_output_sha256": "8ad7ec7327054ace33db8ca1b7da07384c838b1019981c0476790c8d27345cd8",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0928",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0928.json",
+          "reviewer_output_sha256": "191cac2ae7d153fba2534dc54034cd526c372d407a5010c795801da33f1355b9",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0400",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0400.json",
+          "reviewer_output_sha256": "b835b22ef6e9c13347764cdaab00b99fa6800d91b5c4f7f1b1af1671c4173c35",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1031",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1031.json",
+          "reviewer_output_sha256": "1b4dd2e01f3f52765c96d5970e42b47deabe117a1921d6b98bf464ac2e361617",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0187",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0187.json",
+          "reviewer_output_sha256": "08d70826dbacdbb5eda6039e9e037b1572e24e05755ffcd5f4554ef8d77aad1d",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0655",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0655.json",
+          "reviewer_output_sha256": "f59b4e5cc892759f8459ec7c9b413ab92fdd4f910206fc8a1a8739f510ced6e7",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0240",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0240.json",
+          "reviewer_output_sha256": "325540c8191cae14c1d8236ae649db457b9690b715d22bc87eff86e94a8177a0",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0698",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0698.json",
+          "reviewer_output_sha256": "502faf65a2a773e71c332eee3cc14ae8ca0dddd660acd08d2174062f81c9f1fe",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U0216",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U0216.json",
+          "reviewer_output_sha256": "5d6407d744445be672b321e8776a8cea4fe22e285d10c2eb2896a5702ebac858",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1046",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1046.json",
+          "reviewer_output_sha256": "99da6f43a4aa3df504eb61e914db36edf6b087c3f0126b7516dc9b87ca02c1d8",
+          "return_role": "CANONICAL_RAW_RETURN"
+        },
+        {
+          "batch_id": "RQ2B-P4-V7-U1038",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_B/RQ2B-P4-V7-U1038.json",
+          "reviewer_output_sha256": "6ac2394e81b06e7397de76f86a4c387d226370e75e026516242ef62a051f6312",
+          "return_role": "CANONICAL_RAW_RETURN"
+        }
+      ]
+    }
+  },
+  "reissue_count": 3,
+  "closure_boundary": "No reconciliation coordinator packet, final disposition, opaque target join, acceptable set, main-tail designation, retrieval claim, or library claim is materialised here. The recorded coordinator-context gate remains open."
+}
