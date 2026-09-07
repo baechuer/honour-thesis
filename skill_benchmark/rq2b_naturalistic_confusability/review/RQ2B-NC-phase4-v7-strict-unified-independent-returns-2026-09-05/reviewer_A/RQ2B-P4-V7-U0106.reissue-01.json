@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1BE76ABABDF9082E",
+      "missing_material_requirement_or_null": "KPI anomaly detection by region and product",
+      "rationale": "Creates paid-ad concepts and copy rather than examining a monthly KPI sheet for unusual patterns.",
+      "source_anchor": "Campaign Concepts and Copy"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7796D88476DCF1F3",
+      "missing_material_requirement_or_null": "KPI anomaly detection by region and product",
+      "rationale": "Builds Slack bots and integrations, not an evidence-based anomaly watchlist from KPI data.",
+      "source_anchor": "Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-79EE11FE36AAE285",
+      "missing_material_requirement_or_null": "KPI anomaly detection by region and product",
+      "rationale": "Analyzes packet captures for intrusion evidence rather than a monthly KPI sheet.",
+      "source_anchor": "The Triage Funnel"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7D22F60421990346",
+      "missing_material_requirement_or_null": "KPI anomaly detection by region and product",
+      "rationale": "Runs gene-set enrichment on ranked gene lists, which does not provide the requested KPI watchlist.",
+      "source_anchor": "Run GSEA on a ranked gene list"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C46A8798537EBA28",
+      "missing_material_requirement_or_null": "KPI anomaly detection by region and product",
+      "rationale": "Synchronizes design tokens into Figma variables rather than analyzing monthly KPI patterns.",
+      "source_anchor": "Push design tokens from code INTO Figma as variables"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-D91C85B8247D765D",
+      "missing_material_requirement_or_null": "Region- and product-level anomaly detection from the monthly KPI sheet",
+      "rationale": "Provides a KPI scoreboard and comparison of funnel stages, but it is gym-specific and does not surface spikes, drops, breakpoints, and outliers across the requested dimensions.",
+      "source_anchor": "Scoreboard template"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E6AFC2C746A5C1E0",
+      "missing_material_requirement_or_null": "KPI-sheet analysis by region and product",
+      "rationale": "Its change-log and alert framing can surface changes, but it is scoped to competitor app intelligence rather than anomalies in a supplied monthly KPI sheet.",
+      "source_anchor": "Weekly Competitive Report Template"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EFB07DB65120210C",
+      "missing_material_requirement_or_null": "KPI anomaly detection by region and product",
+      "rationale": "Facilitates sprint retrospectives and action items, not a compact evidence-based KPI anomaly watchlist.",
+      "source_anchor": "Sprint Retro Facilitator"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0106",
+  "batch_input_sha256": "faf348997c86aec626b3c0ec32369ef82529830414e2ae9c3270caa6e4d9a551",
+  "blind_packet_id": "P-E76D1915FAEE392CD1",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "714f30dd97758142c25c2869b10b7674b70065cd0ee5d5d15fe276e77c576ff8"
+}
