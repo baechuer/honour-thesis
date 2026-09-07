@@ -1,0 +1,48 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_full_raw_collection_validation_v3",
+  "scope": "All 533 V7 Machine-B prompt groups; target-blind raw-return integrity and coverage only.",
+  "claim_boundary": "No reconciliation coordinator packet, final disposition, opaque target join, acceptable set, main-tail designation, retrieval claim, or library claim is materialised.",
+  "bound_inputs": {
+    "machine_b_handoff_manifest": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2_fresh_v20/machine_b_manifest.jsonl",
+    "machine_b_handoff_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "existing_return_audit_ledger": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-audit-ledger-2026-09-07-v1/validated_existing_return_pairs.jsonl",
+    "existing_return_audit_ledger_sha256": "c7a3fa57be1ef80632cf1a492b85c36202ccd6a1fca5c72f7a43acf9bf3f830b",
+    "reissue_plan_summary": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-existing-return-reissues-2026-09-08-v2/summary.json",
+    "reissue_plan_summary_sha256": "3182a7ad67136f7bf0e784b82266a927ef3f18fc39b0dd15a58030db010411dd",
+    "format_repair_ledger": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-existing-return-reissues-format-repair-2026-09-08-v1/format_repair_ledger.json",
+    "format_repair_ledger_sha256": "fb7a44311061ace0bdbfb7bd53fe22669476e7966008a60dbc04f5403952bc8a",
+    "frozen_protocol": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "frozen_protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "frozen_execution_replay_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS"
+  },
+  "counts": {
+    "machine_b_prompt_groups": 533,
+    "valid_two_return_groups": 532,
+    "started_incomplete_groups": 1,
+    "validated_lane_returns": 1064,
+    "retained_invalid_lanes": 2,
+    "historical_validated_reissue_lanes": 34,
+    "current_target_blind_reissue_lanes": 88,
+    "continuation_traceable_reissue_lanes": 18
+  },
+  "integrity": {
+    "packet_k6_and_two_tail_replay_pass": true,
+    "full_machine_b_coverage_replayed": true,
+    "only_expected_started_incomplete_group_remains": [
+      "RQ2B-P4-V7-U0527"
+    ],
+    "target_blindness_preserved": true
+  },
+  "started_incomplete": [
+    {
+      "batch_id": "RQ2B-P4-V7-U0527",
+      "lane": "A",
+      "error": "V7 assessment adequacy, source-anchor or rationale drift"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0527",
+      "lane": "B",
+      "error": "V7 assessment adequacy, source-anchor or rationale drift"
+    }
+  ]
+}

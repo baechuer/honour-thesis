@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0B6C0C09ADC1F616",
+      "missing_material_requirement_or_null": "A material requested requirement or output is not supplied by this source-visible route.",
+      "rationale": "The source-visible workflow is a meaningful neighbouring route but misses a material requested requirement or output.",
+      "source_anchor": "# Error Budget Policy"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-193C435BF2043CF8",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source-visible workflow satisfies the material inputs, transformations, constraints, and requested output.",
+      "source_anchor": "# SRE Engineer"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-21E99B798AE77555",
+      "missing_material_requirement_or_null": "A material requested requirement or output is not supplied by this source-visible route.",
+      "rationale": "The source-visible workflow is a meaningful neighbouring route but misses a material requested requirement or output.",
+      "source_anchor": "# Alerting & On-Call"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-2E43E9BC75B31906",
+      "missing_material_requirement_or_null": "The source-visible route does not supply the requested task, input, or output boundary.",
+      "rationale": "The source-visible workflow is not a plausible route for the prompt central task/input/output boundary.",
+      "source_anchor": "# Langtrace — Open-Source LLM Observability"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-64A44A7C264A58E1",
+      "missing_material_requirement_or_null": "The source-visible route does not supply the requested task, input, or output boundary.",
+      "rationale": "The source-visible workflow is not a plausible route for the prompt central task/input/output boundary.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C10FC76A69D48C6E",
+      "missing_material_requirement_or_null": "The source-visible route does not supply the requested task, input, or output boundary.",
+      "rationale": "The source-visible workflow is not a plausible route for the prompt central task/input/output boundary.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D71583F2677612EF",
+      "missing_material_requirement_or_null": "The source-visible route does not supply the requested task, input, or output boundary.",
+      "rationale": "The source-visible workflow is not a plausible route for the prompt central task/input/output boundary.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-FD0F77D60F6034B7",
+      "missing_material_requirement_or_null": "A material requested requirement or output is not supplied by this source-visible route.",
+      "rationale": "The source-visible workflow is a meaningful neighbouring route but misses a material requested requirement or output.",
+      "source_anchor": "# Alert Tuning"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0604",
+  "batch_input_sha256": "7b2d374ba59a0a7f1755973536e3bfe28675b3ceba14c512fc51a12e4089e391",
+  "blind_packet_id": "P-24B7F91E17B99A3064",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "49db83febc59186b48fa957f63277f58dec3a1fb511c45a6a4889dbe419519c8"
+}
