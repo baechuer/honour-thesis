@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-48A255C8DC84B319",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It supplies Hugging Face token, GPU, dependency, and environment material for model fine-tuning, but not the requested Gradio Space deployment procedure.",
+      "source_anchor": "LLM Fine-Tuning Infrastructure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-609535C83D0C83B0",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It is a published user-research survey workflow rather than guidance for packaging or deploying a Gradio application.",
+      "source_anchor": "user-research-prior-art-survey"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-759F38D723D55D59",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It facilitates sprint retrospectives and contains no material for preparing or deploying a Gradio Space.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-8DF36DD7E9D41B5B",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "Its Hugging Face fine-tuning and deployment scope can inform model and hardware considerations, but it does not cover Gradio Space packaging, secrets, or smoke testing.",
+      "source_anchor": "fine-tuning-expert"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9596F22B1F069C04",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It concerns Slack API bots and integrations, not deployment of a Gradio demonstration to Hugging Face Spaces.",
+      "source_anchor": "slack-bot-builder"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-963F80A83326E831",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It includes project setup and a smoke-test concept, but for Remotion video projects rather than Gradio on Hugging Face Spaces.",
+      "source_anchor": "Remotion Setup"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD0932841089F4B9",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It provides spatial-design domain guidance and has no application deployment or Gradio Spaces material.",
+      "source_anchor": "architecture-space"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD433EA8445EBEAC",
+      "missing_material_requirement_or_null": "A Hugging Face Spaces and Gradio deployment checklist covering app files, pinned dependencies, secrets, hardware selection, and smoke tests.",
+      "rationale": "It is for fundraising pitch decks and does not address preparing a Gradio application for Hugging Face Spaces.",
+      "source_anchor": "officecli-pitch-deck"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1205",
+  "batch_input_sha256": "da0e057143f5f7745e9832f4e0fd44c3cea6516138fd2c9504ccd457c691cdb1",
+  "blind_packet_id": "P-B4D2443CF738DB965C",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "a8ebbd02b90dba6a56692962b721ae28eb8c5f9d4dcf6cc5c9563cd108076dfa"
+}
