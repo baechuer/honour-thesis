@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1018",
+  "blind_packet_id": "P-141E25BBA5345FBBB7",
+  "batch_input_sha256": "9360e4e3e500183f2e1aa7aa264aab021447add62865178100c578b3615f8724",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token": "C-45C92726BF8DEE32", "adequacy": "INADEQUATE", "source_anchor": "name: review-lost-opportunity", "rationale": "This evaluates a lost sales opportunity, not the trustworthiness of spreadsheet data.", "missing_material_requirement_or_null": "Data-quality checks and a report for the spreadsheet."},
+    {"candidate_token": "C-4D39EC85464B2D08", "adequacy": "INADEQUATE", "source_anchor": "name: Sprint Retro Facilitator", "rationale": "This structures a team retrospective rather than data validation.", "missing_material_requirement_or_null": "Spreadsheet-quality checks and report output."},
+    {"candidate_token": "C-5BB1167F99DE7ABC", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "## Step 6: Handle missing values", "rationale": "It addresses missing values, categorical treatment, and dates, but is an ML feature-engineering workflow rather than a first-pass data-quality report.", "missing_material_requirement_or_null": "Formula-error checks, duplicate and join auditing, and a dedicated report."},
+    {"candidate_token": "C-5EC589AD096420C2", "adequacy": "INADEQUATE", "source_anchor": "name: gsea", "rationale": "This is for gene-set enrichment analysis, not spreadsheet validation.", "missing_material_requirement_or_null": "Spreadsheet data-quality audit capabilities."},
+    {"candidate_token": "C-87FE7E023D323690", "adequacy": "INADEQUATE", "source_anchor": "name: slack-bot-builder", "rationale": "This builds Slack integrations rather than assessing tabular data quality.", "missing_material_requirement_or_null": "Data-quality checks and report generation."},
+    {"candidate_token": "C-9083CC62D3C1CD38", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "duplicated records", "rationale": "It can normalize malformed CSV data and remove duplicates, but explicitly targets a cleaned file rather than the requested broad diagnostic report.", "missing_material_requirement_or_null": "Formula, date, category, and join checks with a data-quality report."},
+    {"candidate_token": "C-CAEE7EC665E0D9EA", "adequacy": "INADEQUATE", "source_anchor": "name: sentry-tanstack-start-sdk", "rationale": "This configures application observability rather than checking spreadsheet data.", "missing_material_requirement_or_null": "Tabular-data validation and report output."},
+    {"candidate_token": "C-D585B8A45C0481C8", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "cleaning, joining, reshaping, and aggregating tabular data", "rationale": "It supports missing-data handling, dtype checks, duplicate-sensitive joins, and reconciliations, but says unfamiliar first-pass profiling belongs elsewhere and does not cover formula auditing.", "missing_material_requirement_or_null": "A first-pass quality report covering formula errors and all requested checks."}
+  ],
+  "reviewer_output_sha256": "c67f79feb4c65a57cd3fb84e430297fe4c65e89aa293153bfad6cb437976ebe1"
+}

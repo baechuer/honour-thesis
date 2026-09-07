@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1153",
+  "blind_packet_id": "P-082EBBF84D809A53F2",
+  "batch_input_sha256": "7a3b4e114e1c87fb66b46bb041f50f4b69c64fb2a38407e7ddfad0062887adb9",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token": "C-39B8E955E6D38232", "adequacy": "FULLY_ACCEPTABLE", "source_anchor": "automate YouTube uploads", "rationale": "It covers YouTube upload automation, metadata optimization, scheduling, analytics, and channel content management.", "missing_material_requirement_or_null": null},
+    {"candidate_token": "C-4E14FF3C54FA45E8", "adequacy": "INADEQUATE", "source_anchor": "name: remediating-with-aws-security-agent", "rationale": "This handles AWS security findings rather than YouTube operations.", "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflows."},
+    {"candidate_token": "C-51030B0FBAA32433", "adequacy": "INADEQUATE", "source_anchor": "name: user-research-prior-art-survey", "rationale": "This surveys published user-research evidence rather than managing a YouTube channel.", "missing_material_requirement_or_null": "YouTube workflow automation capabilities."},
+    {"candidate_token": "C-550DC661B5E77724", "adequacy": "INADEQUATE", "source_anchor": "name: Podcast Pitch", "rationale": "This drafts podcast guest pitches rather than handling YouTube channel workflows.", "missing_material_requirement_or_null": "YouTube publishing, metadata, and analytics functions."},
+    {"candidate_token": "C-62139F381B3AC198", "adequacy": "INADEQUATE", "source_anchor": "name: Sprint Retro Facilitator", "rationale": "This facilitates sprint retrospectives rather than YouTube workflow automation.", "missing_material_requirement_or_null": "YouTube content-management capabilities."},
+    {"candidate_token": "C-B6813E788AEBBCA0", "adequacy": "INADEQUATE", "source_anchor": "name: slack-bot-builder", "rationale": "This builds Slack bots rather than YouTube channel operations.", "missing_material_requirement_or_null": "YouTube metadata, scheduling, and analytics workflows."},
+    {"candidate_token": "C-DEF36303C6DE54F3", "adequacy": "INADEQUATE", "source_anchor": "Download YouTube video transcripts", "rationale": "It is limited to obtaining transcripts, while the request expressly excludes transcription-only work.", "missing_material_requirement_or_null": "Metadata, publishing schedule, analytics, and content-management support."},
+    {"candidate_token": "C-F2FE85B7D422BF71", "adequacy": "INADEQUATE", "source_anchor": "name: tiktok-marketing", "rationale": "This targets TikTok, which the request explicitly excludes.", "missing_material_requirement_or_null": "YouTube-specific workflow automation."}
+  ],
+  "reviewer_output_sha256": "93f7ac615da812197ac26c3b9ad62a4bf9eb136d69120d93f2a666d13bef8c0f"
+}

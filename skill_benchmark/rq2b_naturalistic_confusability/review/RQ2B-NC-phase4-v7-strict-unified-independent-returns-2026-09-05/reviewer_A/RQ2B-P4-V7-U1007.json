@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1007",
+  "blind_packet_id": "P-BA6ECD40EDBA528347",
+  "batch_input_sha256": "e27cf7f84f60c7122def76dbbde92e9dad4c228df6181caa969f5a5a1b221099",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0C753A0B3DA489C1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This facilitates an internal sprint retrospective rather than drafting crisis communications for customers and the public.",
+      "missing_material_requirement_or_null": "An external incident-communications package with a public statement, channels, and release approval."
+    },
+    {
+      "candidate_token": "C-14C4968F38C95A0D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Best practices",
+      "rationale": "This provides web-development best practices rather than an immediate customer-facing data-exposure communication.",
+      "missing_material_requirement_or_null": "An external incident-communications package with a public statement, channels, and release approval."
+    },
+    {
+      "candidate_token": "C-6A75E84156987332",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "user-research-prior-art-survey",
+      "rationale": "This is a user-research literature-survey workflow, not crisis communication.",
+      "missing_material_requirement_or_null": "An external incident-communications package with a public statement, channels, and release approval."
+    },
+    {
+      "candidate_token": "C-7AEF710AF039026B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Wix Headless Fast",
+      "rationale": "This builds Wix Headless sites and does not supply incident communication content or release controls.",
+      "missing_material_requirement_or_null": "An external incident-communications package with a public statement, channels, and release approval."
+    },
+    {
+      "candidate_token": "C-D61E1E1A5DE7D4F8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Escalation Summary",
+      "rationale": "This prepares an internal escalation and explicitly keeps it separate from customer-facing replies.",
+      "missing_material_requirement_or_null": "An external public and customer incident-communications package."
+    },
+    {
+      "candidate_token": "C-DBFBF3D1EFB505D9",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Draft the first statement - out within 60 minutes",
+      "rationale": "It directly covers a potential data exposure with verified-fact-only wording, no speculation or recovery promise, a next-update commitment, status-page/email/social sequencing, and mandatory legal clearance.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-EB5CD41ABBE5118E",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Status Page Update",
+      "rationale": "It can draft an honest investigating update with a next-update commitment, but it is limited to status-page communications and does not supply the requested customer-email and social channel plan or data-exposure approval step.",
+      "missing_material_requirement_or_null": "A channel plan for affected-customer email and social posts plus the required approval for a possible data exposure."
+    },
+    {
+      "candidate_token": "C-F41A937BCCD96DC0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "PCI-DSS Encryption and Key Management",
+      "rationale": "This audits payment-data encryption and key management rather than drafting and approving external incident communications.",
+      "missing_material_requirement_or_null": "An external incident-communications package with a public statement, channels, and release approval."
+    }
+  ],
+  "reviewer_output_sha256": "448caa5f39a9cbc7112c3cdd467f2b3509b71250869cf2a78621f038de647b32"
+}

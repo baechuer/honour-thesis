@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1153",
+  "blind_packet_id": "P-082EBBF84D809A53F2",
+  "batch_input_sha256": "7a3b4e114e1c87fb66b46bb041f50f4b69c64fb2a38407e7ddfad0062887adb9",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-39B8E955E6D38232",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "YouTube Data API v3",
+      "rationale": "It covers YouTube API-based upload and scheduled publishing, metadata, analytics queries, playlists, and channel-management workflows requested here.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-4E14FF3C54FA45E8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Security Agent Remediation",
+      "rationale": "This handles AWS security finding remediation rather than YouTube content operations.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    },
+    {
+      "candidate_token": "C-51030B0FBAA32433",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "user-research-prior-art-survey",
+      "rationale": "This is a research-literature survey workflow, not a YouTube channel workflow.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    },
+    {
+      "candidate_token": "C-550DC661B5E77724",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Podcast Pitch",
+      "rationale": "This writes podcast guest-pitch emails, an excluded adjacent activity, rather than managing YouTube workflows.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    },
+    {
+      "candidate_token": "C-62139F381B3AC198",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This structures sprint retrospectives rather than YouTube channel operations.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    },
+    {
+      "candidate_token": "C-B6813E788AEBBCA0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Slack Bot Builder",
+      "rationale": "This builds Slack bots and does not automate the requested YouTube channel activities.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    },
+    {
+      "candidate_token": "C-DEF36303C6DE54F3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "YouTube Transcript Downloader",
+      "rationale": "This focuses on obtaining transcripts, which the request explicitly excludes as a transcript-only task.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    },
+    {
+      "candidate_token": "C-F2FE85B7D422BF71",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "TikTok Marketing",
+      "rationale": "This is for TikTok marketing, which the request expressly excludes.",
+      "missing_material_requirement_or_null": "YouTube metadata, publishing, analytics, and content-management workflow automation."
+    }
+  ],
+  "reviewer_output_sha256": "c7d859b5343f91d5191720e3251c82664e56ff5f033dfea996934848085ea779"
+}

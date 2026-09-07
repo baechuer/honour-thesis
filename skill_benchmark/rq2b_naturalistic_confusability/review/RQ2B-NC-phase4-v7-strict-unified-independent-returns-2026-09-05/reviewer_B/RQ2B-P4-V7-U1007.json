@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1007",
+  "blind_packet_id": "P-BA6ECD40EDBA528347",
+  "batch_input_sha256": "e27cf7f84f60c7122def76dbbde92e9dad4c228df6181caa969f5a5a1b221099",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token": "C-0C753A0B3DA489C1", "adequacy": "INADEQUATE", "source_anchor": "name: Sprint Retro Facilitator", "rationale": "This facilitates internal sprint reflection, not an external incident statement.", "missing_material_requirement_or_null": "External crisis communication and release approval planning."},
+    {"candidate_token": "C-14C4968F38C95A0D", "adequacy": "INADEQUATE", "source_anchor": "name: best-practices", "rationale": "This covers web-development quality and security rather than public incident communication.", "missing_material_requirement_or_null": "Public statement, channel sequencing, and approval guidance."},
+    {"candidate_token": "C-6A75E84156987332", "adequacy": "INADEQUATE", "source_anchor": "name: user-research-prior-art-survey", "rationale": "This surveys research evidence rather than drafting crisis communications.", "missing_material_requirement_or_null": "External incident communication capabilities."},
+    {"candidate_token": "C-7AEF710AF039026B", "adequacy": "INADEQUATE", "source_anchor": "name: wix-headless-fast", "rationale": "This scaffolds Wix applications rather than managing public communications for an incident.", "missing_material_requirement_or_null": "Crisis statement and release-channel planning."},
+    {"candidate_token": "C-D61E1E1A5DE7D4F8", "adequacy": "INADEQUATE", "source_anchor": "name: Escalation Summary", "rationale": "This prepares an escalation to engineering or management, not communications for customers and the public.", "missing_material_requirement_or_null": "External statement, channel plan, and pre-release approval."},
+    {"candidate_token": "C-DBFBF3D1EFB505D9", "adequacy": "FULLY_ACCEPTABLE", "source_anchor": "a first statement within the hour", "rationale": "It is designed for data-breach public statements, verified-facts discipline, status/email/social sequencing, and legal-review escalation.", "missing_material_requirement_or_null": null},
+    {"candidate_token": "C-EB5CD41ABBE5118E", "adequacy": "PARTIALLY_ADEQUATE", "source_anchor": "Writes customer-facing incident status updates", "rationale": "It supports an honest investigating update and a next-update time, but is limited to status updates and lacks the requested multi-channel public plan and approval boundary.", "missing_material_requirement_or_null": "Channel sequencing for email and social plus required release approval."},
+    {"candidate_token": "C-F41A937BCCD96DC0", "adequacy": "INADEQUATE", "source_anchor": "name: pci-dss-encryption-key-management", "rationale": "This audits PCI encryption controls rather than drafting external incident communications.", "missing_material_requirement_or_null": "External crisis statement and communication plan."}
+  ],
+  "reviewer_output_sha256": "e9ab469e1c794ca1ed2f320601793536dd3adebecf06880408d86162c5f8cfa6"
+}

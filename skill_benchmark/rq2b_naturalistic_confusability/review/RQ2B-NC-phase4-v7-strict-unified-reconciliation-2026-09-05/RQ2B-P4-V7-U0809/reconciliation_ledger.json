@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0809",
+  "blind_packet_id": "P-49FABBBF6E2F357356",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0F2DA11DDCF63583",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Task Estimation",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: task-estimation"
+    },
+    {
+      "candidate_token": "C-2241DA27B4AA8FAA",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Testing Strategies",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "what should we test"
+    },
+    {
+      "candidate_token": "C-2FA03BBA8C87B64A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Backend Testing",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "fixture or seed/reset strategy"
+    },
+    {
+      "candidate_token": "C-3A1084665C302CD2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Load Testing",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Load Testing"
+    },
+    {
+      "candidate_token": "C-79E6A736FD09622F",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Usability Test Plan",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Usability Test Plan"
+    },
+    {
+      "candidate_token": "C-B1143044F08B307A",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Threat Model STRIDE",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: Threat Model STRIDE"
+    },
+    {
+      "candidate_token": "C-E4E4E5CB6B4ECF7D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Overview",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "name: user-research-prior-art-survey"
+    },
+    {
+      "candidate_token": "C-F7E46EBC41E5716D",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Database Schema Migration with Liquibase and Flyway",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "database-schema-migration-with-liquibase-and-flyway"
+    }
+  ],
+  "reviewer_A_return_sha256": "80d846587db193522e11e4d1e04315686c666e463b9906ab62c02abdeb9e74a8",
+  "reviewer_B_return_sha256": "a229a21acb6c012eec8eeaaf9cee431116fc5302f80ba5960f56e9c57149ce8e",
+  "status": "PASS_EXACT_INDEPENDENT_AGREEMENT_PENDING_LIBRARY_LEVEL_CLOSURE"
+}

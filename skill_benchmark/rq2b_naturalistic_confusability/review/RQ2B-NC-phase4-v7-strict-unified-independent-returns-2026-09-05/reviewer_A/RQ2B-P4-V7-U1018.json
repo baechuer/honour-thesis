@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1018",
+  "blind_packet_id": "P-141E25BBA5345FBBB7",
+  "batch_input_sha256": "9360e4e3e500183f2e1aa7aa264aab021447add62865178100c578b3615f8724",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-45C92726BF8DEE32",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Review a Lost Opportunity",
+      "rationale": "This is a sales-loss classification workflow, not a spreadsheet data-quality assessment.",
+      "missing_material_requirement_or_null": "A workflow to inspect spreadsheet data quality and return the requested report."
+    },
+    {
+      "candidate_token": "C-4D39EC85464B2D08",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This facilitates team retrospectives rather than checking data reliability in a spreadsheet.",
+      "missing_material_requirement_or_null": "A spreadsheet data-quality audit and report."
+    },
+    {
+      "candidate_token": "C-5BB1167F99DE7ABC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Feature Engineering",
+      "rationale": "The workflow designs leakage-safe ML features and directs unfamiliar-dataset profiling elsewhere.",
+      "missing_material_requirement_or_null": "A first-pass spreadsheet data-quality report covering the requested checks."
+    },
+    {
+      "candidate_token": "C-5EC589AD096420C2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Input format",
+      "rationale": "This skill performs gene-set enrichment analysis, not general spreadsheet quality assessment.",
+      "missing_material_requirement_or_null": "A workflow for auditing spreadsheet data quality and reporting findings."
+    },
+    {
+      "candidate_token": "C-87FE7E023D323690",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Slack Bot Builder",
+      "rationale": "This is for building Slack bots and does not assess spreadsheet data quality.",
+      "missing_material_requirement_or_null": "A spreadsheet data-quality audit and report."
+    },
+    {
+      "candidate_token": "C-9083CC62D3C1CD38",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Diagnose before touching anything",
+      "rationale": "It can diagnose malformed delimited files, duplicates, and structural issues and report findings, but its stated deliverable is a repaired CSV rather than the requested broad data-quality report.",
+      "missing_material_requirement_or_null": "Checks and reporting for missing values, inconsistent categories, impossible dates, spreadsheet formula errors, and suspicious joins."
+    },
+    {
+      "candidate_token": "C-CAEE7EC665E0D9EA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sentry TanStack Start React SDK",
+      "rationale": "This configures application monitoring for TanStack Start, not spreadsheet data validation.",
+      "missing_material_requirement_or_null": "A spreadsheet data-quality audit and report."
+    },
+    {
+      "candidate_token": "C-D585B8A45C0481C8",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "inspect before touching",
+      "rationale": "It covers null counts, dtype inspection, duplicate-key checks, and validated joins, but its deliverable is a transformation script and it explicitly defers first-pass profiling of unfamiliar data.",
+      "missing_material_requirement_or_null": "A first-pass spreadsheet data-quality report including formula-error, inconsistent-category, and impossible-date checks."
+    }
+  ],
+  "reviewer_output_sha256": "fffab80b7b11c648e6720ee0109e4cecab7dccf2c8997366ca1df32d3eee0e30"
+}
