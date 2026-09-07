@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-18029CD77F919BBD80",
+  "candidate_token": "C-61F65F883A4DDE6A",
+  "reviewer_a_return_sha256": "9ae9769073438b28da1a1aa08a9440f7f17f80eb2190b4a929312229c9e3f13f",
+  "reviewer_b_return_sha256": "c702001b4ba02f991ba80f45508e9af99fad35bb7c829c8ffc901c35265eb06e",
+  "fresh_source_render_sha256": "7fdc2718351696f09e045967ff9cbf53b3043fcacda5bdfb4a6056ff3194c68f",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "source_anchor": "autoresearch",
+  "rationale": "The source runs autonomous experiments on training code with a fixed val_bpb harness. It does not provide representative-question LLM/RAG evaluation, calibrated judging, or CI regression gates for a document-grounded assistant.",
+  "coordinator_output_sha256": "686d072caa2b0a73937aa8c405a8d0fa646d5ae6affa11a12d802ba04a0faea9"
+}

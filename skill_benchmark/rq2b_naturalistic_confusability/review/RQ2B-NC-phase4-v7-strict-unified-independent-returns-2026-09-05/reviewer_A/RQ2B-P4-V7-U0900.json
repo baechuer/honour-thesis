@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0900",
+  "blind_packet_id": "P-01CB9D454F8130B307",
+  "batch_input_sha256": "b35d1701dd61edfc30590a3cba55bf47412db7bacee4cb4f65e9974a30dc51a7",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-36289FE7C9D30531",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "secure-development-policy",
+      "rationale": "It covers release security assurance policy and gates.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-57D06BDF523AC26F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "audit",
+      "rationale": "It supports audit work but not the full secure release gate set.",
+      "missing_material_requirement_or_null": "Secure-development test, finding disposition, and follow-up gates."
+    },
+    {
+      "candidate_token": "C-660BE7D575B22E52",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "press-and-pr",
+      "rationale": "It does not provide security release gates.",
+      "missing_material_requirement_or_null": "Secure release assurance checklist."
+    },
+    {
+      "candidate_token": "C-775AF621138B5880",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "fullstack-guardian",
+      "rationale": "It supports application quality but not the complete assurance policy.",
+      "missing_material_requirement_or_null": "Security release gate and finding-disposition framework."
+    },
+    {
+      "candidate_token": "C-A49CB042D236BAC5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "GSVA",
+      "rationale": "It does not provide release security gates.",
+      "missing_material_requirement_or_null": "Secure release assurance checklist."
+    },
+    {
+      "candidate_token": "C-BD65AFA795AFF407",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "create-release-checklist",
+      "rationale": "It can structure a release checklist but lacks the complete security assurance content.",
+      "missing_material_requirement_or_null": "Security testing, dependency, license, and finding-disposition rules."
+    },
+    {
+      "candidate_token": "C-DA2867EBF0426D86",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "information-security-policy",
+      "rationale": "It provides policy context but not specific release assurance gates.",
+      "missing_material_requirement_or_null": "Secure-development release checklist and quarterly follow-up."
+    },
+    {
+      "candidate_token": "C-FA85FFC6D7ED6EC3",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "secure-development",
+      "rationale": "It directly supports secure-development testing, dependency checks, and release gating.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "2a3977e68f408c52e54e76c8861cb519131234c76510e669b96f266c3a2d20ef"
+}

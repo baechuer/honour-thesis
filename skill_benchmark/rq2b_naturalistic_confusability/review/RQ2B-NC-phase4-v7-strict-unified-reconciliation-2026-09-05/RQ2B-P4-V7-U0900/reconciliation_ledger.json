@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0900",
+  "blind_packet_id": "P-01CB9D454F8130B307",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-36289FE7C9D30531",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "secure-development-policy",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "SAST/DAST integration, dependency scanning, and code signing"
+    },
+    {
+      "candidate_token": "C-57D06BDF523AC26F",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "audit",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Social Search Audit"
+    },
+    {
+      "candidate_token": "C-660BE7D575B22E52",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "press-and-pr",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "get press coverage"
+    },
+    {
+      "candidate_token": "C-775AF621138B5880",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "fullstack-guardian",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "auth, input validation, output encoding, and parameterized queries"
+    },
+    {
+      "candidate_token": "C-A49CB042D236BAC5",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GSVA",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "candidate_token": "C-BD65AFA795AFF407",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "create-release-checklist",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Create a release checklist and GitHub issue for an R package"
+    },
+    {
+      "candidate_token": "C-DA2867EBF0426D86",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "information-security-policy",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "concrete, enforceable engineering behaviour"
+    },
+    {
+      "candidate_token": "C-FA85FFC6D7ED6EC3",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "secure-development",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Security-by-design principles for developing secure applications"
+    }
+  ],
+  "reviewer_A_return_sha256": "d95048e11d4685b771ebb5fc5ea3078999a10b9a5ba596251f5a61a447b8548c",
+  "reviewer_B_return_sha256": "1795089cae38d3b58f7e5e30eb93376329b4a744f90fe99814be66fb93d46a46",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

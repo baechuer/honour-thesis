@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-041E96FEA1A5A7C127",
+  "candidate_token": "C-C8F92BFA79AA08AC",
+  "reviewer_a_return_sha256": "76267bca5df651543a279bfb78ea3eabcb79384622df4003cbf710e0c1459af3",
+  "reviewer_b_return_sha256": "c10b31a69a06d521d6a618242acfff78c0346cebd576240ce0e94367358aa65e",
+  "fresh_source_render_sha256": "b7e212b04103bd2de0cff55d197c1867709d67110598d4f2356d2cdb0620d3be",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "source_anchor": "api-design",
+  "rationale": "The source supplies generic API-design lifecycle guidance, not the dedicated subscription-webhook verification, idempotency, replay, retry, and dead-letter contract required here.",
+  "coordinator_output_sha256": "58d45402478288b369436e6470b66f4956f5711442b6e366bfbf6096d18be246"
+}

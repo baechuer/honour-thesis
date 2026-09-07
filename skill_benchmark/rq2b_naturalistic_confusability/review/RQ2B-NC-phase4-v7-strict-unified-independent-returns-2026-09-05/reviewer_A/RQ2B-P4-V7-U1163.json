@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1163",
+  "blind_packet_id": "P-041E96FEA1A5A7C127",
+  "batch_input_sha256": "13d39214e28f957a09350ace4bd8ec8c7414b90f144acdd439f46b716da84898",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0EF634D02D54298A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "REST API Design",
+      "rationale": "It supports API contracts but not webhook-specific delivery security.",
+      "missing_material_requirement_or_null": "Webhook signature, replay, idempotency, and dead-letter design."
+    },
+    {
+      "candidate_token": "C-2E9B322DE4538CF8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "linkedin-marketing",
+      "rationale": "It does not design webhook contracts.",
+      "missing_material_requirement_or_null": "Webhook contract design."
+    },
+    {
+      "candidate_token": "C-91C12EE344428181",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Idempotency Enforcer",
+      "rationale": "It addresses idempotency but not the complete webhook contract.",
+      "missing_material_requirement_or_null": "Signature, retry, replay, and dead-letter design."
+    },
+    {
+      "candidate_token": "C-9D3DC92A238C032B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "in-app-events",
+      "rationale": "It addresses events but not secure subscription webhooks.",
+      "missing_material_requirement_or_null": "Webhook delivery security and reliability design."
+    },
+    {
+      "candidate_token": "C-A0B2E78E63E5A7E2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "user-research-prior-art-survey",
+      "rationale": "It does not design webhooks.",
+      "missing_material_requirement_or_null": "Webhook contract design."
+    },
+    {
+      "candidate_token": "C-AD80405CE8D30500",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Stripe Expert",
+      "rationale": "It supports subscription webhook integration including delivery and signature concerns.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-B1EA3572C23C3D58",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "pixijs-events",
+      "rationale": "It concerns graphics events rather than webhooks.",
+      "missing_material_requirement_or_null": "Webhook contract design."
+    },
+    {
+      "candidate_token": "C-C8F92BFA79AA08AC",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "api-design",
+      "rationale": "It supports generic API design but not the webhook-specific contract.",
+      "missing_material_requirement_or_null": "Webhook delivery security and reliability design."
+    }
+  ],
+  "reviewer_output_sha256": "d9178a98d7f1d8d1dba7f42d4ce5f30b2a3cc9304acb0324023b7fb2a5140935"
+}

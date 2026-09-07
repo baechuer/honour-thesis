@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1021",
+  "blind_packet_id": "P-18029CD77F919BBD80",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-4A9BC56CBE870991",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Data Drift Monitor",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Data Drift Monitor"
+    },
+    {
+      "candidate_token": "C-61F65F883A4DDE6A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "autoresearch",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "autonomous ML search"
+    },
+    {
+      "candidate_token": "C-7AF5C031B5BAE9A0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "visual-prior-art-survey",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying the DOCUMENTED visual and interaction conventions"
+    },
+    {
+      "candidate_token": "C-81A4A21EAEA51D48",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Model Evaluation Report",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Do NOT use for evaluating LLM or prompt outputs"
+    },
+    {
+      "candidate_token": "C-A870531BD9FC6A38",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "using-agent-skills",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Discovers and invokes agent skills"
+    },
+    {
+      "candidate_token": "C-B370EF84A785859E",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "LLM Evaluation",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "golden datasets, deterministic checks, calibrated LLM-as-judge rubrics, and CI regression gates"
+    },
+    {
+      "candidate_token": "C-BE57A8B971429DDF",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-D625205E9E74DEB0",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "libfuzzer",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "coverage-guided fuzzer"
+    }
+  ],
+  "reviewer_A_return_sha256": "9ae9769073438b28da1a1aa08a9440f7f17f80eb2190b4a929312229c9e3f13f",
+  "reviewer_B_return_sha256": "c702001b4ba02f991ba80f45508e9af99fad35bb7c829c8ffc901c35265eb06e",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

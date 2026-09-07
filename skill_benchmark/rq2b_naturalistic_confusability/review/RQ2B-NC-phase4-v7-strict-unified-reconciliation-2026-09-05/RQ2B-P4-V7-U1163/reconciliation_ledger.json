@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U1163",
+  "blind_packet_id": "P-041E96FEA1A5A7C127",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-0EF634D02D54298A",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "REST API Design",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Designs REST API surfaces"
+    },
+    {
+      "candidate_token": "C-2E9B322DE4538CF8",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "linkedin-marketing",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Create, optimize, and automate LinkedIn content"
+    },
+    {
+      "candidate_token": "C-91C12EE344428181",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "Idempotency Enforcer",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Designs client-supplied idempotency keys"
+    },
+    {
+      "candidate_token": "C-9D3DC92A238C032B",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "in-app-events",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "App Store In-App Events"
+    },
+    {
+      "candidate_token": "C-A0B2E78E63E5A7E2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "user-research-prior-art-survey",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "surveying the PUBLISHED user-research evidence"
+    },
+    {
+      "candidate_token": "C-AD80405CE8D30500",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "Stripe Expert",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "signature-verified idempotent webhook handlers"
+    },
+    {
+      "candidate_token": "C-B1EA3572C23C3D58",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "pixijs-events",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "PixiJS's federated event system"
+    },
+    {
+      "candidate_token": "C-C8F92BFA79AA08AC",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "api-design",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "complete lifecycle of API design"
+    }
+  ],
+  "reviewer_A_return_sha256": "76267bca5df651543a279bfb78ea3eabcb79384622df4003cbf710e0c1459af3",
+  "reviewer_B_return_sha256": "c10b31a69a06d521d6a618242acfff78c0346cebd576240ce0e94367358aa65e",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

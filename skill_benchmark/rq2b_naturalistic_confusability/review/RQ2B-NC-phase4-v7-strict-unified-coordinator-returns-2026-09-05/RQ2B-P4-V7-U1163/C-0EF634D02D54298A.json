@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-041E96FEA1A5A7C127",
+  "candidate_token": "C-0EF634D02D54298A",
+  "reviewer_a_return_sha256": "76267bca5df651543a279bfb78ea3eabcb79384622df4003cbf710e0c1459af3",
+  "reviewer_b_return_sha256": "c10b31a69a06d521d6a618242acfff78c0346cebd576240ce0e94367358aa65e",
+  "fresh_source_render_sha256": "fcfbe557b95b87de5b884c7d3da98026579a3a960dd61affc02b20641961e91f",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "source_anchor": "REST API Design",
+  "rationale": "The source defines general REST API contracts but explicitly routes inbound webhook endpoints to a dedicated hardening workflow. It lacks the required signature verification, event-id deduplication, replay, retry, and dead-letter contract.",
+  "coordinator_output_sha256": "97ad85bebf2d674145c6aeb9888867572636f1824793852d85e3f3352bc96ec0"
+}
