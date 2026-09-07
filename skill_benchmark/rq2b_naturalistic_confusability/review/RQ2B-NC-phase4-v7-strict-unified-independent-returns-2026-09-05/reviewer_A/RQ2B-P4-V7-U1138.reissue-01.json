@@ -1,0 +1,59 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_target_blind_packet_v2",
+  "assignment_version": "rq2b_nc_phase5_v7_parallel_handoff_v2_fresh_state",
+  "batch_id": "RQ2B-P4-V7-U1138",
+  "blind_packet_id": "P-B088A891AE1743A43D",
+  "reviewer_role": "A",
+  "packet_input_sha256": "fb078df17c3d1891113f6fda4952034f021d8b2a0f8d2ec45d36599ad0c4b70e",
+  "protocol_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "sealed_main_packet_sha256": "ffbd0569e6c30d7b2854aa8d207f88047b9a7247d12c819983086a02604e74c5",
+  "sealed_tail_packet_sha256s": [
+    "30cc9eeac3bdcb21e303de2523e84d1bc5b4262fa2a567342ba6ae5d5ff05ce7",
+    "5710718289822a4d97e8644e3dae4a5ab4681bfee0b40bcc6caf062666217bd9"
+  ],
+  "sha256_batch_id": "84cbddcf029dd99f186256f3f5e226a14bf6c332288256bccba8c2226891f63c",
+  "source_manifest_sha256": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55",
+  "assessments": [
+    {
+      "candidate_token": "C-11B6C3BF1C19D0E4",
+      "assessment": "INADEQUATE",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "candidate_token": "C-475E114FB28CCEE0",
+      "assessment": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Coordinator Lifecycle"
+    },
+    {
+      "candidate_token": "C-556ED25947B8CDC6",
+      "assessment": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "candidate_token": "C-6860AAFA220DF2BB",
+      "assessment": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Task Orchestration"
+    },
+    {
+      "candidate_token": "C-6E6650C530E037CD",
+      "assessment": "INADEQUATE",
+      "source_anchor": "## Evaluation Workflow"
+    },
+    {
+      "candidate_token": "C-A3A01308C17877C4",
+      "assessment": "INADEQUATE",
+      "source_anchor": "## Timeboxed agenda (60 minutes)"
+    },
+    {
+      "candidate_token": "C-E2EA24798D7FB937",
+      "assessment": "INADEQUATE",
+      "source_anchor": "## Scope"
+    },
+    {
+      "candidate_token": "C-EF39DA724F415519",
+      "assessment": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## How It Works"
+    }
+  ],
+  "return_sha256": "f258806ea25838cb2002322417df865c7a658c115c10f27f71f6d14cb87dce8f"
+}
