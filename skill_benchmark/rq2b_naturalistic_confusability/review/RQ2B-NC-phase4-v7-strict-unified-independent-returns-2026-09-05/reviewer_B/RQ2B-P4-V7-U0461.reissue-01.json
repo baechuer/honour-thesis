@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-189C015F7406D11F",
+      "missing_material_requirement_or_null": "A US-audience client-email rewrite with direct, action-oriented wording and US business spelling.",
+      "rationale": "The source is a language/runtime migration procedure, covering compatibility shims, automated transforms, and dual-runtime CI; it does not provide business-email rewriting guidance.",
+      "source_anchor": "name: Language Version Migrator; description: codebase runtime-version migration"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5A7EA552D661DD77",
+      "missing_material_requirement_or_null": "Guidance for rewriting a client update for a US audience in direct US business English.",
+      "rationale": "The source describes contract risk analysis, completeness checks, and legal recommendations, rather than drafting or rewriting business communications.",
+      "source_anchor": "name: contract-review; description: analyze contracts for risks and completeness"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5AD1D7B2EE149278",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source explicitly covers American business-English writing for professional communications, including emails, with direct and action-oriented style and EN-US spelling, which matches every material prompt constraint.",
+      "source_anchor": "name: us-business-english; description: direct, action-oriented EN-US professional communications"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8D862DE7D62B2B92",
+      "missing_material_requirement_or_null": "A polished US-business-English rewrite of a client-update email.",
+      "rationale": "The source structures sprint retrospectives with agendas, ground rules, and action items; it is not a skill for client-email rewriting or US business spelling.",
+      "source_anchor": "name: Sprint Retro Facilitator; description: facilitate sprint retrospectives"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B52AEF43A5C3332F",
+      "missing_material_requirement_or_null": "United States audience conventions and US business spelling.",
+      "rationale": "The source can polish professional client communications and emphasizes direct writing, but it is explicitly for British audiences and EN-GB spelling, conflicting with the prompt's US audience and spelling requirement.",
+      "source_anchor": "name: uk-business-english; description: British-audience EN-GB professional communications"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DE4D1720A580467F",
+      "missing_material_requirement_or_null": "United States audience conventions and US business spelling.",
+      "rationale": "The source addresses polished professional communications and can support a client update, but it is explicitly for New Zealand audiences and EN-NZ spelling rather than the required US business spelling and audience.",
+      "source_anchor": "name: nz-business-english; description: New Zealand-audience EN-NZ professional communications"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-440E492CCC3FFB66",
+      "missing_material_requirement_or_null": "Guidance for rewriting a US-audience client-update email using direct, action-oriented US business English.",
+      "rationale": "The source is a pre-build security prior-art research workflow spanning security taxonomies, advisories, and evidence records; it does not address business-email drafting or rewriting.",
+      "source_anchor": "name: security-prior-art-survey; description: security prior-art survey workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-03A78C2025F05DA0",
+      "missing_material_requirement_or_null": "A US-business-English rewrite of a client-update email.",
+      "rationale": "The source creates invoices with formatting, currencies, and tax calculations, which does not provide guidance for rewriting client-update emails or meeting the specified writing style.",
+      "source_anchor": "name: invoice-generator; description: create professional invoices"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0461",
+  "batch_input_sha256": "d9bae0fca428ef70e0e7ad4d363f6aba20a5c9dd9cdde4f0392d259097025df5",
+  "blind_packet_id": "P-0C3B6824BE0567129E",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "3c4465dd6558abf69c77998e9c64837248683867f4bddbcc0bd09aa149a0a591"
+}

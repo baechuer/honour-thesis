@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-03A78C2025F05DA0",
+      "missing_material_requirement_or_null": "A skill for rewriting a client-update email in US business English.",
+      "rationale": "The source creates invoices rather than rewriting client communications for a US audience.",
+      "source_anchor": "# Invoice Generator Skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-189C015F7406D11F",
+      "missing_material_requirement_or_null": "A skill for rewriting a client-update email in US business English.",
+      "rationale": "The source concerns breaking language/runtime migrations, not business-email rewriting.",
+      "source_anchor": "# Language Version Migrator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-440E492CCC3FFB66",
+      "missing_material_requirement_or_null": "A skill for rewriting a client-update email in US business English.",
+      "rationale": "The source surveys security prior art and does not support client-email rewriting.",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5A7EA552D661DD77",
+      "missing_material_requirement_or_null": "A skill for rewriting a client-update email in US business English.",
+      "rationale": "The source analyzes contracts rather than rewriting client updates in US business English.",
+      "source_anchor": "# Contract Review Skill"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-5AD1D7B2EE149278",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source explicitly covers professional communications for American audiences with direct, action-oriented US business spelling and includes client-update guidance.",
+      "source_anchor": "# US Business English"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8D862DE7D62B2B92",
+      "missing_material_requirement_or_null": "A skill for rewriting a client-update email in US business English.",
+      "rationale": "The source facilitates sprint retrospectives and does not support business-email rewriting.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-B52AEF43A5C3332F",
+      "missing_material_requirement_or_null": "US business spelling for the requested United States audience.",
+      "rationale": "The source can guide professional client-update writing, but it specifies British rather than US spelling and audience conventions.",
+      "source_anchor": "# UK Business English"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-DE4D1720A580467F",
+      "missing_material_requirement_or_null": "US business spelling for the requested United States audience.",
+      "rationale": "The source can guide professional client-update writing, but it specifies New Zealand rather than US spelling and audience conventions.",
+      "source_anchor": "# NZ Business English"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0461",
+  "batch_input_sha256": "33e318d57231b669932018afb6756a000b62995a93c4554ab4b6ddd3076376d3",
+  "blind_packet_id": "P-0C3B6824BE0567129E",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ca23e0edd828fbade3a01060442f84d8315fdd6813fc1fe608184f667f1e389f"
+}
