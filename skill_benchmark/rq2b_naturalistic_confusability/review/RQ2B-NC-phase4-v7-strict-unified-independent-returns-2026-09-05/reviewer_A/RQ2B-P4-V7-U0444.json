@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0444",
+  "blind_packet_id": "P-75BB0D95E2977AC9DF",
+  "batch_input_sha256": "37c7b5c8dc183273f323816e61af9c4197dffe17db8fe60b5251e8f14ad2f0ae",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2D82483DC1233B57",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Workflow",
+      "rationale": "Covers Figma variable collections, modes, aliases and token-format conventions, but its workflow exports those variables into code token files, which the request expressly excludes, and does not establish Figma layout or component-variant rules.",
+      "missing_material_requirement_or_null": "Provide Figma-only design-system rules covering usage, naming, layout, component variants and tokens without exporting to code."
+    },
+    {
+      "candidate_token": "C-324E40DB5EDFEDAC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slidev Presentation Generator",
+      "rationale": "Generates presentations rather than Figma design-system governance rules.",
+      "missing_material_requirement_or_null": "Define Figma usage, naming, layout, component-variant and token conventions without producing screens or code."
+    },
+    {
+      "candidate_token": "C-36AEB69E01F29D2A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates sprint retrospectives and does not define a Figma design system.",
+      "missing_material_requirement_or_null": "Create Figma design-system rules for naming, layout, variants and tokens."
+    },
+    {
+      "candidate_token": "C-8350838668C7DD0B",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Workflow",
+      "rationale": "Addresses Figma variable names, collections, modes and aliases, but its purpose is to import and apply code tokens into Figma rather than define broad Figma usage, layout and component-variant conventions without changes.",
+      "missing_material_requirement_or_null": "Provide non-executing Figma-only governance rules for usage, layout and component variants as well as token naming."
+    },
+    {
+      "candidate_token": "C-9B795042ED39592D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys security prior art rather than establishing a Figma design system.",
+      "missing_material_requirement_or_null": "Define Figma design-system conventions for usage, naming, layout, variants and tokens."
+    },
+    {
+      "candidate_token": "C-BE0685EC4F36F2A6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Figma → Webflow",
+      "rationale": "Builds a Webflow implementation from Figma, directly conflicting with the request not to generate a screen or convert Figma to code.",
+      "missing_material_requirement_or_null": "Provide Figma-only design-system rules without building or converting a design."
+    },
+    {
+      "candidate_token": "C-BFEB3BABBE0201A3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Image License & Usage Rights",
+      "rationale": "Assesses image-use licensing rather than Figma design-system conventions.",
+      "missing_material_requirement_or_null": "Define Figma naming, layout, component-variant and token rules."
+    },
+    {
+      "candidate_token": "C-FD8CC091221CE01E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack integrations and does not govern Figma design systems.",
+      "missing_material_requirement_or_null": "Create Figma-only design-system rules without screen generation or code conversion."
+    }
+  ],
+  "reviewer_output_sha256": "e5b47560ae1056810d840e8cf935d391e0401c0ee20332803f3dcf0fa7ff4413"
+}

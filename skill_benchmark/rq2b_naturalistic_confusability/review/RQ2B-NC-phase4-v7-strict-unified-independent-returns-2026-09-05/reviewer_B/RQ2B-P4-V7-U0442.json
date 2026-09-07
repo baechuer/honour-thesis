@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0442",
+  "blind_packet_id": "P-EF36DE819FEA9D2B1D",
+  "batch_input_sha256": "0a5171c0d1642e9e665a6437eb765885b53e2fb84bb3997069a9b00db6018397",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-294E9CED1966A0ED",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "It can structure a dimensional/star-schema design around fact grain and modelling forks, which supports the requested schema assessment and relationship guidance, but it is not a review workflow for an active model and does not provide a row-level-access design approach.",
+      "missing_material_requirement_or_null": "Guidance for assessing the active model and proposing row-level access for regional managers."
+    },
+    {
+      "candidate_token": "C-537AEDDFDC5074BA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "The skill runs pathway enrichment analysis on expression data and does not assess retail semantic models, relationships, or access control.",
+      "missing_material_requirement_or_null": "Power BI data-model review, relationship guidance, and row-level access design."
+    },
+    {
+      "candidate_token": "C-68F4738A5D8815B2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Accessibility Audit",
+      "rationale": "The skill audits WCAG accessibility of user interfaces, not data-model structure or row-level data access.",
+      "missing_material_requirement_or_null": "Star-schema, relationship, ambiguous-path, and row-level access assessment."
+    },
+    {
+      "candidate_token": "C-7513EB9BD308D4BF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### DENY",
+      "rationale": "It supports inspecting semantic-model metadata and analysing relationship and modelling best practices, but its explicit restriction on RLS/OLS role membership prevents it from providing the requested regional-manager row-level-access approach.",
+      "missing_material_requirement_or_null": "A permissible row-level-access design for regional managers."
+    },
+    {
+      "candidate_token": "C-AA336E97EFB5DC88",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Power BI Consumption — FabricIQ Skill",
+      "rationale": "The skill answers natural-language business questions over existing reports and models rather than assessing star-schema design, relationship paths, or access control.",
+      "missing_material_requirement_or_null": "Semantic-model architecture review and row-level access guidance."
+    },
+    {
+      "candidate_token": "C-AEE00B9D38B46B2E",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## When to Use This Skill",
+      "rationale": "It is explicitly scoped to Power BI star schemas, relationship cardinality and cross-filter direction, and RLS, and it first inspects the active model before delivering targeted guidance rather than requiring changes.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-BFE4B68C1A454A07",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Basic Information",
+      "rationale": "The source is metadata for a contract-template skill and contains no data-model review or access-control procedure.",
+      "missing_material_requirement_or_null": "Power BI semantic-model assessment and row-level access guidance."
+    },
+    {
+      "candidate_token": "C-C7E86E5FCC1213F1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Nhost — Open-Source Firebase Alternative with GraphQL",
+      "rationale": "The skill provides backend-platform guidance for Nhost and is unrelated to assessing a retail star schema or Power BI-style security design.",
+      "missing_material_requirement_or_null": "Star-schema review, relationship guidance, and row-level access design."
+    }
+  ],
+  "reviewer_output_sha256": "a054db5d5381461af06bfd2b3a5d95b1e816bccd6312d1a4cb22c46e921a30db"
+}

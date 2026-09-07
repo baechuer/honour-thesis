@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0442",
+  "blind_packet_id": "P-EF36DE819FEA9D2B1D",
+  "batch_input_sha256": "0a5171c0d1642e9e665a6437eb765885b53e2fb84bb3997069a9b00db6018397",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-294E9CED1966A0ED",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "Provides read-only dimensional-model and star-schema design guidance, including fact and dimension grain, but is oriented to model design before build and does not cover reviewing active relationship paths or a regional row-level-security approach.",
+      "missing_material_requirement_or_null": "Inspect the active model for its existing relationship paths and provide a row-level-access design for regional managers."
+    },
+    {
+      "candidate_token": "C-537AEDDFDC5074BA",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# GSVA Analysis And Visualization",
+      "rationale": "Runs pathway-enrichment analysis on expression data, not retail semantic-model review.",
+      "missing_material_requirement_or_null": "Assess retail star-schema relationships, filter paths and regional row-level access without modifying the model."
+    },
+    {
+      "candidate_token": "C-68F4738A5D8815B2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Accessibility Audit",
+      "rationale": "Audits interface accessibility rather than a retail data model.",
+      "missing_material_requirement_or_null": "Review the retail model architecture, recommend relationships and row-level access guidance."
+    },
+    {
+      "candidate_token": "C-7513EB9BD308D4BF",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## Workflow: Analyze Best Practices",
+      "rationale": "Inventories the active semantic model, evaluates star-schema structure, relationship cardinality and cross-filter direction, and provides approved changes separately, so it can give the requested no-change review and access guidance.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-AA336E97EFB5DC88",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Workflow",
+      "rationale": "Can discover a semantic-model schema and its relationships for a natural-language data question, but it is a consumption and query skill rather than a model-health review with relationship recommendations and regional row-level-security design.",
+      "missing_material_requirement_or_null": "Assess star-schema quality and ambiguous filter paths, then propose row-level access for regional managers."
+    },
+    {
+      "candidate_token": "C-AEE00B9D38B46B2E",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## When to Use This Skill",
+      "rationale": "Directly targets active Power BI model inspection, star schemas, relationship cardinality and cross-filter direction, ambiguous paths and RLS, and can provide guidance before any change.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-BFE4B68C1A454A07",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Contract Template Skill",
+      "rationale": "Creates legal contract templates and does not review analytical data models.",
+      "missing_material_requirement_or_null": "Review the retail star schema, relationships, filter ambiguity and regional row-level access."
+    },
+    {
+      "candidate_token": "C-C7E86E5FCC1213F1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Nhost — Open-Source Firebase Alternative with GraphQL",
+      "rationale": "Guides setup of an application backend rather than assessment of a retail reporting model.",
+      "missing_material_requirement_or_null": "Assess the active retail model and provide relationship and row-level-security guidance without changes."
+    }
+  ],
+  "reviewer_output_sha256": "ca77bc92a86e02a86890170295f6d24fd264fe00c656639f8a040235a82de96e"
+}
