@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1C095210C16BC2CC",
+      "missing_material_requirement_or_null": "A supplier-onboarding guide structure with sequential steps, exception handling, owner/revision metadata, and supplier-ready printable/editable delivery guidance.",
+      "rationale": "It supplies invoice, tax, and payment-tracking material, including payment terms, but it is an invoice organizer rather than a supplier-onboarding guide and does not cover the requested guide structure or delivery format.",
+      "source_anchor": "## Data Extraction"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4BEADF0353773D47",
+      "missing_material_requirement_or_null": "Supplier-onboarding guide content and document-delivery guidance.",
+      "rationale": "This is a security prior-art research method and does not provide a supplier-onboarding procedure, approval workflow, or printable/editable guide support.",
+      "source_anchor": "## When to activate"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4C5D3E5B88484E30",
+      "missing_material_requirement_or_null": "A supplier-onboarding procedure; it also must not create follow-up work items.",
+      "rationale": "It converts existing meeting notes into action records and its deliverable includes action items, which does not meet the requested supplier-facing guide and conflicts with the no-follow-up-work-items constraint.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-515CF1C44E4AB55D",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly supports creating an SOP-style document with purpose, use triggers, numbered actions, exception handling, and last-updated owner/date fields, plus editable document creation and PDF export for printing/sharing.",
+      "source_anchor": "### Standard Operating Procedures (SOPs)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6CEFFFB71401333E",
+      "missing_material_requirement_or_null": "Supplier-onboarding guide content and document-production guidance.",
+      "rationale": "This is an orchestration workflow for multi-agent tasks, not a supplier-facing operating procedure or printable/editable guide.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B5615EC572322A7F",
+      "missing_material_requirement_or_null": "Supplier-onboarding guide content; it also must not create follow-up work items.",
+      "rationale": "It facilitates software sprint retrospectives and explicitly produces action items, rather than a supplier-onboarding guide for retail staff and suppliers.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C9855786A66F86DA",
+      "missing_material_requirement_or_null": "Supplier-onboarding guide content and printable/editable document guidance; no follow-up work items may be created.",
+      "rationale": "It is a task-management skill focused on creating and tracking tasks, not drafting the requested guide, and its core operations conflict with the no-follow-up-work-items constraint.",
+      "source_anchor": "## Triggers"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EF8B184B738684B2",
+      "missing_material_requirement_or_null": "Supplier-onboarding guide content and document structure without changing access settings.",
+      "rationale": "It manages Drive files and permissions but does not supply the requested supplier-onboarding guide structure; its sharing instructions alter permissions, contrary to the stated constraint.",
+      "source_anchor": "## Triggers"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0746",
+  "batch_input_sha256": "d5ed5cde1936d6b95fdbc2b65a3785d3428a68550b1d273bb9730697cf94219b",
+  "blind_packet_id": "P-CC3C5B69938B052534",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "aebbdc267b3f68ecf68099b062bfc1af158d915f6747951f16c9589928bfcc8f"
+}
