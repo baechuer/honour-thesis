@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-03D31299A760ACB3",
+      "missing_material_requirement_or_null": "Screen the incoming customer prompt through the existing safety policy and report the action taken.",
+      "rationale": "The source builds WhatsApp bots and integrations, not an incoming-prompt safety screening workflow.",
+      "source_anchor": "# WhatsApp Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-256A498B107983F9",
+      "missing_material_requirement_or_null": "Screen the incoming customer prompt through the existing safety policy and report the action taken.",
+      "rationale": "The source automates Teams communications and workflows, but provides no incoming-prompt safety screening capability.",
+      "source_anchor": "# Microsoft Teams Automation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4F1F50A83310F4C5",
+      "missing_material_requirement_or_null": "Use the existing safety policy to screen the incoming prompt and return the screened prompt with an action note.",
+      "rationale": "The source creates a new Model Armor template, whereas the request requires applying an existing safety policy to incoming text.",
+      "source_anchor": "# modelarmor +create-template"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5234126BF50179B0",
+      "missing_material_requirement_or_null": "Screen the incoming customer prompt through the existing safety policy and report the action taken.",
+      "rationale": "The source facilitates sprint retrospectives and does not handle prompt safety screening.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7E3C56F8961CD550",
+      "missing_material_requirement_or_null": "Screen the incoming customer prompt through the existing safety policy and report the action taken.",
+      "rationale": "The source runs bulk-expression GSVA or ssGSEA analysis, not safety-policy screening of an incoming prompt.",
+      "source_anchor": "# GSVA Analysis And Visualization"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8F1D809A397B4BDB",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source is specifically for sanitizing a user prompt through a Model Armor template, matching incoming-text screening with an existing safety policy.",
+      "source_anchor": "# modelarmor +sanitize-prompt"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD459FECCCBE6384",
+      "missing_material_requirement_or_null": "Screen the incoming customer prompt through the existing safety policy and report the action taken.",
+      "rationale": "The source refines an existing professional email draft rather than screening an incoming prompt for safety.",
+      "source_anchor": "# Email Polisher"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D48D13BFBFB39F6A",
+      "missing_material_requirement_or_null": "Screen the incoming customer prompt through the existing safety policy and return the screened prompt with an action note.",
+      "rationale": "The source sanitizes a model response for outbound safety, while the request concerns an incoming customer prompt.",
+      "source_anchor": "# modelarmor +sanitize-response"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0791",
+  "batch_input_sha256": "0778dbc66133bfb48769a654d44abea06234a1b55d659356f2dc789b1857bb4e",
+  "blind_packet_id": "P-B18CA152E17BF81E45",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "ed8fa33f8452127895138f22811eac962e6a45a56a9d8794a3d1e23bc6eba351"
+}
