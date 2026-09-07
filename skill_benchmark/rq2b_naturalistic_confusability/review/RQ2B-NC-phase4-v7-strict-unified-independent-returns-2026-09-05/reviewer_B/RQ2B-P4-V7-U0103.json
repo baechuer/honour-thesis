@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-08531F1ED1949654",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "Incident-management configuration does not provide an ETL workflow for extracting two sources, transforming data, loading analytics storage, and scheduling pipeline runs.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0A66C534041245FE",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "Offline mobile replication is explicitly database synchronization, not the requested ETL workflow; it omits two-source extraction, analytics loading, and scheduling.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6D0F6A3B3BEA905B",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "Literature reading and synthesis is unrelated to ETL extraction, transformation, analytics-storage loading, or scheduling.",
+      "source_anchor": "## Purpose"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8B4260CC90EDF0F0",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "One-way pagination and delta synchronization do not design the requested two-source ETL workflow, transformation, analytics-storage target, or pipeline schedule.",
+      "source_anchor": "## Operating procedure"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-903B8FA44626E400",
+      "missing_material_requirement_or_null": "A two-source workflow with an analytics-storage target and pipeline scheduler.",
+      "rationale": "The CSV/ETL stream pattern covers extraction, transformation, and a writable destination, but does not design two sources, analytics storage, or scheduling.",
+      "source_anchor": "### Integrated example pattern (CSV/ETL)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD547589E13F40BC",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "Gene-enrichment CLI analysis operates on supplied gene input and produces analysis files; it does not design two-source extraction, analytics-storage loading, or scheduling.",
+      "source_anchor": "## Usage"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4CB05A0287A7953",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "Marketing-attribution guidance does not provide an ETL workflow for two-source extraction, transformation, analytics storage, and scheduling.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F6EE0D0BDB796C41",
+      "missing_material_requirement_or_null": "A workflow covering two source extractions, transformation, analytics-storage loading, and scheduling.",
+      "rationale": "Sprint-retrospective facilitation is unrelated to ETL extraction, transformation, analytics-storage loading, or scheduling.",
+      "source_anchor": "## Deliverable"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0103",
+  "batch_input_sha256": "e973e7994869a0f38ed0af6dfe23597d8d03e536d03ef9ec6fe1832e6e75a2a9",
+  "blind_packet_id": "P-C262A0B2D0893BFEBE",
+  "reviewer_blind_id": "B054",
+  "reviewer_instruction_sha256": "64c69620c0c9baaae1dd6e294d02e1e2898495606282c4aa5c63ead7ed4fdfb9",
+  "reviewer_output_sha256": "c92d9f39f43f5bd96db00712e5f20e0b6e03c5fe4c25594535f77d30bee89604"
+}

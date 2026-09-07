@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-C262A0B2D0893BFEBE",
+  "candidate_token": "C-8B4260CC90EDF0F0",
+  "coordinator_decision": "INADEQUATE",
+  "coordinator_output_sha256": "4d7b4d4ad4c501499f546b9e4676c4916f115d6ebbfbd916110b688913cb1e01",
+  "fresh_source_render_sha256": "80868ffb67c7008e278a83b884f6dabaf8ff7513abf1cdb722e2f7b448a0f800",
+  "rationale": "The candidate is a paging and one-way-sync design; it does not provide the required two-source transformation, analytics-storage load, or pipeline schedule, and the prompt explicitly excludes merely syncing databases.",
+  "reviewer_a_return_sha256": "af628e5267da8adfaa966e939d534d6bbdc8c016c1169a4dae95dc66e897c449",
+  "reviewer_b_return_sha256": "8275dde7973a9df486a4418ece33225a40236eff4284d59557e5701fe4ddb98e",
+  "source_anchor": "one-way replication correctness"
+}

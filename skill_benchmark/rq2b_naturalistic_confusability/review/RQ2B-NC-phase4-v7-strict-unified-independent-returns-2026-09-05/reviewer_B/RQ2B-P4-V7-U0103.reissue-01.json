@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-08531F1ED1949654",
+      "missing_material_requirement_or_null": "extracts data from two sources",
+      "rationale": "The visible material configures incident-management services, alerts, on-call schedules, and event orchestration, rather than an ETL workflow that ingests, transforms, loads analytics storage, and runs on a pipeline schedule.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0A66C534041245FE",
+      "missing_material_requirement_or_null": "loads it into analytics storage",
+      "rationale": "The source is an offline-first mobile client/server synchronization procedure with conflict resolution and retry behavior; it does not design a two-source analytics ETL workflow.",
+      "source_anchor": "### Step 5: Pull, detect, reconcile"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6D0F6A3B3BEA905B",
+      "missing_material_requirement_or_null": "schedules the pipeline",
+      "rationale": "The source is for actively reading and synthesizing scientific literature and expressly routes pipeline or implementation strategy work elsewhere, so it does not supply an ETL workflow.",
+      "source_anchor": "## Do not use this skill when"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-8B4260CC90EDF0F0",
+      "missing_material_requirement_or_null": "transforms it",
+      "rationale": "The source is explicitly for server-to-server paging and one-way replication correctness, which conflicts with the request not to merely sync databases and does not design the required ETL workflow.",
+      "source_anchor": "### Step 4: Drive incremental sync from a persisted watermark"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-903B8FA44626E400",
+      "missing_material_requirement_or_null": "schedules the pipeline",
+      "rationale": "Its CSV/ETL pattern covers streamed reading, an in-stream transform, and a writable destination with backpressure, but it does not specify extraction from two sources, analytics-storage design, or recurring scheduling.",
+      "source_anchor": "### Integrated example pattern (CSV/ETL)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-AD547589E13F40BC",
+      "missing_material_requirement_or_null": "extracts data from two sources",
+      "rationale": "This skill performs GO and KEGG enrichment on an already supplied gene list and produces plots, which is finished-dataset analysis rather than a two-source ETL workflow.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F4CB05A0287A7953",
+      "missing_material_requirement_or_null": "extracts data from two sources",
+      "rationale": "The material guides marketing-attribution model selection and measurement interpretation, not extracting, transforming, loading, and scheduling a data pipeline.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-F6EE0D0BDB796C41",
+      "missing_material_requirement_or_null": "extracts data from two sources",
+      "rationale": "The source structures team sprint retrospectives and action items, with no data-ingestion, transformation, analytics-storage, or pipeline-scheduling workflow.",
+      "source_anchor": "## Deliverable"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0103",
+  "batch_input_sha256": "e973e7994869a0f38ed0af6dfe23597d8d03e536d03ef9ec6fe1832e6e75a2a9",
+  "blind_packet_id": "P-C262A0B2D0893BFEBE",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "8275dde7973a9df486a4418ece33225a40236eff4284d59557e5701fe4ddb98e"
+}
