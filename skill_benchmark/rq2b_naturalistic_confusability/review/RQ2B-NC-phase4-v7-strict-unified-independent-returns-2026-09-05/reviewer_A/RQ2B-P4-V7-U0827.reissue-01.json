@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-08F0C1B45D35C7D1",
+      "missing_material_requirement_or_null": "Core Web Vitals diagnostic and metric-specific remediation.",
+      "rationale": "This skill builds Slack bots and contains no procedure for diagnosing LCP, INP, or CLS.",
+      "source_anchor": "Builds Slack bots and integrations using the Slack API (Bolt framework)."
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-2570DB759B25642A",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It directly scopes a Core Web Vitals audit, identifies the LCP element, main-thread work and layout-shift sources under throttling, and supplies metric-specific fixes and verification.",
+      "source_anchor": "### Step 3: Reproduce in the lab under throttling"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3BD51DD04DC99A0E",
+      "missing_material_requirement_or_null": "A page-scoped Core Web Vitals diagnostic that identifies the LCP element, INP handler delay, and CLS source.",
+      "rationale": "This is a broad SEO audit; its Core Web Vitals coverage lists thresholds and speed factors but does not supply the requested focused investigation.",
+      "source_anchor": "### Site Speed & Core Web Vitals"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3D9F064788427185",
+      "missing_material_requirement_or_null": "Core Web Vitals diagnostic and metric-specific remediation.",
+      "rationale": "This skill facilitates sprint retrospectives and provides no browser-performance investigation or Core Web Vitals fixes.",
+      "source_anchor": "## Timeboxed agenda (60 minutes)"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-56445AB6125951FB",
+      "missing_material_requirement_or_null": "Core Web Vitals diagnostic and metric-specific remediation.",
+      "rationale": "This skill surveys documented UI conventions rather than investigating page performance or diagnosing LCP, INP, and CLS.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-9ECBA3BDA0D1DB3D",
+      "missing_material_requirement_or_null": "A framework-agnostic procedure that does not assume a Next.js app deployed on Vercel.",
+      "rationale": "It gives strong metric-specific investigation and fixes, but its workflow is expressly limited to a Next.js app on Vercel, an assumption not supplied by the prompt.",
+      "source_anchor": "# Next on Vercel Performance"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DBB2A191F003FA78",
+      "missing_material_requirement_or_null": "A page-scoped Core Web Vitals diagnostic that identifies the LCP element, INP handler delay, and CLS source.",
+      "rationale": "This SEO workflow only performs a high-level vitals check and explicitly routes deep page-speed remediation elsewhere, while adding SEO work excluded by the prompt.",
+      "source_anchor": "### Step 6: Check Core Web Vitals"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-E01508F823D926E6",
+      "missing_material_requirement_or_null": "A page-scoped investigation procedure for locating the actual INP handler delay and CLS source.",
+      "rationale": "It provides relevant Core Web Vitals concepts and fixes, but its mandatory framework and score extend into networking and general best-practice review rather than the requested focused page investigation.",
+      "source_anchor": "### 5. Core Web Vitals Optimization"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0827",
+  "batch_input_sha256": "b4335efc04342b2f303fff8dd11dd4b945cc5e531ef32896e19fb3890d43a7a2",
+  "blind_packet_id": "P-150E9E486DBA2F7CD1",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "7ffc2d454c782d28411f99602e7e9477afc1c93ebbacfe633231505a3dd73e6a"
+}
