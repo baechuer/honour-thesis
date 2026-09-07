@@ -1,0 +1,24 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_final_newline_preservation_repair_v1",
+  "scope": "format repair only; no review semantics or target information touched",
+  "entries": [
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-019-lane-a-reissue-001-2026-09-08-v1/returns/reviewer_A/RQ2B-P4-V7-U0463.json",
+      "preserved_raw_base64_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-019-lane-a-reissue-001-format-repair-preservation-2026-09-08-v1/raw_original_returns_base64/RQ2B-P4-V7-U0463.base64",
+      "original_sha256": "02852a4b7be5410644236fef13a2ec2a75386891663aac17e14665d3e798ebea",
+      "repaired_sha256": "b53c66129d92128b1a455758c1ff4514c07e229855ac4e8d3696f521346eb8ba",
+      "transformation": "remove trailing blank line(s), retain exactly one final newline",
+      "semantic_change": false,
+      "archive_replay_verified": true
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-019-lane-a-reissue-001-2026-09-08-v1/returns/reviewer_A/RQ2B-P4-V7-U0337.json",
+      "preserved_raw_base64_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-019-lane-a-reissue-001-format-repair-preservation-2026-09-08-v1/raw_original_returns_base64/RQ2B-P4-V7-U0337.base64",
+      "original_sha256": "5f87df9daec715f471a725c05b5f255d9acdcc90ec15a849926890dbb3d0299e",
+      "repaired_sha256": "d9c1ced7a1bcff1e04efa446b6bd6f4941ea80804241cc697385f641f645022f",
+      "transformation": "remove trailing blank line(s), retain exactly one final newline",
+      "semantic_change": false,
+      "archive_replay_verified": true
+    }
+  ]
+}
