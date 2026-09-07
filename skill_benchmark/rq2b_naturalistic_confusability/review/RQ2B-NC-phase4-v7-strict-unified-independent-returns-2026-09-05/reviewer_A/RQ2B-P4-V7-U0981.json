@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0981",
+  "blind_packet_id": "P-648DDBB4A6F30071FD",
+  "batch_input_sha256": "cb713d321198f0f91d94d1c19fe1c08610e6ab66fd0342f96ab2329199248fc9",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0DF8732D60E9AC34",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Ionic — Cross-Platform Apps with Web Technologies",
+      "rationale": "Ionic supports general cross-platform application development, not Shopify checkout UI extension scaffolding, checkout targets, or Shopify-supported APIs.",
+      "missing_material_requirement_or_null": "Shopify checkout extension scaffolding, checkout surface targeting, and supported checkout APIs"
+    },
+    {
+      "candidate_token": "C-18C383912A962A91",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Complete User Journey",
+      "rationale": "Maestro can help test a purchase flow and visually verify behavior, but it does not scaffold or implement a Shopify checkout UI extension using its supported components and APIs.",
+      "missing_material_requirement_or_null": "Checkout extension scaffolding, checkout-surface target configuration, and Shopify UI-extension implementation"
+    },
+    {
+      "candidate_token": "C-30E2357AD005EE6E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Extension Targets (use these in shopify.extension.toml)",
+      "rationale": "This skill scaffolds customer-account extensions for account pages, which is a different extension surface from the requested checkout product-information block.",
+      "missing_material_requirement_or_null": "Checkout UI extension targets and APIs for a product-information block during checkout"
+    },
+    {
+      "candidate_token": "C-44F3057B139DF457",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# obsidian-cli - Route Obsidian desktop automation correctly",
+      "rationale": "Obsidian desktop automation does not provide Shopify extension scaffolding, checkout UI components, or purchase-flow validation.",
+      "missing_material_requirement_or_null": "Shopify checkout extension implementation and validation"
+    },
+    {
+      "candidate_token": "C-4C848AE6D35F149A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Workflow",
+      "rationale": "This is a security prior-art survey workflow and has no capability to build or validate a Shopify checkout extension.",
+      "missing_material_requirement_or_null": "Checkout extension scaffolding, checkout targets, supported APIs, and purchase-flow validation"
+    },
+    {
+      "candidate_token": "C-5BC26D855C705660",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Target APIs",
+      "rationale": "The skill addresses Shopify Admin extensions, not checkout extensions, so its targets and APIs cannot satisfy the requested checkout surface.",
+      "missing_material_requirement_or_null": "Checkout-specific extension target and API implementation"
+    },
+    {
+      "candidate_token": "C-95D1D9D8AEC72195",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "## IMPORTANT : ALWAYS USE THE CLI TO SCAFFOLD A NEW EXTENSION",
+      "rationale": "It directly covers Checkout UI Extensions, CLI scaffolding, checkout targets including product-information placement, supported components and APIs, and mandatory validation before return.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-C0F32F7ABF92C095",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Sprint retrospective facilitation is unrelated to building or testing a Shopify checkout UI extension.",
+      "missing_material_requirement_or_null": "Shopify checkout extension scaffolding, implementation, and validation"
+    }
+  ],
+  "reviewer_output_sha256": "336e20263b494d36b23c4dc16c4aeffdd9a6553ec21192b27c69362b16f0e1d7"
+}

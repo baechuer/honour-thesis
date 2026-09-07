@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1195",
+  "blind_packet_id": "P-B338FC418E458364FD",
+  "batch_input_sha256": "d1de7b740643c8f68229f2536f2120ccf50445515952401dcac099cdb4d487d4",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-147186376F52D067",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# SERP Gap Analyzer",
+      "rationale": "This skill compares a draft with ranking pages and prioritizes content gaps, rather than extracting study claims, methods, evaluation, baselines, findings, and limitations from the supplied source.",
+      "missing_material_requirement_or_null": "A source-grounded study-detail extraction workflow and the requested fielded table"
+    },
+    {
+      "candidate_token": "C-2AF48545597E0CE2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Analyze Competitor",
+      "rationale": "The workflow is for commercial comparison of products and competitors, not extraction of empirical paper details into the requested research fields.",
+      "missing_material_requirement_or_null": "A workflow to extract study claims, methods, evaluations, baselines, findings, and limitations from the supplied source"
+    },
+    {
+      "candidate_token": "C-3DF94F2FD079C25E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Purpose",
+      "rationale": "It provides holistic critique of scientific communication, whereas the request requires explicit factual extraction from one source rather than multi-lens feedback.",
+      "missing_material_requirement_or_null": "Structured source-detail extraction for the six requested study fields"
+    },
+    {
+      "candidate_token": "C-42D0073BFD886B44",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# X (Twitter) — Browsing Skill",
+      "rationale": "This skill operates on X posts and profiles and offers no workflow for extracting research-paper methods, results, or limitations.",
+      "missing_material_requirement_or_null": "Paper-content extraction and a study-detail table"
+    },
+    {
+      "candidate_token": "C-8BA75614BF7A116B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Remotion Compose",
+      "rationale": "The skill creates Remotion video compositions from a video brief and does not read or structure evidence from a research source.",
+      "missing_material_requirement_or_null": "Research-source extraction of the requested claims, methods, results, and limitations"
+    },
+    {
+      "candidate_token": "C-A0A09F8EA1967BDD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "### Procedure 3 — deep-read one source into its findings",
+      "rationale": "Although it documents a finding-extraction procedure, its activation guidance explicitly excludes deep-reading one source, and it is scoped to a user-research prior-art survey rather than the requested paper-detail table.",
+      "missing_material_requirement_or_null": "An applicable single-paper extraction workflow for the requested fields"
+    },
+    {
+      "candidate_token": "C-BB8BF312F6590357",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to use this skill",
+      "rationale": "This is guidance for NestJS development and does not support extracting empirical study details from a cited source.",
+      "missing_material_requirement_or_null": "A source-grounded research-paper extraction workflow"
+    },
+    {
+      "candidate_token": "C-E502D7CF1F2ED45D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Updating Skills from Upstream",
+      "rationale": "The skill updates a local skills repository from upstream and is unrelated to source analysis or structured study-detail extraction.",
+      "missing_material_requirement_or_null": "A workflow to extract the requested research-paper fields"
+    }
+  ],
+  "reviewer_output_sha256": "fd9379a9187457647fdeb791e0268246529c287826288e0870bdfbc4208ee706"
+}

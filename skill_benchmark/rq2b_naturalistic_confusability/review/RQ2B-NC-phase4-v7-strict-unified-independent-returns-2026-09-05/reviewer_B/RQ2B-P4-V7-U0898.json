@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0898",
+  "blind_packet_id":"P-CDB100683C9505A4C0",
+  "batch_input_sha256":"b8fa9922ef423e33e27aec854777252e0ff1cf75ff6d462b7befc701dcc9690e",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-1FCBA9C7329D0389","adequacy":"INADEQUATE","source_anchor":"name: ot-security-assessment","rationale":"This assesses operational-technology security rather than paper citations.","missing_material_requirement_or_null":"Claim-to-citation evidence audit."},
+    {"candidate_token":"C-28B15A51579F43D0","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than auditing research claims.","missing_material_requirement_or_null":"Claim support checking with caveats and safer wording."},
+    {"candidate_token":"C-45A065EB586A36C0","adequacy":"FULLY_ACCEPTABLE","source_anchor":"traces each through the citation chain to its primary source", "rationale":"It directly audits whether cited studies support claims, identifies evidence limits, and produces support verdicts with source evidence.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-561133F3AAB0043B","adequacy":"INADEQUATE","source_anchor":"name: gsva-analysis-and-visualization","rationale":"This performs pathway analysis rather than citation checking.","missing_material_requirement_or_null":"Claim-to-paper evidence audit."},
+    {"candidate_token":"C-727D7D101F9408E1","adequacy":"INADEQUATE","source_anchor":"name: review-docs","rationale":"This reviews tldraw documentation style rather than cited-paper support.","missing_material_requirement_or_null":"Research claim verification against source evidence."},
+    {"candidate_token":"C-A74D131CFDEA48F5","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack integrations rather than checking citations.","missing_material_requirement_or_null":"Claim support and caveat analysis."},
+    {"candidate_token":"C-EF11D70724593E23","adequacy":"INADEQUATE","source_anchor":"name: review-lost-opportunity","rationale":"This evaluates sales opportunities rather than research claims.","missing_material_requirement_or_null":"Citation-grounded claim audit."},
+    {"candidate_token":"C-FF6862C66BA7FE28","adequacy":"INADEQUATE","source_anchor":"name: sentry-tanstack-start-sdk","rationale":"This configures application monitoring rather than reviewing citations.","missing_material_requirement_or_null":"Claim-to-paper evidence verification."}
+  ],
+  "reviewer_output_sha256":"04e39e7b9cfd8102ad6a3f6f4c3c066ac440b47321b2f4520d9a9ea6ea1c6fde"
+}

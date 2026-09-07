@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1195",
+  "blind_packet_id":"P-B338FC418E458364FD",
+  "batch_input_sha256":"d1de7b740643c8f68229f2536f2120ccf50445515952401dcac099cdb4d487d4",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-147186376F52D067","adequacy":"INADEQUATE","source_anchor":"name: SERP Gap Analyzer","rationale":"This compares SEO content to ranking pages, not structured research-detail extraction.","missing_material_requirement_or_null":"Fielded extraction of claims, methods, evaluation, baselines, findings, and limitations."},
+    {"candidate_token":"C-2AF48545597E0CE2","adequacy":"INADEQUATE","source_anchor":"name: analyze-competitor","rationale":"This produces competitor reports rather than extracting details from a source passage.","missing_material_requirement_or_null":"Structured research-source extraction."},
+    {"candidate_token":"C-3DF94F2FD079C25E","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"multi-lens critique", "rationale":"It can examine scientific claims and design, but is a critique workflow rather than explicit source-grounded field extraction.","missing_material_requirement_or_null":"A structured table of extractable claim, method, evaluation, baseline, finding, and limitation fields."},
+    {"candidate_token":"C-42D0073BFD886B44","adequacy":"INADEQUATE","source_anchor":"name: browsing-x","rationale":"This extracts X/Twitter content rather than structuring supplied research text.","missing_material_requirement_or_null":"Structured extraction from the given source."},
+    {"candidate_token":"C-8BA75614BF7A116B","adequacy":"INADEQUATE","source_anchor":"name: Remotion Compose","rationale":"This creates video compositions, not research extraction tables.","missing_material_requirement_or_null":"Structured research-detail extraction."},
+    {"candidate_token":"C-A0A09F8EA1967BDD","adequacy":"INADEQUATE","source_anchor":"name: user-research-prior-art-survey","rationale":"This surveys published user-research evidence rather than extracting fields from the provided source.","missing_material_requirement_or_null":"Direct structured source-detail extraction."},
+    {"candidate_token":"C-BB8BF312F6590357","adequacy":"INADEQUATE","source_anchor":"name: nestjs","rationale":"This provides NestJS development guidance rather than source extraction.","missing_material_requirement_or_null":"Structured table extraction from research text."},
+    {"candidate_token":"C-E502D7CF1F2ED45D","adequacy":"INADEQUATE","source_anchor":"Pulling Updates from Skills Repository","rationale":"This synchronizes a skills repository rather than analyzing a study description.","missing_material_requirement_or_null":"Structured extraction of research components and findings."}
+  ],
+  "reviewer_output_sha256":"6baab7c19e0b29b72c0bedc8c83c9c2e88f03f3569b8f4149a4f4e5fcf0a3536"
+}

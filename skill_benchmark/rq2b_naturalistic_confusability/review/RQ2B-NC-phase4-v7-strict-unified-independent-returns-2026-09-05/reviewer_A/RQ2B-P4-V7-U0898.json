@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0898",
+  "blind_packet_id": "P-CDB100683C9505A4C0",
+  "batch_input_sha256": "b8fa9922ef423e33e27aec854777252e0ff1cf75ff6d462b7befc701dcc9690e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1FCBA9C7329D0389",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Core Workflow",
+      "rationale": "OT security assessment procedures do not test prose claims against a cited paper or produce evidence-based safer wording.",
+      "missing_material_requirement_or_null": "Citation-chain claim verification against the supplied paper with claim-level wording recommendations"
+    },
+    {
+      "candidate_token": "C-28B15A51579F43D0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The skill facilitates team retrospectives and has no workflow for assessing scholarly claim support or citing source evidence.",
+      "missing_material_requirement_or_null": "Paper-based claim verification with overclaim and caveat analysis"
+    },
+    {
+      "candidate_token": "C-45A065EB586A36C0",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "### Step 2: Trace each proposition to its primary source",
+      "rationale": "It decomposes claims, traces them to primary sources, appraises the evidence, identifies missing support, and provides verdicts, matching the requested claim-by-claim support audit and source evidence.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-561133F3AAB0043B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When Not to Use",
+      "rationale": "GSVA and ssGSEA analysis of expression data does not assess whether prose claims are supported by a cited paper.",
+      "missing_material_requirement_or_null": "Claim-level comparison against the cited paper and evidence-based safer wording"
+    },
+    {
+      "candidate_token": "C-727D7D101F9408E1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Workflow overview",
+      "rationale": "This skill reviews tldraw documentation against style and voice guidance, not the evidentiary support of claims in a cited paper.",
+      "missing_material_requirement_or_null": "Primary-source claim verification, caveat detection, and source evidence"
+    },
+    {
+      "candidate_token": "C-A74D131CFDEA48F5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Slack bot implementation guidance cannot evaluate research claims against a cited source.",
+      "missing_material_requirement_or_null": "A paper-based claim-audit workflow with evidence and safer wording"
+    },
+    {
+      "candidate_token": "C-EF11D70724593E23",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Gather the Inputs",
+      "rationale": "The skill analyzes lost sales opportunities, not scientific claims or evidence in cited papers.",
+      "missing_material_requirement_or_null": "Claim-level source verification with overclaim and caveat analysis"
+    },
+    {
+      "candidate_token": "C-FF6862C66BA7FE28",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Invoke This Skill When",
+      "rationale": "This is a TanStack Start Sentry setup guide and does not inspect a paper or assess claim support.",
+      "missing_material_requirement_or_null": "Citation-grounded verification of each paragraph claim and safer wording"
+    }
+  ],
+  "reviewer_output_sha256": "c051e0b8ba8ac742f6e42c4c69ffca64bbf036c04016108c1a64098b5ee0ebd4"
+}

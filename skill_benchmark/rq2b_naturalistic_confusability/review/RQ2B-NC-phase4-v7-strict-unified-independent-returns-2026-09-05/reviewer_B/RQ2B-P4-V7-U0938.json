@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0938",
+  "blind_packet_id":"P-8805F6905CF3E128C1",
+  "batch_input_sha256":"4f99fa4d7195415c23e45ee8f8e534b05a60e32c4481262084c88c42a35be7ac",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-0213CA03762B5B85","adequacy":"INADEQUATE","source_anchor":"name: umami","rationale":"This deploys privacy analytics rather than a static site to Netlify.","missing_material_requirement_or_null":"Netlify CLI deployment, URL return, and verification."},
+    {"candidate_token":"C-128D527FF9E81C48","adequacy":"INADEQUATE","source_anchor":"shopify-polaris-admin-extensions","rationale":"This develops Shopify Admin extensions rather than deploying a static web project.","missing_material_requirement_or_null":"Netlify CLI deployment and verification."},
+    {"candidate_token":"C-68C5E7A628BEF455","adequacy":"INADEQUATE","source_anchor":"name: markdown-for-agents","rationale":"This creates agent-friendly Markdown mirrors and may mention Cloudflare, not Netlify deployment.","missing_material_requirement_or_null":"Netlify CLI deployment URL and verification."},
+    {"candidate_token":"C-6938AB1A9E2367D0","adequacy":"INADEQUATE","source_anchor":"name: gsva-analysis-and-visualization","rationale":"This performs genomic pathway analysis rather than website deployment.","missing_material_requirement_or_null":"Static-site deployment with Netlify CLI."},
+    {"candidate_token":"C-6DF259DA07579F7C","adequacy":"INADEQUATE","source_anchor":"name: Vercel Deploy Pipeline","rationale":"This targets Vercel, which the request explicitly excludes.","missing_material_requirement_or_null":"Netlify-specific deployment workflow."},
+    {"candidate_token":"C-74EF6E8EEA9CE2A0","adequacy":"INADEQUATE","source_anchor":"serverless","rationale":"This builds a serverless DevSecOps pipeline rather than performing Netlify deployment.","missing_material_requirement_or_null":"Netlify CLI deployment and deployed-site verification."},
+    {"candidate_token":"C-8D40023AED93ADA9","adequacy":"INADEQUATE","source_anchor":"name: sdlc-workflow","rationale":"This is a general delivery workflow and does not provide the required Netlify CLI actions.","missing_material_requirement_or_null":"Netlify-specific deployment commands, URL, and verification."},
+    {"candidate_token":"C-BFED7E6B934AEC3A","adequacy":"INADEQUATE","source_anchor":"name: Next on Vercel Performance","rationale":"This diagnoses Vercel performance rather than deploying to Netlify.","missing_material_requirement_or_null":"Netlify CLI deployment and verification."}
+  ],
+  "reviewer_output_sha256":"9f7f7b4ba220e7435ecab366a20d57fbff989f8f998ae63a7091b697b9e5dc4f"
+}

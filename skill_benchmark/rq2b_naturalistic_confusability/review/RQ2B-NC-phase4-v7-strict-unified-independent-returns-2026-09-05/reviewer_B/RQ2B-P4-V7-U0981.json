@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0981",
+  "blind_packet_id":"P-648DDBB4A6F30071FD",
+  "batch_input_sha256":"cb713d321198f0f91d94d1c19fe1c08610e6ab66fd0342f96ab2329199248fc9",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-0DF8732D60E9AC34","adequacy":"INADEQUATE","source_anchor":"name: ionic","rationale":"This builds cross-platform applications rather than Shopify checkout extensions.","missing_material_requirement_or_null":"Checkout-surface extension scaffolding and validation."},
+    {"candidate_token":"C-18C383912A962A91","adequacy":"INADEQUATE","source_anchor":"name: maestro","rationale":"This writes mobile UI tests, not Shopify checkout extensions.","missing_material_requirement_or_null":"Checkout extension implementation and purchase-flow validation."},
+    {"candidate_token":"C-30E2357AD005EE6E","adequacy":"INADEQUATE","source_anchor":"customer account extensions","rationale":"This targets customer-account surfaces rather than the checkout flow.","missing_material_requirement_or_null":"Checkout-surface product-information extension."},
+    {"candidate_token":"C-44F3057B139DF457","adequacy":"INADEQUATE","source_anchor":"name: obsidian-cli","rationale":"This is an alias for an Obsidian skill, not e-commerce extension development.","missing_material_requirement_or_null":"Shopify checkout extension scaffolding."},
+    {"candidate_token":"C-4C848AE6D35F149A","adequacy":"INADEQUATE","source_anchor":"name: security-prior-art-survey","rationale":"This surveys security prior art rather than building checkout UI.","missing_material_requirement_or_null":"Checkout extension implementation and validation."},
+    {"candidate_token":"C-5BC26D855C705660","adequacy":"INADEQUATE","source_anchor":"Shopify Admin", "rationale":"This targets Shopify Admin extension points rather than checkout.","missing_material_requirement_or_null":"Checkout-surface extension support."},
+    {"candidate_token":"C-95D1D9D8AEC72195","adequacy":"FULLY_ACCEPTABLE","source_anchor":"Build custom functionality that merchants can install at defined points in the checkout flow", "rationale":"It directly supports checkout extension scaffolding, checkout targets, UI components, APIs, and validation in the purchase flow.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-C0F32F7ABF92C095","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than extension development.","missing_material_requirement_or_null":"Checkout extension scaffold and validation."}
+  ],
+  "reviewer_output_sha256":"28fa3f5403f976c5aef2a7256c24226d1057cb38b3f43672a9cf0fe4a94738d3"
+}
