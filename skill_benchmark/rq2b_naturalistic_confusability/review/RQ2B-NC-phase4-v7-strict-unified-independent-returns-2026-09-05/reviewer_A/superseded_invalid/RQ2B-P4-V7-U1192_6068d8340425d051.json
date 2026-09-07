@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1192",
+  "blind_packet_id": "P-05966F2C848061DDBF",
+  "batch_input_sha256": "5bd9efc2933e7dd161304aad7ccd2b1da6f0e26cfae9474bf91fd84d7c1a4779",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-1613A895CFF3C573","adequacy":"INADEQUATE","source_anchor":"# Incremental Implementation","rationale":"This is a general implementation discipline, not a latency-trace bottleneck analysis workflow.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."},
+    {"candidate_token":"C-2ED2EFC5645D485C","adequacy":"INADEQUATE","source_anchor":"# Game Build Log Triage","rationale":"This triages Unity and Unreal build logs rather than a checkout latency regression.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."},
+    {"candidate_token":"C-480A4B270B7C9A5C","adequacy":"INADEQUATE","source_anchor":"# Incremental Implementation","rationale":"This is a general implementation discipline, not a latency-trace bottleneck analysis workflow.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."},
+    {"candidate_token":"C-75A1A471F8824050","adequacy":"INADEQUATE","source_anchor":"# Arabic Copywriting And Dialects","rationale":"This concerns Arabic-language copy and does not analyze application performance.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."},
+    {"candidate_token":"C-99F84D42FA89AEF2","adequacy":"INADEQUATE","source_anchor":"# Segmentation Strategy","rationale":"This designs lifecycle-message segments rather than diagnosing a performance regression.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."},
+    {"candidate_token":"C-A300204572439468","adequacy":"FULLY_ACCEPTABLE","source_anchor":"### Step 5: Recommend one or two high-leverage changes","rationale":"It is explicitly a measurement-led workflow for naming one bottleneck, proposing one or two bounded optimizations, and verifying before and after impact.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A9239D123143FF2B","adequacy":"INADEQUATE","source_anchor":"## When not to use this skill","rationale":"The source explicitly routes bottleneck tuning to performance optimization rather than performing the requested trace diagnosis.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."},
+    {"candidate_token":"C-DDFFDE5B02E85D39","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This facilitates team retrospectives and does not diagnose or verify a latency regression.","missing_material_requirement_or_null":"A trace-based bottleneck diagnosis with no more than two changes and fair before-and-after verification."}
+  ],
+  "reviewer_output_sha256": "c7ebf3194ada5db200e7f384946336a0a66711ff9ad312db9a50ada444524847"
+}
