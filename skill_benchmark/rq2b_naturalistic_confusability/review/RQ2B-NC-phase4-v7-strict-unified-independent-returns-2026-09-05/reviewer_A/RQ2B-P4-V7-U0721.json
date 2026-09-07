@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0721",
+  "blind_packet_id": "P-9C914537A3D2831FC7",
+  "batch_input_sha256": "42231c49b8eec9318c21855631097da38a2a0061e4769f5f674859d2e53cc8cb",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-02F309BB0AB57276",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Compare a group of companies by products, positioning, market focus, and differentiators.",
+      "rationale": "The source directly requires a consistent evidence-based multi-company comparison, explicit overlaps and gaps, and differentiation opportunities without inventing missing facts.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-2A7E60B6AFFAF3AD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Group companies by industry, business model, size, maturity, market, or strategic fit.",
+      "rationale": "The source supports evidence-based, consistently applied company classifications and observations, but it does not produce the requested competitor comparison or differentiation analysis.",
+      "missing_material_requirement_or_null": "A structured cross-company comparison of positioning, similarities, differences, and stand-apart opportunities."
+    },
+    {
+      "candidate_token": "C-5EC9D656FF27B1B7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "technical issues",
+      "rationale": "The source converts a website SEO audit into content rewrites and social distribution rather than comparing supplied business records for a competitive conversation.",
+      "missing_material_requirement_or_null": "Evidence-based comparison of the supplied businesses and differentiation opportunities."
+    },
+    {
+      "candidate_token": "C-64682605EDCD8AA3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "structured research summary",
+      "rationale": "The source produces consistent, evidence-bounded company profiles and market-position assessments, but it does not synthesize direct similarities, differences, and differentiation opportunities across the full set.",
+      "missing_material_requirement_or_null": "A cross-company competitive comparison and explicit stand-apart analysis."
+    },
+    {
+      "candidate_token": "C-A3ECE81F39C5B17A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "optimize content for AI search engines",
+      "rationale": "The source optimizes content for AI search visibility rather than conducting an evidence-bounded competitive comparison of business records.",
+      "missing_material_requirement_or_null": "A consistent multi-business comparison method with differentiation analysis."
+    },
+    {
+      "candidate_token": "C-AA18EFFE09288980",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "scope creep",
+      "rationale": "The source handles freelancer change requests and paid-work boundaries rather than analyzing businesses or their competitive positions.",
+      "missing_material_requirement_or_null": "An evidence-based cross-company competitive comparison method."
+    },
+    {
+      "candidate_token": "C-CAB8D693BC448124",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "sprint retrospectives",
+      "rationale": "The source facilitates a software-team retrospective, which does not analyze supplied business records or competitive differentiation.",
+      "missing_material_requirement_or_null": "An evidence-based cross-company competitive comparison method."
+    },
+    {
+      "candidate_token": "C-DB1D7D465456FE8E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "DOCUMENTED visual and interaction conventions",
+      "rationale": "The source surveys user-interface conventions from documentation, not the market positioning of supplied businesses.",
+      "missing_material_requirement_or_null": "An evidence-based cross-company competitive comparison method."
+    }
+  ],
+  "reviewer_output_sha256": "bb6dcded0e68bc2a1f92f19c14db7bdffd73447f0cf4972cdad4a12fafed8123"
+}

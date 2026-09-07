@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0721",
+  "blind_packet_id": "P-9C914537A3D2831FC7",
+  "batch_input_sha256": "42231c49b8eec9318c21855631097da38a2a0061e4769f5f674859d2e53cc8cb",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-02F309BB0AB57276",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Compare a group of companies by products",
+      "rationale": "This directly compares a supplied company set using consistent dimensions, requires supplied evidence rather than invented facts, separates facts from interpretation, makes overlaps and gaps explicit, and returns positioning, strengths, weaknesses, overlaps, and differentiation opportunities. It matches the requested competitive-conversation preparation.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-2A7E60B6AFFAF3AD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Group companies by industry",
+      "rationale": "This assigns each company to a segment; it does not produce the requested cross-company comparison of similarities, differences, and competitive differentiation.",
+      "missing_material_requirement_or_null": "A consistent evidence-based comparison across the businesses, with overlaps, differences, and possible differentiation."
+    },
+    {
+      "candidate_token": "C-5EC9D656FF27B1B7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Close the loop between",
+      "rationale": "This coordinates SEO audit remediation, website-copy review, and social scheduling rather than comparing supplied business records.",
+      "missing_material_requirement_or_null": "Structured competitive comparison of each business on shared evidence-based criteria."
+    },
+    {
+      "candidate_token": "C-64682605EDCD8AA3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Turn company records into a structured research summary",
+      "rationale": "This creates independent company profiles and relevance assessments, not a shared-dimension comparison that exposes competitive similarities, differences, and differentiation options.",
+      "missing_material_requirement_or_null": "A cross-company comparison table with explicit overlaps, gaps, and evidence-grounded differentiation opportunities."
+    },
+    {
+      "candidate_token": "C-A3ECE81F39C5B17A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "You are an expert in AI search optimization",
+      "rationale": "This optimizes a site's content for AI search visibility, rather than comparing businesses from supplied records for a competitive conversation.",
+      "missing_material_requirement_or_null": "An evidence-based competitive landscape across the provided companies."
+    },
+    {
+      "candidate_token": "C-AA18EFFE09288980",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope creep never arrives as a demand",
+      "rationale": "This manages freelancer change orders and retainer boundaries, not business-record comparison or competitive positioning analysis.",
+      "missing_material_requirement_or_null": "Consistent comparison of supplied businesses with similarities, differences, and potential differentiation."
+    },
+    {
+      "candidate_token": "C-CAB8D693BC448124",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Most retros produce the same three actions",
+      "rationale": "This facilitates agile retrospectives and does not analyze competitive business records.",
+      "missing_material_requirement_or_null": "Evidence-grounded cross-business comparison and differentiation analysis."
+    },
+    {
+      "candidate_token": "C-DB1D7D465456FE8E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Two procedures. Route by what you were asked for:",
+      "rationale": "This surveys documented UI conventions and has no workflow for comparing companies, market positioning, or competitive differentiation from supplied records.",
+      "missing_material_requirement_or_null": "A shared-criteria competitive comparison of the businesses using only supplied evidence."
+    }
+  ],
+  "reviewer_output_sha256": "3757537640321886ab0019ddfe50ebc03d12727b226dfba0c9cd71f9d07ff289"
+}
