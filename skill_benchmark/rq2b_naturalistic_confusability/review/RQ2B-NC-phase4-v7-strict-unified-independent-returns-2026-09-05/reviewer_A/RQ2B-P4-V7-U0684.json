@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0684",
+  "blind_packet_id": "P-6A664F8596FBB83122",
+  "batch_input_sha256": "ba44d1c9ca76d1ffa4f1dd40f0d8c323d8f0b3489692a2d0107c5dfe7b72311b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-009FBE85819A7D82",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "The concern is a functional bug",
+      "rationale": "This skill explicitly routes functional-bug concerns elsewhere and instead assesses whether supplied acceptance criteria are met. It does not examine behavioral faults in modified decision points.",
+      "missing_material_requirement_or_null": "Behavioral-correctness analysis covering invalid, boundary, failure, concurrency, and interface-contract conditions."
+    },
+    {
+      "candidate_token": "C-18FEF112E9AD94B8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "It is a research method, not a scanner.",
+      "rationale": "This is a security prior-art research workflow for a product before it is built, rather than a review of a proposed code change for behavioral faults.",
+      "missing_material_requirement_or_null": "A procedure for inspecting the proposed change's decision points and reporting triggered behavioral faults."
+    },
+    {
+      "candidate_token": "C-3D21CC9A237691B1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Create and edit Obsidian Bases",
+      "rationale": "The skill creates and validates Obsidian .base files; it supplies no proposed-change review or behavioral fault analysis.",
+      "missing_material_requirement_or_null": "Analysis of modified code behavior under invalid, empty, boundary, ordering, failure, concurrent, and contract conditions."
+    },
+    {
+      "candidate_token": "C-BD7A5FCD0AF1067D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "A diff is ready for review and maintainability is the risk",
+      "rationale": "Although it reviews diffs, this skill confines itself to readability and maintainability and explicitly excludes correctness, which is the requested behavioral-fault dimension.",
+      "missing_material_requirement_or_null": "Functional-correctness review of behavioral faults while excluding maintainability evaluation."
+    },
+    {
+      "candidate_token": "C-DA1658B182313239",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "An interactive, resumable journey",
+      "rationale": "This orchestrates marketing-website conversion and usability improvement phases, not behavioral review of a proposed software change.",
+      "missing_material_requirement_or_null": "A diff-oriented behavioral-fault review procedure with concrete trigger and location requirements."
+    },
+    {
+      "candidate_token": "C-E4FD8299C8FF9E88",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "The test needs partial gestures",
+      "rationale": "This gives Jetpack Compose test-action guidance. It does not inspect all modified routines or make a behavioral-fault proceed verdict for a proposed change.",
+      "missing_material_requirement_or_null": "Systematic behavioral analysis of the proposed change's invalid, boundary, failure, concurrency, and contract cases."
+    },
+    {
+      "candidate_token": "C-E827B04B2F4F669A",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "For every changed function or block, answer:",
+      "rationale": "The skill reviews a stated change and each changed block for null, empty, range, branch, error, ordering, race, and caller-contract faults; it requires concrete triggers, checks severe findings for safeguards, excludes style, security, and test coverage, and returns a proceed/revise/reject verdict.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F7D28CDB9B814387",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run the phases in order and hold the timeboxes",
+      "rationale": "This is a sprint-retrospective facilitation workflow, not a technical review of modified decision points or behavioral faults.",
+      "missing_material_requirement_or_null": "A code-change behavioral-fault assessment with concrete triggers, wrong behavior, locations, and a proceed decision."
+    }
+  ],
+  "reviewer_output_sha256": "e31cf3341bbbf3c0e23da24bbd97a6533bcac3dd30099904ada273b650e8b51a"
+}

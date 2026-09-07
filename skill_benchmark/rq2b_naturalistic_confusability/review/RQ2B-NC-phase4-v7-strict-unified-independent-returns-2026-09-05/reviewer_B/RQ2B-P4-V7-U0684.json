@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0684",
+  "blind_packet_id": "P-6A664F8596FBB83122",
+  "batch_input_sha256": "ba44d1c9ca76d1ffa4f1dd40f0d8c323d8f0b3489692a2d0107c5dfe7b72311b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-009FBE85819A7D82",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "judge-spec-compliance",
+      "rationale": "This skill checks a diff against supplied acceptance criteria and explicitly does not review functional correctness or behavioral faults.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    },
+    {
+      "candidate_token": "C-18FEF112E9AD94B8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Overview",
+      "rationale": "This is a security prior-art research method, not a review procedure for behavioural faults in a proposed code change.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    },
+    {
+      "candidate_token": "C-3D21CC9A237691B1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Obsidian Bases Skill",
+      "rationale": "This skill creates and validates Obsidian Bases files rather than examining modified program routines for behavioural faults.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    },
+    {
+      "candidate_token": "C-BD7A5FCD0AF1067D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "judge-code-quality",
+      "rationale": "This is a code-quality review role, while the requested review specifically excludes maintainability and asks for functional behavioural analysis.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    },
+    {
+      "candidate_token": "C-DA1658B182313239",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "improve-website",
+      "rationale": "This skill focuses on improving websites rather than reviewing a change's decision points and routines for functional faults.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    },
+    {
+      "candidate_token": "C-E4FD8299C8FF9E88",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "clicking-and-scrolling",
+      "rationale": "This skill concerns interaction automation and does not provide the requested fault-analysis review of changed code behaviour.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    },
+    {
+      "candidate_token": "C-E827B04B2F4F669A",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Analyze each changed hunk",
+      "rationale": "It directly requires behavioural correctness review across invalid, empty, boundary, error, ordering, and race conditions; it also requires concrete triggers, precise locations, a safeguard refutation pass, and excludes style, security, and test coverage.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-F7D28CDB9B814387",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "This skill facilitates team sprint retrospectives and action items, not functional review of a proposed software change.",
+      "missing_material_requirement_or_null": "A behavioural-correctness review method covering concrete invalid, boundary, failure, concurrency, and contract triggers."
+    }
+  ],
+  "reviewer_output_sha256": "f203d1155a9b1f1cadcd95a9cc498424229c3e997420c70a1b774be4e1a4a49e"
+}
