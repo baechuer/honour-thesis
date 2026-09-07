@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U0963",
+  "blind_packet_id":"P-377661127F8085A210",
+  "batch_input_sha256":"f961c24b1b9dfba6f9303df161c0cb4fed6aa435de91a3d18068633e0b609913",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-1DCFC2DDED97735F","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than Trello automation.","missing_material_requirement_or_null":"Trello card, labels, reminders, and collaboration rules."},
+    {"candidate_token":"C-50AAC3DA29BD7A31","adequacy":"INADEQUATE","source_anchor":"name: user-research-prior-art-survey","rationale":"This surveys research evidence rather than configuring Trello.","missing_material_requirement_or_null":"Trello automation and collaboration workflow."},
+    {"candidate_token":"C-6218DB212D7D1827","adequacy":"INADEQUATE","source_anchor":"Atlassian Jira and Confluence", "rationale":"This targets Jira and Confluence, which the request does not permit.","missing_material_requirement_or_null":"Trello-native board automation."},
+    {"candidate_token":"C-6751029FA390100B","adequacy":"INADEQUATE","source_anchor":"name: Jira Ticket Writer","rationale":"This writes Jira stories rather than implementing Trello automation.","missing_material_requirement_or_null":"Trello card movements, labels, reminders, and rules."},
+    {"candidate_token":"C-A874D8FEAEEB3126","adequacy":"INADEQUATE","source_anchor":"Airtable-based product operations workflows", "rationale":"This designs Airtable product operations rather than a Trello board.","missing_material_requirement_or_null":"Trello-native automation and collaboration rules."},
+    {"candidate_token":"C-C43DBF0EC0B30CC3","adequacy":"INADEQUATE","source_anchor":"name: Linear Workflow","rationale":"This configures Linear, which the request expressly excludes.","missing_material_requirement_or_null":"Trello-native workflow automation."},
+    {"candidate_token":"C-C8C6191875FC2736","adequacy":"INADEQUATE","source_anchor":"name: version-control","rationale":"This manages source control rather than Trello workflows.","missing_material_requirement_or_null":"Trello card and reminder automation."},
+    {"candidate_token":"C-F993AEE4CFCBA708","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack bots rather than Trello automation.","missing_material_requirement_or_null":"Trello board rules and reminders."}
+  ],
+  "reviewer_output_sha256":"31c96a19e4a53cbd8c90b9a3ab4c6f21427dc762ae24ecce5df59f3b605eecdc"
+}

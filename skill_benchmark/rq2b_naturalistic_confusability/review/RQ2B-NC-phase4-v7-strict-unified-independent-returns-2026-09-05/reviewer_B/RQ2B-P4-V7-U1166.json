@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"B",
+  "batch_id":"RQ2B-P4-V7-U1166",
+  "blind_packet_id":"P-33466A2D4FA6579885",
+  "batch_input_sha256":"f4b548935f7809444c02a6f72d9c64556c6778d3629b8b611a81c1f0e982f7a7",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-21A79E71515C0091","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Manage application secrets and environment variables", "rationale":"It covers secret storage, but not OAuth scopes, refresh, logout, or authorization checks.","missing_material_requirement_or_null":"End-to-end OAuth/OIDC flow, session/logout, and authorization design."},
+    {"candidate_token":"C-601E5C26DBD6CA6F","adequacy":"INADEQUATE","source_anchor":"name: Push Notification Wirer","rationale":"This wires native mobile push notifications rather than dashboard authentication.","missing_material_requirement_or_null":"OAuth login, token refresh, logout, and authorization controls."},
+    {"candidate_token":"C-B0F17FBC74F93929","adequacy":"FULLY_ACCEPTABLE","source_anchor":"OAuth 2.0/OIDC flows", "rationale":"It covers authentication end to end, including credential and token management, sessions, OAuth/OIDC, authorization, and security controls.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-B599461298AB3245","adequacy":"INADEQUATE","source_anchor":"name: configuring-dbt-mcp-server","rationale":"This configures dbt MCP connectivity rather than dashboard OAuth.","missing_material_requirement_or_null":"OAuth login and authorization design."},
+    {"candidate_token":"C-C0AC8016410F40EE","adequacy":"INADEQUATE","source_anchor":"name: Sprint Retro Facilitator","rationale":"This facilitates retrospectives rather than application authentication.","missing_material_requirement_or_null":"OAuth login and token lifecycle management."},
+    {"candidate_token":"C-CD5C36D2F318DC06","adequacy":"INADEQUATE","source_anchor":"name: visual-prior-art-survey","rationale":"This surveys visual conventions rather than OAuth implementation.","missing_material_requirement_or_null":"OAuth login, refresh, logout, and authorization checks."},
+    {"candidate_token":"C-CD75CBC53A4DBEDC","adequacy":"INADEQUATE","source_anchor":"name: slack-bot-builder","rationale":"This builds Slack bots rather than OAuth dashboard authentication.","missing_material_requirement_or_null":"OAuth integration and authorization controls."},
+    {"candidate_token":"C-EB05EE789411E0EA","adequacy":"INADEQUATE","source_anchor":"name: cli-spec-to-goal","rationale":"This plans Node CLI projects rather than a dashboard OAuth login.","missing_material_requirement_or_null":"OAuth login, refresh, secret storage, logout, and authorization."}
+  ],
+  "reviewer_output_sha256":"db37e48ebdab9ec3195195a0e460119afe3b051de0d908ee432914d53965a95b"
+}

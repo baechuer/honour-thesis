@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0963",
+  "blind_packet_id": "P-377661127F8085A210",
+  "batch_input_sha256": "f961c24b1b9dfba6f9303df161c0cb4fed6aa435de91a3d18068633e0b609913",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1DCFC2DDED97735F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates sprint retrospectives and does not cover Trello API automation, card movement, labels, or due-date reminders.",
+      "missing_material_requirement_or_null": "A Trello-specific automation procedure covering board and card actions, labels, due dates, reminders, and collaboration rules."
+    },
+    {
+      "candidate_token": "C-50AAC3DA29BD7A31",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to activate",
+      "rationale": "This is a published user-research evidence survey and provides no Trello automation capability.",
+      "missing_material_requirement_or_null": "A Trello-specific automation procedure covering board and card actions, labels, due dates, reminders, and collaboration rules."
+    },
+    {
+      "candidate_token": "C-6218DB212D7D1827",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Atlassian REST API Skill",
+      "rationale": "This operates Jira and Confluence APIs, whereas the prompt explicitly requires Trello and excludes Jira implementation.",
+      "missing_material_requirement_or_null": "A Trello API procedure for moving cards, applying labels, managing due dates and reminders, and defining collaboration rules."
+    },
+    {
+      "candidate_token": "C-6751029FA390100B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Jira Ticket Writer",
+      "rationale": "This drafts Jira tickets rather than automating Trello board cards, labels, due dates, or reminders.",
+      "missing_material_requirement_or_null": "A Trello-specific automation procedure for card movement, labels, due-date reminders, and collaboration rules."
+    },
+    {
+      "candidate_token": "C-A874D8FEAEEB3126",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Product and roadmap management",
+      "rationale": "This is product and roadmap management guidance centered on Airtable workflows, not Trello automation.",
+      "missing_material_requirement_or_null": "A Trello-specific automation procedure for board and card actions, labels, due dates, reminders, and collaboration rules."
+    },
+    {
+      "candidate_token": "C-C43DBF0EC0B30CC3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Linear Workflow",
+      "rationale": "This configures Linear workflows, which the prompt expressly excludes, rather than Trello automation.",
+      "missing_material_requirement_or_null": "A Trello-specific automation procedure for card movement, labels, due-date reminders, and collaboration rules."
+    },
+    {
+      "candidate_token": "C-C8C6191875FC2736",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When to use",
+      "rationale": "This covers version control and source-code management, not Trello board automation or collaboration workflows.",
+      "missing_material_requirement_or_null": "A Trello-specific automation procedure for card movement, labels, due-date reminders, and collaboration rules."
+    },
+    {
+      "candidate_token": "C-F993AEE4CFCBA708",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This builds Slack bots using Slack APIs and does not provide Trello board or card automation.",
+      "missing_material_requirement_or_null": "A Trello API procedure for moving cards, applying labels, managing due dates and reminders, and defining collaboration rules."
+    }
+  ],
+  "reviewer_output_sha256": "8c54454cfbc40f359f36402d618c608687dd7c3ed07056bc20980483af38758f"
+}
