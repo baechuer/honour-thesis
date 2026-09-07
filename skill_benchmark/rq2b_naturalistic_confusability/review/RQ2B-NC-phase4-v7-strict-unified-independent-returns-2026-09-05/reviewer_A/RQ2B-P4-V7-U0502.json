@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0502",
+  "blind_packet_id": "P-9840DE764E1B25A354",
+  "batch_input_sha256": "1dfaac7aa005bee15a78d9bcbb139db84568f59c4fe42014d0a4480f3aa93cb5",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-173CFF37C7FB1314",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "The source performs GO/KEGG enrichment for gene lists and offers no Twilio, messaging, delivery-callback or voice-workflow capability.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    },
+    {
+      "candidate_token": "C-400DC67BB65CA293",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# WhatsApp Bot Builder",
+      "rationale": "The source builds WhatsApp Cloud API bots, a platform the prompt explicitly excludes, rather than Twilio SMS and voice automation.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    },
+    {
+      "candidate_token": "C-5AC9DEA4D6C15D56",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When Not To Use",
+      "rationale": "The source drafts and reviews Arabic SMS copy but explicitly does not automate sending; it cannot build the requested Twilio integration.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    },
+    {
+      "candidate_token": "C-B221C8A49F9A72E0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "The source implements Slack API bots, a platform the prompt explicitly excludes, not Twilio SMS or voice automation.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    },
+    {
+      "candidate_token": "C-C022573477690E0D",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 3: Build Workflows",
+      "rationale": "The source can orchestrate custom scripts and workflow branches, but provides no Twilio integration, inbound-message webhook, delivery-status callback or voice/SMS trigger implementation.",
+      "missing_material_requirement_or_null": "Twilio-specific SMS/voice API and webhook implementation for two-way messaging, delivery notifications and triggers."
+    },
+    {
+      "candidate_token": "C-D7D1C6B9BE6CA9D0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Telegram Bot Builder",
+      "rationale": "The source implements Telegram bots, a platform the prompt explicitly excludes, rather than Twilio SMS and voice automation.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    },
+    {
+      "candidate_token": "C-DA903E29809C66C0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Add Telegram Channel",
+      "rationale": "The source adds a Telegram channel adapter, a platform the prompt explicitly excludes, and has no Twilio messaging or voice workflow support.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    },
+    {
+      "candidate_token": "C-E1D7E98A26323D3D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The source facilitates agile retrospectives and contains no messaging, telephony or automation implementation capability.",
+      "missing_material_requirement_or_null": "Twilio SMS/voice integration with two-way webhooks, delivery notifications and workflow triggers."
+    }
+  ],
+  "reviewer_output_sha256": "96b99a76f3f742061e22acced0d11b27dc4dfbd6501310fbfc7916732330a8b1"
+}
