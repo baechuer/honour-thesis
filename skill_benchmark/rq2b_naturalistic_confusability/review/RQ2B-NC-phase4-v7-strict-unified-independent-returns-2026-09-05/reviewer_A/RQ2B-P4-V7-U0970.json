@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0970",
+  "blind_packet_id": "P-D0AE8F76E7889C9A24",
+  "batch_input_sha256": "198819b0df620f15fb9688f74e47e086996a9f81604050caf84344c598cd80cb",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-25010639CBA1760E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Paper Writing",
+      "rationale": "This skill is for technical research manuscripts, not reviewing and redlining a vendor agreement in DOCX.",
+      "missing_material_requirement_or_null": "It lacks contract-review and Word redline capabilities."
+    },
+    {
+      "candidate_token": "C-51304881D6ABA518",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "`security-prior-art-survey` — SKILL.md",
+      "rationale": "This skill performs security prior-art research rather than vendor-agreement review or DOCX redlining.",
+      "missing_material_requirement_or_null": "It lacks contract review and document-redlining guidance."
+    },
+    {
+      "candidate_token": "C-58F963900B5CD7E5",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "redlines — Word Document Redlining Library",
+      "rationale": "It can apply supplied edits or a diff as native Word tracked changes while preserving document formatting.",
+      "missing_material_requirement_or_null": "It requires an upstream substantive review and edit set; it does not itself review the agreement or generate the requested edits and comments."
+    },
+    {
+      "candidate_token": "C-8630EEF5486971BE",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Vibe Legal Server — Batch Contract Redlining",
+      "rationale": "It supports DOCX contract review against a negotiation playbook, generates surgical tracked changes, preserves structure, and provides review-oriented confidence and escalation guidance.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8BAFB589C684F6B8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Grant Writing",
+      "rationale": "This skill is for grant and fellowship proposals, not reviewing or redlining a vendor agreement.",
+      "missing_material_requirement_or_null": "It lacks contract-review and DOCX redline capabilities."
+    },
+    {
+      "candidate_token": "C-8DC8FF9279D8394F",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Convert Word to Markdown",
+      "rationale": "It provides a reliable first step for reading and extracting a DOCX before analysis.",
+      "missing_material_requirement_or_null": "It does not provide substantive agreement review, redline generation, reviewer comments, or DOCX revision output."
+    },
+    {
+      "candidate_token": "C-D5760119FEBFB213",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Resume Reviewer",
+      "rationale": "This skill reviews resumes against a resume rubric and cannot assess or redline a vendor agreement.",
+      "missing_material_requirement_or_null": "It lacks contract-specific review and redlining guidance."
+    },
+    {
+      "candidate_token": "C-F927E8E9842CA659",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Offer and Rejection Writer",
+      "rationale": "This skill drafts recruitment offer and rejection communications, not vendor-agreement edits or comments.",
+      "missing_material_requirement_or_null": "It lacks contract-review and DOCX redline capabilities."
+    }
+  ],
+  "reviewer_output_sha256": "5789353fc55bb738c84a662e60713b3569ba318bf3f78f352d8e6a21819242b9"
+}
