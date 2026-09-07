@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0433",
+  "blind_packet_id": "P-D4974B34D0BD7727B9",
+  "batch_input_sha256": "0e153a762a95ccf940f7d8b5f6ea52cfb4e3a26d7eab6d32928fc61286836991",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-10DB4F1CF4E3B173",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Competitor Research",
+      "rationale": "Compares companies on consistent evidence-based dimensions and identifies overlap, but it does not define a small segmentation scheme or require a single best-fit segment and uncertainty per business.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    },
+    {
+      "candidate_token": "C-143B5FEF5CD7F619",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UX Heuristics Framework",
+      "rationale": "Evaluates interface usability rather than segmenting prospective businesses for outreach.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    },
+    {
+      "candidate_token": "C-67F89209953F57B1",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Company Segmentation",
+      "rationale": "Directly groups company records into explicit, consistent market or strategic-fit segments; requires one primary segment per company, record evidence, confidence reporting, and no invented firmographic facts.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-680E1DB0BCB09E4A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# find-product-directories",
+      "rationale": "Finds software-product directories for submissions rather than classifying supplied prospective businesses.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    },
+    {
+      "candidate_token": "C-6E6125CC86D723CD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates team retrospectives rather than designing outreach-market segments.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    },
+    {
+      "candidate_token": "C-B44141424362FBD7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Lead Enrichment",
+      "rationale": "Fills and verifies prospect-list fields, whereas the request requires evidence-bounded segment assignments and expressly says to mark missing facts as uncertain rather than fill them.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    },
+    {
+      "candidate_token": "C-BA3D7486103B30B3",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Company Research",
+      "rationale": "Produces evidence-bounded company profiles and research gaps useful to outreach, but it does not assign each business to a consistent best-fit market segment.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    },
+    {
+      "candidate_token": "C-C0B876B960F587F4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys visual and interaction conventions rather than segmenting prospective businesses.",
+      "missing_material_requirement_or_null": "A segmentation procedure with explicit segment definitions, one primary assignment per business, supporting evidence, and uncertainty or confidence marking."
+    }
+  ],
+  "reviewer_output_sha256": "ddd03991afaa0625d8d7acb56f69bc736215cc8540deb445c7c06bb938bae536"
+}
