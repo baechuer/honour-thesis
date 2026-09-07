@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0548",
+  "blind_packet_id": "P-6E410FFAA97A9C257C",
+  "batch_input_sha256": "5f26b9cffc60db9eb8817000047316eca39e8ea30781d3f07cbc1030e8f9410d",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-07BA214E891178F1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# LinkedIn Post Writer",
+      "rationale": "The skill drafts and improves LinkedIn content, rather than searching or extracting visible micro-posts from a browser session.",
+      "missing_material_requirement_or_null": "Read-only search and review-packet extraction from the public micro-posting service."
+    },
+    {
+      "candidate_token": "C-22E107BC1A761D92",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Routing-first visual approval gate",
+      "rationale": "The source manages human review of plans and diffs, not public social-post searches or source-context extraction.",
+      "missing_material_requirement_or_null": "Read-only search and review-packet extraction from the public micro-posting service."
+    },
+    {
+      "candidate_token": "C-8C72D8A976C649A2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Reddit — Browsing Skill",
+      "rationale": "The skill extracts Reddit results and threads, not posts from the requested micro-posting service.",
+      "missing_material_requirement_or_null": "Read-only search and review-packet extraction from the requested micro-posting service."
+    },
+    {
+      "candidate_token": "C-909E4B7CF79124DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Instagram — Browsing Skill",
+      "rationale": "The source extracts Instagram profile and grid-post data, not search results with the requested post-level evidence from the specified micro-posting service.",
+      "missing_material_requirement_or_null": "Read-only post search with author, timestamp, engagement, media, links, and canonical URLs on the requested service."
+    },
+    {
+      "candidate_token": "C-92D2E6F9C7C44E07",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is an agile retrospective facilitation procedure and has no social-post search capability.",
+      "missing_material_requirement_or_null": "Read-only search and review-packet extraction from the public micro-posting service."
+    },
+    {
+      "candidate_token": "C-9735B7398C8DC0A5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "security prior art",
+      "rationale": "The skill surveys security evidence before product development, not current social-media posts.",
+      "missing_material_requirement_or_null": "Read-only search and review-packet extraction from the public micro-posting service."
+    },
+    {
+      "candidate_token": "C-BB2C2DA6109040DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Code Review",
+      "rationale": "The source produces reviews of code changes, not a browser-derived social-post source packet.",
+      "missing_material_requirement_or_null": "Read-only social-post search and evidence extraction."
+    },
+    {
+      "candidate_token": "C-F96012FBA82EBE42",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# X (Twitter) — Browsing Skill",
+      "rationale": "It uses the existing logged-in browser session to search X and assemble read-only visible source context with post text, author data, timestamps, engagement metrics, media flags, links, and canonical post URLs without account-modifying actions.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "114217d9e681567e650ccd195f8f4ed2e438861e0b12bc0fa35e1567b61027c2"
+}

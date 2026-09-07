@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0548",
+  "blind_packet_id": "P-6E410FFAA97A9C257C",
+  "batch_input_sha256": "5f26b9cffc60db9eb8817000047316eca39e8ea30781d3f07cbc1030e8f9410d",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-07BA214E891178F1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# LinkedIn Post Writer",
+      "rationale": "This skill drafts LinkedIn posts and first-hour engagement plans; it does not search an existing signed-in service or extract a read-only packet of visible results.",
+      "missing_material_requirement_or_null": "A read-only signed-in micro-posting-service search and visible-result extraction workflow."
+    },
+    {
+      "candidate_token": "C-22E107BC1A761D92",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# plannotator",
+      "rationale": "This is an approval and annotation gate for plans, diffs, and specifications, with no social-service search, visible-post extraction, or required result fields.",
+      "missing_material_requirement_or_null": "A read-only browser workflow that searches public posts and returns their visible metadata."
+    },
+    {
+      "candidate_token": "C-8C72D8A976C649A2",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Search Reddit globally or within a subreddit and extract visible result posts, communities, users, and comments when present.",
+      "rationale": "It offers a read-only social-service search and visible-result extraction route, but the source-visible contract does not establish the requested signed-in micro-posting workflow or the complete time-filtered packet of author details, timestamps, engagement counts, media flags, links, and canonical URLs.",
+      "missing_material_requirement_or_null": "A signed-in micro-posting-service search workflow that returns all requested visible metadata and supports the last-week constraint."
+    },
+    {
+      "candidate_token": "C-909E4B7CF79124DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Extract visible posts from an Instagram user's profile grid",
+      "rationale": "The skill only extracts posts from a specified Instagram profile grid and provides no service-wide search or time-bounded results workflow for the requested topic.",
+      "missing_material_requirement_or_null": "A public micro-posting search action with last-week filtering and complete visible result metadata."
+    },
+    {
+      "candidate_token": "C-92D2E6F9C7C44E07",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is a sprint-retrospective facilitation process and has no browser search or public-post extraction capability.",
+      "missing_material_requirement_or_null": "A read-only signed-in micro-posting-service search and visible-result extraction workflow."
+    },
+    {
+      "candidate_token": "C-9735B7398C8DC0A5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "It is a research method, not a scanner.",
+      "rationale": "This security prior-art workflow searches security corpora and builds security artifacts; it cannot search public micro-posts or return their visible metadata.",
+      "missing_material_requirement_or_null": "A read-only signed-in micro-posting-service search and visible-result extraction workflow."
+    },
+    {
+      "candidate_token": "C-BB2C2DA6109040DB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Code Review",
+      "rationale": "This skill evaluates code changes, pull requests, and diffs; it has no social-service search capability or post-result extraction output.",
+      "missing_material_requirement_or_null": "A read-only browser workflow that searches public posts and returns their visible metadata."
+    },
+    {
+      "candidate_token": "C-F96012FBA82EBE42",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Assemble visible posts, links, media flags, metrics, and canonical URLs into a source packet",
+      "rationale": "The signed-in X browser workflow supports search, post-level text, author, timestamp, engagement, and media extraction, plus a visible-only source packet with links and canonical URLs; it is an extraction route rather than a posting or account-modification action.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "53f210d583155302f778c8cb3f59248736309ce4b01e269280da0a45cda1320b"
+}

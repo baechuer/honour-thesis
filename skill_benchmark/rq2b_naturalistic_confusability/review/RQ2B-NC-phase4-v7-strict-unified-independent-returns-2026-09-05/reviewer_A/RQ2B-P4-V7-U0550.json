@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0550",
+  "blind_packet_id": "P-C302B4E0A56C03CB82",
+  "batch_input_sha256": "f051541beb286e6fdd9ee661ec703a54cc24ceca3518e88b1e423090975f013b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0C5947714DED77A4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Guides selection and honest application of a marketing attribution model",
+      "rationale": "This is a marketing channel-attribution method and contains no DNA-sequence input, regulatory activity predictor, or requested score/ranking output.",
+      "missing_material_requirement_or_null": "A DNA regulatory-activity prediction and window-level scoring method."
+    },
+    {
+      "candidate_token": "C-2A17D0407B8E2F8D",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Returns per-window activity scores.",
+      "rationale": "The enhancer model takes DNA sequence and produces per-window activity scores; those score records support the requested coordinate table and top-three ranking, and the stated research-only scope does not make gene-function or clinical claims.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-45A9BC137288166A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "It is a research method, not a scanner.",
+      "rationale": "This is a security-prior-art research workflow, not a DNA sequence or regulatory activity model, so it cannot produce window-level transcription-activity scores.",
+      "missing_material_requirement_or_null": "A sequence-based regulatory-activity predictor that returns window activity scores and a ranking."
+    },
+    {
+      "candidate_token": "C-685470CB008FC734",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Jobdanmark Search Skill",
+      "rationale": "This skill searches Danish job listings and has no biological sequence input, regulatory-activity transformation, or transcription-score output.",
+      "missing_material_requirement_or_null": "A DNA regulatory-activity prediction method with per-window scores and ranking."
+    },
+    {
+      "candidate_token": "C-7C4B4EE968BAAEE0",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Listing and querying any of UCSC's 1000+ annotation tracks (repeats, regulatory elements, conservation) for a region",
+      "rationale": "The API can supply related public annotations for coordinate-defined regions, but it requires genome coordinates and an assembly and does not predict transcription-increasing activity from supplied DNA windows or return the requested activity ranking.",
+      "missing_material_requirement_or_null": "A sequence-based enhancer or CRE activity model with per-window scores and ranking."
+    },
+    {
+      "candidate_token": "C-7E6DB1CB33194A83",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "The user asks for enhancer activity → `gi-enhancer`",
+      "rationale": "It produces per-window promoter probabilities, which is a neighbouring transcription-regulation signal, but it explicitly routes enhancer activity elsewhere and therefore does not estimate the requested generic regulatory-window activity.",
+      "missing_material_requirement_or_null": "An enhancer or CRE activity predictor rather than a promoter-only classifier."
+    },
+    {
+      "candidate_token": "C-8582B9F93E2002DC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Detect splice donor and acceptor sites in DNA sequences",
+      "rationale": "This skill predicts splice donor and acceptor sites, not the activity of regulatory sequence windows, so its site probabilities cannot provide the requested transcription-activity table or ranking.",
+      "missing_material_requirement_or_null": "An enhancer or regulatory-activity model with window-level transcription scores and a top-three ranking."
+    },
+    {
+      "candidate_token": "C-D1566C6253B141F8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is a team retrospective facilitation process with no DNA-sequence analysis or regulatory-activity scoring capability.",
+      "missing_material_requirement_or_null": "A DNA regulatory-activity prediction method with per-window scores and ranking."
+    }
+  ],
+  "reviewer_output_sha256": "3a0f259195e5537c6d25d177f2dd7f9e927433b660d0eb1a992959012fbbbfe0"
+}

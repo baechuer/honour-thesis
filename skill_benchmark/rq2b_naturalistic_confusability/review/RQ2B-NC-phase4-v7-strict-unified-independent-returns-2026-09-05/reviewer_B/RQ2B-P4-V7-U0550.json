@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0550",
+  "blind_packet_id": "P-C302B4E0A56C03CB82",
+  "batch_input_sha256": "f051541beb286e6fdd9ee661ec703a54cc24ceca3518e88b1e423090975f013b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0C5947714DED77A4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Marketing Attribution",
+      "rationale": "This selects marketing channel-attribution models and has no DNA-sequence enhancer-activity prediction or per-window regulatory scoring workflow.",
+      "missing_material_requirement_or_null": "A sequence-based enhancer-activity model that returns per-window scores for the supplied regulatory windows."
+    },
+    {
+      "candidate_token": "C-2A17D0407B8E2F8D",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# 🎚️ gi-enhancer",
+      "rationale": "This directly predicts enhancer activity from DNA sequence, returns per-window activity predictions, and supplies the scores needed for a coordinate table and top-three ranking without gene-function or clinical inference.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-45A9BC137288166A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "This is a security research and evidence-synthesis workflow, not a sequence model for estimating transcription-increasing regulatory activity.",
+      "missing_material_requirement_or_null": "DNA-window enhancer-activity scoring and ranking."
+    },
+    {
+      "candidate_token": "C-685470CB008FC734",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Jobdanmark Search Skill",
+      "rationale": "This searches Danish job listings and cannot accept DNA windows or produce regulatory activity scores.",
+      "missing_material_requirement_or_null": "A DNA-sequence enhancer-activity scoring workflow with per-window outputs."
+    },
+    {
+      "candidate_token": "C-7C4B4EE968BAAEE0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# UCSC Genome Browser",
+      "rationale": "This retrieves reference sequences and existing annotation or conservation tracks by genomic coordinates, but it does not score the supplied DNA windows for enhancer activity.",
+      "missing_material_requirement_or_null": "A sequence-based model that estimates transcription-increasing enhancer activity for each supplied window."
+    },
+    {
+      "candidate_token": "C-7E6DB1CB33194A83",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# 🧬 gi-promoter",
+      "rationale": "This is a closely related DNA regulatory-scoring workflow with per-window probabilities, but it predicts promoter regions rather than the requested enhancer activity.",
+      "missing_material_requirement_or_null": "Enhancer-activity prediction rather than promoter-probability scoring."
+    },
+    {
+      "candidate_token": "C-8582B9F93E2002DC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# ✂️ gi-splice",
+      "rationale": "This predicts splice donor and acceptor sites, which does not estimate enhancer activity or rank windows by likely transcriptional increase.",
+      "missing_material_requirement_or_null": "Per-window enhancer-activity scores for the candidate regulatory region."
+    },
+    {
+      "candidate_token": "C-D1566C6253B141F8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This structures team sprint retrospectives and has no genomic sequence-analysis or regulatory-activity prediction capability.",
+      "missing_material_requirement_or_null": "A DNA-sequence enhancer model that produces scored windows and a top-three activity ranking."
+    }
+  ],
+  "reviewer_output_sha256": "afcab1909c089eb94ac30c4d4ff18908804fbd1d3f0603c8026c821436d50613"
+}
