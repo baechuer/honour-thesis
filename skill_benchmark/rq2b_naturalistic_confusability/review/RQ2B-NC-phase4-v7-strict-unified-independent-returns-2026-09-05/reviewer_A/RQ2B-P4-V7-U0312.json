@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0770EF5794824C10",
+      "missing_material_requirement_or_null": "A one-month recorded-outflow category breakdown with amounts, shares, grouping, and largest costs.",
+      "rationale": "The skill audits interface usability and supplies no financial-record retrieval or category-breakdown method.",
+      "source_anchor": "# UX Heuristics Framework"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-51960F43191804F8",
+      "missing_material_requirement_or_null": "A one-month recorded-outflow category breakdown with amounts, shares, grouping, and largest costs.",
+      "rationale": "Retrospective facilitation cannot retrieve or categorize financial outflows for a specified month.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-5B6DD16E9B6F290D",
+      "missing_material_requirement_or_null": "A financial outflow category analysis with amounts, percentages, grouping, and largest costs.",
+      "rationale": "Monthly client reporting lacks a data method for recorded financial-outflow category analysis.",
+      "source_anchor": "# Agency Monthly Report"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-785FD1D5CCC64CF5",
+      "missing_material_requirement_or_null": "A one-month recorded-outflow category breakdown with amounts, shares, grouping, and largest costs.",
+      "rationale": "GO and KEGG enrichment works on gene lists, not financial records.",
+      "source_anchor": "## When To Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-82A20F0CCA2D821B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It resolves a requested year and month to a one-month cost-structure output with categories sorted largest-first, per-category amounts and percentages, period bounds, and the grouping rung.",
+      "source_anchor": "## Output requirements"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9986F5CAFC1D9A41",
+      "missing_material_requirement_or_null": "A one-month recorded-outflow category breakdown with amounts, shares, grouping, and largest costs.",
+      "rationale": "Claude Code orchestration routing does not retrieve or categorize financial outflow data.",
+      "source_anchor": "## When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A82226C23ED772DA",
+      "missing_material_requirement_or_null": "A one-month recorded-outflow category breakdown with amounts, shares, grouping, and largest costs.",
+      "rationale": "It computes cash runway from cash and average burn and explicitly routes spend composition elsewhere.",
+      "source_anchor": "## When not to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-B2D28E8ABD39A15E",
+      "missing_material_requirement_or_null": "A one-month recorded-outflow category breakdown with amounts, shares, grouping, and largest costs.",
+      "rationale": "It returns a trailing average outflow, not a single-month category breakdown, percentages, grouping, or largest category costs.",
+      "source_anchor": "## When not to use this skill"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0312",
+  "batch_input_sha256": "45ed559d9e3f3e43a820ba07e69b601060034fb83050762f36417151b05393a7",
+  "blind_packet_id": "P-F205F9D18559DFDD47",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "859993f6ffb4b828f86238ee99f7bae142ef79aad86d9c3bed69d10d858ba77f"
+}
