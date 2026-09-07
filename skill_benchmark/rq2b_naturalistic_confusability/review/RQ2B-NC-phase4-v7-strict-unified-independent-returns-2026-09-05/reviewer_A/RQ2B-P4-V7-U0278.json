@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0278",
+  "blind_packet_id": "P-E83172E29927E74D0C",
+  "batch_input_sha256": "719d7fe35aae410bcd154ffd2ca18d1ea68b3b3d23688c8095d86526dee4508e",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-06559E4EC37EAF95",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "This Slack bot development guide does not extract a policy PDF, determine reimbursement eligibility, or provide page-level evidence.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    },
+    {
+      "candidate_token": "C-1DF58F250E68444B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The sprint retrospective workflow does not retrieve a policy PDF or answer a reimbursement question with page evidence.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    },
+    {
+      "candidate_token": "C-3D052B73E9E4ECFE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Google Docs",
+      "rationale": "Google Docs creation and management does not supply extraction and page-grounded analysis of the policy PDF.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    },
+    {
+      "candidate_token": "C-616D626EBF4E3550",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Status Page Update",
+      "rationale": "This incident-update writing skill does not analyze a policy PDF or provide page evidence for a reimbursement determination.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    },
+    {
+      "candidate_token": "C-B4AD2107F0CD411A",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# PDF Smart Extractor",
+      "rationale": "It extracts and semantically searches PDF content while preserving page data, enabling a focused policy determination supported by the relevant page evidence.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-BC8656CAF57CD95D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run GSEA on a ranked gene list",
+      "rationale": "The GSEA analysis workflow is unrelated to extracting a travel policy from a PDF or citing its page evidence.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    },
+    {
+      "candidate_token": "C-CAB5759E12385F9A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Report To PDF",
+      "rationale": "This conversion skill creates PDFs from analytics reports rather than extracting a policy PDF and supporting an answer with page evidence.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    },
+    {
+      "candidate_token": "C-CB04B8961146103D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Create a Website",
+      "rationale": "The website-building workflow does not retrieve policy-PDF evidence or determine whether delayed-travel meals are reimbursable.",
+      "missing_material_requirement_or_null": "A workflow to search a policy PDF and cite the supporting page evidence is missing."
+    }
+  ],
+  "reviewer_output_sha256": "3ab63db162d53107b4b1a819bc5cc4d97e96c919415ce62556746a1b13d87f89"
+}
