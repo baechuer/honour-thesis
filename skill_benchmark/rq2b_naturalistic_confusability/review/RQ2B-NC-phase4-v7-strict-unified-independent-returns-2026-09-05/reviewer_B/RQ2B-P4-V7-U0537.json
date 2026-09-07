@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0537",
+  "blind_packet_id": "P-C3A4E968479059041B",
+  "batch_input_sha256": "0773c259496e390536dcf0158c705dbeb6320669becaab34df87d9362f4e9c4a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-3A8677F6A81D7C1C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# PagerDuty",
+      "rationale": "The skill configures incident-management and on-call systems, not Danish job searches.",
+      "missing_material_requirement_or_null": "Live Danish nursing-position search with location, full-time, permanence, and application details."
+    },
+    {
+      "candidate_token": "C-5D3A18D75D7E2DAC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "The source performs gene-ontology and pathway enrichment, unrelated to job listings.",
+      "missing_material_requirement_or_null": "Live Danish nursing-position search with key application details."
+    },
+    {
+      "candidate_token": "C-716B3C8A4F48029F",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Jobnet-Search Skill",
+      "rationale": "It searches live Danish official job listings with occupation-term suggestions, location filters, full-time and permanent-duration filters, relevance ordering, and full posting details including contacts, deadline, and direct application URL.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-8B3D0E669A099E76",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The source facilitates agile retrospectives and does not search employment listings.",
+      "missing_material_requirement_or_null": "Live Danish nursing-position search with key application details."
+    },
+    {
+      "candidate_token": "C-9DFB64F2A8FB8352",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Jobdanmark Search Skill",
+      "rationale": "It can search live Danish nursing listings by location and full-time job type, retrieve application details, and resolve occupation terms, but the documented filters do not distinguish a permanent stable role from other full-time employment arrangements.",
+      "missing_material_requirement_or_null": "A documented filter or assessment for permanent employment duration."
+    },
+    {
+      "candidate_token": "C-A8F6AC48F855123B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "NotebookLM",
+      "rationale": "The skill queries the user's NotebookLM notebooks through browser automation, not live Danish job portals.",
+      "missing_material_requirement_or_null": "Live Danish nursing-position search with key application details."
+    },
+    {
+      "candidate_token": "C-DDEB416B095DDEAB",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Jobindex Search Skill",
+      "rationale": "It can search live Danish job listings and retrieve descriptions, deadlines, employment type, hours, and application links, but it lacks dedicated location, full-time, permanent-duration, and occupation-term resolution controls required to make the requested stable local nursing shortlist reliably.",
+      "missing_material_requirement_or_null": "Dedicated filtering or resolution for preferred area, full-time permanent work, and the nursing occupation term."
+    },
+    {
+      "candidate_token": "C-F7C13F3C8186B499",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Systematic Review",
+      "rationale": "The source conducts PRISMA-compliant reviews of research studies, not current job-listing searches.",
+      "missing_material_requirement_or_null": "Live Danish nursing-position search with key application details."
+    }
+  ],
+  "reviewer_output_sha256": "e89a78add9bfb47db0da3691de8cac60fe5c1db4176db61f4697a458094d883e"
+}

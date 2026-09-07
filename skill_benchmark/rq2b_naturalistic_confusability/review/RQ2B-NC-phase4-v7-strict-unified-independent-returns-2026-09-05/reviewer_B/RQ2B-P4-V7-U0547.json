@@ -1,0 +1,66 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0547",
+  "blind_packet_id": "P-2BEEC4BF1C3CB12196",
+  "batch_input_sha256": "018ff9d9d399aa2ece4e08a846db8da23d33b64f068d77a52359c0fbb6159b8d",
+  "reviewer_blind_id": "B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-1123CDA10C62A9E1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Add MCP App Support to a Web App",
+      "rationale": "This covers hybrid MCP-App conversion and does not provide the requested application internationalisation workflow.",
+      "missing_material_requirement_or_null": "An end-to-end web-application internationalisation workflow, including catalogue integration, locale files, and language selection."
+    },
+    {
+      "candidate_token": "C-2F0734EC2B4CB3F0",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Video Production",
+      "rationale": "This routes video-production workflows, not implementation of Spanish and Japanese application localisation.",
+      "missing_material_requirement_or_null": "A workflow to internationalise the existing web app and produce Spanish and Japanese language integration."
+    },
+    {
+      "candidate_token": "C-5BFC2612F7F1076A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `security-prior-art-survey` — SKILL.md",
+      "rationale": "This is a security prior-art research workflow and does not address catalogue integration, locale generation, or language selection.",
+      "missing_material_requirement_or_null": "Application localisation implementation, including catalogue import, runtime wiring, generated locale files, and language selection."
+    },
+    {
+      "candidate_token": "C-70AB1612890FF94E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates team retrospectives rather than localising an existing web application.",
+      "missing_material_requirement_or_null": "An implementation workflow for adding Spanish and Japanese localisation to the existing web application."
+    },
+    {
+      "candidate_token": "C-7A578FD4E1709FDF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Web Application Testing",
+      "rationale": "Testing support can verify a finished web application but does not provide the requested internationalisation implementation workflow.",
+      "missing_material_requirement_or_null": "Runtime selection, catalogue integration, locale generation, and language-selector implementation for the existing app."
+    },
+    {
+      "candidate_token": "C-B246FC8DD9B7FBD6",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Translation files: download and import",
+      "rationale": "It supports importing, generating, and managing translations, but does not give the end-to-end framework-runtime selection and application wiring required here.",
+      "missing_material_requirement_or_null": "Framework-appropriate i18n runtime selection and wiring of message loading and language selection in the application."
+    },
+    {
+      "candidate_token": "C-D8D0890E9616902D",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Localize an app with Multilocale",
+      "rationale": "It is an end-to-end application-localisation recipe covering runtime choice, explicit locales, one-time catalogue import, generated files, and app wiring.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-EC7BF64F1DBB9C20",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## What this connector can and cannot do",
+      "rationale": "It can manage translation workspace data and locale rollout, but explicitly cannot read or edit the codebase needed to wire the app and deliver changed files.",
+      "missing_material_requirement_or_null": "Codebase access and an implementation workflow to select the runtime, wire locale loading and language selection, and deliver changed project files."
+    }
+  ],
+  "reviewer_output_sha256": "2438f2962d544e2d817897a663d627b2018a1f416c12aebd13e72362b4c9bdf0"
+}
