@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0556",
+  "blind_packet_id": "P-36EB0B63AEDF1CEEA5",
+  "batch_input_sha256": "27a874218bc1589c139b066f3fa5e48919969f251616349dfb22320878cc3ded",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0173678826260841",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Next.js (App Router)",
+      "rationale": "The skill implements web applications in Next.js rather than porting a feature to a native iPhone app.",
+      "missing_material_requirement_or_null": "Idiomatic native iOS feature-parity implementation from the JavaScript reference."
+    },
+    {
+      "candidate_token": "C-655BE2E61A8675FD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Android to iOS: Feature Parity Implementation",
+      "rationale": "It supplies a useful iOS parity-planning and idiomatic-implementation approach, but it is specifically designed to infer behaviour and structures from Android/Kotlin rather than the JavaScript reference in this task.",
+      "missing_material_requirement_or_null": "JavaScript or React source-feature analysis for the iOS implementation."
+    },
+    {
+      "candidate_token": "C-66BB12FE49270726",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is an agile retrospective facilitation procedure and does not implement mobile features.",
+      "missing_material_requirement_or_null": "Native iOS feature-parity implementation from the JavaScript reference."
+    },
+    {
+      "candidate_token": "C-6BC421C206477DD2",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# React to iOS: Feature Parity Implementation",
+      "rationale": "It explicitly analyses the source feature's behaviour, components, state, and logic, maps them to the existing iOS architecture, and implements an idiomatic native Swift equivalent rather than translating code line by line.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-B685AA251E9EA3AA",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# User Flow Mapper",
+      "rationale": "It can create the requested brief mapping of user flow, states, errors, and edge cases, but it does not implement the equivalent feature in the native iPhone app.",
+      "missing_material_requirement_or_null": "Idiomatic native iOS implementation preserving the reference feature's behaviour and API interactions."
+    },
+    {
+      "candidate_token": "C-C349680F9D1381E4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "The source runs gene-set enrichment analysis and does not develop mobile application features.",
+      "missing_material_requirement_or_null": "Native iOS feature-parity implementation."
+    },
+    {
+      "candidate_token": "C-EEBC0ADA5023D700",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Changelog Maintenance",
+      "rationale": "The skill writes release-history documentation rather than implementing an iOS feature.",
+      "missing_material_requirement_or_null": "Native iOS feature-parity implementation."
+    },
+    {
+      "candidate_token": "C-F89D391EA65C20FB",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# iOS to Android: Feature Parity Implementation",
+      "rationale": "The source ports iOS/Swift features in the opposite direction to Android/Kotlin, not JavaScript features into native iOS.",
+      "missing_material_requirement_or_null": "JavaScript-to-native-iOS feature-parity implementation."
+    }
+  ],
+  "reviewer_output_sha256": "75c656e80e2141c6327109dc1cccfccf44a0b16c247866bde7ff5f8395b900b4"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0556",
+  "blind_packet_id": "P-36EB0B63AEDF1CEEA5",
+  "batch_input_sha256": "27a874218bc1589c139b066f3fa5e48919969f251616349dfb22320878cc3ded",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0173678826260841",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Next.js (App Router)",
+      "rationale": "This can analyze and build a JavaScript web application, but it provides no workflow for mapping that feature into a native iPhone implementation or matching native iOS conventions.",
+      "missing_material_requirement_or_null": "A behavior-preserving JavaScript-to-native-iOS implementation workflow with a mapping plan."
+    },
+    {
+      "candidate_token": "C-655BE2E61A8675FD",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Android to iOS: Feature Parity Implementation",
+      "rationale": "It has the correct native iOS target and an idiomatic mapping-plan workflow, but it requires Android/Kotlin as the behavioral source rather than the stated JavaScript application feature.",
+      "missing_material_requirement_or_null": "Support for analyzing JavaScript application code as the feature reference."
+    },
+    {
+      "candidate_token": "C-66BB12FE49270726",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This is a team retrospective facilitation process, not a cross-platform feature analysis or native iPhone implementation workflow.",
+      "missing_material_requirement_or_null": "A behavior-preserving JavaScript-to-native-iOS implementation workflow with a mapping plan."
+    },
+    {
+      "candidate_token": "C-6BC421C206477DD2",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Use React/React Native code as the source of truth and implement the equivalent feature in iOS/Swift.",
+      "rationale": "This workflow analyzes the JavaScript feature's behavior, state, data structures, API contracts, loading and error cases; it first creates a target-codebase mapping plan and then implements idiomatic native iOS code while preserving parity rather than translating line by line.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-B685AA251E9EA3AA",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# User Flow Mapper",
+      "rationale": "It can produce the requested early user-flow and error-state mapping material, but it does not analyze code-level state, data shapes, or API interactions or implement the feature in the native iPhone app.",
+      "missing_material_requirement_or_null": "A native iOS implementation workflow that preserves code-level behavior, state, data shapes, and API interactions."
+    },
+    {
+      "candidate_token": "C-C349680F9D1381E4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Run GSEA on a ranked gene list and produce the enrichment table, running-score table, and enrichment plots.",
+      "rationale": "This is a gene-set enrichment analysis pipeline with no application feature-porting, native iOS, or codebase-convention capability.",
+      "missing_material_requirement_or_null": "A behavior-preserving JavaScript-to-native-iOS implementation workflow with a mapping plan."
+    },
+    {
+      "candidate_token": "C-EEBC0ADA5023D700",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Changelog Maintenance",
+      "rationale": "This skill writes release history and shipped-change communication; it does not map or implement application features across platforms.",
+      "missing_material_requirement_or_null": "A behavior-preserving JavaScript-to-native-iOS implementation workflow with a mapping plan."
+    },
+    {
+      "candidate_token": "C-F89D391EA65C20FB",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# iOS to Android: Feature Parity Implementation",
+      "rationale": "It uses a similar feature-parity process, but reverses both the source and target platforms, producing Android/Kotlin instead of the requested native iPhone implementation from JavaScript.",
+      "missing_material_requirement_or_null": "A JavaScript-to-native-iOS implementation workflow with the required source and target direction."
+    }
+  ],
+  "reviewer_output_sha256": "695c2792f93062880c577a69f7b6b83add43ce40450d5b7d543abe07df705ad4"
+}
