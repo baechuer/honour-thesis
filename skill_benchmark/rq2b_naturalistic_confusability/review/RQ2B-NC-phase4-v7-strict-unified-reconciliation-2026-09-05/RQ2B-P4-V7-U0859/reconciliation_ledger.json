@@ -1,0 +1,73 @@
+{
+  "batch_id": "RQ2B-P4-V7-U0859",
+  "blind_packet_id": "P-1360118131BD8AAE70",
+  "candidate_reconciliations": [
+    {
+      "candidate_token": "C-2DC027B0469C1D17",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "pubchem-compound-search",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Query PubChem"
+    },
+    {
+      "candidate_token": "C-6DCDC04596410673",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "n8n-code-nodes-official",
+      "reviewer_B_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_B_source_anchor": "Use when the user reaches for a Code node"
+    },
+    {
+      "candidate_token": "C-992318768F2A0510",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_A_source_anchor": "n8n-code-python",
+      "reviewer_B_adequacy": "FULLY_ACCEPTABLE",
+      "reviewer_B_source_anchor": "Write Python code in n8n Code nodes"
+    },
+    {
+      "candidate_token": "C-AB96315E36323FAD",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "GSVA",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "GSVA or ssGSEA pathway-level differential analysis"
+    },
+    {
+      "candidate_token": "C-B9A150B1285B44A2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Instagram Trend Scout",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Researches what is currently working on Instagram"
+    },
+    {
+      "candidate_token": "C-C0A9C39B03A7377C",
+      "reconciliation_disposition": "COORDINATOR_REQUIRED",
+      "reviewer_A_adequacy": "PARTIALLY_ADEQUATE",
+      "reviewer_A_source_anchor": "n8n-code-javascript",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Write JavaScript code in n8n Code nodes"
+    },
+    {
+      "candidate_token": "C-CBC0069E32F244F2",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "Sprint Retro Facilitator",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "Structures and facilitates sprint retrospectives"
+    },
+    {
+      "candidate_token": "C-CFA83DB8EE5FBEF4",
+      "reconciliation_disposition": "EXACT_AGREEMENT_RETAINED",
+      "reviewer_A_adequacy": "INADEQUATE",
+      "reviewer_A_source_anchor": "kubernetes-specialist",
+      "reviewer_B_adequacy": "INADEQUATE",
+      "reviewer_B_source_anchor": "deploying or managing Kubernetes workloads"
+    }
+  ],
+  "reviewer_A_return_sha256": "cd6893aa0ea4d84cef52ff18343f44ca857e28cdc59eca88dcd755763ce55080",
+  "reviewer_B_return_sha256": "bd1af041e8ce596faa28761c6b43a0630bd23995b2a365642e364bbf26fb8647",
+  "status": "PENDING_SEALED_COORDINATOR_FOR_DISAGREEMENTS_OR_UNCLEAR"
+}

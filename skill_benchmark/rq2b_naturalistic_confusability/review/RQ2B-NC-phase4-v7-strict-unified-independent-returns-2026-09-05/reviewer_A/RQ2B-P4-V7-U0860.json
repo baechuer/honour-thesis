@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0860",
+  "blind_packet_id": "P-E5D0E84AC3C0813C4C",
+  "batch_input_sha256": "4b43f37e9b9415708563d2c05e523058826470dd71cc624294a7d921a212086c",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0B344B37487B7285",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "It does not inspect UI screenshots.",
+      "missing_material_requirement_or_null": "Visual responsive regression review."
+    },
+    {
+      "candidate_token": "C-17C40B38D44FBF68",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "gsea",
+      "rationale": "It does not inspect UI screenshots.",
+      "missing_material_requirement_or_null": "Visual responsive regression review."
+    },
+    {
+      "candidate_token": "C-29FEAD891417A927",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "slack-bot-builder",
+      "rationale": "It does not inspect UI screenshots.",
+      "missing_material_requirement_or_null": "Visual responsive regression review."
+    },
+    {
+      "candidate_token": "C-2D727B5E31CB721D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Funnel Analysis",
+      "rationale": "It does not inspect UI screenshots.",
+      "missing_material_requirement_or_null": "Visual responsive regression review."
+    },
+    {
+      "candidate_token": "C-4A337E023275F9B8",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Responsive Spec",
+      "rationale": "It supports responsive layout review including overflow and cross-width behavior.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-51539BB1A8515F91",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Product Roadmap",
+      "rationale": "It does not inspect UI screenshots.",
+      "missing_material_requirement_or_null": "Visual responsive regression review."
+    },
+    {
+      "candidate_token": "C-9F674C7115F530CF",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "refactoring-ui",
+      "rationale": "It can improve UI design but does not provide an evidence-based screenshot regression review.",
+      "missing_material_requirement_or_null": "Cross-render comparison and documented visual regression findings."
+    },
+    {
+      "candidate_token": "C-D49D23EEACD3BB71",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Motion Design Principles",
+      "rationale": "It concerns animation rather than static responsive regressions.",
+      "missing_material_requirement_or_null": "Visual responsive regression review."
+    }
+  ],
+  "reviewer_output_sha256": "2e90b38478ba212b9bff2ea6dbb7c80e99270dd611f3ee8c97ef5bc9b28cee13"
+}

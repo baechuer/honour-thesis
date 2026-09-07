@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1012",
+  "blind_packet_id": "P-5C5765D472CCB75DCA",
+  "batch_input_sha256": "b489bd6ffd29d6d0a094d07e448236d51b24f312913fa3e8294a47b092143bc6",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-01FA19864D7F5101",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Code Review Checklist",
+      "rationale": "It does not edit messages.",
+      "missing_material_requirement_or_null": "Meaning-preserving message polishing."
+    },
+    {
+      "candidate_token": "C-13BDC1B5AA449205",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "objection-handling-and-speed-to-lead",
+      "rationale": "It supports sales messaging but not neutral meaning-preserving polishing.",
+      "missing_material_requirement_or_null": "General message editing without commitment changes."
+    },
+    {
+      "candidate_token": "C-15A5D9B5077098FD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "It does not edit messages.",
+      "missing_material_requirement_or_null": "Meaning-preserving message polishing."
+    },
+    {
+      "candidate_token": "C-31D630F4CE3EC197",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "Messaging Hierarchy",
+      "rationale": "It directly improves messaging clarity, tone, and readability.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A31D91ECCA154BE1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Color Accessibility",
+      "rationale": "It does not edit messages.",
+      "missing_material_requirement_or_null": "Meaning-preserving message polishing."
+    },
+    {
+      "candidate_token": "C-C565A7BE9729ED08",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "slack-bot-builder",
+      "rationale": "It builds bots rather than edits messages.",
+      "missing_material_requirement_or_null": "Meaning-preserving message polishing."
+    },
+    {
+      "candidate_token": "C-D2AE217DFCD32921",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual-prior-art-survey",
+      "rationale": "It does not edit messages.",
+      "missing_material_requirement_or_null": "Meaning-preserving message polishing."
+    },
+    {
+      "candidate_token": "C-E248E19B91F51A33",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Icon System",
+      "rationale": "It does not edit messages.",
+      "missing_material_requirement_or_null": "Meaning-preserving message polishing."
+    }
+  ],
+  "reviewer_output_sha256": "5c6c08718e23e2d591123e7b8d6550ae78462b3812c3dbad70ff3e95109cefb4"
+}

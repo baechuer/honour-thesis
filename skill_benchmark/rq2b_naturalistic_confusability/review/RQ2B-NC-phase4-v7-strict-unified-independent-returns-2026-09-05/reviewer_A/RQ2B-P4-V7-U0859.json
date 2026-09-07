@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0859",
+  "blind_packet_id": "P-1360118131BD8AAE70",
+  "batch_input_sha256": "707ac38935b3e3a86ca1043c1dcde8b70494e18869f819f0087bc9e71ef920af",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-2DC027B0469C1D17",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "pubchem-compound-search",
+      "rationale": "It does not implement order automation.",
+      "missing_material_requirement_or_null": "Python order-record filtering and JSON transformation."
+    },
+    {
+      "candidate_token": "C-6DCDC04596410673",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "n8n-code-nodes-official",
+      "rationale": "It supports automation code nodes but is not Python-specific.",
+      "missing_material_requirement_or_null": "Standard-library Python implementation."
+    },
+    {
+      "candidate_token": "C-992318768F2A0510",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "n8n-code-python",
+      "rationale": "It directly supports Python automation code for structured record processing.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-AB96315E36323FAD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "GSVA",
+      "rationale": "It does not implement order automation.",
+      "missing_material_requirement_or_null": "Python order-record filtering and JSON transformation."
+    },
+    {
+      "candidate_token": "C-B9A150B1285B44A2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Instagram Trend Scout",
+      "rationale": "It does not implement order automation.",
+      "missing_material_requirement_or_null": "Python order-record filtering and JSON transformation."
+    },
+    {
+      "candidate_token": "C-C0A9C39B03A7377C",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "n8n-code-javascript",
+      "rationale": "It supports automation code but not the requested Python implementation.",
+      "missing_material_requirement_or_null": "Standard-library Python implementation."
+    },
+    {
+      "candidate_token": "C-CBC0069E32F244F2",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "It does not implement order automation.",
+      "missing_material_requirement_or_null": "Python order-record filtering and JSON transformation."
+    },
+    {
+      "candidate_token": "C-CFA83DB8EE5FBEF4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "kubernetes-specialist",
+      "rationale": "It does not implement order automation.",
+      "missing_material_requirement_or_null": "Python order-record filtering and JSON transformation."
+    }
+  ],
+  "reviewer_output_sha256": "ee41f148faa1352a632873c5fa3856b658f87362e217f9f1881a28b60f0e4b05"
+}

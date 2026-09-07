@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0812",
+  "blind_packet_id": "P-F4CFC26B2877EFFB45",
+  "batch_input_sha256": "3fe52f7d4c516dfe08c90b2c92ca45a1b694ac4982de0b6eba743bf31add6de7",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0282E52A343A6C2A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "visual-prior-art-survey",
+      "rationale": "It does not generate invoices.",
+      "missing_material_requirement_or_null": "Invoice document generation."
+    },
+    {
+      "candidate_token": "C-17C0CEE7ED8E357F",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Investment Basics",
+      "rationale": "It does not generate invoices.",
+      "missing_material_requirement_or_null": "Invoice document generation."
+    },
+    {
+      "candidate_token": "C-83257404DC6A67C5",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Next on Vercel Performance",
+      "rationale": "It does not generate invoices.",
+      "missing_material_requirement_or_null": "Invoice document generation."
+    },
+    {
+      "candidate_token": "C-A05ACC6B60638000",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "israeli-tech-salary-negotiator",
+      "rationale": "It does not generate invoices.",
+      "missing_material_requirement_or_null": "Invoice document generation."
+    },
+    {
+      "candidate_token": "C-A32EA1D2A05D3E30",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "cfo-cashflow-working-capital",
+      "rationale": "It handles cash-flow inputs but not generated invoice documents.",
+      "missing_material_requirement_or_null": "Invoice calculation and document generation."
+    },
+    {
+      "candidate_token": "C-AD390C6CF8342F02",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Sprint Retro Facilitator",
+      "rationale": "It does not generate invoices.",
+      "missing_material_requirement_or_null": "Invoice document generation."
+    },
+    {
+      "candidate_token": "C-F88C9C2DDB378802",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "slack-bot-builder",
+      "rationale": "It does not generate invoices.",
+      "missing_material_requirement_or_null": "Invoice document generation."
+    },
+    {
+      "candidate_token": "C-FA6063BAF1EFE7BE",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "statement-of-work-writer",
+      "rationale": "It can structure commercial terms but not create a calculated invoice document.",
+      "missing_material_requirement_or_null": "Invoice calculation and document generation."
+    }
+  ],
+  "reviewer_output_sha256": "fa90af37fdbf5526cca40e9bf504e930843c2e1466c58b32ee2ac94aed792273"
+}
