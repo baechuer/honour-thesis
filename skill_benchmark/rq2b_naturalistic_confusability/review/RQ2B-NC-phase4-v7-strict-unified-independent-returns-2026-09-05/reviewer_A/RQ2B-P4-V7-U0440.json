@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0440",
+  "blind_packet_id": "P-7D9E82E0F2B6A3751D",
+  "batch_input_sha256": "9e31dcec7701ab483efc74d08046720016e730f974c4ac11b09ee18043f30077",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0184A1E847F101ED",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "### 2. LGPD Gap Assessment",
+      "rationale": "It is expressly scoped to Brazilian LGPD compliance and supplies the requested gap-assessment structure plus workflows for ordinary and sensitive data, notices, rights, the privacy role, incident response, and international transfers.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-13997889FBEB1DBC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "The skill performs gene-set enrichment analysis on ranked gene lists and has no privacy-law or compliance-gap assessment capability.",
+      "missing_material_requirement_or_null": "Brazilian privacy compliance analysis and a practical gap table."
+    },
+    {
+      "candidate_token": "C-152DD4FB72FF618E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Updating Skills from Upstream",
+      "rationale": "This is a repository-maintenance procedure for syncing skills and does not analyse personal-data obligations or produce compliance actions.",
+      "missing_material_requirement_or_null": "Privacy-law analysis and a compliance gap-assessment deliverable."
+    },
+    {
+      "candidate_token": "C-3303ACC2EB8CD79B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Vietnam Personal Data Protection Law (PDPL) Skill",
+      "rationale": "Although it includes privacy compliance workflows, its legal analysis, roles, deadlines, and cross-border rules are specifically for Vietnam rather than the Brazilian regime required by the prompt.",
+      "missing_material_requirement_or_null": "Brazilian LGPD-specific legal and operational requirements."
+    },
+    {
+      "candidate_token": "C-3EA86D08A2204C8A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Step 5: Output the compliance map",
+      "rationale": "It can organise a jurisdictional compliance-gap table with prioritised actions, but the source does not supply the Brazilian privacy-law substance needed to determine the relevant bases, sensitive-data rules, rights, privacy role, incidents, and transfer conditions.",
+      "missing_material_requirement_or_null": "Brazilian LGPD-specific requirements for the requested compliance assessment."
+    },
+    {
+      "candidate_token": "C-41BA544943A5DB12",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# India DPDPA — Digital Personal Data Protection Act, 2023 Skill",
+      "rationale": "The skill provides an India-specific DPDPA gap analysis whose grounds, roles, notices, incident obligations, and transfer framework do not answer a Brazilian LGPD compliance request.",
+      "missing_material_requirement_or_null": "Brazilian LGPD-specific legal and operational requirements."
+    },
+    {
+      "candidate_token": "C-83A0EAC265702E79",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Atlassian — Jira & Confluence",
+      "rationale": "This is an Atlassian Cloud integration skill for Jira and Confluence operations, with no privacy compliance or legal gap-analysis capability.",
+      "missing_material_requirement_or_null": "Privacy-law analysis and a compliance gap-assessment deliverable."
+    },
+    {
+      "candidate_token": "C-C532CB7367DB2E2C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The skill facilitates agile sprint retrospectives and action items, not jurisdiction-specific privacy compliance analysis.",
+      "missing_material_requirement_or_null": "Brazilian privacy compliance analysis and a practical gap table."
+    }
+  ],
+  "reviewer_output_sha256": "46b96b8982eb33b2b32552af2a06e31cde1b06196084c4978799dee8431d3b63"
+}

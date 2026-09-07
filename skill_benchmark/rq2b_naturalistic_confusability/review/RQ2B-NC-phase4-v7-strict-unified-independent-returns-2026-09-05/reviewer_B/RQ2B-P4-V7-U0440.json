@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0440",
+  "blind_packet_id": "P-7D9E82E0F2B6A3751D",
+  "batch_input_sha256": "9e31dcec7701ab483efc74d08046720016e730f974c4ac11b09ee18043f30077",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0184A1E847F101ED",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "2. LGPD Gap Assessment",
+      "rationale": "It directly supports an LGPD gap table for Brazilian processing, including ordinary and sensitive legal bases, notices, data-subject rights, DPO, incident response, and international transfer mechanisms.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-13997889FBEB1DBC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This source performs gene-set enrichment analysis and cannot assess Brazilian privacy compliance or partner analytics arrangements.",
+      "missing_material_requirement_or_null": "Brazilian LGPD privacy-compliance gap assessment"
+    },
+    {
+      "candidate_token": "C-152DD4FB72FF618E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Updating Skills from Upstream",
+      "rationale": "This source synchronizes a skills repository and does not provide privacy-law compliance analysis.",
+      "missing_material_requirement_or_null": "Brazilian LGPD privacy-compliance gap assessment"
+    },
+    {
+      "candidate_token": "C-3303ACC2EB8CD79B",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Vietnam Personal Data Protection Law (PDPL) Skill",
+      "rationale": "This source applies Vietnamese privacy law, not the Brazilian LGPD obligations and transfer conditions required here.",
+      "missing_material_requirement_or_null": "Brazilian LGPD privacy-compliance gap assessment"
+    },
+    {
+      "candidate_token": "C-3EA86D08A2204C8A",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Regulatory Scanner",
+      "rationale": "It produces prioritized compliance-gap tables with evidence and owners, but is a cross-jurisdiction scanner rather than a source of the specific LGPD rules for sensitive health data, ANPD responsibilities, and Brazilian transfers.",
+      "missing_material_requirement_or_null": "Brazil-specific LGPD legal-basis, privacy-role, incident, and transfer requirements"
+    },
+    {
+      "candidate_token": "C-41BA544943A5DB12",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# India DPDPA — Digital Personal Data Protection Act, 2023 Skill",
+      "rationale": "This source is scoped to India's DPDPA rather than Brazilian LGPD requirements.",
+      "missing_material_requirement_or_null": "Brazilian LGPD privacy-compliance gap assessment"
+    },
+    {
+      "candidate_token": "C-83A0EAC265702E79",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Atlassian — Jira & Confluence",
+      "rationale": "This source manages Jira and Confluence content but does not assess privacy compliance or legal obligations.",
+      "missing_material_requirement_or_null": "Brazilian LGPD privacy-compliance gap assessment"
+    },
+    {
+      "candidate_token": "C-C532CB7367DB2E2C",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This source facilitates retrospective meetings and cannot produce a Brazilian privacy compliance gap assessment.",
+      "missing_material_requirement_or_null": "Brazilian LGPD privacy-compliance gap assessment"
+    }
+  ],
+  "reviewer_output_sha256": "ae6e0dfa0852018b4a8cba6d1a9364f6c4e79eb720a4e4979ce2f0945e3293c7"
+}
