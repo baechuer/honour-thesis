@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-1601755BE0655BFE",
+      "missing_material_requirement_or_null": "A distinct filtered-search diagnosis with payload-index checks and a throughput-capacity plan.",
+      "rationale": "It covers HNSW tuning, quantization, Qdrant configuration, and performance monitoring, but does not directly separate filtered-query latency from peak-load throughput or prescribe filter-index diagnostics.",
+      "source_anchor": "Template 3: Qdrant Index Configuration"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-17A81E9F30B23765",
+      "missing_material_requirement_or_null": "A separate throughput-capacity plan with reversible changes and before-after load measurements.",
+      "rationale": "It provides endpoint latency metrics, optimizer and segment checks, and a filtered-versus-unfiltered comparison that identifies missing payload indexes, but it does not address peak query capacity as a distinct workstream.",
+      "source_anchor": "Queries Are Slow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6E0D26CA7957C27C",
+      "missing_material_requirement_or_null": "Qdrant-specific latency, filter-index, search-parameter, and query-capacity diagnostics.",
+      "rationale": "This is LLM-application tracing guidance and does not provide a diagnostic or remediation plan for a Qdrant vector-search endpoint.",
+      "source_anchor": "Langtrace — Open-Source LLM Observability"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-7080DB7A410480FA",
+      "missing_material_requirement_or_null": "A search-latency and throughput diagnostic plan with filtered-query tests, reversible changes, and before-after measurements.",
+      "rationale": "It usefully explains post-growth indexing state, optimizer pressure, and creating payload indexes before HNSW construction, but it is focused on ingestion and does not separately diagnose query latency and peak QPS.",
+      "source_anchor": "What to Do When Qdrant Indexing Is Too Slow"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8B292CFE63B5F572",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It explicitly separates single-query latency from QPS throughput, isolates filter bottlenecks and payload-index remedies, checks search and optimizer parameters, and supplies concrete configuration changes that can be compared on the same diagnostic queries and load profile.",
+      "source_anchor": "Filtered Search Is Slow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-A9DF531CB71ACB56",
+      "missing_material_requirement_or_null": "Qdrant vector-search diagnostics, filter-index checks, search tuning, capacity changes, and latency/QPS measurements.",
+      "rationale": "This skill is exclusively for bulk-expression GSVA or ssGSEA analysis and is unrelated to vector-search performance.",
+      "source_anchor": "When Not to Use"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-C97C5ED4F59411D4",
+      "missing_material_requirement_or_null": "A Qdrant query-performance diagnostic and remediation plan.",
+      "rationale": "The source structures team sprint retrospectives rather than diagnosing or improving vector-search latency, filtered search, or capacity.",
+      "source_anchor": "Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-EFAC1FB51F3B39F8",
+      "missing_material_requirement_or_null": "Qdrant endpoint latency, filter-index, search-parameter, and throughput-capacity diagnostics.",
+      "rationale": "It is limited to on-device mobile rendering, startup, and memory profiling and expressly excludes endpoint-query bottlenecks.",
+      "source_anchor": "Mobile Perf Profiler"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0093",
+  "batch_input_sha256": "1e680fd999375dba6612c671fb7cd6c7d84a75a6d83dfbf14c94d36a3508af28",
+  "blind_packet_id": "P-66532E9768111DDF09",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f2158696ce9d6e81c0b76b5fa5007a814c9988a3a8c4b28799f3dd4c1c1ebe93"
+}
