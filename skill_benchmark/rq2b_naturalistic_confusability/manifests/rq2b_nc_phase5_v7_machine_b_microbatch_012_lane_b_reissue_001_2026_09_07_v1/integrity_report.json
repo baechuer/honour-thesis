@@ -1,0 +1,41 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_012_lane_b_reissue_001_v1",
+  "scope": "Machine B V7 only; lane-B reissue collection packet, no target/join/main-tail/retrieval/metric disclosure.",
+  "bound_inputs": {
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "execution_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS"
+  },
+  "checks": {
+    "groups": [
+      {
+        "batch_id": "RQ2B-P4-V7-U1085",
+        "blind_packet_id": "P-DD900AAE1922020B36",
+        "batch_input_sha256": "0f58f537d442139dbc2cb63ed70d74abb66578bf8080f8b71f95eff1a23772a4",
+        "candidate_count": 8,
+        "render_hash": "734136191f752a63b65047e54865dc74e5d63f8a198e8f0229ef1017a2b5f900"
+      },
+      {
+        "batch_id": "RQ2B-P4-V7-U0292",
+        "blind_packet_id": "P-5C4C646BE56B0201D4",
+        "batch_input_sha256": "2ee518ce2c6c5a11b976305db8dc3d4ae84a375f9352445f9b571b5e30c09b83",
+        "candidate_count": 8,
+        "render_hash": "99e59179b0eaa76b85199fe1a6b2f2e0eab19637f6cffccec3e56478cabbe303"
+      },
+      {
+        "batch_id": "RQ2B-P4-V7-U0866",
+        "blind_packet_id": "P-EC63B3B14706F0FCCC",
+        "batch_input_sha256": "e34381fe6470ef745b4425835fb2b7ffdd4a06f01d6322ad5874cc6106eba0b8",
+        "candidate_count": 8,
+        "render_hash": "db6b090cc11c72bf87366c433b67fa0478628ed3519e79f08ebd86af68d2d98e"
+      }
+    ],
+    "full_eight_candidate_packet_unit_intact": true,
+    "target_blind_render_hash_schema_verified": true,
+    "target_blindness_verified": true,
+    "preserves_existing_valid_lane_A_and_invalid_lane_B_raw_returns": true
+  },
+  "outputs": {
+    "reviewer_b_assignment.jsonl": "947043f63ac55a076aa8235f785cbe1c3060ad13271f49dc415092c8523cfb41"
+  },
+  "status": "PASS_V7_MACHINE_B_LANE_B_REISSUE_INPUT_VERIFIED"
+}

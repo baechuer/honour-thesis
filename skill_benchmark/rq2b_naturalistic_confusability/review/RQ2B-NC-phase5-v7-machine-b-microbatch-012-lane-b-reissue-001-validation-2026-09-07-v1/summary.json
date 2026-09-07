@@ -1,0 +1,75 @@
+{
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_012_lane_b_reissue_001_validation_v1",
+  "scope": "Machine B V7 target-blind independent return collection only.",
+  "status": "PASS_V7_TWO_INDEPENDENT_RAW_RETURNS_COLLECTED_PENDING_METHOD_GATE",
+  "batch_records": [
+    {
+      "batch_id": "RQ2B-P4-V7-U1085",
+      "lanes": {
+        "A": {
+          "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1085.json",
+          "raw_return_sha256": "95a9c9590cd0ca15a6d4d9f053e9ecf93c15324087641926c70df5a36195a4b1",
+          "reviewer_output_sha256": "c90e372715daffe593c6ee7ef4cb97f020993a98d7f07c7dc0c4822a72a2e3e2"
+        },
+        "B": {
+          "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-lane-b-reissue-001-2026-09-07-v1/returns/reviewer_B/RQ2B-P4-V7-U1085.json",
+          "raw_return_sha256": "8be63313204d12daed1dcf147cdb27b268e071405e93cc21e68129275bf090a1",
+          "reviewer_output_sha256": "c099b019ec50d52bac1319aa4a144a94f294a92bff5374a59de99debd085a0f3"
+        }
+      },
+      "pair_validation": "PASS_V7_TWO_INDEPENDENT_RAW_RETURNS_COLLECTED_PENDING_METHOD_GATE"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0292",
+      "lanes": {
+        "A": {
+          "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0292.json",
+          "raw_return_sha256": "deb2dd2ed903dfe993c2421b955732d90624453ecd91bca9c4cbfaf286fc5580",
+          "reviewer_output_sha256": "793d7005ce853c6120153a1cf48096d2d46a7fe4912016801c02f553831b391d"
+        },
+        "B": {
+          "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-lane-b-reissue-001-2026-09-07-v1/returns/reviewer_B/RQ2B-P4-V7-U0292.json",
+          "raw_return_sha256": "2ff3d5f3720b9521be7bff501b4af26a1661e510f48b8a79ee699dcee0cbbd4c",
+          "reviewer_output_sha256": "60f9839f169b8238a31360a7a14db07efa730ef86c73b0e8e3b4d586e41b5ade"
+        }
+      },
+      "pair_validation": "PASS_V7_TWO_INDEPENDENT_RAW_RETURNS_COLLECTED_PENDING_METHOD_GATE"
+    },
+    {
+      "batch_id": "RQ2B-P4-V7-U0866",
+      "lanes": {
+        "A": {
+          "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0866.json",
+          "raw_return_sha256": "cccae79797520108f3a806f98c5da321904d616a988a8048a7a275685d3ed089",
+          "reviewer_output_sha256": "2348021e9641ce662495807b03cae628fbd9f0593d6eba95fd37782bc42b9476"
+        },
+        "B": {
+          "validation": "PASS_V7_STRICT_UNIFIED_TARGET_BLIND_RETURN_VALIDATION",
+          "raw_return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-lane-b-reissue-001-2026-09-07-v1/returns/reviewer_B/RQ2B-P4-V7-U0866.json",
+          "raw_return_sha256": "d9d106c264251b2c4ba69d21feebf7a86148b754371c652e13d65b1db5529091",
+          "reviewer_output_sha256": "820cb09401cded860cf7953f11be1e2b5fd7ede84f51d9575035ca200a677692"
+        }
+      },
+      "pair_validation": "PASS_V7_TWO_INDEPENDENT_RAW_RETURNS_COLLECTED_PENDING_METHOD_GATE"
+    }
+  ],
+  "counts": {
+    "groups": 3,
+    "valid_two_return_groups": 3,
+    "valid_raw_returns": 6
+  },
+  "bound_inputs": {
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "execution_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS"
+  },
+  "traceable_lane_B_reissue": {
+    "reissue_root": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-lane-b-reissue-001-2026-09-07-v1/returns/reviewer_B",
+    "preserves_original_invalid_canonical_lane_B_returns": true
+  },
+  "closure_boundary": "No reconciliation coordinator packet, final disposition, opaque target join, acceptable set, main-tail designation, retrieval claim, or library claim is materialised here. The recorded coordinator-context gate remains open."
+}

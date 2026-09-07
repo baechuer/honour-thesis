@@ -1,0 +1,129 @@
+{
+  "artifact_type": "traceable_raw_return_format_repair",
+  "scope": "Machine B V7 microbatch 012 reviewer_A only",
+  "reason": "git diff --check detected an extra terminal blank line in each listed raw return",
+  "semantic_change": "none",
+  "raw_preservation": "Original bytes are base64 archived and hash-replay verified before normalization",
+  "entries": [
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1062.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1062.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "474a545e20ebe04d30c6ebe39347d257776e40d01315271824cb7b52176ec558",
+      "repaired_raw_sha256": "649fd459fe5c3c68355b87d296934442f292273f9c87a253722ab826d0c44abe",
+      "base64_replay_sha256": "474a545e20ebe04d30c6ebe39347d257776e40d01315271824cb7b52176ec558",
+      "original_byte_length": 3806,
+      "repaired_byte_length": 3805
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1011.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1011.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "4dc9a2baef5e2805f20d551510c0b1714d516be2a18045b7e9bd1f92c3bbd19f",
+      "repaired_raw_sha256": "89c878e96f5852eeb6a1eb086825d5f929507f93c2cf0ad427d7fc191d00022c",
+      "base64_replay_sha256": "4dc9a2baef5e2805f20d551510c0b1714d516be2a18045b7e9bd1f92c3bbd19f",
+      "original_byte_length": 3756,
+      "repaired_byte_length": 3755
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1085.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1085.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "3b0a01a27c84fefc48bb16c466f277d5765b00909ef0f2554f526c663506bd35",
+      "repaired_raw_sha256": "95a9c9590cd0ca15a6d4d9f053e9ecf93c15324087641926c70df5a36195a4b1",
+      "base64_replay_sha256": "3b0a01a27c84fefc48bb16c466f277d5765b00909ef0f2554f526c663506bd35",
+      "original_byte_length": 3796,
+      "repaired_byte_length": 3795
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1147.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1147.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "f3acc2ec3e784378c084aff5dde3e0bd96ade3bbd80c236c9ed3372771ae342d",
+      "repaired_raw_sha256": "044cd46b6dc3c2636190a000843313879ff7d4c67a7c4ecd955affc4cc85ad0d",
+      "base64_replay_sha256": "f3acc2ec3e784378c084aff5dde3e0bd96ade3bbd80c236c9ed3372771ae342d",
+      "original_byte_length": 3791,
+      "repaired_byte_length": 3790
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U1130.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U1130.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "f298367f7ab3d6b62c77cd8202ff8f5bbef30deb9804cb943fc753c4c55bd076",
+      "repaired_raw_sha256": "87ff6ef06049546a2c85137c8de3db42221bbedd752ba01bef9de079cba2ebee",
+      "base64_replay_sha256": "f298367f7ab3d6b62c77cd8202ff8f5bbef30deb9804cb943fc753c4c55bd076",
+      "original_byte_length": 3866,
+      "repaired_byte_length": 3865
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0185.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0185.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "c10f6e225efd4e2c2972b49fe716ab5e8981444ecdffe7215f9a9a5b05d10a7d",
+      "repaired_raw_sha256": "885f8ffbf210bb687ef415ee7857d6da50f99b52929de0435e66c462c52c2c28",
+      "base64_replay_sha256": "c10f6e225efd4e2c2972b49fe716ab5e8981444ecdffe7215f9a9a5b05d10a7d",
+      "original_byte_length": 3763,
+      "repaired_byte_length": 3762
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0584.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0584.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "996a8cb2f41d71abf1888c91feb3ee13392345bfe10b98bb9844091785043f97",
+      "repaired_raw_sha256": "d015f14408874b2bec12368e8e39ff587ef8771c407e49fcfa6afb23ce40800f",
+      "base64_replay_sha256": "996a8cb2f41d71abf1888c91feb3ee13392345bfe10b98bb9844091785043f97",
+      "original_byte_length": 3727,
+      "repaired_byte_length": 3726
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0750.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0750.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "b9d98dbd1e305937275e9526c5c61eab852bca10c54264ce6a5fb20eb1447af3",
+      "repaired_raw_sha256": "9401ecdf62ac948aba7da45e0307f524ebe8cc9023eb30deec5148ed6ec90810",
+      "base64_replay_sha256": "b9d98dbd1e305937275e9526c5c61eab852bca10c54264ce6a5fb20eb1447af3",
+      "original_byte_length": 3766,
+      "repaired_byte_length": 3765
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0292.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0292.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "f3e37cc59768fd784e346a0d529087b03c3007db527f6355bac677d211fddfd3",
+      "repaired_raw_sha256": "deb2dd2ed903dfe993c2421b955732d90624453ecd91bca9c4cbfaf286fc5580",
+      "base64_replay_sha256": "f3e37cc59768fd784e346a0d529087b03c3007db527f6355bac677d211fddfd3",
+      "original_byte_length": 3776,
+      "repaired_byte_length": 3775
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0866.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0866.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "f4837a9d9e2fa9acc17912adbdc000ed3f9554378758643a22c58c95a7f9ee15",
+      "repaired_raw_sha256": "cccae79797520108f3a806f98c5da321904d616a988a8048a7a275685d3ed089",
+      "base64_replay_sha256": "f4837a9d9e2fa9acc17912adbdc000ed3f9554378758643a22c58c95a7f9ee15",
+      "original_byte_length": 3782,
+      "repaired_byte_length": 3781
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0977.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0977.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "d1d8bc96e6f2b3e99dcf1abaeb74929a48d61ae09d258c14be001eca5eec0d32",
+      "repaired_raw_sha256": "8d0332ab9a0b3c2cdb813873e6769d961106d808671fecc019c4348043b24a44",
+      "base64_replay_sha256": "d1d8bc96e6f2b3e99dcf1abaeb74929a48d61ae09d258c14be001eca5eec0d32",
+      "original_byte_length": 3817,
+      "repaired_byte_length": 3816
+    },
+    {
+      "return_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase4-v7-strict-unified-independent-returns-2026-09-05/reviewer_A/RQ2B-P4-V7-U0409.json",
+      "archive_path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-012-reviewer-a-format-repair-preservation-2026-09-07-v1/raw_original_returns_base64/RQ2B-P4-V7-U0409.json.base64",
+      "repair_scope": "EOF whitespace only: exactly one blank terminal line removed",
+      "original_raw_sha256": "723a472c42b9e97544fc4ad0571e8d1d8769411f27f2e195ea1087a23aa53325",
+      "repaired_raw_sha256": "80c45cddd674d63ffdf2dea8e09a513a8f0f2e2f70ecf448e89bff9ac9608f98",
+      "base64_replay_sha256": "723a472c42b9e97544fc4ad0571e8d1d8769411f27f2e195ea1087a23aa53325",
+      "original_byte_length": 3745,
+      "repaired_byte_length": 3744
+    }
+  ]
+}
