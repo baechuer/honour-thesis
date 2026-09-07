@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0589",
+  "blind_packet_id": "P-B556ED7B1201B5B49E",
+  "batch_input_sha256": "e53b8a73d4b019540c0a0f97d968734fdd31b8b2f21a8d8e1ce0f50d830d2337",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-57931B5F6E6B49C3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Review Comment Resolver",
+      "rationale": "This resolves existing code-review comments and does not edit credential-store items or their vault placement.",
+      "missing_material_requirement_or_null": "Updating an existing credential-store item field and tag, then moving it to a requested vault without changing other fields."
+    },
+    {
+      "candidate_token": "C-9189A7D4CFB8DAF9",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Supported Operations",
+      "rationale": "It directly supports editing fields, managing tags, and moving an existing credential-store item between vaults, with verification of the updated item and its resulting vault location.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-931B6CC9B7898137",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Brand Guidelines Generator",
+      "rationale": "This creates visual-identity guidance and has no credential-store update or vault-management workflow.",
+      "missing_material_requirement_or_null": "Updating an existing credential-store item field and tag, then moving it to a requested vault without changing other fields."
+    },
+    {
+      "candidate_token": "C-B134DFF8245B19AD",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# NZ Business English",
+      "rationale": "This supplies New Zealand business-writing style rather than performing credential-store item updates.",
+      "missing_material_requirement_or_null": "Updating an existing credential-store item field and tag, then moving it to a requested vault without changing other fields."
+    },
+    {
+      "candidate_token": "C-C2AEE5B69228B363",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This facilitates team retrospectives and cannot modify credential-store records or vaults.",
+      "missing_material_requirement_or_null": "Updating an existing credential-store item field and tag, then moving it to a requested vault without changing other fields."
+    },
+    {
+      "candidate_token": "C-C70D87CB144C2F71",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Supported Operations",
+      "rationale": "This only retrieves credential-store items and fields; it provides no edit, tag-management, or vault-move operation.",
+      "missing_material_requirement_or_null": "Writing the requested field and tag updates and moving the existing item to the requested vault."
+    },
+    {
+      "candidate_token": "C-C9643E1EF49B45F8",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## When To Use",
+      "rationale": "This runs GO and KEGG enrichment analysis and is unrelated to credential-store operations.",
+      "missing_material_requirement_or_null": "Updating an existing credential-store item field and tag, then moving it to a requested vault without changing other fields."
+    },
+    {
+      "candidate_token": "C-F0B6E97792C33F0D",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Supported Item Types",
+      "rationale": "This creates new credential-store items rather than modifying an existing one while retaining its other stored fields.",
+      "missing_material_requirement_or_null": "Editing an existing item field and tag and moving that item to the requested vault."
+    }
+  ],
+  "reviewer_output_sha256": "2c64ba0c1f717c22b5c2bfb3f72a37c9a64a74a980743b44ccfe0ca4e3855203"
+}
