@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-08C973AF2730A62A",
+      "missing_material_requirement_or_null": "Explicit browser-delivery hosting, basic usage reporting, and a complete client-safe release sequence.",
+      "rationale": "Covers self-hosted deployment, authentication, database operations, storage, cloud functions and realtime, but does not furnish browser delivery or usage reporting.",
+      "source_anchor": "Step 1: Self-Hosted Deployment"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-09F7DBA6517955B5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides local emulator setup, authentication, synchronized Firestore data, Cloud Functions, Hosting, Storage, Analytics and client security rules for the requested sequence.",
+      "source_anchor": "Security Rules"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-26E4CD08C40205FF",
+      "missing_material_requirement_or_null": "Explicit browser-delivery hosting, basic usage reporting, and a complete client-safe release sequence.",
+      "rationale": "Covers an open-source backend with authentication, database, file storage, realtime subscriptions and serverless functions, but does not furnish browser delivery or usage reporting.",
+      "source_anchor": "Project Setup"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3645F98C51BB62EB",
+      "missing_material_requirement_or_null": "Backend guidance covering sign-in, synchronized data, server-side events, hosting, uploads, and basic usage reporting.",
+      "rationale": "Focuses on Firebase AI Logic request classification rather than a general client-first application backend.",
+      "source_anchor": "When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-855EB495FB2C70A0",
+      "missing_material_requirement_or_null": "Backend guidance covering sign-in, synchronized data, server-side events, hosting, uploads, and basic usage reporting.",
+      "rationale": "Converts files to Markdown and does not provide application backend setup.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-89A55C5292D06F56",
+      "missing_material_requirement_or_null": "Backend guidance covering sign-in, synchronized data, server-side events, hosting, uploads, and basic usage reporting.",
+      "rationale": "Provides a visual prior-art survey workflow, not backend implementation guidance.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D88D6DD34765C59C",
+      "missing_material_requirement_or_null": "Backend guidance covering sign-in, synchronized data, server-side events, hosting, uploads, and basic usage reporting.",
+      "rationale": "Describes document parsing rather than a client-first backend for web and mobile applications.",
+      "source_anchor": "Basic Information"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FCE84C468485E8CE",
+      "missing_material_requirement_or_null": "Backend guidance covering sign-in, synchronized data, server-side events, hosting, uploads, and basic usage reporting.",
+      "rationale": "Facilitates sprint retrospectives and supplies none of the requested backend capabilities.",
+      "source_anchor": "Inputs to collect"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0324",
+  "batch_input_sha256": "5d6a7cfd37fb801df909a3dc0a3b6dc0b27cc957b1c212e67518430d038cfa65",
+  "blind_packet_id": "P-D869C5B543CDC640AC",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "126264af32f23060098c5d803e97550f4bd44aa5a5a65fc2b55bf92ad9ebcb24"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-08C973AF2730A62A",
+      "missing_material_requirement_or_null": "Browser delivery/hosting and basic usage reporting guidance.",
+      "rationale": "Covers self-hosted setup, authentication, database operations, file storage, cloud functions, and realtime subscriptions, but does not provide browser-delivery or usage-reporting material.",
+      "source_anchor": "Step 1: Self-Hosted Deployment"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-09F7DBA6517955B5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Provides Firebase setup and local emulators, authentication, Firestore realtime data, cloud functions, storage, hosting initialization, security rules, and usage monitoring for the requested client-first backend sequence.",
+      "source_anchor": "Project Setup"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-26E4CD08C40205FF",
+      "missing_material_requirement_or_null": "Browser delivery/hosting and basic usage reporting guidance.",
+      "rationale": "Provides local project setup, authentication, generated data API, storage, serverless functions, permissions, and client SDK material, but not browser delivery or basic usage reporting.",
+      "source_anchor": "Project Setup"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3645F98C51BB62EB",
+      "missing_material_requirement_or_null": "General backend setup covering sign-in, synchronized data, event handling, browser delivery, uploads, and usage reporting.",
+      "rationale": "Focuses on Firebase AI Logic request classification and app-layer AI guidance rather than a general client-first backend setup.",
+      "source_anchor": "When to use this skill"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-855EB495FB2C70A0",
+      "missing_material_requirement_or_null": "A client-first mobile and web backend setup with authentication, synchronized data, server handling, delivery, uploads, and reporting.",
+      "rationale": "Explains file-to-Markdown conversion rather than configuring an application backend.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-89A55C5292D06F56",
+      "missing_material_requirement_or_null": "A client-first mobile and web backend setup with authentication, synchronized data, server handling, delivery, uploads, and reporting.",
+      "rationale": "Addresses visual prior-art survey methodology rather than application backend implementation.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D88D6DD34765C59C",
+      "missing_material_requirement_or_null": "A client-first mobile and web backend setup with authentication, synchronized data, server handling, delivery, uploads, and reporting.",
+      "rationale": "Explains document parsing and conversion rather than application backend setup.",
+      "source_anchor": "Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FCE84C468485E8CE",
+      "missing_material_requirement_or_null": "A client-first mobile and web backend setup with authentication, synchronized data, server handling, delivery, uploads, and reporting.",
+      "rationale": "Provides sprint retrospective facilitation rather than backend setup material.",
+      "source_anchor": "Inputs to collect"
+    }
+  ],
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-043",
+  "batch_input_sha256": "5d6a7cfd37fb801df909a3dc0a3b6dc0b27cc957b1c212e67518430d038cfa65",
+  "blind_packet_id": "P-D869C5B543CDC640AC",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "bb0dd6c5350a90c9a0205832d630a2f99e7d0f1098317ff809833a679237fa56"
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-08C973AF2730A62A",
+      "missing_material_requirement_or_null": "Add browser delivery/hosting and basic usage reporting/analytics guidance.",
+      "rationale": "Covers authentication, data, uploads, cloud functions, realtime, and web/mobile SDKs for the core backend and client connection. The shown material does not provide browser-delivery/hosting or basic usage-reporting guidance.",
+      "source_anchor": "authentication, databases, file storage, cloud functions, and realtime subscriptions"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-09F7DBA6517955B5",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly addresses authentication, synchronized data, Cloud Functions, hosting, storage, and analytics; its setup also includes emulator-based local development and client SDK configuration.",
+      "source_anchor": "authentication, Firestore/Realtime Database, Cloud Functions, hosting, storage, and analytics using Firebase's SDK and CLI."
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-26E4CD08C40205FF",
+      "missing_material_requirement_or_null": "Add browser delivery/hosting and basic usage reporting/analytics guidance.",
+      "rationale": "Covers an open-source backend with authentication, data, uploads, realtime, serverless functions, client SDKs, and local Docker development. The shown material does not cover browser delivery/hosting or basic usage reporting.",
+      "source_anchor": "authentication, database, file storage, and real-time subscriptions with auto-generated GraphQL APIs and a developer-friendly SDK."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3645F98C51BB62EB",
+      "missing_material_requirement_or_null": "Provide full backend setup guidance for authentication, synchronized data, server-side events, browser delivery, uploads, analytics, and a local-to-release path.",
+      "rationale": "This material is scoped to Gemini-powered client-side AI features and routes project/deploy tasks elsewhere, rather than supplying the requested general backend setup.",
+      "source_anchor": "Gemini-powered features"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-855EB495FB2C70A0",
+      "missing_material_requirement_or_null": "Provide full backend setup guidance for authentication, synchronized data, server-side events, browser delivery, uploads, analytics, and a local-to-release path.",
+      "rationale": "This material converts documents and files to Markdown; it does not address application backend architecture or deployment.",
+      "source_anchor": "Convert files and office documents to Markdown."
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-89A55C5292D06F56",
+      "missing_material_requirement_or_null": "Provide full backend setup guidance for authentication, synchronized data, server-side events, browser delivery, uploads, analytics, and a local-to-release path.",
+      "rationale": "This material surveys visual and interaction conventions before UI work, not backend services or release planning.",
+      "source_anchor": "surveying the DOCUMENTED visual and interaction conventions of a product's domain"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D88D6DD34765C59C",
+      "missing_material_requirement_or_null": "Provide full backend setup guidance for authentication, synchronized data, server-side events, browser delivery, uploads, analytics, and a local-to-release path.",
+      "rationale": "This material is for parsing documents with docling rather than designing or operating an application backend.",
+      "source_anchor": "This skill enables advanced document parsing using **docling**"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-FCE84C468485E8CE",
+      "missing_material_requirement_or_null": "Provide full backend setup guidance for authentication, synchronized data, server-side events, browser delivery, uploads, analytics, and a local-to-release path.",
+      "rationale": "This material facilitates sprint retrospectives and action items, not application backend setup.",
+      "source_anchor": "Structures and facilitates sprint retrospectives"
+    }
+  ],
+  "batch_id": "RQ2B-NC-V7-MACHINE-B-043",
+  "batch_input_sha256": "5d6a7cfd37fb801df909a3dc0a3b6dc0b27cc957b1c212e67518430d038cfa65",
+  "blind_packet_id": "P-D869C5B543CDC640AC",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "afcbbe9406635f26374d017bcfa9c90b2b921b7d203fe27dfb5fa936ebbb4b1c"
+}
