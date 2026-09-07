@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-10F1FA8AD442249A",
+      "missing_material_requirement_or_null": "Assessment of the three supplied antiviral-target windows and an unsuitable-record coverage summary.",
+      "rationale": "It performs sequence-only genotype-first and within-genotype subtype assignment and emits one CSV per gene, but does not itself assess the requested target-window coverage or identify unsuitable records.",
+      "source_anchor": "## Related coverage tables"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-26FF7ED362644D56",
+      "missing_material_requirement_or_null": "HCV FASTA genotype/subtype assignment and antiviral-target coverage outputs.",
+      "rationale": "This is a documented UI-convention research workflow and provides none of the required HCV sequence analysis or accession-level coverage reporting.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-4FDEC2C45CA3F77D",
+      "missing_material_requirement_or_null": "Sequence-only assignment from the input nucleotide FASTA and antiviral-window coverage assessment.",
+      "rationale": "It compares pre-existing Comet profile inputs with local-alignment outputs; it neither performs the requested nucleotide-FASTA assignment nor produces the target coverage tables.",
+      "source_anchor": "# HCV Profile Input Comparison"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6A4BEF2FA7E86E84",
+      "missing_material_requirement_or_null": "HCV FASTA genotype/subtype assignment and antiviral-target coverage reporting.",
+      "rationale": "This skill reviews shareholder agreements and has no capability for sequence comparison or HCV coverage analysis.",
+      "source_anchor": "# Shareholder Agreement Review"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-896546C7DEDD68D6",
+      "missing_material_requirement_or_null": "HCV FASTA genotype/subtype assignment and antiviral-target coverage reporting.",
+      "rationale": "This skill facilitates sprint retrospectives and has no capability for sequence comparison or accession-level HCV outputs.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93B5616656147938",
+      "missing_material_requirement_or_null": "HCV FASTA genotype/subtype assignment and antiviral-target coverage reporting.",
+      "rationale": "This skill analyses consumer genomic variants for nutrition guidance, not hepatitis C FASTA sequences or antiviral-region coverage.",
+      "source_anchor": "# NutriGx Advisor — Personalised Nutrition from Genetic Data"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-BE5C4BBAC80225CE",
+      "missing_material_requirement_or_null": null,
+      "rationale": "It assigns genotype and closest within-genotype subtype from a nucleotide FASTA without COMET, reports overlap and full coverage for all three stated antiviral-target windows, and emits separate accession-level CSVs that identify partial or absent coverage.",
+      "source_anchor": "# HCV all-sequence non-COMET coverage audit"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-E01FD5128E081ACE",
+      "missing_material_requirement_or_null": "HCV FASTA genotype/subtype assignment and antiviral-target coverage reporting.",
+      "rationale": "This skill generates synthetic CT volumes and masks, which does not address HCV sequence assignment or coverage analysis.",
+      "source_anchor": "# NV-Generate-CT (rflow-ct)"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0873",
+  "batch_input_sha256": "9685d91ec7dcf4e14d7ff0f7cde30f6b7760dda1e8b923761918b85ba5f40219",
+  "blind_packet_id": "P-2B6BFB499251E214B0",
+  "reviewer_blind_id": "Reviewer B",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "9cdd97c1c6110473b3a8f15834ed98606401230615e89706eb2b7553792ff920"
+}
