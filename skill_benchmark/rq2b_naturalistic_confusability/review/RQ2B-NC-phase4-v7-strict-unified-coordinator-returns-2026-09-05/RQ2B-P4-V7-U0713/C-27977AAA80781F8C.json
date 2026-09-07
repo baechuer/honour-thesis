@@ -1,0 +1,11 @@
+{
+  "blind_packet_id": "P-39DE25F81C4E3617BA",
+  "candidate_token": "C-27977AAA80781F8C",
+  "reviewer_a_return_sha256": "a08700431b3e4eddce0b4d0c413d7920d139fbcb7458acefe7ad530497d0c7e0",
+  "reviewer_b_return_sha256": "3af667f46a2f30a52df90a0901103c0ab3b14e6f6f37a6fb15d8fb2ce78fefdc",
+  "fresh_source_render_sha256": "e5afffa996c043b6cce477080b41c7eb099078679090993191b808c2840c7802",
+  "coordinator_decision": "CONFIRMED_INADEQUATE",
+  "source_anchor": "Zoom Contact Center SDK - Android",
+  "rationale": "The source configures Zoom Contact Center channel services rather than the custom Android video-session APIs needed for a waiting room and one-to-one consultation; it lacks participant, media-control, and connection-state implementation guidance.",
+  "coordinator_output_sha256": "57c432dc49906c27a818d9468c7d5dd80f777e0fe11904e88a0b24829cca7b0a"
+}
