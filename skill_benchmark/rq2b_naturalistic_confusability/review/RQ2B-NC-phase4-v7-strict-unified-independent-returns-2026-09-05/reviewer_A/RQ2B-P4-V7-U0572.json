@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id":"A",
+  "batch_id":"RQ2B-P4-V7-U0572",
+  "blind_packet_id":"P-8713C88D9FADF73EC8",
+  "batch_input_sha256":"be8f64db337975033dc3fe98aa9a34b12873c1fa9b2699b2fac4f7ab795fe4b0",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments":[
+    {"candidate_token":"C-0410705E0B692064","adequacy":"INADEQUATE","source_anchor":"# use_figma — Figma Plugin API Skill","rationale":"This governs Figma plugin operations, not Go resource lifecycle review.","missing_material_requirement_or_null":"Terraform-provider CRUD lifecycle, conversion, diagnostic, and registration review."},
+    {"candidate_token":"C-31EBEEEBFC3C88C3","adequacy":"INADEQUATE","source_anchor":"# Receiving Hack Review","rationale":"This consumes an existing hack-review report rather than reviewing the supplied lifecycle code directly.","missing_material_requirement_or_null":"A direct Terraform resource CRUD lifecycle review workflow."},
+    {"candidate_token":"C-4052C3E8193D22AC","adequacy":"INADEQUATE","source_anchor":"## Scope","rationale":"This performs gene-set enrichment analysis and is unrelated to Go code review.","missing_material_requirement_or_null":"Terraform-provider lifecycle review."},
+    {"candidate_token":"C-5554C55CF19DCB14","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Review: Test Helpers, Data Source Tests, List Resource Tests, Unit Tests","rationale":"This is a Terraform-provider review skill, but it is limited to test helpers and tests rather than the requested non-test resource lifecycle logic.","missing_material_requirement_or_null":"Review of Create, Read, Update, Delete behavior, model conversion, diagnostics, and registration metadata."},
+    {"candidate_token":"C-658C9D82E4507E96","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Review: Helpers, Sweepers, Data Sources, List Resources","rationale":"This reviews related Terraform-provider helper code such as finders and waiters, but not the requested resource CRUD lifecycle and model translation logic.","missing_material_requirement_or_null":"A resource lifecycle review covering all requested CRUD and registration concerns."},
+    {"candidate_token":"C-6C2509B31A9183EF","adequacy":"INADEQUATE","source_anchor":"# Grant Proposal Writer","rationale":"This writes nonprofit grant proposals and has no code-review capability.","missing_material_requirement_or_null":"Terraform-provider resource lifecycle code review."},
+    {"candidate_token":"C-7055ECEF5F2A7C39","adequacy":"FULLY_ACCEPTABLE","source_anchor":"# Review: Resource Lifecycle","rationale":"This directly targets Terraform AWS Provider resource lifecycle changes, including CRUD ordering, error handling, model-to-SDK conversion, and registration annotations required by the prompt.","missing_material_requirement_or_null":null},
+    {"candidate_token":"C-A00B55D0FECAE99A","adequacy":"INADEQUATE","source_anchor":"# Secure Code Review","rationale":"This limits review to security flaw classes and explicitly excludes general correctness and maintainability issues requested here.","missing_material_requirement_or_null":"Terraform lifecycle correctness review of CRUD behavior, conversion, diagnostics, and registration metadata."}
+  ],
+  "reviewer_output_sha256":"6cc609380f7af5d992a0a8d0dfb5472042f8306a1d93abde953b93a7d45eb829"
+}

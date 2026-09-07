@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0573",
+  "blind_packet_id": "P-B23A603ABAFF93936A",
+  "batch_input_sha256": "c63c3a6f2589c2acb1be18c3a5cd5e6eeaee18ac5e289789e833aa90ca1f7fa1",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-030EA2EC324B8BEE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Android to iOS: Feature Parity Implementation",
+      "rationale": "It ports Android features to iOS and provides no method to analyze, test, explain, or improve an email regular expression.",
+      "missing_material_requirement_or_null": "Regex diagnosis, visual explanation, test cases, performance assessment, and browser and Python versions."
+    },
+    {
+      "candidate_token": "C-221C41825A4681A2",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Regex Visual Debugger",
+      "rationale": "It directs pattern diagnosis with a plain-language and visual breakdown of anchors, groups, classes, and quantifiers; tests supplied and generated edge cases; addresses greediness and performance; and converts patterns for JavaScript and Python.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-5635834FA088D66E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Improve a Website",
+      "rationale": "It diagnoses conversion and usability problems on a live marketing website, not failures of an email regular expression.",
+      "missing_material_requirement_or_null": "Regex diagnosis, visual explanation, test cases, performance assessment, and browser and Python versions."
+    },
+    {
+      "candidate_token": "C-58C0AD7CC5830F28",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "It structures team retrospectives and action tracking rather than debugging a regular expression.",
+      "missing_material_requirement_or_null": "Regular-expression diagnosis, testing, explanation, and improved browser and Python patterns."
+    },
+    {
+      "candidate_token": "C-8B7FBF52BAF8C324",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## Usage",
+      "rationale": "It compiles and executes a regex against positive and negative examples, iterates it, and reports test results, but does not provide the requested visual structural breakdown, greediness or performance analysis, or browser-specific version.",
+      "missing_material_requirement_or_null": "A visual breakdown plus greediness and performance analysis and an explicit browser-compatible version."
+    },
+    {
+      "candidate_token": "C-9568E4971CEAD2BE",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Retention and Churn Killer",
+      "rationale": "It designs a gym member-retention system and has no route for analyzing or repairing an email regular expression.",
+      "missing_material_requirement_or_null": "Regex diagnosis, testing, visual explanation, and browser and Python improvements."
+    },
+    {
+      "candidate_token": "C-9BBE347F9391052A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Overview",
+      "rationale": "It surveys documented visual and interaction conventions for product design, not regular-expression matching behavior.",
+      "missing_material_requirement_or_null": "Regex diagnosis, test execution, visual explanation, and an improved browser and Python pattern."
+    },
+    {
+      "candidate_token": "C-BB9ADF9BB6C74F24",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Regex",
+      "rationale": "It tests regexes against samples, explains common constructs, warns about catastrophic backtracking, and notes flavor differences, but lacks the requested visual structural breakdown and explicit browser-version delivery.",
+      "missing_material_requirement_or_null": "A visual breakdown and an explicit improved browser-compatible version alongside the Python version."
+    }
+  ],
+  "reviewer_output_sha256": "f3f20cf26295078236758402c06d65eb5b6f6ec3d757ef1895694e0695f71387"
+}

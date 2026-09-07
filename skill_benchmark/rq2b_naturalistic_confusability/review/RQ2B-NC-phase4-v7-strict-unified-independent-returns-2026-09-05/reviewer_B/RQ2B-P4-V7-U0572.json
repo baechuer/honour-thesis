@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0572",
+  "blind_packet_id": "P-8713C88D9FADF73EC8",
+  "batch_input_sha256": "be8f64db337975033dc3fe98aa9a34b12873c1fa9b2699b2fac4f7ab795fe4b0",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0410705E0B692064",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# use_figma — Figma Plugin API Skill",
+      "rationale": "This governs JavaScript interactions with Figma files and does not review Go resource lifecycle behavior or Terraform provider conventions.",
+      "missing_material_requirement_or_null": "A Go resource-lifecycle review covering CRUD state flow, waiters, diagnostics, field translation, and registration metadata."
+    },
+    {
+      "candidate_token": "C-31EBEEEBFC3C88C3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Receiving Hack Review",
+      "rationale": "This consumes an existing hack-review report and tracks its dispositions; it does not directly apply the requested Terraform AWS Provider lifecycle checks to supplied Go code.",
+      "missing_material_requirement_or_null": "A direct Go resource-lifecycle review covering CRUD state flow, waiters, diagnostics, field translation, and registration metadata."
+    },
+    {
+      "candidate_token": "C-4052C3E8193D22AC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope",
+      "rationale": "This runs gene-set enrichment analysis on ranked gene data rather than reviewing Go resource lifecycle implementation.",
+      "missing_material_requirement_or_null": "A Go resource-lifecycle review covering CRUD state flow, waiters, diagnostics, field translation, and registration metadata."
+    },
+    {
+      "candidate_token": "C-5554C55CF19DCB14",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Review: Test Helpers, Data Source Tests, List Resource Tests, Unit Tests",
+      "rationale": "This reviews test helpers and test layouts, not the supplied non-test resource CRUD implementation and its state-management behavior.",
+      "missing_material_requirement_or_null": "A Go resource-lifecycle review of create, retrieve, change, and remove implementation behavior."
+    },
+    {
+      "candidate_token": "C-658C9D82E4507E96",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Review: Helpers, Sweepers, Data Sources, List Resources",
+      "rationale": "It covers relevant finder error handling, resource-not-found behavior, and asynchronous waiters, but it does not review the full create/read/update/delete state flow, field translation, or registration requirements.",
+      "missing_material_requirement_or_null": "Full resource CRUD lifecycle review, including state use, computed-state persistence, no-op update gating, field translation, and registration metadata."
+    },
+    {
+      "candidate_token": "C-6C2509B31A9183EF",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Grant Proposal Writer",
+      "rationale": "This writes nonprofit grant proposals and provides no Go code or remote-resource lifecycle review.",
+      "missing_material_requirement_or_null": "A Go resource-lifecycle review covering CRUD state flow, waiters, diagnostics, field translation, and registration metadata."
+    },
+    {
+      "candidate_token": "C-7055ECEF5F2A7C39",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# Review: Resource Lifecycle",
+      "rationale": "It directly reviews the requested resource CRUD lifecycle: state retrieval and persistence, safe model-to-SDK translation, asynchronous waits, missing-resource handling, no-op update gating, diagnostic style, and registration annotations.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-A00B55D0FECAE99A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Secure Code Review",
+      "rationale": "This is limited to security-flaw review and expressly does not provide the requested Terraform provider lifecycle and state-management review.",
+      "missing_material_requirement_or_null": "A Go resource-lifecycle review covering CRUD state flow, waiters, diagnostics, field translation, and registration metadata."
+    }
+  ],
+  "reviewer_output_sha256": "c4c27dca3a2488a039cd47916191e2622f69bcc07b988c89f04d9f9822d8a7b5"
+}
