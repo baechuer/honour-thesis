@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-17314BDF3D699B74",
+      "missing_material_requirement_or_null": "OpenAPI compatibility review capabilities for endpoints, response schemas, status codes, pagination, examples, and error models.",
+      "rationale": "This is an Android-to-iOS feature-porting workflow, not an OpenAPI draft review.",
+      "source_anchor": "# Android to iOS: Feature Parity Implementation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-1A12A5607BCDCE11",
+      "missing_material_requirement_or_null": "Endpoint-by-endpoint OpenAPI compatibility analysis.",
+      "rationale": "The skill builds Slack bots and provides no process for reviewing an OpenAPI contract.",
+      "source_anchor": "# Slack Bot Builder"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-3121843740602E41",
+      "missing_material_requirement_or_null": "A focused OpenAPI review that reports endpoint-level compatibility findings without issue implementation.",
+      "rationale": "It triages and implements GitHub issues; its brief compatibility check cannot produce the requested contract review.",
+      "source_anchor": "# Implement Issue"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-6BE1FC94B9557FD5",
+      "missing_material_requirement_or_null": "OpenAPI contract review criteria for compatibility risks and the requested endpoint findings.",
+      "rationale": "It decomposes implementation work into tasks rather than assessing an API draft.",
+      "source_anchor": "# Planning and Task Breakdown"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-7E0D09C02FF989E3",
+      "missing_material_requirement_or_null": "Any OpenAPI or API-compatibility review workflow.",
+      "rationale": "The skill facilitates sprint retrospectives and is unrelated to API contract review.",
+      "source_anchor": "# Sprint Retro Facilitator"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-A6BE35ABE6ACA00E",
+      "missing_material_requirement_or_null": "Endpoint-by-endpoint OpenAPI review of response schemas, pagination, examples, and error models.",
+      "rationale": "It usefully classifies breaking changes and status-code changes, but its stated scope excludes most requested contract details.",
+      "source_anchor": "## Workflow"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-DE2EAC976927E1BA",
+      "missing_material_requirement_or_null": "OpenAPI compatibility review capabilities.",
+      "rationale": "This is a bulk-expression GSVA analysis and heatmap workflow, not an API review.",
+      "source_anchor": "## When to Use"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-F1C58BC8C8A4BF38",
+      "missing_material_requirement_or_null": "A backwards-compatibility review procedure for an existing OpenAPI draft, including response-schema and example findings per endpoint.",
+      "rationale": "It covers status codes, error shapes, and pagination, but designs API surfaces rather than delivering the requested compatibility audit.",
+      "source_anchor": "## Operating procedure"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U0321",
+  "batch_input_sha256": "8c688514d8b70c67829c6ed93e62250ae8bf49c76a685c4be90f8a3ce7675f32",
+  "blind_packet_id": "P-D6761E299F8BA946E6",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "1185dd66b1ef252afa06446c80c435f62e54de9e276dd04682385f0b045788e4"
+}
