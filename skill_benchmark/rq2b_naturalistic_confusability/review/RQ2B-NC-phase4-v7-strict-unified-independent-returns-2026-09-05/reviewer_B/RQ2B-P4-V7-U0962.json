@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0962",
+  "blind_packet_id": "P-4C1CD7892E7F374A7E",
+  "batch_input_sha256": "1b1ae28d72cae8af3b11ada71c81ffa11301e385e73ad7cb96dbfb2f7f7b3269",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-436D10EAD7564C33","adequacy":"INADEQUATE","source_anchor":"# Coverage Gap Finder","rationale":"This skill identifies software test-coverage gaps rather than exploring a CSV spreadsheet.","missing_material_requirement_or_null":"A broad exploratory spreadsheet orientation with patterns, caveats, and next questions."},
+    {"candidate_token":"C-4921139F6138C249","adequacy":"INADEQUATE","source_anchor":"# FreeCAD Scripts","rationale":"This skill automates CAD geometry rather than analyzing a CSV sheet.","missing_material_requirement_or_null":"A broad exploratory orientation to the spreadsheet contents and patterns."},
+    {"candidate_token":"C-61126F7EBBC9AA51","adequacy":"INADEQUATE","source_anchor":"# Executive Summary","rationale":"This skill produces an executive summary, which the request explicitly excludes.","missing_material_requirement_or_null":"A non-executive exploratory orientation to the CSV with caveats and next questions."},
+    {"candidate_token":"C-6CB488AD4BF1C0C3","adequacy":"INADEQUATE","source_anchor":"# Sprint Retro Facilitator","rationale":"This skill facilitates sprint retrospectives rather than exploring spreadsheet data.","missing_material_requirement_or_null":"A broad exploratory CSV analysis with patterns and caveats."},
+    {"candidate_token":"C-97A87F123E19B58E","adequacy":"INADEQUATE","source_anchor":"# Responsive Accessibility Review","rationale":"This skill reviews responsive interface accessibility rather than spreadsheet content.","missing_material_requirement_or_null":"A broad exploratory CSV analysis with overall patterns and caveats."},
+    {"candidate_token":"C-9F8829EFD0B5A652","adequacy":"INADEQUATE","source_anchor":"# `user-research-prior-art-survey` — SKILL.md","rationale":"This skill surveys research literature rather than orienting to a supplied data spreadsheet.","missing_material_requirement_or_null":"A broad exploratory CSV analysis with patterns, caveats, and next questions."},
+    {"candidate_token":"C-D611FD2B3DA1A3F9","adequacy":"INADEQUATE","source_anchor":"# Slack Bot Builder","rationale":"This skill builds Slack bots rather than exploring spreadsheet data.","missing_material_requirement_or_null":"A broad exploratory orientation to a CSV sheet and its main patterns."},
+    {"candidate_token":"C-E96132F9D2A55277","adequacy":"INADEQUATE","source_anchor":"# Estimate Analysis Skill","rationale":"This skill analyzes financial estimates through market-data sources rather than a supplied general CSV sheet.","missing_material_requirement_or_null":"A general spreadsheet exploration workflow that does not assume a financial-estimate dataset."}
+  ],
+  "reviewer_output_sha256": "2896c7812a6b267a2adf9dadd65b692f2c3d913c669af8830e2613c1e26294ab"
+}
