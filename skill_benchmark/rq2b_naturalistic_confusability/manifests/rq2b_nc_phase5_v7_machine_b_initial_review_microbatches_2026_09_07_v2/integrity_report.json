@@ -1,0 +1,56 @@
+{
+  "bound_inputs": {
+    "machine_b_manifest": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_parallel_handoff_2026_09_06_v2_fresh_v20/machine_b_manifest.jsonl",
+    "machine_b_manifest_sha256": "cc5612144fb8b526d4bbff3437e27263df9098fa7c39e2e64f76c3878f6ea807",
+    "protocol": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308"
+  },
+  "checks": {
+    "K6_plus_two_tail_packet_unit_intact": true,
+    "each_group_assigned_to_A_and_B": true,
+    "render_packet_hash_and_schema_verified": true,
+    "target_blindness_verified": true
+  },
+  "outputs": {
+    "microbatch_001_reviewer_a_assignment.jsonl": "cb81f1053d9c0ec333d1126bc2653c072d10dd5be33a3a581eba9503df642ca5",
+    "microbatch_001_reviewer_b_assignment.jsonl": "65d9fa6516d0e7048a48572c6d0ca3305900c465c87f96a8346c14be6453fe88",
+    "microbatch_002_reviewer_a_assignment.jsonl": "b3f8428f1ebb4c7849f1c3fb6004a7bbb1e56dbee182428624cda39519874cdc",
+    "microbatch_002_reviewer_b_assignment.jsonl": "8166a05ed13f338983048dac6de24515c984722626ece9a9128189b923855e29"
+  },
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_initial_review_microbatches_v2",
+  "scope": "Machine B V7 only; two independent source-visible reviewer lanes. These assignments disclose no target, opaque join, main/tail role, retrieval result, metric or library outcome.",
+  "selection": {
+    "eligible_unstarted_machine_b_groups": 341,
+    "microbatch_001_groups": [
+      "RQ2B-P4-V7-U0191",
+      "RQ2B-P4-V7-U0313",
+      "RQ2B-P4-V7-U1186",
+      "RQ2B-P4-V7-U0774",
+      "RQ2B-P4-V7-U1003",
+      "RQ2B-P4-V7-U0891",
+      "RQ2B-P4-V7-U0993",
+      "RQ2B-P4-V7-U0428",
+      "RQ2B-P4-V7-U1218",
+      "RQ2B-P4-V7-U0199",
+      "RQ2B-P4-V7-U0855",
+      "RQ2B-P4-V7-U0707"
+    ],
+    "microbatch_002_groups": [
+      "RQ2B-P4-V7-U0724",
+      "RQ2B-P4-V7-U0432",
+      "RQ2B-P4-V7-U1226",
+      "RQ2B-P4-V7-U0840",
+      "RQ2B-P4-V7-U1143",
+      "RQ2B-P4-V7-U0098",
+      "RQ2B-P4-V7-U0297",
+      "RQ2B-P4-V7-U1057",
+      "RQ2B-P4-V7-U1190",
+      "RQ2B-P4-V7-U0221",
+      "RQ2B-P4-V7-U0522",
+      "RQ2B-P4-V7-U0513"
+    ],
+    "order": "ascending SHA-256(batch_id), then batch_id"
+  },
+  "status": "PASS_V7_MACHINE_B_INITIAL_REVIEW_MICROBATCHES_TARGET_BLIND_INPUTS_VERIFIED",
+  "supersedes": "The v1 directory was left empty after a preflight found missing reproducible target-blind renders; v2 was created only after those renders were materialised from the frozen V7 packets and revalidated."
+}
