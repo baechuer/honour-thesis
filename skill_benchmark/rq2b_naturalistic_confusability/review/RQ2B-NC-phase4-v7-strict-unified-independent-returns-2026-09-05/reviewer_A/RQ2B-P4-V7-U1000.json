@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-0ECECFDE12328578",
+      "missing_material_requirement_or_null": "A client-facing resource contract, pagination policy, and error examples.",
+      "rationale": "Covers route, request/response, and error-handling basics, but lacks a complete client-facing invoice API design contract.",
+      "source_anchor": "## Routing"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-43AA420A03FA2492",
+      "missing_material_requirement_or_null": "Subscription-invoice HTTP interface design guidance.",
+      "rationale": "Focuses on fetching FX and crypto data, not designing client-facing HTTP interfaces.",
+      "source_anchor": "## Do NOT use - reach for X instead"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-66F574EEDA5F1000",
+      "missing_material_requirement_or_null": "Subscription-invoice HTTP interface design guidance.",
+      "rationale": "Provides a bulk-expression GSVA workflow rather than HTTP API design.",
+      "source_anchor": "## When Not to Use"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-8FAEEB48D4712C2D",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Directly specifies resource design, methods and status codes, error shape, cursor pagination, and an endpoint-spec deliverable.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-93500C46AB67923B",
+      "missing_material_requirement_or_null": "Resources, endpoints, request and response shapes, pagination, and error examples.",
+      "rationale": "Only governs API versioning and expressly excludes the requested new-interface design.",
+      "source_anchor": "Do NOT use when designing the resource shape"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BF2B602F529E59C2",
+      "missing_material_requirement_or_null": "Subscription-invoice HTTP interface design guidance.",
+      "rationale": "Facilitates sprint retrospectives, with no HTTP interface design material.",
+      "source_anchor": "## Deliverable"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-D414FB9F85FAC84E",
+      "missing_material_requirement_or_null": "Subscription-invoice HTTP interface design guidance.",
+      "rationale": "Covers Slack bot implementation rather than an invoice HTTP API contract.",
+      "source_anchor": "## Overview"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-E91742BDE7734A9E",
+      "missing_material_requirement_or_null": null,
+      "rationale": "Covers consumer-facing resource and endpoint design, payloads, status/error contracts, pagination, and implementation-ready API deliverables.",
+      "source_anchor": "### Phase 16: Architecture Output and Deliverables"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1000",
+  "batch_input_sha256": "435e9601bfa7dfeeb8ec70f451ff26128e82cf2e3c39ba24f6cd5343457f03e1",
+  "blind_packet_id": "P-5FD9E9AACAC982A830",
+  "reviewer_blind_id": "Reviewer A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "f6f5cfb5441cdb94e28afad1b5b59c06425dbb2bbfeb8d7a3bc0879e25ea58fc"
+}
