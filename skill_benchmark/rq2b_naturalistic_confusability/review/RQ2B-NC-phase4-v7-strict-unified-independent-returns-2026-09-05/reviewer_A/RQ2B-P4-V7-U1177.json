@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U1177",
+  "blind_packet_id": "P-159AC78EA8A2FCA657",
+  "batch_input_sha256": "03e32a9a0d8254d686c6c374304d52af15ea51c3dfa632237851636f09abe393",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-161CC3ADEA591624","adequacy":"INADEQUATE","source_anchor":"# Upgrade Datadog Browser SDK to v6","rationale":"This upgrades a browser monitoring SDK and is unrelated to extracting tables from a PDF.","missing_material_requirement_or_null":"PDF table extraction into normalized CSV files with page-number provenance."},
+    {"candidate_token":"C-4B725832A8ED9F1D","adequacy":"INADEQUATE","source_anchor":"# Report To PDF","rationale":"This converts an existing report to PDF, the opposite of extracting PDF tables into CSV files.","missing_material_requirement_or_null":"PDF table extraction into normalized CSV files with page-number provenance."},
+    {"candidate_token":"C-94000B44C117112D","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"## Usage","rationale":"It converts a PDF and can expose tables in Markdown, but does not produce clean CSVs with page numbers and normalized headers.","missing_material_requirement_or_null":"CSV table output with page-number provenance and header normalization."},
+    {"candidate_token":"C-B26901F1355EF485","adequacy":"INADEQUATE","source_anchor":"# Convert Word to Markdown","rationale":"This processes Word documents rather than PDF tables.","missing_material_requirement_or_null":"PDF table extraction into normalized CSV files with page-number provenance."},
+    {"candidate_token":"C-C1140AA588FAA48D","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# CSV Tools","rationale":"It can clean CSV data, but it does not extract tables from a PDF or retain page-number provenance.","missing_material_requirement_or_null":"PDF table extraction with page-number provenance."},
+    {"candidate_token":"C-C35B656BAC974452","adequacy":"INADEQUATE","source_anchor":"# Comparable Company Analysis","rationale":"This builds valuation workbooks and does not extract annual-report PDF tables into CSV files.","missing_material_requirement_or_null":"PDF table extraction into normalized CSV files with page-number provenance."},
+    {"candidate_token":"C-F0B30E58C1B955D4","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"# Pandas Expert","rationale":"It can clean and normalize tabular data after extraction, but it does not extract PDF tables or preserve their page numbers.","missing_material_requirement_or_null":"PDF table extraction with page-number provenance."},
+    {"candidate_token":"C-FC536C1C67C06A86","adequacy":"INADEQUATE","source_anchor":"# GSVA Analysis And Visualization","rationale":"This runs pathway analysis on expression data and is unrelated to PDF table extraction.","missing_material_requirement_or_null":"PDF table extraction into normalized CSV files with page-number provenance."}
+  ],
+  "reviewer_output_sha256": "2440022ad57fc7fe88fb75d3cd2105c881fcee99c2651384ec9302a4138e6da0"
+}

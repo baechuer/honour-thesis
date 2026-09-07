@@ -1,0 +1,18 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U1177",
+  "blind_packet_id": "P-159AC78EA8A2FCA657",
+  "batch_input_sha256": "03e32a9a0d8254d686c6c374304d52af15ea51c3dfa632237851636f09abe393",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {"candidate_token":"C-161CC3ADEA591624","adequacy":"INADEQUATE","source_anchor":"upgrade-browser-sdk-v6","rationale":"Datadog Browser SDK upgrade work does not extract annual-report tables into CSV.","missing_material_requirement_or_null":"PDF table extraction with CSV output and page provenance"},
+    {"candidate_token":"C-4B725832A8ED9F1D","adequacy":"INADEQUATE","source_anchor":"report-to-pdf","rationale":"This converts analytics reports to PDF, the reverse of the requested PDF table extraction.","missing_material_requirement_or_null":"PDF table extraction with CSV output and page provenance"},
+    {"candidate_token":"C-94000B44C117112D","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Convert PDF to Markdown","rationale":"This can process a PDF and extract text and tables into a Markdown representation for downstream use.","missing_material_requirement_or_null":"clean per-table CSV output with page numbers and normalized headers, without extracting all document text"},
+    {"candidate_token":"C-B26901F1355EF485","adequacy":"INADEQUATE","source_anchor":"convert-word-to-md","rationale":"Word-document conversion is unrelated to extracting tables from a PDF.","missing_material_requirement_or_null":"PDF table extraction with CSV output and page provenance"},
+    {"candidate_token":"C-C1140AA588FAA48D","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"csv-tools","rationale":"This can inspect and clean CSV files, including column-oriented cleanup.","missing_material_requirement_or_null":"extracting tables from the PDF, assigning page numbers, and producing the initial CSVs"},
+    {"candidate_token":"C-C35B656BAC974452","adequacy":"INADEQUATE","source_anchor":"comps-analysis","rationale":"Comparable-company valuation workbook work does not extract annual-report PDF tables to CSV.","missing_material_requirement_or_null":"PDF table extraction with CSV output and page provenance"},
+    {"candidate_token":"C-F0B30E58C1B955D4","adequacy":"PARTIALLY_ADEQUATE","source_anchor":"Pandas Expert","rationale":"Pandas can clean, reshape, and validate the resulting tabular data.","missing_material_requirement_or_null":"PDF table extraction, page-number preservation, and initial CSV production"},
+    {"candidate_token":"C-FC536C1C67C06A86","adequacy":"INADEQUATE","source_anchor":"gsva-analysis-and-visualization","rationale":"GSVA analysis does not extract tables from an annual-report PDF.","missing_material_requirement_or_null":"PDF table extraction with CSV output and page provenance"}
+  ],
+  "reviewer_output_sha256": "41d7f781faa807b2b083c30a5f4cf121c4e5caacacb15faa73c96258b7418592"
+}
