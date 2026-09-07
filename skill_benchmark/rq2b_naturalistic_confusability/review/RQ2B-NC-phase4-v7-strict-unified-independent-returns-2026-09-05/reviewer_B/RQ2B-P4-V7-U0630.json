@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0630",
+  "blind_packet_id": "P-98E4A69A65079A4379",
+  "batch_input_sha256": "37fe53e7bc5390261ee10852b06745f2c4d717770e8d6da1409f3cd83de11b5b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-062233753E704711",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### Phase 9: Service-to-Service and Machine Authentication",
+      "rationale": "It supplies machine-authentication, least-privilege, credential, audit-logging, and authentication-test guidance relevant to a workforce API integration, but it does not plan HR, attendance, or payroll workflows or evaluate vendor documentation.",
+      "missing_material_requirement_or_null": "Jurisdiction- and vendor-aware employee, attendance, and payroll integration routing with source confidence, sandbox rollout, data masking, and live-payroll approval controls."
+    },
+    {
+      "candidate_token": "C-2173E9A4FC485508",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `user-research-prior-art-survey` — SKILL.md",
+      "rationale": "This skill surveys published user-research evidence for product design and contains no workforce-system integration procedure.",
+      "missing_material_requirement_or_null": "A documented employee, attendance, and payroll integration recommendation or implementation path with source evaluation, safety controls, testing, auditability, and approval gates."
+    },
+    {
+      "candidate_token": "C-3DB612DB5A587190",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Decision Making",
+      "rationale": "It can structure and document a recommendation with assumptions, options, risks, and confidence, but it has no workforce-API facts, documentation-access process, or safe integration implementation guidance.",
+      "missing_material_requirement_or_null": "Source-backed jurisdictional and vendor-specific HR, attendance, and payroll integration guidance, including sandbox validation, audit logging, retries or rollback, and live-data controls."
+    },
+    {
+      "candidate_token": "C-BDD5B2EA161750D8",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# MENA Communications",
+      "rationale": "It provides a cautious MENA integration response pattern with documentation confidence, sandbox separation, retries, and approval gates, but it is scoped to communications providers rather than employee, attendance, or payroll systems.",
+      "missing_material_requirement_or_null": "HR, attendance, and payroll vendor and workflow routing with workforce-data-specific implementation guidance."
+    },
+    {
+      "candidate_token": "C-D3C12EBAE117BAA4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# Security and Hardening",
+      "rationale": "It addresses sensitive-data protection, external integrations, secret handling, authorization, and human approval for high-risk changes, but it does not provide a workforce integration plan or vendor-specific validation path.",
+      "missing_material_requirement_or_null": "Jurisdiction- and vendor-aware employee, attendance, and payroll integration routing with documentation confidence, sandbox tests, audit logging, retries or rollback, and payroll approval checks."
+    },
+    {
+      "candidate_token": "C-D82A8FFB1199EA50",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "# MENA Commerce, POS, and Accounting",
+      "rationale": "It supplies a source-aware MENA integration process with sandbox, idempotency, auditability, reconciliation, and approval controls, but it is designed for commerce, POS, and accounting vendors rather than HR or attendance systems.",
+      "missing_material_requirement_or_null": "Employee, attendance, and payroll workflow classification plus workforce-vendor facts and implementation routing."
+    },
+    {
+      "candidate_token": "C-E9C54938BCECA145",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "This skill facilitates team retrospectives and does not address workforce-data integrations or their controls.",
+      "missing_material_requirement_or_null": "A documented employee, attendance, and payroll integration recommendation or implementation path with source evaluation, safety controls, testing, auditability, and approval gates."
+    },
+    {
+      "candidate_token": "C-F9F5A3F787D6AB54",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# MENA HR and Payroll",
+      "rationale": "It directly routes employee, attendance, and payroll integration work by country, vendor, workflow, environment, and live-data status; it requires source confidence and unknowns, least privilege and masking, sandbox validation, audit logs, retries or rollback, and explicit approval before live payroll-related changes.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "2706ace45736dd52cf14f3b4a8e6069f150f85bfb2417fef755784f3755b65ea"
+}

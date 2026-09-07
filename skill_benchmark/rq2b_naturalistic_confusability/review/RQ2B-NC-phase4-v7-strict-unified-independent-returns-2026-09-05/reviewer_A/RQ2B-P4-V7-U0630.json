@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0630",
+  "blind_packet_id": "P-98E4A69A65079A4379",
+  "batch_input_sha256": "37fe53e7bc5390261ee10852b06745f2c4d717770e8d6da1409f3cd83de11b5b",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-062233753E704711",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "When to use",
+      "rationale": "It supplies threat-aware authentication and machine-identity controls with audit logging that can support secure integration access, but does not plan HR, attendance, or payroll vendor workflows.",
+      "missing_material_requirement_or_null": "Jurisdiction- and vendor-specific workforce data-integration recommendation with documentation confidence, sandbox workflow, and payroll-safe operational checks."
+    },
+    {
+      "candidate_token": "C-2173E9A4FC485508",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Overview",
+      "rationale": "This synthesizes published user-research evidence for interface design, not workforce system integrations or payroll data controls.",
+      "missing_material_requirement_or_null": "Employee, attendance, and payroll integration planning with vendor documentation, security safeguards, test and rollback procedures."
+    },
+    {
+      "candidate_token": "C-3DB612DB5A587190",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This is a general high-stakes personal decision framework rather than an implementation or recommendation method for payroll integrations.",
+      "missing_material_requirement_or_null": "Workforce-vendor documentation assessment, secure implementation path, sandbox validation, audit controls, and live-data approval gate."
+    },
+    {
+      "candidate_token": "C-BDD5B2EA161750D8",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Required Inputs",
+      "rationale": "It has a source-backed vendor-integration process with documentation confidence, sandbox testing, retry and rollback notes, audit logging, and human approval gates, but is limited to communications APIs rather than workforce systems.",
+      "missing_material_requirement_or_null": "Employee, attendance, and payroll workflow support plus applicable payroll and jurisdiction constraints."
+    },
+    {
+      "candidate_token": "C-D3C12EBAE117BAA4",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Security and Hardening",
+      "rationale": "It provides general protections for sensitive data and external integrations, including security review and approval boundaries, but not the workforce-domain vendor and documentation workflow.",
+      "missing_material_requirement_or_null": "Employee and payroll integration design, vendor documentation confidence, sandbox validation, operational reconciliation, and jurisdiction-specific constraints."
+    },
+    {
+      "candidate_token": "C-D82A8FFB1199EA50",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Required Inputs",
+      "rationale": "It provides a source-backed, least-privilege financial-integration workflow with masked examples, sandbox checks, idempotency, auditability, rollback, and live-action approval, but targets commerce and accounting APIs rather than HR and attendance.",
+      "missing_material_requirement_or_null": "Workforce-specific employee, attendance, payroll, and benefits vendor integration path."
+    },
+    {
+      "candidate_token": "C-E9C54938BCECA145",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This is a team-retrospective facilitation workflow and cannot plan or validate a sensitive workforce-data integration.",
+      "missing_material_requirement_or_null": "Employee and payroll API integration, security controls, test and rollback checks, and live-data approval procedure."
+    },
+    {
+      "candidate_token": "C-F9F5A3F787D6AB54",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "MENA HR and Payroll",
+      "rationale": "It directly covers employee, attendance, payroll, and workforce integrations and provides jurisdiction and vendor inputs, documentation confidence, least-privilege and masked-data controls, sandbox tests, audit logging, retries or rollback, and explicit approval before live payroll changes.",
+      "missing_material_requirement_or_null": null
+    }
+  ],
+  "reviewer_output_sha256": "951917396ebb46e67b14fc8a7ac53f3aad85d83756f6b7c3b389a5f3276de514"
+}
