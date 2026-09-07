@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0519",
+  "blind_packet_id": "P-42371397979CFA3C6C",
+  "batch_input_sha256": "5861d273c82a530df2d3269a0911f315209698a3ae2cc0bf150e9b32653b64b6",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0167F5110E10AF46",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Lemon Squeezy — Merchant of Record for SaaS",
+      "rationale": "The source configures a payment platform for selling software and does not OCR photographed receipts or extract receipt fields.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-17577470F0CDEFA3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "The source surveys UI conventions and documentation, not receipt images or OCR output.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-4724B9154D87DFD1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Database Schema Migration with Liquibase and Flyway",
+      "rationale": "The source manages database schema migrations and provides no document-image OCR or receipt-field extraction.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-585041CF8E01ADAC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Power BI DAX",
+      "rationale": "The source writes Power BI DAX measures and cannot run OCR on receipt photographs or identify receipt fields.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-62AEA99F71261C4E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Help Documentation",
+      "rationale": "The source writes user-facing help articles and has no receipt-image OCR or structured field extraction capability.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-9C337A4729E3C932",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "The source builds Slack bots and does not process photographed receipts or extract OCR fields.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-B606640046D4A5C4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The source facilitates team retrospectives and has no image-processing, OCR or receipt-extraction capability.",
+      "missing_material_requirement_or_null": "OCR of receipt photos with merchant, date, subtotal, tax and total extraction plus field-level confidence marking."
+    },
+    {
+      "candidate_token": "C-C4241C2E745202F9",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "### OCR a Document",
+      "rationale": "The source can run OCR on scanned images, but its documented workflow returns text only and does not identify the requested receipt fields or mark their individual confidence.",
+      "missing_material_requirement_or_null": "Receipt-specific merchant/date/subtotal/tax/total extraction and field-level confidence marking."
+    }
+  ],
+  "reviewer_output_sha256": "ba26b3199cd47a45dea72c6aecfe1c3f0d9e485a3b2d67d8628fc18b99ae0cca"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "A",
+  "batch_id": "RQ2B-P4-V7-U0519",
+  "blind_packet_id": "P-42371397979CFA3C6C",
+  "batch_input_sha256": "5861d273c82a530df2d3269a0911f315209698a3ae2cc0bf150e9b32653b64b6",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-0167F5110E10AF46",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Lemon Squeezy — Merchant of Record for SaaS",
+      "rationale": "Manages SaaS payments and tax handling, not OCR extraction from photographed receipts.",
+      "missing_material_requirement_or_null": "OCR receipt images, extract merchant/date/subtotal/tax/total and mark low-confidence fields."
+    },
+    {
+      "candidate_token": "C-17577470F0CDEFA3",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "Surveys documented UI conventions rather than processing receipt photographs.",
+      "missing_material_requirement_or_null": "OCR photographed receipts and return the requested financial fields with confidence flags."
+    },
+    {
+      "candidate_token": "C-4724B9154D87DFD1",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Database Schema Migration with Liquibase and Flyway",
+      "rationale": "Designs database schema migrations, not receipt OCR.",
+      "missing_material_requirement_or_null": "Extract merchant, date, subtotal, tax and total from photographed receipts with confidence assessment."
+    },
+    {
+      "candidate_token": "C-585041CF8E01ADAC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Power BI DAX",
+      "rationale": "Writes DAX measures rather than extracting data from receipt images.",
+      "missing_material_requirement_or_null": "Run OCR over receipt photographs and identify receipt fields with low-confidence flags."
+    },
+    {
+      "candidate_token": "C-62AEA99F71261C4E",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Help Documentation",
+      "rationale": "Writes help-center articles, not OCR results.",
+      "missing_material_requirement_or_null": "OCR receipt images and return merchant, date, subtotal, tax and total with confidence markers."
+    },
+    {
+      "candidate_token": "C-9C337A4729E3C932",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Slack Bot Builder",
+      "rationale": "Builds Slack integrations and does not analyze receipt photographs.",
+      "missing_material_requirement_or_null": "Perform receipt-image OCR and confidence-aware field extraction."
+    },
+    {
+      "candidate_token": "C-B606640046D4A5C4",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "Facilitates retrospectives and does not process receipt images.",
+      "missing_material_requirement_or_null": "Extract receipt merchant, date and financial fields using OCR with confidence flags."
+    },
+    {
+      "candidate_token": "C-C4241C2E745202F9",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "## When to Use This Skill",
+      "rationale": "Supports OCR of scanned documents and images in media pipelines, but does not specify receipt-field classification for merchant, date, subtotal, tax and total or low-confidence marking.",
+      "missing_material_requirement_or_null": "Identify the required receipt fields and explicitly flag field-level low-confidence OCR results."
+    }
+  ],
+  "reviewer_output_sha256": "68478d20c688188ddb2d2e1ba81322a35c28fe36d0faec9fcdde9437190d89ed"
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0511",
+  "blind_packet_id": "P-EF945E3E19F04F2F86",
+  "batch_input_sha256": "b9e455509da2bc48ed551f3cee4303f1ba17f42a2a3d38008d016490d7b3c79a",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-07BBA8C38BD6E807",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# DCF Model Builder",
+      "rationale": "The source builds discounted-cash-flow valuation workbooks and does not draft or adapt a provider-side customer agreement.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement drafted from the approved internal template and deal facts."
+    },
+    {
+      "candidate_token": "C-0BB12020182A05D6",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Review a Lost Opportunity",
+      "rationale": "The source analyzes a lost or stalled sales opportunity, rather than drafting the requested provider-side enterprise agreement.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement drafted from the approved internal template and deal facts."
+    },
+    {
+      "candidate_token": "C-3B753C591AE725D7",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Sprint Retro Facilitator",
+      "rationale": "The source facilitates agile retrospectives and has no contract drafting or commercial-agreement capability.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement drafted from the approved internal template and deal facts."
+    },
+    {
+      "candidate_token": "C-40D331DA89C5B882",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# `visual-prior-art-survey` — SKILL.md",
+      "rationale": "The source surveys documented UI conventions before design work and cannot prepare a provider-side customer contract.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement drafted from the approved internal template and deal facts."
+    },
+    {
+      "candidate_token": "C-4259DCA9CAD17C98",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Do not use to draft a new MSA from the bundled template",
+      "rationale": "The source reviews supplied agreements and expressly excludes drafting a new MSA from the bundled template.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement drafted from the approved internal template and deal facts."
+    },
+    {
+      "candidate_token": "C-52A1584BC7D70E7B",
+      "adequacy": "FULLY_ACCEPTABLE",
+      "source_anchor": "# MSA Draft",
+      "rationale": "The source directly drafts a provider-side MSA or customer agreement from the bundled template for SaaS-plus-professional-services deals, with counsel review safeguards.",
+      "missing_material_requirement_or_null": null
+    },
+    {
+      "candidate_token": "C-81DD417E0D432374",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "## Scope gate",
+      "rationale": "The source is restricted to an early-access design-partner relationship with ongoing co-development and feedback, not a standard enterprise hosted-product and implementation-services sale.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement for a standard enterprise customer rather than a design-partner arrangement."
+    },
+    {
+      "candidate_token": "C-9ACC78D4CA9072BC",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "# Lifecycle Marketing Campaigns Assistant",
+      "rationale": "The source designs lifecycle marketing communications and cannot draft a provider-side enterprise agreement.",
+      "missing_material_requirement_or_null": "A provider-side SaaS-plus-services agreement drafted from the approved internal template and deal facts."
+    }
+  ],
+  "reviewer_output_sha256": "0a604ff9bc9e287096aa701d8545b9cfa73254df0ea1beacc91ed0412e2387de"
+}
