@@ -1,0 +1,66 @@
+{
+  "reviewer_blind_id": "B",
+  "batch_id": "RQ2B-P4-V7-U0658",
+  "blind_packet_id": "P-76620CF33C78515D6B",
+  "batch_input_sha256": "3c2c14f642eb27d6b0fe9bd85257e564472b5331dd0fc8078547610e5160f1d5",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "assessments": [
+    {
+      "candidate_token": "C-037A9DF1520C2A36",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Inputs to collect",
+      "rationale": "This writes reproducible R data-analysis code rather than executing and documenting checkout user-flow tests.",
+      "missing_material_requirement_or_null": "Test checkout execution with credentials, observed validation and navigation behavior, totals and confirmation evidence, and reproduction steps."
+    },
+    {
+      "candidate_token": "C-1DECC055E5CB978A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This formats business reports from supplied findings but does not perform the requested checkout testing or collect evidence.",
+      "missing_material_requirement_or_null": "End-to-end checkout test execution and evidence-backed comparison against the expected user story."
+    },
+    {
+      "candidate_token": "C-40B5C6949D156F90",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Security Agent Remediation",
+      "rationale": "This triages AWS security-agent findings and remediation, unrelated to checkout functional testing.",
+      "missing_material_requirement_or_null": "Checkout validation, navigation, totals, and confirmation testing with reproducible evidence and no frontend code changes."
+    },
+    {
+      "candidate_token": "C-78242AC4504AC408",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Operating procedure",
+      "rationale": "This improves the presentation of data tables, not a transactional web checkout's functional behavior.",
+      "missing_material_requirement_or_null": "Test-credential checkout execution and evidence for validation, navigation, totals, confirmation, and reproduction steps."
+    },
+    {
+      "candidate_token": "C-907780A71CB52524",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Checkout UI extensions",
+      "rationale": "This builds and validates custom Shopify checkout extension code, while the request is to test an existing checkout flow without changing frontend code.",
+      "missing_material_requirement_or_null": "Non-mutating checkout-flow execution with observed behavior, reproduction steps, and evidence."
+    },
+    {
+      "candidate_token": "C-BF8C8396D9294C36",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Objective",
+      "rationale": "This drafts SaaS customer agreements and has no browser-based checkout testing capability.",
+      "missing_material_requirement_or_null": "Checkout user-story verification, test credentials, evidence collection, and reproduction reporting."
+    },
+    {
+      "candidate_token": "C-F67F9B49D1AADE9A",
+      "adequacy": "INADEQUATE",
+      "source_anchor": "Scope",
+      "rationale": "This runs gene-set enrichment analysis, not e-commerce user-flow validation.",
+      "missing_material_requirement_or_null": "Checkout functional test execution with evidence and no-code-change reporting."
+    },
+    {
+      "candidate_token": "C-F72B1F3781192FE0",
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "source_anchor": "Overview",
+      "rationale": "It evaluates evidence from a pre-existing user-visible regression report and tracks finding dispositions without automatically staging changes, but does not independently execute a fresh checkout flow from test credentials.",
+      "missing_material_requirement_or_null": "End-to-end checkout run, observed validation and navigation behavior, totals and confirmation evidence, and fresh reproduction steps."
+    }
+  ],
+  "reviewer_output_sha256": "5d4dd42e21aff186b57cc863de8353ce2ab22d414bb6af692b9b1d22f7a7cef5"
+}
