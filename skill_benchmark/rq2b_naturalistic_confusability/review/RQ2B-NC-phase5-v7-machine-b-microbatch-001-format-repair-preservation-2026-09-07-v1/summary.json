@@ -1,0 +1,13 @@
+{
+  "byte_preservation_encoding": "Original coordinator-return bytes are stored as single-line base64 files. Decoding each file reproduces the original_sha256 recorded in preservation_ledger.jsonl; this avoids blank-line whitespace violations in Git while preserving the exact original bytes.",
+  "counts": {
+    "preserved_coordinator_returns": 7,
+    "preserved_pre_replay_final_dispositions": 12
+  },
+  "outputs": {
+    "preservation_ledger.jsonl": "a00e72560ddb39c04b42505c8805fc548c9cb51389121a90dc26c4d8f92735b2"
+  },
+  "reason": "git diff --check found blank lines at EOF in seven coordinator-return JSON files. Semantic assessments are retained; raw file-hash-sensitive final dispositions require a fresh V2 replay after whitespace normalisation.",
+  "schema_version": "rq2b_nc_phase5_v7_machine_b_microbatch_001_format_repair_preservation_v1",
+  "status": "PRESERVED_PRE_REPLAY_ARTIFACTS"
+}
