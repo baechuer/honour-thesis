@@ -1,0 +1,61 @@
+{
+  "bound_inputs": {
+    "original_integration_ledger": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_mechanical_integration_2026_09_08_v1/integration_intake_ledger.jsonl",
+    "original_integration_ledger_sha256": "34b738ff32e74bde4aa524f7403546a57bd8e0fb4433622e1f60c8eb8d08ec66",
+    "prompt_bound_dispatch": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_prompt_bound_coordinator_rereview_2026_09_08_v1",
+    "prompt_bound_dispatch_integrity_sha256": "6496b1ca182a6f0fb042f0bc04cd121762e39b7928367f33192c643332cf8370",
+    "prompt_bound_return_schema_sha256": "82e3c553dfee65ee067863cd96bef9e7498439edcfe0600370e974e8f3b17cc8",
+    "prompt_bound_return_validation": {
+      "dispatch": "/private/tmp/rq2b-v7-phase5-mechanical-integration-v2/skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_prompt_bound_coordinator_rereview_2026_09_08_v1",
+      "expected_packets": 2291,
+      "invalid_returns": {},
+      "missing_returns": 0,
+      "status": "PASS_V7_PROMPT_BOUND_COORDINATOR_REREVIEW_RETURNS_COMPLETE",
+      "unexpected_return_paths": [],
+      "valid_returns": 2291
+    }
+  },
+  "claim_boundary": "Target-blind mechanical reconciliation only; no target join, acceptable-set decision, library update, retrieval result, metric, or thesis result update.",
+  "counts": {
+    "blocked_prompt_groups": 0,
+    "coordinator_candidate_dispositions": 2291,
+    "coordinator_decision_counts": {
+      "CONFIRMED_FULLY_ACCEPTABLE": 483,
+      "CONFIRMED_INADEQUATE": 1004,
+      "CONFIRMED_PARTIALLY_ADEQUATE": 804
+    },
+    "decision_route_counts": {
+      "EXACT_INDEPENDENT_AGREEMENT": 4365,
+      "PROMPT_BOUND_COORDINATOR_REREVIEW": 2291
+    },
+    "final_adequacy_counts": {
+      "FULLY_ACCEPTABLE": 745,
+      "INADEQUATE": 4508,
+      "PARTIALLY_ADEQUATE": 1403
+    },
+    "rereview_prompt_groups": 832,
+    "total_candidate_dispositions": 6656
+  },
+  "historical_invalid_attempt": {
+    "path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-prompt-bound-coordinator-rereview-invalid-attempt-2026-09-08-v1/coordinator_3",
+    "raw_return_count": 128,
+    "selection_rule": "No return in this archive is read or selected by this reconciliation.",
+    "status": "PRESERVED_UNSELECTED_SCHEMA_INVALID"
+  },
+  "remaining_gate_boundary": {
+    "historical_gate_docket_groups_not_in_rereview_scope": 6,
+    "prohibited_now": [
+      "target join",
+      "acceptable-set creation",
+      "library update",
+      "retrieval or metrics",
+      "K change"
+    ],
+    "required_before_target_join_or_library_closure": [
+      "explicit disposition of every historical gate-docket record",
+      "master-SOP readiness review"
+    ]
+  },
+  "schema_version": "rq2b_nc_phase5_v7_prompt_bound_coordinator_rereview_reconciliation_v1",
+  "status": "PASS_TARGET_BLIND_GROUP_RECONCILIATION_PENDING_GATE_DOCKET"
+}
