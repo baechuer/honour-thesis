@@ -1,0 +1,20 @@
+{
+  "bound_inputs": {
+    "parent_dispatch": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_prompt_bound_coordinator_rereview_2026_09_08_v1",
+    "parent_integrity_sha256": "6496b1ca182a6f0fb042f0bc04cd121762e39b7928367f33192c643332cf8370",
+    "parent_schema_sha256": "82e3c553dfee65ee067863cd96bef9e7498439edcfe0600370e974e8f3b17cc8"
+  },
+  "claim_boundary": "Target-blind targeted reissue input only; no target join, acceptable set, library update, retrieval result, metric, or thesis result update.",
+  "counts": {
+    "parent_coordinator_2_returns": 766,
+    "targeted_reissue_returns": 18
+  },
+  "prohibitions_honoured": [
+    "no target join",
+    "no K change",
+    "no reconciliation or library update"
+  ],
+  "schema_version": "rq2b_nc_phase5_v7_prompt_bound_c2_targeted_reissue_dispatch_v1",
+  "selection_rule": "Exact duplicate rationale across distinct prompt/source input pairs; all 18 selected packets are reissued together without exposing the selection ledger to the reviewer.",
+  "status": "PASS_TARGETED_RATIONALE_REISSUE_DISPATCH_PENDING_RETURNS"
+}
