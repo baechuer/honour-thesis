@@ -10,6 +10,10 @@ from pathlib import Path
 
 from merge_rq2b_i3c import canonical_extraction, representation_row, summarize
 from freeze_rq2b_v7_i3_v4_1_output_selection import verify as verify_selection
+from finalize_rq2b_v7_i3_v4_1_warning_audit import (
+    OUTPUT as WARNING_AUDIT_FINAL,
+    verify as verify_warning_audit,
+)
 from prepare_rq2b_v7_i3_full_reextraction_v4_1 import CACHE, build as build_inputs
 from rq2b_common import serialize_i3_flat, serialize_i3c
 from validate_rq2b_v7_i3_v4_1_1_batch import PREP, ROOT, validate_v4_1_1_semantics
@@ -44,16 +48,24 @@ def json_bytes(value: object) -> bytes:
 
 def build() -> dict[str, bytes]:
     verify_selection()
+    verify_warning_audit()
     assignments_path = ROOT / PREP / "full_reextraction_assignment_manifest.jsonl"
     selection_path = ROOT / SELECTION / "selection_ledger.jsonl"
     assignments = rows(assignments_path.read_bytes())
     selections = rows(selection_path.read_bytes())
     require(len(assignments) == len(selections) == 95, "V4.1 batch coverage mismatch")
     selection_report_path = ROOT / SELECTION / "integrity_report.json"
+    warning_audit_report_path = ROOT / WARNING_AUDIT_FINAL / "integrity_report.json"
     selection_report = json.loads(selection_report_path.read_bytes())
+    warning_audit_report = json.loads(warning_audit_report_path.read_bytes())
     require(selection_report["state"] == "PASS_95_BATCHES_SELECTED_PENDING_MERGE_AND_FRESH_BLINDED_QA", "V4.1 selection report state mismatch")
     require(selection_report["bindings"]["assignment_manifest_sha256"] == sha(assignments_path.read_bytes()), "V4.1 selection assignment binding mismatch")
     require(selection_report["bindings"]["selection_ledger_sha256"] == sha(selection_path.read_bytes()), "V4.1 selection ledger binding mismatch")
+    require(
+        warning_audit_report["state"]
+        == "PASS_ALL_WARNINGS_SOURCE_ONLY_DISPOSITIONED_PENDING_MERGE_AND_BLINDED_QA",
+        "V4.1 warning disposition is not PASS",
+    )
     selection_by_batch = {row["batch_id"]: row for row in selections}
     require(len(selection_by_batch) == 95, "duplicate V4.1 selection batch ID")
     _, input_payloads = build_inputs()
@@ -121,6 +133,7 @@ def build() -> dict[str, bytes]:
             "assignment_manifest_sha256": sha(assignments_path.read_bytes()),
             "selection_ledger_sha256": sha(selection_path.read_bytes()),
             "selection_report_sha256": sha(selection_report_path.read_bytes()),
+            "warning_audit_final_report_sha256": sha(warning_audit_report_path.read_bytes()),
             "i1_i2_v2_report_sha256": sha((ROOT / I1_I2 / "mechanical_report.json").read_bytes()),
             "builder_sha256": sha(Path(__file__).read_bytes()),
         },
