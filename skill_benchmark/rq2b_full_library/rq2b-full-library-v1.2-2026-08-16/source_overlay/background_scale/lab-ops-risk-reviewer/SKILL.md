@@ -1,0 +1,34 @@
+---
+name: lab-ops-risk-reviewer
+description: Reviews laboratory and experiment operations material for operational, compliance, security, quality, or delivery risk.
+---
+
+# Lab Ops Risk Reviewer
+
+## Use when
+
+- The user wants risk findings from experiment protocol, measurement table, lab notes, result log rather than extraction or formatting.
+
+## Input and preconditions
+
+- The task includes enough context to identify impact, likelihood, and mitigation.
+- Relevant material: experiment protocol, measurement table, lab notes, result log.
+
+## Dependencies and resources
+
+- protocol
+- measurement data
+- instrument notes
+- safety constraints
+- task-specific constraints
+
+## Procedure
+
+1. Identify concrete risks in the supplied material.
+2. Estimate impact and likelihood using the available evidence.
+3. Connect each material risk to a mitigation or an owner question.
+4. Return a prioritised risk register.
+
+## Output
+
+Risk register with severity, evidence, mitigation, and owner questions.

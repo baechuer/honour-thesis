@@ -1,0 +1,52 @@
+{
+  "bindings": {
+    "acceptable_freeze_report_sha256": "f77df13f55fd151a2831ba448c6efa4bf760942f9e925f837eeb9a365c8eed4a",
+    "path_resolution_ledger_sha256": "caeee4852899f58136d1ab1788c6856b43fca675cbe9802061090b600d78362f",
+    "preparation_script_sha256": "4689e6a7d495bff9f8403d51ea898651323e2b77efb275b2fbff18e6eeba3ee8",
+    "prompt_manifest_sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+    "source_union_sha256": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b"
+  },
+  "counts": {
+    "core_configurations": 36,
+    "labels": {
+      "ACCEPTABLE_SET": 196,
+      "STRICT": 881
+    },
+    "lanes": {
+      "A_PARENT_DELTA": 363,
+      "B_NC_FULL_UNION": 714
+    },
+    "new_bridge_configurations": 6,
+    "prompts": 1077,
+    "source_bytes": 19662831,
+    "sources": 3798,
+    "strata": {
+      "controlled": 236,
+      "legacy_2member_checkpoint": 65,
+      "public_gold": 127,
+      "source_native_three_member": 649
+    }
+  },
+  "credential_pattern_screen": {
+    "documented_ellipsis_private_key_placeholders": [
+      "skill_benchmark/skills/public_imported_background/public-swebench-k8s-manifest-generator/source/SKILL.original.md"
+    ],
+    "limitation": "Narrow pattern screen, not a guarantee that all sensitive content is absent.",
+    "unresolved_flags": 0
+  },
+  "output_sha256": {
+    "first_matrix_conditions.jsonl": "b66c0dfd23c5fb96869a548f038cd8afa6fc0f99c253f0fe98a66656510e167f",
+    "fixed_candidate_bridge_conditions.jsonl": "d659ff98a5a2534478f68ab44794e4df7d89b23eb3a44a2fbf335cdca42366f7",
+    "source_manifest.jsonl": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225",
+    "source_paths.txt": "f6cf02ec4a11ad126dc2cedc2b6e550a60265da0eb6d0f7d0d9469ab973b570b"
+  },
+  "remaining_gates": [
+    "V7-complete I1/I2/I3C/I3-flat materialisation and semantic QA",
+    "final execution root, model/chunking/instruction/analysis hashes",
+    "grouped dependence/exposure and cost preflight",
+    "payload-specific compute and transfer authorisation"
+  ],
+  "scope_boundary": "No retrieval, embedding, reranking, new adequacy judging or result metrics. V7 labels unchanged; 528 successor deferred.",
+  "source_scope": "Exact frozen primary Markdown bytes only. This does not independently replay every upstream licence or auxiliary-resource byte.",
+  "status": "PASS_V7_SOURCE_PORTABILITY_AND_MATRIX_PREPARATION_NOT_EXECUTION_SEALED"
+}

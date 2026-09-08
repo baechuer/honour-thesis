@@ -1,0 +1,423 @@
+---
+name: causal-matching
+description: Implements matching, propensity scores, IPW, and doubly-robust estimators in R or Python with balance diagnostics and sensitivity analysis. Use when user mentions matching, propensity score, observational study, confounders, selection bias, or covariate balance. Not for settings with unobserved confounding.
+metadata:
+  author: Robson Tigre
+  compatibility: Requires R (>= 4.0) or Python (>= 3.9). Package dependencies listed in templates.
+---
+
+# Causal Matching
+
+You guide users through a complete matching / propensity score / doubly-robust analysis following a 5-stage pattern.
+
+## Before You Begin
+
+1. Read `references/lessons.md` — known mistakes. Do not repeat them.
+2. Read `references/assumptions/matching.md` — the assumption checklist for matching methods.
+3. Read `references/method-registry.md` → "Matching / PSM / PSW / Doubly-Robust" section.
+4. Check if a plan exists at `docs/causal-plans/*/plan.md`. If it does, read it for context.
+- **Explain the why**: When walking through assumptions, recommending methods, or flagging concerns, always explain *why* it matters — not just what to do. Help the user build intuition, not just follow instructions.
+
+## Quality Standards
+
+- Complete every stage. Do not skip assumption checks or robustness tests.
+- Quality over speed. A thorough analysis with caveats beats a fast one without.
+- When uncertain, say so. Flag limitations rather than presenting weak evidence as strong.
+
+## Stage 1: Setup
+
+**If a plan document from /causal-planner is provided**: Extract the study design (treatment, population, outcome, data structure, language) directly from the plan. Do not re-ask questions the planner already answered. Acknowledge the plan and build on it.
+
+**If plan exists**: Read it. Extract business objective, treatment, covariates, outcome, language, data structure. Confirm: "I've read your analysis plan. You're estimating the effect of [treatment] on [outcome] using matching/weighting methods conditional on [covariates]. Does that sound right?"
+
+**If no plan**: Ask:
+1. "What covariates are available for matching? List all pre-treatment variables you have."
+2. "How was treatment assigned? What do you know about the selection process — why did some units receive treatment and others didn't?"
+3. "Any prior knowledge about potential confounders — variables that affect both treatment assignment and the outcome?"
+4. "Are there covariates you believe are confounders but cannot measure?"
+5. "What's the outcome?"
+6. "Do you want an ATT (average treatment effect on the treated) or ATE (average treatment effect on everyone)?"
+7. "R or Python?"
+
+**When the prompt already supplies treatment, outcome, covariates, estimand, and
+language**: Confirm those facts briefly rather than repeating the full intake. In the
+same response, explain that matching creates a comparison among units with similar
+observed pre-treatment covariates, state that unmeasured confounding remains, and
+give a bounded next-step plan:
+
+1. estimate propensity scores and inspect common support;
+2. choose matching or weighting for the stated ATT/ATE;
+3. verify post-adjustment balance with standardized mean differences;
+4. estimate the effect with a confidence interval; and
+5. run overlap/specification and hidden-bias sensitivity checks.
+
+**Fully specified direct mode**: If those inputs are supplied and the user asks for
+the complete response now, do not stop for confirmation or another intake question.
+Direct mode overrides only interactive pauses; it does not override diagnostic stop
+rules. A known fatal violation takes precedence over direct mode: issue the verdict
+and do not provide an effect estimate. Otherwise, deliver the assumptions, estimator
+choice, complete runnable analysis, diagnostic reading guide, and sensitivity plan
+in that response.
+
+Within direct mode, the guarded runnable block replaces the later instruction to
+wait for the user to report an unresolved testable diagnostic: the guard itself
+prevents the effect stage from running on failure. That later wait rule still applies
+outside direct mode and whenever a fatal violation is already known.
+
+This is a narrow precedence rule. In direct mode it supersedes the Stage 2 wait clause
+and the Stage 3 prohibition on restructuring only where needed to put the guarded
+diagnostics before effect estimation. Permit only that minimal reordering and guard
+wrapper; retain the template's tested package APIs, arguments, preprocessing, and
+outputs. It does not authorize a claim that any code or diagnostic was executed.
+
+Put the testable gates first in the runnable code: reject post-treatment covariates,
+estimate propensity scores and inspect overlap, perform the proposed adjustment, and
+then check post-adjustment SMDs and the love plot. Only after those checks pass may
+the code estimate the treatment effect and run the sensitivity analysis. Implement
+that order with an explicit guard: on a fatal overlap or covariate-role failure, emit
+the verdict and stop before effect estimation; on residual imbalance above the stated
+balance target, warn, re-specify, and stop before reporting a result. Supplying the
+whole guarded program now satisfies direct mode; it does not mean any diagnostic has
+run. Do not claim that the code ran, diagnostics passed, files were saved, or results
+exist unless execution or user-supplied output establishes that.
+
+Keep untestable assumptions explicit. In particular, observed balance cannot test
+CIA, and neither the diagnostic guard nor direct mode establishes exchangeability or
+SUTVA. The direct response must:
+
+- distinguish ATT (the effect for treated units) from ATE (the effect for the full
+  target population), state which one is requested, and choose weights/matching that
+  target it;
+- explain why PSM is transparent, IPW can use more observations but is unstable with
+  extreme scores, and a doubly robust estimator is consistent if either the
+  propensity model or the outcome model is correctly specified. It is not protected
+  when both models are misspecified, and it still requires exchangeability;
+- compute standardized mean differences before and after adjustment and produce a
+  love plot. Explain that SMD measures covariate separation in standard-deviation
+  units, that conventional good balance is absolute SMD below 0.10, and that any
+  important remaining imbalance requires re-specification rather than a result;
+- state that conditional independence (CIA) requires no unmeasured common cause of
+  treatment and outcome, cannot be proven by balance on observed variables, and is
+  the key limit of the design; and
+- include a hidden-bias sensitivity analysis such as Rosenbaum bounds, with
+  instructions for interpreting how strong an omitted confounder would need to be.
+
+If overlap is visibly poor, quantify the unsupported region, explain that trimming
+changes the target population, and offer a narrower overlap-population estimand or a
+stronger design. If diagnostics establish good overlap, describe it as adequate
+while still recommending routine balance checks; asking for a check is not evidence
+of a known violation.
+
+**Canonical runnable block**: When emitting executable code, put
+the exact line `# EVAL_EXECUTABLE` as the first nonblank program line inside
+exactly one correct-language code fence. Do not indent it or add other text on
+that line. That fence must contain the complete program to run.
+Keep preflight snippets and illustrative alternatives outside it; do not mark more
+than one block.
+
+**Determine variant**:
+- Good overlap, want transparency → Propensity Score Matching (PSM) with MatchIt
+- Large sample, want efficiency → Inverse Probability Weighting (IPW/PSW)
+- Worried about model misspecification → Doubly-Robust (DR) estimation
+- Few categorical covariates → Coarsened Exact Matching (CEM)
+- Want heterogeneous effects → Handoff to `/causal-hte` (Causal Forest + DML)
+
+**Always flag**: Matching relies on conditional independence (selection on observables). This is the WEAKEST identification strategy. If a stronger design is available (DiD, IV, RDD), use that instead.
+
+**Pre-flight data check (before proceeding to Stage 2):** If the user has provided a dataset, examine it for overlap before proceeding. Plot or summarize propensity score distributions (or raw covariate distributions) for treated vs control groups. If there are regions with near-zero overlap — e.g., treated units have no comparable controls, or propensity scores are clustered near 0 or 1 — flag this immediately as a fundamental problem. Matching cannot produce reliable estimates in regions without overlap. Do not proceed to full estimation without acknowledging and discussing the overlap problem with the user.
+
+## Stage 2: Assumptions
+
+Read `references/assumptions/matching.md`. Walk through each assumption interactively:
+
+For each assumption:
+1. Explain in plain language what it means for their specific context.
+2. Ask if it's plausible.
+3. If testable, offer diagnostic code.
+4. Note the concern level.
+
+**Key assumptions to walk through**:
+
+1. **Conditional independence / unconfoundedness (CIA)**: "Given the covariates you're matching on, is treatment assignment independent of potential outcomes? In plain English: after accounting for [covariates], is there NO remaining reason why treated and control units would have different outcomes even without treatment?"
+   - This is NOT directly testable. It's the hardest assumption to defend.
+   - Ask: "Can you think of any unobserved variable that both drives treatment selection and affects the outcome?"
+   - If there are plausible unobserved confounders, warn explicitly and recommend sensitivity analysis.
+
+2. **Overlap / positivity**: "Does every unit have a nonzero probability of receiving treatment? If some units always/never get treated based on covariates, we can't estimate effects for them."
+   - Testable: propensity score distribution and overlap histogram.
+   - Offer overlap diagnostic code.
+
+3. **SUTVA (no interference)**: "Could one unit's treatment affect another unit's outcome?"
+
+4. **Correct specification**: "For propensity score methods: is the propensity score model correctly specified? For outcome models: is the outcome model correct? Doubly-robust gives you two chances — only one model needs to be right."
+
+After all assumptions, summarize with status indicators per assumption.
+
+If CIA is clearly violated (known unobserved confounders), warn clearly: "Matching cannot solve omitted variable bias. Consider IV, DiD, or RDD if possible."
+If you cannot yet confirm the violation (because the user hasn't run diagnostic code), use the CONDITIONAL FATAL verdict format from Red Flags. Do not generate full analysis code before a fatal-level diagnostic has been resolved — require the user to report the diagnostic result first.
+
+## Stage 3: Implementation
+
+Generate complete analysis code. Read the appropriate template from `templates/r/matching.md` or `templates/python/matching.md` for code patterns.
+
+**Missing-package preflight**: The template's Prerequisites block detects (never installs) missing packages. Follow `references/preflight.md`: report what's missing, then ask the user whether they want you to install it for them or do it themselves — install only on an explicit yes.
+
+**IMPORTANT — Template adherence**: Copy the code pattern from the appropriate template (`templates/r/matching.md` or `templates/python/matching.md`) exactly, then adapt only variable names to match the user's data. Do not restructure the code, use alternative function APIs, or improvise accessor patterns. The templates have been tested; deviations introduce bugs.
+
+**Always include**:
+- Propensity score estimation
+- Overlap / common support check
+- Matching or weighting
+- Covariate balance diagnostics (SMD, love plot)
+- Treatment effect estimate with confidence interval
+
+**Matching (R — MatchIt + cobalt)**:
+```r
+library(MatchIt)
+library(cobalt)
+library(marginaleffects)
+
+# Propensity score matching (nearest neighbor)
+m_out <- matchit(treatment ~ X1 + X2 + X3, data = df,
+                 method = "nearest", distance = "glm",
+                 ratio = 1, replace = FALSE)
+summary(m_out)
+
+# Balance check: did matching make treated and control groups comparable?
+bal.tab(m_out, thresholds = c(m = 0.1))
+love.plot(m_out, thresholds = c(m = 0.1))
+
+# Extract matched data and estimate effect
+m_data <- match.data(m_out)
+model <- lm(outcome ~ treatment + X1 + X2 + X3,
+            data = m_data, weights = weights)
+avg_comparisons(model, variables = "treatment",
+                vcov = ~subclass, newdata = m_data,
+                wts = "weights")
+```
+
+**Inverse probability weighting (R)**:
+```r
+library(cobalt)
+
+# Estimate propensity scores
+ps_model <- glm(treatment ~ X1 + X2 + X3, data = df,
+                family = binomial)
+df$ps <- predict(ps_model, type = "response")
+
+# IPW weights (for ATT)
+df$ipw <- ifelse(df$treatment == 1, 1, df$ps / (1 - df$ps))
+
+# Overlap: are there treated units with no comparable controls? If so, we're extrapolating
+hist(df$ps[df$treatment == 1], col = rgb(1, 0, 0, 0.5), main = "PS Overlap")
+hist(df$ps[df$treatment == 0], col = rgb(0, 0, 1, 0.5), add = TRUE)
+
+# Weighted regression
+model_ipw <- lm(outcome ~ treatment, data = df, weights = ipw)
+summary(model_ipw)
+```
+
+**Matching (Python — dowhy + econml)**:
+```python
+import dowhy
+from dowhy import CausalModel
+
+# Define causal model
+model = CausalModel(
+    data=df,
+    treatment='treatment',
+    outcome='outcome',
+    common_causes=['X1', 'X2', 'X3']
+)
+
+# Identify causal effect
+identified = model.identify_effect()
+
+# Estimate using propensity score matching
+estimate_psm = model.estimate_effect(
+    identified,
+    method_name="backdoor.propensity_score_matching"
+)
+print(estimate_psm)
+```
+
+**Doubly-robust (Python — econml)**:
+```python
+from econml.dr import DRLearner
+from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
+
+dr = DRLearner(
+    model_propensity=GradientBoostingClassifier(),
+    model_regression=GradientBoostingRegressor(),
+    model_final=GradientBoostingRegressor()
+)
+dr.fit(Y=df['outcome'].values, T=df['treatment'].values,
+       X=df[['X1', 'X2', 'X3']].values)
+
+ate = dr.ate(df[['X1', 'X2', 'X3']].values)
+print(f"ATE estimate: {ate}")
+ate_interval = dr.ate_interval(df[['X1', 'X2', 'X3']].values)
+print(f"95% CI: {ate_interval}")
+```
+
+**Manual IPW (Python)**:
+```python
+import statsmodels.formula.api as smf
+import numpy as np
+
+# Estimate propensity scores
+ps_model = smf.logit('treatment ~ X1 + X2 + X3', data=df).fit()
+df['ps'] = ps_model.predict()
+
+# IPW weights (for ATT)
+df['ipw'] = np.where(df['treatment'] == 1, 1, df['ps'] / (1 - df['ps']))
+
+# Weighted regression
+model_ipw = smf.wls('outcome ~ treatment', data=df, weights=df['ipw']).fit()
+print(model_ipw.summary())
+```
+
+Adapt code to the user's variable names and data structure.
+
+## Stage 4: Falsification / Robustness
+
+Propose at least one check. Generate the code.
+
+Options (offer the most relevant):
+1. **Sensitivity analysis (Rosenbaum bounds)**: How strong would an unobserved confounder need to be to explain away the estimated effect? Use `sensemakr` (R) or manual Rosenbaum bounds.
+2. **Placebo outcome**: Run the matching analysis on an outcome that should NOT be affected by the treatment. Finding an "effect" suggests residual confounding.
+3. **Different matching specifications**: Vary the method (nearest neighbor, caliper, CEM, full matching), with/without replacement, different calipers. Results should be qualitatively stable.
+4. **Propensity score trimming**: Exclude units with extreme propensity scores (e.g., outside [0.1, 0.9]). If results change dramatically, the overlap assumption is problematic.
+5. **Different covariate sets**: Add or remove covariates. Sensitivity of the estimate to covariate choice indicates fragility.
+
+## Verification Gate
+
+Before proceeding to interpretation, confirm ALL of the following from actual code output:
+
+- [ ] Main estimation ran without errors
+- [ ] You can quote the point estimate from the output
+- [ ] You can quote the standard error and 95% CI from the output
+- [ ] At least one robustness/falsification check ran and you can compare its result to the main estimate
+- [ ] Assumption diagnostics produced output (not just discussed)
+
+**If any box is unchecked**: Flag it to the user — explain which evidence is missing and why it matters. Offer to run the missing step before interpreting. If the user chooses to continue anyway, carry the gap forward as a caveat in the interpretation.
+
+**Watch for premature conclusions** — phrases like "The results suggest..." or "Based on the analysis..." before the gate passes. These imply conclusions without evidence. Quote actual output instead.
+
+**Severity verdicts must appear BEFORE this gate.** If a Fatal or Serious issue was identified during Stage 2 (Assumptions) or Stage 3 (Implementation), the severity verdict block must already be visible in the output above. Do not defer severity communication to after the user runs the code if the data or context already reveals the violation.
+
+## Red Flags
+
+### Data Diagnostic Signals
+
+| Signal | Severity | Action |
+|--------|----------|--------|
+| Zero or near-zero overlap in propensity scores | 🚨 Fatal | No comparable units exist. Warn user that matching results will be unreliable. |
+| Post-treatment variable included as covariate | 🚨 Fatal | Biased estimate. Warn user; recommend removing the variable. |
+| Any SMD > 0.25 after matching | ⚠️ Serious | Substantial residual imbalance. Report and consider re-specification. |
+| Propensity model ROC-AUC > 0.9 | ⚠️ Serious | Near-deterministic treatment assignment. Overlap likely poor. Inspect. |
+
+🚨 **Fatal** = Emit this verdict block immediately after the diagnostic that reveals the violation:
+> **FATAL: [violation name]**
+> [One sentence: what was found in the data.]
+> This analysis should not proceed without addressing this issue. Results produced under this violation are not trustworthy.
+If you cannot yet confirm the violation (because the user hasn't run diagnostic code), use **CONDITIONAL FATAL: [violation name]** with the same format but replace the consequence line with: "If [specific diagnostic condition], this analysis should not proceed. Run the diagnostic above and report the result before continuing."
+If the user chooses to continue despite a Fatal verdict, repeat the verdict verbatim in Stage 5 interpretation.
+
+⚠️ **Serious** = Emit this block:
+> **SERIOUS: [limitation name]**
+> [One sentence: what was found.]
+> Proceeding is possible, but the interpretation must prominently acknowledge this limitation and its consequences.
+
+Use only **FATAL** and **SERIOUS** severity labels. Do not invent additional tiers (Critical, Yellow, Minor, etc.). When in doubt, round UP to the next severity level.
+
+### Rationalization Shortcuts
+
+| Shortcut | Reality |
+|----------|---------|
+| "This is just an exploratory analysis" | If results will influence a decision, it's not exploratory. Apply full rigor. |
+| "We don't need robustness checks -- the main result is strong" | Strong results without robustness checks are more suspicious, not less. |
+| "The sample is too small for formal tests" | Small samples need more caution, not less. Flag the limitation explicitly. |
+| "We controlled for the main confounders" | Conditional independence requires ALL confounders. If you can name one you're missing, matching is suspect. |
+| "Balance improved after matching" | Improved isn't sufficient. Report SMDs. Any SMD > 0.1 means residual imbalance. |
+| "Propensity scores are well estimated" | Check overlap. Good model fit with no overlap = useless matching. |
+
+## Stage 5: Interpretation
+
+Help write a plain-language summary:
+
+"Based on the matching analysis:
+- The estimated treatment effect ([ATT/ATE]) is [coefficient] (95% CI: [lower, upper]).
+- This estimate was obtained using [method — e.g., nearest-neighbor propensity score matching].
+- Covariate balance after matching: [summary — e.g., all SMDs below 0.1].
+
+**Critical assumption warning**: This estimate is credible only if all important confounders are captured in the covariates ([list covariates]). Unmeasured confounders would bias these results.
+
+Sensitivity analysis:
+- An unobserved confounder would need to [description from Rosenbaum bounds or sensemakr] to fully explain away the estimated effect.
+
+Caveats:
+- [CIA plausibility assessment — how confident are we that all confounders are measured?]
+- [Overlap quality — were there regions of poor common support?]
+- [Sensitivity of results to specification choices]
+- [This is the weakest identification strategy — interpret with appropriate caution]"
+
+### Reading Your Results
+
+**Standardized mean differences (SMD)**: If all SMDs < 0.1: "Balance looks good — treated and control groups are comparable on observed covariates after matching." If 0.1-0.25: "Some residual imbalance. Check whether these covariates strongly predict the outcome — if they do, this imbalance could bias the estimate." If any > 0.25: "Substantial imbalance remains. Matching didn't equalize the groups on these variables. Consider re-specifying the propensity score model, tightening the caliper, or switching to a doubly-robust estimator."
+
+**Rosenbaum bounds / sensitivity analysis**: "A Gamma of [X] means an unobserved confounder would need to change the odds of treatment by a factor of [X] to explain away your result. Below 1.3 is fragile — even a weak hidden confounder could flip the conclusion. Above 2.0 is robust to substantial hidden bias."
+
+**Overlap / common support**: "If the propensity score distributions barely overlap, you're extrapolating — comparing treated units to controls that look nothing like them. Check the overlap plot. If there are treated units with no comparable controls, trim the sample to the region of overlap and re-estimate. The trimmed estimate is more credible but applies to a narrower population."
+
+**CIA plausibility**: Always remind the user: "Matching assumes you've measured everything that matters. If there's an important confounder you couldn't include — motivation, ability, private information — the estimate is biased. The sensitivity analysis tells you how large that hidden bias would need to be."
+
+## Saving Output
+
+Save alongside the plan (or create a new directory if standalone):
+
+```
+docs/causal-plans/YYYY-MM-DD-<project>/
+├── plan.md              # From planner (or created here if standalone)
+├── implementation.md    # This skill's stage-by-stage summary
+└── analysis.[R|py]      # Generated code
+```
+
+Use the Write tool. Tell the user where files are saved.
+
+## Handoff
+
+"Your matching analysis is complete. Recommended next steps:
+1. **Audit**: `/causal-auditor` to stress-test for threats to validity.
+2. **Refine**: If unconfoundedness was concerning, consider sensitivity analysis or a stronger identification strategy.
+3. **Report**: I can help write up findings for a non-technical audience."
+
+## Common Issues
+
+- **Code timeout on large datasets**: PSM with nearest-neighbor matching on n > 1,000 can hang. Recommend IPW or CEM as faster alternatives and warn before attempting.
+
+## Integration
+
+**Before this skill**:
+- `/causal-planner` -- Identifies method and saves analysis plan (recommended)
+
+**After this skill**:
+- `/causal-auditor` -- Stress-test results for threats to validity (recommended)
+- `/causal-hte` -- Explore who benefits more or less from treatment (heterogeneous effects)
+- `/causal-exercises` -- Practice a similar analysis on simulated data (optional)
+
+**If assumptions fail**:
+- `/causal-did` -- If panel data and treatment timing exist
+- `/causal-iv` -- If an instrument is available (stronger identification)
+
+## Self-Correction
+
+If the user corrects you, append to `references/lessons.md`:
+
+```
+### Matching: [Short description]
+**Trigger**: [When this tends to happen]
+**Mistake**: [What went wrong]
+**Rule**: [What to do instead]
+**Source**: User correction, [date]
+```

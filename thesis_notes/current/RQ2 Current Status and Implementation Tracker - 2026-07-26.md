@@ -1,5 +1,7 @@
 # RQ2 Current Status and Implementation Tracker
 
+> **2026-09-08 V7 final freeze replay / core-first preparation.** The 1,077-group final acceptable-set freeze is verified (881 strict, 196 multi-acceptable; 149 exclusions preserved), with 3,798 exact primary source documents now portable. The earlier local-checkout absence was stale fetch state, not an incomplete final audit. User-directed order: B36 core configurations, C6 fixed-candidate diagnostics, then wiki/graph/tree feasibility, then an optional small system. Benchmark freeze is complete; V7-wide representation QA and the specific execution-input/budget seal remain pending. No new retrieval or results were produced. Current detail: `thesis_notes/current/RQ2 First Matrix and Architecture Extension Roadmap - 2026-09-08.md`; preparation: `skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/`. Dated historical entries below remain provenance and do not reopen the closed V7 audit or execute the deferred 528-group successor.
+
 Date: 2026-08-16 status refresh of the 2026-07-26 frozen design
 
 Status: **current canonical operational tracker for RQ2**.
