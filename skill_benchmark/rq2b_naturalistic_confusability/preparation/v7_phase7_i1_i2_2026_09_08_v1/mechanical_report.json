@@ -1,0 +1,51 @@
+{
+  "bindings": {
+    "first_preparation_report_sha256": "55f666bc3daa96f3e37f7209761b4a0c06eb7aaf14484db0a4b7d6aea94725e0",
+    "identity_parser_module_sha256": "ff1fe28a2c3652150c90c47003d4e07f74761df2b0888a746905189b238a3642",
+    "path_guard_module_sha256": "4689e6a7d495bff9f8403d51ea898651323e2b77efb275b2fbff18e6eeba3ee8",
+    "script_sha256": "4492c6f8e3662bd7f1afe2bdb2321bede342befdeea402afc8b03921b3684f4a",
+    "serializer_module_sha256": "2db7165a7c0944a3c0bf163861347f207572d3999bdb046e8a4f43de7b2251b1",
+    "source_manifest_sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225",
+    "source_union_sha256": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b"
+  },
+  "counts": {
+    "i1_rows": 3798,
+    "i1_selector_chars": 1194515,
+    "i1_selector_utf8_bytes": 1195702,
+    "i2_exact_byte_rows": 3798,
+    "i2_selector_chars": 19460827,
+    "i2_selector_utf8_bytes": 19662831,
+    "source_rows": 3798
+  },
+  "formal_execution_ready": false,
+  "identity_policy": "Reuse the existing native frontmatter parser and I1 serializer; nonempty fields are not semantic/source-identity QA approval.",
+  "local_derived_artifacts": {
+    "i1-discovery.jsonl": {
+      "bytes": 2254113,
+      "path": "skill_benchmark/cache/rq2b_v7_phase7_i1_i2_2026_09_08_v1/i1-discovery.jsonl",
+      "rows": 3798,
+      "sha256": "672928a98f31cf65aa90be752191495a9bebefec929b1d2b8b804afe66b3744e"
+    },
+    "i2-original.jsonl": {
+      "bytes": 21251765,
+      "path": "skill_benchmark/cache/rq2b_v7_phase7_i1_i2_2026_09_08_v1/i2-original.jsonl",
+      "rows": 3798,
+      "sha256": "8860e415fa7ae6718e5e2b6ca3e57605150120f30a8414e6c6931a99355952ec"
+    }
+  },
+  "network_calls": 0,
+  "remaining": [
+    "I1 parsing/identity semantic QA",
+    "V7-complete I3C/I3-flat extraction, reuse provenance and matched-evidence QA",
+    "master-SOP stratified blinded representation QA",
+    "dependency/exposure and exact tokenizer/window preflight",
+    "final runtime root and payload-specific compute/transfer seal"
+  ],
+  "schema_version": "rq2b-v7-phase7-mechanical-preparation-v1",
+  "selector_runs": 0,
+  "status": "PASS_I1_I2_MECHANICAL_MATERIALISATION_PENDING_PHASE7_QA_AND_I3",
+  "token_boundary": "Characters and UTF-8 bytes are storage/context-burden inventory, not model token counts, context feasibility, cost or latency results.",
+  "tracked_output_sha256": {
+    "source_view_inventory.jsonl": "7ccbfc94dab6b2e5c5cac159531eb950af0c6da783b88da8168a65905997f13a"
+  }
+}

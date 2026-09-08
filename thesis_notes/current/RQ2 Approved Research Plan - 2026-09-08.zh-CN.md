@@ -1,17 +1,15 @@
-# RQ2 实验设计、可选小系统与结果解释规范
-
-> **规划地位已由正式定稿取代（2026-09-08）。** 本 discussion-spec-v2 保留为讨论记录；新 RQ2 的主研究计划是 `RQ2 Approved Research Plan - 2026-09-08.zh-CN.md`。核心矩阵与统计规则已定稿，约 20,000 个额外背景源的规模扩展明确为未来工作；本页下方“待批准”字样只描述此前讨论状态。
+# RQ2 正式研究计划：语义混淆下的全库技能路由
 
 日期：2026-09-08  
-版本：discussion-spec-v2（同日 fetch/replay 纠正与用户优先级更新）  
-状态：`CORE_FIRST_SEQUENCE_USER_DIRECTED / EXECUTION_SEAL_PENDING`  
+版本：rq2-approved-research-plan-v1  
+状态：`FINAL_APPROVED_RESEARCH_PLAN / LOCAL_EXECUTION_PREPARATION_STARTED`  
 目的：一份即使不开发新系统、或新系统没有胜出，也能独立完成研究问题的实验设计。
 
-本文件不替换既有 master SOP、V7 冻结包、旧实验协议、原始 returns 或已发表在论文中的结果。用户本轮已授权合并到 GitHub main，并指定“先核心矩阵，再考虑 wiki/graph/tree，最后设计小系统”。该授权不等同于具体模型调用、下载、外传与预算的执行 seal；本稿不授权重新标注。统计阈值与可选方法细节仍是待执行前确认的提案。
+本文件由研究者于 2026-09-08 明确要求正式定稿，成为新 RQ2 的主研究计划；它取代 discussion-spec-v2 的规划地位，不回写历史 RQ1/RQ2a/V3 结果、master SOP 或 V7 benchmark/label freeze。当前必做范围为 B36+C6、P1–P5、§10–14 的指标/统计/解释规则。§8 的 ECR 是可退出设计草案，wiki/graph/tree 与约 20,000 个额外 background sources 属未来扩展，不是当前必须运行的条件。计划已批准，不再作为待逐项审批的草稿；具体 runtime root、模型/窗口可用性、源传输与预算仍须按 master SOP 绑定后启动正式 selector。
 
 ## 0. 先说结论
 
-建议把贡献放在三个可以分别成立的层次：
+正式计划把贡献放在三个可以分别成立的层次：
 
 1. **信息证据**：RQ1 判断哪些操作信息在规定条件下有区分价值，不宣称七个字段是新发明或具有普适排名。
 2. **方法评价**：RQ2a 隔离表示与信息利用机制；RQ2b 检验这些能力进入完整库后是否仍成立，以及代价、失效位置和适用条件。这是必须能独立完成的核心。
@@ -19,7 +17,7 @@
 
 不把“提出新系统且必须比所有系统好”写成 thesis 成立条件。也不把任何失败都包装为贡献：只有实验有效、反例可复现、解释有证据并能限定既有假设时，负结果才有研究价值。
 
-推荐核心规模：36 个端到端配置 + 6 个新增固定候选诊断配置，共 42 个新配置。SSL-style 比较、既有 field-aware 迁移、小系统分别是可退出模块；不要求把所有扩展交叉成巨大矩阵。
+冻结核心规模：36 个端到端配置 + 6 个新增固定候选诊断配置，共 42 个新配置。SSL-style 比较、既有 field-aware 迁移、小系统分别是可退出模块；不要求把所有扩展交叉成巨大矩阵。
 
 用户本轮确定的顺序：先完成 B 的 36 配置，再做 C 的 6 个诊断；随后依据文献与可行性评估 wiki/graph/tree 扩展，最后设计可退出的小系统。下文 ECR 只是候选设计，不是必须先于主矩阵实现的任务。若小系统设计已受到本轮 V7 结果影响，其 V7 评价应标 exploratory；不能继续声称未见过这些结果。
 
@@ -29,7 +27,7 @@
 
 > 在语义相近但操作要求不同的技能选择中，不同技能表示与路由机制如何影响选择质量，并产生什么准确性、上下文与计算成本权衡？
 
-英文工作稿：
+正式英文研究问题：
 
 > How do skill representations and routing mechanisms affect the selection of operationally suitable skills under semantic confusability, and what accuracy–context–cost trade-offs arise?
 
@@ -51,6 +49,23 @@ RQ2b 包含普通 lexical/dense baseline，不要求每种方法显式消费七�
 - AQ4：质量变化需要多少离线处理和在线开销，何时值得？
 
 新系统只增加一个 optional question：在相同候选、模型与源证据下，显式核对请求约束是否优于一般相关性评分？
+
+
+### 1.4 规模是动机与待验证维度，不是提前成立的结论
+
+当前研究并非只在一个三成员 cluster 内选择：RQ2a 隔离局部混淆，RQ2b 则对同样来源的请求在 **3,798 个候选**中检索，再按固定候选预算排序。1,077 是 query/group 数，3,798 是候选库大小，K=6 是标签审查主池大小；三个数字不能互换。
+
+| 范围 | 定稿中的地位 | 能作的结论 |
+| --- | --- | --- |
+| 当前 V7，3,798 candidates / 1,077 queries | 必做 B36+C6，保持 frozen sources 与 labels | 指定库规模上的质量、信息负担、成本和失败位置 |
+| wiki/graph/tree 与可选自研小系统 | 核心之后的有条件扩展 | 只有执行并验证后才有架构/机制结果；不做也不影响核心完成 |
+| 额外约 20,000 background sources 的 scale-out | 明确 FUTURE / NOT_EXECUTED / NOT_IN_CURRENT_MATRIX | 未来测库规模增长时质量–成本曲线；现在不作数万级 scalability claim |
+
+论文可使用“面向增长中的技能库的检索问题”作为动机。当前结果措辞应是“在受测规模下的全库技能路由”，不能写成已证明 large-scale scalability，更不能仅因当前规模未达数万就判某方法 not scalable。
+
+“直接把库放进 context”是有效的替代思路，不应先行排除。但源数量不等于 token 数，完整原文与简述也不等价；能装入窗口不等于准确、便宜或低延迟。长上下文位置效应与 RAG/long-context 的质量–成本交换已有研究，但它们不是当前 skill benchmark 的结果。[Lost in the Middle](https://arxiv.org/abs/2307.03172)、[RAG or Long-Context LLMs?](https://arxiv.org/abs/2407.16833)
+
+纯 LLM 全库逐项打分、一次全库 in-context 选择、检索后 Top-20 LLM 重排是三种不同方案；不能都归为“pure LLM 不可扩展”。同理 graph 的离线构图成本和在线局部检索成本分开测，不能预设 graph 一定不适合大规模。
 
 ## 2. 证据状态与冻结边界
 
@@ -236,7 +251,7 @@ GS 拟继承 revision `78986e1142d12857cfd85b8005e62902cd42d858`，prompt contra
 
 不必为每个矩阵单元编一个“预期胜出”假设。必须预先定义问题、主要比较、估计对象、实用差异和解释规则；有依据时提出可证伪预测。无方向比较完全合法。
 
-### 7.1 五个核心主要比较（新提案，不冒充旧八假设）
+### 7.1 五个核心主要比较（本计划固定，不回写旧八假设）
 
 主要推断范围是冻结 **NC lane**；parent lane 作为历史迁移/稳健性复现，另分 public-original 与 controlled 来源报告。所有 strata 均运行，不能因为不显著而隐藏。
 
@@ -414,7 +429,7 @@ C* membership 在运行后机械计算，但 slice 规则现在固定；不按�
 
 ### 11.2 新推断提案
 
-这是待批准的 V7 analysis amendment，不回写旧 RQ2a/V3 的统计 contract。
+这是研究者批准的前瞻 V7 analysis amendment；在本轮 selector outcomes 前固定，不回写旧 RQ2a/V3 的统计 contract。
 
 - 10,000 whole-group percentile bootstrap，seed `2026090801`；报告配对差值的 two-sided 95% descriptive CI。
 - P1/P3/P4/P5 使用 100,000 次 whole-group paired sign-flip、seed `2026090802`，双侧检验；每次整组翻转，再计算 prompt-weighted 差值。近似交换性假设和历史探索限制一起披露。
@@ -424,7 +439,7 @@ C* membership 在运行后机械计算，但 slice 规则现在固定；不按�
 
 ### 11.3 实用阈值与不确定性
 
-建议继承旧研究使用的 **3 percentage points** 作为主质量最小有意义差异/非劣容忍值；这是研究者的应用取舍，不是学校评分标准。另报告 1pp/5pp sensitivity，但不改主结论。
+本计划采用 **3 percentage points** 作为主质量最小有意义差异/非劣容忍值；这是研究者的应用取舍，不是学校评分标准。另报告 1pp/5pp sensitivity，但不改主结论。
 
 | 结果 | 允许使用的措辞 | 禁止推论 |
 | --- | --- | --- |
@@ -529,7 +544,7 @@ C* membership 在运行后机械计算，但 slice 规则现在固定；不按�
 
 - 高质量且低成本：检查 uncertainty 和 coverage 后可推荐该受测范围的 Pareto 优势。
 - 更高质量、更高成本：报告每提升 1pp 的额外开销及适用预算，不自行宣布值得。
-- 质量 practical-similar 或通过预设 non-inferiority，在线实测开销至少降低 20%：可称候选 efficiency improvement；20% 是本稿建议的 practical bar，不是客观常数。token 减少而 latency 未降，只能称 token reduction。
+- 质量 practical-similar 或通过预设 non-inferiority，在线实测开销至少降低 20%：可称候选 efficiency improvement；20% 是本计划采用的 practical bar，不是客观常数。token 减少而 latency 未降，只能称 token reduction。
 - 同时更差更贵：不推荐该实现；保留失效分析。
 - 相同点估计但区间宽：不选择赢家；描述证据不足。
 
@@ -539,7 +554,7 @@ C* membership 在运行后机械计算，但 slice 规则现在固定；不按�
 
 | 阶段 | 产物/通过标准 | 停止条件 |
 | --- | --- | --- |
-| D0，方向与执行细则 | 用户已指定先 B36、再 C6、再架构扩展评估、最后小系统；统计/实用阈值仍需执行前确认 | 方向批准不替代具体运行 seal |
+| D0，正式研究计划 | PASS：用户要求本版正式定稿；B36+C6、P1–P5、统计/实用阈值与解释规则固定 | 后续科学改动需 versioned amendment；正式计划不替代具体 runtime/预算 seal |
 | D1，V7 closure / source portability | 已 PASS：1,077 frozen prompts、149 exclusions、3,798 exact primary sources；详见准备包 | 后续 drift 才阻断；不重审、不切换 528 |
 | D2，Phase 7/8 | 四表示 1:1 source binding、exact spans、matching multisets、至少 120 blinded QA；root readiness PASS | critical error 任一；major error >5% 总体或 reviewed field stratum，按 master SOP 处理 |
 | D3，analysis/exposure freeze | dependency groups、strata、历史暴露、五个主要比较、unknown-label bounds、failure sampling 冻结 | metadata不完整影响主分母/依赖结构；不能靠硬编码数量通过 |
@@ -605,9 +620,9 @@ C* membership 在运行后机械计算，但 slice 规则现在固定；不按�
 
 建议主文只放 5–7 个核心图表：RQ链与边界、方法/信息表、关键对照、阶段错误分解、NC诊断、质量–成本、精选双向反例。完整 42–50 配置放 appendix/repository，不让 examiner 重建版本历史。
 
-## 18. 用户已确定的顺序与仍需绑定的细则
+## 18. 已批准计划与剩余执行输入
 
-用户已确定先跑核心矩阵，再考虑 wiki/graph/tree，最后设计小系统，并授权合并到 main。以下保持研究方向或作为执行前细则，不把宽泛认可冒充每个数值阈值均获批准：
+用户本轮明确要求这版正式定稿，并把大规模背景扩展列为未来事项。主计划现在固定如下；不再逐项重新请求研究方向批准：
 
 1. 保留现有 RQ2a，RQ2b 以 semantic-confusability 下的 operationally suitable routing 为核心。
 2. B36+C6 是完整核心；架构扩展待核心后做 feasibility，ECR 是可退出候选，不提前阻塞主矩阵。
@@ -646,7 +661,7 @@ benchmark freeze 与 N/M 已验证；仍须填齐 execution representation QA/ro
 - [INFO4913 2026 S2 outline](https://www.sydney.edu.au/units/INFO4913/2026-S2C-SU-CC)、[COMP4106 2026 S2 outline](https://www.sydney.edu.au/units/COMP4106/2026-S2C-SU-CC)：现行公开 assessment components；详细 rubric/AI instructions 以实际 Canvas 为准。
 - [INFO4990 2026](https://www.sydney.edu.au/units/INFO4990)：研究计划、批判评价、文献与清楚沟通的学习要求，不是 thesis 内部评分权重证明。
 
-本次未运行任何 selector、未计算新 benchmark metric、未变更任何 target/acceptable label、未上传源材料。方案阈值、矩阵和 ECR 规则是本稿研究建议，不是 literature 或 rubric 强制要求。
+本研究计划与本地准备未运行 selector、未计算新 benchmark metric、未变更 target/acceptable labels。前一轮已按用户授权将冻结研究源材料与准备文档合入 GitHub main；Git 保存不等同于授权 provider 推理。主矩阵与统计阈值是本计划的研究选择，不是 literature 或 rubric 强制要求；ECR 仍是可退出设计。
 
 ## 20. 两篇用户提供的 thesis：只借鉴组织与分析，不推定成绩
 
@@ -682,3 +697,50 @@ benchmark freeze 与 N/M 已验证；仍须填齐 execution representation QA/ro
 4. **统一结果段落模板**：观察到什么（分母、效应与区间）→ 与哪一假设一致/冲突 → 有什么诊断支持解释 → 哪些替代解释尚未排除 → 对应用和 RQ 的边界结论。
 
 论文的排版目标是降低 examiner 理解证据的成本，不是复制封面、字号或总页数。两份示例都不能替代现行学校模板/声明要求，也没有提供本次可核验的 Medal 或分数证明。
+
+
+## 21. 未来 scale-out 扩展：额外约 20,000 个背景源
+
+Status: **FUTURE / NOT_EXECUTED / NOT_REQUIRED_FOR_CURRENT_RQ2_COMPLETION**。
+
+### 21.1 未来要回答什么
+
+在固定请求、核心候选与路由方法的条件下，增加背景候选是否改变可接受候选召回、排序可靠性和单位查询成本？不同信息组织与控制策略的离线建设成本、在线成本，以及可运行边界如何随库规模变化？
+
+这是将来独立的新 scope/analysis amendment；本次不下载、不筛选、不新增候选，不再启动 acceptable-set 审查，不改 K=6，也不使用 deferred 528 package 补库。
+
+### 21.2 规模和背景来源的定义
+
+“2 万 background”暂按**额外加入约 20,000 个 source-unique candidates**理解，而非总库精确 20,000；若全数合格且无重复，名义总数为 23,798，真实总数只能由未来 admission manifest 决定。31k discovery frame 只是可考察来源，不是已通过许可/身份/去重的候选库。
+
+未来先冻结 source provenance/许可、exact-hash 与 near-duplicate/alias 处理、来源构成与抽样 seed。不按当前方法在哪些背景上表现差来挑 distractors。新增项叫 background candidates，不预设它们均不适合请求。来源混合、模板化程度、文档长度和近邻密度均需报告。
+
+建议使用至少三个预先固定的 nested 库规模；每一级都包含原核心 sources 和同一 query set，新背景按固定顺序增量加入。具体档位、重复抽样与预算待该扩展获准时冻结；现在不把 8k/12k/20k 等设成新硬目标。
+
+### 21.3 标签与公平性边界
+
+1. V7 已审 A_q 的正例身份可以保留，但新增候选可能也 fully acceptable；原 strict singleton 不能继承为扩展库中的全库唯一答案。
+2. 若只做 cost/engineering scale preflight，不需要借此宣布 routing correctness；Known-A 仍只能表示旧已知正例的保留情况。
+3. 若要比较扩展库的实际适配质量，必须另立 outcome-blind、各方法对称的增量覆盖审查，或清楚保留 unknown-label bounds。不得自动把新增 candidates 当作负例，也不看某个赢家输出后只补它的标签。
+4. 不改原 V7 rows、不把新结果混入第一矩阵；扩展有自己的 source/representation/label/root hashes、结果目录与 exposure ledger。
+5. 架构编译不能看到 queries/labels/benchmark cluster edges。新关系若超出原事实集，报告额外信息的 whole-pipeline effect，并尽可能设置同信息的文本比较。
+
+### 21.4 未来候选对照及成本账
+
+| 对照类型 | 特别要核对什么 | 不能预设什么 |
+| --- | --- | --- |
+| lexical/dense + 固定 Top-k reranking | index size、build time、query/search time、候选召回；rerank 输入预算固定 | 只测重排耗时不代表全流程与库规模无关 |
+| 一次全库 in-context LLM | 对每种表示测真实 tokenizer 长度、上下文余量、完整候选覆盖、顺序敏感性、输出可解析性 | 装得下不等于更好；装不下也不能无记录截断后算模型失败 |
+| 全库逐项 LLM/cross-encoder scoring | 随候选数增加的 pair/window 数、调用与累计 latency/cost | 与固定 Top-k LLM reranking 混为一谈 |
+| wiki/tree/graph | compilation/embedding/storage/update cost 与线上 traversal/read 成本分账；摘要保真与停止规则 | 图一定昂贵到不可用，或有索引就已证明可扩展 |
+| bounded agentic retrieval | read/search 轮数、token/call cap、停机/回退、跨题状态隔离 | 用不受限的额外推理成本宣称控制策略必然更好 |
+
+同模型、同表示/证据、同 query scope 与硬件/并发能保持的条件尽量保持；不能保持的列为 pipeline differences。对超 context、超内存、超预设预算和 timeout 分别记工程可行性状态，保留实际分母；不能把它们悄悄删掉，也不能把未运行的行填成 0% accuracy。无截断的共同可行 subset 只能作另列 sensitivity，不替代 full-scope availability。
+
+至少报告：Known-A/Unjudged 及合适的 bounds、NC 诊断、索引/编译秒数、峰值内存/存储、在线 p50/p95、tokens/windows/calls、failure/timeout rate、更新成本（若执行）与固定查询量下的摊销。只在实测范围内讨论 scaling trend，不用几个规模点声称渐近复杂度已被证明。
+
+### 21.5 停止与解释规则
+
+先完成当前 B+C。未来扩展需单独通过来源、标签边界、representation fidelity 和预算 preflight；任何大规模扩展不成为本轮 thesis 完成的前置条件。超预算时按预设边界停止并报告可行性，不根据精度输赢保留方法。
+
+若某方法质量保持但成本陡升，报告受测范围的质量–成本限制；若 graph/wiki 离线贵但线上便宜，给出实际摊销，而非一句“不 scalable”；若小系统只在当前库有效，保留限定结论；若长上下文在可行预算内更强，也如实报告。第一矩阵的科学价值不依赖未来扩展、复杂架构或自研系统一定胜出。

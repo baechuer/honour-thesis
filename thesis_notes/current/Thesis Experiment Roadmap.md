@@ -1,5 +1,7 @@
 # Thesis Experiment Roadmap
 
+> **2026-09-08 RQ2 formal plan approved.** The new master research plan is `thesis_notes/current/RQ2 Approved Research Plan - 2026-09-08.zh-CN.md`. First complete B36+C6 on the frozen 3,798-candidate / 1,077-query V7 scope; consider wiki/graph/tree and the optional small system afterwards. Approximately 20k additional background skills are a prospective scale-out study, not a current commitment or result. Actual local I1/I2 materialisation has started and replayed at 3,798 rows per view; continue I3/representation QA and runtime sealing before formal inference. Earlier discussion drafts remain provenance.
+
 > **2026-09-08 RQ2b V7 frozen; core-first experiment preparation.** Final-freeze replay confirms 1,077 retained groups and 149 exclusions; all 3,798 primary source hashes replay from the prepared checkout. User priority is the 36-configuration first matrix, followed by six fixed-candidate diagnostics, then wiki/graph/tree extension assessment, then the optional self-designed system. No need to repeat acceptable-set review. Remaining work is V7-complete four-representation QA, dependency/exposure and runtime/budget sealing before inference. See `thesis_notes/current/RQ2 First Matrix and Architecture Extension Roadmap - 2026-09-08.md`. RQ1 and RQ2a results are unchanged; optional systems need not win or be built for the core comparison research to stand.
 
 Date: 2026-09-04

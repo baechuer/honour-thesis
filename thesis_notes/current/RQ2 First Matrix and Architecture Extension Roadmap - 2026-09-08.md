@@ -2,7 +2,11 @@
 
 Date: 2026-09-08
 
-Status: USER_DIRECTED_SEQUENCE / V7_BENCHMARK_FROZEN / EXECUTION_INPUT_SEAL_PENDING
+Status: APPROVED_RESEARCH_PLAN / V7_BENCHMARK_FROZEN / LOCAL_PHASE7_PREPARATION_STARTED
+
+> 正式主计划：`RQ2 Approved Research Plan - 2026-09-08.zh-CN.md`，以及 `skill_benchmark/rq2b_naturalistic_confusability/preparation/rq2_approved_research_plan_2026_09_08_v1/plan_freeze.json`。研究者已要求本版定稿。当前是 3,798 候选上的全库检索，不只是 cluster 内选择；约 20,000 个额外 background sources 的 nested scale-out 属未来，不是当前候选准入或必做矩阵。不能提前宣称大规模 scalability 已验证，也不能假定 graph/pure LLM 不可扩展。
+
+> 本地准备进展：I1 3,798 行、byte-exact I2 3,798 行已生成并机械 replay；详见 `skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i1_i2_2026_09_08_v1/`。I3C/I3-flat、语义 QA、dependency/exposure 与 runtime/预算 seal 仍待完成；没有执行 selector。
 
 ## 1. 本轮决定与已经完成的部分
 
@@ -48,7 +52,7 @@ Status: USER_DIRECTED_SEQUENCE / V7_BENCHMARK_FROZEN / EXECUTION_INPUT_SEAL_PEND
 
 `skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/`
 
-模型具体身份、tokenizer/window policy、语义 QA 和 compute/transfer 预算仍须执行前绑定；这里不从旧 alias 自动推定当前服务完全相同。完整设计、结果解释和评分维度对应见 `RQ2 Experimental Design and Interpretation Spec - 2026-09-08.zh-CN.md` v2。
+模型具体身份、tokenizer/window policy、语义 QA 和 compute/transfer 预算仍须执行前绑定；这里不从旧 alias 自动推定当前服务完全相同。完整定稿、结果解释和未来 scale-out 边界见 `RQ2 Approved Research Plan - 2026-09-08.zh-CN.md`。
 
 ## 3. 文献不是只有 skill papers：按设计问题组织
 

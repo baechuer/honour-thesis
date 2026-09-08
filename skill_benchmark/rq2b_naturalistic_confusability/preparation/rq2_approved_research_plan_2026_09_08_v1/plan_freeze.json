@@ -1,0 +1,87 @@
+{
+  "analysis": {
+    "details_authority": "thesis_notes/current/RQ2 Approved Research Plan - 2026-09-08.zh-CN.md",
+    "efficiency_practical_reduction": 0.2,
+    "group_bootstrap_replicates": 10000,
+    "group_bootstrap_seed": 2026090801,
+    "paired_group_sign_flip_replicates": 100000,
+    "paired_group_sign_flip_seed": 2026090802,
+    "practical_quality_margin": 0.03,
+    "primary_comparisons": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "primary_per_comparison_alpha": 0.01,
+    "primary_scope": "NC lane; parent strata separately reported"
+  },
+  "approval_basis": "User explicitly requested this updated version be finalised as the new RQ2 plan, with large-background scaling listed as future work, and experiment preparation started.",
+  "bindings": {
+    "bridge_conditions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/fixed_candidate_bridge_conditions.jsonl",
+      "sha256": "d659ff98a5a2534478f68ab44794e4df7d89b23eb3a44a2fbf335cdca42366f7"
+    },
+    "core_conditions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/first_matrix_conditions.jsonl",
+      "sha256": "b66c0dfd23c5fb96869a548f038cd8afa6fc0f99c253f0fe98a66656510e167f"
+    },
+    "exclusions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_v7_acceptable_set_final_library_freeze_2026_09_08_v1/exclusion_and_limitation_ledger.jsonl",
+      "sha256": "a9cd699abf3260130558729df3c323c1d2e6621946b96b11cc62b4a622df0791"
+    },
+    "final_prompts": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_v7_acceptable_set_final_library_freeze_2026_09_08_v1/final_library_prompt_manifest.jsonl",
+      "sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128"
+    },
+    "master_sop": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md",
+      "sha256": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835"
+    },
+    "research_plan": {
+      "path": "thesis_notes/current/RQ2 Approved Research Plan - 2026-09-08.zh-CN.md",
+      "sha256": "b54d3d8c6816b2bb5f75b2b946448063fcc800c1f9927e27babd767e3468d4d8"
+    },
+    "scope_amendment": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_v7_acceptable_set_final_library_freeze_2026_09_08_v1/scope_amendment.json",
+      "sha256": "90b3e20120d5a547b6664096ab585fefce254c9ed6ece09b8355be6eff53aa7a"
+    },
+    "source_manifest": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/source_manifest.jsonl",
+      "sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+    }
+  },
+  "counts": {
+    "bridge_new_configurations": 6,
+    "core_configurations": 36,
+    "excluded_or_deferred_queries": 149,
+    "queries": 1077,
+    "source_candidates": 3798
+  },
+  "date": "2026-09-08",
+  "execution": {
+    "formal_selector_execution_authorised": false,
+    "gate": "Complete Phase-7/8 QA and bind actual runtime root/model/length/cost scope under the master SOP.",
+    "local_preparation_authorised": true,
+    "paid_or_external_payload_authorised_by_this_record": false,
+    "runtime_root_sealed": false
+  },
+  "freeze_script_sha256": "d8b2f3a8bd7db431f6b99d97694ee3fb0719b612f83f2be45bc0bc439ffbbb7b",
+  "future_scope": {
+    "admission_and_nested_scale_levels_not_sealed": true,
+    "architectures": [
+      "wiki",
+      "graph",
+      "tree",
+      "bounded agentic retrieval",
+      "optional custom method"
+    ],
+    "assume_new_background_candidates_negative": false,
+    "extra_background_candidate_target_approx": 20000,
+    "status": "DEFERRED_NOT_EXECUTED_NOT_REQUIRED_FOR_CORE",
+    "target_is_additional_not_final_library_count": true
+  },
+  "schema_version": "rq2-approved-research-plan-v1",
+  "status": "FINAL_APPROVED_RESEARCH_PLAN_NOT_RUNTIME_AUTHORISATION"
+}
