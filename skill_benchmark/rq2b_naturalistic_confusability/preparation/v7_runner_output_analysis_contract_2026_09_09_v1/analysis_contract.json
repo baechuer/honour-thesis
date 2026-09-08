@@ -1,0 +1,65 @@
+{
+  "schema_version": "rq2b-v7-runner-output-analysis-contract-v1",
+  "status": "PRE_OUTCOME_IMPLEMENTATION_CONTRACT_NO_SELECTOR_RESULTS_OBSERVED",
+  "authority": {
+    "analysis_freeze": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_analysis_freeze_2026_09_08_v1/freeze_report.json",
+    "analysis_freeze_sha256": "1b27a1a6f7423871c7e9b7206736d60e3838e405af1cf2f5b078f0db58f784f7",
+    "core_conditions_sha256": "b66c0dfd23c5fb96869a548f038cd8afa6fc0f99c253f0fe98a66656510e167f",
+    "bridge_conditions_sha256": "d659ff98a5a2534478f68ab44794e4df7d89b23eb3a44a2fbf335cdca42366f7",
+    "approved_plan_freeze_sha256": "c91b459babec83409b5b17d254cc299a77081afc94fc813173ad3ae7f80eb097"
+  },
+  "row_counts": {
+    "queries": 1077,
+    "b1_cells": 12,
+    "b1_rows": 12924,
+    "core_b2_conditions": 24,
+    "bridge_b2_conditions": 6,
+    "b2_rows": 32310,
+    "materialised_outcome_conditions": 42,
+    "materialised_outcome_rows": 45234
+  },
+  "aliases_not_materialised": {
+    "C2-Q": "B05-GQ",
+    "C2-S": "B05-GS"
+  },
+  "runner_label_isolation": {
+    "allowed_inputs": ["label_free_query_runtime.jsonl", "source_manifest.jsonl", "condition manifests", "representation artifacts"],
+    "prohibited_inputs": ["offline_label_adapter.jsonl", "reviewed_confusable_neighbour_ledger.jsonl", "targets", "gold labels", "metrics", "prior outcomes"],
+    "recursive_prohibited_key_tokens": ["target", "gold", "label", "acceptable", "adequacy", "judged", "unjudged", "metric", "hit", "mrr", "recall", "ground_truth", "correctness", "d_q", "a_q", "j_q"]
+  },
+  "candidate_identity": {
+    "b1": "Exactly 100 unique source SHA-256 identities in rank order; top20_binding_sha256 binds cell, prompt hash and the ordered first 20 identities.",
+    "b2": "Exactly the persisted B1 Top-20 for persisted_candidate_source, same order at input and same identity set after reranking; per-candidate view and whole reranker input hashes are mandatory.",
+    "hard_failure_policy": "A SUCCESS row may include retry/timeout/failure attempt costs. An unrecovered outcome produces no scientific row and blocks complete-scope scoring; it is not represented by invented ranks."
+  },
+  "endpoints": {
+    "acceptable_known_a": "All 1,077 prompts, credit for any member of frozen A_q.",
+    "strict_singleton": "Only final_label_type STRICT prompts, where frozen A_q has exactly one member; no designated strict target is invented for multi-acceptable prompts.",
+    "unknown": "U_q equals library minus J_q; unjudged is not counted as error.",
+    "reviewed_error": "Top-1 in J_q minus A_q, decomposed into PARTIALLY_ADEQUATE and INADEQUATE.",
+    "identification_interval": "[Known-A Hit@1, Known-A Hit@1 + Unjudged@1], distinct from a confidence interval."
+  },
+  "scopes": {
+    "primary": "lane_id == B_NC_FULL_UNION (714 prompts)",
+    "source_native_sensitivity": "reporting_stratum == source_native_three_member (649 prompts)",
+    "legacy_nc_descriptive": "reporting_stratum == legacy_2member_checkpoint (65 prompts)",
+    "parent_public_descriptive": "reporting_stratum == public_gold (127 prompts)",
+    "parent_controlled_descriptive": "reporting_stratum == controlled (236 prompts)"
+  },
+  "primary_comparisons": {
+    "P1": {"left": "B08-G0", "right": "B02-G0", "metric": "candidate_hit_at_20", "test": "two_sided_group_sign_flip"},
+    "P2": {"left": "B08-G0", "right": "B05-G0", "metric": "candidate_hit_at_20", "test": "one_sided_99_percent_group_bootstrap_noninferiority", "margin": -0.03},
+    "P3": {"left": "B08-G0", "right": "B11-G0", "metric": "known_a_hit_at_1", "test": "two_sided_group_sign_flip"},
+    "P4": {"left": "B05-GQ", "right": "B05-G0", "metric": "known_a_hit_at_1", "test": "two_sided_group_sign_flip"},
+    "P5": {"left": "C3-Q", "right": "C4-Q", "metric": "known_a_hit_at_1", "test": "two_sided_group_sign_flip"}
+  },
+  "statistics": {
+    "estimand": "prompt-weighted paired difference within the NC primary scope",
+    "resampling_unit": "whole frozen dependency_group",
+    "bootstrap": {"replicates": 10000, "seed": 2026090801, "descriptive_two_sided_ci": 0.95},
+    "sign_flip": {"replicates": 100000, "seed": 2026090802, "two_sided_alpha": 0.01},
+    "noninferiority": {"comparison": "P2", "one_sided_confidence": 0.99, "margin": -0.03},
+    "sensitivity": "Equal-dependency-group-weighted point estimate is reported beside the prompt-weighted primary estimate."
+  },
+  "scientific_results_observed": false
+}

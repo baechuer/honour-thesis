@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "README.md": {
+      "bytes": 4023,
+      "sha256": "48f0fcbd00afb8ca50a95e3407e16301e168bd3f6e7987b18cbee6fb4ac713b9"
+    },
+    "runtime_inventory.json": {
+      "bytes": 21308,
+      "sha256": "3bc874eaa23ed699c71ee7007039374868cb65ab69ce05823b67ea3a5b955b54"
+    }
+  },
+  "checks": {
+    "credential_recorded_as_boolean_only": true,
+    "deterministic_cpu_audit_spot_check": true,
+    "execution_authorised": false,
+    "labels_and_results_unread": true,
+    "model_revisions_and_file_hashes": true,
+    "nonfinite_output_fail_closed": true,
+    "package_inventory_exact": true,
+    "prospective_lossless_7500_256_max_window_adaptation_gate_recorded_not_approved": true,
+    "provider_contracts_bound": true,
+    "python_platform_exact": true,
+    "remaining_representation_token_audits_recorded": true,
+    "scientific_runtime_mps_default_sdpa_bfloat16_exact_length_unpadded": true,
+    "v7_matrix_bindings": true,
+    "zero_model_forward": true,
+    "zero_network": true
+  },
+  "counts": {
+    "bridge_configurations": 6,
+    "core_configurations": 36,
+    "installed_packages": 27,
+    "local_model_snapshots": 2,
+    "long_sequence_probes": 4,
+    "pinned_model_files": 17,
+    "smoke_cases": 12
+  },
+  "current_process_blockers": [
+    "MPS_UNAVAILABLE_IN_CURRENT_VERIFIER_PROCESS",
+    "DASHSCOPE_API_KEY_ABSENT_FROM_CURRENT_PROCESS",
+    "PROSPECTIVE_LOSSLESS_7500_TOKEN_256_OVERLAP_MAX_WINDOW_ADAPTATION_PENDING_APPROVAL",
+    "I3C_AND_I3_FLAT_TOKEN_LENGTH_AUDITS_PENDING"
+  ],
+  "schema_version": "rq2b-v7-b36-c6-runtime-preflight-integrity-v1",
+  "scope_boundary": "Integrity PASS means inventory replay only. It is not scientific execution readiness or permission.",
+  "status": "PASS_DETERMINISTIC_ZERO_INFERENCE_RUNTIME_PREFLIGHT_REPLAY",
+  "tooling": {
+    "builder": {
+      "path": "skill_benchmark/scripts/build_rq2b_v7_first_matrix_runtime_preflight.py",
+      "sha256": "f485b90a09bd8760cc539a1c22a60d302bc6b28f2b2e05c7c5e66af1d0663c78"
+    },
+    "tests": {
+      "path": "skill_benchmark/scripts/test_rq2b_v7_first_matrix_runtime_preflight.py",
+      "sha256": "6e267e1806bb89ce684f116e7f2ca6339f080cf7a4011bbecb4781fe79e5efb7"
+    },
+    "verifier": {
+      "path": "skill_benchmark/scripts/verify_rq2b_v7_first_matrix_runtime_preflight.py",
+      "sha256": "859b36b92109a009076b1fc9230c387ac6f76dd200c1450962fa02d4fde94d87"
+    }
+  }
+}

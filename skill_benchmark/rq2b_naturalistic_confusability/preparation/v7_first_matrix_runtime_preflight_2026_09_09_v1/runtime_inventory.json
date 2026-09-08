@@ -1,0 +1,551 @@
+{
+  "current_execution_disposition": {
+    "current_process_blockers": [
+      "MPS_UNAVAILABLE_IN_CURRENT_VERIFIER_PROCESS",
+      "DASHSCOPE_API_KEY_ABSENT_FROM_CURRENT_PROCESS",
+      "PROSPECTIVE_LOSSLESS_7500_TOKEN_256_OVERLAP_MAX_WINDOW_ADAPTATION_PENDING_APPROVAL",
+      "I3C_AND_I3_FLAT_TOKEN_LENGTH_AUDITS_PENDING"
+    ],
+    "execution_authorised": false,
+    "labels_or_results_read": false,
+    "model_forward_passes_performed_by_this_package": 0,
+    "provider_calls_performed_by_this_package": 0,
+    "required_next_artifact": "a separate hash-bound V7 scientific runner/authorisation package that enforces this contract",
+    "retrieval_or_reranking_performed_by_this_package": false
+  },
+  "dashscope_contracts": {
+    "credential": {
+      "dotenv_files_scanned": false,
+      "environment_variable": "DASHSCOPE_API_KEY",
+      "presence_only_check": true,
+      "present_in_current_process": false,
+      "secret_value_serialised": false
+    },
+    "embedding": {
+      "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+      "dimensions": 1024,
+      "encoding_format": "float",
+      "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/embeddings",
+      "maximum_batch_texts": 10,
+      "model": "text-embedding-v4",
+      "request_shape": {
+        "dimensions": "integer",
+        "encoding_format": "float",
+        "input": "array[string]",
+        "model": "string"
+      },
+      "response_gate": "exact request coverage, 1024 dimensions, every coordinate finite"
+    },
+    "reranker": {
+      "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank",
+      "model": "qwen3-rerank",
+      "request_shape": {
+        "input": {
+          "documents": "array[string]",
+          "query": "string"
+        },
+        "model": "string",
+        "parameters": {
+          "instruct": "frozen instruction",
+          "return_documents": false,
+          "top_n": "requested document count"
+        }
+      },
+      "response_gate": "one unique index per requested document, exact coverage, every relevance_score finite"
+    }
+  },
+  "environment": {
+    "implementation": "CPython",
+    "machine": "arm64",
+    "packages": {
+      "accelerate": "1.10.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "filelock": "3.32.5",
+      "fsspec": "2026.7.0",
+      "hf-xet": "1.6.0",
+      "huggingface-hub": "0.36.0",
+      "idna": "3.19",
+      "jinja2": "3.1.6",
+      "markupsafe": "3.0.3",
+      "mpmath": "1.3.0",
+      "networkx": "3.6.1",
+      "numpy": "2.3.3",
+      "packaging": "26.3",
+      "psutil": "7.2.2",
+      "pyyaml": "6.0.3",
+      "regex": "2026.9.3",
+      "requests": "2.34.2",
+      "safetensors": "0.6.2",
+      "setuptools": "84.0.0",
+      "sympy": "1.14.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.8.0",
+      "tqdm": "4.70.0",
+      "transformers": "4.56.2",
+      "typing-extensions": "4.16.0",
+      "urllib3": "2.7.0"
+    },
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.2",
+    "torch_backend": {
+      "mps_available_in_verifier_process": false,
+      "mps_built": true
+    },
+    "venv_path": ".venv-rq2b-v7"
+  },
+  "local_models": {
+    "embedding_contract": {
+      "architecture": "AutoModel/Qwen3Model",
+      "dimensions": 1024,
+      "document_query_score": "cosine",
+      "maximum_model_tokens": 32768,
+      "normalisation": "l2",
+      "padding_side": "left",
+      "pooling": "last_non_padding_token",
+      "query_instruction": "Instruct: Given a task description, retrieve the most relevant skill document that would help an agent complete the task\nQuery:"
+    },
+    "reranker_contract": {
+      "architecture": "AutoModelForCausalLM/Qwen3ForCausalLM",
+      "instruction": "Given a task description, judge whether the skill document is relevant and useful for completing the task",
+      "maximum_pair_tokens": 2048,
+      "padding_side": "left",
+      "pair_score": "final_token_yes_logit_minus_no_logit"
+    },
+    "reuse_boundary": "V3 constants, tokenizer/model semantics and pinned revisions are reusable lineage. V3 CUDA/bfloat16 runners and their old 2,433-skill/381-prompt payload assumptions are not V7 scientific runners.",
+    "shared_policy": {
+      "downloaded_snapshots_are_ignored_runtime_inputs": true,
+      "local_files_only": true,
+      "trust_remote_code": false
+    },
+    "skillrouter_embedding": {
+      "files": {
+        "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+        "config.json": "02b34f6be10ee6a35304e32b67ac37be4b2b04e327efff49a689136b0913a0e8",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model.safetensors": "cbab45b8a3c786b8c23aedb24fb22aff74d0e9b62a52369a3090c37f26b00360",
+        "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+        "tokenizer.json": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a",
+        "tokenizer_config.json": "7f33cbb21bae9b2ed4a7396d68f9f10d6280d75332d04911cd6c5a0967bd10c9",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "repository": "pipizhao/SkillRouter-Embedding-0.6B",
+      "revision": "c03c9bcee9fce92ab0262bb6dcf54d174a8ba558",
+      "snapshot_path": "skill_benchmark/cache/huggingface/SkillRouter-Embedding-0.6B-c03c9bcee9fc"
+    },
+    "skillrouter_reranker": {
+      "files": {
+        "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+        "config.json": "17f3b5063350823bfda01f740ac14b9d1cd9cb80c738cbe0d9939c4988ac6b39",
+        "generation_config.json": "b015f739ce02d6f51f0fbd1fbd6bfd22436983139cfb51514c86fa1ffe5dfef5",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model.safetensors": "34064850b1b512168309481a9cebe4ecaf55d0821bf22608f657b40033ed36d7",
+        "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+        "tokenizer.json": "ab19c66299579df20542864f9e27b79898ca05f35acc97fd9259aee385a07d4a",
+        "tokenizer_config.json": "7f33cbb21bae9b2ed4a7396d68f9f10d6280d75332d04911cd6c5a0967bd10c9",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "repository": "pipizhao/SkillRouter-Reranker-0.6B",
+      "revision": "78986e1142d12857cfd85b8005e62902cd42d858",
+      "snapshot_path": "skill_benchmark/cache/huggingface/SkillRouter-Reranker-0.6B-78986e1142d1"
+    }
+  },
+  "long_sequence_runtime_probes": {
+    "cases": [
+      {
+        "case_id": "embedding-mps-default-sdpa-float32-30000-single-unpadded",
+        "disposition": "INVALID_HARD_MEMORY_FAILURE",
+        "dtype": "float32",
+        "failure": "Invalid buffer size 53.64 GiB",
+        "input_tokens": 30000,
+        "output_finite": false
+      },
+      {
+        "case_id": "embedding-mps-default-sdpa-float32-4096-single-unpadded",
+        "disposition": "VALID_BUT_NOT_PRIMARY_RUNTIME",
+        "dtype": "float32",
+        "forward_seconds": 78.83,
+        "input_tokens": 4096,
+        "output_finite": true
+      },
+      {
+        "case_id": "embedding-mps-default-sdpa-bfloat16-4096-single-unpadded",
+        "disposition": "VALID_PRIMARY_RUNTIME_PROBE",
+        "dtype": "bfloat16",
+        "forward_seconds_range": [
+          2.81,
+          3.88
+        ],
+        "input_tokens": 4096,
+        "output_finite": true
+      },
+      {
+        "case_id": "embedding-mps-default-sdpa-bfloat16-7500-single-unpadded",
+        "disposition": "VALID_PROPOSED_WINDOW_CEILING_PROBE",
+        "dtype": "bfloat16",
+        "forward_seconds": 10.65,
+        "input_tokens": 7500,
+        "output_finite": true
+      }
+    ],
+    "evidence_status": "OPERATOR_VERIFIED_PROBE_SUMMARY_RECORDED_NOT_REEXECUTED_BY_BUILDER",
+    "interpretation": "MPS float32 is impractical and fails hard at 30k. MPS bfloat16 was finite at 4,096 and 7,500 tokens; the 7,500 ceiling remains a proposed hardware adaptation, not an approved method change."
+  },
+  "schema_version": "rq2b-v7-b36-c6-runtime-preflight-v1",
+  "scientific_runtime_contract": {
+    "attention_implementation": "default_sdpa",
+    "batching": {
+      "bucket_key": "exact_model_input_token_length",
+      "heterogeneous_token_length_batch_allowed": false,
+      "maximum_batch_size": 16,
+      "padding_allowed": false
+    },
+    "cpu_audit_spot_check": {
+      "comparison": "record same scalar pair score, absolute delta, rank/tie changes and output finiteness; embedding uses cosine, reranker uses yes-minus-no logit",
+      "cpu_runtime": {
+        "attention_implementation": "eager",
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      "equivalence_threshold": null,
+      "interpretation": "Sensitivity analysis, not a device-equivalence gate. Disclose bfloat16 quantisation/ties and any rank changes; do not select a runtime post hoc from results.",
+      "maximum_units_per_model": 32,
+      "on_nonfinite_output": "invalidate local-model scientific run pending diagnosis; do not silently substitute CPU results",
+      "per_model_per_representation": 8,
+      "required_before_scientific_finalisation": true,
+      "selection": "for each local model and representation, take the 8 stable IDs with lexicographically smallest SHA-256(namespace|component|representation|stable_id), or all when fewer",
+      "selection_namespace": "rq2b-v7-b36-c6-runtime-cpu-audit-v1"
+    },
+    "device": "mps",
+    "dtype": "bfloat16",
+    "eager_attention_disposition": "diagnostic_and_traceable_fallback_only_not_primary; any fallback requires an explicit runtime amendment and may not be silent",
+    "fail_closed_output_gate": {
+      "all_model_outputs_finite": true,
+      "before_cache_write": true,
+      "before_ranking": true,
+      "before_score_persistence": true,
+      "embedding_dimensions": 1024,
+      "on_failure": "abort current shard/condition without result write; preserve attempt evidence"
+    },
+    "forbidden_fallbacks": [
+      "heterogeneous left-padded batches",
+      "float16",
+      "silent float32 substitution",
+      "silent eager-attention substitution",
+      "silent CPU fallback",
+      "non-finite persistence or ranking"
+    ],
+    "reranker_numerical_limitation": {
+      "observed": "a short relevant example's bfloat16 yes-minus-no score quantised to 0 while an irrelevant example was approximately -5.25",
+      "required_reporting": [
+        "exact score ties",
+        "deterministic tie breaks",
+        "CPU-fp32 spot sensitivity"
+      ],
+      "tie_break_contract_pending_runner_seal": "preserve persisted candidate order, then stable candidate ID; do not add random jitter"
+    }
+  },
+  "scope": {
+    "audit_main_k": 6,
+    "benchmark": "RQ2b-NC V7 frozen library",
+    "core_configurations": 36,
+    "fixed_candidate_bridge_configurations": 6,
+    "matrix": "B36+C6",
+    "prompt_count": 1077,
+    "representations": [
+      "I1-discovery",
+      "I2-original",
+      "I3C-fielded",
+      "I3-flat"
+    ],
+    "runtime_rerank_k": 20,
+    "v7_input_bindings": {
+      "embedding_lineage_constants": {
+        "path": "skill_benchmark/scripts/rq2bv1_v3_skillrouter_primary_constants.py",
+        "sha256": "b925260ffd80fd0e619aeb8b997adb3a7b53e31cf13d618b1a2623b627436926"
+      },
+      "embedding_lineage_runner": {
+        "path": "skill_benchmark/scripts/run_rq2bv1_v3_skillrouter_primary.py",
+        "sha256": "f335f9fe9da9fed3802cf5ce4991e3a75cbf5d80824b34467935d69af99b4e7b"
+      },
+      "qwen_embedding_contract_source": {
+        "path": "skill_benchmark/scripts/run_rq2b_qwen.py",
+        "sha256": "ad9016cf14c20c3935c84482d9c9499be3e86f0272a6105a7ab3fa2238a7c05f"
+      },
+      "qwen_reranker_contract_source": {
+        "path": "skill_benchmark/scripts/rq2b_qwen_reranker.py",
+        "sha256": "d7f83d25076dbec12750d8c7dad687b69545f335bddf7a1889bc9f3a5a598f7a"
+      },
+      "reranker_lineage_runner": {
+        "path": "skill_benchmark/scripts/hf_rq2bv1_v3_b2_skillrouter_reranker_job.py",
+        "sha256": "3517a1c1c8a375285b98a08da5ebf38184aa518fd1908606d7e7a4f5cd84c4a2"
+      },
+      "v7_bridge_conditions": {
+        "bytes": 3072,
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/fixed_candidate_bridge_conditions.jsonl",
+        "sha256": "d659ff98a5a2534478f68ab44794e4df7d89b23eb3a44a2fbf335cdca42366f7"
+      },
+      "v7_core_conditions": {
+        "bytes": 17961,
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/first_matrix_conditions.jsonl",
+        "sha256": "b66c0dfd23c5fb96869a548f038cd8afa6fc0f99c253f0fe98a66656510e167f"
+      },
+      "v7_preparation_readiness": {
+        "bytes": 2430,
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/readiness_report.json",
+        "sha256": "55f666bc3daa96f3e37f7209761b4a0c06eb7aaf14484db0a4b7d6aea94725e0"
+      }
+    }
+  },
+  "smoke_evidence": {
+    "cases": [
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "heterogeneous_token_lengths_with_left_padding",
+        "case_id": "embedding-default-sdpa-mps-float32-heterogeneous-left-padding",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "mps",
+        "disposition": "INVALID_NON_FINITE",
+        "dtype": "float32",
+        "output_finite": false
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "heterogeneous_token_lengths_with_left_padding",
+        "case_id": "embedding-default-sdpa-mps-float16-heterogeneous-left-padding",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "mps",
+        "disposition": "INVALID_NON_FINITE",
+        "dtype": "float16",
+        "output_finite": false
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "single_row_unpadded",
+        "case_id": "embedding-default-sdpa-mps-float32-single-unpadded",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "mps",
+        "dimensions": 1024,
+        "disposition": "VALID_SMOKE",
+        "dtype": "float32",
+        "output_finite": true
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "single_row_unpadded",
+        "case_id": "reranker-default-sdpa-mps-float32-single-unpadded",
+        "component": "SkillRouter-Reranker-0.6B",
+        "device": "mps",
+        "disposition": "VALID_SMOKE",
+        "dtype": "float32",
+        "output_finite": true,
+        "scores": [
+          -0.06677818
+        ]
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "16_identical_exact_token_length_rows_no_padding",
+        "case_id": "embedding-default-sdpa-mps-float32-exact-length-batch16",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "mps",
+        "dimensions": 1024,
+        "disposition": "VALID_DIAGNOSTIC_SMOKE",
+        "dtype": "float32",
+        "output_finite": true,
+        "score_semantics": "cosine_against_first_identical_row",
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "16_identical_exact_token_length_rows_no_padding",
+        "case_id": "reranker-default-sdpa-mps-float32-exact-length-batch16",
+        "component": "SkillRouter-Reranker-0.6B",
+        "device": "mps",
+        "disposition": "VALID_DIAGNOSTIC_SMOKE",
+        "dtype": "float32",
+        "forward_seconds": 0.232,
+        "output_finite": true,
+        "scores": [
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124,
+          -0.0667858124
+        ]
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "16_identical_exact_token_length_rows_no_padding",
+        "case_id": "embedding-default-sdpa-mps-bfloat16-exact-length-batch16",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "mps",
+        "dimensions": 1024,
+        "disposition": "VALID_PRIMARY_RUNTIME_SMOKE",
+        "dtype": "bfloat16",
+        "output_finite": true,
+        "score_semantics": "cosine_against_first_identical_row",
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "attention_implementation": "default_sdpa",
+        "batch_shape": "16_short_exact_token_length_rows_no_padding",
+        "case_id": "reranker-default-sdpa-mps-bfloat16-short-unpadded",
+        "component": "SkillRouter-Reranker-0.6B",
+        "device": "mps",
+        "disposition": "VALID_PRIMARY_RUNTIME_SMOKE_WITH_NUMERICAL_TIE_LIMITATION",
+        "dtype": "bfloat16",
+        "output_finite": true,
+        "score_observations": {
+          "irrelevant_yes_minus_no_approximate": -5.25,
+          "relevant_yes_minus_no": 0.0
+        }
+      },
+      {
+        "attention_implementation": "eager",
+        "case_id": "embedding-eager-mps-float32",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "mps",
+        "dimensions": 1024,
+        "disposition": "VALID_SMOKE",
+        "dtype": "float32",
+        "output_finite": true,
+        "scores": [
+          0.7236307263,
+          0.1343006194
+        ]
+      },
+      {
+        "attention_implementation": "eager",
+        "case_id": "embedding-eager-cpu-float32",
+        "component": "SkillRouter-Embedding-0.6B",
+        "device": "cpu",
+        "dimensions": 1024,
+        "disposition": "VALID_CPU_REFERENCE_SMOKE",
+        "dtype": "float32",
+        "output_finite": true,
+        "scores": [
+          0.7236300707,
+          0.1343012303
+        ]
+      },
+      {
+        "attention_implementation": "eager",
+        "case_id": "reranker-eager-mps-float32",
+        "component": "SkillRouter-Reranker-0.6B",
+        "device": "mps",
+        "disposition": "VALID_SMOKE",
+        "dtype": "float32",
+        "output_finite": true,
+        "scores": [
+          -0.0667819977,
+          -5.2218322754
+        ]
+      },
+      {
+        "attention_implementation": "eager",
+        "case_id": "reranker-eager-cpu-float32",
+        "component": "SkillRouter-Reranker-0.6B",
+        "device": "cpu",
+        "disposition": "VALID_CPU_REFERENCE_SMOKE",
+        "dtype": "float32",
+        "output_finite": true,
+        "scores": [
+          -0.0667953491,
+          -5.2218294144
+        ]
+      }
+    ],
+    "cross_device_max_absolute_score_delta": {
+      "SkillRouter-Embedding-0.6B": 6.556000000657036e-07,
+      "SkillRouter-Reranker-0.6B": 1.3351400000000124e-05
+    },
+    "evidence_status": "OPERATOR_VERIFIED_SMOKE_SUMMARY_RECORDED_NOT_REEXECUTED_BY_BUILDER",
+    "interpretation": "Default SDPA is valid for short unpadded exact-token-length batches. Only heterogeneous left-padded default-attention batches are invalid. MPS bfloat16 is primary; MPS/CPU float32 and eager results are diagnostic/sensitivity evidence. The bfloat16 reranker can quantise a relevant yes-minus-no score to zero, creating a numerical/tie limitation that must be reported."
+  },
+  "source_token_length_audit": {
+    "I1-discovery": {
+      "maximum_tokens": 419,
+      "over_16000": 0,
+      "over_32768": 0,
+      "over_7500": 0
+    },
+    "I2-original": {
+      "maximum_tokens": 56648,
+      "over_16000": 4,
+      "over_32768": 1,
+      "over_7500": 28
+    },
+    "I3-flat": {
+      "status": "PENDING_TOKEN_AUDIT"
+    },
+    "I3C-fielded": {
+      "status": "PENDING_TOKEN_AUDIT"
+    },
+    "evidence_status": "OPERATOR_VERIFIED_TOKEN_AUDIT_SUMMARY_RECORDED_NOT_REPLAYED_BY_BUILDER",
+    "prospective_hardware_adaptation": {
+      "applies_only_to_documents_over_tokens": 7500,
+      "classification": "pipeline_hardware_adaptation_not_a_change_to_source_representation",
+      "document_score_aggregation": "maximum_window_score",
+      "forbidden": [
+        "silent truncation",
+        "source exclusion",
+        "representation substitution",
+        "post-hoc threshold choice"
+      ],
+      "gate": "Audit I3C/I3-flat lengths and prospectively approve/seal this adaptation before any affected SkillRouter execution.",
+      "known_I2_documents_in_scope": 28,
+      "lossless_full_text_coverage_required": true,
+      "overlap_tokens": 256,
+      "status": "PROPOSED_NOT_APPROVED_HARD_GATE",
+      "window_tokens": 7500
+    },
+    "skillrouter_embedding_max_position_embeddings": 32768
+  },
+  "status": "PASS_ZERO_INFERENCE_RUNTIME_INVENTORY_EXECUTION_NOT_AUTHORISED"
+}

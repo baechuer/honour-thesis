@@ -1,0 +1,48 @@
+{
+  "bindings": {
+    "builder_sha256": "1041febfc71062995adf86733941ad93e5be628a1558816126bd08a8d30f74aa",
+    "failed_qa_report_sha256": "a25e4fe627669e74f94294a0f4284f72ce2e8e3b31bdc4ad5e63dc1b1cf0d97b",
+    "i1_i2_v2_report_sha256": "30d532415a675143585c524f8ca9b68cafe8b73f28518913d25d3f227fa89b89",
+    "identity_overlay_report_sha256": "edc3dbe9989fd97d4e50a5973d030577c03525dede921bd18b2224fa744ba885",
+    "instruction_sha256": "2821a592abb2c5af98362827d96325773c8ed491ead1c815b0749a86725ea05b",
+    "old_i3_manifest_sha256": "ae3c450794dd5009cae44804663f94e8027a8d04474912cb7ad02227066c053b",
+    "source_manifest_sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+  },
+  "completion_gates": [
+    "95/95 outputs pass identity, schema, exact-substring and V4 lexical safety validation",
+    "all warnings and mechanical risk candidates receive source-only disposition",
+    "I3C and I3-flat are regenerated from one canonical extraction corpus",
+    "a genuinely fresh 120-row blinded QA sample passes the unchanged v2 thresholds"
+  ],
+  "counts": {
+    "batch_size_max": 40,
+    "batches": 95,
+    "extractor_group_rows": {
+      "1": 1280,
+      "2": 1278,
+      "3": 1240
+    },
+    "former_fresh_lineage": 1368,
+    "former_reused_lineage": 2430,
+    "last_batch_rows": 38,
+    "source_grounded_identity_overlays": 39,
+    "sources": 3798
+  },
+  "formal_execution_ready": false,
+  "local_inputs": {
+    "aggregate_sha256": "63eeb7503a2e76fc3ce03c9a0b3d644e264020057d04d7c9c952a950691f176a",
+    "batches": 95,
+    "rows": 3798
+  },
+  "method_boundary": "Prospective source-only repair under the same seven fields. No historical semantic payload is reused. V7 prompts, K=6, labels, acceptable sets and source bytes are unchanged.",
+  "network_calls": 0,
+  "schema_version": "rq2b-v7-phase7-i3-full-reextraction-preparation-v4",
+  "selector_runs": 0,
+  "state": "PENDING_3798_SOURCE_ONLY_V4_EXTRACTIONS",
+  "tracked_artifacts": {
+    "full_reextraction_assignment_manifest.jsonl": {
+      "rows": 95,
+      "sha256": "7847c975e3a6ff21c22ef25476f5246c017565a9976f9f3880a8d5e36a8c5041"
+    }
+  }
+}

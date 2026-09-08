@@ -1,0 +1,72 @@
+{
+  "blocked_by": [
+    "PHASE7_QA_PASS_RECEIPT",
+    "ROOT_EXECUTION_RELEASE"
+  ],
+  "cache_summary": {
+    "automatic_retries": 0,
+    "clean_cache_hits": 0,
+    "cold_query_requests": 1077,
+    "document_cache_hits": 8941,
+    "document_cache_misses": 6145,
+    "legacy_cache_hits": 9304,
+    "maximum_document_batch_requests": 615,
+    "maximum_external_submission_proxy_tokens": 5332890,
+    "maximum_external_submission_utf8_bytes": 23239216,
+    "maximum_external_text_submissions": 7222,
+    "maximum_new_cache_entries": 6859,
+    "maximum_new_cache_proxy_tokens": 5316289,
+    "maximum_new_cache_utf8_bytes": 23152750,
+    "maximum_request_attempts": 1692,
+    "maximum_successful_calls": 1692,
+    "query_cache_entries_preexisting": 363,
+    "query_cache_entry_misses": 714,
+    "unique_document_texts": 15086,
+    "unique_query_texts": 1077,
+    "unique_texts": 16163
+  },
+  "labels_or_results_read": false,
+  "network_calls": 0,
+  "payload_manifest": {
+    "path": "skill_benchmark/cache/rq2b_v7_qwen_b1_2026_09_09_v1/payload/payload_manifest.json",
+    "sha256": "e32ec2742a18c1dc79a4aa3cb6f70023f06e93a511e42f1079669ad2c6d3749e"
+  },
+  "provider_requests": 0,
+  "representation_summary": {
+    "I1-discovery": {
+      "chunking_seconds": 2.681238708086312,
+      "document_windows": 3798,
+      "documents": 3798,
+      "first_stage_cell_id": "B02",
+      "maximum_source_proxy_tokens": 419,
+      "windowed_documents": 0
+    },
+    "I2-original": {
+      "chunking_seconds": 57.12376945884898,
+      "document_windows": 3837,
+      "documents": 3798,
+      "first_stage_cell_id": "B05",
+      "maximum_source_proxy_tokens": 56648,
+      "windowed_documents": 28
+    },
+    "I3-flat": {
+      "chunking_seconds": 53.535978249739856,
+      "document_windows": 4564,
+      "documents": 3798,
+      "first_stage_cell_id": "B11",
+      "maximum_source_proxy_tokens": 11853,
+      "windowed_documents": 1
+    },
+    "I3C-fielded": {
+      "chunking_seconds": 14.854282999876887,
+      "document_windows": 3799,
+      "documents": 3798,
+      "first_stage_cell_id": "B08",
+      "maximum_source_proxy_tokens": 11877,
+      "windowed_documents": 1
+    }
+  },
+  "schema_version": "rq2b-v7-qwen-b1-preflight-report-v1",
+  "selector_runs": 0,
+  "status": "PASS_LABEL_FREE_PAYLOAD_AND_CACHE_PREFLIGHT_AWAITING_PHASE7_QA_AND_ROOT_RELEASE"
+}

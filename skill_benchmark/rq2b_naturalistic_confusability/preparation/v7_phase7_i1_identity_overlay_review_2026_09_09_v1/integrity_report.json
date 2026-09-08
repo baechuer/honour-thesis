@@ -1,0 +1,39 @@
+{
+  "bindings": {
+    "builder_sha256": "b2bece5c6d3a9cdc8b8202d9a26fef1457a0e7cc01645dd380adec55fadf638c",
+    "failed_qa_final_report_sha256": "a25e4fe627669e74f94294a0f4284f72ce2e8e3b31bdc4ad5e63dc1b1cf0d97b",
+    "instruction_sha256": "bd3b58a2ae26b5eb50cfa6892df79a41a73952bfc94c819fb478d40217fe6122",
+    "old_i1_i2_report_sha256": "f36a934b7b39a6e4426e0a0e6272a8b025dc9c92495a9a167596bf70496c19db",
+    "source_manifest_sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+  },
+  "boundary": "Source-grounded I1 identity repair only. V7 prompts, K=6 packets, labels, acceptable sets and retrieval outcomes are neither read nor changed.",
+  "counts": {
+    "identity_candidates": 39,
+    "literal_block_marker": 22,
+    "orphan_block_marker_with_prefix": 17,
+    "required_returns": 78,
+    "v7_sources": 3798
+  },
+  "formal_execution_ready": false,
+  "local_inputs": {
+    "review_input_lane_a.jsonl": {
+      "rows": 39,
+      "sha256": "1e670b549d22459f4507cd3f7db8e166847ee6ca06d636ebf0c6ffef80f1de3e"
+    },
+    "review_input_lane_b.jsonl": {
+      "rows": 39,
+      "sha256": "1e670b549d22459f4507cd3f7db8e166847ee6ca06d636ebf0c6ffef80f1de3e"
+    }
+  },
+  "next_gate": "Reconcile exact A/B agreement; disagreements or unresolved rows require a source-only coordinator before a versioned I1 materializer amendment.",
+  "provider_calls": 0,
+  "schema_version": "rq2b-v7-i1-identity-overlay-review-preparation-v1",
+  "selector_runs": 0,
+  "state": "PENDING_TWO_INDEPENDENT_SOURCE_ONLY_IDENTITY_REVIEWS",
+  "tracked_artifacts": {
+    "candidate_manifest.jsonl": {
+      "rows": 39,
+      "sha256": "07d00faa3a34876342941a6ae1b74122c0520848169bef8e02e3225038192475"
+    }
+  }
+}

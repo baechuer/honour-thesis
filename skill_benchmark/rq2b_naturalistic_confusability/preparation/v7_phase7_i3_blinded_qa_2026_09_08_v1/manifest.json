@@ -1,0 +1,123 @@
+{
+  "artifacts": {
+    "blinded_reviewer_packet.jsonl": {
+      "rows": 120,
+      "sha256": "9a28aa51e261795f1f7df45ada37949e9b44bce75c5f75b6f67222c72a961291"
+    },
+    "calibration_answer_key_do_not_give_reviewer.jsonl": {
+      "rows": 8,
+      "sha256": "ac259de1f2f78a97042fba184b8aa5f8e2008fd786fa9874a694a75ceaeeb5fb"
+    },
+    "calibration_input.jsonl": {
+      "rows": 8,
+      "sha256": "bafdeeea9e83f09e908ceda3bb98e082fa423b298d09dd024e0cb43fe4e2ba08"
+    },
+    "review_slots/qa_slot_01.jsonl": {
+      "rows": 20,
+      "sha256": "69b9545c0d613810ce0ba4486146e208090a8372511f05adf7272b63502a2793"
+    },
+    "review_slots/qa_slot_02.jsonl": {
+      "rows": 20,
+      "sha256": "06bda23faba197228b2ff199cd1b2a457f1692ce90330100003fb43607fd7a48"
+    },
+    "review_slots/qa_slot_03.jsonl": {
+      "rows": 20,
+      "sha256": "2c8e9510e81fa7cac4522850b55362f59f182e28a3843636607e8a5916f71d4c"
+    },
+    "review_slots/qa_slot_04.jsonl": {
+      "rows": 20,
+      "sha256": "0f34e372ca96f75a51dada370aafb28dba23187c8f4889f4a207b1e98d1023eb"
+    },
+    "review_slots/qa_slot_05.jsonl": {
+      "rows": 20,
+      "sha256": "d25659e20a537b26bcb443b99801513c7d2ea22e2a367b421b55696a30dfd23a"
+    },
+    "review_slots/qa_slot_06.jsonl": {
+      "rows": 20,
+      "sha256": "07539fc00f7509c4a67c60ba4fcc90d6e890e3061401258f747f777a56d5c26f"
+    },
+    "reviewer_guidance.md": {
+      "rows": 19,
+      "sha256": "2e314a4c08f164c0e4d60dcfb336b3227ca632b7affff1d18f85fb1d124a193d"
+    },
+    "reviewer_return_schema.json": {
+      "rows": 69,
+      "sha256": "66a9ca296c8549cfbbbd9aa8c33d2cc319ca116e064a9f6bbfdc1932d690bc1d"
+    },
+    "sampling_key_do_not_give_reviewer.jsonl": {
+      "rows": 120,
+      "sha256": "d691497f0a73241dd04938f45df9ce868db066311fbf445cd4bd506f1ea4e81f"
+    }
+  },
+  "bindings": {
+    "builder_sha256": "221b34df4ef0383a319fb6918152529689c94dd572de45aecc710d1b1e3c1d6c",
+    "canonical_extractions_sha256": "b2c76a765026c3cfde6d4f4e7d56861e13b9874df396873a296856a7ebeceac3",
+    "merged_manifest_sha256": "ae3c450794dd5009cae44804663f94e8027a8d04474912cb7ad02227066c053b",
+    "source_manifest_sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+  },
+  "calibration_rows": 8,
+  "counts": {
+    "length_quartile": {
+      "Q1": 25,
+      "Q2": 32,
+      "Q3": 32,
+      "Q4": 31
+    },
+    "population_present_field_rows_by_provenance": {
+      "FRESH": {
+        "constraints_boundaries": 1046,
+        "dependencies_resources": 383,
+        "input_preconditions": 428,
+        "output_artifacts": 796,
+        "success_criteria": 583,
+        "use_conditions": 588,
+        "workflow_steps": 978
+      },
+      "REUSED": {
+        "constraints_boundaries": 69,
+        "dependencies_resources": 1555,
+        "input_preconditions": 1631,
+        "output_artifacts": 1337,
+        "success_criteria": 3,
+        "use_conditions": 2030,
+        "workflow_steps": 1218
+      }
+    },
+    "present_field_rows": {
+      "constraints_boundaries": 41,
+      "dependencies_resources": 41,
+      "input_preconditions": 45,
+      "output_artifacts": 52,
+      "success_criteria": 17,
+      "use_conditions": 72,
+      "workflow_steps": 67
+    },
+    "provenance": {
+      "FRESH": 60,
+      "REUSED": 60
+    },
+    "reviewer_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    }
+  },
+  "cross_assignment": "Fresh rows are never assigned to the group that extracted their batch; each group receives 20 reused and 20 fresh rows in two 20-row slots.",
+  "formal_execution_ready": false,
+  "pass_rule": {
+    "calibration": "each reviewer group must exactly match all 8 hidden answers before its returns are accepted",
+    "critical_error_rows": 0,
+    "failure_action": "repair the entire affected rule/class, preserve originals, rebuild all representations, then draw a fresh versioned sample; never repair only sampled rows",
+    "field_stratum_rule": "for every field represented in at least 20 sampled rows, major_error_rows/represented_rows must be <=0.05; any field below 20 is reported but not separately thresholded",
+    "length_sampling": "target 15 rows per global source-length quartile within each provenance; when a provenance has fewer than 15 rows in a quartile, include all of that rare cell and deterministically redistribute the shortfall across populated quartiles",
+    "maximum_major_error_rate": 0.05,
+    "maximum_major_error_rows": 6,
+    "rare_field_sampling": "within each provenance, target five present rows per field, or every population row when fewer than five exist; retain exact 60/60 provenance and length-quartile balance"
+  },
+  "review_slots": 6,
+  "rows_per_slot": 20,
+  "sample_size": 120,
+  "sampling_seed": "rq2b-v7-i3-qa-2026090803",
+  "schema_version": "rq2b-v7-i3-blinded-qa-packet-v1",
+  "state": "FROZEN_PENDING_THREE_CROSS_ASSIGNED_REVIEWER_GROUPS"
+}

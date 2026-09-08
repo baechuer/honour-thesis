@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "coordinator_manifest.jsonl": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "direct_selection.jsonl": {
+      "rows": 39,
+      "sha256": "4e4c2dd27513e6927b18ebc2a9158077ce94984014b59e5e156a64cf3665530b"
+    },
+    "reviewer_returns/lane_a_return.jsonl": {
+      "rows": 39,
+      "sha256": "8b7b1dfcf236b23ed840c80de161cad74888ca4a4dfb500f8b901c86d3ba79ae"
+    },
+    "reviewer_returns/lane_b_return.jsonl": {
+      "rows": 39,
+      "sha256": "c63184b3fde89fd5c60acc2f5c610aac82e8cadcc520dbf601897fcee24c87fa"
+    }
+  },
+  "bindings": {
+    "candidate_manifest_sha256": "07d00faa3a34876342941a6ae1b74122c0520848169bef8e02e3225038192475",
+    "input_sha256": "1e670b549d22459f4507cd3f7db8e166847ee6ca06d636ebf0c6ffef80f1de3e",
+    "lane_a_return_sha256": "8b7b1dfcf236b23ed840c80de161cad74888ca4a4dfb500f8b901c86d3ba79ae",
+    "lane_b_return_sha256": "c63184b3fde89fd5c60acc2f5c610aac82e8cadcc520dbf601897fcee24c87fa",
+    "preparation_report_sha256": "c2fef36d78c5dbcf0e7c72f7b5fc244588624ecb9f5a6fc38e61e06273870b35",
+    "script_sha256": "110553eb968c20fe586958326cf39ca281f92005aaf455f446e3ed3d9a04fde8"
+  },
+  "boundary": "No benchmark or retrieval evidence is used. Exact A/B agreement is mechanical selection; all other cases remain unresolved until source-only coordination.",
+  "counts": {
+    "candidates": 39,
+    "coordinator_dockets": 0,
+    "direct_exact_agreements": 39
+  },
+  "formal_execution_ready": false,
+  "local_coordinator_input": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "schema_version": "rq2b-v7-i1-identity-overlay-reconciliation-v1",
+  "state": "PASS_ALL_39_DIRECT_EXACT_AGREEMENTS"
+}

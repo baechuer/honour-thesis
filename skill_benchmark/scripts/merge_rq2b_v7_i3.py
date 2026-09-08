@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from merge_rq2b_i3c import canonical_extraction, representation_row, summarize
+from freeze_rq2b_v7_i3_output_selection import (
+    CANONICAL_SEMANTIC_JSONL_SERIALIZER,
+    canonical_semantic_rows_bytes,
+)
 from prepare_rq2b_v7_i3_extraction import (
     CACHE as EXTRACTION_CACHE,
     OUTPUT as EXTRACTION_PREP,
@@ -23,7 +27,8 @@ from rq2b_common import serialize_i3_flat, serialize_i3c
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = Path("skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_merged_2026_09_08_v1")
 SELECTION = Path("skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_output_selection_2026_09_08_v1")
-MERGER_VERSION = "rq2b-v7-i3-merger-v1"
+MERGER_VERSION = "rq2b-v7-i3-merger-v2"
+PORTABLE_FRESH_OUTPUT_SERIALIZER = "jsonl-utf8-sort-keys-default-separators-lf-v1"
 
 
 def require(condition: bool, message: str) -> None:
@@ -43,7 +48,8 @@ def json_bytes(value: object) -> bytes:
     return (json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode()
 
 
-def rows_bytes(rows: Iterable[dict[str, Any]]) -> bytes:
+def portable_rows_bytes(rows: Iterable[dict[str, Any]]) -> bytes:
+    """Serialize the portable merged worker-output artifact explicitly."""
     return "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows).encode()
 
 
@@ -55,7 +61,43 @@ def read_rows(path: Path) -> list[dict[str, Any]]:
     return read_rows_bytes(path.read_bytes())
 
 
+def selected_output_rows(selected: dict[str, Any], batch_id: str) -> tuple[list[dict[str, Any]], str, str]:
+    output_path = ROOT / selected["selected_output_path"]
+    require(output_path.is_file(), f"selected fresh output missing: {batch_id}")
+    raw_data = output_path.read_bytes()
+    raw_sha256 = sha_bytes(raw_data)
+    require(
+        raw_sha256 == selected["selected_output_raw_sha256"] == selected["selected_output_sha256"],
+        f"selected fresh raw output hash mismatch: {batch_id}",
+    )
+    rows = read_rows_bytes(raw_data)
+    canonical_sha256 = sha_bytes(canonical_semantic_rows_bytes(rows))
+    require(
+        selected["canonical_semantic_jsonl_serializer"] == CANONICAL_SEMANTIC_JSONL_SERIALIZER,
+        f"selected fresh canonical serializer mismatch: {batch_id}",
+    )
+    require(
+        canonical_sha256 == selected["selected_output_canonical_semantic_jsonl_sha256"],
+        f"selected fresh canonical semantic hash mismatch: {batch_id}",
+    )
+    return rows, raw_sha256, canonical_sha256
+
+
 def load_fresh_outputs(assignments: list[dict[str, Any]], replay: bool) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    selections = read_rows(ROOT / SELECTION / "selection_ledger.jsonl")
+    require(len(selections) == len(assignments), "I3 output selection coverage mismatch")
+    selection_by_batch = {row["batch_id"]: row for row in selections}
+    require(len(selection_by_batch) == len(selections), "duplicate I3 output selection batch identity")
+    selected_rows_by_batch: dict[str, list[dict[str, Any]]] = {}
+    selected_hashes_by_batch: dict[str, tuple[str, str]] = {}
+    for assignment in assignments:
+        batch_id = assignment["batch_id"]
+        selected = selection_by_batch.get(batch_id)
+        require(selected is not None and selected["input_sha256"] == assignment["input_sha256"],
+                f"fresh output selection mismatch: {batch_id}")
+        selected_rows, raw_sha256, canonical_sha256 = selected_output_rows(selected, batch_id)
+        selected_rows_by_batch[batch_id] = selected_rows
+        selected_hashes_by_batch[batch_id] = (raw_sha256, canonical_sha256)
     if replay:
         path = ROOT / OUTPUT / "fresh_worker_outputs.jsonl"
         require(path.is_file(), "portable fresh worker output is missing")
@@ -64,18 +106,8 @@ def load_fresh_outputs(assignments: list[dict[str, Any]], replay: bool) -> tuple
         require(len(by_skill) == len(all_outputs), "duplicate portable fresh worker output identity")
     else:
         by_skill = {}
-        selections = read_rows(ROOT / SELECTION / "selection_ledger.jsonl")
-        require(len(selections) == len(assignments), "I3 output selection coverage mismatch")
-        selection_by_batch = {row["batch_id"]: row for row in selections}
         for assignment in assignments:
-            selected = selection_by_batch.get(assignment["batch_id"])
-            require(selected is not None and selected["input_sha256"] == assignment["input_sha256"],
-                    f"fresh output selection mismatch: {assignment['batch_id']}")
-            output_path = ROOT / selected["selected_output_path"]
-            require(output_path.is_file(), f"selected fresh output missing: {assignment['batch_id']}")
-            require(sha_path(output_path) == selected["selected_output_sha256"],
-                    f"selected fresh output hash mismatch: {assignment['batch_id']}")
-            for row in read_rows(output_path):
+            for row in selected_rows_by_batch[assignment["batch_id"]]:
                 require(row["skill_id"] not in by_skill, f"duplicate fresh worker identity: {row['skill_id']}")
                 by_skill[row["skill_id"]] = row
         all_outputs = []
@@ -87,21 +119,29 @@ def load_fresh_outputs(assignments: list[dict[str, Any]], replay: bool) -> tuple
         inputs_data = input_payloads[input_name]
         require(sha_bytes(inputs_data) == assignment["input_sha256"], f"fresh input replay mismatch: {assignment['batch_id']}")
         inputs = read_rows_bytes(inputs_data)
+        selected_rows = selected_rows_by_batch[assignment["batch_id"]]
+        require(len(selected_rows) == len(inputs), f"selected fresh row-count mismatch: {assignment['batch_id']}")
+        for input_row, selected_row in zip(inputs, selected_rows, strict=True):
+            canonical_extraction(input_row, selected_row)
         outputs = []
         for input_row in inputs:
             output_row = by_skill.get(input_row["skill_id"])
             require(output_row is not None, f"fresh output row missing: {input_row['skill_id']}")
             canonical_extraction(input_row, output_row)
             outputs.append(output_row)
-        output_data = rows_bytes(outputs)
-        if not replay:
-            selected = selection_by_batch[assignment["batch_id"]]
-            require(sha_bytes(output_data) == selected["selected_output_sha256"],
-                    f"fresh output order or serialization drift: {assignment['batch_id']}")
+        canonical_semantic_sha256 = sha_bytes(canonical_semantic_rows_bytes(outputs))
+        selected_raw_sha256, selected_canonical_sha256 = selected_hashes_by_batch[assignment["batch_id"]]
+        require(canonical_semantic_sha256 == selected_canonical_sha256,
+                f"fresh output semantic/order drift: {assignment['batch_id']}")
+        portable_data = portable_rows_bytes(outputs)
         batch_reports.append({
             "batch_id": assignment["batch_id"],
             "input_sha256": assignment["input_sha256"],
-            "output_sha256": sha_bytes(output_data),
+            "selected_raw_sha256": selected_raw_sha256,
+            "canonical_semantic_jsonl_sha256": canonical_semantic_sha256,
+            "canonical_semantic_jsonl_serializer": CANONICAL_SEMANTIC_JSONL_SERIALIZER,
+            "portable_output_sha256": sha_bytes(portable_data),
+            "portable_output_serializer": PORTABLE_FRESH_OUTPUT_SERIALIZER,
             "rows": len(outputs),
         })
         ordered.extend(outputs)
@@ -142,10 +182,10 @@ def build(replay: bool) -> dict[str, bytes]:
     require(automatic_summary["i3c_i3flat_evidence_match_rows"] == 3798, "I3 matched-evidence failure")
 
     payloads = {
-        "fresh_worker_outputs.jsonl": rows_bytes(fresh),
-        "canonical_extractions.jsonl": rows_bytes(canonical_rows),
-        "i3c_fielded.jsonl": rows_bytes(fielded_rows),
-        "i3_flat.jsonl": rows_bytes(flat_rows),
+        "fresh_worker_outputs.jsonl": portable_rows_bytes(fresh),
+        "canonical_extractions.jsonl": portable_rows_bytes(canonical_rows),
+        "i3c_fielded.jsonl": portable_rows_bytes(fielded_rows),
+        "i3_flat.jsonl": portable_rows_bytes(flat_rows),
     }
     warning_counts = Counter()
     fresh_ids = {row["skill_id"] for row in fresh}
@@ -153,7 +193,7 @@ def build(replay: bool) -> dict[str, bytes]:
         if row["qa_warnings"]:
             warning_counts["fresh" if row["skill_id"] in fresh_ids else "reused"] += 1
     manifest = {
-        "schema_version": "rq2b-v7-phase7-i3-merged-manifest-v1",
+        "schema_version": "rq2b-v7-phase7-i3-merged-manifest-v2",
         "state": "AUTOMATIC_INTEGRITY_PASS_FRESH_CURRENT_BLINDED_SEMANTIC_QA_PENDING",
         "formal_execution_ready": False,
         "retrieval_or_reranking_runs": 0,
@@ -171,6 +211,11 @@ def build(replay: bool) -> dict[str, bytes]:
         },
         "automatic_summary": automatic_summary,
         "rows_with_qa_warnings_by_provenance": dict(sorted(warning_counts.items())),
+        "serialization_contract": {
+            "selected_raw": "byte-for-byte selected attempt preserved by the selection ledger",
+            "canonical_semantic_jsonl_serializer": CANONICAL_SEMANTIC_JSONL_SERIALIZER,
+            "portable_fresh_output_serializer": PORTABLE_FRESH_OUTPUT_SERIALIZER,
+        },
         "fresh_batch_inventory": batch_reports,
         "artifacts": {name: {"sha256": sha_bytes(data), "rows": len(data.splitlines()), "utf8_bytes": len(data)} for name, data in payloads.items()},
         "semantic_qa": {

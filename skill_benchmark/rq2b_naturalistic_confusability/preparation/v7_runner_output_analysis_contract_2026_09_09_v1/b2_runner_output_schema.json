@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rq2b-v7-b2-runner-output-v1",
+  "title": "RQ2b V7 label-free fixed-candidate reranker output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "status", "run_id", "condition_id", "phase",
+    "prompt_id", "prompt_sha256", "representation", "first_stage_retriever",
+    "reranker", "persisted_candidate_source", "source_union_sha256",
+    "input_top20_binding_sha256", "reranker_input_sha256", "score_semantics",
+    "input_candidates", "reranked_candidates", "cost"
+  ],
+  "properties": {
+    "schema_version": {"const": "rq2b-v7-b2-runner-output-v1"},
+    "status": {"const": "SUCCESS"},
+    "run_id": {"type": "string", "minLength": 1},
+    "condition_id": {"type": "string", "pattern": "^(B(0[1-9]|1[0-2])-G[QS]|C[134]-[QS])$"},
+    "phase": {"enum": ["FIRST_CORE_MATRIX", "FIXED_CANDIDATE_BRIDGE"]},
+    "prompt_id": {"type": "string", "minLength": 1},
+    "prompt_sha256": {"$ref": "#/$defs/sha256"},
+    "representation": {"type": "string", "minLength": 1},
+    "first_stage_retriever": {"type": "string", "minLength": 1},
+    "reranker": {"type": "string", "minLength": 1},
+    "persisted_candidate_source": {"type": "string", "pattern": "^B(0[1-9]|1[0-2])$"},
+    "source_union_sha256": {"$ref": "#/$defs/sha256"},
+    "input_top20_binding_sha256": {"$ref": "#/$defs/sha256"},
+    "reranker_input_sha256": {"$ref": "#/$defs/sha256"},
+    "score_semantics": {"const": "HIGHER_IS_BETTER"},
+    "input_candidates": {
+      "type": "array", "minItems": 20, "maxItems": 20,
+      "items": {"$ref": "#/$defs/inputCandidate"}
+    },
+    "reranked_candidates": {
+      "type": "array", "minItems": 20, "maxItems": 20,
+      "items": {"$ref": "#/$defs/rerankedCandidate"}
+    },
+    "cost": {"$ref": "#/$defs/cost"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "inputCandidate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["input_rank", "source_sha256", "candidate_view_sha256"],
+      "properties": {
+        "input_rank": {"type": "integer", "minimum": 1, "maximum": 20},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "candidate_view_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "rerankedCandidate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rank", "input_rank", "source_sha256", "score"],
+      "properties": {
+        "rank": {"type": "integer", "minimum": 1, "maximum": 20},
+        "input_rank": {"type": "integer", "minimum": 1, "maximum": 20},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "score": {"type": "number"}
+      }
+    },
+    "cost": {
+      "type": "object", "additionalProperties": false,
+      "required": ["wall_time_ms", "provider_calls", "input_tokens", "output_tokens", "window_forwards", "cache_hits", "retry_count", "timeout_count", "failure_count", "candidate_pairs"],
+      "properties": {
+        "wall_time_ms": {"type": "number", "minimum": 0},
+        "provider_calls": {"type": "integer", "minimum": 0},
+        "input_tokens": {"type": "integer", "minimum": 0},
+        "output_tokens": {"type": "integer", "minimum": 0},
+        "window_forwards": {"type": "integer", "minimum": 0},
+        "cache_hits": {"type": "integer", "minimum": 0},
+        "retry_count": {"type": "integer", "minimum": 0},
+        "timeout_count": {"type": "integer", "minimum": 0},
+        "failure_count": {"type": "integer", "minimum": 0},
+        "candidate_pairs": {"const": 20}
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "artifacts": {
+    "identity_overlay.jsonl": {
+      "rows": 39,
+      "sha256": "4e4c2dd27513e6927b18ebc2a9158077ce94984014b59e5e156a64cf3665530b"
+    }
+  },
+  "bindings": {
+    "coordinator_input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "coordinator_instruction_sha256": "4d52567c239bcd691d2a6a976457b22219b264468c0b98bcfb51393ba1bc64d7",
+    "coordinator_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "coordinator_return_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "direct_selection_sha256": "4e4c2dd27513e6927b18ebc2a9158077ce94984014b59e5e156a64cf3665530b",
+    "reconciliation_report_sha256": "2af9b7dd5fa49bf19f86d29f5604ccd57188409b4d23a6896152063b330bbdde",
+    "script_sha256": "3d32008fff66606ac57cee408b09d4d5804015a50b98f7ef02aa50e6180901ce"
+  },
+  "counts": {
+    "coordinator_resolved": 0,
+    "direct_exact_agreements": 39,
+    "overlay_rows": 39,
+    "unresolved": 0
+  },
+  "formal_execution_ready": false,
+  "method_boundary": "These 39 descriptions are explicitly source-grounded overlays, not source-native frontmatter. Source bytes and V7 benchmark scope remain unchanged; I2 remains byte-exact.",
+  "next_gate": "Rebuild I1 and perform a full source-only I3 V4 re-extraction before drawing a fresh blinded QA sample.",
+  "schema_version": "rq2b-v7-i1-source-grounded-identity-overlay-final-v1",
+  "state": "PASS_39_SOURCE_GROUNDED_IDENTITY_OVERLAYS_FROZEN"
+}

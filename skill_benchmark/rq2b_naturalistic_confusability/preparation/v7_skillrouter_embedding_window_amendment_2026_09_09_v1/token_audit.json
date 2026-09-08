@@ -1,0 +1,71 @@
+{
+  "bindings": {
+    "approved_plan_sha256": "b54d3d8c6816b2bb5f75b2b946448063fcc800c1f9927e27babd767e3468d4d8",
+    "builder_sha256": "dd7dd7ef2b52785e5fcbca182053c0f014172de13df4a94e7b05e35cf7d81584",
+    "i1_i2_mechanical_report_sha256": "f36a934b7b39a6e4426e0a0e6272a8b025dc9c92495a9a167596bf70496c19db",
+    "i3_merged_manifest_sha256": "ae3c450794dd5009cae44804663f94e8027a8d04474912cb7ad02227066c053b",
+    "runtime_integrity_report_sha256": "93e047af9e92ead168b53a1b47b17ff5839b36ee3f900d47e5254e2694214279",
+    "runtime_inventory_sha256": "3bc874eaa23ed699c71ee7007039374868cb65ab69ce05823b67ea3a5b955b54"
+  },
+  "labels_or_results_read": 0,
+  "model_forwards": 0,
+  "network_calls": 0,
+  "proposed_scope": {
+    "aggregation": "maximum query-to-window cosine per source",
+    "coverage": "exact lossless character coverage using the existing frozen exact-markdown chunker",
+    "document_representation_rows_total": 15192,
+    "document_representation_rows_windowed": 30,
+    "overlap_tokens": 256,
+    "unwindowed_rows": 15162,
+    "window_tokens": 7500
+  },
+  "representation_summary": {
+    "I1-discovery": {
+      "maximum_tokens": 419,
+      "p50_tokens": 35,
+      "p95_tokens": 164,
+      "p99_tokens": 228,
+      "rows": 3798,
+      "rows_above_7500": 0,
+      "rows_above_model_32768": 0,
+      "total_tokens": 243840
+    },
+    "I2-original": {
+      "maximum_tokens": 56648,
+      "p50_tokens": 309,
+      "p95_tokens": 4064,
+      "p99_tokens": 6902,
+      "rows": 3798,
+      "rows_above_7500": 28,
+      "rows_above_model_32768": 1,
+      "total_tokens": 4587060
+    },
+    "I3-flat": {
+      "maximum_tokens": 11853,
+      "p50_tokens": 168,
+      "p95_tokens": 1152,
+      "p99_tokens": 2059,
+      "rows": 3798,
+      "rows_above_7500": 1,
+      "rows_above_model_32768": 0,
+      "total_tokens": 1272007
+    },
+    "I3C-fielded": {
+      "maximum_tokens": 11877,
+      "p50_tokens": 185,
+      "p95_tokens": 1170,
+      "p99_tokens": 2083,
+      "rows": 3798,
+      "rows_above_7500": 1,
+      "rows_above_model_32768": 0,
+      "total_tokens": 1321099
+    }
+  },
+  "schema_version": "rq2b-v7-skillrouter-embedding-window-audit-v1",
+  "status": "PASS_SOURCE_ONLY_TOKEN_AUDIT_PENDING_METHOD_APPROVAL",
+  "tokenizer": {
+    "model": "pipizhao/SkillRouter-Embedding-0.6B",
+    "revision": "c03c9bcee9fce92ab0262bb6dcf54d174a8ba558",
+    "tokenizer_sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "affected_fields": {
+      "items": {
+        "enum": [
+          "use_conditions",
+          "input_preconditions",
+          "output_artifacts",
+          "workflow_steps",
+          "dependencies_resources",
+          "constraints_boundaries",
+          "success_criteria"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "critical_error": {
+      "type": "boolean"
+    },
+    "error_codes": {
+      "items": {
+        "enum": [
+          "EVIDENCE_NOT_EXACT_SOURCE_SUBSTRING",
+          "BENCHMARK_OR_ROUTING_LEAKAGE",
+          "WRONG_OPERATIONAL_FIELD",
+          "MISSING_SELECTION_CRITICAL_CONTENT",
+          "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN",
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "major_error": {
+      "type": "boolean"
+    },
+    "review_id": {
+      "type": "string"
+    },
+    "review_status": {
+      "const": "COMPLETE"
+    },
+    "reviewer_group": {
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "reviewer_notes": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "review_id",
+    "review_status",
+    "critical_error",
+    "major_error",
+    "affected_fields",
+    "error_codes",
+    "reviewer_notes",
+    "reviewer_group"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,25 @@
+{
+  "bindings": {
+    "assignment_manifest_sha256": "3cb023127b33a438b01df6b3904415c65da6e385bb596b744fc7acd822cbfe18",
+    "builder_sha256": "69b6c46c1c6d570c8b493133a1de20d96aa6cf29ba62988b75bb384a87ea8804",
+    "selection_ledger_sha256": "aa5a5c24130be89b799c7e86ea2a032a088c4c7843969945dd4057d60171d03c"
+  },
+  "boundary": "A selected reissue passed schema/identity/exact-substring validation and was explicitly preserved. Selection is not a semantic-fidelity pass; fresh blinded QA remains mandatory.",
+  "counts": {
+    "batches": 35,
+    "batches_selecting_original": 0,
+    "batches_selecting_reissue": 35,
+    "selected_rows": 1368,
+    "total_attempt_files": 167
+  },
+  "formal_execution_ready": false,
+  "provider_calls": 0,
+  "retrieval_or_reranking_runs": 0,
+  "schema_version": "rq2b-v7-i3-output-selection-freeze-report-v2",
+  "serialization_contract": {
+    "canonical_semantic_jsonl_serializer": "jsonl-utf8-sort-keys-compact-lf-v1",
+    "canonical_semantic_jsonl_sha256_semantics": "PARSED_JSON_ROWS_FORMAT_INSENSITIVE_SHA256",
+    "selected_output_sha256_semantics": "RAW_BYTES_SHA256"
+  },
+  "status": "PASS_ALL_ATTEMPTS_PRESERVED_AND_MECHANICALLY_VALIDATED_PENDING_INDEPENDENT_SEMANTIC_QA"
+}

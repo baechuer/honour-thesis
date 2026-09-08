@@ -1,0 +1,43 @@
+{
+  "bindings": {
+    "identity_overlay_report_sha256": "edc3dbe9989fd97d4e50a5973d030577c03525dede921bd18b2224fa744ba885",
+    "identity_overlay_sha256": "4e4c2dd27513e6927b18ebc2a9158077ce94984014b59e5e156a64cf3665530b",
+    "old_i1_i2_report_sha256": "f36a934b7b39a6e4426e0a0e6272a8b025dc9c92495a9a167596bf70496c19db",
+    "old_i2_payload_sha256": "8860e415fa7ae6718e5e2b6ca3e57605150120f30a8414e6c6931a99355952ec",
+    "script_sha256": "37da5fd5e827e8704e9dd7e5518ec379be807cd9d1c76962e35d17c6593125e9",
+    "source_manifest_sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+  },
+  "counts": {
+    "i1_overlay_rows": 39,
+    "i1_rows": 3798,
+    "i1_unchanged_rows": 3759,
+    "i2_exact_byte_rows": 3798,
+    "source_rows": 3798
+  },
+  "formal_execution_ready": false,
+  "local_derived_artifacts": {
+    "i1-discovery.jsonl": {
+      "bytes": 2262253,
+      "path": "skill_benchmark/cache/rq2b_v7_phase7_i1_i2_2026_09_09_v2/i1-discovery.jsonl",
+      "rows": 3798,
+      "sha256": "0fc34abe8ca3f5d23bcc563f496831e37628491ddc65caeb9c7a284d5d1ff8dd"
+    },
+    "i2-original.jsonl": {
+      "bytes": 21251765,
+      "path": "skill_benchmark/cache/rq2b_v7_phase7_i1_i2_2026_09_09_v2/i2-original.jsonl",
+      "rows": 3798,
+      "sha256": "8860e415fa7ae6718e5e2b6ca3e57605150120f30a8414e6c6931a99355952ec"
+    }
+  },
+  "method_boundary": "Only 39 unusable native descriptions are replaced by independently reviewed source-grounded overlays. The other 3,759 I1 rows and all I2 bytes are identical to v1.",
+  "network_calls": 0,
+  "schema_version": "rq2b-v7-phase7-i1-i2-materialisation-v2",
+  "selector_runs": 0,
+  "status": "PASS_I1_IDENTITY_OVERLAY_AND_I2_BYTE_PRESERVATION_PENDING_I3_V4_AND_FRESH_QA",
+  "tracked_artifacts": {
+    "source_view_inventory.jsonl": {
+      "rows": 3798,
+      "sha256": "9632d2cc60ad1c7049fb089e82d4d005b1686ab6d3d042965fe7fe6e8bf64812"
+    }
+  }
+}

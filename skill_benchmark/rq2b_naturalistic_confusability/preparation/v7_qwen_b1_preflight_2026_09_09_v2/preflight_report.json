@@ -1,0 +1,110 @@
+{
+  "blocked_by": [
+    "PHASE7_QA_PASS_RECEIPT",
+    "ROOT_EXECUTION_RELEASE"
+  ],
+  "cache_summary": {
+    "automatic_retries": 0,
+    "clean_cache_hits": 0,
+    "cold_query_requests": 1077,
+    "document_cache_hits": 8941,
+    "document_cache_misses": 5381,
+    "legacy_cache_hits": 9304,
+    "maximum_document_batch_requests": 539,
+    "maximum_external_submission_proxy_tokens": 5274283,
+    "maximum_external_submission_utf8_bytes": 22946986,
+    "maximum_external_text_submissions": 6458,
+    "maximum_new_cache_entries": 6095,
+    "maximum_new_cache_proxy_tokens": 5257682,
+    "maximum_new_cache_utf8_bytes": 22860520,
+    "maximum_request_attempts": 1616,
+    "maximum_successful_calls": 1616,
+    "query_cache_entries_preexisting": 363,
+    "query_cache_entry_misses": 714,
+    "unique_document_texts": 14322,
+    "unique_query_texts": 1077,
+    "unique_texts": 15399
+  },
+  "implementation": {
+    "builder": {
+      "path": "skill_benchmark/scripts/build_rq2b_v7_qwen_b1_preflight.py",
+      "sha256": "0d3fa8c03bdfa9329740a1b04834f5956c0217165a783ed42b356be0cff76714"
+    },
+    "chunker_v2": {
+      "path": "skill_benchmark/scripts/rq2b_v7_exact_chunking_v2.py",
+      "sha256": "dea081c1e02defd909b80518627d613e9505f53eb088f5059f4cc5df47ade913"
+    },
+    "gzip_shard_validator": {
+      "path": "skill_benchmark/scripts/validate_rq2b_v7_qwen_b1_shards.py",
+      "sha256": "11e59fb878955e895b16efa680822c04b625a87fea46b30ae2a799a5cbf5aa9a"
+    },
+    "legacy_cache_contract": {
+      "path": "skill_benchmark/scripts/run_rq2b_qwen.py",
+      "sha256": "ad9016cf14c20c3935c84482d9c9499be3e86f0272a6105a7ab3fa2238a7c05f"
+    },
+    "legacy_chunker_contract": {
+      "path": "skill_benchmark/scripts/rq2b_chunking.py",
+      "sha256": "37da969989f6f4628419fdd3503568b073b7f32fba4ae5e87f70631debb36150"
+    },
+    "runner": {
+      "path": "skill_benchmark/scripts/run_rq2b_v7_qwen_b1.py",
+      "sha256": "c93167e92f26f5bca4ecf4c5c27ba0bb00d253de1ae9f61d40aaf84881e5e0c8"
+    },
+    "tests": {
+      "path": "skill_benchmark/scripts/test_rq2b_v7_qwen_b1.py",
+      "sha256": "609d95ef265ddf604bf6f6f3bb8173013e5204c07a3cf7ae47e51d9064c3c66d"
+    }
+  },
+  "labels_or_results_read": false,
+  "network_calls": 0,
+  "payload_manifest": {
+    "path": "skill_benchmark/cache/rq2b_v7_qwen_b1_2026_09_09_v2/payload/payload_manifest.json",
+    "sha256": "e3731a544a9f170096c59d65df1f1d9af02aca2c26b3b3b02bccb00bb3d006bf"
+  },
+  "provider_requests": 0,
+  "representation_summary": {
+    "I1-discovery": {
+      "chunking_seconds": 2.616663666907698,
+      "document_windows": 3798,
+      "documents": 3798,
+      "first_stage_cell_id": "B02",
+      "maximum_adjacent_overlap_proxy_tokens": 0,
+      "maximum_source_proxy_tokens": 419,
+      "short_boundary_direct_advances": 0,
+      "windowed_documents": 0
+    },
+    "I2-original": {
+      "chunking_seconds": 55.83053645770997,
+      "document_windows": 3837,
+      "documents": 3798,
+      "first_stage_cell_id": "B05",
+      "maximum_adjacent_overlap_proxy_tokens": 256,
+      "maximum_source_proxy_tokens": 56648,
+      "short_boundary_direct_advances": 0,
+      "windowed_documents": 28
+    },
+    "I3-flat": {
+      "chunking_seconds": 13.436296583618969,
+      "document_windows": 3800,
+      "documents": 3798,
+      "first_stage_cell_id": "B11",
+      "maximum_adjacent_overlap_proxy_tokens": 256,
+      "maximum_source_proxy_tokens": 11853,
+      "short_boundary_direct_advances": 1,
+      "windowed_documents": 1
+    },
+    "I3C-fielded": {
+      "chunking_seconds": 13.809524917043746,
+      "document_windows": 3799,
+      "documents": 3798,
+      "first_stage_cell_id": "B08",
+      "maximum_adjacent_overlap_proxy_tokens": 256,
+      "maximum_source_proxy_tokens": 11877,
+      "short_boundary_direct_advances": 0,
+      "windowed_documents": 1
+    }
+  },
+  "schema_version": "rq2b-v7-qwen-b1-preflight-report-v2",
+  "selector_runs": 0,
+  "status": "PASS_LABEL_FREE_PAYLOAD_AND_CACHE_PREFLIGHT_AWAITING_PHASE7_QA_AND_ROOT_RELEASE"
+}

@@ -68,15 +68,30 @@ def visible_fields(canonical: dict[str, Any]) -> dict[str, list[dict[str, str]]]
 
 def sample_provenance(rows: list[dict[str, Any]], provenance: str) -> list[dict[str, Any]]:
     pool = [row for row in rows if row["provenance"] == provenance]
+    available = Counter(row["length_quartile"] for row in pool)
+    quotas = {quartile: min(PER_LENGTH_QUARTILE, available[quartile]) for quartile in ("Q1", "Q2", "Q3", "Q4")}
+    remaining = SAMPLE_PER_PROVENANCE - sum(quotas.values())
+    while remaining:
+        eligible = [
+            quartile
+            for quartile in ("Q1", "Q2", "Q3", "Q4")
+            if quotas[quartile] < available[quartile]
+        ]
+        require(eligible, f"insufficient QA population: {provenance}")
+        quartile = min(eligible, key=lambda value: (quotas[value], value))
+        quotas[quartile] += 1
+        remaining -= 1
     selected: list[dict[str, Any]] = []
     for quartile in ("Q1", "Q2", "Q3", "Q4"):
         candidates = sorted((row for row in pool if row["length_quartile"] == quartile),
                             key=lambda row: stable_key(provenance, quartile, row["skill_id"]))
-        require(len(candidates) >= PER_LENGTH_QUARTILE, f"insufficient QA rows: {provenance}/{quartile}")
-        selected.extend(candidates[:PER_LENGTH_QUARTILE])
+        require(len(candidates) >= quotas[quartile], f"insufficient QA rows: {provenance}/{quartile}")
+        selected.extend(candidates[:quotas[quartile]])
     selected_ids = {row["skill_id"] for row in selected}
     for field in FIELD_KEYS:
-        while sum(field in row["present_fields"] for row in selected) < MIN_PRESENT_PER_FIELD_AND_PROVENANCE:
+        population_present = sum(field in row["present_fields"] for row in pool)
+        target_present = min(MIN_PRESENT_PER_FIELD_AND_PROVENANCE, population_present)
+        while sum(field in row["present_fields"] for row in selected) < target_present:
             candidates = sorted(
                 (row for row in pool if row["skill_id"] not in selected_ids and field in row["present_fields"]),
                 key=lambda row: stable_key("swap-in", provenance, field, row["skill_id"]),
@@ -89,7 +104,11 @@ def sample_provenance(rows: list[dict[str, Any]], provenance: str) -> list[dict[
                     continue
                 if all(
                     current_field not in row["present_fields"]
-                    or sum(current_field in item["present_fields"] for item in selected) > MIN_PRESENT_PER_FIELD_AND_PROVENANCE
+                    or sum(current_field in item["present_fields"] for item in selected)
+                    > min(
+                        MIN_PRESENT_PER_FIELD_AND_PROVENANCE,
+                        sum(current_field in item["present_fields"] for item in pool),
+                    )
                     for current_field in FIELD_KEYS
                 ):
                     removable.append(row)
@@ -100,7 +119,7 @@ def sample_provenance(rows: list[dict[str, Any]], provenance: str) -> list[dict[
             selected.append(incoming)
             selected_ids.add(incoming["skill_id"])
     require(len(selected) == SAMPLE_PER_PROVENANCE and len(selected_ids) == SAMPLE_PER_PROVENANCE, "QA sample coverage mismatch")
-    require(Counter(row["length_quartile"] for row in selected) == Counter({f"Q{i}": 15 for i in range(1, 5)}), "QA quartile balance mismatch")
+    require(Counter(row["length_quartile"] for row in selected) == Counter(quotas), "QA quartile quota mismatch")
     return selected
 
 
@@ -286,6 +305,16 @@ def build() -> dict[str, bytes]:
             "length_quartile": dict(sorted(Counter(row["length_quartile"] for row in key_rows).items())),
             "reviewer_group": dict(sorted(Counter(row["assigned_reviewer_group"] for row in key_rows).items())),
             "present_field_rows": {field: sum(field in row["present_fields"] for row in key_rows) for field in FIELD_KEYS},
+            "population_present_field_rows_by_provenance": {
+                provenance: {
+                    field: sum(
+                        row["provenance"] == provenance and field in row["present_fields"]
+                        for row in population
+                    )
+                    for field in FIELD_KEYS
+                }
+                for provenance in ("REUSED", "FRESH")
+            },
         },
         "cross_assignment": "Fresh rows are never assigned to the group that extracted their batch; each group receives 20 reused and 20 fresh rows in two 20-row slots.",
         "pass_rule": {
@@ -295,6 +324,8 @@ def build() -> dict[str, bytes]:
             "maximum_major_error_rate": 0.05,
             "field_stratum_rule": "for every field represented in at least 20 sampled rows, major_error_rows/represented_rows must be <=0.05; any field below 20 is reported but not separately thresholded",
             "failure_action": "repair the entire affected rule/class, preserve originals, rebuild all representations, then draw a fresh versioned sample; never repair only sampled rows",
+            "rare_field_sampling": "within each provenance, target five present rows per field, or every population row when fewer than five exist; retain exact 60/60 provenance and length-quartile balance",
+            "length_sampling": "target 15 rows per global source-length quartile within each provenance; when a provenance has fewer than 15 rows in a quartile, include all of that rare cell and deterministically redistribute the shortfall across populated quartiles",
         },
         "bindings": {
             "merged_manifest_sha256": sha((ROOT / MERGED / "manifest.json").read_bytes()),
@@ -307,7 +338,7 @@ def build() -> dict[str, bytes]:
     files["manifest.json"] = json_bytes(report)
     files["README.md"] = (
         "# V7 Phase-7 blinded I1/I3 QA\n\n"
-        "Six 20-row slots form a 120-row sample: 60 reused and 60 fresh, with exact length-quartile balance. Fresh rows are cross-assigned away from their extractor group. "
+        "Six 20-row slots form a 120-row sample: 60 reused and 60 fresh. The sampler targets 15 rows per global length quartile within each provenance, then includes all rows from any smaller provenance/quartile cell and deterministically redistributes the shortfall. Fresh rows are cross-assigned away from their extractor group. "
         "Reviewers receive only source text, native I1 metadata and actual selector-visible retained evidence.\n\n"
         "Replay: `python3 -B skill_benchmark/scripts/build_rq2b_v7_i3_blinded_qa.py --verify`\n"
     ).encode()

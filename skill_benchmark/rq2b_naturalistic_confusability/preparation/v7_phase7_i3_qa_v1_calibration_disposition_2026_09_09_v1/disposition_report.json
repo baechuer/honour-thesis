@@ -1,0 +1,427 @@
+{
+  "bindings": {
+    "builder_sha256": "4ee159f60673f8b50513d1686909e625027012a176cedac8571e8c16a0025226",
+    "v1_calibration_answer_key_sha256": "ac259de1f2f78a97042fba184b8aa5f8e2008fd786fa9874a694a75ceaeeb5fb",
+    "v1_calibration_input_sha256": "bafdeeea9e83f09e908ceda3bb98e082fa423b298d09dd024e0cb43fe4e2ba08",
+    "v1_packet_manifest_sha256": "e5358359f5f2f67b84125a8664aab2e6305420fe2c47324237d0c54dc2e47a4d"
+  },
+  "calibration_mismatch_rows_by_group": {
+    "1": 5,
+    "2": 4,
+    "3": 4
+  },
+  "disposition": {
+    "next_instrument": "v7_phase7_i3_blinded_qa_2026_09_09_v2",
+    "next_sample": "byte-identical v1 sample with fresh reviewer contexts; no benchmark outcome exposure occurred",
+    "v1_sample_returns": "PRESERVED_REJECTED_NOT_USED_FOR_QA_ESTIMATE"
+  },
+  "formal_execution_ready": false,
+  "instrument_findings": [
+    "CAL-001 omits an explicit output while the v1 guidance permits MISSING_SELECTION_CRITICAL_CONTENT, yet the answer key marks the row clean.",
+    "CAL-002 includes a second omitted output fact, so the fixture does not isolate WRONG_OPERATIONAL_FIELD.",
+    "CAL-006 omits a use/boundary fact but the answer key names workflow_steps as the affected field.",
+    "CAL-007 does not define whether a non-self-contained fragment also receives the missing-content code.",
+    "V1 guidance never defines whether affected_fields names the defective origin, intended destination, or both.",
+    "All three fresh reviewer contexts independently produced the same core calibration disagreements."
+  ],
+  "mismatches": [
+    {
+      "answer_key": {
+        "affected_fields": [],
+        "critical_error": false,
+        "error_codes": [],
+        "major_error": false
+      },
+      "differing_keys": [
+        "major_error",
+        "affected_fields",
+        "error_codes"
+      ],
+      "observed": {
+        "affected_fields": [
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-001",
+      "reviewer_group": 1
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields",
+        "error_codes"
+      ],
+      "observed": {
+        "affected_fields": [
+          "input_preconditions",
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD",
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-002",
+      "reviewer_group": 1
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "workflow_steps"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields",
+        "error_codes"
+      ],
+      "observed": {
+        "affected_fields": [
+          "workflow_steps",
+          "constraints_boundaries"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD",
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-003",
+      "reviewer_group": 1
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "workflow_steps"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "use_conditions"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-006",
+      "reviewer_group": 1
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "input_preconditions"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "error_codes"
+      ],
+      "observed": {
+        "affected_fields": [
+          "input_preconditions"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN",
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-007",
+      "reviewer_group": 1
+    },
+    {
+      "answer_key": {
+        "affected_fields": [],
+        "critical_error": false,
+        "error_codes": [],
+        "major_error": false
+      },
+      "differing_keys": [
+        "major_error",
+        "affected_fields",
+        "error_codes"
+      ],
+      "observed": {
+        "affected_fields": [
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-001",
+      "reviewer_group": 2
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "input_preconditions",
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-002",
+      "reviewer_group": 2
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "workflow_steps"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "workflow_steps",
+          "constraints_boundaries"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-003",
+      "reviewer_group": 2
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "workflow_steps"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "constraints_boundaries"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-006",
+      "reviewer_group": 2
+    },
+    {
+      "answer_key": {
+        "affected_fields": [],
+        "critical_error": false,
+        "error_codes": [],
+        "major_error": false
+      },
+      "differing_keys": [
+        "major_error",
+        "affected_fields",
+        "error_codes"
+      ],
+      "observed": {
+        "affected_fields": [
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-001",
+      "reviewer_group": 3
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "input_preconditions",
+          "output_artifacts"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "WRONG_OPERATIONAL_FIELD"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-002",
+      "reviewer_group": 3
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "workflow_steps"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "workflow_steps",
+          "constraints_boundaries"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "BOUNDARY_POLARITY_MISCLASSIFIED"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-003",
+      "reviewer_group": 3
+    },
+    {
+      "answer_key": {
+        "affected_fields": [
+          "workflow_steps"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "differing_keys": [
+        "affected_fields"
+      ],
+      "observed": {
+        "affected_fields": [
+          "use_conditions"
+        ],
+        "critical_error": false,
+        "error_codes": [
+          "MISSING_SELECTION_CRITICAL_CONTENT"
+        ],
+        "major_error": true
+      },
+      "review_id": "CAL-006",
+      "reviewer_group": 3
+    }
+  ],
+  "preserved_returns": {
+    "rejected_reviewer_returns/calibration_group_1.jsonl": {
+      "rows": 8,
+      "sha256": "92532e1039415efef3675351df2816e8bf42345db6fce0c2f2d6498992758f44"
+    },
+    "rejected_reviewer_returns/calibration_group_2.jsonl": {
+      "rows": 8,
+      "sha256": "b74fe05003aa1a6f63cb0ad556c011d74b31681d07e46061eeaa3f8cc6753861"
+    },
+    "rejected_reviewer_returns/calibration_group_3.jsonl": {
+      "rows": 8,
+      "sha256": "faa7b0356229b018a2b0f36a060b8df6aeb75ddc4b047b552b6a0aae554eb0a7"
+    },
+    "rejected_reviewer_returns/qa_slot_01_return.jsonl": {
+      "rows": 20,
+      "sha256": "4959a7e23b499cb8019698c3ce7c6313a3b06d2c9309d8a3e5316504750600d4"
+    },
+    "rejected_reviewer_returns/qa_slot_02_return.jsonl": {
+      "rows": 20,
+      "sha256": "883e2ab099c8cfa74bb609436e68efc65b04b033fe317a98d79a3867b3158936"
+    },
+    "rejected_reviewer_returns/qa_slot_03_return.jsonl": {
+      "rows": 20,
+      "sha256": "da908aaf526e91a01ffbab11c1b7de9c4e515bc14094af4055f06c170ee59191"
+    },
+    "rejected_reviewer_returns/qa_slot_04_return.jsonl": {
+      "rows": 20,
+      "sha256": "9fff00069415ee5ca1721ebd2554520dd681b1279cebd8423ae2f8d90d8d2fc1"
+    },
+    "rejected_reviewer_returns/qa_slot_05_return.jsonl": {
+      "rows": 20,
+      "sha256": "1ad49e2407f0d2172a32d4254a455dd5217859f549e0fb984b3ee620ba233d70"
+    },
+    "rejected_reviewer_returns/qa_slot_06_return.jsonl": {
+      "rows": 20,
+      "sha256": "43d4cb4a5796a652540c97eb99b7c3fbafb525ab8840d347390c65fc2c1e6bfc"
+    }
+  },
+  "raw_returns_overwritten": false,
+  "schema_version": "rq2b-v7-i3-qa-v1-calibration-disposition-v1",
+  "state": "INVALID_CALIBRATION_INSTRUMENT_AND_REVIEWER_RETURNS_NOT_ACCEPTED",
+  "threshold_changed": false
+}

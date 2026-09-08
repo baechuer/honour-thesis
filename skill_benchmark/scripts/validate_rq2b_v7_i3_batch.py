@@ -22,6 +22,14 @@ def rows(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_bytes().splitlines()]
 
 
+def report_output_path(path: Path) -> str:
+    """Report the file actually validated, relative to the repo when possible."""
+    try:
+        return path.resolve().relative_to(ROOT.resolve()).as_posix()
+    except ValueError:
+        return str(path.resolve())
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("batch_id")
@@ -48,7 +56,7 @@ def main() -> None:
     if [r["source_row_index"] for r in inputs] != sorted(r["source_row_index"] for r in inputs):
         raise ValueError("input order drift")
     print(json.dumps({"status": "PASS_I3_BATCH_VALIDATION", "batch_id": args.batch_id,
-                      "rows": len(outputs), "output_path": assignment["expected_output_path"],
+                      "rows": len(outputs), "output_path": report_output_path(output_path),
                       "output_sha256": sha(output_path)}, sort_keys=True))
 
 

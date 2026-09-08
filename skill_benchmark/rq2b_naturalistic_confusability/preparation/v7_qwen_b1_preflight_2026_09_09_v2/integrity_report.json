@@ -1,0 +1,56 @@
+{
+  "artifacts": {
+    "README.md": {
+      "sha256": "5658d83a014cad242c028347c4f29fe936b0fe347433e22d628331ee75080a3c"
+    },
+    "pending_authorisation.json": {
+      "sha256": "a52b3752902be9d82fbddfa994c90419b68421242437e7993618d5bedc89f2e7"
+    },
+    "preflight_report.json": {
+      "sha256": "15bcae21fccda48f155d83471bb91409ce8437688a3e2cd04509280a1d3aa546"
+    }
+  },
+  "checks": {
+    "all_representation_sources_exactly_match_source_manifest": true,
+    "cold_query_request_ceiling_exact": true,
+    "exact_lossless_chunks_verified": true,
+    "execution_authorised": false,
+    "label_free_input_hashes": true,
+    "legacy_cache_hits_validated_read_only": true,
+    "zero_network": true,
+    "zero_retries": true
+  },
+  "implementation": {
+    "builder": {
+      "path": "skill_benchmark/scripts/build_rq2b_v7_qwen_b1_preflight.py",
+      "sha256": "0d3fa8c03bdfa9329740a1b04834f5956c0217165a783ed42b356be0cff76714"
+    },
+    "chunker_v2": {
+      "path": "skill_benchmark/scripts/rq2b_v7_exact_chunking_v2.py",
+      "sha256": "dea081c1e02defd909b80518627d613e9505f53eb088f5059f4cc5df47ade913"
+    },
+    "gzip_shard_validator": {
+      "path": "skill_benchmark/scripts/validate_rq2b_v7_qwen_b1_shards.py",
+      "sha256": "11e59fb878955e895b16efa680822c04b625a87fea46b30ae2a799a5cbf5aa9a"
+    },
+    "legacy_cache_contract": {
+      "path": "skill_benchmark/scripts/run_rq2b_qwen.py",
+      "sha256": "ad9016cf14c20c3935c84482d9c9499be3e86f0272a6105a7ab3fa2238a7c05f"
+    },
+    "legacy_chunker_contract": {
+      "path": "skill_benchmark/scripts/rq2b_chunking.py",
+      "sha256": "37da969989f6f4628419fdd3503568b073b7f32fba4ae5e87f70631debb36150"
+    },
+    "runner": {
+      "path": "skill_benchmark/scripts/run_rq2b_v7_qwen_b1.py",
+      "sha256": "c93167e92f26f5bca4ecf4c5c27ba0bb00d253de1ae9f61d40aaf84881e5e0c8"
+    },
+    "tests": {
+      "path": "skill_benchmark/scripts/test_rq2b_v7_qwen_b1.py",
+      "sha256": "609d95ef265ddf604bf6f6f3bb8173013e5204c07a3cf7ae47e51d9064c3c66d"
+    }
+  },
+  "payload_manifest_sha256": "e3731a544a9f170096c59d65df1f1d9af02aca2c26b3b3b02bccb00bb3d006bf",
+  "schema_version": "rq2b-v7-qwen-b1-preflight-integrity-v2",
+  "status": "PASS_ZERO_NETWORK_LABEL_FREE_PREFLIGHT_EXECUTION_NOT_AUTHORISED"
+}

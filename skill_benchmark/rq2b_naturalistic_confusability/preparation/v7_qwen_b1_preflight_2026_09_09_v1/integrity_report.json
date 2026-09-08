@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "README.md": {
+      "sha256": "da23f304ac28e6ef35ad7012c28b82462ef1bd5dae35bcf9c90535020b423e5d"
+    },
+    "pending_authorisation.json": {
+      "sha256": "780face5d075b76ae6459a6e7cab1acfc6128893313a5aeb848f6a2324ee2b10"
+    },
+    "preflight_report.json": {
+      "sha256": "e3a15ad35af25d9ed0e9b52ba96d5a796ed50dddd3ca91adee1bb51f254f7020"
+    }
+  },
+  "checks": {
+    "all_representation_sources_exactly_match_source_manifest": true,
+    "cold_query_request_ceiling_exact": true,
+    "exact_lossless_chunks_verified": true,
+    "execution_authorised": false,
+    "label_free_input_hashes": true,
+    "legacy_cache_hits_validated_read_only": true,
+    "zero_network": true,
+    "zero_retries": true
+  },
+  "payload_manifest_sha256": "e32ec2742a18c1dc79a4aa3cb6f70023f06e93a511e42f1079669ad2c6d3749e",
+  "schema_version": "rq2b-v7-qwen-b1-preflight-integrity-v1",
+  "status": "PASS_ZERO_NETWORK_LABEL_FREE_PREFLIGHT_EXECUTION_NOT_AUTHORISED"
+}

@@ -1,0 +1,92 @@
+{
+  "bindings": {
+    "qwen_embedding_contract_source": {
+      "path": "skill_benchmark/scripts/run_rq2b_qwen.py",
+      "sha256": "ad9016cf14c20c3935c84482d9c9499be3e86f0272a6105a7ab3fa2238a7c05f"
+    },
+    "qwen_reranker_contract_source": {
+      "path": "skill_benchmark/scripts/rq2b_qwen_reranker.py",
+      "sha256": "d7f83d25076dbec12750d8c7dad687b69545f335bddf7a1889bc9f3a5a598f7a"
+    },
+    "zero_inference_preflight_report": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_runtime_preflight_2026_09_09_v1/integrity_report.json",
+      "sha256": "93e047af9e92ead168b53a1b47b17ff5839b36ee3f900d47e5254e2694214279"
+    },
+    "zero_inference_runtime_inventory": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_runtime_preflight_2026_09_09_v1/runtime_inventory.json",
+      "sha256": "3bc874eaa23ed699c71ee7007039374868cb65ab69ce05823b67ea3a5b955b54"
+    }
+  },
+  "boundary": {
+    "benchmark_result": false,
+    "builder_network_calls": 0,
+    "execution_authorisation": false,
+    "may_not_be_used_to_claim_full_matrix_readiness_or_performance": true,
+    "provider_contract_validation_only": true,
+    "scientific_result": false,
+    "zero_inference_preflight_rewritten": false
+  },
+  "credential_boundary": {
+    "authorization_header_recorded": false,
+    "credential_value_recorded": false,
+    "dotenv_scanned_by_this_builder": false,
+    "environment_variable_name": "DASHSCOPE_API_KEY"
+  },
+  "evidence_origin": "USER_AUTHORISED_SYNTHETIC_ONLY_CONNECTIVITY_SMOKES_REPORTED_BY_EXECUTOR",
+  "provider_calls": {
+    "embedding": {
+      "calls": 1,
+      "embedding_dimensions": 1024,
+      "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/embeddings",
+      "model": "text-embedding-v4",
+      "status": "PASS_CONNECTIVITY",
+      "synthetic_texts": 1,
+      "usage": {
+        "prompt_tokens": 11,
+        "total_tokens": 11
+      }
+    },
+    "reranker": {
+      "calls": 1,
+      "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank",
+      "model": "qwen3-rerank",
+      "scores": [
+        0.7933007406217729,
+        0.44544158349861485
+      ],
+      "status": "PASS_CONNECTIVITY",
+      "synthetic_documents": 2,
+      "synthetic_queries": 1,
+      "usage": {
+        "total_tokens": 60
+      }
+    },
+    "total": 2
+  },
+  "recorded_date": "2026-09-09",
+  "sanitisation": {
+    "credentials_or_headers_recorded": false,
+    "raw_provider_response_recorded": false,
+    "raw_request_text_recorded": false,
+    "retained_fields": [
+      "endpoint",
+      "model",
+      "call/input counts",
+      "dimensions",
+      "usage counts",
+      "synthetic reranker scores",
+      "status"
+    ]
+  },
+  "schema_version": "rq2b-v7-b36-c6-provider-connectivity-receipt-v1",
+  "status": "PASS_SANITISED_SYNTHETIC_CONNECTIVITY_RECEIPT_NOT_SCIENTIFIC_EXECUTION",
+  "transfer_boundary": {
+    "benchmark_candidate_texts_transferred": 0,
+    "benchmark_prompts_transferred": 0,
+    "benchmark_queries_transferred": 0,
+    "benchmark_source_documents_transferred": 0,
+    "synthetic_embedding_texts_transferred": 1,
+    "synthetic_reranker_documents_transferred": 2,
+    "synthetic_reranker_queries_transferred": 1
+  }
+}
