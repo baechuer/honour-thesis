@@ -10,7 +10,7 @@ from pathlib import Path
 
 from merge_rq2b_i3c import canonical_extraction
 from prepare_rq2b_v7_i3_full_reextraction_v4_1 import CACHE, build as build_inputs
-from validate_rq2b_v7_i3_v4_1_batch import PREP, ROOT, validate_v4_1_semantics
+from validate_rq2b_v7_i3_v4_1_1_batch import PREP, ROOT, validate_v4_1_1_semantics
 
 
 OUTPUT = Path("skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_output_selection_2026_09_09_v1")
@@ -58,7 +58,7 @@ def validate_attempt(assignment: dict, data: bytes, input_payloads: dict[str, by
     items = warnings = 0
     for input_row, output_row in zip(input_rows, output_rows, strict=True):
         canonical_extraction(input_row, output_row)
-        row_items, row_warnings = validate_v4_1_semantics(input_row, output_row)
+        row_items, row_warnings = validate_v4_1_1_semantics(input_row, output_row)
         items += row_items
         warnings += row_warnings
     return {"rows": len(output_rows), "items": items, "warnings_pending_source_only_disposition": warnings}
@@ -134,7 +134,8 @@ def build() -> dict[str, bytes]:
             "assignment_manifest_sha256": sha(assignments_path.read_bytes()),
             "selection_ledger_sha256": sha(ledger_data),
             "builder_sha256": sha(Path(__file__).read_bytes()),
-            "validator_sha256": sha((Path(__file__).parent / "validate_rq2b_v7_i3_v4_1_batch.py").read_bytes()),
+            "validator_sha256": sha((Path(__file__).parent / "validate_rq2b_v7_i3_v4_1_1_batch.py").read_bytes()),
+            "validator_base_sha256": sha((Path(__file__).parent / "validate_rq2b_v7_i3_v4_1_batch.py").read_bytes()),
             "canonicalizer_sha256": sha((Path(__file__).parent / "merge_rq2b_i3c.py").read_bytes()),
             "input_builder_sha256": sha((Path(__file__).parent / "prepare_rq2b_v7_i3_full_reextraction_v4_1.py").read_bytes()),
         },
@@ -165,7 +166,8 @@ def verify() -> None:
     require(report["bindings"]["assignment_manifest_sha256"] == sha(assignments_path.read_bytes()), "V4.1 assignment binding drift")
     require(report["bindings"]["selection_ledger_sha256"] == sha(ledger_path.read_bytes()), "V4.1 ledger binding drift")
     require(report["bindings"]["builder_sha256"] == sha(Path(__file__).read_bytes()), "V4.1 selection builder drift")
-    require(report["bindings"]["validator_sha256"] == sha((Path(__file__).parent / "validate_rq2b_v7_i3_v4_1_batch.py").read_bytes()), "V4.1 validator drift")
+    require(report["bindings"]["validator_sha256"] == sha((Path(__file__).parent / "validate_rq2b_v7_i3_v4_1_1_batch.py").read_bytes()), "V4.1.1 validator drift")
+    require(report["bindings"]["validator_base_sha256"] == sha((Path(__file__).parent / "validate_rq2b_v7_i3_v4_1_batch.py").read_bytes()), "V4.1 validator base drift")
     require(report["bindings"]["canonicalizer_sha256"] == sha((Path(__file__).parent / "merge_rq2b_i3c.py").read_bytes()), "V4.1 canonicalizer drift")
     require(report["bindings"]["input_builder_sha256"] == sha((Path(__file__).parent / "prepare_rq2b_v7_i3_full_reextraction_v4_1.py").read_bytes()), "V4.1 input builder drift")
     _, input_payloads = build_inputs()

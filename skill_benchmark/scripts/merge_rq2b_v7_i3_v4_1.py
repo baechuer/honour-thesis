@@ -12,7 +12,7 @@ from merge_rq2b_i3c import canonical_extraction, representation_row, summarize
 from freeze_rq2b_v7_i3_v4_1_output_selection import verify as verify_selection
 from prepare_rq2b_v7_i3_full_reextraction_v4_1 import CACHE, build as build_inputs
 from rq2b_common import serialize_i3_flat, serialize_i3c
-from validate_rq2b_v7_i3_v4_1_batch import PREP, ROOT, validate_v4_1_semantics
+from validate_rq2b_v7_i3_v4_1_1_batch import PREP, ROOT, validate_v4_1_1_semantics
 
 
 SELECTION = Path("skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_output_selection_2026_09_09_v1")
@@ -72,7 +72,7 @@ def build() -> dict[str, bytes]:
         require(len(input_rows) == len(output_rows) == assignment["row_count"], f"V4.1 row mismatch: {batch_id}")
         for input_row, output_row in zip(input_rows, output_rows, strict=True):
             canonical_extraction(input_row, output_row)
-            validate_v4_1_semantics(input_row, output_row)
+            validate_v4_1_1_semantics(input_row, output_row)
             combined.append((input_row, output_row))
         batch_inventory.append({
             "batch_id": batch_id,

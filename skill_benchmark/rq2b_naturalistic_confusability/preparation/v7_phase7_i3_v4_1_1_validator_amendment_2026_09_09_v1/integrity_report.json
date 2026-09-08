@@ -1,0 +1,35 @@
+{
+  "bindings": {
+    "builder_sha256": "9688ba7a8e8de8fe07877a965a2a50c635bf7965b76f00b7c47cd1fc1409ff32",
+    "v4_1_1_test_sha256": "30bc90314ea6840c04728e6760f680c80a6f00677fd148b83479ce8b71a2fed0",
+    "v4_1_1_validator_sha256": "e782e15a5cc44728e077f9def20c276a8b23887a4f48b2b60b4a3d20e25f9f04",
+    "v4_1_preparation_report_sha256": "df91b5870a7e202e8f93f39ed4a6c5f622bb93c53c0c38eedd9474fc1bbfe549",
+    "v4_1_validator_sha256": "984071df20a55fbea326d6d8731ae03cae57007a40896ff8327f5ccaf845e418"
+  },
+  "change": "Standalone unsupported is no longer sufficient for an automatic use-condition polarity rejection. Explicit do-not-use/not-for/does-not-support language and unsupported object/platform/input constructions remain rejected.",
+  "formal_execution_ready": false,
+  "replay_policy": "Every original and reissue attempt, including the I3V41-011 original, is replayed under V4.1.1 before mechanical output selection.",
+  "schema_version": "rq2b-v7-i3-v4.1.1-validator-amendment-v1",
+  "state": "PASS_PRE_SELECTION_POLARITY_FALSE_POSITIVE_CORRECTED",
+  "timing": "AFTER_8_BATCH_ATTEMPTS_BUT_BEFORE_OUTPUT_SELECTION_MERGE_QA_OR_ANY_SELECTOR",
+  "trigger": {
+    "batch_id": "I3V41-011",
+    "evidence": "- The task is a support check: decide whether the wording is supported, overstated, partially supported, or unsupported.",
+    "skill_id": "sha256-1b8cd55898987267356d9911f96100a778c181668dad6528f307f05c945bb8d5",
+    "v4_1_1_disposition": "PASS_POSITIVE_USE_CONDITION",
+    "v4_1_disposition": "FALSE_POSITIVE_REJECTED_STANDALONE_UNSUPPORTED_OUTCOME_LABEL"
+  },
+  "unchanged": [
+    "3,798 source bytes and identities",
+    "95 batch membership and extractor groups",
+    "V4.1 source-only instruction and seven fields",
+    "all existing worker output bytes",
+    "V7 prompts, candidates, K=6 packets, tails and acceptable sets",
+    "fresh 120-row QA thresholds"
+  ],
+  "validation": {
+    "focused_tests": "PASS_3_OF_3",
+    "i3v41_011_replay": "PASS_I3_V4_1_1_BATCH_VALIDATION",
+    "selector_or_provider_calls": 0
+  }
+}

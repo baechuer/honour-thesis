@@ -8,7 +8,7 @@ from collections import Counter
 from pathlib import Path
 
 from prepare_rq2b_v7_i3_full_reextraction_v4_1 import CACHE
-from validate_rq2b_v7_i3_v4_1_batch import ROOT, PREP, validate
+from validate_rq2b_v7_i3_v4_1_1_batch import ROOT, PREP, validate
 
 
 def main() -> None:
@@ -41,9 +41,11 @@ def main() -> None:
             except Exception as exc:
                 attempt_errors.append({"path": str(path.relative_to(ROOT)), "error": str(exc)})
         if not valid_attempts:
-            status["STARTED_INVALID"] += 1
-            by_group[group]["STARTED_INVALID"] += 1
-            invalid.append({"batch_id": batch_id, "attempts": attempt_errors})
+            incomplete = any("row count mismatch" in attempt["error"] for attempt in attempt_errors)
+            disposition = "STARTED_INCOMPLETE" if incomplete else "STARTED_INVALID"
+            status[disposition] += 1
+            by_group[group][disposition] += 1
+            invalid.append({"batch_id": batch_id, "disposition": disposition, "attempts": attempt_errors})
             continue
         reissue_number, selected_path, result = max(valid_attempts, key=lambda value: value[0])
         status["VALIDATED"] += 1
