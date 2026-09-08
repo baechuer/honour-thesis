@@ -1,0 +1,24 @@
+{
+  "bound_inputs": {
+    "historical_mechanical_integration_gate_docket": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_mechanical_integration_2026_09_08_v1/gate_docket.jsonl",
+    "historical_mechanical_integration_gate_docket_sha256": "a8145aae2ad7128bfbb52f311b6923a1b778e1008c6b9db4f07293520c6a392e",
+    "u0323_method_gate_note": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v2/U0323_method_gate_note.md",
+    "u0323_method_gate_note_sha256": "8f162078a1cdd56c95627f9e5c0cafd5784409341e207eed898b146026bfc913",
+    "u0527_reissue_001_non_json_suffix_repr": "'\\\\n'",
+    "u0527_reissue_001_validation": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-001-validation-2026-09-07-v1/summary.json",
+    "u0527_reissue_001_validation_sha256": "efbed37155e60d5245ab51cbc668cbd83c6a256478a20951f8a37681b9b5f806",
+    "u0527_reissue_002_non_json_suffix_repr": "'\\n'",
+    "u0527_reissue_002_validation": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-machine-b-microbatch-008-reissue-002-validation-2026-09-07-v1/summary.json",
+    "u0527_reissue_002_validation_sha256": "89e07ee06325d8cd55562582ef9fe9842b73b2bcac7c4bfaf7cfad47c13adf4d"
+  },
+  "claim_boundary": "Target-blind gate evidence only; no target join, acceptable-set decision, library update, retrieval result, metric, thesis result update, or K change.",
+  "counts": {
+    "gate_records": 6,
+    "reissuable_mechanical_or_validation_gates": 5,
+    "requires_user_method_decision": 2,
+    "substantive_construct_method_gates": 1
+  },
+  "schema_version": "rq2b_nc_phase5_v7_gate_docket_readiness_v1",
+  "status": "PASS_TARGET_BLIND_GATE_DOCKET_EVIDENCE_CONSOLIDATED_PENDING_USER_METHOD_DECISION",
+  "stop_boundary": "No group is finalised by this package. Target join and acceptable-set/library closure require an explicit disposition for all six records, then master-SOP readiness verification."
+}
