@@ -1,0 +1,37 @@
+{
+  "bound_inputs": {
+    "coordinator_dispatch_integrity": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_reissue_sealed_coordinator_2026_09_08_v1/integrity_report.json",
+    "coordinator_dispatch_integrity_sha256": "db2fd0d0e3f884cf3d2eb095c0877a55eb00cdfb7217ef9ba83cd478a925da9e",
+    "coordinator_return_validation": {
+      "closure_blockers": [],
+      "dispatch": "/private/tmp/rq2b-v7-phase5-mechanical-integration-v2/skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_reissue_sealed_coordinator_2026_09_08_v1",
+      "duplicate_rationales": {},
+      "expected_returns": 9,
+      "invalid_returns": {},
+      "missing_returns": [],
+      "status": "PASS_V7_GATE_REISSUE_COORDINATOR_RETURNS_COMPLETE",
+      "unexpected_return_paths": [],
+      "valid_returns": 9
+    },
+    "pair_reconciliation_integrity": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_reissue_pair_reconciliation_2026_09_08_v1/integrity_report.json",
+    "pair_reconciliation_integrity_sha256": "9488918bc84439cc661291af078c9c5b8fe32210195ed016575eeedef963f453"
+  },
+  "claim_boundary": "Target-blind mechanical reconciliation only; no target join, acceptable set, library update, retrieval result, metric, thesis result, or K change.",
+  "counts": {
+    "blocked_groups": 0,
+    "candidate_dispositions": 40,
+    "decision_route_counts": {
+      "EXACT_RETAINED_FRESH_INDEPENDENT_AGREEMENT": 31,
+      "FRESH_PROMPT_BOUND_SEALED_COORDINATOR": 9
+    },
+    "final_adequacy_counts": {
+      "INADEQUATE": 31,
+      "PARTIALLY_ADEQUATE": 9
+    },
+    "reconciled_gate_reissue_groups": 5
+  },
+  "schema_version": "rq2b_nc_phase5_v7_gate_reissue_final_reconciliation_v1",
+  "status": "PASS_TARGET_BLIND_GATE_REISSUE_RECONCILIATION_PENDING_GLOBAL_MASTER_SOP_READINESS",
+  "stop_boundary": "This resolves only the five approved reissue groups. Combine it with the 228 direct and 832 earlier prompt-bound reconciliations, plus the U0323 exclusion, in a global master-SOP readiness replay before target join or acceptable-set/library update.",
+  "u0323_disposition": "DEFERRED_EXCLUDED_FROM_V7_FROZEN_LIBRARY_CLOSURE_BY_USER_APPROVAL_2026-09-08"
+}
