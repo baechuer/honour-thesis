@@ -1,0 +1,44 @@
+{
+  "bound_inputs": {
+    "execution_replay_sha256": "94cb502bb35416d3bcd651a0b72f04f344e7adaeed0aa2213d29b9027d10bb7b",
+    "execution_replay_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS",
+    "frozen_v7_protocol": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "frozen_v7_protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "integration_ledger": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_mechanical_integration_2026_09_08_v1/integration_intake_ledger.jsonl",
+    "integration_ledger_sha256": "34b738ff32e74bde4aa524f7403546a57bd8e0fb4433622e1f60c8eb8d08ec66"
+  },
+  "claim_boundary": "Target-blind prospective re-review input only; no coordinator decision, target join, group finalisation, acceptable-set label, retrieval result, metric, or library update.",
+  "counts": {
+    "coordinator_1_groups": 274,
+    "coordinator_1_packets": 762,
+    "coordinator_2_groups": 286,
+    "coordinator_2_packets": 766,
+    "coordinator_3_groups": 272,
+    "coordinator_3_packets": 763,
+    "historical_gate_docket_groups_not_in_rereview_scope": 6,
+    "rereview_candidate_packets": 2291,
+    "rereview_prompt_groups": 832
+  },
+  "historical_evidence_boundary": {
+    "preserved_without_overwrite": "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v2 and its returns",
+    "reason_for_prospective_rereview": "Historical V2 collection contained REOPEN_PACKET outcomes; V1 supplies the target-blind prompt and explicit rubric, then requires new hash-bound returns for every prior disagreement rather than selectively rerunning only reopens."
+  },
+  "integrity": {
+    "all_packets_bind_prompt_source_and_full_input_hash": true,
+    "all_packets_include_frozen_adequacy_rubric": true,
+    "all_packets_include_target_blind_original_prompt": true,
+    "all_selected_return_hashes_replayed": true,
+    "assignment_covers_every_rereview_group_once": true,
+    "assignment_disjoint": true,
+    "whole_groups_kept_with_one_coordinator": true
+  },
+  "prohibitions_honoured": [
+    "no target join",
+    "no K change",
+    "no decision substitution",
+    "no acceptable-set or library update"
+  ],
+  "prospective_amendment_id": "RQ2B-NC-V7-PROMPT-BOUND-COORDINATOR-REREVIEW-2026-09-08-V1",
+  "schema_version": "rq2b_nc_phase5_v7_prompt_bound_coordinator_rereview_dispatch_v1",
+  "status": "PASS_PROSPECTIVE_PROMPT_BOUND_COORDINATOR_REREVIEW_DISPATCH_PENDING_RETURNS"
+}
