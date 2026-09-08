@@ -1,0 +1,64 @@
+{
+  "bound_inputs": {
+    "coordinator_return_schema_sha256": "b92adfb512dfe130c3926a62cabd5b918dbcaf4f61c8581811522ab9fe2b2f57",
+    "dispatch_integrity_report_sha256": "354852a6670d001f381445d621ce9a3a6d961d9dd94456c691132b1b3fa415dc",
+    "dispatch_path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v2",
+    "return_root": "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B-NC-phase5-v7-sealed-coordinator-returns-2026-09-08-v2",
+    "return_validation": {
+      "dispatch": "/private/tmp/rq2b-v7-phase5-mechanical-integration-v2/skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v2",
+      "expected_packets": 2291,
+      "invalid_returns": {},
+      "missing_returns": 0,
+      "status": "PASS_V7_SEALED_COORDINATOR_RETURNS_COMPLETE",
+      "unexpected_return_paths": [],
+      "valid_returns": 2291
+    }
+  },
+  "claim_boundary": "Target-blind mechanical collection only; no target join, group finalisation, acceptable-set decision, retrieval result, metric, or library update.",
+  "counts": {
+    "candidate_packets_reopened": 892,
+    "coordinator_candidate_packets": 2291,
+    "coordinator_prompt_groups": 832,
+    "decision_counts": {
+      "CONFIRMED_FULLY_ACCEPTABLE": 170,
+      "CONFIRMED_INADEQUATE": 401,
+      "CONFIRMED_PARTIALLY_ADEQUATE": 828,
+      "REOPEN_PACKET": 892
+    },
+    "owner_decision_counts": {
+      "coordinator_1": {
+        "CONFIRMED_FULLY_ACCEPTABLE": 170,
+        "CONFIRMED_INADEQUATE": 401,
+        "CONFIRMED_PARTIALLY_ADEQUATE": 191
+      },
+      "coordinator_2": {
+        "CONFIRMED_PARTIALLY_ADEQUATE": 637,
+        "REOPEN_PACKET": 129
+      },
+      "coordinator_3": {
+        "REOPEN_PACKET": 763
+      }
+    },
+    "prompt_groups_blocked_by_reopen": 379
+  },
+  "method_gate": {
+    "all_reopen_owner_lanes": [
+      "coordinator_3"
+    ],
+    "permitted_next_actions": [
+      "prospective protocol amendment and new review",
+      "explicit defer or exclude with limitation"
+    ],
+    "prohibited_actions": [
+      "target join",
+      "acceptable-set creation",
+      "library update",
+      "silent decision substitution",
+      "K change"
+    ],
+    "reason": "REOPEN_PACKET prevents library-level closure under the frozen protocol. An owner-level all-REOPEN concentration is recorded as a calibration/decidability signal, not silently converted to a substantive adequacy result.",
+    "required": true
+  },
+  "schema_version": "rq2b_nc_phase5_v7_sealed_coordinator_collection_reconciliation_v1",
+  "status": "PASS_MECHANICAL_COLLECTION_BLOCKED_PENDING_METHOD_GATE"
+}
