@@ -1,0 +1,117 @@
+{
+  "artifacts": {
+    "canonical_extractions": {
+      "path": "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/i3c_merged_final/canonical_extractions.jsonl",
+      "rows": 2433,
+      "sha256": "0f9f1e717e7236c033a093303a03340de739c702023aaf084c18429969b22588"
+    },
+    "i3-flat-evidence": {
+      "path": "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/i3c_merged_final/i3-flat-evidence.jsonl",
+      "rows": 2433,
+      "sha256": "af8b63800864ce84a3fb1c61fb23515f56fb5ad93bcdef2aef0b1e06ea81f7da"
+    },
+    "i3c-fielded-evidence": {
+      "path": "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/i3c_merged_final/i3c-fielded-evidence.jsonl",
+      "rows": 2433,
+      "sha256": "a9453b81cf89fdb5a7f1410ba407956900eb184fb4964814eef918a9934dfa21"
+    }
+  },
+  "exact_source_duplicate_groups": [
+    {
+      "skill_ids": [
+        "public-anthropic-mcp-builder",
+        "public-swebench-mcp-builder"
+      ],
+      "source_sha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295"
+    },
+    {
+      "skill_ids": [
+        "public-swebench-xlsx",
+        "public-xlsx"
+      ],
+      "source_sha256": "dd316db7785a6be12966c2a2d848931fbf5f518b3cdb0a66fa62ee835ead1cfc"
+    }
+  ],
+  "external_api_calls": 0,
+  "finalisation_packet": {
+    "path": "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/finalisation_approval_packet.json",
+    "sha256": "c2956e7adb7375366ba509dbe385ce637e04599397db3af1359c53b5b8d8bea5"
+  },
+  "finalisation_receipt": {
+    "path": "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/finalisation_approval_receipt.json",
+    "sha256": "359d9f3aff34410fd68d729db945c5f94d2dad890dc3917a8876c625f589adda"
+  },
+  "manual_qa": {
+    "completion_authorized": false,
+    "required": true,
+    "review_rows": 120,
+    "state": "pending"
+  },
+  "merger_version": "rq2b-i3c-v3-final-local-merger-v1",
+  "network_calls": 0,
+  "retrieval_authorized": false,
+  "root_coverage": {
+    "fieldless_nonempty_public_description_rows": 0,
+    "fieldless_public_description_contains_use_when_rows": 0,
+    "fieldless_skill_ids": [],
+    "public_original_description_contains_use_when_rows": 243,
+    "public_original_nonempty_description_rows": 460
+  },
+  "root_coverage_report": {
+    "path": "skill_benchmark/rq2b_full_library/rq2b-i3c-v3-2026-08-18/i3c_merged_final/root_coverage_report.json",
+    "sha256": "edbb792358bc3eab61620abe3a7d1e860eeb93516f62d36b5a1819777723bbe9"
+  },
+  "schema_version": "rq2b-i3c-v3-final-merge-manifest-v1",
+  "scientific_retrieval_or_reranking": false,
+  "state": "automatic_gates_passed_manual_qa_pending",
+  "summary": {
+    "absent_field_counts": {
+      "constraints_boundaries": 1913,
+      "dependencies_resources": 878,
+      "input_preconditions": 801,
+      "output_artifacts": 1072,
+      "success_criteria": 2389,
+      "use_conditions": 159,
+      "workflow_steps": 1215
+    },
+    "duplicate_i3c_selector_text_rows_beyond_first": 1,
+    "evidence_substring_failures": 0,
+    "field_item_counts": {
+      "constraints_boundaries": 661,
+      "dependencies_resources": 7619,
+      "input_preconditions": 3176,
+      "output_artifacts": 1361,
+      "success_criteria": 44,
+      "use_conditions": 2512,
+      "workflow_steps": 4895
+    },
+    "field_row_coverage": {
+      "constraints_boundaries": 520,
+      "dependencies_resources": 1555,
+      "input_preconditions": 1632,
+      "output_artifacts": 1361,
+      "success_criteria": 44,
+      "use_conditions": 2274,
+      "workflow_steps": 1218
+    },
+    "heading_only_evidence_removed": 0,
+    "i3c_i3flat_evidence_match_rows": 2433,
+    "i3c_selector_utf8_bytes": 1799705,
+    "i3flat_selector_utf8_bytes": 1638067,
+    "identity_failures": 0,
+    "omission_counts": {
+      "exact_name_or_description_duplicate": 345,
+      "global_exact_evidence_duplicate": 529
+    },
+    "parse_failures": 0,
+    "rows": 2433,
+    "warning_counts": {}
+  },
+  "thesis_result_writing": false,
+  "timing": {
+    "canonicalization_seconds": 0.3717664969153702,
+    "i3c_serialization_seconds": 0.014417875558137894,
+    "i3flat_serialization_seconds": 0.00486525590531528
+  },
+  "version_id": "rq2b-i3c-v3-2026-08-18"
+}

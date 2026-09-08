@@ -1,0 +1,42 @@
+{
+  "schema_version": "rq2b-i3c-v3-calibrated-qa-attempt-audit-v1",
+  "version_id": "rq2b-i3c-v3-2026-08-18",
+  "state": "manual_qa_attempt_protocol_invalid_no_extraction_fidelity_decision",
+  "reason": "The frozen V3 reviewer guidance did not define an exhaustive critical-error codebook or the exclusive-code rule for the generic-span fixture, while the frozen calibration answer key required exact code matching. Therefore the completed batches cannot be accepted as calibrated QA evidence.",
+  "completed_attempt": {
+    "reviewer_slots": 6,
+    "calibration_rows": 48,
+    "review_rows": 120,
+    "calibration_output_hashes": {
+      "calibration_000_completed.jsonl": "1a36bea4b881234598affa6670ca1b2be7b2d6513ee8cb420610ed751865047a",
+      "calibration_001_completed.jsonl": "1bb3ff28beb1142b5f0f8d5226aff1071df7a82167892497199d71f7ebbb7f55",
+      "calibration_002_completed.jsonl": "bc3e2449f6a3d00eb5d8dd65508dbd4b4776da87703ba8d08a20aea5426f7936",
+      "calibration_003_completed.jsonl": "463abe9e2cfdc4eaa48191acfce047f56d0c3844605d29c63c692de0fe0c423c",
+      "calibration_004_completed.jsonl": "5a07052965cf0caa38090540a0d760692cd393a3f6cf22e1c95f933b00baf5c7",
+      "calibration_005_completed.jsonl": "657d4304126171800f7777a1e89b3b9d2d6a8827b5ccbee8dac47ec6da1bd7d0"
+    },
+    "review_output_hashes": {
+      "review_batch_000_completed.jsonl": "79ac852d0dd7da10b9fbfda024c02ed89ba5599a44b709ce37abd58021858eb5",
+      "review_batch_001_completed.jsonl": "aafd3f4090fc92d0d2a6c53e764e83a8f8f214e0fda614c692272502929cf3bf",
+      "review_batch_002_completed.jsonl": "75e49290359036991e3fa8b36999e3fd5257b710d841653b086de496a2bd5780",
+      "review_batch_003_completed.jsonl": "fa7920a3f6227362c87edb101e05b183247e4d7e92d533ee62823514a76f3728",
+      "review_batch_004_completed.jsonl": "87774cef824ea7581fa5d6ea6f4545d0d298a338ab6d07bf8edb85c2305d6809",
+      "review_batch_005_completed.jsonl": "281dc47cd0de4f10307b60e83f23bc8e6c393a0091a7c4bde5ec7dedaec1f289"
+    }
+  },
+  "calibration_observation": {
+    "severity_and_field_decisions": "all six reviewers agreed for every fixture",
+    "codebook_issue": "all reviewers used semantically equivalent but unlisted names for the two critical fixtures; two reviewers additionally applied missing_selection_critical_content to the generic-span fixture, for which the guidance did not state exclusive coding",
+    "result": "the predeclared exact-code calibration condition is not met"
+  },
+  "quarantine": {
+    "review_batches_are_not_scored": true,
+    "no_manual_qa_pass_fail_decision_written": true,
+    "no_automatic_remediation_or_re_review_started": true
+  },
+  "network_calls": 0,
+  "external_api_calls": 0,
+  "scientific_retrieval_or_reranking": false,
+  "thesis_result_writing": false,
+  "next_gate": "explicit approval of a corrected, freshly frozen V3 QA protocol and one fresh QA execution; I3C extraction and automatic gates need not be repeated"
+}
