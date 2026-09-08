@@ -29,6 +29,7 @@ OUTPUT = Path(
 )
 SCHEMA_VERSION = "rq2b-v7-i3-v4.1-warning-audit-packet-v1"
 RETURN_SCHEMA_VERSION = "rq2b-v7-i3-v4.1-warning-audit-return-v1"
+REVIEW_SLOT_SIZE = 24
 
 
 def require(condition: bool, message: str) -> None:
@@ -94,6 +95,18 @@ def assign_reviewer_groups(issues: list[dict]) -> None:
         load[chosen] += 1
 
 
+def assign_reviewer_slots(issues: list[dict]) -> None:
+    """Partition each reviewer group's stable issue order into bounded slots."""
+    require(REVIEW_SLOT_SIZE > 0, "warning review slot size must be positive")
+    for group in (1, 2, 3):
+        group_rows = sorted(
+            (row for row in issues if row["reviewer_group"] == group),
+            key=lambda row: row["issue_id"],
+        )
+        for index, issue in enumerate(group_rows):
+            issue["reviewer_slot"] = index // REVIEW_SLOT_SIZE + 1
+
+
 def build() -> dict[str, bytes]:
     verify_selection()
     assignments_path = ROOT / PREP / "full_reextraction_assignment_manifest.jsonl"
@@ -138,6 +151,7 @@ def build() -> dict[str, bytes]:
                     "batch_id": batch_id,
                     "extractor_group": assignment["extractor_group"],
                     "reviewer_group": None,
+                    "reviewer_slot": None,
                     "source_row_index": source_row["source_row_index"],
                     "skill_id": source_row["skill_id"],
                     "source_sha256": source_row["source_sha256"],
@@ -160,7 +174,8 @@ def build() -> dict[str, bytes]:
 
     require(len({row["issue_id"] for row in issues}) == len(issues), "warning issue ID collision")
     assign_reviewer_groups(issues)
-    issues.sort(key=lambda row: (row["reviewer_group"], row["issue_id"]))
+    assign_reviewer_slots(issues)
+    issues.sort(key=lambda row: (row["reviewer_group"], row["reviewer_slot"], row["issue_id"]))
     payloads: dict[str, bytes] = {"warning_docket.jsonl": rows_bytes(issues)}
     payloads["reviewer_return_schema.json"] = json_bytes({
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -168,13 +183,14 @@ def build() -> dict[str, bytes]:
         "additionalProperties": False,
         "required": [
             "schema_version", "issue_id", "reviewer_group", "source_sha256",
-            "selected_output_sha256", "decision", "evidence_is_exact_and_complete",
+            "reviewer_slot", "selected_output_sha256", "decision", "evidence_is_exact_and_complete",
             "warning_is_justified", "field_assignment_is_correct", "rationale",
         ],
         "properties": {
             "schema_version": {"const": RETURN_SCHEMA_VERSION},
             "issue_id": {"type": "string", "pattern": "^I3W-[0-9a-f]{20}$"},
             "reviewer_group": {"type": "integer", "enum": [1, 2, 3]},
+            "reviewer_slot": {"type": "integer", "minimum": 1},
             "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
             "selected_output_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
             "decision": {"enum": ["ACCEPT_AS_DOCUMENTED_SOURCE_EXCEPTION", "REISSUE_REQUIRED"]},
@@ -185,27 +201,35 @@ def build() -> dict[str, bytes]:
         },
     })
     group_counts = Counter()
+    slot_counts: dict[str, int] = {}
     extractor_counts = Counter()
     warning_codes = Counter()
     for group in (1, 2, 3):
-        packet_rows = [row for row in issues if row["reviewer_group"] == group]
-        payloads[f"reviewer_group_{group}_packet.jsonl"] = rows_bytes(packet_rows)
-        payloads[f"reviewer_group_{group}_return_template.jsonl"] = rows_bytes([
-            {
-                "schema_version": RETURN_SCHEMA_VERSION,
-                "issue_id": row["issue_id"],
-                "reviewer_group": group,
-                "source_sha256": row["source_sha256"],
-                "selected_output_sha256": row["selected_output_sha256"],
-                "decision": "PENDING",
-                "evidence_is_exact_and_complete": None,
-                "warning_is_justified": None,
-                "field_assignment_is_correct": None,
-                "rationale": "",
-            }
-            for row in packet_rows
-        ])
-        group_counts[group] = len(packet_rows)
+        group_rows = [row for row in issues if row["reviewer_group"] == group]
+        group_counts[group] = len(group_rows)
+        slot_ids = sorted({row["reviewer_slot"] for row in group_rows})
+        for slot in slot_ids:
+            packet_rows = [row for row in group_rows if row["reviewer_slot"] == slot]
+            prefix = f"reviewer_group_{group}_slot_{slot:03d}"
+            payloads[f"{prefix}_packet.jsonl"] = rows_bytes(packet_rows)
+            payloads[f"{prefix}_return_template.jsonl"] = rows_bytes([
+                {
+                    "schema_version": RETURN_SCHEMA_VERSION,
+                    "issue_id": row["issue_id"],
+                    "reviewer_group": group,
+                    "reviewer_slot": slot,
+                    "source_sha256": row["source_sha256"],
+                    "selected_output_sha256": row["selected_output_sha256"],
+                    "decision": "PENDING",
+                    "evidence_is_exact_and_complete": None,
+                    "warning_is_justified": None,
+                    "field_assignment_is_correct": None,
+                    "rationale": "",
+                }
+                for row in packet_rows
+            ])
+            require(0 < len(packet_rows) <= REVIEW_SLOT_SIZE, f"invalid warning slot size: {prefix}")
+            slot_counts[f"{group}:{slot:03d}"] = len(packet_rows)
     for row in issues:
         extractor_counts[row["extractor_group"]] += 1
         warning_codes[row["warning"]["code"]] += 1
@@ -221,6 +245,9 @@ def build() -> dict[str, bytes]:
             "sources": 3798,
             "unique_warning_issues": len(issues),
             "by_reviewer_group": {str(k): group_counts[k] for k in (1, 2, 3)},
+            "review_slots": len(slot_counts),
+            "review_slot_size_ceiling": REVIEW_SLOT_SIZE,
+            "by_reviewer_slot": dict(sorted(slot_counts.items())),
             "by_extractor_group": {str(k): extractor_counts[k] for k in (1, 2, 3)},
             "by_warning_code": dict(sorted(warning_codes.items())),
         },
@@ -235,6 +262,7 @@ def build() -> dict[str, bytes]:
         "rules": {
             "cross_group_review": True,
             "own_extractor_review_forbidden": True,
+            "deterministic_bounded_review_slots": True,
             "allowed_decisions": ["ACCEPT_AS_DOCUMENTED_SOURCE_EXCEPTION", "REISSUE_REQUIRED"],
             "reissue_effect": "Any REISSUE_REQUIRED decision blocks merge and requires a traceable batch reissue followed by a new selection/audit version.",
         },
@@ -243,6 +271,7 @@ def build() -> dict[str, bytes]:
     payloads["README.md"] = (
         "# V7 I3 V4.1 source-only warning audit\n\n"
         "This package cross-assigns every unique extraction warning to a reviewer group other than the extractor group. "
+        f"Each group is partitioned by issue ID into deterministic slots of at most {REVIEW_SLOT_SIZE} issues. "
         "Reviewers may use only their packet and the return schema. A warning may be accepted only when the cited source text is exact and complete, the warning is justified, and the retained field assignment is correct. Otherwise choose `REISSUE_REQUIRED`.\n\n"
         "The package contains no benchmark prompt, target, acceptable-set, retrieval-output, or metric data. "
         "Creation is not execution authority.\n"

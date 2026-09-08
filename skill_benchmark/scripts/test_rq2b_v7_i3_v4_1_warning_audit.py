@@ -4,7 +4,12 @@ from __future__ import annotations
 
 import unittest
 
-from build_rq2b_v7_i3_v4_1_warning_audit import assign_reviewer_groups, warning_pairs
+from build_rq2b_v7_i3_v4_1_warning_audit import (
+    REVIEW_SLOT_SIZE,
+    assign_reviewer_groups,
+    assign_reviewer_slots,
+    warning_pairs,
+)
 from finalize_rq2b_v7_i3_v4_1_warning_audit import validate_return
 
 
@@ -14,6 +19,7 @@ class WarningAuditTests(unittest.TestCase):
             "issue_id": "I3W-0123456789abcdef0123",
             "extractor_group": 1,
             "reviewer_group": 2,
+            "reviewer_slot": 1,
             "source_sha256": "a" * 64,
             "selected_output_sha256": "b" * 64,
         }
@@ -24,6 +30,7 @@ class WarningAuditTests(unittest.TestCase):
             "schema_version": "rq2b-v7-i3-v4.1-warning-audit-return-v1",
             "issue_id": packet["issue_id"],
             "reviewer_group": packet["reviewer_group"],
+            "reviewer_slot": packet["reviewer_slot"],
             "source_sha256": packet["source_sha256"],
             "selected_output_sha256": packet["selected_output_sha256"],
             "decision": "ACCEPT_AS_DOCUMENTED_SOURCE_EXCEPTION",
@@ -51,6 +58,15 @@ class WarningAuditTests(unittest.TestCase):
         ]
         assign_reviewer_groups(issues)
         self.assertTrue(all(row["reviewer_group"] != row["extractor_group"] for row in issues))
+
+    def test_slots_are_stable_and_bounded(self) -> None:
+        issues = [
+            {"issue_id": f"I3W-{index:020x}", "extractor_group": 1, "reviewer_group": 2}
+            for index in range(REVIEW_SLOT_SIZE + 3)
+        ]
+        assign_reviewer_slots(issues)
+        self.assertEqual(sum(row["reviewer_slot"] == 1 for row in issues), REVIEW_SLOT_SIZE)
+        self.assertEqual(sum(row["reviewer_slot"] == 2 for row in issues), 3)
 
     def test_accept_requires_all_three_source_checks(self) -> None:
         validate_return(self.packet(), self.returned())

@@ -23,7 +23,7 @@ OUTPUT = Path(
 )
 RETURN_KEYS = {
     "schema_version", "issue_id", "reviewer_group", "source_sha256",
-    "selected_output_sha256", "decision", "evidence_is_exact_and_complete",
+    "reviewer_slot", "selected_output_sha256", "decision", "evidence_is_exact_and_complete",
     "warning_is_justified", "field_assignment_is_correct", "rationale",
 }
 ALLOWED_DECISIONS = {"ACCEPT_AS_DOCUMENTED_SOURCE_EXCEPTION", "REISSUE_REQUIRED"}
@@ -56,7 +56,7 @@ def json_bytes(value: Any) -> bytes:
 def validate_return(packet: dict, returned: dict) -> None:
     require(set(returned) == RETURN_KEYS, f"warning return schema fields drift: {packet['issue_id']}")
     require(returned["schema_version"] == RETURN_SCHEMA_VERSION, f"warning return schema version: {packet['issue_id']}")
-    for field in ("issue_id", "reviewer_group", "source_sha256", "selected_output_sha256"):
+    for field in ("issue_id", "reviewer_group", "reviewer_slot", "source_sha256", "selected_output_sha256"):
         require(returned[field] == packet[field], f"warning return binding drift: {packet['issue_id']} {field}")
     require(returned["reviewer_group"] != packet["extractor_group"], f"own-extractor warning return: {packet['issue_id']}")
     require(returned["decision"] in ALLOWED_DECISIONS, f"invalid warning decision: {packet['issue_id']}")
@@ -83,28 +83,30 @@ def build() -> dict[str, bytes]:
     returned_by_issue: dict[str, dict] = {}
     return_bindings = []
     for group in (1, 2, 3):
-        expected = [row for row in docket if row["reviewer_group"] == group]
-        path = audit_root / "returns" / f"reviewer_group_{group}_return.jsonl"
-        if not expected:
-            require(not path.exists() or path.read_bytes() == b"", f"unexpected nonempty warning return: group {group}")
-            continue
-        require(path.is_file(), f"missing warning return: reviewer group {group}")
-        data = path.read_bytes()
-        returned = rows(data)
-        require(len(returned) == len(expected), f"warning return count mismatch: reviewer group {group}")
-        require(len({row.get('issue_id') for row in returned}) == len(returned), f"duplicate warning return: group {group}")
-        expected_ids = {row["issue_id"] for row in expected}
-        require({row.get("issue_id") for row in returned} == expected_ids, f"warning return coverage mismatch: group {group}")
-        for row in returned:
-            packet = packet_by_issue[row["issue_id"]]
-            validate_return(packet, row)
-            returned_by_issue[row["issue_id"]] = row
-        return_bindings.append({
-            "reviewer_group": group,
-            "path": str(path.relative_to(ROOT)),
-            "sha256": sha(data),
-            "rows": len(returned),
-        })
+        group_rows = [row for row in docket if row["reviewer_group"] == group]
+        slot_ids = sorted({row["reviewer_slot"] for row in group_rows})
+        for slot in slot_ids:
+            expected = [row for row in group_rows if row["reviewer_slot"] == slot]
+            path = audit_root / "returns" / f"reviewer_group_{group}_slot_{slot:03d}_return.jsonl"
+            require(path.is_file(), f"missing warning return: reviewer group {group} slot {slot:03d}")
+            data = path.read_bytes()
+            returned = rows(data)
+            require(len(returned) == len(expected), f"warning return count mismatch: reviewer group {group} slot {slot:03d}")
+            require(len({row.get('issue_id') for row in returned}) == len(returned), f"duplicate warning return: group {group} slot {slot:03d}")
+            expected_ids = {row["issue_id"] for row in expected}
+            require({row.get("issue_id") for row in returned} == expected_ids, f"warning return coverage mismatch: group {group} slot {slot:03d}")
+            for row in returned:
+                packet = packet_by_issue[row["issue_id"]]
+                validate_return(packet, row)
+                require(row["issue_id"] not in returned_by_issue, f"warning returned more than once: {row['issue_id']}")
+                returned_by_issue[row["issue_id"]] = row
+            return_bindings.append({
+                "reviewer_group": group,
+                "reviewer_slot": slot,
+                "path": str(path.relative_to(ROOT)),
+                "sha256": sha(data),
+                "rows": len(returned),
+            })
     require(len(returned_by_issue) == len(docket), "warning return union does not cover docket")
 
     ledger = []
