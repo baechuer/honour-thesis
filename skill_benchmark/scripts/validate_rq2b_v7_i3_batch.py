@@ -25,6 +25,7 @@ def rows(path: Path) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("batch_id")
+    parser.add_argument("--output-path", type=Path, help="Validate a traceable reissue without replacing the original output")
     args = parser.parse_args()
     if re.fullmatch(r"I3-\d{3}", args.batch_id) is None:
         parser.error("batch_id must be I3-NNN")
@@ -33,7 +34,8 @@ def main() -> None:
     if len(matches) != 1:
         raise ValueError("unknown or duplicated batch ID")
     assignment = matches[0]
-    input_path, output_path = ROOT / assignment["input_path"], ROOT / assignment["expected_output_path"]
+    input_path = ROOT / assignment["input_path"]
+    output_path = args.output_path if args.output_path and args.output_path.is_absolute() else ROOT / (args.output_path or Path(assignment["expected_output_path"]))
     if sha(input_path) != assignment["input_sha256"]:
         raise ValueError("input hash mismatch")
     if not output_path.is_file():

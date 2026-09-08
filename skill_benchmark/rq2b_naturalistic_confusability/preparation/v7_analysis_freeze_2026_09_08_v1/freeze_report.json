@@ -1,0 +1,123 @@
+{
+  "artifacts": {
+    "dependency_ledger.jsonl": {
+      "rows": 1077,
+      "sha256": "4226cfe2c9943d40026a4f1a9a38dbbc379ae9b8f39bd9b4c40aea8009e97fc7"
+    },
+    "exposure_ledger.jsonl": {
+      "rows": 1077,
+      "sha256": "3749a72735a1c7034fd679fad24d4ce5ff40a8274144b15d8265bfb1c608dce3"
+    },
+    "label_free_query_runtime.jsonl": {
+      "rows": 1077,
+      "sha256": "07029e02454ff35efd8c0018a1aea93ef41fc0135dfc0cf78bac7af4e22ace84"
+    },
+    "offline_label_adapter.jsonl": {
+      "rows": 1077,
+      "sha256": "cb11848e4a6d7938870e8bf5913335050538ac4f3c589ec9fe69bb303711357d"
+    },
+    "reviewed_confusable_neighbour_ledger.jsonl": {
+      "rows": 5508,
+      "sha256": "cb65d8dc40041630f201afc303604648fdc7ee5af270cbe877be33ab2a58dfb4"
+    }
+  },
+  "bindings": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v2_blind-order-repair/prompt_k6_allocation_ledger.jsonl": "f65a3340a80545c50462eec43dd8ed9d7b89d9735f9f2c59ba4d3ed952ee7127",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/nc_prompt_manifest_for_phase4.jsonl": "dd4e05ee8cfed334e74676aa493cd082ee97b151c6138315ff2561c6ddfd2e05",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/parent_prompt_manifest_for_phase5.jsonl": "9bf8f70a60fac0f50c70858f67d1c6f94842aa139c8e1dfd8c17be894beb8ced",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_sealed_token_join_acceptable_set_audit_2026_09_08_v1/sealed_finalizer_candidate_join.jsonl": "a408c3ec8c8e990471acc95c648aabdd57a3a2b2e6ac1258131ec240ec21a8f4",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_v7_acceptable_set_final_library_freeze_2026_09_08_v1/final_library_prompt_manifest.jsonl": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+    "skill_benchmark/rq2b_naturalistic_confusability/preparation/rq2_approved_research_plan_2026_09_08_v1/plan_freeze.json": "c91b459babec83409b5b17d254cc299a77081afc94fc813173ad3ae7f80eb097",
+    "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/first_matrix_conditions.jsonl": "b66c0dfd23c5fb96869a548f038cd8afa6fc0f99c253f0fe98a66656510e167f",
+    "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/fixed_candidate_bridge_conditions.jsonl": "d659ff98a5a2534478f68ab44794e4df7d89b23eb3a44a2fbf335cdca42366f7",
+    "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/source_manifest.jsonl": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+  },
+  "boundaries": [
+    "The dependency components use only pre-outcome reporting groups and designated-source lineage; audited distractors and selector results do not create edges.",
+    "The NC exposure ledger does not claim that absence of a bound historical outcome proves no human exposure.",
+    "D_q is a reviewed diagnostic subset; it is not a complete semantic-neighbour graph and cannot be used as retrieval input."
+  ],
+  "builder_sha256": "3ca2753453bb28a375a6217ef18dc88835a0d00bd9e2851b31bd073dd618c4cc",
+  "counts": {
+    "acceptable_relations": 1325,
+    "candidates": 3798,
+    "dependency_groups": 355,
+    "dependency_max_group_size": 83,
+    "dependency_singletons": 46,
+    "judged_relations": 8979,
+    "prompts": 1077,
+    "prompts_with_reviewed_confusable_neighbours": 1077,
+    "prompts_without_reviewed_confusable_neighbours": 0,
+    "reviewed_confusable_neighbour_relations": 5508
+  },
+  "dependency_group_size_distribution": {
+    "1": 46,
+    "2": 120,
+    "3": 162,
+    "4": 4,
+    "5": 7,
+    "6": 11,
+    "8": 1,
+    "10": 1,
+    "12": 1,
+    "75": 1,
+    "83": 1
+  },
+  "dq_relation_rule_counts": {
+    "NC_LOCAL_CLUSTER_MEMBER_IN_J_MINUS_A": 1243,
+    "PHRASE_H_POSITIVE_TAIL_IN_J_MINUS_A": 1077,
+    "POSITIVE_NAVIGATION_MAIN_IN_J_MINUS_A": 3188
+  },
+  "label_isolation": {
+    "offline_only_files": [
+      "offline_label_adapter.jsonl",
+      "reviewed_confusable_neighbour_ledger.jsonl"
+    ],
+    "prohibited_in_runner": [
+      "acceptable sets",
+      "judgement dispositions",
+      "D_q",
+      "targets",
+      "review outcomes"
+    ],
+    "runtime_file": "label_free_query_runtime.jsonl",
+    "runtime_top_level_keys": [
+      "prompt",
+      "prompt_id",
+      "prompt_sha256",
+      "schema_version"
+    ]
+  },
+  "provider_calls": 0,
+  "retrieval_or_reranking_runs": 0,
+  "schema_version": "rq2b-v7-pre-outcome-analysis-freeze-report-v1",
+  "scientific_results_observed": false,
+  "statistical_contract": {
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 2026090801,
+      "unit": "whole dependency group"
+    },
+    "noninferiority": {
+      "comparison": "P2",
+      "margin_absolute": -0.03,
+      "one_sided_confidence": 0.99
+    },
+    "paired_sign_flip": {
+      "comparisons": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "replicates": 100000,
+      "seed": 2026090802,
+      "two_sided_alpha": 0.01,
+      "unit": "whole dependency group"
+    },
+    "parent_reporting": "127 public and 236 controlled, separately, robustness only",
+    "prespecified_sensitivity": "649 source-native NC prompts",
+    "primary_scope": "714 B_NC_FULL_UNION prompts"
+  },
+  "status": "PASS_PRE_OUTCOME_QUERY_LABEL_DEPENDENCY_EXPOSURE_AND_DQ_FREEZE"
+}

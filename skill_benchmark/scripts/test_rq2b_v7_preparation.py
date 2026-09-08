@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 import freeze_rq2_approved_research_plan as plan
+import build_rq2b_v7_analysis_freeze as analysis_freeze
 import prepare_rq2b_v7_phase7_i1_i2 as prep
 
 
@@ -47,6 +48,23 @@ class PreparationTests(unittest.TestCase):
         self.assertTrue(record['future_scope']['admission_and_nested_scale_levels_not_sealed'])
         self.assertEqual(record['counts']['source_candidates'], 3798)
         self.assertEqual(record['analysis']['primary_comparisons'], ['P1', 'P2', 'P3', 'P4', 'P5'])
+
+    def test_pre_outcome_analysis_freeze_is_label_isolated(self):
+        files = analysis_freeze.build()
+        for name, data in files.items():
+            self.assertEqual((analysis_freeze.ROOT / analysis_freeze.OUTPUT / name).read_bytes(), data)
+        runtime = [json.loads(line) for line in files['label_free_query_runtime.jsonl'].splitlines()]
+        labels = [json.loads(line) for line in files['offline_label_adapter.jsonl'].splitlines()]
+        dependencies = [json.loads(line) for line in files['dependency_ledger.jsonl'].splitlines()]
+        report = json.loads(files['freeze_report.json'])
+        self.assertEqual(len(runtime), 1077)
+        self.assertEqual(set(runtime[0]), {'schema_version', 'prompt_id', 'prompt_sha256', 'prompt'})
+        self.assertEqual(len(labels), len(dependencies), 1077)
+        self.assertEqual(sum(len(row['acceptable_set_source_sha256']) for row in labels), 1325)
+        self.assertEqual(sum(len(row['judged_candidate_dispositions']) for row in labels), 8979)
+        self.assertEqual(report['counts']['dependency_groups'], 355)
+        self.assertFalse(report['scientific_results_observed'])
+        self.assertEqual(report['provider_calls'], 0)
 
 
 if __name__ == '__main__':
