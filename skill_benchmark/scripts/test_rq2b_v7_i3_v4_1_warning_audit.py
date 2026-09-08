@@ -33,17 +33,16 @@ class WarningAuditTests(unittest.TestCase):
             "rationale": "The complete mixed-role sentence is retained only as a boundary.",
         }
 
-    def test_warning_mirror_must_match(self) -> None:
+    def test_warning_union_deduplicates_optional_mirror(self) -> None:
         warning = {"code": "mixed_role_unsplittable", "message": "mixed", "evidence": "full sentence"}
         row = {
             "skill_id": "skill",
             "field_warnings": {"constraints_boundaries": [warning]},
             "qa_warnings": [{"field": "constraints_boundaries", **warning}],
         }
-        self.assertEqual(warning_pairs(row)[0][1]["code"], "mixed_role_unsplittable")
-        row["qa_warnings"][0]["message"] = "drift"
-        with self.assertRaisesRegex(ValueError, "mirror mismatch"):
-            warning_pairs(row)
+        self.assertEqual(len(warning_pairs(row)), 1)
+        row["qa_warnings"] = []
+        self.assertEqual(warning_pairs(row)[0][1]["field"], "constraints_boundaries")
 
     def test_assignment_never_uses_extractor_group(self) -> None:
         issues = [

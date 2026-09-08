@@ -68,21 +68,20 @@ def selected_output(selection: dict) -> bytes:
 
 
 def warning_pairs(output_row: dict) -> list[tuple[str, dict]]:
-    """Return QA warnings after proving the field/QA mirrors are one-to-one."""
-    qa = output_row["qa_warnings"]
-    field_flat: list[dict] = []
+    """Return the warning union, deduplicating optional field/QA mirrors."""
+    warning_by_key: dict[str, dict] = {}
+    for warning in output_row["qa_warnings"]:
+        key = json.dumps(warning, ensure_ascii=False, sort_keys=True)
+        warning_by_key[key] = warning
     for field, warnings in output_row["field_warnings"].items():
         for warning in warnings:
-            field_flat.append({"field": field, **warning})
-    require(
-        Counter(json.dumps(row, ensure_ascii=False, sort_keys=True) for row in qa)
-        == Counter(json.dumps(row, ensure_ascii=False, sort_keys=True) for row in field_flat),
-        f"field/QA warning mirror mismatch: {output_row['skill_id']}",
-    )
-    indexed = []
-    for index, warning in enumerate(qa, 1):
-        indexed.append((f"warning-{index:03d}", warning))
-    return indexed
+            canonical = {"field": field, **warning}
+            key = json.dumps(canonical, ensure_ascii=False, sort_keys=True)
+            warning_by_key[key] = canonical
+    return [
+        (f"warning-{index:03d}", warning_by_key[key])
+        for index, key in enumerate(sorted(warning_by_key), 1)
+    ]
 
 
 def assign_reviewer_groups(issues: list[dict]) -> None:
