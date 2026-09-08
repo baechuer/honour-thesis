@@ -1,0 +1,66 @@
+{
+  "assessments": [
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-0C90D7270649FAA2",
+      "missing_material_requirement_or_null": "Python x402 payment service and automatically paying client for the supplied ledger network.",
+      "rationale": "The source's Scope is GSEA analysis and enrichment plotting, not HTTP payment enforcement, settlement, or a retrying client.",
+      "source_anchor": "Scope"
+    },
+    {
+      "adequacy": "FULLY_ACCEPTABLE",
+      "candidate_token": "C-23E7890E93F0187B",
+      "missing_material_requirement_or_null": null,
+      "rationale": "The source provides Python AVM setup, FastAPI or Flask payment middleware, automatic 402-handling HTTP clients, AVM scheme registration, and facilitator guidance for verification and settlement, with runnable examples.",
+      "source_anchor": "Building Clients"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-2F709089FD5537E5",
+      "missing_material_requirement_or_null": "A Python implementation for the service and automatically retrying payment client.",
+      "rationale": "The source covers the needed AVM payment flow, server middleware, facilitator, and automatic client retry, but its implementation guidance and packages are explicitly TypeScript.",
+      "source_anchor": "Building Clients"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-55D04FFFC234A28C",
+      "missing_material_requirement_or_null": "HTTP 402 payment requirements, signed-payment verification and settlement, and an auto-paying client.",
+      "rationale": "Confluent Kafka Python Client Creation addresses Kafka producers, consumers, and Schema Registry; it supplies no x402 or ledger-payment service path.",
+      "source_anchor": "Confluent Kafka Python Client Creation"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-67E5728469D4D299",
+      "missing_material_requirement_or_null": "A Python payment service and client implementing the required signed ledger-payment flow.",
+      "rationale": "LM Studio CLI is limited to model-server discovery, status checks, and OpenAI-compatible endpoint wiring, rather than payment-protected endpoint implementation.",
+      "source_anchor": "LM Studio CLI"
+    },
+    {
+      "adequacy": "PARTIALLY_ADEQUATE",
+      "candidate_token": "C-99CE079268487762",
+      "missing_material_requirement_or_null": "Python AVM implementation guidance that establishes the supplied ledger-network and signer integration.",
+      "rationale": "The source defines the required x402 resource-server, client, and facilitator flow and includes a Python FastAPI route, but its Python package list names EVM, SVM, and TVM mechanisms rather than a concrete AVM implementation for the supplied ledger settings.",
+      "source_anchor": "Python v2.17.0"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-9E8267528252B767",
+      "missing_material_requirement_or_null": "An HTTP payment-protected Python data service with signed-payment settlement and client retry.",
+      "rationale": "The path from signed term sheet to cash is a startup-financing closing checklist and contains no implementation route for a payment API or client.",
+      "source_anchor": "The path from signed term sheet to cash"
+    },
+    {
+      "adequacy": "INADEQUATE",
+      "candidate_token": "C-BD150C59A38A0D25",
+      "missing_material_requirement_or_null": "A Python x402 service, settlement integration, and automatically paying client.",
+      "rationale": "Receiving Hack Review governs consuming a hack-review report and dispositioning findings; it does not provide a payment-service implementation path.",
+      "source_anchor": "Overview"
+    }
+  ],
+  "batch_id": "RQ2B-P4-V7-U1157",
+  "batch_input_sha256": "b07f938398a75434837c977c0c8052f8eac74d5bf1975d92b28c8f0f06158002",
+  "blind_packet_id": "P-5EC9524EC06712DC01",
+  "reviewer_blind_id": "A",
+  "reviewer_instruction_sha256": "de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256": "c2402ead4432797c806dcd7b9b9a32abd7f13847dc6100a121d44480971d5c36"
+}

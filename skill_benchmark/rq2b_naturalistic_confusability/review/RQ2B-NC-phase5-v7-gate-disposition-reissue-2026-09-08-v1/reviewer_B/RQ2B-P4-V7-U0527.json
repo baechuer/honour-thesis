@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-04013CA820554068","missing_material_requirement_or_null":"A Vue preferences-panel implementation with component tests.","rationale":"The source limits its use to GO/KEGG enrichment and R plotting, so it provides neither a Vue panel nor the requested component-test work.","source_anchor":"## When To Use"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-0E264392B9AEA63F","missing_material_requirement_or_null":"Implementation of the requested Vue component change.","rationale":"This source produces a facilitated retrospective packet rather than editing a script-setup component and its template.","source_anchor":"# Sprint Retro Facilitator"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-2D0C867471C6F0AF","missing_material_requirement_or_null":"A Vue SFC-compatible preferences panel and its local test convention.","rationale":"Its implementation boundary is React applications, which does not meet the supplied Vue script-setup and separate-template context.","source_anchor":"## When to Use This Skill"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-725573A4FF3655EC","missing_material_requirement_or_null":"A Vue TypeScript component modification.","rationale":"The candidate is dispatched for a Livewire/Laravel frontend stack, not for the Vue component format in the prompt.","source_anchor":"## When to use"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-92ABD16D0CE9675F","missing_material_requirement_or_null":"A new preferences-panel workflow and tests.","rationale":"It is narrowly a migration guide for React string refs, leaving the requested Vue UI feature unaddressed.","source_anchor":"## The Migration Rule"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-A6EAEEFE2DB029E9","missing_material_requirement_or_null":"Preferences-panel behavior and component-test implementation.","rationale":"The Vue material is restricted to GSAP lifecycle and animation cleanup, not construction or testing of a preferences panel.","source_anchor":"## Principles (All Frameworks)"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-F1BA1507D27CDAA7","missing_material_requirement_or_null":"A Vue script-setup preferences-panel change.","rationale":"The source prescribes Angular project and component practices, which are incompatible with the stated Vue SFC structure.","source_anchor":"# Angular Developer Guidelines"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-F2473C8D3511DE57","missing_material_requirement_or_null":"The existing component's test convention and a concrete component-test step.","rationale":"It directly supports Composition API, script setup, ref state, and templates, but records no guidance for matching the requested component-test convention.","source_anchor":"### Component Template"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U0527",
+  "batch_input_sha256":"2468c49c6be5db67904b9cbea391215b8de21b04ef30ba7f183f42b290d6db12",
+  "blind_packet_id":"P-ADF5661D06B2D7CD2C",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"2ab72b6f7dc9f9b567d170e533b74030cbabf348a069ed6675c2db81e4cbbd01"
+}

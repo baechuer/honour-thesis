@@ -1,0 +1,34 @@
+{
+  "bound_inputs": {
+    "fresh_return_validation": {
+      "dispatch": "/private/tmp/rq2b-v7-phase5-mechanical-integration-v2/skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_disposition_reissue_2026_09_08_v1",
+      "duplicate_rationales": {},
+      "expected_returns": 6,
+      "invalid_returns": {},
+      "missing_returns": [],
+      "status": "PASS_V7_GATE_REISSUE_RETURNS_COMPLETE",
+      "unexpected_return_paths": [],
+      "valid_returns": 6
+    },
+    "historical_integration_ledger": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_mechanical_integration_2026_09_08_v1/integration_intake_ledger.jsonl",
+    "historical_integration_ledger_sha256": "34b738ff32e74bde4aa524f7403546a57bd8e0fb4433622e1f60c8eb8d08ec66",
+    "user_approved_reissue_dispatch": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_disposition_reissue_2026_09_08_v1",
+    "user_approved_reissue_dispatch_integrity_sha256": "9c5d1ffe34b30f1ed9f877de3f78eb6d1b6d0d0fb8e8fa6253242b4d7c114bb9"
+  },
+  "claim_boundary": "Target-blind mechanical pairing only; no target join, acceptable set, library update, retrieval result, metric, thesis result, or K change.",
+  "counts": {
+    "candidate_assessments": 40,
+    "exact_adequacy_counts": {
+      "INADEQUATE": 26,
+      "PARTIALLY_ADEQUATE": 5
+    },
+    "exact_independent_agreements": 31,
+    "groups_pending_sealed_coordinator": 4,
+    "reissued_prompt_groups": 5,
+    "sealed_coordinator_candidates": 9
+  },
+  "schema_version": "rq2b_nc_phase5_v7_gate_reissue_pair_reconciliation_v1",
+  "status": "PASS_TARGET_BLIND_GATE_REISSUE_PAIR_RECONCILIATION_PENDING_SEALED_COORDINATOR",
+  "stop_boundary": "Any queued candidate requires a fresh prompt-bound sealed coordinator. After coordinator closure, every V7 record must be reconciled or explicitly excluded, then a master-SOP readiness verifier must pass before target join or acceptable-set/library update.",
+  "u0323_disposition": "DEFERRED_EXCLUDED_FROM_V7_FROZEN_LIBRARY_CLOSURE_BY_USER_APPROVAL_2026-09-08"
+}

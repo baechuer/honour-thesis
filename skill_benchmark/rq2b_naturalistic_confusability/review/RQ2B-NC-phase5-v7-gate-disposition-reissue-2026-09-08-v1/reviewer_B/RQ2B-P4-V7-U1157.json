@@ -1,0 +1,18 @@
+{
+  "assessments": [
+    {"adequacy":"INADEQUATE","candidate_token":"C-0C90D7270649FAA2","missing_material_requirement_or_null":"A Python payment-gated data service and automatically paying client.","rationale":"The scope is ranked-gene GSEA analysis and enrichment plots, with no HTTP payment or ledger integration.","source_anchor":"## Scope"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-23E7890E93F0187B","missing_material_requirement_or_null":"Documented tests for both the Python payment service and client.","rationale":"It directly covers Algorand Python servers, facilitators, signers, and automatic 402 client handling with runnable samples, but does not specify the requested service-and-client test implementation.","source_anchor":"### Building Clients"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-2F709089FD5537E5","missing_material_requirement_or_null":"A Python implementation using the supplied ledger and signer settings.","rationale":"The candidate is expressly an Algorand x402 TypeScript guide, so it cannot meet the prompt's Python service and client requirement.","source_anchor":"# x402 on Algorand - TypeScript"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-55D04FFFC234A28C","missing_material_requirement_or_null":"HTTP 402 payment verification, settlement, and retry behavior.","rationale":"Kafka producer/consumer scaffolding is a different network protocol and offers none of the payment-gated endpoint flow.","source_anchor":"# Confluent Kafka Python Client Creation"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-67E5728469D4D299","missing_material_requirement_or_null":"A signed-payment API implementation and client retry path.","rationale":"LM Studio CLI operations concern local model servers and model discovery, not settlement-backed data delivery.","source_anchor":"## When to use this skill"},
+    {"adequacy":"PARTIALLY_ADEQUATE","candidate_token":"C-99CE079268487762","missing_material_requirement_or_null":"A Python client that automatically handles payment requirements and runnable tests for both sides.","rationale":"The architecture and Python FastAPI seller explain the 402, verify, settle flow, but the shown automatic buyer is TypeScript and no dual-side test workflow is recorded.","source_anchor":"## Core Architecture"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-9E8267528252B767","missing_material_requirement_or_null":"A payment-gated Python service and automatically retrying client.","rationale":"Fundraising closing mechanics deal with an equity financing process rather than programmatic signed ledger payments.","source_anchor":"# Fundraise Closing Mechanics"},
+    {"adequacy":"INADEQUATE","candidate_token":"C-BD150C59A38A0D25","missing_material_requirement_or_null":"An HTTP payment service, settlement integration, and client implementation.","rationale":"This skill processes hack-review findings and does not construct a ledger-backed endpoint or payment client.","source_anchor":"## Skill Boundary"}
+  ],
+  "batch_id":"RQ2B-P4-V7-U1157",
+  "batch_input_sha256":"b07f938398a75434837c977c0c8052f8eac74d5bf1975d92b28c8f0f06158002",
+  "blind_packet_id":"P-5EC9524EC06712DC01",
+  "reviewer_blind_id":"B",
+  "reviewer_instruction_sha256":"de22e59936caf656319c96388ab65d1d3381e13b683fa5f732b040d2b5235fb1",
+  "reviewer_output_sha256":"0f68504c5b3ba7c2fbbb863da2536df585d39ce4f912c5e4adef834ecf767981"
+}
