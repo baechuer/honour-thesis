@@ -1,0 +1,46 @@
+{
+  "claim_boundary": "This package is a final V7 benchmark-library freeze after the user-approved exclusion/defer decision. It is not a retrieval run, an embedding/reranking/provider call, a metric, or a thesis-result update.",
+  "counts": {
+    "excluded_or_deferred_groups": 149,
+    "frozen_acceptable_sets": 196,
+    "frozen_final_library_groups": 1077,
+    "frozen_strict_labels": 881,
+    "primary_exclusion_dispositions": {
+      "BLOCK_OR_REJECT_NO_FULLY_ACCEPTABLE_K6_MAIN_CANDIDATE": 108,
+      "BLOCK_OR_REJECT_SINGLE_EXTERNAL_FULLY_ACCEPTABLE_CANDIDATE": 18,
+      "METHOD_GATE_OPEN_FULLY_ACCEPTABLE_POSITIVE_TAIL": 22,
+      "USER_APPROVED_DEFERRED_EXCLUDED_FROM_V7_FROZEN_LIBRARY_CLOSURE": 1
+    },
+    "underlying_main_pool_block_within_positive_tail_gate": {
+      "BLOCK_OR_REJECT_NO_FULLY_ACCEPTABLE_K6_MAIN_CANDIDATE": 5,
+      "BLOCK_OR_REJECT_SINGLE_EXTERNAL_FULLY_ACCEPTABLE_CANDIDATE": 1
+    },
+    "v7_total_groups": 1226
+  },
+  "input_hashes": {
+    "master_sop_sha256": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835",
+    "sealed_audit_exclusion_docket_sha256": "62cb33efcb485164f7080216523958890b9c2c96a3fba3fe88a176476579739b",
+    "sealed_audit_integrity_report_sha256": "2e61e90720630d60c356cb8b3bc3b371e3f8164747143eedb6c002e237a85bf7",
+    "sealed_audit_ledger_sha256": "6a2f82d2f68bc8cf2397a78e18eb773ec670c6b417ed54a84df953b5063e7c7e",
+    "v7_summary_sha256": "adca8161bb4d79fc7e8f1af9242f42d61f36a7ca32a863394b2111e288398aea",
+    "v7_unified_manifest_sha256": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55"
+  },
+  "integrity_assertions": {
+    "acceptable_sets_have_at_least_two_members": "PASS",
+    "retained_excluded_disjoint": "PASS",
+    "retained_has_no_positive_fully_acceptable_tail": "PASS",
+    "retained_plus_excluded_equals_v7_scope": "PASS",
+    "strict_labels_have_exactly_one_member": "PASS",
+    "u0323_remains_excluded_without_target_join": "PASS",
+    "v7_frozen_output_hashes": "PASS"
+  },
+  "limitation": "The freeze intentionally excludes rather than resolves 22 positive-tail method-gate groups, 126 main-pool block groups, and U0323. Results must be reported as applying to the 1,077-group V7 frozen library only, not to deferred additions or all originally queued prompts.",
+  "next_permitted_step": "Prepare an experiment execution plan with this exact manifest and an explicit authorisation. Do not recompute the acceptable set from result data.",
+  "output_hashes": {
+    "exclusion_and_limitation_ledger.jsonl": "a9cd699abf3260130558729df3c323c1d2e6621946b96b11cc62b4a622df0791",
+    "final_library_prompt_manifest.jsonl": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+    "scope_amendment.json": "90b3e20120d5a547b6664096ab585fefce254c9ed6ece09b8355be6eff53aa7a"
+  },
+  "schema_version": "rq2b_nc_v7_acceptable_set_final_library_freeze_v1",
+  "status": "PASS_V7_1077_GROUP_ACCEPTABLE_SET_FINAL_LIBRARY_FROZEN_PENDING_EXPERIMENT_AUTHORISATION"
+}
