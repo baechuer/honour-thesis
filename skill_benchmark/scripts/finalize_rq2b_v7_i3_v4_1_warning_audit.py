@@ -82,12 +82,14 @@ def build() -> dict[str, bytes]:
 
     returned_by_issue: dict[str, dict] = {}
     return_bindings = []
+    expected_return_names: set[str] = set()
     for group in (1, 2, 3):
         group_rows = [row for row in docket if row["reviewer_group"] == group]
         slot_ids = sorted({row["reviewer_slot"] for row in group_rows})
         for slot in slot_ids:
             expected = [row for row in group_rows if row["reviewer_slot"] == slot]
             path = audit_root / "returns" / f"reviewer_group_{group}_slot_{slot:03d}_return.jsonl"
+            expected_return_names.add(path.name)
             require(path.is_file(), f"missing warning return: reviewer group {group} slot {slot:03d}")
             data = path.read_bytes()
             returned = rows(data)
@@ -107,6 +109,12 @@ def build() -> dict[str, bytes]:
                 "sha256": sha(data),
                 "rows": len(returned),
             })
+    returns_root = audit_root / "returns"
+    actual_return_names = (
+        {path.name for path in returns_root.iterdir() if path.is_file()}
+        if returns_root.is_dir() else set()
+    )
+    require(actual_return_names == expected_return_names, "warning return file-set drift")
     require(len(returned_by_issue) == len(docket), "warning return union does not cover docket")
 
     ledger = []

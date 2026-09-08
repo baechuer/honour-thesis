@@ -75,6 +75,12 @@ class WarningAuditTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unanimous source checks"):
             validate_return(self.packet(), returned)
 
+    def test_return_is_bound_to_slot(self) -> None:
+        returned = self.returned()
+        returned["reviewer_slot"] = 2
+        with self.assertRaisesRegex(ValueError, "binding drift"):
+            validate_return(self.packet(), returned)
+
 
 if __name__ == "__main__":
     unittest.main()
