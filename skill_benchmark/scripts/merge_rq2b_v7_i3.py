@@ -22,6 +22,7 @@ from rq2b_common import serialize_i3_flat, serialize_i3c
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = Path("skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_merged_2026_09_08_v1")
+SELECTION = Path("skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_output_selection_2026_09_08_v1")
 MERGER_VERSION = "rq2b-v7-i3-merger-v1"
 
 
@@ -63,9 +64,17 @@ def load_fresh_outputs(assignments: list[dict[str, Any]], replay: bool) -> tuple
         require(len(by_skill) == len(all_outputs), "duplicate portable fresh worker output identity")
     else:
         by_skill = {}
+        selections = read_rows(ROOT / SELECTION / "selection_ledger.jsonl")
+        require(len(selections) == len(assignments), "I3 output selection coverage mismatch")
+        selection_by_batch = {row["batch_id"]: row for row in selections}
         for assignment in assignments:
-            output_path = ROOT / assignment["expected_output_path"]
-            require(output_path.is_file(), f"fresh output missing: {assignment['batch_id']}")
+            selected = selection_by_batch.get(assignment["batch_id"])
+            require(selected is not None and selected["input_sha256"] == assignment["input_sha256"],
+                    f"fresh output selection mismatch: {assignment['batch_id']}")
+            output_path = ROOT / selected["selected_output_path"]
+            require(output_path.is_file(), f"selected fresh output missing: {assignment['batch_id']}")
+            require(sha_path(output_path) == selected["selected_output_sha256"],
+                    f"selected fresh output hash mismatch: {assignment['batch_id']}")
             for row in read_rows(output_path):
                 require(row["skill_id"] not in by_skill, f"duplicate fresh worker identity: {row['skill_id']}")
                 by_skill[row["skill_id"]] = row
@@ -86,8 +95,9 @@ def load_fresh_outputs(assignments: list[dict[str, Any]], replay: bool) -> tuple
             outputs.append(output_row)
         output_data = rows_bytes(outputs)
         if not replay:
-            output_path = ROOT / assignment["expected_output_path"]
-            require(output_path.read_bytes() == output_data, f"fresh output order or serialization drift: {assignment['batch_id']}")
+            selected = selection_by_batch[assignment["batch_id"]]
+            require(sha_bytes(output_data) == selected["selected_output_sha256"],
+                    f"fresh output order or serialization drift: {assignment['batch_id']}")
         batch_reports.append({
             "batch_id": assignment["batch_id"],
             "input_sha256": assignment["input_sha256"],
@@ -155,6 +165,8 @@ def build(replay: bool) -> dict[str, bytes]:
             "extraction_preparation_report_sha256": sha_path(ROOT / EXTRACTION_PREP / "preparation_report.json"),
             "fresh_assignment_manifest_sha256": sha_path(ROOT / EXTRACTION_PREP / "fresh_assignment_manifest.jsonl"),
             "reused_worker_outputs_sha256": sha_path(ROOT / EXTRACTION_PREP / "reused_worker_outputs.jsonl"),
+            "fresh_output_selection_ledger_sha256": sha_path(ROOT / SELECTION / "selection_ledger.jsonl"),
+            "fresh_output_selection_report_sha256": sha_path(ROOT / SELECTION / "integrity_report.json"),
             "builder_sha256": sha_path(Path(__file__).resolve()),
         },
         "automatic_summary": automatic_summary,
