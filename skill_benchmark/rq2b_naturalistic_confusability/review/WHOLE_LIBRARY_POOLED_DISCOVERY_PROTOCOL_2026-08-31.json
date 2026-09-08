@@ -1,0 +1,268 @@
+{
+  "protocol_version": "rq2b_whole_library_pooled_lexmeta_v2_anchor_conjunction_repair",
+  "status": "FROZEN_AFTER_V1_PREFREEZE_REPAIR_BEFORE_V2_QUEUE_MATERIALISATION",
+  "supersedes_prefreeze_queue": "whole_library_pooled_discovery_queue_v1_2026-08-31",
+  "repair_reason": "V1 admitted operation-only A-channel matches and retained 235-344 generic ties for several prompts; V1 is audit evidence only and is not eligible for adjudication.",
+  "lanes": {
+    "A_PARENT_DELTA": {
+      "prompt_count": 381,
+      "candidate_count": 663,
+      "candidate_scope": "NEW_TO_PARENT_V3_ONLY",
+      "forced_local_roster": false
+    },
+    "B_NC_FULL_UNION": {
+      "prompt_count": 125,
+      "candidate_count": 3094,
+      "candidate_scope": "CURRENT_FULL_SOURCE_CANONICAL_UNION",
+      "forced_local_roster": true
+    }
+  },
+  "permitted_relevance_fields": [
+    "source_name",
+    "source_description",
+    "source_headings",
+    "prompt_text"
+  ],
+  "forbidden_relevance_fields": [
+    "historical_gold_identity",
+    "cluster_local_most_suitable",
+    "cluster_local_acceptable_set",
+    "prior_reviewer_label",
+    "historical_selector_rank_or_score",
+    "retrieval_or_reranking_output",
+    "error_analysis",
+    "metric",
+    "origin",
+    "repository",
+    "provider",
+    "source_path",
+    "licence"
+  ],
+  "provider_product_tokens_excluded_from_relevance_text": [
+    "anthropic",
+    "chatgpt",
+    "claude",
+    "codex",
+    "gemini",
+    "openai"
+  ],
+  "normaliser": {
+    "unicode": "NFKC",
+    "lowercase": true,
+    "token_pattern": "[a-z0-9][a-z0-9.+#_-]*",
+    "drop_one_character_tokens": true,
+    "include_adjacent_bigrams": true,
+    "bigram_separator": "::",
+    "stopwords": [
+      "a",
+      "about",
+      "across",
+      "after",
+      "all",
+      "also",
+      "an",
+      "and",
+      "any",
+      "are",
+      "as",
+      "at",
+      "be",
+      "before",
+      "but",
+      "by",
+      "can",
+      "do",
+      "does",
+      "each",
+      "for",
+      "from",
+      "have",
+      "how",
+      "if",
+      "in",
+      "into",
+      "is",
+      "it",
+      "its",
+      "need",
+      "needs",
+      "not",
+      "of",
+      "on",
+      "one",
+      "only",
+      "or",
+      "our",
+      "should",
+      "that",
+      "the",
+      "their",
+      "then",
+      "this",
+      "to",
+      "use",
+      "using",
+      "we",
+      "when",
+      "where",
+      "which",
+      "with",
+      "without",
+      "you",
+      "your"
+    ]
+  },
+  "channels": {
+    "N_NAME_DESCRIPTION": {
+      "k": 4,
+      "positive_overlap_required": true,
+      "name_unigram_weight": 2,
+      "description_unigram_weight": 1,
+      "name_bigram_weight": 4,
+      "description_bigram_weight": 2,
+      "corpus_weight": "integer_micro_idf"
+    },
+    "H_HEADINGS": {
+      "k": 4,
+      "positive_overlap_required": true,
+      "prefer_bigram": true,
+      "fallback_to_unigram": true,
+      "corpus_weight": "integer_micro_idf"
+    },
+    "A_ARTIFACT_PROCESS_ANCHORS": {
+      "k": 4,
+      "positive_overlap_required": true,
+      "eligibility_gate": "AT_LEAST_ONE_SHARED_OPERATION_TERM_AND_ONE_DISTINCT_SHARED_EXCLUSIVE_ARTIFACT_TERM",
+      "exclusive_artifact_classes": [
+        "file_format",
+        "software_artifact",
+        "evidence_artifact"
+      ],
+      "operation_family_excluded_from_artifact": [
+        "test",
+        "tests"
+      ],
+      "rank_key": [
+        "distinct_anchor_class_count",
+        "integer_micro_idf_sum",
+        "shared_anchor_count"
+      ]
+    }
+  },
+  "anchor_classes": {
+    "file_format": [
+      "audio",
+      "csv",
+      "docx",
+      "excel",
+      "html",
+      "image",
+      "images",
+      "json",
+      "markdown",
+      "pdf",
+      "powerpoint",
+      "pptx",
+      "slides",
+      "spreadsheet",
+      "transcript",
+      "tsv",
+      "video",
+      "word",
+      "xlsx",
+      "xml",
+      "yaml"
+    ],
+    "software_artifact": [
+      "api",
+      "branch",
+      "ci",
+      "code",
+      "commit",
+      "database",
+      "deployment",
+      "endpoint",
+      "issue",
+      "log",
+      "logs",
+      "migration",
+      "pipeline",
+      "pull::request",
+      "release",
+      "repository",
+      "schema",
+      "schema"
+    ],
+    "evidence_artifact": [
+      "citation",
+      "contract",
+      "dashboard",
+      "dataset",
+      "experiment",
+      "forecast",
+      "form",
+      "interview",
+      "invoice",
+      "meeting",
+      "paper",
+      "policy",
+      "report",
+      "resume",
+      "survey",
+      "table"
+    ],
+    "operation": [
+      "analyze",
+      "audit",
+      "classify",
+      "compare",
+      "convert",
+      "debug",
+      "deploy",
+      "design",
+      "extract",
+      "fill",
+      "generate",
+      "migrate",
+      "monitor",
+      "reconcile",
+      "redact",
+      "review",
+      "summarize",
+      "test",
+      "tests",
+      "transcribe",
+      "validate",
+      "verify"
+    ]
+  },
+  "cutoff_rule": "INCLUDE_ALL_POSITIVE_SCORE_TIES_AT_K_THEN_ORDER_SHA_ASCENDING",
+  "tail_challenge": {
+    "phrase_tail": "HIGHEST_POSITIVE_H_CANDIDATE_EXCLUDED_BY_K_OR_NONE",
+    "residual_tail": "FIRST_UNREPRESENTED_FINAL_INTAKE_ROLE_THEN_MIN_SHA256_PROMPT_HASH_COLON_CANDIDATE_HASH",
+    "role_order": [
+      "RQ2B_NC_REVIEWED_SOURCE_CANDIDATE",
+      "RQ2B_NC_RQ1_REVIEWED_NEW_SOURCE_CANDIDATE",
+      "RQ1_NEW_PUBLIC_SOURCE_CANDIDATE",
+      "PARENT_V3_CANONICAL_SOURCE"
+    ],
+    "trigger": "ANY_TAIL_PARTIALLY_ADEQUATE_OR_FULLY_ACCEPTABLE",
+    "response": "VERSION_AND_RERUN_ENTIRE_AFFECTED_LANE_WITH_ALL_CHANNEL_K_EQUAL_6"
+  },
+  "claim_boundary": {
+    "allowed": "EVERY_IN_SCOPE_SOURCE_WAS_SCREENED_BY_THE_FROZEN_CHANNELS_AND_THE_POOLED_QUEUE_WAS_SOURCE_VISIBLE_ADJUDICATED",
+    "prohibited": [
+      "EXHAUSTIVE_WHOLE_LIBRARY_ACCEPTABLE_SET",
+      "UNSHORTLISTED_SOURCES_ARE_INADEQUATE",
+      "GLOBAL_STRICT_SINGLETON_GOLD",
+      "DISCOVERY_RECALL",
+      "SELECTOR_OR_ROUTING_PERFORMANCE"
+    ],
+    "final_label_names": [
+      "POOLED_SINGLETON_ACCEPTABLE",
+      "POOLED_MULTI_ACCEPTABLE",
+      "NO_POOLED_FULLY_ACCEPTABLE",
+      "UNRESOLVED"
+    ]
+  }
+}

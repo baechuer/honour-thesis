@@ -1,0 +1,37 @@
+{
+  "bound_inputs": {
+    "master_target_blind_readiness_sha256": "ef09a7e8c9c92b661655d57b627634938f1c8c7d1240b407361e7a46a43c0438",
+    "official_v20_execution_state_sha256": "28332bbb41e9a11b69503a5caab6efda24b81bed50b83d60bac22f3fedba0ffb",
+    "v2_audit_summary_sha256": "ce0e14d911cd35eef62b61935b436dbb1c88f8ffb34caafa254b018e3dd748be",
+    "v7_manifest_sha256": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55",
+    "v7_summary_sha256": "adca8161bb4d79fc7e8f1af9242f42d61f36a7ca32a863394b2111e288398aea"
+  },
+  "claim_boundary": "All-scope target-blind mechanical consolidation only. It does not open an opaque token join, identify a source/target, determine an acceptable set, update the final library, run retrieval/metrics, or change K=6.",
+  "counts": {
+    "explicitly_deferred_excluded": 1,
+    "historically_finalised_replayed": 160,
+    "phase5_reconciled_replayed": 1065,
+    "reconciled_candidate_dispositions": 9800,
+    "target_blind_outcome_counts": {
+      "FULLY_ACCEPTABLE": 1031,
+      "INADEQUATE": 6775,
+      "PARTIALLY_ADEQUATE": 1994
+    },
+    "unresolved_groups": 0,
+    "v7_prompt_groups": 1226
+  },
+  "next_permitted_step": "Run a sealed finaliser-only opaque token/source join and apply the frozen FULLY_ACCEPTABLE acceptable-set and positive-tail stopping rules. U0323 remains excluded.",
+  "schema_version": "rq2b_nc_phase5_v7_all_scope_target_blind_prejoin_v1",
+  "scope_transition": {
+    "closure_dispositions": {
+      "DEFERRED_EXCLUDED_FROM_V7_FROZEN_LIBRARY_CLOSURE": 1,
+      "RECONCILED_READY_FOR_SEALED_TOKEN_JOIN": 1225
+    },
+    "historical_v20_state_counts": {
+      "FINALISED": 160,
+      "STARTED_INCOMPLETE": 1,
+      "UNSTARTED": 1065
+    }
+  },
+  "status": "PASS_V7_ALL_SCOPE_TARGET_BLIND_PREJOIN_READY_FOR_SEALED_TOKEN_JOIN_EXCLUDING_U0323"
+}

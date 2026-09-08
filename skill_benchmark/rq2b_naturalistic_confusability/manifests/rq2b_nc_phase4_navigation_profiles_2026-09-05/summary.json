@@ -1,0 +1,66 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/candidate_source_union_for_phase4.jsonl": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_admission_closure_300plus_2026-09-05/summary.json": "469363a5ef69c5d1a35b8724967f98d485cb4d4ac0ddae3778b2a43454d2238a",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase4_option1_method_gate_preflight_2026-09-05/summary.json": "2b579b24739c79e591009a6884c7d75984ff446d3cfa010acb4ed301666e18f5",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_PHASE4_OPTION1_LEGACY_AMENDMENT_2026-09-05.json": "16bf1c2b0b12002a169144efff9e3704b63f4f7b586d100061423fa07b4c59bd"
+  },
+  "claim_boundary": "Source-byte replay and source-native field parsing only; no prompt, target, acceptable-set label, retrieval/reranking output, selector output or metric is read or generated.",
+  "counts": {
+    "description_origins": {
+      "PRESERVED_FRONTMATTER": 3759,
+      "PRESERVED_NONSTANDARD_INLINE_BLOCK_SCALAR": 17,
+      "SOURCE_BODY_FALLBACK_NAVIGATION_ONLY": 22
+    },
+    "final_intake_roles_for_reporting_only": {
+      "PARENT_V3_CANONICAL_SOURCE": 2431,
+      "RQ1_NEW_PUBLIC_SOURCE_CANDIDATE": 639,
+      "RQ2B_NC_REVIEWED_SOURCE_CANDIDATE": 6,
+      "RQ2B_NC_RQ1_REVIEWED_NEW_SOURCE_CANDIDATE": 18,
+      "RQ2B_NC_SOURCE_NATIVE_CANDIDATE": 704
+    },
+    "path_resolution_tiers": {
+      "HISTORICAL_DIRECT_RECORD": 6,
+      "LOCAL_ORIGIN_DIRECT": 701,
+      "NESTED_PROVENANCE_FALLBACK": 3,
+      "RQ1_RECORD": 657,
+      "V3_IDENTITY_RECORD": 2431
+    },
+    "profile_rows": 3798,
+    "profiles_with_no_headings": 4,
+    "relevance_profiles_with_excluded_provider_product_token": 0,
+    "source_hash_or_path_failures": 0
+  },
+  "implementation_sha256": "f5bc6c6b4a02c1ffd5bd3f975cec5918b2c3661249311537952b683307e74901",
+  "outputs": {
+    "navigation_profiles.jsonl": "4cdb10551cdd2fb21d52cedae71d8f310552e4852f6c5ec077e87b4bf8ca0f0f",
+    "source_path_resolution_ledger.jsonl": "caeee4852899f58136d1ab1788c6856b43fca675cbe9802061090b600d78362f"
+  },
+  "profile_policy": {
+    "description_characters_after_nfkc_whitespace_folding": 1200,
+    "first_h1_to_h3_headings": 16,
+    "forbidden_from_relevance": [
+      "source_path",
+      "alias",
+      "origin",
+      "provenance",
+      "licence",
+      "prompt",
+      "target",
+      "label",
+      "retrieval",
+      "reranking",
+      "provider_output",
+      "metric"
+    ],
+    "nested_provenance_fallback": "only a unique existing PASS byte-bound path, after direct tiers are absent",
+    "relevance_safe_fields": [
+      "source_name",
+      "source_description",
+      "source_headings"
+    ],
+    "source_body_fallback": "raw source only, navigation-only, 480-character maximum; no historical overlay is used"
+  },
+  "status": "PASS_SOURCE_NATIVE_NAVIGATION_PROFILE_MATERIALISATION_OUTCOME_BLIND_ONLY"
+}

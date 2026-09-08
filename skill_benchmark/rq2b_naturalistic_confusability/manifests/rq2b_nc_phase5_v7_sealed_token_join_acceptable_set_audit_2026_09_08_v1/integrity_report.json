@@ -1,0 +1,60 @@
+{
+  "claim_boundary": "Finaliser-only join and frozen stopping-rule audit. It maps reconciled opaque tokens to canonical source hashes after target-blind closure. It does not retrieve, embed, rerank, call a provider, compute any retrieval metric, change K=6, modify a historical V3 label, or write a final library.",
+  "counts": {
+    "base_block_or_reject_groups": 132,
+    "base_block_or_reject_groups_not_superseded_by_tail_gate": 126,
+    "group_finaliser_dispositions": {
+      "ACCEPTABLE_SET_FINAL_CANDIDATE": 196,
+      "BLOCK_OR_REJECT_NO_FULLY_ACCEPTABLE_K6_MAIN_CANDIDATE": 108,
+      "BLOCK_OR_REJECT_SINGLE_EXTERNAL_FULLY_ACCEPTABLE_CANDIDATE": 18,
+      "DEFERRED_EXCLUDED_FROM_V7_FROZEN_LIBRARY_CLOSURE": 1,
+      "METHOD_GATE_OPEN_FULLY_ACCEPTABLE_POSITIVE_TAIL": 22,
+      "STRICT_FINAL_CANDIDATE": 881
+    },
+    "joined_candidate_dispositions": 9800,
+    "joined_main_candidates": 7350,
+    "joined_tail_candidates": 2450,
+    "lanes": {
+      "A_PARENT_DELTA": 371,
+      "B_NC_FULL_UNION": 854
+    },
+    "partially_adequate_tails_recorded_nonadmission": 183,
+    "positive_fully_acceptable_tail_method_gates": 22,
+    "positive_tail_gate_groups_with_underlying_block_or_reject": 6,
+    "target_joined_reconciled_groups": 1225,
+    "user_approved_excluded_groups": 1,
+    "v7_total_prompt_groups": 1226
+  },
+  "frozen_input_replay": {
+    "historical_v2_materialiser_source": "NOT_RERUN; frozen V2 outputs and their bound inputs are byte-hash replayed, while the current source file is not asserted to regenerate a historical freeze.",
+    "v2_bound_input_hashes": "PASS",
+    "v2_output_hashes": "PASS",
+    "v7_output_hashes": "PASS"
+  },
+  "hash_replay": {
+    "all_scope_prejoin_integrity_report_sha256": "ea5f84a68cb785950bd1bd0ad40f0a941e9721fee1a3f95fc709da559bb7ce97",
+    "master_sop_sha256": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835",
+    "v2_opaque_token_join_sha256": "504283c7a831306724ef38193a0640a819e2347e0d9c01c52754422aa84d8be9",
+    "v2_prompt_k6_allocation_ledger_sha256": "f65a3340a80545c50462eec43dd8ed9d7b89d9735f9f2c59ba4d3ed952ee7127",
+    "v2_source_visible_review_pairs_sha256": "e727c0e7a39fc8066fada918140ff9eb4af22455ec4518c54462f7e2225428be",
+    "v2_summary_sha256": "ce0e14d911cd35eef62b61935b436dbb1c88f8ffb34caafa254b018e3dd748be",
+    "v7_summary_sha256": "adca8161bb4d79fc7e8f1af9242f42d61f36a7ca32a863394b2111e288398aea",
+    "v7_unified_manifest_sha256": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55"
+  },
+  "next_permitted_step": "Author decision on every fully acceptable positive-tail method gate; do not expand K or finalise the library automatically.",
+  "output_hashes": {
+    "acceptable_set_audit_ledger.jsonl": "6a2f82d2f68bc8cf2397a78e18eb773ec670c6b417ed54a84df953b5063e7c7e",
+    "blocked_or_excluded_docket.jsonl": "62cb33efcb485164f7080216523958890b9c2c96a3fba3fe88a176476579739b",
+    "partial_tail_quality_docket.jsonl": "8de7eb57d3e5883e989e534b71cdc7ef89df510d03dad66f0b00e6551bc47731",
+    "positive_tail_method_gate_docket.jsonl": "f5a553ef38a2aec1a507e7af413673f0e3cd6796295ef25861c7d9008a6a754e",
+    "sealed_finalizer_candidate_join.jsonl": "a408c3ec8c8e990471acc95c648aabdd57a3a2b2e6ac1258131ec240ec21a8f4"
+  },
+  "schema_version": "rq2b_nc_phase5_v7_sealed_token_join_acceptable_set_audit_v1",
+  "status": "BLOCKED_METHOD_GATE_OPEN_FULLY_ACCEPTABLE_POSITIVE_TAILS_DO_NOT_FINALISE_LIBRARY",
+  "stopping_rule": {
+    "k6_main": "Only FULLY_ACCEPTABLE K=6 main candidates may enter a provisional set.",
+    "nc_full_union": "All FULLY_ACCEPTABLE K=6 main candidates are retained provisionally. A one-member NC set is strict only if it is the frozen local most-suitable source; an external singleton is blocked for remediation rather than silently replacing the local target.",
+    "parent_delta": "The historical strict V3 gold is preserved as an inherited seed; reviewed fully acceptable main candidates are additions only and do not rewrite V3.",
+    "two_tails": "A fully acceptable tail opens a method gate and is never silently admitted or used to increase K. A partially adequate tail is recorded but is not a fully acceptable member."
+  }
+}
