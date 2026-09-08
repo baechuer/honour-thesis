@@ -1,0 +1,40 @@
+{
+  "allowed_top_level": [
+    "blind_packet_id",
+    "candidate_token",
+    "coordinator_decision",
+    "coordinator_output_sha256",
+    "fresh_source_render_sha256",
+    "rationale",
+    "reviewer_a_return_sha256",
+    "reviewer_b_return_sha256",
+    "source_anchor"
+  ],
+  "decisions": [
+    "CONFIRMED_FULLY_ACCEPTABLE",
+    "CONFIRMED_INADEQUATE",
+    "CONFIRMED_PARTIALLY_ADEQUATE",
+    "CONFIRMED_UNCLEAR",
+    "REOPEN_PACKET"
+  ],
+  "input_rule": "Receive only the two validated returns and one fresh source-visible candidate. Do not inspect targets, main/tail assignment, rank, source path, provenance, historical/local reference or retrieval outcome.",
+  "required_fields": [
+    "blind_packet_id",
+    "candidate_token",
+    "coordinator_decision",
+    "coordinator_output_sha256",
+    "fresh_source_render_sha256",
+    "rationale",
+    "reviewer_a_return_sha256",
+    "reviewer_b_return_sha256",
+    "source_anchor"
+  ],
+  "schema_version": "rq2b_nc_phase4_v7_strict_unified_blind_coordinator",
+  "trigger": "A/B adequacy disagreement, either UNCLEAR, invalid return or missing return. Literal source anchors are independently mechanically located during return validation; different valid locators alone are logged but are not a decision conflict.",
+  "validation": [
+    "Output has exactly the allowed fields and binds the fresh source render plus SHA-256s of both already-validated independent returns.",
+    "source_anchor is exactly one bounded literal source-visible heading or short phrase and is mechanically located.",
+    "coordinator_output_sha256 is SHA-256 of canonical JSON excluding that field (UTF-8, sorted keys, comma/colon separators).",
+    "Validated coordinator outputs are applied only by the finalise command; REOPEN_PACKET and CONFIRMED_UNCLEAR prevent library-level closure."
+  ]
+}

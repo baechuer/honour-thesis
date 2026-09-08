@@ -1,0 +1,41 @@
+{
+  "bound_inputs": {
+    "execution_replay_sha256": "94cb502bb35416d3bcd651a0b72f04f344e7adaeed0aa2213d29b9027d10bb7b",
+    "execution_replay_status": "PASS_PHASE4_V7_STRICT_UNIFIED_BLIND_EXECUTION_FREEZE_PENDING_TWO_INDEPENDENT_RETURNS",
+    "frozen_protocol": "skill_benchmark/scripts/rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py",
+    "frozen_protocol_sha256": "4f3ed25698ba66287845f6edad24f05880b4c46c805908e685b313fbcde9f308",
+    "integration_ledger": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_mechanical_integration_2026_09_08_v1/integration_intake_ledger.jsonl",
+    "integration_ledger_sha256": "34b738ff32e74bde4aa524f7403546a57bd8e0fb4433622e1f60c8eb8d08ec66"
+  },
+  "claim_boundary": "Target-blind coordinator input dispatch only; no coordinator decisions, reconciliation finalisation, target join, acceptable set, retrieval, metric, or library update.",
+  "counts": {
+    "candidate_level_coordinator_packets": 2291,
+    "coordinator_1_groups": 274,
+    "coordinator_1_packets": 762,
+    "coordinator_2_groups": 286,
+    "coordinator_2_packets": 766,
+    "coordinator_3_groups": 272,
+    "coordinator_3_packets": 763,
+    "eligible_prompt_groups": 832,
+    "excluded_gate_docket_groups": 6
+  },
+  "integrity": {
+    "all_input_return_hashes_replayed": true,
+    "all_packets_target_blind": true,
+    "assignment_covers_every_eligible_group_once": true,
+    "assignment_disjoint": true,
+    "whole_groups_kept_with_one_coordinator": true
+  },
+  "prohibitions_honoured": [
+    "no target join",
+    "no K change",
+    "no reconciliation decision",
+    "no acceptable-set or library update"
+  ],
+  "schema_version": "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_v2",
+  "v1_supersession": {
+    "all_v2_packets_include_required_input_return_hash_bindings": true,
+    "reason": "V1 packets omitted reviewer_a_return_sha256 and reviewer_b_return_sha256, which are required immutable bindings in the frozen coordinator return schema. V1 is retained unchanged and must not be used for returns.",
+    "supersedes": "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v1"
+  }
+}

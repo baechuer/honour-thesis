@@ -22,7 +22,10 @@ WORKSPACE = Path(__file__).resolve().parents[2]
 NC = WORKSPACE / "skill_benchmark" / "rq2b_naturalistic_confusability"
 PROTOCOL = WORKSPACE / "skill_benchmark" / "scripts" / "rq2b_nc_phase4_v5_strict_unified_blind_protocol_2026_09_05.py"
 INTEGRATION = NC / "manifests" / "rq2b_nc_phase5_v7_mechanical_integration_2026_09_08_v1"
-OUTPUT = NC / "manifests" / "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v1"
+# V1 is a preserved, immutable historical dispatch.  V2 binds the two selected
+# input-return hashes directly into every reviewer-visible packet, as required
+# by the frozen coordinator schema.
+OUTPUT = NC / "manifests" / "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v2"
 
 
 def canonical_sha(value: Any) -> str:
@@ -149,6 +152,8 @@ def main() -> None:
                 "coordinator_dispatch_id": coordinator_packet_id(batch_id, token),
                 "blind_packet_id": manifest["blind_packet_id"],
                 "candidate_token": token,
+                "reviewer_a_return_sha256": pair["A"]["source_return_sha256"],
+                "reviewer_b_return_sha256": pair["B"]["source_return_sha256"],
                 "reviewer_A_assessment": a[token],
                 "reviewer_B_assessment": b[token],
                 "fresh_source_visible_skill": source,
@@ -199,7 +204,7 @@ def main() -> None:
     admin_rows.sort(key=lambda row: row["coordinator_dispatch_id"])
     write_jsonl(out / "sealed_admin_assignment_ledger.jsonl", admin_rows)
     report = {
-        "schema_version": "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_v1",
+        "schema_version": "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_v2",
         "claim_boundary": "Target-blind coordinator input dispatch only; no coordinator decisions, reconciliation finalisation, target join, acceptable set, retrieval, metric, or library update.",
         "bound_inputs": {
             "integration_ledger": str(INTEGRATION.relative_to(WORKSPACE) / "integration_intake_ledger.jsonl"),
@@ -217,21 +222,28 @@ def main() -> None:
             "excluded_gate_docket_groups": 6,
         },
         "integrity": {"all_input_return_hashes_replayed": True, "all_packets_target_blind": True, "whole_groups_kept_with_one_coordinator": True, "assignment_disjoint": True, "assignment_covers_every_eligible_group_once": True},
+        "v1_supersession": {
+            "supersedes": "rq2b_nc_phase5_v7_sealed_coordinator_dispatch_2026_09_08_v1",
+            "reason": "V1 packets omitted reviewer_a_return_sha256 and reviewer_b_return_sha256, which are required immutable bindings in the frozen coordinator return schema. V1 is retained unchanged and must not be used for returns.",
+            "all_v2_packets_include_required_input_return_hash_bindings": True,
+        },
         "prohibitions_honoured": ["no target join", "no K change", "no reconciliation decision", "no acceptable-set or library update"],
     }
     write_json(out / "integrity_report.json", report)
     (out / "integrity_report.md").write_text(
-        "# Sealed coordinator dispatch integrity report\n\n"
+        "# Sealed coordinator dispatch integrity report (V2)\n\n"
         f"- Eligible prompt groups: {len(packets_by_group)}\n"
         f"- Candidate-level packets: {len(admin_rows)}\n"
         f"- Coordinator 1: {len(assignments['coordinator_1'])} groups / {loads['coordinator_1']} packets\n"
         f"- Coordinator 2: {len(assignments['coordinator_2'])} groups / {loads['coordinator_2']} packets\n"
         f"- Coordinator 3: {len(assignments['coordinator_3'])} groups / {loads['coordinator_3']} packets\n\n"
-        "The six gate-docket groups are not dispatched. No return or decision is materialised here.\n", encoding="utf-8")
+        "The six gate-docket groups are not dispatched. No return or decision is materialised here.\n\n"
+        "V2 supersedes V1 for coordinator review only: V1 omitted the two reviewer-return SHA bindings required by the frozen coordinator schema. V1 remains preserved unchanged; its packets must not be used to create returns.\n", encoding="utf-8")
     (out / "README.md").write_text(
-        "# RQ2b-NC V7 sealed coordinator dispatch\n\n"
+        "# RQ2b-NC V7 sealed coordinator dispatch (V2)\n\n"
         "Each coordinator receives only its `*_sealed_packets.jsonl`, its reviewer manifest, and `coordinator_return_schema.json`. It must not inspect the admin ledger, any target join, main/tail role, rank, provenance, historical label, retrieval outcome, or another coordinator's packet file.\n\n"
-        "For every packet, write one strict-schema return to a coordinator-specific return directory, naming the file by `coordinator_dispatch_id`. The return itself contains only the frozen coordinator schema fields; the dispatch ID is transport metadata and must not be inserted into the return JSON.\n\n"
+        "For every packet, write one strict-schema return to a coordinator-specific return directory, naming the file by `coordinator_dispatch_id`. The return itself contains only the frozen coordinator schema fields; the dispatch ID is transport metadata and must not be inserted into the return JSON. Copy `reviewer_a_return_sha256`, `reviewer_b_return_sha256`, and `fresh_source_render_sha256` verbatim from the supplied packet.\n\n"
+        "V2 is the only active coordinator dispatch. The preserved V1 package omitted the two required input-return SHA bindings and therefore must not be used to create coordinator returns.\n\n"
         "These inputs are target-blind. They are not decisions, finalised groups, acceptable sets, or experimental results.\n", encoding="utf-8")
     print(json.dumps({"status": "PASS_V7_SEALED_COORDINATOR_DISPATCH_MATERIALISED", "output": str(out), "counts": report["counts"]}, sort_keys=True))
 
