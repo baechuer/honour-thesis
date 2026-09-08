@@ -222,11 +222,16 @@ def build() -> dict[str, bytes]:
             "assigned_reviewer_group": reviewer_groups[row["skill_id"]],
         })
     visible_by_id = {row["review_id"]: row for row in reviewer_rows}
+    return_schema = json.loads((ROOT / PREVIOUS_QA / "reviewer_return_schema.json").read_bytes())
+    return_schema["allOf"] = [{
+        "if": {"properties": {"major_error": {"const": True}}, "required": ["major_error"]},
+        "then": {"properties": {"affected_fields": {"minItems": 1}}},
+    }]
     files: dict[str, bytes] = {
         "blinded_reviewer_packet.jsonl": rows_bytes(reviewer_rows),
         "sampling_key_do_not_give_reviewer.jsonl": rows_bytes(key_rows),
         "reviewer_guidance.md": GUIDANCE.encode(),
-        "reviewer_return_schema.json": (ROOT / PREVIOUS_QA / "reviewer_return_schema.json").read_bytes(),
+        "reviewer_return_schema.json": json_bytes(return_schema),
     }
     for group in (1, 2, 3):
         group_keys = sorted((row for row in key_rows if row["assigned_reviewer_group"] == group), key=lambda row: stable_key("slot", row["review_id"]))
