@@ -1,0 +1,50 @@
+{
+  "bound_inputs": {
+    "direct_reconciliation_integrity_sha256": "ace20cc45cd88d84a24554dd0c1e61375c794c58bfd2a2567120084ab6a4cd52",
+    "gate_reissue_final_reconciliation_integrity_sha256": "cd77fd2565e6703c82dc343ed44b541616fd27aca1691f4ddebfeee31b6eed74",
+    "integration_ledger_sha256": "34b738ff32e74bde4aa524f7403546a57bd8e0fb4433622e1f60c8eb8d08ec66",
+    "prompt_bound_reconciliation_integrity_sha256": "0c062cfd295172ff24c9916815ad7a3b3509ca7ffbb7a27c1f5692f59724eb06",
+    "user_gate_disposition_ledger_sha256": "88530cc877c0178775f111037a6578ec1aa79efce42f66e653272d4e06cf5db9",
+    "v7_unified_manifest": "skill_benchmark/rq2b_naturalistic_confusability/manifests/RQ2b-NC-audit-input-300plus-2026-09-05_v7-strict-unified-blind-delivery/unified_prompt_group_batch_manifest.jsonl",
+    "v7_unified_manifest_sha256": "b86f341b566fcdaa4534687064697a14ce373a361d7adcf4a414fa293c167e55"
+  },
+  "claim_boundary": "Target-blind mechanical evidence consolidation only. This is not a target join, acceptable-set audit, final library, retrieval result, metric, or thesis result; K remains 6 with two bounded tails.",
+  "mechanical_checks": {
+    "candidate_partition_eight_per_reconciled_group": "PASS",
+    "coverage_of_1066_group_integration_scope": "PASS",
+    "no_unclear_or_reopen_in_reconciled_scope": "PASS",
+    "reconciled_group_packet_input_hash_and_k6_two_tail_shape": "PASS",
+    "source_route_disjointness": "PASS",
+    "target_blind_output_key_check": "PASS"
+  },
+  "next_permitted_step": "A separately controlled sealed target join and acceptable-set audit may now be planned for the 1,065 reconciled V7 groups only. U0323 remains outside V7 frozen-library closure unless a prospective method amendment is approved.",
+  "prohibited_in_this_package": [
+    "target join",
+    "acceptable-set creation",
+    "library update",
+    "retrieval or metric calculation",
+    "thesis-result update",
+    "K=8 change"
+  ],
+  "route_counts": {
+    "approved_gate_reissue_groups": 5,
+    "direct_exact_independent_groups": 228,
+    "prompt_bound_rereview_groups": 832,
+    "user_method_gate_exclusions": 1
+  },
+  "schema_version": "rq2b_nc_phase5_v7_master_target_blind_readiness_v1",
+  "scope": {
+    "explicitly_deferred_excluded_groups": 1,
+    "mechanical_integration_scope_groups": 1066,
+    "reconciled_candidate_dispositions": 8520,
+    "target_blind_reconciled_groups": 1065,
+    "u0323_exclusion": "DEFERRED_EXCLUDED_FROM_V7_FROZEN_LIBRARY_CLOSURE_BY_USER_APPROVAL_2026-09-08",
+    "unresolved_or_blocked_groups": 0
+  },
+  "status": "PASS_RQ2B_V7_TARGET_BLIND_AUDIT_EVIDENCE_READY_FOR_SEALED_TARGET_JOIN_EXCLUDING_U0323",
+  "target_blind_outcome_counts": {
+    "FULLY_ACCEPTABLE": 906,
+    "INADEQUATE": 5932,
+    "PARTIALLY_ADEQUATE": 1682
+  }
+}
