@@ -245,6 +245,11 @@ def main() -> None:
         "For every packet, write one strict-schema return to a coordinator-specific return directory, naming the file by `coordinator_dispatch_id`. The return itself contains only the frozen coordinator schema fields; the dispatch ID is transport metadata and must not be inserted into the return JSON. Copy `reviewer_a_return_sha256`, `reviewer_b_return_sha256`, and `fresh_source_render_sha256` verbatim from the supplied packet.\n\n"
         "V2 is the only active coordinator dispatch. The preserved V1 package omitted the two required input-return SHA bindings and therefore must not be used to create coordinator returns.\n\n"
         "These inputs are target-blind. They are not decisions, finalised groups, acceptable sets, or experimental results.\n", encoding="utf-8")
+    (out / "U0323_method_gate_note.md").write_text(
+        "# U0323 method gate\n\n"
+        "`U0323` is excluded from the V2 coordinator dispatch. Its existing sealed coordinator rationale records materially incompatible requested workflows, not a malformed anchor, schema, or packet hash. Therefore a same-packet A+B reissue would not repair a mechanical defect. The original evidence remains preserved; any next action requires an explicit prospective method amendment or an explicit defer/exclude decision. This note contains no target identity or reconciliation decision.\n",
+        encoding="utf-8",
+    )
     print(json.dumps({"status": "PASS_V7_SEALED_COORDINATOR_DISPATCH_MATERIALISED", "output": str(out), "counts": report["counts"]}, sort_keys=True))
 
 
