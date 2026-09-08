@@ -1,0 +1,21 @@
+{
+  "bound_inputs": {
+    "gate_reissue_dispatch_integrity": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_disposition_reissue_2026_09_08_v1/integrity_report.json",
+    "gate_reissue_dispatch_integrity_sha256": "9c5d1ffe34b30f1ed9f877de3f78eb6d1b6d0d0fb8e8fa6253242b4d7c114bb9",
+    "pair_reconciliation_integrity": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase5_v7_gate_reissue_pair_reconciliation_2026_09_08_v1/integrity_report.json",
+    "pair_reconciliation_integrity_sha256": "9488918bc84439cc661291af078c9c5b8fe32210195ed016575eeedef963f453"
+  },
+  "claim_boundary": "Target-blind coordinator dispatch only; no target join, acceptable set, library update, retrieval result, metric, thesis result, or K change.",
+  "counts": {
+    "coordinator_packets": 9,
+    "reissue_prompt_groups": 4
+  },
+  "schema_version": "rq2b_nc_phase5_v7_gate_reissue_coordinator_dispatch_v1",
+  "status": "PASS_V7_GATE_REISSUE_SEALED_COORDINATOR_DISPATCH_PENDING_RETURNS",
+  "stop_boundary": "Coordinator returns must validate and have no CONFIRMED_UNCLEAR or REOPEN_PACKET before the five gate reissue groups can be declared target-blind reconciled. Target join and acceptable-set/library update remain prohibited until a master-SOP readiness verifier passes.",
+  "validations": {
+    "all_packets_have_hash_bound_prompt_and_source": true,
+    "all_packets_target_blind_from_nonreviewer_fields": true,
+    "queue_identity_exactly_replayed": true
+  }
+}

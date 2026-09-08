@@ -1,0 +1,43 @@
+{
+  "allowed_top_level": [
+    "blind_packet_id",
+    "candidate_token",
+    "coordinator_decision",
+    "coordinator_input_packet_sha256",
+    "coordinator_output_sha256",
+    "fresh_source_render_sha256",
+    "prompt_render_sha256",
+    "rationale",
+    "reviewer_a_return_sha256",
+    "reviewer_b_return_sha256",
+    "source_anchor"
+  ],
+  "decisions": [
+    "CONFIRMED_FULLY_ACCEPTABLE",
+    "CONFIRMED_PARTIALLY_ADEQUATE",
+    "CONFIRMED_INADEQUATE",
+    "CONFIRMED_UNCLEAR",
+    "REOPEN_PACKET"
+  ],
+  "input_rule": "Read only an assigned sealed packet and this schema. Do not inspect target identity, gold, rank, main/tail role, provenance, source path, prior outcome beyond the two rendered assessments, retrieval, acceptable set, metric, or other coordinator material.",
+  "required_fields": [
+    "blind_packet_id",
+    "candidate_token",
+    "coordinator_decision",
+    "coordinator_input_packet_sha256",
+    "coordinator_output_sha256",
+    "fresh_source_render_sha256",
+    "prompt_render_sha256",
+    "rationale",
+    "reviewer_a_return_sha256",
+    "reviewer_b_return_sha256",
+    "source_anchor"
+  ],
+  "schema_version": "rq2b_nc_phase5_v7_gate_reissue_coordinator_return_v1",
+  "validation": [
+    "Output has exactly the allowed fields and copies every supplied hash binding verbatim.",
+    "source_anchor is exactly one bounded literal heading or short phrase mechanically located in fresh_source_visible_skill.",
+    "coordinator_output_sha256 is SHA-256 of canonical JSON excluding that field (UTF-8, sorted keys, comma/colon separators).",
+    "CONFIRMED_UNCLEAR and REOPEN_PACKET block closure; no target join or library update is authorised."
+  ]
+}
