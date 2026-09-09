@@ -1,0 +1,178 @@
+{
+  "artifacts": {
+    "canonical_extractions.jsonl": {
+      "rows": 3798,
+      "sha256": "de45023368dffb570620d8797068d1aeccec3b4884a7fff14b59e7f33cf54af9",
+      "utf8_bytes": 68232371
+    },
+    "class_repair_ledger.jsonl": {
+      "rows": 3798,
+      "sha256": "5e8dee47bc664f729c3289014ceb011f0098d1b753cc55d636718451dfacc914",
+      "utf8_bytes": 2808689
+    },
+    "i3_flat.jsonl": {
+      "rows": 3798,
+      "sha256": "e32ccdcc61a55d31f2bcca3ca62347f071529389830787c50fc116678233f178",
+      "utf8_bytes": 34227036
+    },
+    "i3c_fielded.jsonl": {
+      "rows": 3798,
+      "sha256": "9cc214ee14bbb98f47c0cea874a13099c7e3f4cff2907915f088a1d93c89c6e0",
+      "utf8_bytes": 34670787
+    },
+    "worker_outputs.jsonl": {
+      "rows": 3798,
+      "sha256": "2ba89967195eb53c8862f9f0ee7649bf0c2d5fad61531206236bb346e4920442",
+      "utf8_bytes": 33438653
+    }
+  },
+  "automatic_summary": {
+    "absent_field_counts": {
+      "constraints_boundaries": 2039,
+      "dependencies_resources": 953,
+      "input_preconditions": 1021,
+      "output_artifacts": 618,
+      "success_criteria": 2640,
+      "use_conditions": 131,
+      "workflow_steps": 282
+    },
+    "duplicate_i3c_selector_text_rows_beyond_first": 0,
+    "evidence_substring_failures": 0,
+    "field_item_counts": {
+      "constraints_boundaries": 11555,
+      "dependencies_resources": 16219,
+      "input_preconditions": 7996,
+      "output_artifacts": 7304,
+      "success_criteria": 5929,
+      "use_conditions": 9229,
+      "workflow_steps": 22237
+    },
+    "field_row_coverage": {
+      "constraints_boundaries": 1759,
+      "dependencies_resources": 2845,
+      "input_preconditions": 2777,
+      "output_artifacts": 3180,
+      "success_criteria": 1158,
+      "use_conditions": 3667,
+      "workflow_steps": 3516
+    },
+    "heading_only_evidence_removed": 2208,
+    "i3c_i3flat_evidence_match_rows": 3798,
+    "i3c_selector_utf8_bytes": 10918423,
+    "i3flat_selector_utf8_bytes": 10524723,
+    "identity_failures": 0,
+    "omission_counts": {
+      "exact_name_or_description_duplicate": 945,
+      "heading_only_evidence": 2208
+    },
+    "parse_failures": 0,
+    "rows": 3798,
+    "warning_counts": {
+      "mixed_role_evidence": 71,
+      "mixed_role_unsplittable": 1134,
+      "source_formatting_blocks_atomic_extraction": 2,
+      "source_routing_conflict": 1
+    }
+  },
+  "bindings": {
+    "assignment_manifest_sha256": "da17924c70ac1de238bd0229acecb1ca2f53155a1f6b901baf3b94ede57144ce",
+    "builder_sha256": "eb483e4e7d477732ce795bbe234def14605a2ca16439ba7a318b0bf62ce6fca9",
+    "failed_fresh_qa_v5_report_sha256": "7487c4fb0bfdfc98a5ce323f1e547d31920fd2a2d27b27770130695d02823baa",
+    "source_v4_1_4_canonical_extractions_sha256": "db46f70b79358a062ad8ec68a8f80c4d8032d92708461fcd1151b88f32ecb08e",
+    "source_v4_1_4_manifest_sha256": "ae17c0572fa6d3152853772a4ed9e3397703e683fd48fe5c2284bdde6c67871a",
+    "source_v4_1_4_worker_outputs_sha256": "0c597f39333033bd8a8f259a1149c2fbffde84c5db1d93dd1a0367d2a0cb5b21"
+  },
+  "class_repair": {
+    "actions": {
+      "bounded_supplement_cap_reached_constraints_boundaries": 72,
+      "bounded_supplement_cap_reached_output_artifacts": 149,
+      "bounded_supplement_cap_reached_success_criteria": 113,
+      "bounded_supplement_cap_reached_use_conditions": 26,
+      "bounded_supplement_cap_reached_workflow_steps": 686,
+      "expanded_to_complete_full_document_block": 28836,
+      "normalized_evidence_deduplicated": 16176,
+      "reclassified_constraints_boundaries_to_dependencies_resources": 109,
+      "reclassified_constraints_boundaries_to_input_preconditions": 176,
+      "reclassified_constraints_boundaries_to_output_artifacts": 110,
+      "reclassified_constraints_boundaries_to_success_criteria": 178,
+      "reclassified_constraints_boundaries_to_use_conditions": 322,
+      "reclassified_constraints_boundaries_to_workflow_steps": 1609,
+      "reclassified_dependencies_resources_to_constraints_boundaries": 95,
+      "reclassified_dependencies_resources_to_input_preconditions": 54,
+      "reclassified_dependencies_resources_to_output_artifacts": 10,
+      "reclassified_dependencies_resources_to_success_criteria": 15,
+      "reclassified_dependencies_resources_to_use_conditions": 25,
+      "reclassified_dependencies_resources_to_workflow_steps": 142,
+      "reclassified_input_preconditions_to_constraints_boundaries": 31,
+      "reclassified_input_preconditions_to_dependencies_resources": 193,
+      "reclassified_input_preconditions_to_output_artifacts": 1,
+      "reclassified_input_preconditions_to_success_criteria": 26,
+      "reclassified_input_preconditions_to_use_conditions": 17,
+      "reclassified_input_preconditions_to_workflow_steps": 9,
+      "reclassified_output_artifacts_to_constraints_boundaries": 39,
+      "reclassified_output_artifacts_to_dependencies_resources": 35,
+      "reclassified_output_artifacts_to_input_preconditions": 6,
+      "reclassified_output_artifacts_to_success_criteria": 44,
+      "reclassified_output_artifacts_to_use_conditions": 86,
+      "reclassified_output_artifacts_to_workflow_steps": 7,
+      "reclassified_success_criteria_to_constraints_boundaries": 39,
+      "reclassified_success_criteria_to_dependencies_resources": 5,
+      "reclassified_success_criteria_to_input_preconditions": 22,
+      "reclassified_success_criteria_to_output_artifacts": 11,
+      "reclassified_success_criteria_to_use_conditions": 11,
+      "reclassified_success_criteria_to_workflow_steps": 88,
+      "reclassified_use_conditions_to_constraints_boundaries": 38,
+      "reclassified_use_conditions_to_dependencies_resources": 16,
+      "reclassified_use_conditions_to_success_criteria": 14,
+      "reclassified_use_conditions_to_workflow_steps": 5,
+      "reclassified_workflow_steps_to_constraints_boundaries": 292,
+      "reclassified_workflow_steps_to_dependencies_resources": 102,
+      "reclassified_workflow_steps_to_input_preconditions": 605,
+      "reclassified_workflow_steps_to_output_artifacts": 65,
+      "reclassified_workflow_steps_to_success_criteria": 292,
+      "reclassified_workflow_steps_to_use_conditions": 162,
+      "removed_bare_table_or_template_label": 18,
+      "removed_formatting_only": 648,
+      "removed_non_operational_workflow_fragment": 12527,
+      "supplemented_constraints_boundaries": 156,
+      "supplemented_dependencies_resources": 1917,
+      "supplemented_input_preconditions": 520,
+      "supplemented_output_artifacts": 816,
+      "supplemented_success_criteria": 391,
+      "supplemented_use_conditions": 537,
+      "supplemented_workflow_steps": 2752,
+      "uncapped_list_item_dependencies_resources": 1917,
+      "uncapped_list_item_input_preconditions": 520
+    },
+    "failed_qa_v5_sources_bound": 13,
+    "failed_qa_v5_sources_changed": 13,
+    "rows_changed": 3587,
+    "rows_processed": 3798,
+    "rows_unchanged": 211
+  },
+  "counts": {
+    "batches": 95,
+    "fresh_full_corpus": 3798,
+    "sources": 3798
+  },
+  "formal_execution_ready": false,
+  "merger_version": "rq2b-v7-i3-full-corpus-v4.1.5-class-repair-v1",
+  "provider_calls": 0,
+  "retrieval_or_reranking_runs": 0,
+  "safeguards": {
+    "provider_calls": 0,
+    "queries_labels_results_metrics_accessed": false,
+    "retrieval_or_reranking_runs": 0,
+    "source_only": true
+  },
+  "schema_version": "rq2b-v7-phase7-i3-class-repair-v4.1.5",
+  "semantic_qa": {
+    "execution_authorised": false,
+    "failed_v4_sample_preserved": true,
+    "failed_v5_sample_preserved": true,
+    "historical_sample_inherited": false,
+    "required": true,
+    "state": "PENDING_NEW_120_ROW_SOURCE_ONLY_SAMPLE"
+  },
+  "state": "AUTOMATIC_INTEGRITY_PASS_FRESH_BLINDED_QA_PENDING"
+}

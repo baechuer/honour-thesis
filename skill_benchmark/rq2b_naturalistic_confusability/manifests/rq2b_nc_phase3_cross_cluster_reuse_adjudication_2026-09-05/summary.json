@@ -1,0 +1,23 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_semantic_qa_300plus_2026-09-05_v2/source_relation_reviewer_packet.jsonl": "64948c92e149eb654cc3d7c2788cb7e5ebe18d23c8ad4fbee671c4a8ee434172",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_semantic_qa_300plus_2026-09-05_v2/source_relation_screen.jsonl": "c9beb6cb04e9bf19f625a416bcbf854d857f0496c3cc25b834288485ea66279d",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835"
+  },
+  "claim_boundary": "This package preserves two independent reviews and sealed coordinator resolutions. It does not silently merge clusters, waive source-disjointness, change the source universe, or freeze audit input.",
+  "counts": {
+    "admission_blocked": 8,
+    "blocked_or_unclear": 2,
+    "duplicate_cluster": 2,
+    "related_but_distinct": 4,
+    "reviewed_exact_reuses": 8
+  },
+  "outputs": {
+    "coordinator_packet.jsonl": "b1f7886c5ad44cbe66942481fa03fac29a95f870511d799388c09c674df608fd",
+    "coordinator_return.jsonl": "e8247a2d6186684ae654d3e2cf1a90b69b5b9f4674280911e18ace77f45494c6",
+    "final_cross_cluster_dispositions.jsonl": "b9f6ad4265a883217e2c2020a7c4400826189e8370dc4c3aa7ca000ba2dffd4b",
+    "reviewer_a_return.jsonl": "9cfa4f43ceaa9a978c58444d70aef57b816c51d03f6a57c60124b9673b804c4a",
+    "reviewer_b_return.jsonl": "98948d1fa524b3fb22c1bc369c7ef090c1bdf0f9e6b2a0cfa825af44dead1631"
+  },
+  "status": "BLOCKED_PHASE3_CROSS_CLUSTER_SOURCE_REUSE_REQUIRES_EXCLUSION_OR_METHOD_DECISION"
+}

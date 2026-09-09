@@ -1,0 +1,47 @@
+{
+  "canonical_promotion_authorised": false,
+  "inputs": {
+    "finding_disposition_docket": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/finding_disposition_docket.jsonl",
+      "selected_decision": "BLOCKED_OR_UNCLEAR",
+      "selected_gate": "source_relation",
+      "selected_rows": 30,
+      "sha256": "3b187c111288fdeb19f3e59e3a2cfc1e6ea6f83e7cf1d818daabed4861dea553"
+    },
+    "source_manifest": {
+      "manifest_rows": 3798,
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_first_matrix_2026_09_08_v1/source_manifest.jsonl",
+      "sha256": "92c0746a1236e7005e71a43366ca163ce9d394a55c354f6c6d4c1bfadd2e6225"
+    }
+  },
+  "lane": "lane_a",
+  "pre_outcome_quality_evidence": true,
+  "return": {
+    "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_full_source_relation_reissue_2026_09_09_v1/lane_a/return.jsonl",
+    "rows": 30,
+    "sha256": "ffd182330575fb093f0a1584dcfbb7404663f6d4b42be035a69b2ad07c7375f4"
+  },
+  "review_boundary": {
+    "lane_b_read": false,
+    "network_used": false,
+    "prior_reviewer_rationales_used": false,
+    "retrieval_outputs_or_metrics_read": false,
+    "targets_or_acceptable_sets_read": false
+  },
+  "schema_version": "rq2b-v7-phase8-full-source-relation-reissue-validation-v1",
+  "source_only": true,
+  "status": "PASS_SOURCE_ONLY_REVIEW_VALIDATION",
+  "validation": {
+    "decision_counts": {
+      "ALIAS_OR_FORK": 3,
+      "RELATED_BUT_DISTINCT": 11,
+      "TRANSFORMED_COPY": 16
+    },
+    "errors": [],
+    "exact_visible_anchor_checks": "62/62",
+    "packet_identity_and_order": "PASS",
+    "schema_and_enum": "PASS",
+    "source_hash_matches": "60/60",
+    "source_manifest_coverage": "60/60"
+  }
+}

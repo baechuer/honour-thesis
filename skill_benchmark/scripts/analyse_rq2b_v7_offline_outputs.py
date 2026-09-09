@@ -13,7 +13,7 @@ import json
 import math
 import random
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
 
@@ -32,11 +32,21 @@ LABEL_PATH = ANALYSIS / "offline_label_adapter.jsonl"
 DEPENDENCY_PATH = ANALYSIS / "dependency_ledger.jsonl"
 EXPOSURE_PATH = ANALYSIS / "exposure_ledger.jsonl"
 DQ_PATH = ANALYSIS / "reviewed_confusable_neighbour_ledger.jsonl"
+QUALITY_RELATION_DIR = ROOT / "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1"
+QUALITY_CLOSURE_DIR = ROOT / "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_closure_2026_09_09_v1"
+SOURCE_EQUIVALENCE_PATH = QUALITY_RELATION_DIR / "source_equivalence_edges.jsonl"
+PROMPT_DEPENDENCY_EDGE_PATH = QUALITY_RELATION_DIR / "prompt_dependency_edges.jsonl"
+CUE_SENSITIVITY_PATH = QUALITY_CLOSURE_DIR / "cue_sensitivity_ledger.jsonl"
 EXPECTED_OFFLINE_SHA256 = {
     LABEL_PATH: "cb11848e4a6d7938870e8bf5913335050538ac4f3c589ec9fe69bb303711357d",
     DEPENDENCY_PATH: "4226cfe2c9943d40026a4f1a9a38dbbc379ae9b8f39bd9b4c40aea8009e97fc7",
     EXPOSURE_PATH: "3749a72735a1c7034fd679fad24d4ce5ff40a8274144b15d8265bfb1c608dce3",
     DQ_PATH: "cb65d8dc40041630f201afc303604648fdc7ee5af270cbe877be33ab2a58dfb4",
+}
+EXPECTED_QUALITY_OVERLAY_SHA256 = {
+    SOURCE_EQUIVALENCE_PATH: "c29e5868a39c943e3821a2408a6e8d6f2d3ef6cd2a73cb227fa05325e61ccb4f",
+    PROMPT_DEPENDENCY_EDGE_PATH: "551201029e9a681ecc707a5357503c008c38c5e0a4220e86e4678e8775c01308",
+    CUE_SENSITIVITY_PATH: "87eba0de1f8c15384df862b4652442f9b2410d216bbd2f17ca85d094df7e204f",
 }
 
 BOOTSTRAP_REPLICATES = 10_000
@@ -55,11 +65,15 @@ COMPARISONS = {
     "P5": ("C3-Q", "C4-Q", "known_a_hit_at_1", "SIGN_FLIP"),
 }
 SCOPES: dict[str, Callable[[dict[str, Any]], bool]] = {
-    "nc_primary": lambda row: row["lane_id"] == "B_NC_FULL_UNION",
+    "nc_primary": lambda row: row["lane_id"] == "B_NC_FULL_UNION" and not row["identity_cue_sensitivity"],
+    "nc_full_descriptive": lambda row: row["lane_id"] == "B_NC_FULL_UNION",
     "nc_source_native_sensitivity": lambda row: row["reporting_stratum"] == "source_native_three_member",
     "nc_legacy_descriptive": lambda row: row["reporting_stratum"] == "legacy_2member_checkpoint",
     "parent_public_descriptive": lambda row: row["reporting_stratum"] == "public_gold",
     "parent_controlled_descriptive": lambda row: row["reporting_stratum"] == "controlled",
+    "parent_delta_no_identity_cue_descriptive": lambda row: row["lane_id"] == "A_PARENT_DELTA" and not row["identity_cue_sensitivity"],
+    "all_library_no_identity_cue_descriptive": lambda row: not row["identity_cue_sensitivity"],
+    "identity_cue_sensitivity": lambda row: row["identity_cue_sensitivity"],
     "all_descriptive": lambda row: True,
 }
 
@@ -71,17 +85,23 @@ class OfflineAuthority:
     dependencies: dict[str, dict[str, Any]]
     exposures: dict[str, dict[str, Any]]
     dq_by_prompt: dict[str, dict[str, dict[str, Any]]]
+    source_equivalence_edges: list[dict[str, Any]] = field(default_factory=list)
+    cue_sensitivity_by_prompt: dict[str, dict[str, Any]] = field(default_factory=dict)
+    prompt_dependency_edges: list[dict[str, Any]] = field(default_factory=list)
 
     @classmethod
     def load(cls) -> "OfflineAuthority":
         runner = RunnerAuthority.load()
-        for path, expected in EXPECTED_OFFLINE_SHA256.items():
+        for path, expected in {**EXPECTED_OFFLINE_SHA256, **EXPECTED_QUALITY_OVERLAY_SHA256}.items():
             actual = file_sha256(path)
             require(actual == expected, f"offline authority hash drift: {path}: {actual} != {expected}")
         label_rows = read_jsonl(LABEL_PATH)
         dependency_rows = read_jsonl(DEPENDENCY_PATH)
         exposure_rows = read_jsonl(EXPOSURE_PATH)
         dq_rows = read_jsonl(DQ_PATH)
+        source_equivalence_edges = read_jsonl(SOURCE_EQUIVALENCE_PATH)
+        cue_sensitivity_rows = read_jsonl(CUE_SENSITIVITY_PATH)
+        prompt_dependency_edges = read_jsonl(PROMPT_DEPENDENCY_EDGE_PATH)
         labels = _unique_by_prompt(label_rows, "label adapter")
         dependencies = _unique_by_prompt(dependency_rows, "dependency ledger")
         exposures = _unique_by_prompt(exposure_rows, "exposure ledger")
@@ -96,7 +116,14 @@ class OfflineAuthority:
             require(prompt_id in prompt_ids, f"D_q unknown prompt {prompt_id}")
             require(source not in dq[prompt_id], f"D_q duplicate relation {prompt_id}/{source}")
             dq[prompt_id][source] = row
-        authority = cls(runner, labels, dependencies, exposures, dict(dq))
+        cue_sensitivity_by_prompt = _unique_by_prompt(cue_sensitivity_rows, "cue sensitivity ledger")
+        require(len(source_equivalence_edges) == 25, "expected exactly 25 source-equivalence edges")
+        require(len(cue_sensitivity_by_prompt) == 41, "expected exactly 41 cue-sensitivity prompts")
+        require(len(prompt_dependency_edges) == 3, "expected exactly 3 prompt-dependency edges")
+        authority = cls(
+            runner, labels, dependencies, exposures, dict(dq),
+            source_equivalence_edges, cue_sensitivity_by_prompt, prompt_dependency_edges,
+        )
         authority.validate()
         return authority
 
@@ -138,12 +165,104 @@ class OfflineAuthority:
             for source, dq_row in self.dq_by_prompt.get(prompt_id, {}).items():
                 require(source in judged and source not in acceptable, f"D_q must be a subset of J_q minus A_q: {prompt_id}/{source}")
                 require(dq_row["final_adequacy"] == judged[source], f"D_q disposition drift: {prompt_id}/{source}")
+        _validate_source_equivalence_edges(self.source_equivalence_edges, sources)
+        for prompt_id, row in self.cue_sensitivity_by_prompt.items():
+            require(prompt_id in self.runner.prompts, f"cue ledger unknown prompt: {prompt_id}")
+            require(row["schema_version"] == "rq2b-v7-phase8-cue-sensitivity-ledger-v1", f"cue ledger schema drift: {prompt_id}")
+            require(row["prompt_sha256"] == self.runner.prompts[prompt_id]["prompt_sha256"], f"cue prompt hash drift: {prompt_id}")
+            require(row["final_cue_decision"] == "AVOIDABLE_IDENTITY_CUE", f"cue disposition drift: {prompt_id}")
+            require(row["analysis_disposition"] == "EXCLUDE_PRIMARY_INFERENTIAL_INCLUDE_SEPARATE_SENSITIVITY", f"cue analysis disposition drift: {prompt_id}")
+            require(row["frozen_prompt_preserved"] is True, f"cue prompt was not preserved: {prompt_id}")
+            require(row["primary_inferential_included"] is False and row["sensitivity_included"] is True, f"cue inclusion flags drift: {prompt_id}")
+        _validate_prompt_dependency_edges(self.prompt_dependency_edges, self.runner.prompts, self.dependencies)
+
+    def effective_sets(self, prompt_id: str) -> tuple[set[str], dict[str, str], dict[str, dict[str, Any]], str]:
+        """Return prospective scoring sets without mutating the frozen label rows."""
+        label = self.labels[prompt_id]
+        frozen_acceptable = set(label["acceptable_set_source_sha256"])
+        acceptable = set(frozen_acceptable)
+        components = _source_equivalence_components(self.source_equivalence_edges)
+        for source in frozen_acceptable:
+            acceptable.update(components.get(source, {source}))
+        judged = {
+            item["candidate_source_sha256"]: item["adequacy"]
+            for item in label["judged_candidate_dispositions"]
+        }
+        for source in acceptable - frozen_acceptable:
+            judged[source] = "FULLY_ACCEPTABLE_EQUIVALENT_SOURCE"
+        dq = {
+            source: row for source, row in self.dq_by_prompt.get(prompt_id, {}).items()
+            if source not in acceptable
+        }
+        effective_label_type = "STRICT" if len(acceptable) == 1 else "ACCEPTABLE_SET"
+        return acceptable, judged, dq, effective_label_type
 
 
 def _unique_by_prompt(rows: list[dict[str, Any]], name: str) -> dict[str, dict[str, Any]]:
     output = {str(row["prompt_id"]): row for row in rows}
     require(len(output) == len(rows), f"duplicate prompt in {name}")
     return output
+
+
+def _source_equivalence_components(edges: list[dict[str, Any]]) -> dict[str, set[str]]:
+    parent: dict[str, str] = {}
+
+    def find(source: str) -> str:
+        parent.setdefault(source, source)
+        if parent[source] != source:
+            parent[source] = find(parent[source])
+        return parent[source]
+
+    def union(left: str, right: str) -> None:
+        left_root, right_root = find(left), find(right)
+        if left_root != right_root:
+            parent[right_root] = left_root
+
+    for edge in edges:
+        members = [str(member["source_sha256"]) for member in edge["members"]]
+        for member in members[1:]:
+            union(members[0], member)
+    components: dict[str, set[str]] = defaultdict(set)
+    for source in parent:
+        components[find(source)].add(source)
+    return {source: set(components[find(source)]) for source in parent}
+
+
+def _validate_source_equivalence_edges(edges: list[dict[str, Any]], sources: set[str]) -> None:
+    edge_ids: set[str] = set()
+    for edge in edges:
+        edge_id = str(edge["edge_id"])
+        require(edge_id not in edge_ids, f"duplicate source-equivalence edge: {edge_id}")
+        edge_ids.add(edge_id)
+        require(edge["schema_version"] == "rq2b-v7-phase8-source-equivalence-edge-v1", f"source-equivalence schema drift: {edge_id}")
+        require(edge["equivalence_scope"] == "acceptable_source_equivalence_and_offline_scoring", f"source-equivalence scope drift: {edge_id}")
+        require(edge["relation"] in {"ALIAS_OR_FORK", "TRANSFORMED_COPY"}, f"invalid source equivalence relation: {edge_id}")
+        require(edge["symmetric"] is True and edge["library_mutation"] is False, f"source-equivalence policy drift: {edge_id}")
+        members = [str(member["source_sha256"]) for member in edge["members"]]
+        require(len(members) >= 2 and len(set(members)) == len(members), f"invalid source-equivalence members: {edge_id}")
+        require(set(members) <= sources, f"source-equivalence member outside frozen library: {edge_id}")
+
+
+def _validate_prompt_dependency_edges(
+    edges: list[dict[str, Any]], prompts: dict[str, dict[str, Any]], dependencies: dict[str, dict[str, Any]],
+) -> None:
+    edge_ids: set[str] = set()
+    for edge in edges:
+        edge_id = str(edge["edge_id"])
+        require(edge_id not in edge_ids, f"duplicate prompt-dependency edge: {edge_id}")
+        edge_ids.add(edge_id)
+        require(edge["schema_version"] == "rq2b-v7-phase8-prompt-dependency-edge-v1", f"prompt-dependency schema drift: {edge_id}")
+        require(edge["dependency_scope"] == "dependency_clustered_inference", f"prompt-dependency scope drift: {edge_id}")
+        require(edge["relation"] == "TRANSFORMED_DUPLICATE", f"prompt-dependency relation drift: {edge_id}")
+        require(edge["symmetric"] is True and edge["prompt_mutation"] is False, f"prompt-dependency policy drift: {edge_id}")
+        member_ids = [str(member["prompt_id"]) for member in edge["members"]]
+        require(len(member_ids) >= 2 and len(set(member_ids)) == len(member_ids), f"invalid prompt-dependency members: {edge_id}")
+        for member in edge["members"]:
+            prompt_id = str(member["prompt_id"])
+            require(prompt_id in prompts, f"prompt-dependency member outside frozen scope: {edge_id}/{prompt_id}")
+            require(member["prompt_sha256"] == prompts[prompt_id]["prompt_sha256"], f"prompt-dependency hash drift: {edge_id}/{prompt_id}")
+        groups = {dependencies[prompt_id]["dependency_group"] for prompt_id in member_ids}
+        require(len(groups) == 1, f"prompt-dependency edge crosses frozen components: {edge_id}")
 
 
 def _first_reciprocal_rank(ranking: list[str], acceptable: set[str]) -> float:
@@ -164,9 +283,8 @@ def score_rows(
         label = authority.labels[prompt_id]
         dependency = authority.dependencies[prompt_id]
         exposure = authority.exposures[prompt_id]
-        acceptable = set(label["acceptable_set_source_sha256"])
-        judged = {item["candidate_source_sha256"]: item["adequacy"] for item in label["judged_candidate_dispositions"]}
-        dq = authority.dq_by_prompt.get(prompt_id, {})
+        frozen_acceptable = set(label["acceptable_set_source_sha256"])
+        acceptable, judged, dq, effective_label_type = authority.effective_sets(prompt_id)
         if row["schema_version"].endswith("b1-runner-output-v1"):
             candidate_ranking = [item["source_sha256"] for item in row["ranked_candidates"][:20]]
             final_ranking = candidate_ranking
@@ -192,7 +310,12 @@ def score_rows(
             "reporting_stratum": label["reporting_stratum"],
             "dependency_group": dependency["dependency_group"],
             "analysis_disposition": exposure["analysis_disposition"],
-            "final_label_type": label["final_label_type"],
+            "identity_cue_sensitivity": prompt_id in authority.cue_sensitivity_by_prompt,
+            "frozen_label_type": label["final_label_type"],
+            "final_label_type": effective_label_type,
+            "acceptable_set_size_frozen": len(frozen_acceptable),
+            "acceptable_set_size_effective": len(acceptable),
+            "source_equivalence_expansion_count": len(acceptable - frozen_acceptable),
             "known_a_hit_at_1": known_hit,
             "candidate_hit_at_20": candidate_hit,
             "set_recall_at_20": len(set(candidate_ranking) & acceptable) / len(acceptable),
@@ -378,7 +501,7 @@ def primary_comparisons(
 ) -> dict[str, Any]:
     by_condition: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in scored_rows:
-        if row["lane_id"] == "B_NC_FULL_UNION":
+        if row["lane_id"] == "B_NC_FULL_UNION" and not row["identity_cue_sensitivity"]:
             by_condition[row["condition_id"]].append(row)
     output: dict[str, Any] = {}
     for comparison_id, (left_id, right_id, metric, test) in COMPARISONS.items():
@@ -404,7 +527,7 @@ def primary_comparisons(
             "left_condition": left_id,
             "right_condition": right_id,
             "metric": metric,
-            "scope": "B_NC_FULL_UNION",
+            "scope": "B_NC_FULL_UNION_EXCLUDING_IDENTITY_CUE_SENSITIVITY",
             "prompts": prompt_count,
             "dependency_groups": len(groups),
             "prompt_weighted_left_minus_right": estimate,
@@ -455,7 +578,7 @@ def analyse(
             source = authority.runner.b2_conditions[row["condition_id"]]["persisted_candidate_source"]
             require(row["candidate_hit_at_20"] == candidate_hit_by_b1[(source, row["prompt_id"])], f"B2 CandidateHit changed: {row['condition_id']}/{row['prompt_id']}")
     return {
-        "schema_version": "rq2b-v7-offline-analysis-v1",
+        "schema_version": "rq2b-v7-offline-analysis-v2",
         "status": "PASS_COMPLETE_OFFLINE_SCORING_AND_PRESPECIFIED_ANALYSIS",
         "counts": {
             "queries": len(authority.runner.prompts),
@@ -467,7 +590,37 @@ def analyse(
             "c2_alias_input_rows": 0,
         },
         "aliases": ALIASES,
-        "authority_hashes": {str(path.relative_to(ROOT)): sha for path, sha in {**EXPECTED_OFFLINE_SHA256}.items()},
+        "authority_hashes": {
+            str(path.relative_to(ROOT)): sha
+            for path, sha in {**EXPECTED_OFFLINE_SHA256, **EXPECTED_QUALITY_OVERLAY_SHA256}.items()
+        },
+        "quality_overlay_summary": {
+            "source_equivalence_edges": len(authority.source_equivalence_edges),
+            "source_equivalence_components": len({
+                frozenset(component)
+                for component in _source_equivalence_components(authority.source_equivalence_edges).values()
+            }),
+            "prompts_with_expanded_acceptable_sets": len({
+                row["prompt_id"] for row in scored if row["source_equivalence_expansion_count"] > 0
+            }),
+            "cue_sensitivity_prompts": len(authority.cue_sensitivity_by_prompt),
+            "all_library_no_identity_cue_prompts": len(authority.runner.prompts) - len(authority.cue_sensitivity_by_prompt),
+            "nc_primary_prompts": sum(
+                runtime_prompt_id not in authority.cue_sensitivity_by_prompt
+                and authority.labels[runtime_prompt_id]["lane_id"] == "B_NC_FULL_UNION"
+                for runtime_prompt_id in authority.runner.prompts
+            ),
+            "parent_delta_no_identity_cue_prompts": sum(
+                runtime_prompt_id not in authority.cue_sensitivity_by_prompt
+                and authority.labels[runtime_prompt_id]["lane_id"] == "A_PARENT_DELTA"
+                for runtime_prompt_id in authority.runner.prompts
+            ),
+            "prompt_dependency_edges": len(authority.prompt_dependency_edges),
+            "boundary": (
+                "P1-P5 retain the approved NC primary estimand. The all-library no-cue scope is descriptive; "
+                "identity-cue prompts are sensitivity-only, and source equivalence is an offline credit overlay."
+            ),
+        },
         "exposure_summary": {
             "analysis_disposition": dict(sorted(Counter(row["analysis_disposition"] for row in authority.exposures.values()).items())),
             "prompt_level_exposure": dict(sorted(Counter(row["prompt_level_exposure"] for row in authority.exposures.values()).items())),

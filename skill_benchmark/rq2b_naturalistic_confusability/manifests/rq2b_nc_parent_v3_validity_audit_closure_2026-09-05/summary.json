@@ -1,0 +1,26 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_parent_v3_validity_audit_2026-09-05/internal_historical_join.jsonl": "9f342fb41c37da16aadadde3a77a1e1a1d0734bf038ae9d96e2b7790f6881966",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_parent_v3_validity_audit_2026-09-05/reviewer_a_packet.jsonl": "bf8406749ebb17bc3bb58432b01f354fc7803700ab4b6bd9eb5e3944750ae233",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_parent_v3_validity_audit_2026-09-05/reviewer_b_packet.jsonl": "a0d3451bcb9c84efd6406686a94b9da5a25d46fc7c13dfced62aa175415d6ff1",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_parent_v3_validity_audit_2026-09-05/summary.json": "c2ae00afa1ca3c5eb9b1b233e1437c62bed6f45caf2666fbe0f023685252d0ea",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835"
+  },
+  "claim_boundary": "This closure excludes nine affected historical V3 prompts from the future parent validity pool. It does not alter V3, reopen prompt construction, decide a K=6 acceptable set, or produce a retrieval metric.",
+  "counts": {
+    "affected_parent_prompt_ids": 9,
+    "agreement_cases": 2,
+    "audit_cases": 8,
+    "blocked_parent_prompt_ids": 0,
+    "coordinator_resolved_cases": 6,
+    "excluded_parent_prompt_ids": 9,
+    "pass_parent_prompt_ids": 0
+  },
+  "outputs": {
+    "final_parent_v3_validity_dispositions.jsonl": "aa7b534113a479bfbeae05f854a6a5e287cc212ac5cb1dcf9d2831f74292b1e1",
+    "reviewer_a_verbatim_decisions.jsonl": "376d7853cd546b209f0ea1bf71cd6956a75585416fcce63a3d09abfb49887510",
+    "reviewer_b_verbatim_decisions.jsonl": "63082450e31d5238b762d5f4afcefc3eaf410403ce0ddc5c0b67419ac6c151be",
+    "sealed_coordinator_decisions.jsonl": "0dcedfae3c56732b508b7ec8b6908790044afe69802f558c3c08b98f49e6761f"
+  },
+  "status": "PASSED_PARENT_V3_VALIDITY_AUDIT_ALL_AFFECTED_PROMPTS_EXCLUDED_NO_V3_REWRITE"
+}

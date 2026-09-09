@@ -1,0 +1,66 @@
+{
+  "schema_version": "rq2b-v7-phase8-offline-analysis-overlay-integrity-v1",
+  "status": "PASS_PRE_OUTCOME_PROSPECTIVE_ANALYSIS_AMENDMENT",
+  "scientific_results_observed": false,
+  "artifacts": {
+    "README.md": {
+      "sha256": "ac07db367cf814160ea3a9921037e2cbe480d080ac3d4801adea4d2be286ceed"
+    },
+    "analysis_overlay_contract.json": {
+      "sha256": "3451c905f669c56aba88ba16c950f153e05661751413202e73c1f4dc31b758f1"
+    },
+    "skill_benchmark/scripts/analyse_rq2b_v7_offline_outputs.py": {
+      "sha256": "e39ede7fa2277298b438feab19c506c84536f9cd2bd3b09f377f1846f674e0f8"
+    },
+    "skill_benchmark/scripts/test_rq2b_v7_offline_analysis_contract.py": {
+      "sha256": "d97c50dbf01f81cc05701d6ea735414bd31dbaa019273e5addcc57a1623d271b"
+    }
+  },
+  "quality_gate_bindings": {
+    "relation_disposition_integrity": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/integrity_report.json",
+      "sha256": "018bb47246d9c8c632ce6d038074ead690754b2da6c0f4553b3f01b391823040"
+    },
+    "quality_closure_integrity": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_closure_2026_09_09_v1/integrity_report.json",
+      "sha256": "9f9605054c7fdea804496a912455da804168da30b5c080ae26e59250ba4c1b23"
+    }
+  },
+  "assertions": {
+    "source_equivalence_edges_hash_bound": true,
+    "source_equivalence_transitive_closure_enabled": true,
+    "newly_acceptable_sources_removed_from_effective_dq_and_unjudged": true,
+    "cue_sensitivity_prompts_hash_bound": true,
+    "approved_nc_primary_estimand_preserved": true,
+    "all_library_no_cue_scope_is_descriptive_only": true,
+    "prompt_dependency_edges_hash_bound": true,
+    "prompt_dependency_edges_stay_within_frozen_component": true,
+    "frozen_inputs_unchanged": true
+  },
+  "counts": {
+    "sources": 3798,
+    "prompts": 1077,
+    "source_equivalence_edges": 25,
+    "source_equivalence_components": 25,
+    "prompts_with_expanded_acceptable_sets": 8,
+    "prompt_dependency_edges": 3,
+    "identity_cue_sensitivity_prompts": 41,
+    "all_library_no_identity_cue_prompts": 1036,
+    "nc_primary_prompts": 714,
+    "nc_identity_cue_prompts": 0,
+    "parent_delta_no_identity_cue_prompts": 322
+  },
+  "verification": {
+    "unit_tests": "PASS_9_OF_9",
+    "actual_authority_load": "PASS",
+    "python_compile": "PASS",
+    "git_diff_check": "PASS",
+    "commands": [
+      "python3 -B skill_benchmark/scripts/test_rq2b_v7_offline_analysis_contract.py",
+      "PYTHONPATH=skill_benchmark/scripts python3 -B -c 'from analyse_rq2b_v7_offline_outputs import OfflineAuthority; OfflineAuthority.load(); print(\"PASS\")'",
+      "python3 -B -m py_compile skill_benchmark/scripts/analyse_rq2b_v7_offline_outputs.py skill_benchmark/scripts/test_rq2b_v7_offline_analysis_contract.py",
+      "git diff --check"
+    ]
+  },
+  "boundary": "Prospective offline scorer overlay only; no selector output, retrieval result, metric, provider call, embedding, reranking, label mutation, source mutation, or prompt mutation."
+}

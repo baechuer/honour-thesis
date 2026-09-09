@@ -1,0 +1,71 @@
+{
+  "assertions": {
+    "disagreements_or_unclear_require_sealed_coordinator": true,
+    "each_packet_has_exactly_two_distinct_reviewers": true,
+    "reviewers_must_not_read_other_returns": true,
+    "target_blind_source_packets_preserved": true
+  },
+  "bindings": {
+    "builder_sha256": "f74dbc00cb39f79833bcc48fa55ea7544b19925876204184168d24f11411209f",
+    "reviewer_return_schema_sha256": "d639fc02dae7aace52254533b1596f2a872212b21612b14881d8da5814a26723",
+    "source_packet_files": {
+      "cue_review_packets.jsonl": {
+        "rows": 129,
+        "sha256": "d16d255fd49ff07833ffad1918afdd2ffa76b0218fe682a702f1b4eb28ffdb94"
+      },
+      "mixed_lane_split_review_packets.jsonl": {
+        "rows": 6,
+        "sha256": "deb28633c40e01090baea1c84735695a211e424714879ef69865795f3e947ffc"
+      },
+      "prompt_relation_review_packets.jsonl": {
+        "rows": 51,
+        "sha256": "6cc051b58f5ffd8e5013f6aff1adc11a3b32c95ef512546bfa456739b92df8cd"
+      },
+      "source_relation_review_packets.jsonl": {
+        "rows": 55,
+        "sha256": "fd7bf3b85fc727990881d35a6995806924b722ee1deb6036011cab02dd2b2107"
+      }
+    }
+  },
+  "boundary": "Dispatch contains source/prompt-only quality packets and no labels, targets, acceptable sets, retrieval outputs, metrics, or execution authority.",
+  "counts": {
+    "pair_counts": {
+      "1+2": 81,
+      "1+3": 80,
+      "2+3": 80
+    },
+    "review_assignments": 482,
+    "reviewer_groups": {
+      "1": 161,
+      "2": 161,
+      "3": 160
+    },
+    "slots": {
+      "1:001": 24,
+      "1:002": 24,
+      "1:003": 24,
+      "1:004": 24,
+      "1:005": 24,
+      "1:006": 24,
+      "1:007": 17,
+      "2:001": 24,
+      "2:002": 24,
+      "2:003": 24,
+      "2:004": 24,
+      "2:005": 24,
+      "2:006": 24,
+      "2:007": 17,
+      "3:001": 24,
+      "3:002": 24,
+      "3:003": 24,
+      "3:004": 24,
+      "3:005": 24,
+      "3:006": 24,
+      "3:007": 16
+    },
+    "unique_packets": 241
+  },
+  "formal_execution_ready": false,
+  "schema_version": "rq2b-v7-phase8-quality-review-dispatch-integrity-v1",
+  "state": "FROZEN_PENDING_TWO_INDEPENDENT_TARGET_BLIND_RETURNS_PER_PACKET"
+}

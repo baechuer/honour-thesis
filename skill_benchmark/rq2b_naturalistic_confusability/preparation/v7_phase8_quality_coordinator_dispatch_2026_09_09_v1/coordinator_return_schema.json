@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "gate": {
+      "enum": [
+        "split",
+        "semantic_near_copy",
+        "cue",
+        "source_relation"
+      ]
+    },
+    "packet_id": {
+      "pattern": "^P8-(?:SPLIT-MIXED|PRREL|CUE|SRCREL)-[0-9]{3,}$",
+      "type": "string"
+    },
+    "packet_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "rq2b-v7-phase8-quality-coordinator-return-v1"
+    },
+    "source_anchors": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "packet_id",
+    "packet_sha256",
+    "gate",
+    "decision",
+    "source_anchors",
+    "rationale"
+  ],
+  "type": "object"
+}

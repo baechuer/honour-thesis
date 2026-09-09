@@ -1,0 +1,116 @@
+{
+  "artifacts": {
+    "blinded_reviewer_packet.jsonl": {
+      "rows": 120,
+      "sha256": "7052e02ef20a42dd22b9eddbfabffa0a3fcbba517040b4c1cdabbfba450b931d"
+    },
+    "calibration_answer_key_do_not_give_reviewer.jsonl": {
+      "rows": 8,
+      "sha256": "4e038989325738b6d916ba224d1d0ca7268a5556d78070f0393b62a3c1749328"
+    },
+    "calibration_input.jsonl": {
+      "rows": 8,
+      "sha256": "600dd5568770696447545c5123da6e754bf53b52fd3a8ff70f1254493849753e"
+    },
+    "review_slots/qa_slot_01.jsonl": {
+      "rows": 20,
+      "sha256": "62be6d168106a07bf149e61b77aa8f1faa8bbb30ed069449dbf7cb00bd67bff8"
+    },
+    "review_slots/qa_slot_02.jsonl": {
+      "rows": 20,
+      "sha256": "adbe083621374a4d46190f91435755fd6e83f48acfa315346e6a10d8cbc59b23"
+    },
+    "review_slots/qa_slot_03.jsonl": {
+      "rows": 20,
+      "sha256": "e96ec756b530741e3db14e57582141f5d395d6b19e70a6f697035f1d053ed65e"
+    },
+    "review_slots/qa_slot_04.jsonl": {
+      "rows": 20,
+      "sha256": "7957f5743041d53c54512e92265408d6333b7f84e276373251757525d003f530"
+    },
+    "review_slots/qa_slot_05.jsonl": {
+      "rows": 20,
+      "sha256": "06c418fb1d2096d472e253b55bc733975757a7a5282e80354b2f6cf64e966186"
+    },
+    "review_slots/qa_slot_06.jsonl": {
+      "rows": 20,
+      "sha256": "7d7c5e44edc09576f624217c881405be6648ed46474b0fa40d963002ebe73c4b"
+    },
+    "reviewer_guidance.md": {
+      "rows": 23,
+      "sha256": "d26049274902cd91e51fc4195e09875b6908f37906d0c56fb06b5422b88634d0"
+    },
+    "reviewer_return_schema.json": {
+      "rows": 90,
+      "sha256": "941fc561c228f42c6d8633399a9cbbacf772cf1c82c2ecf24796434911d6c951"
+    },
+    "sampling_key_do_not_give_reviewer.jsonl": {
+      "rows": 120,
+      "sha256": "3814b3817dac80c666ecdf584d298d6f2160ccd91af4028a194779d87a60d411"
+    }
+  },
+  "bindings": {
+    "assignment_manifest_sha256": "da17924c70ac1de238bd0229acecb1ca2f53155a1f6b901baf3b94ede57144ce",
+    "builder_sha256": "dd238a600ac15c1acb8c37edf469246ecacfc70657cca4700b78253f05c71ded",
+    "failed_qa_v4_final_report_sha256": "16498ac083bab73b611a9f661818406ea73372f15e0b16dc4f6fe8872b0e0cad",
+    "merged_manifest_sha256": "ae17c0572fa6d3152853772a4ed9e3397703e683fd48fe5c2284bdde6c67871a",
+    "previous_qa_packages": [
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_blinded_qa_2026_09_09_v2/manifest.json",
+        "sample_rows": 120,
+        "sha256": "e3259941cf7a904dd03edb50d989cca82abd5e6ca8c9b0d66fe621b2694fef59"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_blinded_qa_2026_09_09_v4/manifest.json",
+        "sample_rows": 120,
+        "sha256": "181b4447f3630f9042c285168b3877f59f5cf3388b78735952dc48d9f598820e"
+      }
+    ]
+  },
+  "boundary": "Source-only extraction fidelity. No query, label, acceptable set, retrieval result, metric, or provider output is visible to reviewers.",
+  "calibration_rows": 8,
+  "counts": {
+    "extractor_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    },
+    "length_quartile": {
+      "Q1": 30,
+      "Q2": 30,
+      "Q3": 30,
+      "Q4": 30
+    },
+    "present_field_rows": {
+      "constraints_boundaries": 59,
+      "dependencies_resources": 91,
+      "input_preconditions": 93,
+      "output_artifacts": 99,
+      "success_criteria": 34,
+      "use_conditions": 109,
+      "workflow_steps": 116
+    },
+    "reviewer_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    }
+  },
+  "cross_assignment": "Every sampled row is reviewed by a group different from its extractor group; each reviewer group receives 40 rows.",
+  "formal_execution_ready": false,
+  "pass_rule": {
+    "calibration": "each reviewer group exactly matches all 8 hidden answers",
+    "critical_error_rows": 0,
+    "failure_action": "repair the full affected class and draw another fresh versioned sample; never patch only sampled rows",
+    "field_stratum_rule": "for each field represented in at least 20 rows, major error rate must be <=0.05",
+    "maximum_major_error_rate": 0.05,
+    "maximum_major_error_rows": 6
+  },
+  "previous_samples_excluded": 240,
+  "review_slots": 6,
+  "rows_per_slot": 20,
+  "sample_size": 120,
+  "sampling_seed": "rq2b-v7-i3-full-corpus-v4.1.4-fresh-qa-20260909-02",
+  "schema_version": "rq2b-v7-i3-full-corpus-v4.1.4-blinded-qa-v1",
+  "state": "FROZEN_PENDING_THREE_FRESH_CROSS_ASSIGNED_REVIEWER_GROUPS"
+}

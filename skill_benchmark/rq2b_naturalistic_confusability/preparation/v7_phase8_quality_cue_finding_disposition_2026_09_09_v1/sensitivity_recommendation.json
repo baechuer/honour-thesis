@@ -1,0 +1,13 @@
+{
+  "schema_version": "rq2b-v7-phase8-quality-cue-sensitivity-recommendation-v1",
+  "population": {
+    "frozen_prompt_count": 1077,
+    "avoidable_identity_cue_prompt_count": 41
+  },
+  "recommendation": "RETAIN_FROZEN_EXCLUDE_PRIMARY_INCLUDE_SENSITIVITY_ONLY",
+  "primary_inference": "Exclude all 41 final AVOIDABLE_IDENTITY_CUE prompts from primary inferential summaries.",
+  "sensitivity_analysis": "Retain the 41 prompts unchanged as one clearly preregistered sensitivity-only stratum and report its results separately from the primary set.",
+  "frozen_prompt_policy": "Do not rewrite, replace, or silently relabel any of the frozen 1,077 prompts.",
+  "rationale": "Avoidable identity wording can change routing difficulty and therefore threatens comparability in primary inference. Preserving the frozen prompts maintains provenance, while a separately declared sensitivity stratum makes the effect inspectable without contaminating the primary estimand.",
+  "claims_boundary": "This is a prospective analysis-design recommendation and does not create a quality pass or an experiment result."
+}

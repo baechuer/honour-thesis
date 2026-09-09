@@ -1,0 +1,50 @@
+{
+  "assertions": {
+    "all_prompt_relation_packets_final": true,
+    "all_source_relation_packets_final": true,
+    "no_prompt_or_source_mutation": true,
+    "three_prompt_duplicates_dependency_bound": true,
+    "twenty_five_source_equivalences_bound": true
+  },
+  "bindings": {
+    "final_quality_decisions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/final_quality_decisions.jsonl",
+      "sha256": "660bbf861b3337ab888f37ec4a64ebfeea390edb424ac23d260243b4b5d853fc"
+    },
+    "final_source_relations": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/final_source_relations.jsonl",
+      "sha256": "ce4d4601affd5d401cc85a0446303d36d699511848ad09e24eae25a954316b54"
+    },
+    "prompt_dependency_edges": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/prompt_dependency_edges.jsonl",
+      "sha256": "551201029e9a681ecc707a5357503c008c38c5e0a4220e86e4678e8775c01308"
+    },
+    "prompt_relation_packets": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_docket_2026_09_09_v3/prompt_relation_review_packets.jsonl",
+      "sha256": "6cc051b58f5ffd8e5013f6aff1adc11a3b32c95ef512546bfa456739b92df8cd"
+    },
+    "source_equivalence_edges": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/source_equivalence_edges.jsonl",
+      "sha256": "c29e5868a39c943e3821a2408a6e8d6f2d3ef6cd2a73cb227fa05325e61ccb4f"
+    },
+    "source_relation_packets": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_docket_2026_09_09_v3/source_relation_review_packets.jsonl",
+      "sha256": "fd7bf3b85fc727990881d35a6995806924b722ee1deb6036011cab02dd2b2107"
+    }
+  },
+  "boundary": "Near-copy findings become only pre-outcome dependency/equivalence overlays. They are not retrieval features and do not alter prompts, sources, labels, or outcomes.",
+  "counts": {
+    "prompt_dependency_edges": 3,
+    "prompt_related_but_distinct": 48,
+    "prompt_transformed_duplicate": 3,
+    "reviewed_prompt_relation_packets": 51,
+    "reviewed_source_relation_packets": 55,
+    "source_equivalence_edges": 25
+  },
+  "gate": "semantic_near_copy",
+  "prompt_manifest_sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+  "schema_version": "rq2b-v7-phase8-final-semantic-adjudication-receipt-v1",
+  "source_union_sha256": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b",
+  "status": "PASS_FINAL_ADJUDICATION_COMPLETE",
+  "unresolved_findings": 0
+}

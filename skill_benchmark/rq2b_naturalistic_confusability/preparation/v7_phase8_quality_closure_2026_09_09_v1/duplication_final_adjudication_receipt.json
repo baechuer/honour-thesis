@@ -1,0 +1,44 @@
+{
+  "assertions": {
+    "all_copy_or_alias_relations_have_equivalence_edges": true,
+    "all_source_relation_packets_final": true,
+    "no_source_mutation": true,
+    "source_sha_and_paths_replayed": true
+  },
+  "bindings": {
+    "final_quality_decisions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/final_quality_decisions.jsonl",
+      "sha256": "660bbf861b3337ab888f37ec4a64ebfeea390edb424ac23d260243b4b5d853fc"
+    },
+    "final_source_relations": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/final_source_relations.jsonl",
+      "sha256": "ce4d4601affd5d401cc85a0446303d36d699511848ad09e24eae25a954316b54"
+    },
+    "relation_integrity": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/integrity_report.json",
+      "sha256": "018bb47246d9c8c632ce6d038074ead690754b2da6c0f4553b3f01b391823040"
+    },
+    "source_equivalence_edges": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/source_equivalence_edges.jsonl",
+      "sha256": "c29e5868a39c943e3821a2408a6e8d6f2d3ef6cd2a73cb227fa05325e61ccb4f"
+    },
+    "source_relation_packets": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_docket_2026_09_09_v3/source_relation_review_packets.jsonl",
+      "sha256": "fd7bf3b85fc727990881d35a6995806924b722ee1deb6036011cab02dd2b2107"
+    }
+  },
+  "boundary": "The 25 edges are a prospective acceptable-source/offline-scoring equivalence overlay; all 3,798 source files remain separate and byte-frozen.",
+  "counts": {
+    "alias_or_fork": 8,
+    "related_but_distinct": 30,
+    "reviewed_source_relation_packets": 55,
+    "source_equivalence_edges": 25,
+    "transformed_copy": 17
+  },
+  "gate": "duplication",
+  "prompt_manifest_sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+  "schema_version": "rq2b-v7-phase8-final-semantic-adjudication-receipt-v1",
+  "source_union_sha256": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b",
+  "status": "PASS_FINAL_ADJUDICATION_COMPLETE",
+  "unresolved_findings": 0
+}

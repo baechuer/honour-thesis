@@ -1,0 +1,29 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_002_2026-09-05/internal_target_join.jsonl": "c5ce7de5e2c1e078b38380aed288a170b12d43f7241cf6f83382c7297e0b99e0",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_002_2026-09-05/reviewer_a_packet.jsonl": "07b990d0ecce53c71fd3f7135897b00e5c527e5a8735afe83787e6ed452effa5",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_002_2026-09-05/reviewer_b_packet.jsonl": "1d7d7eb739665b44a6be9494f87bc5198713c3a8ef67351993aa5a0452f92699",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_002_2026-09-05/summary.json": "2cc83023c42d6e726e960d444050da103bd6dd267b0eea38098dd74a8378cde5",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_source_union_preflight_300plus_2026-09-05_v2/nc_prompt_manifest.jsonl": "c400875c5b90a7a4028a40f33df54ec0d9203f401d4f11e5460430b598d7f2e3",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835"
+  },
+  "claim_boundary": "All three fresh prompts were cue-safe after review closure and both independent reviewers selected the intended source as most suitable. The two affected families are reinstated without another rewrite. This produces no acceptable-set label, retrieval result or metric.",
+  "counts": {
+    "affected_families": 2,
+    "coordinator_resolved_cue_disagreements": 2,
+    "cue_safe_after_resolution": 3,
+    "deferred_local_families": 0,
+    "fresh_packets": 3,
+    "reinstated_local_families": 2,
+    "second_remediations": 0,
+    "target_most_suitable_after_remediation": 3
+  },
+  "outputs": {
+    "final_remediation_dispositions.jsonl": "6ff36fa88bd7d305dd90a8518e692ebbce19de74121afc2eec2af4d6b346e193",
+    "reviewer_a_return.jsonl": "3d29d3aefddfbe9c575157c8c86873eb76e30156619d19a2ed52c326a53be0ce",
+    "reviewer_b_return.jsonl": "d31a274f6d011aec5761530970b9c256da0cc530fc072673090201057c7d9b36",
+    "sealed_cue_coordinator_return.jsonl": "c216488a0d97ce6a4daf9fb5e8e8813ab8eecea8dd6f84c3187a57d2d3ee960c",
+    "unblinded_target_reconciliation.jsonl": "e5f576bde3a90b774f1d4c1ef0f2c258c18dfc4a9355e57d88e62244a4b5d77b"
+  },
+  "status": "CLOSED_ONE_TIME_REMEDIATION_TWO_ADDITIONAL_LOCAL_FAMILIES_REINSTATED"
+}

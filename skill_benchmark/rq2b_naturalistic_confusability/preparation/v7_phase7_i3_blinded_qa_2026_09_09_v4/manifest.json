@@ -1,0 +1,104 @@
+{
+  "artifacts": {
+    "blinded_reviewer_packet.jsonl": {
+      "rows": 120,
+      "sha256": "018fe9aea50c5fde8f4eb749aab7d37d0face8aa735e0858bdf78fc7468db656"
+    },
+    "calibration_answer_key_do_not_give_reviewer.jsonl": {
+      "rows": 8,
+      "sha256": "4e038989325738b6d916ba224d1d0ca7268a5556d78070f0393b62a3c1749328"
+    },
+    "calibration_input.jsonl": {
+      "rows": 8,
+      "sha256": "600dd5568770696447545c5123da6e754bf53b52fd3a8ff70f1254493849753e"
+    },
+    "review_slots/qa_slot_01.jsonl": {
+      "rows": 20,
+      "sha256": "9c1e3a8029773648f2993d8329e14e97f6620b232004abf524142ae5ef09e240"
+    },
+    "review_slots/qa_slot_02.jsonl": {
+      "rows": 20,
+      "sha256": "a85b4f977c56f64632acb370e0dcc432f8397c952028f02bf2c465a6b9e3696e"
+    },
+    "review_slots/qa_slot_03.jsonl": {
+      "rows": 20,
+      "sha256": "823044e84727af33ee20a9b13ae441e362ed7fcbf9403228f6b600e8c7d604a9"
+    },
+    "review_slots/qa_slot_04.jsonl": {
+      "rows": 20,
+      "sha256": "793e8810ed7c996043df9c44f6cb806d48d977f833504de80c01bb37b197a61b"
+    },
+    "review_slots/qa_slot_05.jsonl": {
+      "rows": 20,
+      "sha256": "bb553cab8c6fd5b06448198fe0462e38b46ba60d2214dde8cbd843a4a8f26eb8"
+    },
+    "review_slots/qa_slot_06.jsonl": {
+      "rows": 20,
+      "sha256": "91fbd63606030ca77a7eff31270681968ff20442c7a639e4f36175a6909d9f2e"
+    },
+    "reviewer_guidance.md": {
+      "rows": 23,
+      "sha256": "047684334c4bf4521e1ba49911b81167e14d181629e28ddd6c6ce9a4ec6c9d3d"
+    },
+    "reviewer_return_schema.json": {
+      "rows": 90,
+      "sha256": "941fc561c228f42c6d8633399a9cbbacf772cf1c82c2ecf24796434911d6c951"
+    },
+    "sampling_key_do_not_give_reviewer.jsonl": {
+      "rows": 120,
+      "sha256": "d4c88ad5a6acb9ee7e5a6f7923ad0cfe6ef9c2a4c638c2acf5900b958a93ecb0"
+    }
+  },
+  "bindings": {
+    "assignment_manifest_sha256": "da17924c70ac1de238bd0229acecb1ca2f53155a1f6b901baf3b94ede57144ce",
+    "builder_sha256": "f5fcd006296e8bed3d6881d7bdbacbbc0675dd9bc1687832e8a6da7dcb1d2727",
+    "merged_manifest_sha256": "ed643793388ba227b9502286c14b1c6de602c5bafd89b31fea5ce220ab60f837",
+    "previous_qa_manifest_sha256": "e3259941cf7a904dd03edb50d989cca82abd5e6ca8c9b0d66fe621b2694fef59",
+    "previous_sampling_key_sha256": "d691497f0a73241dd04938f45df9ce868db066311fbf445cd4bd506f1ea4e81f"
+  },
+  "calibration_rows": 8,
+  "counts": {
+    "extractor_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    },
+    "length_quartile": {
+      "Q1": 30,
+      "Q2": 30,
+      "Q3": 30,
+      "Q4": 30
+    },
+    "present_field_rows": {
+      "constraints_boundaries": 82,
+      "dependencies_resources": 86,
+      "input_preconditions": 90,
+      "output_artifacts": 101,
+      "success_criteria": 43,
+      "use_conditions": 90,
+      "workflow_steps": 115
+    },
+    "reviewer_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    }
+  },
+  "cross_assignment": "Every sampled row is reviewed by a group different from its extractor group; each reviewer group receives 40 rows.",
+  "formal_execution_ready": false,
+  "pass_rule": {
+    "calibration": "each reviewer group exactly matches all 8 hidden answers",
+    "critical_error_rows": 0,
+    "failure_action": "repair the full affected class and draw another fresh versioned sample; never patch only sampled rows",
+    "field_stratum_rule": "for each field represented in at least 20 rows, major error rate must be <=0.05",
+    "maximum_major_error_rate": 0.05,
+    "maximum_major_error_rows": 6
+  },
+  "previous_sample_excluded": 120,
+  "review_slots": 6,
+  "rows_per_slot": 20,
+  "sample_size": 120,
+  "sampling_seed": "rq2b-v7-i3-full-corpus-v4.1.3-fresh-qa-20260909-01",
+  "schema_version": "rq2b-v7-i3-full-corpus-v4.1-blinded-qa-v3",
+  "state": "FROZEN_PENDING_THREE_FRESH_CROSS_ASSIGNED_REVIEWER_GROUPS"
+}

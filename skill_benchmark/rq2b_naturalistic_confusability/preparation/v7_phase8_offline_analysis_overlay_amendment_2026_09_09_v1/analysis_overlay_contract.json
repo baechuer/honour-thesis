@@ -1,0 +1,70 @@
+{
+  "schema_version": "rq2b-v7-phase8-offline-analysis-overlay-amendment-v1",
+  "status": "PRE_OUTCOME_PROSPECTIVE_ANALYSIS_AMENDMENT_PASS",
+  "scientific_results_observed": false,
+  "frozen_scope": {
+    "prompts": 1077,
+    "sources": 3798,
+    "prompt_mutation": false,
+    "source_mutation": false,
+    "label_ledger_mutation": false,
+    "dq_ledger_mutation": false
+  },
+  "authority": {
+    "source_equivalence_edges": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/source_equivalence_edges.jsonl",
+      "sha256": "c29e5868a39c943e3821a2408a6e8d6f2d3ef6cd2a73cb227fa05325e61ccb4f",
+      "rows": 25
+    },
+    "prompt_dependency_edges": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_relation_disposition_2026_09_09_v1/prompt_dependency_edges.jsonl",
+      "sha256": "551201029e9a681ecc707a5357503c008c38c5e0a4220e86e4678e8775c01308",
+      "rows": 3
+    },
+    "cue_sensitivity_ledger": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_closure_2026_09_09_v1/cue_sensitivity_ledger.jsonl",
+      "sha256": "87eba0de1f8c15384df862b4652442f9b2410d216bbd2f17ca85d094df7e204f",
+      "rows": 41
+    }
+  },
+  "source_equivalence_policy": {
+    "transitive_closure": true,
+    "components": 25,
+    "prompts_with_expanded_acceptable_sets": 8,
+    "newly_acceptable_members": 8,
+    "effective_strict_prompts": 877,
+    "effective_acceptable_set_prompts": 200,
+    "remove_newly_acceptable_from_effective_dq": true,
+    "remove_newly_acceptable_from_effective_unjudged": true,
+    "library_mutation": false
+  },
+  "cue_scope_policy": {
+    "identity_cue_sensitivity_prompts": 41,
+    "all_library_no_identity_cue_descriptive_prompts": 1036,
+    "nc_primary_prompts": 714,
+    "nc_identity_cue_prompts": 0,
+    "parent_delta_identity_cue_prompts": 41,
+    "parent_delta_no_identity_cue_descriptive_prompts": 322,
+    "primary_comparisons": "P1-P5 retain B_NC_FULL_UNION and explicitly exclude identity_cue_sensitivity prompts.",
+    "all_library_no_cue_scope": "DESCRIPTIVE_SENSITIVITY_ONLY",
+    "identity_cue_scope": "SENSITIVITY_ONLY"
+  },
+  "prompt_dependency_policy": {
+    "edges": 3,
+    "endpoint_prompts": 3,
+    "frozen_dependency_group": "D-E49C16FF6B945B5F",
+    "cross_component_edges": 0,
+    "fail_closed_on_cross_component_edge": true
+  },
+  "scorer": {
+    "path": "skill_benchmark/scripts/analyse_rq2b_v7_offline_outputs.py",
+    "sha256": "e39ede7fa2277298b438feab19c506c84536f9cd2bd3b09f377f1846f674e0f8",
+    "output_schema_version": "rq2b-v7-offline-analysis-v2"
+  },
+  "test": {
+    "path": "skill_benchmark/scripts/test_rq2b_v7_offline_analysis_contract.py",
+    "sha256": "d97c50dbf01f81cc05701d6ea735414bd31dbaa019273e5addcc57a1623d271b",
+    "tests": 9
+  },
+  "boundary": "Prospective offline scoring overlay only; no retrieval, provider, embedding, reranking, result inspection, metric observation, or frozen input mutation."
+}

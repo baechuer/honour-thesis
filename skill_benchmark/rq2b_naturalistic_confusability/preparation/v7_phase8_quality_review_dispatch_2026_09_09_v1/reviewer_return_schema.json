@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "gate": {
+      "enum": [
+        "split",
+        "semantic_near_copy",
+        "cue",
+        "source_relation"
+      ]
+    },
+    "packet_id": {
+      "pattern": "^P8-(?:SPLIT-MIXED|PRREL|CUE|SRCREL)-[0-9]{4}$",
+      "type": "string"
+    },
+    "packet_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "reviewer_group": {
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "type": "integer"
+    },
+    "reviewer_slot": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "rq2b-v7-phase8-quality-review-return-v1"
+    },
+    "source_anchors": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "packet_id",
+    "packet_sha256",
+    "reviewer_group",
+    "reviewer_slot",
+    "gate",
+    "decision",
+    "source_anchors",
+    "rationale"
+  ],
+  "type": "object"
+}

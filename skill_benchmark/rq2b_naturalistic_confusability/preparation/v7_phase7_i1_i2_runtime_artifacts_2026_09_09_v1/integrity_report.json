@@ -1,0 +1,27 @@
+{
+  "schema_version": "rq2b-v7-phase7-i1-i2-tracked-runtime-artifacts-v1",
+  "status": "PASS_BYTE_IDENTICAL_TRACKED_PROMOTION",
+  "formal_execution_ready": false,
+  "counts": {
+    "sources": 3798,
+    "i1_rows": 3798,
+    "i2_rows": 3798
+  },
+  "artifacts": {
+    "i1-discovery.jsonl": {
+      "sha256": "0fc34abe8ca3f5d23bcc563f496831e37628491ddc65caeb9c7a284d5d1ff8dd",
+      "rows": 3798,
+      "bytes": 2262253
+    },
+    "i2-original.jsonl": {
+      "sha256": "8860e415fa7ae6718e5e2b6ca3e57605150120f30a8414e6c6931a99355952ec",
+      "rows": 3798,
+      "bytes": 21251765
+    }
+  },
+  "source_mechanical_report": {
+    "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i1_i2_2026_09_09_v2/mechanical_report.json",
+    "sha256": "30d532415a675143585c524f8ca9b68cafe8b73f28518913d25d3f227fa89b89"
+  },
+  "boundary": "Byte-identical path promotion only; no scientific content or outcome changed."
+}

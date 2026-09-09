@@ -1,0 +1,22 @@
+{
+  "schema_version": "rq2b-v7-skillrouter-window-approval-v1",
+  "status": "APPROVED_FOR_PHASE8_ROOT_BINDING_NOT_EXECUTION",
+  "approval_date": "2026-09-09",
+  "approval_basis": "The researcher explicitly finalised the 2026-09-08 approved RQ2 plan as the operative RQ2 design and instructed experiment preparation to begin. That plan fixes the inherited 7,500-content-token window, 256-content-token overlap, lossless coverage and maximum query-to-window cosine aggregation for the SkillRouter embedding path.",
+  "method_amendment": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_skillrouter_embedding_window_amendment_2026_09_09_v1/method_amendment.json",
+  "method_amendment_sha256": "0b8b3571cb30e560285a1eca40e6a364bc688f7577ae446ec193623b67bb4438",
+  "approved_research_plan": "thesis_notes/current/RQ2 Approved Research Plan - 2026-09-08.zh-CN.md",
+  "approved_research_plan_sha256": "b54d3d8c6816b2bb5f75b2b946448063fcc800c1f9927e27babd767e3468d4d8",
+  "plan_freeze": "skill_benchmark/rq2b_naturalistic_confusability/preparation/rq2_approved_research_plan_2026_09_08_v1/plan_freeze.json",
+  "plan_freeze_sha256": "c91b459babec83409b5b17d254cc299a77081afc94fc813173ad3ae7f80eb097",
+  "approved_method": {
+    "window_tokens": 7500,
+    "window_token_basis": "content_tokens_add_special_tokens_false",
+    "overlap_tokens": 256,
+    "overlap_token_basis": "content_tokens_add_special_tokens_false",
+    "coverage": "exact_lossless_character_coverage",
+    "aggregation": "maximum_query_to_window_cosine"
+  },
+  "execution_authorised": false,
+  "boundary": "This receipt resolves the method-choice gate only. It does not release a runner, model forward, provider call, label join, metric computation or thesis-result update. A PASS Phase-8 root and a separate one-use authorisation remain mandatory."
+}

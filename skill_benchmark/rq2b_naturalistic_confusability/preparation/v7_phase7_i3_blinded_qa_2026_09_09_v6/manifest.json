@@ -1,0 +1,121 @@
+{
+  "artifacts": {
+    "blinded_reviewer_packet.jsonl": {
+      "rows": 120,
+      "sha256": "66e255f96a7e4f2e67daa87b0dac6b021bceb0b6af20e8a46a7a53a6238ba8eb"
+    },
+    "calibration_answer_key_do_not_give_reviewer.jsonl": {
+      "rows": 8,
+      "sha256": "4e038989325738b6d916ba224d1d0ca7268a5556d78070f0393b62a3c1749328"
+    },
+    "calibration_input.jsonl": {
+      "rows": 8,
+      "sha256": "600dd5568770696447545c5123da6e754bf53b52fd3a8ff70f1254493849753e"
+    },
+    "review_slots/qa_slot_01.jsonl": {
+      "rows": 20,
+      "sha256": "562d181f374ebb68c55fa58386ec5790d14867f959ec05621a9a58cf395d664f"
+    },
+    "review_slots/qa_slot_02.jsonl": {
+      "rows": 20,
+      "sha256": "0c0841fe788f4062b3ca63ecb60a2f8899ab15c7c81db82ff2af09caa25371ca"
+    },
+    "review_slots/qa_slot_03.jsonl": {
+      "rows": 20,
+      "sha256": "9603ac1b8b33a781ad2da287b7ffe2762ac87ab94f8c824a5df6f6c598fdb265"
+    },
+    "review_slots/qa_slot_04.jsonl": {
+      "rows": 20,
+      "sha256": "d2bc7f230428258184324f5d20df32943dc8e705e1d68827871313f183a3190e"
+    },
+    "review_slots/qa_slot_05.jsonl": {
+      "rows": 20,
+      "sha256": "f54dd9422ccb3e298d7253031bc9f99dac7fb88bbdd852f5b6024e7d4c909b2b"
+    },
+    "review_slots/qa_slot_06.jsonl": {
+      "rows": 20,
+      "sha256": "0f99a6e627c0b92f45e4206048d5a63d0808fe58012d678ff5bf7fa3a09abbfc"
+    },
+    "reviewer_guidance.md": {
+      "rows": 23,
+      "sha256": "ec929232c8b680951cddfc0a858baae90ff93c4b760b9c35d3ef393acc2d8102"
+    },
+    "reviewer_return_schema.json": {
+      "rows": 90,
+      "sha256": "941fc561c228f42c6d8633399a9cbbacf772cf1c82c2ecf24796434911d6c951"
+    },
+    "sampling_key_do_not_give_reviewer.jsonl": {
+      "rows": 120,
+      "sha256": "9fa813595552a1246a9383fdfb33e019d267c0acfce6e7bf36058c4fa3caa701"
+    }
+  },
+  "bindings": {
+    "assignment_manifest_sha256": "da17924c70ac1de238bd0229acecb1ca2f53155a1f6b901baf3b94ede57144ce",
+    "builder_sha256": "d62c3d99055397b2297b435ae9635aff4be658f97128d6652713adf24d7bff93",
+    "failed_qa_v5_final_report_sha256": "7487c4fb0bfdfc98a5ce323f1e547d31920fd2a2d27b27770130695d02823baa",
+    "merged_manifest_sha256": "14234cdd7b46fda9e27b274500152ad946fc73b20f928b5f9329c135cf5fdb21",
+    "previous_qa_packages": [
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_blinded_qa_2026_09_09_v2/manifest.json",
+        "sample_rows": 120,
+        "sha256": "e3259941cf7a904dd03edb50d989cca82abd5e6ca8c9b0d66fe621b2694fef59"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_blinded_qa_2026_09_09_v4/manifest.json",
+        "sample_rows": 120,
+        "sha256": "181b4447f3630f9042c285168b3877f59f5cf3388b78735952dc48d9f598820e"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_blinded_qa_2026_09_09_v5/manifest.json",
+        "sample_rows": 120,
+        "sha256": "bce94104b6c1e14d3142b9042f21b16081ba35db607ef0d98fc31a5491f9a920"
+      }
+    ]
+  },
+  "boundary": "Source-only extraction fidelity. No query, label, acceptable set, retrieval result, metric, or provider output is visible to reviewers.",
+  "calibration_rows": 8,
+  "counts": {
+    "extractor_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    },
+    "length_quartile": {
+      "Q1": 30,
+      "Q2": 30,
+      "Q3": 30,
+      "Q4": 30
+    },
+    "present_field_rows": {
+      "constraints_boundaries": 50,
+      "dependencies_resources": 91,
+      "input_preconditions": 85,
+      "output_artifacts": 96,
+      "success_criteria": 31,
+      "use_conditions": 108,
+      "workflow_steps": 109
+    },
+    "reviewer_group": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    }
+  },
+  "cross_assignment": "Every sampled row is reviewed by a group different from its extractor group; each reviewer group receives 40 rows.",
+  "formal_execution_ready": false,
+  "pass_rule": {
+    "calibration": "each reviewer group exactly matches all 8 hidden answers",
+    "critical_error_rows": 0,
+    "failure_action": "repair the full affected class and draw another fresh versioned sample; never patch only sampled rows",
+    "field_stratum_rule": "for each field represented in at least 20 rows, major error rate must be <=0.05",
+    "maximum_major_error_rate": 0.05,
+    "maximum_major_error_rows": 6
+  },
+  "previous_samples_excluded": 360,
+  "review_slots": 6,
+  "rows_per_slot": 20,
+  "sample_size": 120,
+  "sampling_seed": "rq2b-v7-i3-full-corpus-v4.1.5-fresh-qa-20260909-03",
+  "schema_version": "rq2b-v7-i3-full-corpus-v4.1.5-blinded-qa-v1",
+  "state": "FROZEN_PENDING_THREE_FRESH_CROSS_ASSIGNED_REVIEWER_GROUPS"
+}

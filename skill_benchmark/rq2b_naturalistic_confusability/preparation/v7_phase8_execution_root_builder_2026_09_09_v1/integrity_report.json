@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "README.md": {
+      "bytes": 5516,
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_execution_root_builder_2026_09_09_v1/README.md",
+      "sha256": "f98c4960987ac304ec304253847a1a6528e3c9922f4221ddd61f0ee81018a042"
+    },
+    "builder": {
+      "bytes": 67899,
+      "path": "skill_benchmark/scripts/build_rq2b_v7_phase8_execution_root.py",
+      "sha256": "5e6a35b016a6c3c3fef0b1109b3ddce45733259b9f1e916efe4bb06eb8bfcca8"
+    },
+    "focused_tests": {
+      "bytes": 34359,
+      "path": "skill_benchmark/scripts/test_build_rq2b_v7_phase8_execution_root.py",
+      "sha256": "68be44567258f8d2c3e4a3bb10d4fbb81198661d2d8928b99fb7d3678bf7429d"
+    }
+  },
+  "assertions": {
+    "b36_core_plus_c6_diagnostic_scope_bound": "PASS",
+    "canonical_dynamic_paths_bound": 21,
+    "canonical_quality_report_paths_bound": 5,
+    "execution_authorised": false,
+    "fresh_qa_v6_final_required": "PASS",
+    "labels_or_results_content_read": false,
+    "model_forwards_during_build_or_test": 0,
+    "network_calls_during_build_or_test": 0,
+    "opaque_review_and_label_provenance_hash_only": "PASS",
+    "preserved_failed_qa_v4_v5_lineage_required": "PASS",
+    "provider_calls_during_build_or_test": 0,
+    "runner_count": 5,
+    "skillrouter_model_revision_and_file_map_cross_bound": "PASS",
+    "source_count": 3798,
+    "target_query_count": 1077
+  },
+  "boundary": "This is a zero-inference pre-root builder freeze. The scientific Phase-8 execution root, one-use releases, provider calls, local model forwards, label join, metrics, offline analysis and thesis-result update remain unmaterialised. The root must fail closed until a fresh QA-v6 final PASS package exists.",
+  "runner_sha256": {
+    "bm25_b1": "9213f8bfb2f5738732c7870514a96a7e114b25647a181738b9c13862da6da905",
+    "qwen_embedding_b1": "7a54f6ca7e1a9a3ceda20c97a6ae6b6025ac7f35fdc646e0c48174e19e904d30",
+    "qwen_reranker_b2": "95f5d004998a9f2617578983478c22840a16205109c1ddc938c388037e7f587c",
+    "skillrouter_embedding_b1": "ccaf08813c3543fd38068bfbdebfa42a2d43d9b4fa9f1874b249bb84e0048263",
+    "skillrouter_reranker_b2": "9cc6ebecbf0bb11dfbf59143104015b6ccf0f64cb07b87b953fce96fdb0f4095"
+  },
+  "schema_version": "rq2b-v7-phase8-execution-root-builder-integrity-v1",
+  "status": "PASS_ZERO_INFERENCE_ROOT_BUILDER_FROZEN_AWAITING_QA_V6_FINAL_AND_ONE_USE_EXECUTION_APPROVAL",
+  "test_results": {
+    "b1_dispatch_focused": "PASS",
+    "b2_dispatch_focused": "PASS_8_OF_8",
+    "bm25_b1_runner": "PASS",
+    "offline_analysis_contract": "PASS_9_OF_9",
+    "qwen_embedding_b1_runner": "PASS",
+    "qwen_reranker_b2_runner": "PASS_14_OF_14",
+    "root_builder": "PASS_11_OF_11",
+    "root_builder_self_test": "PASS",
+    "skillrouter_embedding_b1_runner": "PASS",
+    "skillrouter_reranker_b2_runner": "PASS_10_OF_10",
+    "syntax_compile": "PASS"
+  }
+}

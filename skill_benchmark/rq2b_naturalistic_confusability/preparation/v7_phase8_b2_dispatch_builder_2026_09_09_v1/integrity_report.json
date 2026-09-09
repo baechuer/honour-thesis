@@ -1,0 +1,73 @@
+{
+  "artifacts": {
+    "README.md": {
+      "bytes": 5134,
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_b2_dispatch_builder_2026_09_09_v1/README.md",
+      "sha256": "27970af978e648e940e79a188bbe3c0e1b21e7844860725702e955ec7685092d"
+    },
+    "approval_record.pending.json": {
+      "bytes": 559,
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_b2_dispatch_builder_2026_09_09_v1/approval_record.pending.json",
+      "sha256": "b93ffc1fb7520554c4f710258c2b62c2573d808983d4c8d6d777b57bf3208935"
+    },
+    "builder": {
+      "bytes": 48328,
+      "path": "skill_benchmark/scripts/build_rq2b_v7_phase8_b2_dispatch.py",
+      "sha256": "9a81497f5aca642e2c1c60ed430bc6e714dbc9e38785ea9d4075fca6dd2cdb88",
+      "version": "rq2b-v7-phase8-b2-dispatch-builder-v1"
+    },
+    "focused_tests": {
+      "bytes": 13243,
+      "path": "skill_benchmark/scripts/test_build_rq2b_v7_phase8_b2_dispatch.py",
+      "sha256": "b79d84da7af0e97d40f9c62c5a084b7bf8a5af43240699e1f123d3419a458d86"
+    },
+    "intake.template.json": {
+      "bytes": 554,
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_b2_dispatch_builder_2026_09_09_v1/intake.template.json",
+      "sha256": "0707ee15bc44744becdc875eb1bb1251707f80b1e2a4dec5b51340b46d223cda"
+    }
+  },
+  "assertions": {
+    "b1_complete_12_cell_fresh_replay_required": "PASS",
+    "b1_top20_inputs_not_regenerated": "PASS",
+    "b36_core_plus_c6_diagnostic_scope_bound": "PASS",
+    "current_official_validator_contract_reused": "PASS",
+    "explicit_user_approval_required": "PASS",
+    "execution_approval_bound_into_each_runner_release": "PASS",
+    "four_current_representations_bound": "PASS",
+    "model_forwards_during_build_or_test": 0,
+    "output_attempt_cache_namespaces_separate": "PASS",
+    "provider_calls_during_build_or_test": 0,
+    "qwen_and_skillrouter_runner_native_schemas_reused": "PASS",
+    "releases_one_use_unconsumed_and_zero_retry": "PASS",
+    "skillrouter_cache_absence_revalidated_at_execution": "PASS"
+  },
+  "boundary": "Prospective builder only. No B1 result artifact existed at build time, so no B2 payload, release, reranker output, label join, metric, offline analysis, or thesis result was materialised.",
+  "expected_future_materialisation": {
+    "b1_cells": 12,
+    "b1_rows": 12924,
+    "core_outcomes": 36,
+    "diagnostic_outcomes": 6,
+    "materialised_b2_conditions": 30,
+    "materialised_b2_rows": 32310,
+    "qwen_b2_conditions": 15,
+    "skillrouter_b2_conditions": 15
+  },
+  "schema_version": "rq2b-v7-phase8-b2-dispatch-builder-integrity-v1",
+  "status": "PASS_BUILDER_AND_FOCUSED_NO_INFERENCE_TESTS_NO_B2_DISPATCH_YET",
+  "test_results": {
+    "builder_focused_tests": {
+      "passed": 8,
+      "status": "PASS"
+    },
+    "qwen_reranker_runner_tests": {
+      "passed": 14,
+      "status": "PASS"
+    },
+    "skillrouter_reranker_runner_tests": {
+      "passed": 10,
+      "status": "PASS"
+    },
+    "syntax_compile": "PASS"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "assertions": {
+    "complete_coverage": true,
+    "deterministic_sha256_packet_id_order": true,
+    "no_quality_pass_emitted": true,
+    "one_sealed_coordinator_decision_per_packet_required": true,
+    "pairwise_disjoint": true,
+    "reconciliation_replayed": true,
+    "target_gold_acceptable_set_retrieval_metric_keys_absent": true
+  },
+  "bindings": {
+    "builder_sha256": "70681169d01c1e0661eef244e131e8509400429224529add1211d83fe7041a56",
+    "coordinator_group_packet_sha256": {
+      "1": "cf3f0a853ec4aa733c7ba9d8a7da8b85cd50b2ec2aa8acb5278f9f3a8b0b32ce",
+      "2": "1889c3c6bbf6715c0586e334d25e85802971c61995587ed24ec95d5c9fcb5e78",
+      "3": "d763c13f5b78558e5b905715a3fddc224be54cc6fcefe471a3744aaeeda8601d"
+    },
+    "reconciliation_integrity_sha256": "153e2a1939d888c21b90a128d11b4d76f8823045896733273e31902d890d9a93",
+    "return_schema_sha256": "54f249fa88d83a6165695ddb062a5071ebd9b5b31d54e14fd86dbfe4ca74e638",
+    "sealed_coordinator_packets_sha256": "f08507c7c866c3ad8db42e280bd333607a4a62207824447d5fb519be9c9206d3"
+  },
+  "boundary": "Coordinator decisions remain target-blind quality evidence. They neither repair adverse findings nor create a quality PASS or experiment authority.",
+  "counts": {
+    "coordinator_packets": 109,
+    "group_1": 37,
+    "group_2": 36,
+    "group_3": 36
+  },
+  "formal_execution_ready": false,
+  "schema_version": "rq2b-v7-phase8-quality-coordinator-dispatch-report-v1",
+  "state": "PASS_SEALED_COORDINATOR_DISPATCH_PENDING_RETURNS"
+}

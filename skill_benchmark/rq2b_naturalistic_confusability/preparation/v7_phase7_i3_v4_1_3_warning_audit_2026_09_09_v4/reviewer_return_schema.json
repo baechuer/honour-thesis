@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "ACCEPT_AS_DOCUMENTED_SOURCE_EXCEPTION",
+        "REISSUE_REQUIRED"
+      ]
+    },
+    "evidence_is_exact_and_complete": {
+      "type": "boolean"
+    },
+    "field_assignment_is_correct": {
+      "type": "boolean"
+    },
+    "issue_id": {
+      "pattern": "^I3W3-[0-9a-f]{20}$",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "reviewer_group": {
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "rq2b-v7-i3-v4.1.3-warning-audit-return-v1"
+    },
+    "selected_output_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "warning_is_justified": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema_version",
+    "issue_id",
+    "reviewer_group",
+    "source_sha256",
+    "selected_output_sha256",
+    "decision",
+    "evidence_is_exact_and_complete",
+    "warning_is_justified",
+    "field_assignment_is_correct",
+    "rationale"
+  ],
+  "type": "object"
+}

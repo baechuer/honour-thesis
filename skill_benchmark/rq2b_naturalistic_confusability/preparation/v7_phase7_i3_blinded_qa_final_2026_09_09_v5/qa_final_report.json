@@ -1,0 +1,363 @@
+{
+  "bindings": {
+    "failed_qa_v4_report_sha256": "16498ac083bab73b611a9f661818406ea73372f15e0b16dc4f6fe8872b0e0cad",
+    "finalizer_sha256": "4b6ee49aee8c690f8b0de78bc3f52454d1cf0163e0f875d228b061706d79a6fc",
+    "qa_packet_manifest_sha256": "bce94104b6c1e14d3142b9042f21b16081ba35db607ef0d98fc31a5491f9a920",
+    "sampling_key_sha256": "3814b3817dac80c666ecdf584d298d6f2160ccd91af4028a194779d87a60d411"
+  },
+  "boundary": "A PASS validates the post-class-repair V4.1.4 source-to-I3 extraction fidelity sample. It is not retrieval performance or evidence for the deferred 20k scale-out.",
+  "calibration": {
+    "1": "PASS_EXACT_8_OF_8",
+    "2": "PASS_EXACT_8_OF_8",
+    "3": "PASS_EXACT_8_OF_8"
+  },
+  "counts": {
+    "clean_rows": 107,
+    "critical_error_rows": 0,
+    "error_codes": {
+      "MISSING_SELECTION_CRITICAL_CONTENT": 3,
+      "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN": 7,
+      "WRONG_OPERATIONAL_FIELD": 4
+    },
+    "errors_by_extractor_group": {
+      "1": 10,
+      "2": 3
+    },
+    "errors_by_length_quartile": {
+      "Q1": 2,
+      "Q2": 2,
+      "Q3": 2,
+      "Q4": 7
+    },
+    "errors_by_reviewer_group": {
+      "1": 1,
+      "2": 2,
+      "3": 10
+    },
+    "major_error_rows": 13
+  },
+  "error_details": [
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-024334510F673ECC",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/skills/office_artifact_workflows/slide-deck-visual-auditor/SKILL.md",
+      "source_sha256": "9e8b2936e8aaf16077ab77bebd011fcc6d6e74b40138635ed7600e3b57de32d5"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "MISSING_SELECTION_CRITICAL_CONTENT"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q1",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-06455F8F78D5AAEB",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq2b_full_library/rq2b-full-library-v1.2-2026-08-16/source_overlay/background_scale/mobile-ops-compliance-checker/SKILL.md",
+      "source_sha256": "a7336c1119f6b9f33af44c50b9fe670e2807c6e48276fb7bb38c246e5a9b37a6"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-1B749F700FC3B4EC",
+      "reviewer_group": 1,
+      "source_path": "skill_benchmark/skills/public_imported_background/public-oh-my-video-production/source/SKILL.original.md",
+      "source_sha256": "ddf7f8ceee6ede42e25a609a9e0c8f5bed9c9f6c5899dee5bc5861386bc516b8"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-5DABAE67F1F95E5B",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round16-m1-jkitchin--skillz-b28fcf4c/skills/r16m1-jkitchin-skillz-skills-laboratory-opentrons-thermocycler/source/SKILL.original.md",
+      "source_sha256": "fdbcb142bbc9e885ce8258091b83a97ae2e2392b6f1b65ca2488483abc0b0435"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources",
+        "output_artifacts"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-65829CEF75B02587",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round40-m1-aitytech--agentkits-marketing-e1d08b66/skills/r40m1-aitytech-agentkits-marketing-skills-email-sequence/source/SKILL.original.md",
+      "source_sha256": "b0919692ccff17d0c34b003a3948eadb8993eaeaca09125cca1e4881fb89f5a4"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-8A81BAEF291A4699",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq1b_naturalistic_public_replication/staged_sources/mike-workflows-ce62e6a2/skills/public-mike-assistant-workflows-commercial-lease-review/source/SKILL.original.md",
+      "source_sha256": "013ab2e31ed4375f6d5491a0bdd6b37d0f42895ddb40801301a386f50dcddae1"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources",
+        "output_artifacts",
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD",
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-A118E16415262CCF",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round30-m1-jimliu--baoyu-skills-6b7a2e41/skills/r30m1-JimLiu-baoyu-skills-skills-baoyu-youtube-transcript/source/SKILL.original.md",
+      "source_sha256": "b7085574c6bf72e07c578db14316682b9ebf1e841d9db62916d284efd84c96cc"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "MISSING_SELECTION_CRITICAL_CONTENT"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q2",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-B0EA118F9BE6AB43",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq2b_full_library/rq2b-full-library-v1.2-2026-08-16/source_overlay/background_scale/mobile-ops-timeline-builder/SKILL.md",
+      "source_sha256": "e461cb1d16351372c3008bdaf2e133e03801705bb4f9772599d6ed917b7f479c"
+    },
+    {
+      "affected_fields": [
+        "constraints_boundaries"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-B372613717A4EC14",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq1b_naturalistic_public_replication/staged_sources/skillme-skills-a28c4ce9/skills/public-skillme-landing-page-copy/source/SKILL.original.md",
+      "source_sha256": "280f5718247744834527c2d04d509723be8c4160b5ab0528d2067131db63c236"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-CDE376AD8D7FB426",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/skills/public_imported_background/public-oh-my-task-estimation/source/SKILL.original.md",
+      "source_sha256": "84a2c32f7fa306fe7896a6128c9a7a511b0546fa908efe85a25118d56baa79d5"
+    },
+    {
+      "affected_fields": [
+        "input_preconditions"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-D00022060EABEF45",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round20-m1-starlake-ai--starlake-skills-c804a344/skills/r20m1-starlake-ai-starlake-skills-agents-skills-dag-create/source/SKILL.original.md",
+      "source_sha256": "fcfbcf8990de3fc0a910a22cd03882da35b77354a8394d80dd1839024126d4ee"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "MISSING_SELECTION_CRITICAL_CONTENT"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q1",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-D02EED56EC558396",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq2b_full_library/rq2b-full-library-v1.2-2026-08-16/source_overlay/background_scale/incident-ops-compliance-checker/SKILL.md",
+      "source_sha256": "6e1efa15e3919fa19ca32c42f0a78471bf8a4a9f719fdecb73344b85615c9fc0"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q2",
+      "major_error": true,
+      "review_id": "V7-I3-V414-QA-E4AF4251BD275048",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round21-m1-googleworkspace--cli-a3768d0e/skills/r21m1-googleworkspace-cli-skills-gws-modelarmor-sanitize-response/source/SKILL.original.md",
+      "source_sha256": "6d0f134b42a5bda9460ceb86ec1306a5184a1a93e7423bcfebf9dbea1dd13469"
+    }
+  ],
+  "error_review_ids": [
+    "V7-I3-V414-QA-024334510F673ECC",
+    "V7-I3-V414-QA-06455F8F78D5AAEB",
+    "V7-I3-V414-QA-1B749F700FC3B4EC",
+    "V7-I3-V414-QA-5DABAE67F1F95E5B",
+    "V7-I3-V414-QA-65829CEF75B02587",
+    "V7-I3-V414-QA-8A81BAEF291A4699",
+    "V7-I3-V414-QA-A118E16415262CCF",
+    "V7-I3-V414-QA-B0EA118F9BE6AB43",
+    "V7-I3-V414-QA-B372613717A4EC14",
+    "V7-I3-V414-QA-CDE376AD8D7FB426",
+    "V7-I3-V414-QA-D00022060EABEF45",
+    "V7-I3-V414-QA-D02EED56EC558396",
+    "V7-I3-V414-QA-E4AF4251BD275048"
+  ],
+  "failure_rule": "Do not patch sampled rows only. Repair the entire affected rule/class, rebuild representations, and draw another fresh source-only sample.",
+  "field_strata": {
+    "constraints_boundaries": {
+      "major_error_rate": 0.01694915254237288,
+      "major_error_rows": 1,
+      "represented_or_missing_error_rows": 59,
+      "threshold_applies": true
+    },
+    "dependencies_resources": {
+      "major_error_rate": 0.06593406593406594,
+      "major_error_rows": 6,
+      "represented_or_missing_error_rows": 91,
+      "threshold_applies": true
+    },
+    "input_preconditions": {
+      "major_error_rate": 0.010752688172043012,
+      "major_error_rows": 1,
+      "represented_or_missing_error_rows": 93,
+      "threshold_applies": true
+    },
+    "output_artifacts": {
+      "major_error_rate": 0.020202020202020204,
+      "major_error_rows": 2,
+      "represented_or_missing_error_rows": 99,
+      "threshold_applies": true
+    },
+    "success_criteria": {
+      "major_error_rate": 0.0,
+      "major_error_rows": 0,
+      "represented_or_missing_error_rows": 34,
+      "threshold_applies": true
+    },
+    "use_conditions": {
+      "major_error_rate": 0.0,
+      "major_error_rows": 0,
+      "represented_or_missing_error_rows": 109,
+      "threshold_applies": true
+    },
+    "workflow_steps": {
+      "major_error_rate": 0.05172413793103448,
+      "major_error_rows": 6,
+      "represented_or_missing_error_rows": 116,
+      "threshold_applies": true
+    }
+  },
+  "formal_execution_ready": false,
+  "major_error_rate": 0.10833333333333334,
+  "pass_rule_replay": {
+    "critical_error_rows": 0,
+    "maximum_field_major_error_rate": 0.05,
+    "maximum_major_error_rate": 0.05,
+    "maximum_major_error_rows": 6,
+    "represented_field_minimum_for_threshold": 20
+  },
+  "reviewer_return_artifacts": {
+    "reviewer_returns/calibration_group_1.jsonl": {
+      "rows": 8,
+      "sha256": "a93fa233ffbb115697d21dc543b3b2afb40e0a6c4511017b505cf2138709f036"
+    },
+    "reviewer_returns/calibration_group_2.jsonl": {
+      "rows": 8,
+      "sha256": "6c979058c217ba0adca41a56bbedf6628af512947cc81ea2a02267e8ed53acfa"
+    },
+    "reviewer_returns/calibration_group_3.jsonl": {
+      "rows": 8,
+      "sha256": "68e8479d110d84e204b096ff5cc6c1ba7cb35c71f3bd7a86031614fbcaa7ee7e"
+    },
+    "reviewer_returns/qa_slot_01_return.jsonl": {
+      "rows": 20,
+      "sha256": "6382681afdab22fc59d6290bd09a01ac34845e666a7d21a24a5fba92d1872873"
+    },
+    "reviewer_returns/qa_slot_02_return.jsonl": {
+      "rows": 20,
+      "sha256": "74f8d260e788ded4305b672b3a8fdc56969228afddd0791440f2904f49685ef6"
+    },
+    "reviewer_returns/qa_slot_03_return.jsonl": {
+      "rows": 20,
+      "sha256": "f8818e6fda6264230745d5f752a36e8e0c6aea66241e106eb9d2fc2f5e0cf29a"
+    },
+    "reviewer_returns/qa_slot_04_return.jsonl": {
+      "rows": 20,
+      "sha256": "b28aaf9c3e42f24dfcae7e59a2252c472042298d3e78390a6a59cef18a6ee57d"
+    },
+    "reviewer_returns/qa_slot_05_return.jsonl": {
+      "rows": 20,
+      "sha256": "54b6cf18f3830c08e7358b64e9c39e55c663957fe6e076defce5f5561cbcc107"
+    },
+    "reviewer_returns/qa_slot_06_return.jsonl": {
+      "rows": 20,
+      "sha256": "b774801aeb833527bf82c7a6dc1252f100f851f97cad6cd23218116b6a9b3eb3"
+    }
+  },
+  "sample_size": 120,
+  "schema_version": "rq2b-v7-i3-full-corpus-v4.1.4-blinded-qa-final-v1",
+  "state": "FAIL_REPAIR_AFFECTED_CLASS_AND_DRAW_FRESH_VERSIONED_SAMPLE"
+}

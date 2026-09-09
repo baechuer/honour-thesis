@@ -1,0 +1,102 @@
+{
+  "boundary": "Pre-outcome relation evidence only.",
+  "counts": {
+    "by_decision": {
+      "ALIAS_OR_FORK": 8,
+      "RELATED_BUT_DISTINCT": 11,
+      "TRANSFORMED_COPY": 17
+    },
+    "final_source_relations": 36,
+    "prompt_dependency_edges": 3,
+    "source_equivalence_edges": 25
+  },
+  "input_bindings": {
+    "docket": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/finding_disposition_docket.jsonl",
+      "sha256": "3b187c111288fdeb19f3e59e3a2cfc1e6ea6f83e7cf1d818daabed4861dea553"
+    },
+    "final_decisions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/final_quality_decisions.jsonl",
+      "sha256": "660bbf861b3337ab888f37ec4a64ebfeea390edb424ac23d260243b4b5d853fc"
+    },
+    "lane_a": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_full_source_relation_reissue_2026_09_09_v1/lane_a/return.jsonl",
+      "sha256": "ffd182330575fb093f0a1584dcfbb7404663f6d4b42be035a69b2ad07c7375f4"
+    },
+    "lane_b": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_full_source_relation_reissue_2026_09_09_v1/lane_b/return.jsonl",
+      "sha256": "971ddf41b2789dcd98b8af086dc21d9b8e885aed770ef2bdc3838dd607695f81"
+    }
+  },
+  "outputs": {
+    "README.md": {
+      "sha256": "3c9d4914a88117bfbc1232c274496b7c381bcab90733a2dba5013293bbd9c8e9"
+    },
+    "final_source_relations.jsonl": {
+      "rows": 36,
+      "sha256": "ce4d4601affd5d401cc85a0446303d36d699511848ad09e24eae25a954316b54"
+    },
+    "prompt_dependency_edges.jsonl": {
+      "rows": 3,
+      "sha256": "551201029e9a681ecc707a5357503c008c38c5e0a4220e86e4678e8775c01308"
+    },
+    "source_equivalence_edges.jsonl": {
+      "rows": 25,
+      "sha256": "c29e5868a39c943e3821a2408a6e8d6f2d3ef6cd2a73cb227fa05325e61ccb4f"
+    }
+  },
+  "preservation": {
+    "overlay_only": true,
+    "prompt_mutation": false,
+    "prompts": 1077,
+    "source_mutation": false,
+    "sources": 3798
+  },
+  "schema_version": "rq2b-v7-phase8-quality-relation-disposition-integrity-v1",
+  "state": "PROSPECTIVE_OVERLAY_READY_WITH_DISCLOSED_ANCHOR_LIMITATION",
+  "validation": {
+    "decision_agreements": 29,
+    "disagreement": {
+      "coordinator": "TRANSFORMED_COPY",
+      "lane_a": "TRANSFORMED_COPY",
+      "lane_b": "RELATED_BUT_DISTINCT",
+      "packet_id": "P8-SRCREL-0043",
+      "packet_sha256": "39550c1699fa9d9de27ff21be213fabf4d201ee9a6a866c612b047f4de20afa7"
+    },
+    "lane_a_line_anchors": {
+      "indentation_normalised": true,
+      "total": 60,
+      "validated": 60
+    },
+    "lane_b_literal_anchors": {
+      "member_sets_supported": 60,
+      "member_sets_total": 60,
+      "nonliteral_labels": [
+        {
+          "anchor": "Maps all relevant modules, identifies caller relationships and dependencies, and uses domain-specific vocabulary.",
+          "packet_id": "P8-SRCREL-0020"
+        },
+        {
+          "anchor": "Interviews relentlessly about every decision point, resolves interdependencies progressively, and traverses the complete decision tree.",
+          "packet_id": "P8-SRCREL-0035"
+        },
+        {
+          "anchor": "## Security Hardening Brief",
+          "packet_id": "P8-SRCREL-0038"
+        },
+        {
+          "anchor": "## Vercel Operation Summary",
+          "packet_id": "P8-SRCREL-0055"
+        }
+      ],
+      "total": 253,
+      "validated": 249
+    },
+    "member_path_hash_sets_match": true,
+    "ordered_packet_hash_gate_match": true,
+    "source_hashes": {
+      "failed": 0,
+      "validated": 72
+    }
+  }
+}

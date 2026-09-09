@@ -1,0 +1,215 @@
+{
+  "assertions": {
+    "all_decisions_within_packet_contract": true,
+    "all_returns_have_nonempty_source_anchors": true,
+    "no_quality_pass_emitted": true,
+    "only_exact_non_unclear_agreements_direct": true,
+    "packet_hashes_replayed": true,
+    "prospective_schema_envelope_amendment_replayed": true,
+    "two_distinct_target_blind_returns_per_packet": true
+  },
+  "bindings": {
+    "coordinator_packets_sha256": "f08507c7c866c3ad8db42e280bd333607a4a62207824447d5fb519be9c9206d3",
+    "direct_reconciliation_sha256": "6582b40de3c85d2fe88f6266e4ce2db713e20e128293c390a3b167c9617af7c2",
+    "dispatch_integrity_sha256": "f5268be50bf42948b399e8b5efd9553eeb0fc78fbd8607e8e54b3cb22cef55f4",
+    "quality_return_schema_amendment_receipt_sha256": "6d570ddec4a71e1eb00d56763d741eb9c5aca3e709cb8c4a3837685c1a95853d",
+    "quality_return_schema_v2_sha256": "30af0ae7a9067df460968974fd878ae1b57327e309071dab01f0341dd8182cc7",
+    "reconciler_sha256": "78f17902f93ded5f2957a278c392ead5f293263cfa7058daef6757f639208cf8",
+    "review_returns": [
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_001_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 1,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "7d43bdcf13dd08a21ae298879a66aebbdf1e59d3bda9b3a17b8f267c06cd8622"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_002_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 2,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "25f77391e3dd1f2316ba22313d1db080e7654a7b0a45d0256d6e42c4190a41a8"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_003_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 3,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "3cdaaf0e2a5dd637c8e0af48a01c76079dbe0d9ab4f5cb524fcc38586b20934a"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_004_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 4,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "90054dfdb709b0b93f3d24b8d8bc9eefca7fe46a45ea2411b025f49e37e474f2"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_005_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 5,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "2000eec937f73306249de855dffdbef45d34a0af12d6ad89543df9c6b298dceb"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_006_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 6,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "edea78bb04f83b0881594736403831da3b2ac9ca4ee02d313ff2ca50f0fd442b"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_1_slot_007_return.jsonl",
+        "reviewer_group": 1,
+        "reviewer_slot": 7,
+        "rows": 17,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "5bb475ab58e2ce751434b42e90deb7f7c575fa6b100d915293b72ce5f92ca68a"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_001_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 1,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "6b486925828cde1fb5d3c3f8445c94f4d56514410faefb6a166bebd9c4c49b8c"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_002_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 2,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "f079b9695ac32bd0d8b32d3dd9c83e78c216bbfd36e31223e59b3c6df46cda8b"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_003_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 3,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "0d9313b624076343151944c604b4875ec06d5ec669775790db8b10954111c364"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_004_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 4,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "b2515421c49c922da095223411874938db85a74374ffc2c0854c36fb26b66749"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_005_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 5,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "d16ca3441a8cfff6d3516a93abb6fc934c923faafe5a7a8f15aee306d8775edc"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_006_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 6,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "e7a5e3381710e9a4ba72a5c4d81ec48a4a9e8641fb594404ada32f21ebc7395e"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_2_slot_007_return.jsonl",
+        "reviewer_group": 2,
+        "reviewer_slot": 7,
+        "rows": 17,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "6bd173b91805d575d59b13b891d3c57cfd81db45ba8aa3980cb2520f5769632f"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_001_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 1,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "40a313b9e4a2c4d852ebb788b7da68a7f95a2b9d9f4f08493d30cf2202187e21"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_002_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 2,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "45fbd01d67f62fa3aafb9e67933551ce40840362eac2fc88ab6cb71e5ef7dcb9"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_003_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 3,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "55c696e9a0b90c4b0ed0a7a960d5fb040a6e32cce3ee567a8d2e3cf5eb53cb90"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_004_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 4,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "4673db8d216c0282db77ec0b984d4090f9b0e9c7d20a163cb98497438947ed50"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_005_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 5,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "5b33093e52bb235982284d4239023f93a769e4196acc85c5e47895f25431f020"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_006_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 6,
+        "rows": 24,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "3bc7642ae16c2eaf2dc54a739f6748c01e9efdf7bbc5fab9d6763d6d8d6176f4"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_dispatch_2026_09_09_v1/returns/reviewer_group_3_slot_007_return.jsonl",
+        "reviewer_group": 3,
+        "reviewer_slot": 7,
+        "rows": 16,
+        "schema_v2_status": "SCHEMA_ENVELOPE_VALID",
+        "sha256": "ccdab84b7c693144010c9e644b71b416e01d32ce0d20a0e8a9beba774d55056a"
+      }
+    ]
+  },
+  "boundary": "This reconciliation creates no quality PASS and no experiment authority. Coordinator and any adverse finding disposition remain required.",
+  "counts": {
+    "coordinator_packets": 109,
+    "direct_by_gate": {
+      "cue": 52,
+      "semantic_near_copy": 51,
+      "source_relation": 23,
+      "split": 6
+    },
+    "direct_decisions": {
+      "ALIAS_OR_FORK": 5,
+      "AVOIDABLE_IDENTITY_CUE": 2,
+      "DEPENDENCY_BOUND_NOT_SPLIT_LEAKAGE": 6,
+      "NECESSARY_TASK_CONDITION": 45,
+      "NOT_A_CUE": 5,
+      "RELATED_BUT_DISTINCT": 65,
+      "TRANSFORMED_COPY": 1,
+      "TRANSFORMED_DUPLICATE": 3
+    },
+    "direct_reconciliations": 132,
+    "review_returns": 482,
+    "unique_packets": 241
+  },
+  "formal_execution_ready": false,
+  "schema_version": "rq2b-v7-phase8-quality-review-reconciliation-report-v1",
+  "state": "BLOCKED_PENDING_SEALED_COORDINATOR_AND_FINDING_DISPOSITION"
+}

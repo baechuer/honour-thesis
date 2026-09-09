@@ -1,0 +1,57 @@
+{
+  "bindings": {
+    "assignment_manifest_sha256": "da17924c70ac1de238bd0229acecb1ca2f53155a1f6b901baf3b94ede57144ce",
+    "builder_sha256": "8759c77be731e3054141918bbab66bc156fb55b00ad1b66b244421c31cb5706f",
+    "carried_forward_acceptances_sha256": "71fb14ef8de49a789d42b5da3e94c17ef53b83011a6cf36282ee9ffb6959deb7",
+    "fresh_review_docket_sha256": "1f4b63232a43f4d68109d83c8926fde839a27d7fe1a7f05a1acd43d251028572",
+    "integration_report_sha256": "39588c4b720393e00bab1a709517a5f84466155f27dc5959a5bf6aaa40d985f3",
+    "previous_carry_ledger_sha256": "1ad9f60dc02eee02020d18993c58a44e7047fc888d5c5bd3591e5a49414f92f4",
+    "previous_reviewer_returns": [
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_2_warning_audit_2026_09_09_v3/returns/reviewer_group_1_return.jsonl",
+        "reviewer_group": 1,
+        "rows": 28,
+        "sha256": "16797a133892667317fc17cd8fe6aa6806764494e2465789af9f530782c85915"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_2_warning_audit_2026_09_09_v3/returns/reviewer_group_2_return.jsonl",
+        "reviewer_group": 2,
+        "rows": 27,
+        "sha256": "f05241692fdf18078266106d994aa53f09c5fc990f9cc8b5c62122ef1348553a"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_2_warning_audit_2026_09_09_v3/returns/reviewer_group_3_return.jsonl",
+        "reviewer_group": 3,
+        "rows": 10,
+        "sha256": "0bbc97042670d1f8317dd6e17dbf44a1999bbb8eef998820f34e04faf364e4f6"
+      }
+    ],
+    "previous_warning_docket_sha256": "1ab049e7388db02470c1c190510fb7697be388a4819657d62d923618901853c3",
+    "reviewer_return_schema_sha256": "1013cc0d8e9447f720914f50ba198be18d75d934083adbaf8462c23fd55b2fd3",
+    "selected_batches_sha256": "3e4b8a515ece148ad1f552d7037e756a516d3a39797c7b9a0c4c00f6158a5d70",
+    "selection_ledger_sha256": "392db5edd854979dc23fcb3ef1346a6872e4ce0f9a2c16843f6c90643ffeab29",
+    "warning_docket_sha256": "18017684628fe7417bbf047c12be4291305d19ae537f7573731e86d6ec977b58"
+  },
+  "counts": {
+    "by_reviewer_group": {
+      "1": 1,
+      "2": 3,
+      "3": 0
+    },
+    "carried_forward_exact_acceptances": 1204,
+    "fresh_review_issues": 4,
+    "selected_batches": 95,
+    "sources": 3798,
+    "unique_warning_issues": 1208
+  },
+  "formal_execution_ready": false,
+  "rules": {
+    "changed_or_new_warnings_require_fresh_cross_group_review": true,
+    "no_selector_or_result_access": true,
+    "own_extractor_review_forbidden": true,
+    "previous_acceptance_carry_forward_requires_exact_source_and_warning_signature": true,
+    "previous_reissue_decisions_never_carried_forward": true
+  },
+  "schema_version": "rq2b-v7-i3-v4.1-warning-audit-build-report-v1",
+  "state": "MATERIALISED_PENDING_SOURCE_ONLY_WARNING_RETURNS"
+}

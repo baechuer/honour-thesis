@@ -1,0 +1,62 @@
+{
+  "assertions": {
+    "all_adverse_or_unclear_decisions_enter_docket": true,
+    "coordinator_dispatch_replayed": true,
+    "direct_and_coordinator_union_is_241": true,
+    "no_quality_pass_emitted": true,
+    "one_valid_coordinator_return_per_assigned_packet": true
+  },
+  "bindings": {
+    "coordinator_dispatch_integrity_sha256": "5eaab8487bb081398eb893a77a5cfbb4967169129d745cff202636dbab486fb0",
+    "coordinator_returns": [
+      {
+        "coordinator_group": 1,
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_dispatch_2026_09_09_v1/returns/coordinator_group_1_return.jsonl",
+        "rows": 37,
+        "sha256": "cc373a7bf9cc95fb498f6ed36a94e93561efefaead36383a4cf2e6dbb65cc49f"
+      },
+      {
+        "coordinator_group": 2,
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_dispatch_2026_09_09_v1/returns/coordinator_group_2_return.jsonl",
+        "rows": 36,
+        "sha256": "b3d0ee065c560c7bdedb7c4f7072ad02809139ddf9ddb4bd981fd750a82c358e"
+      },
+      {
+        "coordinator_group": 3,
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_dispatch_2026_09_09_v1/returns/coordinator_group_3_return.jsonl",
+        "rows": 36,
+        "sha256": "50d6c4e6795dc41f4dc8347fc37d23f686b5eed9398102bdc4671f48f466d062"
+      }
+    ],
+    "final_quality_decisions_sha256": "660bbf861b3337ab888f37ec4a64ebfeea390edb424ac23d260243b4b5d853fc",
+    "finding_disposition_docket_sha256": "3b187c111288fdeb19f3e59e3a2cfc1e6ea6f83e7cf1d818daabed4861dea553",
+    "reconciler_sha256": "894ded12b2b0364fbe78f12deb13bab08653944bc15099c4c245e3b17462cecc",
+    "review_reconciliation_integrity_sha256": "153e2a1939d888c21b90a128d11b4d76f8823045896733273e31902d890d9a93"
+  },
+  "boundary": "This package preserves adverse findings and creates no quality PASS, input promotion, selector run, target join, or metric.",
+  "counts": {
+    "coordinator_decisions": 109,
+    "decisions": {
+      "ALIAS_OR_FORK": 5,
+      "AVOIDABLE_IDENTITY_CUE": 41,
+      "BLOCKED_OR_UNCLEAR": 32,
+      "DEPENDENCY_BOUND_NOT_SPLIT_LEAKAGE": 6,
+      "NECESSARY_TASK_CONDITION": 80,
+      "NOT_A_CUE": 6,
+      "RELATED_BUT_DISTINCT": 67,
+      "TRANSFORMED_COPY": 1,
+      "TRANSFORMED_DUPLICATE": 3
+    },
+    "direct_decisions": 132,
+    "final_packet_decisions": 241,
+    "finding_docket": 82,
+    "findings_by_gate": {
+      "cue": 43,
+      "semantic_near_copy": 3,
+      "source_relation": 36
+    }
+  },
+  "formal_execution_ready": false,
+  "schema_version": "rq2b-v7-phase8-quality-coordinator-reconciliation-report-v1",
+  "state": "BLOCKED_PENDING_FINDING_DISPOSITION_AND_QUALITY_CLOSURE"
+}

@@ -1,0 +1,54 @@
+{
+  "bindings": {
+    "carried_forward_acceptances_sha256": "71fb14ef8de49a789d42b5da3e94c17ef53b83011a6cf36282ee9ffb6959deb7",
+    "final_ledger_sha256": "0ac54591d4abcace2e9092621338bce548825b32e89c4c437c3b8213bf94ac47",
+    "finalizer_sha256": "640cb35949ba4c17b87b9b2fb2c8950b89b6fc9ab4fc3085f8c58a9badc2d24e",
+    "fresh_review_docket_sha256": "1f4b63232a43f4d68109d83c8926fde839a27d7fe1a7f05a1acd43d251028572",
+    "reviewer_returns": [
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_3_warning_audit_final_2026_09_09_v4/reviewer_returns/reviewer_group_1_return.jsonl",
+        "reviewer_group": 1,
+        "rows": 1,
+        "sha256": "2765b774e34767c670d9ee682a1929ec07744f17ad7cf7bbed5286b73b39adb0"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_3_warning_audit_final_2026_09_09_v4/reviewer_returns/reviewer_group_2_return.jsonl",
+        "reviewer_group": 2,
+        "rows": 3,
+        "sha256": "ac7bc90f74653cecde3c5de30ce3b0fa4d0e54552e5f64ffd07b4078828b94d0"
+      },
+      {
+        "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase7_i3_v4_1_3_warning_audit_final_2026_09_09_v4/reviewer_returns/reviewer_group_3_return.jsonl",
+        "reviewer_group": 3,
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "warning_build_report_sha256": "a230993cdebcd64576b119d8e7114940541d976abb2f4df310a8608c505c76fc",
+    "warning_docket_sha256": "18017684628fe7417bbf047c12be4291305d19ae537f7573731e86d6ec977b58"
+  },
+  "boundary": "Warning disposition is source-only extraction QA, not selector authority, retrieval performance, or evidence for the future scale-out.",
+  "counts": {
+    "accepted": 1208,
+    "carried_forward_exact_acceptances": 1204,
+    "decision_sources": {
+      "EXACT_SOURCE_AND_CANONICAL_WARNING_SIGNATURE_CARRY_FORWARD": 1204,
+      "FRESH_CROSS_GROUP_SOURCE_ONLY_REVIEW": 4
+    },
+    "fresh_cross_group_acceptances": 4,
+    "reissue_required": 0,
+    "selected_batches": 95,
+    "sources": 3798,
+    "warning_issues": 1208
+  },
+  "formal_execution_ready": false,
+  "rules": {
+    "changed_or_new_warnings_require_fresh_cross_group_review": true,
+    "no_selector_or_result_access": true,
+    "own_extractor_review_forbidden": true,
+    "previous_acceptance_carry_forward_requires_exact_source_and_warning_signature": true,
+    "previous_reissue_decisions_never_carried_forward": true
+  },
+  "schema_version": "rq2b-v7-i3-v4.1-warning-audit-final-report-v1",
+  "state": "PASS_ALL_WARNINGS_SOURCE_ONLY_DISPOSITIONED_PENDING_MERGE_AND_BLINDED_QA"
+}

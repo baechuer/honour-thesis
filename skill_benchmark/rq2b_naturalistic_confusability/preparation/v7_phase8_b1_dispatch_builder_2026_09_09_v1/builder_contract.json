@@ -1,0 +1,34 @@
+{
+  "approval_record_template": "approval_record.pending.json",
+  "builder": "skill_benchmark/scripts/build_rq2b_v7_phase8_b1_dispatch.py",
+  "ceilings_policy": {
+    "bm25": {
+      "cardinality": "EXACT_1077_QUERIES_3798_SOURCES_4308_ROWS_430800_RANKED_CANDIDATES",
+      "maximum_wall_time_seconds": 21600
+    },
+    "qwen_embedding": {
+      "automatic_retries": 0,
+      "maximum_wall_time_seconds": 259200,
+      "predictable_ceilings": "EXACT_FROM_HASH_BOUND_QWEN_PREFLIGHT",
+      "provider_reported_total_tokens": "TWO_TIMES_LOCAL_MODEL_INPUT_PROXY_CEILING"
+    },
+    "skillrouter_embedding": {
+      "automatic_retries": 0,
+      "maximum_wall_time_seconds": 259200,
+      "model_work": "EXACT_CURRENT_CACHE_MISS_INSTANCE_TOKEN_AND_EXACT_LENGTH_BATCH_COUNTS"
+    }
+  },
+  "execution_boundary": {
+    "builder_model_forwards": 0,
+    "builder_provider_calls": 0,
+    "builder_selector_runs": 0,
+    "release_consumption_is_separate": true
+  },
+  "output_package": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_b1_dispatch_2026_09_09_v1",
+  "required_inputs": [
+    "FINAL_PHASE8_READINESS_RECEIPT",
+    "SEPARATE_EXPLICIT_APPROVAL_RECORD"
+  ],
+  "schema_version": "rq2b-v7-phase8-b1-dispatch-builder-contract-v1",
+  "status": "IMPLEMENTED_AWAITING_FINAL_PHASE8_ROOT_AND_APPROVAL_RECORD"
+}

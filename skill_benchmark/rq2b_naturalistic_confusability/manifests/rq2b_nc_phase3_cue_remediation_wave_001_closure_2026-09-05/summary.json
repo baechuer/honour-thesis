@@ -1,0 +1,24 @@
+{
+  "bound_inputs": {
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_001_2026-09-05_v2/internal_target_join.jsonl": "3ee0fe93012f7db268bb20e2825c075266b0d165dfa86ec1330cfed21cab4806",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_001_2026-09-05_v2/reviewer_a_packet.jsonl": "ddbcfb11f3965c30823b2ac68b6c5eb8b47f5fa40f8dc3554c79b2220cb086ba",
+    "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_phase3_cue_remediation_wave_001_2026-09-05_v2/reviewer_b_packet.jsonl": "f9b223bc732610a4885e1b8624e4c0849da3c1d48128c4939284852df620840a",
+    "skill_benchmark/rq2b_naturalistic_confusability/review/RQ2B_NC_MASTER_PRE_EXPERIMENT_SOP_2026-09-05.md": "68f7a8e4e802317208d72155b6b3490d0f3587324aaebb67cfac0341241b8835"
+  },
+  "claim_boundary": "Both fresh prompts remained target-most-suitable, but each failed the independent cue gate. Under SOP section 6.7 this closes the permitted remediation path; neither family may be readmitted without an explicit method amendment.",
+  "counts": {
+    "cue_gate_failed_after_capped_remediation": 2,
+    "deferred_local_families": 2,
+    "fresh_packets": 2,
+    "second_remediations": 0,
+    "target_most_suitable_after_remediation": 2
+  },
+  "outputs": {
+    "coordinator_packet.jsonl": "9bd54b3526d5c851d68a8827db487b792a8037ed6d8731297659a08785fcbb9c",
+    "coordinator_return.jsonl": "e3f1eb2d4320ddb139d0913847745d14ea15bf3ce5eab9fb68c29ac080caa047",
+    "final_remediation_dispositions.jsonl": "d9d75826cb9f283fd440ebedabf7e6b57834f63389c16be2b369c0570685138a",
+    "reviewer_a_return.jsonl": "ea25415f19f0509df970c96d07443205b759e2f138db53a9aaba37330abf99f1",
+    "reviewer_b_return.jsonl": "acda3ff4869c0fae074366fbb54e197d4b44a26a5cf348a941cc1acaca155dc4"
+  },
+  "status": "CLOSED_CAPPED_REMEDIATION_TWO_LOCAL_FAMILIES_DEFERRED"
+}

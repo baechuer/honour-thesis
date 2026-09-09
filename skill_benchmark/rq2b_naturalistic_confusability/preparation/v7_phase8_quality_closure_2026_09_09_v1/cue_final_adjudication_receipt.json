@@ -1,0 +1,45 @@
+{
+  "assertions": {
+    "all_cue_packets_final": true,
+    "forty_one_sensitivity_prompts_frozen": true,
+    "no_prompt_mutation": true,
+    "two_blocked_packets_reissued": true
+  },
+  "bindings": {
+    "blocked_cue_dispositions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_cue_finding_disposition_2026_09_09_v1/blocked_cue_reissue_dispositions.jsonl",
+      "sha256": "5fe426195d7ccdd8aed9df59ab4d444f89df60b35a04b39fe2f3200fc9f96b83"
+    },
+    "cue_packets": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_docket_2026_09_09_v3/cue_review_packets.jsonl",
+      "sha256": "d16d255fd49ff07833ffad1918afdd2ffa76b0218fe682a702f1b4eb28ffdb94"
+    },
+    "cue_sensitivity_ledger": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_closure_2026_09_09_v1/cue_sensitivity_ledger.jsonl",
+      "sha256": "87eba0de1f8c15384df862b4652442f9b2410d216bbd2f17ca85d094df7e204f"
+    },
+    "final_quality_decisions": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/final_quality_decisions.jsonl",
+      "sha256": "660bbf861b3337ab888f37ec4a64ebfeea390edb424ac23d260243b4b5d853fc"
+    },
+    "sensitivity_recommendation": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_cue_finding_disposition_2026_09_09_v1/sensitivity_recommendation.json",
+      "sha256": "aab3d7487111c593005765ba78ac5341f458e28c401e6fd55397f1aa7bca6ec7"
+    }
+  },
+  "boundary": "All 1,077 prompts remain frozen. The 41 avoidable-cue prompts are prospectively excluded only from primary inference and retained for separate sensitivity reporting.",
+  "counts": {
+    "avoidable_identity_cue": 41,
+    "blocked_reissues": 2,
+    "necessary_task_condition": 82,
+    "not_a_cue": 6,
+    "primary_prompts_after_sensitivity_exclusion": 1036,
+    "reviewed_packets": 129
+  },
+  "gate": "cue",
+  "prompt_manifest_sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+  "schema_version": "rq2b-v7-phase8-final-semantic-adjudication-receipt-v1",
+  "source_union_sha256": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b",
+  "status": "PASS_FINAL_ADJUDICATION_COMPLETE",
+  "unresolved_findings": 0
+}

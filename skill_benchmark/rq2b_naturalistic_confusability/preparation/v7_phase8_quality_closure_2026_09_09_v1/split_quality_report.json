@@ -1,0 +1,60 @@
+{
+  "assertions": {
+    "cross_lane_components_dispositioned": "PASS",
+    "dependency_and_exposure_coverage_complete": "PASS",
+    "dependency_components_respected": "PASS",
+    "no_unresolved_split_leakage": "PASS",
+    "prompt_scope_identity_replayed": "PASS"
+  },
+  "counts": {
+    "prompts": 1077,
+    "sources": 3798,
+    "unresolved_findings": 0
+  },
+  "evidence": [
+    {
+      "content_access": "PARSED_MECHANICAL_REPLAY",
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/manifests/rq2b_nc_v7_acceptable_set_final_library_freeze_2026_09_08_v1/final_library_prompt_manifest.jsonl",
+      "sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128"
+    },
+    {
+      "content_access": "PARSED_MECHANICAL_REPLAY",
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_analysis_freeze_2026_09_08_v1/dependency_ledger.jsonl",
+      "sha256": "4226cfe2c9943d40026a4f1a9a38dbbc379ae9b8f39bd9b4c40aea8009e97fc7"
+    },
+    {
+      "content_access": "PARSED_MECHANICAL_REPLAY",
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_analysis_freeze_2026_09_08_v1/exposure_ledger.jsonl",
+      "sha256": "3749a72735a1c7034fd679fad24d4ce5ff40a8274144b15d8265bfb1c608dce3"
+    },
+    {
+      "content_access": "PARSED_MECHANICAL_REPLAY",
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_review_docket_2026_09_09_v3/mixed_lane_split_review_packets.jsonl",
+      "sha256": "deb28633c40e01090baea1c84735695a211e424714879ef69865795f3e947ffc"
+    },
+    {
+      "content_access": "PARSED_MECHANICAL_REPLAY",
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_coordinator_reconciliation_2026_09_09_v1/final_quality_decisions.jsonl",
+      "sha256": "660bbf861b3337ab888f37ec4a64ebfeea390edb424ac23d260243b4b5d853fc"
+    }
+  ],
+  "formal_execution_ready": true,
+  "gate": "split",
+  "prompt_manifest_sha256": "3fbc73f87c264c069e54d9001f24a5687075fdbcfd91ec969e24bceec83ee128",
+  "quality_builder": {
+    "path": "skill_benchmark/scripts/build_rq2b_v7_phase8_quality_closure.py",
+    "sha256": "e1d76baf8372f596210397003dfaf7fb5b3d908722c8b409083b0f979a02106d",
+    "version": "rq2b-v7-phase8-quality-closure-builder-v1"
+  },
+  "review_provenance": {
+    "content_access": "HASH_ONLY_OPAQUE_FINAL_ADJUDICATION_PROVENANCE",
+    "final_adjudication_receipt": {
+      "path": "skill_benchmark/rq2b_naturalistic_confusability/preparation/v7_phase8_quality_closure_2026_09_09_v1/split_final_adjudication_receipt.json",
+      "sha256": "8401aca19e2889d5c7df995c20caeb42e20175a363e121ca3ac498a8ed54723b"
+    },
+    "semantic_judgment_required": true
+  },
+  "schema_version": "rq2b-v7-phase8-quality-gate-v2",
+  "source_union_sha256": "5a49931ee1ff7fc3035a334d6df973393f8169f880b0209f368bd3d05d5fa08b",
+  "status": "PASS"
+}

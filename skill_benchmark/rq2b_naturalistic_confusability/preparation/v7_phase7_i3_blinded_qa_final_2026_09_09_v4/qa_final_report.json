@@ -1,0 +1,456 @@
+{
+  "bindings": {
+    "failed_v2_report_sha256": "a25e4fe627669e74f94294a0f4284f72ce2e8e3b31bdc4ad5e63dc1b1cf0d97b",
+    "finalizer_sha256": "96138c43202b09b016ec42a16bfd780e3d5b5a2b7ab77c2ad56100be480b2923",
+    "qa_packet_manifest_sha256": "181b4447f3630f9042c285168b3877f59f5cf3388b78735952dc48d9f598820e",
+    "sampling_key_sha256": "d4c88ad5a6acb9ee7e5a6f7923ad0cfe6ef9c2a4c638c2acf5900b958a93ecb0"
+  },
+  "boundary": "A PASS validates V7 source-to-I1/I3 extraction fidelity at the frozen sampled gate. It is not retrieval performance or evidence for the future 20k scale-out.",
+  "calibration": {
+    "1": "PASS_EXACT_8_OF_8",
+    "2": "PASS_EXACT_8_OF_8",
+    "3": "PASS_EXACT_8_OF_8"
+  },
+  "counts": {
+    "clean_rows": 102,
+    "critical_error_rows": 0,
+    "error_codes": {
+      "BOUNDARY_POLARITY_MISCLASSIFIED": 5,
+      "MISSING_SELECTION_CRITICAL_CONTENT": 3,
+      "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN": 3,
+      "WRONG_OPERATIONAL_FIELD": 9
+    },
+    "errors_by_extractor_group": {
+      "1": 9,
+      "2": 4,
+      "3": 5
+    },
+    "errors_by_length_quartile": {
+      "Q1": 2,
+      "Q2": 2,
+      "Q3": 6,
+      "Q4": 8
+    },
+    "errors_by_reviewer_group": {
+      "1": 3,
+      "2": 12,
+      "3": 3
+    },
+    "major_error_rows": 18
+  },
+  "error_details": [
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "BOUNDARY_POLARITY_MISCLASSIFIED"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q2",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-088BF4D527219F15",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/skills/pdf_document_operations/pdf-to-docx-converter/SKILL.md",
+      "source_sha256": "a559872e00921d36e7819ca82ed3069f85d2949e2593cb13fa520bc23ff3af17"
+    },
+    {
+      "affected_fields": [
+        "dependencies_resources",
+        "input_preconditions",
+        "use_conditions",
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN",
+        "MISSING_SELECTION_CRITICAL_CONTENT"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q2",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-0C40F1E66E15F981",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq2b_full_library/rq2b-full-library-v1.2-2026-08-16/source_overlay/background_scale/ads-ops-timeline-builder/SKILL.md",
+      "source_sha256": "00dbc3fd3f51214244c41100a7afe26ffa47dc9180cbe032c57f9dccbd315deb"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "BOUNDARY_POLARITY_MISCLASSIFIED"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-15FDD6D0EAF08B5E",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round28-m1-everyinc--compound-engineering-plugin-5985d821/skills/r28m1-EveryInc-compound-engineering-plugin-skills-ce-test-xcode/source/SKILL.original.md",
+      "source_sha256": "ebee5d613f8ecb0c9095d4bf8cb972c0e38511681e7acc9216cd8aa9a64965ca"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-26D44D6238D1D98C",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/skills/public_imported_background/public-office-job-description/source/SKILL.original.md",
+      "source_sha256": "de25dca6aaa731edcdc5cd62522c0f9122ef7400076da8bd72c91e9f61d94211"
+    },
+    {
+      "affected_fields": [
+        "constraints_boundaries",
+        "input_preconditions",
+        "use_conditions",
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-2944D42410CAA4D6",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round17-m1-selvarajmurugesan90--ops-engineering-skills-59bee31e/skills/r17m1-selvarajmurugesan90-ops-engineering-skills-plugins-devsecops-skills-complete-devsecops-pipeline-for-vm-based-workloads-from-scratch/source/SKILL.original.md",
+      "source_sha256": "bc1687492d0d1d3cb1f84064362f0d8fceee2f2062bc99395a3f133b0018e53c"
+    },
+    {
+      "affected_fields": [
+        "success_criteria",
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-29B6AC202B17B23A",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/skills/public_imported_background/public-oh-my-obsidian-plugin/source/SKILL.original.md",
+      "source_sha256": "864657ccc3241c846372314d109a8f4166cc8efd8e035fc702f1a8d00d56003e"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "BOUNDARY_POLARITY_MISCLASSIFIED"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-434A88D6424CE4DB",
+      "reviewer_group": 1,
+      "source_path": "skill_benchmark/rq1b_naturalistic_public_replication/staged_sources/skillme-skills-a28c4ce9/skills/public-skillme-mobile-perf-profiler/source/SKILL.original.md",
+      "source_sha256": "5eb00fb70605e4d4d412bbbcca9a35b9ca8c720fe2f767fc39c19f04f1394d91"
+    },
+    {
+      "affected_fields": [
+        "output_artifacts",
+        "use_conditions"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD",
+        "BOUNDARY_POLARITY_MISCLASSIFIED"
+      ],
+      "extractor_group": 3,
+      "length_quartile": "Q1",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-51C60C7A2837D303",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq2b_full_library/rq2b-full-library-v1.2-2026-08-16/source_overlay/background_scale/devops-ops-resource-linker/SKILL.md",
+      "source_sha256": "d7fba43a3115e1fc66f43a6da98123cd2df989a5da1787003305ee075d88be39"
+    },
+    {
+      "affected_fields": [
+        "constraints_boundaries"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "MISSING_SELECTION_CRITICAL_CONTENT"
+      ],
+      "extractor_group": 3,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-53AC8540A2DE6E12",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round30-m1-agricidaniel--claude-ads-669c7608/skills/r30m1-AgriciDaniel-claude-ads-skills-ads-apple/source/SKILL.original.md",
+      "source_sha256": "3624c8848d7e833c4ae2cd7a33a856c639d0fd882eae91090744d2441b1d0d42"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "NON_SELF_CONTAINED_OR_GENERIC_SELECTOR_SPAN"
+      ],
+      "extractor_group": 3,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-623E5BB9F575089E",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round17-m1-selvarajmurugesan90--ops-engineering-skills-59bee31e/skills/r17m1-selvarajmurugesan90-ops-engineering-skills-plugins-gitops-argo-ecosystem-skills-complete-gitops-argocd-deployment-on-prem-from-scratch/source/SKILL.original.md",
+      "source_sha256": "ba52e03538749e7d01ff296e1a07654fdd6fe6db234b5ab9211fdbe506e2d738"
+    },
+    {
+      "affected_fields": [
+        "constraints_boundaries"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-953E1AE8CC42763F",
+      "reviewer_group": 3,
+      "source_path": "skill_benchmark/skills/security_appsec/auth-flow-reviewer/SKILL.md",
+      "source_sha256": "09f44ddaa6614d4c575eab4b35d9f200b70c85f8443bd2cb8bc679e0ba360255"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "BOUNDARY_POLARITY_MISCLASSIFIED"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q1",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-9BFDB86DADEDEC50",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/skills/implicit_field_stress/implicit-ci-failure-reader/SKILL.md",
+      "source_sha256": "bdb50f8f1ef27c1ad616cb2e49b2ea6d8c9c3ed53bfdc49a8d8baf44f0d44b81"
+    },
+    {
+      "affected_fields": [
+        "input_preconditions"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-A8BA2F776A34C090",
+      "reviewer_group": 1,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round42-m1-ljagiello--ctf-skills-36c72e53/skills/r42m1-ljagiello-ctf-skills-ctf-reverse/source/SKILL.original.md",
+      "source_sha256": "e73cd18a00405ac1ea9cc26d01f79b9dde5db4db6ff46e57b0ff524b19fbd0c1"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 3,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-C218C8BCDB4A479C",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_cross_source_public_benchmark/staged_sources/round29-m1-skills-il--marketing-growth-56ad3a7c/skills/r29m1-skills-il-marketing-growth-israeli-tech-salary-negotiator/source/SKILL.original.md",
+      "source_sha256": "9c3ddcfce529b7e0b51de3f3bfcdf44cfbb2011f1989a5544fc654bba4e76a65"
+    },
+    {
+      "affected_fields": [
+        "output_artifacts"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 2,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-C3E958FEDBCFCE6D",
+      "reviewer_group": 1,
+      "source_path": "skill_benchmark/rq1b_naturalistic_public_replication/staged_sources/emmraan-agent-skills-1124ce40/skills/public-emmraan-agent-meta-atlassian-mcp/source/SKILL.original.md",
+      "source_sha256": "a2531f7027ceca8c79b638ccd246ff96e3adaf1f2a7d7bbf3da20f5deccf5592"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-D1463FEE12435486",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_naturalistic_public_replication/staged_sources/skillme-skills-a28c4ce9/skills/public-skillme-employment-contract/source/SKILL.original.md",
+      "source_sha256": "dbaf10d54d28162282e066e1012975da4a5b2286c7c5e743136232e5eecfeec4"
+    },
+    {
+      "affected_fields": [
+        "success_criteria"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "WRONG_OPERATIONAL_FIELD"
+      ],
+      "extractor_group": 3,
+      "length_quartile": "Q3",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-EA1E12B9194BD75C",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/skills/public_imported_background/public-office-lead-research/source/SKILL.original.md",
+      "source_sha256": "728fd75c531cb90f3974b159d071a58fa71e6ea902886315e8922d3ccc45f1dd"
+    },
+    {
+      "affected_fields": [
+        "workflow_steps"
+      ],
+      "critical_error": false,
+      "error_codes": [
+        "MISSING_SELECTION_CRITICAL_CONTENT"
+      ],
+      "extractor_group": 1,
+      "length_quartile": "Q4",
+      "major_error": true,
+      "review_id": "V7-I3-V41-QA-F5B7AE4592742F8C",
+      "reviewer_group": 2,
+      "source_path": "skill_benchmark/rq1b_naturalistic_public_replication/staged_sources/skillme-skills-a28c4ce9/skills/public-skillme-customer-success-qbr/source/SKILL.original.md",
+      "source_sha256": "1f9212720651d8cd87333ee293c8bb886d7f4be7c0b20bcce676a903dfe5cd9a"
+    }
+  ],
+  "error_review_ids": [
+    "V7-I3-V41-QA-088BF4D527219F15",
+    "V7-I3-V41-QA-0C40F1E66E15F981",
+    "V7-I3-V41-QA-15FDD6D0EAF08B5E",
+    "V7-I3-V41-QA-26D44D6238D1D98C",
+    "V7-I3-V41-QA-2944D42410CAA4D6",
+    "V7-I3-V41-QA-29B6AC202B17B23A",
+    "V7-I3-V41-QA-434A88D6424CE4DB",
+    "V7-I3-V41-QA-51C60C7A2837D303",
+    "V7-I3-V41-QA-53AC8540A2DE6E12",
+    "V7-I3-V41-QA-623E5BB9F575089E",
+    "V7-I3-V41-QA-953E1AE8CC42763F",
+    "V7-I3-V41-QA-9BFDB86DADEDEC50",
+    "V7-I3-V41-QA-A8BA2F776A34C090",
+    "V7-I3-V41-QA-C218C8BCDB4A479C",
+    "V7-I3-V41-QA-C3E958FEDBCFCE6D",
+    "V7-I3-V41-QA-D1463FEE12435486",
+    "V7-I3-V41-QA-EA1E12B9194BD75C",
+    "V7-I3-V41-QA-F5B7AE4592742F8C"
+  ],
+  "failure_rule": "Do not patch sampled rows only. Repair the entire affected rule/class, rebuild representations, and draw another fresh source-only sample.",
+  "field_strata": {
+    "constraints_boundaries": {
+      "major_error_rate": 0.03614457831325301,
+      "major_error_rows": 3,
+      "represented_or_missing_error_rows": 83,
+      "threshold_applies": true
+    },
+    "dependencies_resources": {
+      "major_error_rate": 0.011627906976744186,
+      "major_error_rows": 1,
+      "represented_or_missing_error_rows": 86,
+      "threshold_applies": true
+    },
+    "input_preconditions": {
+      "major_error_rate": 0.03333333333333333,
+      "major_error_rows": 3,
+      "represented_or_missing_error_rows": 90,
+      "threshold_applies": true
+    },
+    "output_artifacts": {
+      "major_error_rate": 0.019801980198019802,
+      "major_error_rows": 2,
+      "represented_or_missing_error_rows": 101,
+      "threshold_applies": true
+    },
+    "success_criteria": {
+      "major_error_rate": 0.046511627906976744,
+      "major_error_rows": 2,
+      "represented_or_missing_error_rows": 43,
+      "threshold_applies": true
+    },
+    "use_conditions": {
+      "major_error_rate": 0.03333333333333333,
+      "major_error_rows": 3,
+      "represented_or_missing_error_rows": 90,
+      "threshold_applies": true
+    },
+    "workflow_steps": {
+      "major_error_rate": 0.10344827586206896,
+      "major_error_rows": 12,
+      "represented_or_missing_error_rows": 116,
+      "threshold_applies": true
+    }
+  },
+  "formal_execution_ready": false,
+  "major_error_rate": 0.15,
+  "pass_rule_replay": {
+    "critical_error_rows": 0,
+    "maximum_field_major_error_rate": 0.05,
+    "maximum_major_error_rate": 0.05,
+    "maximum_major_error_rows": 6,
+    "represented_field_minimum_for_threshold": 20
+  },
+  "reviewer_return_artifacts": {
+    "reviewer_returns/calibration_group_1.jsonl": {
+      "rows": 8,
+      "sha256": "73a34329e8f0bcf713ad8c68da2305e3b54bb148ac31ccc8ba49bef215d1718d"
+    },
+    "reviewer_returns/calibration_group_2.jsonl": {
+      "rows": 8,
+      "sha256": "e3a013bfaaa90e5b6a542b4e0e1fe8c93b24ea1987fa52faca81965699846f81"
+    },
+    "reviewer_returns/calibration_group_3.jsonl": {
+      "rows": 8,
+      "sha256": "36bd8298deff701f45137291873b18dfc0d8908cea850171547fa017abad8c91"
+    },
+    "reviewer_returns/qa_slot_01_return.jsonl": {
+      "rows": 20,
+      "sha256": "1a57af0f0616613a8b17fa446fa84a66b09b344eec5c60d6a80321eade5a5938"
+    },
+    "reviewer_returns/qa_slot_02_return.jsonl": {
+      "rows": 20,
+      "sha256": "b75f4af6844dc56ff02ac0d21058f107f922a752b9badb00bd1cc76f991eb876"
+    },
+    "reviewer_returns/qa_slot_03_return.jsonl": {
+      "rows": 20,
+      "sha256": "90c43dd195adf90360c342b310483fbb99638c7b1d95315d33be9f0fc5fcb309"
+    },
+    "reviewer_returns/qa_slot_04_return.jsonl": {
+      "rows": 20,
+      "sha256": "8f4132667efa8ae4d3236bdd345619c1b9e672f1b0f45f8763b8b571fcc07835"
+    },
+    "reviewer_returns/qa_slot_05_return.jsonl": {
+      "rows": 20,
+      "sha256": "c7a3deb04b660365dab38404108e8f947b31d7a41fbfc346de1025889baf2675"
+    },
+    "reviewer_returns/qa_slot_06_return.jsonl": {
+      "rows": 20,
+      "sha256": "fdd923ec19bfa4a262a29823f6c71c83dcda53e846aa8db82a48d4b88f54fa9f"
+    }
+  },
+  "sample_size": 120,
+  "schema_version": "rq2b-v7-i3-full-corpus-v4.1-blinded-qa-final-v3",
+  "state": "FAIL_REPAIR_AFFECTED_CLASS_AND_DRAW_FRESH_VERSIONED_SAMPLE"
+}

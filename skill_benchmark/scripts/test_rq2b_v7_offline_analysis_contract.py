@@ -8,10 +8,12 @@ import gzip
 import json
 import tempfile
 import unittest
+from collections import Counter
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
-from analyse_rq2b_v7_offline_outputs import OfflineAuthority, analyse
+from analyse_rq2b_v7_offline_outputs import OfflineAuthority, analyse, score_rows
 from validate_rq2b_v7_runner_outputs import (
     ROOT,
     RunnerAuthority,
@@ -206,6 +208,99 @@ class ContractTest(unittest.TestCase):
         summary = report["condition_summaries"]["B05-GQ"]["nc_primary"]
         self.assertAlmostEqual(summary["acceptable_known_a"]["identity_residual"], 0.0)
         self.assertEqual(summary["strict_singleton"]["prompts"], 3)
+
+    def test_source_equivalence_expands_credit_and_removes_dq_overlap(self) -> None:
+        source0, source1, source2 = (sha(f"source-{index}") for index in range(3))
+        edges = [
+            {
+                "schema_version": "rq2b-v7-phase8-source-equivalence-edge-v1",
+                "edge_id": "E1", "equivalence_scope": "acceptable_source_equivalence_and_offline_scoring",
+                "relation": "ALIAS_OR_FORK", "symmetric": True, "library_mutation": False,
+                "members": [{"source_sha256": source0}, {"source_sha256": source1}],
+            },
+            {
+                "schema_version": "rq2b-v7-phase8-source-equivalence-edge-v1",
+                "edge_id": "E2", "equivalence_scope": "acceptable_source_equivalence_and_offline_scoring",
+                "relation": "TRANSFORMED_COPY", "symmetric": True, "library_mutation": False,
+                "members": [{"source_sha256": source1}, {"source_sha256": source2}],
+            },
+        ]
+        authority = replace(self.authority, source_equivalence_edges=edges)
+        authority.validate()
+        row = next(
+            row for row in score_rows(self.b1, self.b2, authority)
+            if row["condition_id"] == "B01-G0" and row["prompt_id"] == "P0"
+        )
+        self.assertEqual(row["acceptable_set_size_frozen"], 1)
+        self.assertEqual(row["acceptable_set_size_effective"], 3)
+        self.assertEqual(row["source_equivalence_expansion_count"], 2)
+        self.assertEqual(row["final_label_type"], "ACCEPTABLE_SET")
+        self.assertEqual(row["known_a_hit_at_1"], 1.0)
+        self.assertEqual(row["dq_top1"], 0.0)
+        self.assertEqual(row["unjudged_at_1"], 0.0)
+
+    def test_cue_scope_is_separate_without_redefining_nc_primary(self) -> None:
+        cue_row = {
+            "schema_version": "rq2b-v7-phase8-cue-sensitivity-ledger-v1",
+            "prompt_id": "P0", "prompt_sha256": sha("prompt-0"),
+            "final_cue_decision": "AVOIDABLE_IDENTITY_CUE",
+            "analysis_disposition": "EXCLUDE_PRIMARY_INFERENTIAL_INCLUDE_SEPARATE_SENSITIVITY",
+            "frozen_prompt_preserved": True, "primary_inferential_included": False,
+            "sensitivity_included": True,
+        }
+        authority = replace(self.authority, cue_sensitivity_by_prompt={"P0": cue_row})
+        authority.validate()
+        report = analyse(
+            self.b1, self.b2, authority,
+            bootstrap_replicates=20, sign_flip_replicates=50,
+        )
+        scopes = report["condition_summaries"]["B05-GQ"]
+        self.assertEqual(scopes["nc_primary"]["acceptable_known_a"]["prompts"], 3)
+        self.assertEqual(scopes["nc_full_descriptive"]["acceptable_known_a"]["prompts"], 4)
+        self.assertEqual(scopes["all_library_no_identity_cue_descriptive"]["acceptable_known_a"]["prompts"], 3)
+        self.assertEqual(scopes["identity_cue_sensitivity"]["acceptable_known_a"]["prompts"], 1)
+        self.assertEqual(report["primary_comparisons"]["P1"]["prompts"], 3)
+
+    def test_prompt_dependency_overlay_must_stay_in_frozen_component(self) -> None:
+        def edge(right: str) -> dict[str, Any]:
+            return {
+                "schema_version": "rq2b-v7-phase8-prompt-dependency-edge-v1",
+                "edge_id": "D1", "dependency_scope": "dependency_clustered_inference",
+                "relation": "TRANSFORMED_DUPLICATE", "symmetric": True, "prompt_mutation": False,
+                "members": [
+                    {"prompt_id": "P0", "prompt_sha256": sha("prompt-0")},
+                    {"prompt_id": right, "prompt_sha256": sha(f"prompt-{right[1:]}")},
+                ],
+            }
+
+        replace(self.authority, prompt_dependency_edges=[edge("P1")]).validate()
+        with self.assertRaisesRegex(ValueError, "crosses frozen components"):
+            replace(self.authority, prompt_dependency_edges=[edge("P2")]).validate()
+
+    def test_actual_quality_overlay_replays_expected_pre_outcome_scope(self) -> None:
+        authority = OfflineAuthority.load()
+        self.assertEqual(len(authority.runner.sources), 3798)
+        self.assertEqual(len(authority.runner.prompts), 1077)
+        self.assertEqual(len(authority.source_equivalence_edges), 25)
+        self.assertEqual(len(authority.prompt_dependency_edges), 3)
+        self.assertEqual(len(authority.cue_sensitivity_by_prompt), 41)
+        self.assertEqual(
+            Counter(authority.labels[prompt_id]["lane_id"] for prompt_id in authority.cue_sensitivity_by_prompt),
+            {"A_PARENT_DELTA": 41},
+        )
+        expanded = []
+        effective_types = Counter()
+        for prompt_id, label in authority.labels.items():
+            frozen = set(label["acceptable_set_source_sha256"])
+            acceptable, judged, dq, label_type = authority.effective_sets(prompt_id)
+            effective_types[label_type] += 1
+            if acceptable != frozen:
+                expanded.append(prompt_id)
+                for source in acceptable - frozen:
+                    self.assertEqual(judged[source], "FULLY_ACCEPTABLE_EQUIVALENT_SOURCE")
+                    self.assertNotIn(source, dq)
+        self.assertEqual(len(expanded), 8)
+        self.assertEqual(effective_types, {"STRICT": 877, "ACCEPTABLE_SET": 200})
 
     def test_runner_rejects_label_key(self) -> None:
         broken = dict(self.b1[0])
